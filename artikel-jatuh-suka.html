@@ -1248,7 +1248,7 @@
         .select("*")
 
         .eq(
-          "article_slug",
+          "article",
           ARTICLE_SLUG
         )
 
@@ -1403,10 +1403,10 @@
 
           .insert({
 
-            article_slug:
+            article:
               ARTICLE_SLUG,
 
-            sender_name:
+            name:
               isAnonymous
                 ? null
                 : name,
