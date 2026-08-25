@@ -1592,3 +1592,2291 @@ footer {
 #catatan .handwriting-label {
     width: 230px;
 }
+/* =====================================================
+   CATATAN — HOMEPAGE EDITORIAL PREVIEW
+   ===================================================== */
+
+.catatan-preview {
+    background: #ffffff;
+    padding: 110px 8% 130px;
+    color: #252525;
+}
+
+
+/* -------------------------
+   HEADER
+------------------------- */
+
+.catatan-header {
+    max-width: 1200px;
+    margin: 0 auto 65px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+.catatan-label {
+    display: block;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 48px;
+    font-style: italic;
+    line-height: 1;
+
+    margin-bottom: 22px;
+
+    color: #222;
+}
+
+.catatan-header h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+
+    color: #222;
+}
+
+
+/* -------------------------
+   SEE ALL
+------------------------- */
+
+.catatan-see-all {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #333;
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    padding-bottom: 6px;
+
+    transition: opacity 0.2s ease;
+}
+
+.catatan-see-all:hover {
+    opacity: 0.55;
+}
+
+
+/* -------------------------
+   LIST
+------------------------- */
+
+.catatan-list {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    border-top: 1px solid #e7e7e7;
+}
+
+
+/* -------------------------
+   INDIVIDUAL NOTE
+------------------------- */
+
+.catatan-item {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 70px;
+
+    padding: 42px 0;
+
+    border-bottom: 1px solid #e7e7e7;
+
+    align-items: center;
+}
+
+
+/* -------------------------
+   TEXT
+------------------------- */
+
+.catatan-content {
+    max-width: 700px;
+}
+
+.catatan-meta {
+    font-family: inherit;
+    font-size: 13px;
+    color: #777;
+
+    margin-bottom: 13px;
+}
+
+.catatan-item h3 {
+    margin: 0 0 13px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.15;
+
+    letter-spacing: -0.3px;
+
+    color: #222;
+}
+
+.catatan-excerpt {
+    margin: 0 0 18px;
+
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #777;
+
+    max-width: 680px;
+}
+
+.catatan-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 13px;
+    color: #777;
+}
+
+.catatan-info span:first-child {
+    color: #555;
+}
+
+
+/* -------------------------
+   IMAGE
+------------------------- */
+
+.catatan-image {
+    width: 100%;
+    height: 190px;
+
+    overflow: hidden;
+
+    background: #f4f4f4;
+}
+
+.catatan-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.catatan-item:hover .catatan-image img {
+    transform: scale(1.03);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .catatan-preview {
+        padding: 80px 6% 100px;
+    }
+
+    .catatan-header {
+        margin-bottom: 45px;
+    }
+
+    .catatan-header h2 {
+        font-size: 36px;
+    }
+
+    .catatan-label {
+        font-size: 42px;
+    }
+
+    .catatan-item {
+        grid-template-columns: 1fr 240px;
+        gap: 40px;
+    }
+
+    .catatan-item h3 {
+        font-size: 28px;
+    }
+
+    .catatan-image {
+        height: 160px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .catatan-preview {
+        padding: 70px 24px 80px;
+    }
+
+    .catatan-header {
+        display: block;
+    }
+
+    .catatan-label {
+        font-size: 40px;
+        margin-bottom: 18px;
+    }
+
+    .catatan-header h2 {
+        font-size: 32px;
+    }
+
+    .catatan-see-all {
+        display: inline-block;
+        margin-top: 25px;
+    }
+
+    .catatan-item {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 32px 0;
+    }
+
+    .catatan-image {
+        order: -1;
+
+        width: 100%;
+        height: 210px;
+    }
+
+    .catatan-item h3 {
+        font-size: 27px;
+    }
+
+    .catatan-excerpt {
+        font-size: 14px;
+    }
+}
+/* =====================================================
+   CATATAN — HOMEPAGE EDITORIAL PREVIEW
+   ===================================================== */
+
+.catatan-preview {
+    background: #ffffff;
+    padding: 110px 8% 130px;
+    color: #252525;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.catatan-header {
+    max-width: 1200px;
+    margin: 0 auto 65px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+
+/* Your handwritten Catatan PNG */
+
+.catatan-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.catatan-heading-image {
+    display: block;
+
+    width: 190px;
+    height: auto;
+
+    margin-bottom: 25px;
+}
+
+
+/* Subtitle */
+
+.catatan-header h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1.15;
+
+    letter-spacing: -0.5px;
+
+    color: #222;
+}
+
+
+/* =========================
+   SEE ALL
+========================= */
+
+.catatan-see-all {
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #333;
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    padding-bottom: 6px;
+
+    transition: opacity 0.2s ease;
+}
+
+.catatan-see-all:hover {
+    opacity: 0.55;
+}
+
+
+/* =========================
+   NOTES LIST
+========================= */
+
+.catatan-list {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    border-top: 1px solid #e7e7e7;
+}
+
+
+/* =========================
+   NOTE
+========================= */
+
+.catatan-item {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+
+    gap: 70px;
+
+    padding: 42px 0;
+
+    border-bottom: 1px solid #e7e7e7;
+
+    align-items: center;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.catatan-content {
+    max-width: 700px;
+}
+
+.catatan-meta {
+    font-size: 13px;
+    color: #777;
+
+    margin-bottom: 13px;
+}
+
+.catatan-item h3 {
+    margin: 0 0 13px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.15;
+
+    letter-spacing: -0.3px;
+
+    color: #222;
+}
+
+.catatan-excerpt {
+    margin: 0 0 18px;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #777;
+
+    max-width: 680px;
+}
+
+.catatan-info {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 13px;
+    color: #777;
+}
+
+.catatan-info span:first-child {
+    color: #555;
+}
+
+
+/* =========================
+   IMAGE PREVIEW
+========================= */
+
+.catatan-image {
+    width: 100%;
+    height: 190px;
+
+    overflow: hidden;
+
+    background: #f4f4f4;
+}
+
+.catatan-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.catatan-item:hover .catatan-image img {
+    transform: scale(1.03);
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .catatan-preview {
+        padding: 80px 6% 100px;
+    }
+
+    .catatan-heading-image {
+        width: 165px;
+    }
+
+    .catatan-header h2 {
+        font-size: 36px;
+    }
+
+    .catatan-item {
+        grid-template-columns: 1fr 240px;
+        gap: 40px;
+    }
+
+    .catatan-item h3 {
+        font-size: 28px;
+    }
+
+    .catatan-image {
+        height: 160px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+    .catatan-preview {
+        padding: 70px 24px 80px;
+    }
+
+    .catatan-header {
+        display: block;
+    }
+
+    .catatan-heading-image {
+        width: 145px;
+        margin-bottom: 20px;
+    }
+
+    .catatan-header h2 {
+        font-size: 32px;
+    }
+
+    .catatan-see-all {
+        display: inline-block;
+
+        margin-top: 25px;
+    }
+
+    .catatan-item {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+        padding: 32px 0;
+    }
+
+    .catatan-image {
+        order: -1;
+
+        width: 100%;
+        height: 210px;
+    }
+
+    .catatan-item h3 {
+        font-size: 27px;
+    }
+
+    .catatan-excerpt {
+        font-size: 14px;
+    }
+}
+/* =====================================================
+   CATATAN — HOMEPAGE EDITORIAL PREVIEW
+   ===================================================== */
+
+.catatan-preview {
+    background: #ffffff;
+    padding: 110px 8% 130px;
+    color: #252525;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.catatan-header {
+    max-width: 1200px;
+    margin: 0 auto 65px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+
+/* -------------------------
+   CATATAN HANDWRITTEN HEADING
+------------------------- */
+
+.catatan-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.catatan-heading-image {
+    display: block;
+
+    width: 300px;
+    height: auto;
+
+    margin-bottom: 28px;
+}
+
+
+/* -------------------------
+   CATATAN DESCRIPTION
+------------------------- */
+
+.catatan-header h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.15;
+
+    letter-spacing: -0.5px;
+
+    color: #222;
+}
+
+
+/* =========================
+   SEE ALL
+========================= */
+
+.catatan-see-all {
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #333;
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    padding-bottom: 6px;
+
+    transition: opacity 0.2s ease;
+}
+
+.catatan-see-all:hover {
+    opacity: 0.55;
+}
+
+
+/* =========================
+   NOTES LIST
+========================= */
+
+.catatan-list {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    border-top: 1px solid #e7e7e7;
+}
+
+
+/* =========================
+   INDIVIDUAL NOTE
+========================= */
+
+.catatan-item {
+    display: grid;
+
+    grid-template-columns: 1fr 300px;
+
+    gap: 70px;
+
+    padding: 42px 0;
+
+    border-bottom: 1px solid #e7e7e7;
+
+    align-items: center;
+}
+
+
+/* =========================
+   NOTE TEXT
+========================= */
+
+.catatan-content {
+    max-width: 700px;
+}
+
+
+/* Date */
+
+.catatan-meta {
+    font-size: 13px;
+    color: #777;
+
+    margin-bottom: 13px;
+}
+
+
+/* Article title */
+
+.catatan-item h3 {
+    margin: 0 0 13px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 29px;
+    font-weight: 500;
+    line-height: 1.15;
+
+    letter-spacing: -0.3px;
+
+    color: #222;
+}
+
+
+/* Article description */
+
+.catatan-excerpt {
+    margin: 0 0 18px;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #777;
+
+    max-width: 680px;
+}
+
+
+/* Category + reading time */
+
+.catatan-info {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+.catatan-info span:first-child {
+    color: #555;
+}
+
+
+/* =========================
+   IMAGE PREVIEW
+========================= */
+
+.catatan-image {
+    width: 100%;
+    height: 190px;
+
+    overflow: hidden;
+
+    background: #f4f4f4;
+}
+
+.catatan-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.catatan-item:hover .catatan-image img {
+    transform: scale(1.03);
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .catatan-preview {
+        padding: 80px 6% 100px;
+    }
+
+    .catatan-heading-image {
+        width: 240px;
+    }
+
+    .catatan-header h2 {
+        font-size: 31px;
+    }
+
+    .catatan-item {
+        grid-template-columns: 1fr 240px;
+
+        gap: 40px;
+    }
+
+    .catatan-item h3 {
+        font-size: 27px;
+    }
+
+    .catatan-image {
+        height: 160px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+    .catatan-preview {
+        padding: 70px 24px 80px;
+    }
+
+    .catatan-header {
+        display: block;
+    }
+
+    .catatan-heading-image {
+        width: 190px;
+
+        margin-bottom: 20px;
+    }
+
+    .catatan-header h2 {
+        font-size: 28px;
+    }
+
+    .catatan-see-all {
+        display: inline-block;
+
+        margin-top: 25px;
+    }
+
+    .catatan-item {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+        padding: 32px 0;
+    }
+
+    .catatan-image {
+        order: -1;
+
+        width: 100%;
+        height: 210px;
+    }
+
+    .catatan-item h3 {
+        font-size: 26px;
+    }
+
+    .catatan-excerpt {
+        font-size: 14px;
+    }
+}
+/* =====================================================
+   FULL CATATAN PAGE
+   ===================================================== */
+
+
+/* =========================
+   PAGE
+========================= */
+
+.catatan-page {
+    background: #ffffff;
+    color: #292929;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.catatan-page .site-header {
+    width: 100%;
+
+    padding: 28px 5.5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #eeeeee;
+
+    background: #ffffff;
+}
+
+
+.catatan-page .site-logo {
+    font-family: cursive;
+
+    font-size: 30px;
+    font-weight: 500;
+
+    color: #111111;
+
+    text-decoration: none;
+}
+
+
+.catatan-page .site-nav {
+    display: flex;
+    align-items: center;
+
+    gap: 36px;
+}
+
+
+.catatan-page .site-nav a {
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    color: #252525;
+
+    text-decoration: none;
+
+    transition: opacity 0.2s ease;
+}
+
+
+.catatan-page .site-nav a:hover {
+    opacity: 0.55;
+}
+
+
+.catatan-page .site-nav a.active {
+    background: #f7dce4;
+
+    padding: 10px 18px;
+
+    border-radius: 24px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.catatan-page-hero {
+
+    max-width: 1080px;
+
+    margin: 0 auto;
+
+    padding: 70px 0 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 70px;
+
+    border-bottom: 1px solid #dddddd;
+}
+
+
+.catatan-page-heading {
+    flex: 1;
+}
+
+
+.catatan-page-title {
+
+    width: 260px;
+
+    height: auto;
+
+    display: block;
+
+    margin-bottom: 25px;
+}
+
+
+.catatan-page-heading p {
+
+    max-width: 430px;
+
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #666666;
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.catatan-hero-image {
+
+    width: 330px;
+
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.catatan-hero-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+
+/* =========================
+   LIBRARY
+========================= */
+
+.catatan-library {
+
+    max-width: 1080px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 300px 1fr;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.catatan-sidebar {
+
+    padding: 45px 50px 80px 0;
+
+    border-right: 1px solid #dddddd;
+}
+
+
+.catatan-categories {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+.catatan-categories .category {
+
+    display: grid;
+
+    grid-template-columns: 18px 1fr auto;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 15px;
+
+    color: #444444;
+
+    text-decoration: none;
+}
+
+
+.catatan-categories .category span:last-child {
+
+    font-size: 13px;
+
+    color: #888888;
+}
+
+
+.catatan-categories .category.active {
+
+    color: #dca8b8;
+
+    font-weight: 500;
+}
+
+
+.catatan-categories .category.active span:first-child {
+
+    font-size: 14px;
+
+    color: #dca8b8;
+}
+
+
+/* =========================
+   SIDEBAR QUOTE
+========================= */
+
+.catatan-quote {
+
+    position: relative;
+
+    margin-top: 65px;
+
+    padding-top: 35px;
+
+    border-top: 1px solid #eeeeee;
+
+    text-align: center;
+}
+
+
+.catatan-quote p {
+
+    margin: 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 19px;
+
+    font-style: italic;
+
+    line-height: 1.6;
+
+    color: #555555;
+}
+
+
+.quote-star {
+
+    position: absolute;
+
+    top: 10px;
+    left: 0;
+
+    font-size: 20px;
+
+    color: #ead9ce;
+}
+
+
+.quote-star.bottom {
+
+    top: auto;
+
+    left: auto;
+
+    right: 0;
+
+    bottom: -20px;
+}
+
+
+/* =========================
+   ARTICLES
+========================= */
+
+.catatan-articles {
+
+    padding-left: 65px;
+}
+
+
+/* =========================
+   ARTICLE
+========================= */
+
+.catatan-article {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1fr 120px 25px;
+
+    gap: 35px;
+
+    align-items: center;
+
+    padding: 42px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.catatan-article:first-child {
+
+    padding-top: 45px;
+}
+
+
+.article-main {
+
+    min-width: 0;
+}
+
+
+.article-date {
+
+    margin-bottom: 13px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 13px;
+
+    color: #777777;
+}
+
+
+.article-main h2 {
+
+    margin: 0 0 12px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 29px;
+
+    font-weight: 500;
+
+    line-height: 1.2;
+
+    color: #222222;
+}
+
+
+.article-main p {
+
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #777777;
+
+    max-width: 650px;
+}
+
+
+/* =========================
+   ARTICLE META
+========================= */
+
+.article-meta {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 8px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+
+    color: #777777;
+
+    white-space: nowrap;
+}
+
+
+.article-meta span:first-child {
+
+    color: #555555;
+}
+
+
+/* =========================
+   BOOKMARK
+========================= */
+
+.bookmark {
+
+    border: none;
+
+    background: transparent;
+
+    padding: 0;
+
+    font-size: 20px;
+
+    color: #888888;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+
+.bookmark:hover {
+
+    color: #222222;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .catatan-page .site-header {
+
+        padding: 25px 6%;
+    }
+
+
+    .catatan-page-hero {
+
+        margin: 0 6%;
+
+        padding: 60px 0 30px;
+    }
+
+
+    .catatan-library {
+
+        margin: 0 6%;
+
+        grid-template-columns: 230px 1fr;
+    }
+
+
+    .catatan-sidebar {
+
+        padding-right: 30px;
+    }
+
+
+    .catatan-articles {
+
+        padding-left: 40px;
+    }
+
+
+    .catatan-article {
+
+        grid-template-columns: 1fr 90px 20px;
+
+        gap: 20px;
+    }
+
+
+    .catatan-page-title {
+
+        width: 220px;
+    }
+
+
+    .catatan-hero-image {
+
+        width: 270px;
+
+        height: 160px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 700px) {
+
+    .catatan-page .site-header {
+
+        padding: 20px 24px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+
+    .catatan-page .site-nav {
+
+        width: 100%;
+
+        justify-content: space-between;
+
+        gap: 10px;
+    }
+
+
+    .catatan-page .site-nav a {
+
+        font-size: 12px;
+    }
+
+
+    .catatan-page-hero {
+
+        margin: 0 24px;
+
+        padding: 50px 0 35px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 30px;
+    }
+
+
+    .catatan-page-title {
+
+        width: 200px;
+    }
+
+
+    .catatan-hero-image {
+
+        width: 100%;
+
+        height: 180px;
+    }
+
+
+    .catatan-library {
+
+        margin: 0 24px;
+
+        display: block;
+    }
+
+
+    .catatan-sidebar {
+
+        padding: 30px 0;
+
+        border-right: none;
+
+        border-bottom: 1px solid #dddddd;
+    }
+
+
+    .catatan-categories {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 20px;
+    }
+
+
+    .catatan-quote {
+
+        display: none;
+    }
+
+
+    .catatan-articles {
+
+        padding-left: 0;
+    }
+
+
+    .catatan-article {
+
+        display: block;
+
+        padding: 35px 0;
+    }
+
+
+    .article-main h2 {
+
+        font-size: 27px;
+    }
+
+
+    .article-main p {
+
+        font-size: 14px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .article-meta {
+
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 8px;
+    }
+
+
+    .bookmark {
+
+        position: absolute;
+
+        top: 38px;
+
+        right: 0;
+    }
+}
+.catatan-page .site-logo {
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+}
+
+.catatan-page .site-logo img {
+    width: 145px;
+    height: auto;
+    display: block;
+}
+/* ONLY CATATAN PAGE */
+.catatan-page {
+    background: #ffffff;
+    color: #242424;
+}
+
+.catatan-page .catatan-hero {
+    background: #ffffff;
+}
+
+.catatan-page .catatan-content {
+    background: #ffffff;
+}
+/* =========================================
+   CATATAN PAGE — WHITE MEDIUM-STYLE LAYOUT
+   ========================================= */
+
+body.catatan-page,
+body.catatan-page::before,
+body.catatan-page::after {
+    background: #ffffff !important;
+}
+
+.catatan-page {
+    background: #ffffff !important;
+    min-height: 100vh;
+}
+
+.catatan-page .catatan-hero,
+.catatan-page .catatan-main,
+.catatan-page .catatan-content,
+.catatan-page .catatan-list,
+.catatan-page .catatan-sidebar {
+    background: #ffffff !important;
+}
+/* =========================================
+   CATATAN ARTICLE LINK
+========================================= */
+
+.catatan-article-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.catatan-article-link .catatan-article {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.catatan-article-link:hover .catatan-article {
+    opacity: 0.65;
+}
+/* =========================================================
+   FULL ARTICLE PAGE
+   JATUH SUKA DI USIA 20-AN
+========================================================= */
+
+.article-page {
+    background: #ffffff;
+    color: #242424;
+}
+
+
+/* =========================================================
+   ARTICLE CONTAINER
+========================================================= */
+
+.full-article {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 40px 140px;
+}
+
+
+/* =========================================================
+   ARTICLE HEADER
+========================================================= */
+
+.full-article-header {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.full-article-category {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9b8f92;
+    margin-bottom: 24px;
+}
+
+
+.full-article-header h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(52px, 6vw, 78px);
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+    margin: 0;
+    color: #222222;
+}
+
+
+.full-article-date {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #888888;
+    margin-top: 28px;
+}
+
+
+/* =========================================================
+   ARTICLE HERO IMAGE
+========================================================= */
+
+.full-article-image {
+    width: 100%;
+    max-width: 900px;
+    min-height: 380px;
+    margin: 70px auto 80px;
+    overflow: hidden;
+}
+
+
+.full-article-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   ARTICLE TEXT
+========================================================= */
+
+.article-text {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+
+.article-text p {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 1.9;
+    color: #454545;
+    margin: 0 0 30px;
+}
+
+
+.article-text p:first-child {
+    margin-top: 0;
+}
+
+
+.article-text strong {
+    color: #222222;
+    font-weight: 500;
+}
+
+
+.article-text em {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   READER QUESTION
+========================================================= */
+
+.reader-question {
+    max-width: 680px;
+    margin: 110px auto 90px;
+    padding: 55px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    text-align: center;
+}
+
+
+.question-label {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    color: #999999;
+    margin-bottom: 25px;
+}
+
+
+.reader-question h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 38px;
+    line-height: 1.25;
+    font-weight: 500;
+    color: #252525;
+    margin: 0 auto 25px;
+}
+
+
+.question-description {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #999999;
+    margin: 0;
+}
+
+
+/* =========================================================
+   READER MESSAGES
+========================================================= */
+
+.reader-messages {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+
+.reader-messages-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+
+.reader-messages-header h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 38px;
+    font-weight: 500;
+    margin: 0;
+    color: #222222;
+}
+
+
+.reader-messages-header span {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    color: #999999;
+}
+
+
+/* =========================================================
+   MESSAGE FORM
+========================================================= */
+
+.message-form {
+    border: 1px solid #dedede;
+    padding: 28px;
+    margin-bottom: 60px;
+}
+
+
+.message-field {
+    margin-bottom: 22px;
+}
+
+
+.message-field label {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    color: #555555;
+    margin-bottom: 8px;
+}
+
+
+.message-field input,
+.message-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #dedede;
+    background: #ffffff;
+    padding: 13px 14px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #222222;
+    outline: none;
+}
+
+
+.message-field input:focus,
+.message-field textarea:focus {
+    border-color: #aaa;
+}
+
+
+.message-field textarea {
+    min-height: 150px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+
+.message-field input::placeholder,
+.message-field textarea::placeholder {
+    color: #aaa;
+}
+
+
+/* =========================================================
+   ANONYMOUS CHECKBOX
+========================================================= */
+
+.anonymous-option {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    color: #666666;
+    cursor: pointer;
+    margin-bottom: 22px;
+}
+
+
+.anonymous-option input {
+    width: 15px;
+    height: 15px;
+    accent-color: #dca9b7;
+}
+
+
+/* =========================================================
+   SEND BUTTON
+========================================================= */
+
+#sendMessage {
+    border: none;
+    background: #242424;
+    color: #ffffff;
+    padding: 13px 25px;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+
+#sendMessage:hover {
+    opacity: 0.75;
+}
+
+
+#sendMessage:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+#formStatus {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    color: #888888;
+    margin: 15px 0 0;
+}
+
+
+/* =========================================================
+   READER MESSAGE CARDS
+========================================================= */
+
+#messagesContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.reader-message {
+    padding: 30px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+
+.reader-message-from {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    color: #999999;
+    margin-bottom: 13px;
+}
+
+
+.reader-message-text {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 27px;
+    line-height: 1.35;
+    color: #292929;
+    margin-bottom: 18px;
+}
+
+
+.message-like {
+    border: none;
+    background: transparent;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    color: #999999;
+    cursor: pointer;
+}
+
+
+.message-like span:first-child {
+    font-size: 20px;
+    line-height: 1;
+    transition: transform 0.15s ease;
+}
+
+
+.message-like:hover span:first-child {
+    transform: scale(1.15);
+}
+
+
+.messages-loading {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #999999;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .full-article {
+        padding: 70px 22px 100px;
+    }
+
+
+    .full-article-header h1 {
+        font-size: 50px;
+    }
+
+
+    .full-article-image {
+        min-height: 220px;
+        margin: 50px auto 60px;
+    }
+
+
+    .article-text p {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+
+    .reader-question {
+        margin-top: 80px;
+        margin-bottom: 70px;
+        padding: 40px 0;
+    }
+
+
+    .reader-question h2 {
+        font-size: 32px;
+    }
+
+
+    .reader-messages-header h2 {
+        font-size: 32px;
+    }
+
+
+    .reader-messages-header {
+        align-items: flex-end;
+    }
+
+
+    .message-form {
+        padding: 20px;
+    }
+
+
+    .reader-message-text {
+        font-size: 24px;
+    }
+
+}
+/* =========================================================
+   READER MESSAGES — CLEAN CATATAN / SENDTHESONG STYLE
+   ========================================================= */
+
+/* Main reader messages section */
+.reader-messages {
+    width: 100%;
+    max-width: 1100px;
+    margin: 100px auto 120px;
+    padding: 0 32px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+/* Header */
+.reader-messages-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 45px;
+    padding: 0;
+}
+
+.reader-messages-header h2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: #222;
+}
+
+#messageCount {
+    font-size: 14px;
+    color: #999;
+    white-space: nowrap;
+}
+
+/* =========================================================
+   MESSAGE FORM
+   ========================================================= */
+
+.message-form {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto 90px;
+    padding: 42px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.message-field {
+    margin-bottom: 25px;
+}
+
+.message-field label {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 13px;
+    color: #555;
+    letter-spacing: 0.02em;
+}
+
+.message-field input,
+.message-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    background: #fff;
+    color: #222;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.message-field input {
+    height: 48px;
+}
+
+.message-field textarea {
+    min-height: 140px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.message-field input:focus,
+.message-field textarea:focus {
+    border-color: #999;
+}
+
+.message-field input::placeholder,
+.message-field textarea::placeholder {
+    color: #aaa;
+}
+
+/* =========================================================
+   MESSAGE CARDS
+   ========================================================= */
+
+/*
+   This targets the container that your JavaScript
+   generates the reader messages inside.
+*/
+#messagesContainer,
+.messages-container,
+.reader-messages-list,
+.message-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    width: 100%;
+}
+
+/* Individual reader message */
+.message-card,
+.reader-message,
+.message-item {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding: 28px;
+    min-height: 180px;
+    box-sizing: border-box;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.message-card:hover,
+.reader-message:hover,
+.message-item:hover {
+    transform: translateY(-2px);
+    border-color: #d8d8d8;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* Sender */
+.message-card .sender,
+.reader-message .sender,
+.message-item .sender,
+.message-card .message-name,
+.reader-message .message-name,
+.message-item .message-name {
+    margin-bottom: 18px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* Message text */
+.message-card .message,
+.reader-message .message,
+.message-item .message,
+.message-card .message-text,
+.reader-message .message-text,
+.message-item .message-text {
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Date */
+.message-card .date,
+.reader-message .date,
+.message-item .date,
+.message-card .message-date,
+.reader-message .message-date,
+.message-item .message-date {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .reader-messages {
+        margin: 70px auto 80px;
+        padding: 0 20px;
+    }
+
+    .reader-messages-header {
+        margin-bottom: 30px;
+    }
+
+    .reader-messages-header h2 {
+        font-size: 26px;
+    }
+
+    #messagesContainer,
+    .messages-container,
+    .reader-messages-list,
+    .message-list {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .message-form {
+        padding: 25px;
+        margin-bottom: 60px;
+    }
+
+    .message-card,
+    .reader-message,
+    .message-item {
+        padding: 23px;
+    }
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 90px;
+  height: auto;
+  display: block;
+}
+.logo img {
+  width: 135px;
+  height: auto;
+  display: block;
+}
+/* =====================================================
+   ARTICLE HEADER LOGO — NORMAL SIZE
+   ===================================================== */
+
+.site-header .logo {
+    display: flex !important;
+    align-items: center !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+.site-header .logo img {
+    width: 135px !important;
+    height: auto !important;
+    max-width: 135px !important;
+    max-height: 45px !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+/* ARTICLE READING FONT — OVERRIDE */
+.article-content,
+.article-content p,
+.article-body,
+.article-body p,
+.full-article,
+.full-article p {
+    font-family: Georgia, "Times New Roman", serif !important;
+}
+
+.article-content p,
+.article-body p,
+.full-article p {
+    font-size: 20px !important;
+    line-height: 1.8 !important;
+}
+.article-hero-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 50px auto 60px;
+}
