@@ -3909,3 +3909,16 @@ body.catatan-page::after {
     }
 
 }
+/* MOBILE ARTICLE IMAGE */
+@media (max-width: 600px) {
+
+    .article-hero-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        margin: 30px 0 40px !important;
+        border-radius: 8px !important;
+    }
+
+}
