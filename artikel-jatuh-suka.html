@@ -1,672 +1,671 @@
 <!DOCTYPE html>
+
 <html lang="id">
 
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Jatuh Suka di Usia 20-an — tatsyafira</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
+
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+
     rel="stylesheet"
+
   >
 
   <style>
 
     /* =========================================================
+
        RESET
+
     ========================================================= */
 
     * {
+
       box-sizing: border-box;
+
       margin: 0;
+
       padding: 0;
+
     }
 
     html {
+
       scroll-behavior: smooth;
+
     }
 
     body {
+
       background: #ffffff;
+
       color: #222222;
+
       font-family: "DM Sans", sans-serif;
+
       line-height: 1.7;
+
     }
 
     a {
+
       color: inherit;
+
       text-decoration: none;
+
     }
+
 
 
     /* =========================================================
+
        HEADER
+
     ========================================================= */
 
     .site-header {
+
       width: 100%;
+
       height: 72px;
+
       background: #ffffff;
+
       border-bottom: 1px solid #eeeeee;
+
       position: relative;
+
       z-index: 10;
+
     }
 
     .nav {
+
       width: min(1200px, calc(100% - 64px));
+
       height: 72px;
+
       margin: 0 auto;
 
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
     }
 
     /* LOGO */
 
     .logo {
+
       display: flex;
+
       align-items: center;
 
       width: 135px;
+
       height: 42px;
 
       flex-shrink: 0;
+
       overflow: hidden;
+
     }
 
     .logo img {
+
       display: block;
 
       width: 135px !important;
+
       height: auto !important;
 
       max-width: 135px !important;
+
       max-height: 42px !important;
 
       object-fit: contain;
+
       object-position: left center;
+
     }
 
     /* NAVIGATION */
 
     .nav-links {
+
       display: flex;
+
       align-items: center;
+
       gap: 38px;
+
     }
 
     .nav-links a {
+
       font-size: 15px;
+
       font-weight: 500;
+
       color: #333333;
 
       transition: opacity 0.2s ease;
+
     }
 
     .nav-links a:hover {
+
       opacity: 0.55;
+
     }
 
     .nav-links a.active {
+
       font-weight: 600;
+
     }
+/* =========================================================
+   ARTICLE
+   ========================================================= */
 
-
-    /* =========================================================
-       ARTICLE
-    ========================================================= */
-
-    .article {
-      width: min(760px, calc(100% - 48px));
-
-      margin: 0 auto;
-
-      padding-top: 105px;
-      padding-bottom: 80px;
-    }
-
-    /* CATEGORY */
-
-    .article-category {
-      font-size: 13px;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-
-      color: #999999;
-
-      margin-bottom: 22px;
-    }
-
-    /* TITLE */
-
-    .article-title {
-      font-family: "Playfair Display", Georgia, serif;
-
-      font-size: clamp(42px, 6vw, 68px);
-
-      font-weight: 500;
-      line-height: 1.08;
-
-      letter-spacing: -1.5px;
-
-      color: #1f1f1f;
-
-      margin-bottom: 65px;
-    }
-
-
-    /* =========================================================
-       ARTICLE CONTENT
-    ========================================================= */
-
-    .article-content {
-      .article-content {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 20px;
-    line-height: 1.8;
-    color: #292929;
+.article {
+  width: min(1000px, calc(100% - 48px));
+  margin: 0 auto;
+  padding-top: 105px;
+  padding-bottom: 80px;
 }
-    }
 
-    .article-content p {
-      margin-bottom: 32px;
-    }
-
-    .article-content p:last-child {
-      margin-bottom: 0;
-    }
-
-    .article-content strong {
-      font-weight: 600;
-    }
-
-    .article-content em {
-      font-style: italic;
-    }
-
-
-    /* OPENING LINE */
-
-    .article-opening {
-      font-family: "Playfair Display", Georgia, serif;
-
-      font-size: 25px;
-      line-height: 1.5;
-
-      font-style: italic;
-
-      color: #222222;
-
-      margin-bottom: 42px;
-    }
-
-
-    /* =========================================================
-       COMMENT SECTION
-    ========================================================= */
-
-    .comments-section {
-      width: min(1000px, calc(100% - 48px));
-
-      margin: 90px auto 120px;
-
-      padding-top: 70px;
-
-      border-top: 1px solid #eeeeee;
-    }
-
-    /* HEADER */
-
-    .comments-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-
-      margin-bottom: 38px;
-    }
-
-    .comments-title {
-      font-family: "Playfair Display", Georgia, serif;
-
-      font-size: 34px;
-      font-weight: 500;
-
-      color: #222222;
-    }
-
-    .comments-count {
-      font-size: 13px;
-      color: #999999;
-    }
-
-
-    /* =========================================================
-       COMMENT FORM
-    ========================================================= */
-
-    .comment-form {
-      background: #ffffff;
-
-      border: 1px solid #dedede;
-
-      border-radius: 8px;
-
-      padding: 34px;
-
-      margin-bottom: 55px;
-    }
-
-    .form-row {
-      display: flex;
-      align-items: flex-end;
-
-      gap: 18px;
-
-      margin-bottom: 22px;
-    }
-
-    .form-group {
-      flex: 1;
-    }
-
-    .form-label {
-      display: block;
-
-      font-size: 13px;
-      font-weight: 600;
-
-      color: #555555;
-
-      margin-bottom: 9px;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-
-      border: 1px solid #dddddd;
-
-      border-radius: 6px;
-
-      background: #ffffff;
-
-      padding: 13px 14px;
-
-      font-family: "DM Sans", sans-serif;
-      font-size: 14px;
-
-      color: #222222;
-
-      outline: none;
-
-      transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
-    }
-
-    input {
-      height: 48px;
-    }
-
-    textarea {
-      min-height: 145px;
-
-      resize: vertical;
-    }
-
-    input:focus,
-    textarea:focus {
-      border-color: #999999;
-
-      box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.03);
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-      color: #aaaaaa;
-    }
-
-
-    /* ANONYMOUS */
-
-    .anonymous-option {
-      display: flex;
-
-      align-items: center;
-
-      gap: 9px;
-
-      height: 48px;
-
-      white-space: nowrap;
-
-      font-size: 13px;
-
-      color: #666666;
-    }
-
-    .anonymous-option input {
-      width: 17px;
-      height: 17px;
-
-      padding: 0;
-
-      accent-color: #222222;
-    }
-
-
-    /* MESSAGE */
-
-    .message-group {
-      margin-bottom: 22px;
-    }
-
-
-    /* BUTTON */
-
-    .submit-button {
-      border: none;
-
-      border-radius: 6px;
-
-      background: #222222;
-
-      color: #ffffff;
-
-      padding: 12px 22px;
-
-      font-family: "DM Sans", sans-serif;
-
-      font-size: 13px;
-      font-weight: 600;
-
-      cursor: pointer;
-
-      transition:
-        background 0.2s ease,
-        transform 0.2s ease;
-    }
-
-    .submit-button:hover {
-      background: #444444;
-    }
-
-    .submit-button:active {
-      transform: translateY(1px);
-    }
-
-    .submit-button:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-
-    .form-status {
-      margin-top: 14px;
-
-      font-size: 13px;
-
-      color: #888888;
-    }
-
-
-    /* =========================================================
-       COMMENT CARDS
-    ========================================================= */
-
-    .comments-list {
-      display: grid;
-
-      grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-      gap: 18px;
-    }
-
-    .comment-box {
-      background: #ffffff;
-
-      border: 1px solid #dedede;
-
-      border-radius: 10px;
-
-      min-height: 190px;
-
-      padding: 25px 26px;
-
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: space-between;
-
-      transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
-    }
-
-    .comment-box:hover {
-      border-color: #cccccc;
-
-      box-shadow:
-        0 3px 12px rgba(0, 0, 0, 0.04);
-    }
-
-    .comment-message {
-      font-family: "Playfair Display", Georgia, serif;
-
-      font-size: 17px;
-
-      line-height: 1.7;
-
-      color: #333333;
-
-      margin-bottom: 28px;
-
-      white-space: pre-wrap;
-
-      overflow-wrap: anywhere;
-    }
-
-    .comment-footer {
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-      gap: 15px;
-
-      padding-top: 15px;
-
-      border-top: 1px solid #eeeeee;
-    }
-
-    .comment-author {
-      font-family: "DM Sans", sans-serif;
-
-      font-size: 12px;
-
-      font-weight: 600;
-
-      color: #555555;
-    }
-
-    .comment-date {
-      font-family: "DM Sans", sans-serif;
-
-      font-size: 11px;
-
-      color: #aaaaaa;
-    }
-
-    .comments-empty,
-    .comments-loading {
-      font-size: 14px;
-
-      color: #999999;
-
-      padding: 12px 0;
-    }
-
-
-    /* =========================================================
-       FOOTER
-    ========================================================= */
-
-    .site-footer {
-      border-top: 1px solid #eeeeee;
-
-      padding: 35px 24px;
-
-      text-align: center;
-
-      font-size: 13px;
-
-      color: #999999;
-    }
-
-
-    /* =========================================================
-       MOBILE
-    ========================================================= */
-
-    @media (max-width: 700px) {
-
-      .site-header {
-        height: 64px;
-      }
-
-      .nav {
-        width: calc(100% - 32px);
-        height: 64px;
-      }
-
-      .logo {
-        width: 110px;
-        height: 36px;
-      }
-
-      .logo img {
-        width: 110px !important;
-
-        max-width: 110px !important;
-        max-height: 36px !important;
-      }
-
-      .nav-links {
-        gap: 16px;
-      }
-
-      .nav-links a {
-        font-size: 12px;
-      }
-
-      .nav-links a:nth-child(4),
-      .nav-links a:nth-child(5) {
-        display: none;
-      }
-
-
-      /* ARTICLE */
-
-      .article {
-        width: calc(100% - 36px);
-
-        padding-top: 65px;
-        padding-bottom: 65px;
-      }
-
-      .article-title {
-        font-size: 42px;
-
-        letter-spacing: -1px;
-
-        margin-bottom: 48px;
-      }
-
-      .article-opening {
-        font-size: 22px;
-      }
-
-      .article-content {
-        font-size: 17px;
-
-        line-height: 1.9;
-      }
-
-      .article-content p {
-        margin-bottom: 32px;
-      }
-
-
-      /* COMMENTS */
-
-      .comments-section {
-        width: calc(100% - 36px);
-
-        margin-top: 60px;
-
-        margin-bottom: 70px;
-
-        padding-top: 50px;
-      }
-
-      .comments-header {
-        margin-bottom: 28px;
-      }
-
-      .comments-title {
-        font-size: 28px;
-      }
-
-      .comment-form {
-        padding: 24px;
-
-        margin-bottom: 40px;
-      }
-
-      .form-row {
-        display: block;
-      }
-
-      .form-group {
-        margin-bottom: 20px;
-      }
-
-      .anonymous-option {
-        height: auto;
-      }
-
-      .comments-list {
-        grid-template-columns: 1fr;
-      }
-
-      .comment-box {
-        min-height: 170px;
-
-        padding: 22px;
-      }
-
-      .comment-message {
-        font-size: 16px;
-      }
-    }
-
+.article-category {
+  width: 760px;
+  max-width: 100%;
+  margin: 0 auto 22px;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #999999;
+}
+
+.article-title {
+  width: 760px;
+  max-width: 100%;
+  margin: 0 auto 48px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(42px, 6vw, 68px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  color: #1f1f1f;
+}
+
+/* HERO IMAGE */
+
+.article-hero {
+  width: 900px;
+  max-width: 100%;
+  margin: 0 auto 24px;
+}
+
+.article-hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 1.72;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+
+/* ARTICLE CONTENT */
+
+.article-content {
+  width: 680px;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #292929;
+}
+
+.article-content p {
+  margin-bottom: 32px;
+}
+
+.article-content p:last-child {
+  margin-bottom: 0;
+}
+
+.article-content strong {
+  font-weight: 600;
+}
+
+.article-content em {
+  font-style: italic;
+}
+
+.article-opening {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 25px;
+  line-height: 1.5;
+  font-style: italic;
+  text-align: center;
+  color: #222222;
+  margin-bottom: 42px;
+}
+
+/* COMMENT SECTION */
+
+.comments-section {
+  width: min(1000px, calc(100% - 48px));
+  margin: 90px auto 120px;
+  padding-top: 70px;
+  border-top: 1px solid #eeeeee;
+}
+
+.comments-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 38px;
+}
+
+.comments-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 34px;
+  font-weight: 500;
+  color: #222222;
+}
+
+.comments-count {
+  font-size: 13px;
+  color: #999999;
+}
+
+/* COMMENT FORM */
+
+.comment-form {
+  background: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  padding: 34px;
+  margin-bottom: 55px;
+}
+
+.form-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555555;
+  margin-bottom: 9px;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  background: #ffffff;
+  padding: 13px 14px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  color: #222222;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+input {
+  height: 48px;
+}
+
+textarea {
+  min-height: 145px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #999999;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.03);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaaaaa;
+}
+
+.anonymous-option {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  height: 48px;
+  white-space: nowrap;
+  font-size: 13px;
+  color: #666666;
+}
+
+.anonymous-option input {
+  width: 17px;
+  height: 17px;
+  padding: 0;
+  accent-color: #222222;
+}
+
+.message-group {
+  margin-bottom: 22px;
+}
+
+.submit-button {
+  border: none;
+  border-radius: 6px;
+  background: #222222;
+  color: #ffffff;
+  padding: 12px 22px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background: #444444;
+}
+
+.submit-button:active {
+  transform: translateY(1px);
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-status {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #888888;
+}
+
+/* COMMENT CARDS */
+
+.comments-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.comment-box {
+  background: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  min-height: 190px;
+  padding: 25px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.comment-box:hover {
+  border-color: #cccccc;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.comment-message {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #333333;
+  margin-bottom: 28px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.comment-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eeeeee;
+}
+
+.comment-author {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #555555;
+}
+
+.comment-date {
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  color: #aaaaaa;
+}
+
+.comments-empty,
+.comments-loading {
+  font-size: 14px;
+  color: #999999;
+  padding: 12px 0;
+}
+
+/* FOOTER */
+
+.site-footer {
+  border-top: 1px solid #eeeeee;
+  padding: 35px 24px;
+  text-align: center;
+  font-size: 13px;
+  color: #999999;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .site-header {
+    height: 64px;
+  }
+
+  .nav {
+    width: calc(100% - 32px);
+    height: 64px;
+  }
+
+  .logo {
+    width: 110px;
+    height: 36px;
+  }
+
+  .logo img {
+    width: 110px !important;
+    max-width: 110px !important;
+    max-height: 36px !important;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .nav-links a:nth-child(4),
+  .nav-links a:nth-child(5) {
+    display: none;
+  }
+
+  .article {
+    width: calc(100% - 48px);
+    max-width: 100%;
+    padding-top: 62px;
+    padding-bottom: 65px;
+  }
+
+  .article-category {
+    width: 100%;
+    margin-bottom: 24px;
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .article-title {
+    width: 100%;
+    max-width: 100%;
+    font-size: 43px;
+    line-height: 1.12;
+    letter-spacing: -1px;
+    margin-bottom: 38px;
+  }
+
+  .article-hero {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 17px;
+  }
+
+  .article-hero-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1.78 / 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px;
+  }
+
+  .article-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.75;
+  }
+
+  .article-content p {
+    margin-bottom: 32px;
+  }
+
+  .article-opening {
+    width: 100%;
+    font-size: 25px;
+    line-height: 1.45;
+    text-align: center;
+    margin-bottom: 34px;
+  }
+
+  .comments-section {
+    width: calc(100% - 36px);
+    margin-top: 60px;
+    margin-bottom: 70px;
+    padding-top: 50px;
+  }
+
+  .comments-header {
+    margin-bottom: 28px;
+  }
+
+  .comments-title {
+    font-size: 28px;
+  }
+
+  .comment-form {
+    padding: 24px;
+    margin-bottom: 40px;
+  }
+
+  .form-row {
+    display: block;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .anonymous-option {
+    height: auto;
+  }
+
+  .comments-list {
+    grid-template-columns: 1fr;
+  }
+
+  .comment-box {
+    min-height: 170px;
+    padding: 22px;
+  }
+
+  .comment-message {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 390px) {
+
+  .article {
+    width: calc(100% - 36px);
+  }
+
+  .article-title {
+    font-size: 39px;
+  }
+
+  .article-content {
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  .article-opening {
+    font-size: 23px;
+  }
+}
   </style>
+
 </head>
+
 
 
 <body>
 
 
+
   <!-- =======================================================
+
        HEADER
+
   ======================================================= -->
 
   <header class="site-header">
@@ -676,36 +675,53 @@
       <a href="index.html" class="logo">
 
         <img
+
           src="images/tatsyafira-logo.png"
+
           alt="tatsyafira"
+
         >
 
       </a>
 
 
+
       <div class="nav-links">
 
         <a
+
           href="catatan.html"
+
           class="active"
+
         >
+
           Catatan
+
         </a>
 
         <a href="index.html">
+
           Belajar
+
         </a>
 
         <a href="#">
+
           Kelas
+
         </a>
 
         <a href="#">
+
           Resources
+
         </a>
 
         <a href="#">
+
           Toko
+
         </a>
 
       </div>
@@ -716,268 +732,424 @@
 
 
 
+
+
   <!-- =======================================================
+
        ARTICLE
+
   ======================================================= -->
 
   <main>
 
-    <article class="article">
+    <article class="article jatuh-suka-article">
+
 
 
       <div class="article-category">
+
         Refleksi
+
       </div>
 
 
+
       <h1 class="article-title">
+
         Jatuh Suka di Usia 20-an
+
       </h1>
-<img  
-    src="images/jatuh-suka-cover.jpg" 
-    alt="Jatuh Suka di Usia 20-an"
-    class="article-hero-image"
->
+      <figure class="article-hero">
+        <img
+          src="images/jatuh-suka-cover.jpg"
+          alt="Jatuh Suka di Usia 20-an"
+          class="article-hero-image"
+        >
+      </figure>
+
+
 
 
       <div class="article-content">
 
 
+
         <!-- OPENING -->
 
         <p class="article-opening">
+
           Maafkan, Aku Jatuh Suka~
+
         </p>
 
 
+
         <p>
+
           Sepertinya banyak orang-orang di sekitarku mengira aku perempuan yang mandiri dan self-sufficient banget. Sebenernya iya! Hari-hari memang banyak kuhabiskan sendiri dan aku selalu memenuhi jadwalku dengan banyak kegiatan. I believe the best thing that every young person should do is to keep themselves busy with things that make them grow, karena seringkali kalau kita terlalu banyak waktu luang kita jadi mikir yang engga-engga. Entah tiba-tiba merasa kesepian, merasa sendiri, merasa dunia kayak berat banget kalau waktu lagi kosong. Siapa lagi yang suka merasa kayak gini?
+
         </p>
 
 
+
         <p>
+
           Mungkin karena itu aku suka sekali dengan kesibukan. Ada rasa aman ketika hidup terasa penuh. Ketika kalender penuh, to-do list panjang, dan setiap hari ada sesuatu yang harus dikerjakan. Setidaknya aku tidak punya terlalu banyak waktu untuk bertanya, “Sebenernya aku lagi ngerasa apa ya?” Tapi ternyata, sesibuk apapun seseorang, tetap ada beberapa hal yang tidak bisa kita hindari. Salah satunya adalah perasaan.
+
         </p>
 
 
+
         <p>
+
           Hari itu musim dingin, bulan Februari 2026. Aku sedang dalam perjalanan kereta dari Jerman ke Prancis. Aku memang sudah punya jadwal untuk mengunjungi Paris di libur musim dingin. Sesampainya di sana, aku duduk di Jardin du Trocadéro sambil memakan pain au chocolat yang aku beli seharga 2 euro di bakery terdekat. Aku melihat orang-orang berlalu-lalang, ada yang datang bersama pasangan, ada yang bersama teman, ada yang sibuk mengambil foto Eiffel Tower, ada juga yang hanya berjalan sambil menikmati pagi. Udara Paris cukup dingin, dan entah kenapa, sambil menggigit pain au chocolat itu, hal pertama yang muncul di pikiranku adalah, <strong>“Jatuh suka di usia 20-an ga semudah itu ya?”</strong>
+
         </p>
 
 
+
         <p>
+
           Lucu juga. Aku sedang sendirian di Paris, di depan Eiffel Tower, makan pastry seharga 2 euro, dan bukannya memikirkan betapa indahnya Paris, aku malah memikirkan soal jatuh suka. Typical me. Tapi semakin kupikirkan, semakin aku merasa pertanyaan itu benar. <strong>Jatuh suka di usia 20-an memang ga semudah itu.</strong>
+
         </p>
 
 
+
         <p>
+
           Saat orang-orang mengira aku perempuan yang mandiri dan self-sufficient, ada kalanya aku juga punya rasa dengan seseorang. Aku juga pernah melihat seseorang dan berpikir, <em>“Oh... I like this person.”</em> Aku juga pernah melihat seseorang dan mulai membayangkan kemungkinan-kemungkinan kecil. Mungkin kalau sama dia akan menyenangkan. Mungkin dia orang yang baik. Mungkin kita cocok. Mungkin visi hidup kita bisa berjalan beriringan. Mungkin.
+
         </p>
 
 
+
         <p>
+
           Tapi ternyata, di usia 20-an, kata <em>“mungkin”</em> datang bersama banyak sekali pertanyaan.
+
         </p>
 
 
+
         <p>
+
           Dulu kita suka dengan seseorang karena kita suka aja. Sesederhana itu. Dia lucu, kita suka. Dia baik, kita suka. Dia perhatian, kita suka. Dia membuat kita deg-degan, ya sudah, kita suka. Selesai. Tapi sekarang? Sambil menggigit pain au chocolat pagi itu, aku kembali terpikir, <em>“Kalau sekarang... jatuh suka juga harus memikirkan, aku cukup tidak ya untuk dia? Visi hidup kita ke depan sama ga ya? Tujuan hidupnya akan berada di tempat yang sama dengan aku ga ya? Kalau nanti dia ingin tinggal di negara lain, aku mau ikut ga? Kalau aku ingin mengejar mimpi-mimpiku, dia akan mendukung ga? Latar belakang aku akan diterima tidak ya di keluarganya? Mimpi-mimpiku akan tetap bisa diwujudkan ga ya kalau aku bersamanya?”</em>
+
         </p>
 
 
+
         <p>
+
           Banyak banget realita yang harus dipikirkan. Ga semudah sekadar suka dengan seseorang aja.
+
         </p>
 
 
+
         <p>
+
           Mungkin ini salah satu hal yang berubah ketika kita tumbuh dewasa. Kita mulai mengenal diri sendiri. Kita mulai tahu apa yang kita mau. Kita mulai punya mimpi yang serius. Kita mulai tahu kota mana yang ingin kita tinggali, pekerjaan seperti apa yang ingin kita bangun, pendidikan seperti apa yang ingin kita kejar, keluarga seperti apa yang ingin kita punya. Dan mungkin yang paling penting, kita mulai tahu hal-hal apa yang tidak lagi bisa kita kompromikan.
+
         </p>
 
 
+
         <p>
+
           Jadi ketika ada seseorang datang, kita tidak hanya bertanya, <strong>“Apakah aku suka dia?”</strong> Kita juga mulai bertanya, <strong>“Apakah kehidupan yang ingin aku bangun bisa tetap aku jalani ketika bersamanya?”</strong>
+
         </p>
 
 
+
         <p>
+
           Dan menurutku, pertanyaan kedua itu jauh lebih sulit.
+
         </p>
 
 
+
         <p>
+
           Karena bisa saja jawabannya adalah iya. Kita bisa saja sangat suka. Dia lucu, baik, perhatian, tipe kita banget, nyambung diajak ngobrol, bahkan mungkin dia juga suka kita. Tapi kemudian ada satu hal. Lalu ada satu hal lagi. Dan satu hal lagi. Sampai akhirnya kita sadar bahwa chemistry ternyata bukan satu-satunya hal yang dibutuhkan untuk membangun kehidupan bersama seseorang.
+
         </p>
 
 
+
         <p>
+
           Sebenarnya, walaupun aku sendiri, ada beberapa “potensi” yang harus banyak kulepaskan sepanjang perjalanan. Dan mungkin itu juga yang membuat Paris mengingatkanku akan hal ini. Beberapa “potensi” yang sebenarnya lucu, baik, tipeku banget, ternyata masih ada 1000 hal lain lagi yang harus kupertimbangkan. Tidak semuanya punya garis hidup yang sejalan.
+
         </p>
 
 
+
         <p>
+
           Ada yang mungkin baik untukku, tapi datang di waktu yang salah. Ada yang mungkin cocok denganku, tapi punya tujuan hidup yang berbeda. Ada yang mungkin membuatku nyaman, tapi membuatku mempertanyakan apakah aku masih bisa menjadi diriku sendiri. Dan ada juga yang mungkin sebenarnya tidak salah apa-apa. Hanya saja, tidak semua orang yang kita suka harus menjadi orang yang kita pilih.
+
         </p>
 
 
+
         <p>
+
           Ini bagian yang menurutku paling menyebalkan dari menjadi dewasa. Karena dulu aku pikir kalau kita suka seseorang dan dia juga suka kita, ya sudah. Bukankah seharusnya sesederhana itu? Ternyata tidak. Kadang kita harus cukup dewasa untuk mengatakan, <em>“Aku suka kamu, tapi aku rasa hidup kita tidak menuju tempat yang sama.”</em>
+
         </p>
 
 
+
         <p>
+
           Dan jujur saja, melepaskan “potensi” itu tetap sedih. Karena yang kita lepaskan bukan cuma seseorang, tapi juga kemungkinan. Kemungkinan tentang <em>what if?</em> Bagaimana kalau aku memilih dia? Bagaimana kalau ternyata kita bisa berhasil? Bagaimana kalau aku tidak pergi? Bagaimana kalau aku mencoba sedikit lebih lama?
+
         </p>
 
 
+
         <p>
+
           Mungkin itu yang paling sulit. Bukan kehilangan sesuatu yang benar-benar pernah kita miliki, tapi kehilangan sesuatu yang sebenarnya belum pernah terjadi. A future that never happened.
+
         </p>
 
 
+
         <p>
+
           Mungkin karena itu beberapa “potensi” tetap terasa sedikit familiar bahkan setelah bertahun-tahun. Bukan karena kita masih ingin kembali, tapi karena kita pernah membayangkan bagaimana kalau hidup kita berjalan ke arah sana. Kita pernah melihat sedikit gambaran tentang kehidupan yang mungkin terjadi, lalu akhirnya memilih jalan yang berbeda.
+
         </p>
 
 
+
         <p>
+
           Tapi akhirnya aku memilih melepaskan potensi-potensi itu. Yang kemudian membawa aku ke sini: duduk sendirian di Paris, makan pain au chocolat, sambil melihat Eiffel Tower di pagi hari.
+
         </p>
 
 
+
         <p>
+
           Dan tiba-tiba aku berpikir, <em>“Oh... ternyata kalau dulu aku memilih berbeda, mungkin aku tidak akan berada di sini.”</em>
+
         </p>
 
 
+
         <p>
+
           Mungkin aku tidak akan menjadi diriku yang sekarang. Mungkin aku tidak akan punya mimpi-mimpi sebesar ini. Mungkin aku tidak akan pergi sejauh ini. Mungkin aku tidak akan belajar bahwa ada hal-hal yang memang harus kita lepaskan supaya bisa menemukan kehidupan yang sebenarnya kita inginkan.
+
         </p>
 
 
+
         <p>
+
           Sejujurnya, hal-hal yang harus kulepaskan itu sedih juga kalau diingat-ingat. Tapi aku tidak pernah menyesal. Karena semua hal yang kulepaskan somehow membawa aku kepada mimpi-mimpi besar yang sedang aku kejar sekarang.
+
         </p>
 
 
+
         <p>
+
           Dan mungkin memang begitu caranya hidup bekerja. Kadang kita kehilangan seseorang, lalu menemukan diri sendiri. Kadang kita melepaskan sebuah kemungkinan, lalu mendapatkan kesempatan untuk membangun kemungkinan yang jauh lebih besar.
+
         </p>
 
 
+
         <p>
+
           Aku juga mulai berpikir bahwa mungkin jatuh suka di usia 20-an bukan berarti kita menjadi terlalu perhitungan atau terlalu complicated. Mungkin kita hanya sudah mulai memahami bahwa memilih seseorang juga berarti memilih sebuah kehidupan. Ketika kita memilih untuk berjalan bersama seseorang, kita bukan hanya memilih orangnya. Kita juga sedikit banyak memilih kota yang mungkin akan kita tinggali, keluarga yang mungkin akan menjadi bagian dari hidup kita, cara kita membesarkan anak nanti, bagaimana kita mengatur uang, bagaimana kita mendukung karier satu sama lain, dan bahkan bagaimana kita menghadapi masa-masa sulit.
+
         </p>
 
 
+
         <p>
+
           It sounds scary when you put it that way, I know.
+
         </p>
 
 
+
         <p>
+
           Tapi mungkin justru karena itu, aku tidak ingin terburu-buru.
+
         </p>
 
 
+
         <p>
+
           Aku tidak ingin dicintai dengan cara yang membuatku harus berhenti menjadi diriku sendiri. Aku ingin tetap menjadi perempuan yang punya banyak mimpi, yang mungkin suatu hari ingin kuliah lagi, yang mungkin ingin tinggal di kota yang berbeda, yang mungkin ingin membangun sesuatu dari nol, yang mungkin masih akan terlalu sibuk mengejar banyak hal. Dan aku juga ingin bisa mencintai seseorang yang punya mimpi-mimpinya sendiri.
+
         </p>
 
 
+
         <p>
+
           Aku ingin hubungan yang bukan tentang salah satu orang mengecilkan mimpinya supaya yang lain bisa tumbuh. Tapi dua orang yang sama-sama tumbuh dan somehow menemukan cara supaya pertumbuhan itu bisa terjadi bersama.
+
         </p>
 
 
+
         <p>
+
           Mungkin suatu hari nanti, aku akan menemukan seseorang yang ketika aku bilang, <em>“Aku mau kuliah S2 di Edinburgh,”</em>dia tidak bilang, <em>“Kenapa harus jauh-jauh?”</em> tapi malah bilang, <em>“Okay, then let's figure it out.”</em>
+
         </p>
 
 
+
         <p>
+
           HAHA.
+
         </p>
 
 
+
         <p>
+
           Atau dimanalah gitu yang keren.
+
         </p>
 
 
+
         <p>
+
           Yang penting jangan disuruh long distance lagi aja.
+
         </p>
 
 
+
         <p>
+
           Aku punya sebuah mimpi kecil tentang itu. Mungkin nanti di masa depan, aku dan “potensi”-ku itu bisa kuliah S2 bareng di Edinburgh. Atau mungkin bukan Edinburgh. Mungkin di kota lain yang bahkan belum pernah aku bayangkan sekarang. Dan mungkin dia juga sedang sibuk mengejar mimpinya sendiri di tempat yang bahkan belum pernah kukunjungi.
+
         </p>
 
 
+
         <p>
+
           Who knows?
+
         </p>
 
 
+
         <p>
+
           Mungkin memang bukan tugasku sekarang untuk mengetahui siapa orangnya. Mungkin tugasku sekarang hanya terus membangun kehidupan yang aku suka, terus mengejar mimpi-mimpiku, terus belajar menjadi perempuan yang aku banggakan. Dan kalau suatu hari nanti ada seseorang yang datang, semoga dia bukan seseorang yang membuatku berhenti berjalan. Semoga dia adalah seseorang yang berjalan bersamaku.
+
         </p>
 
 
+
         <p>
+
           Karena ternyata, jatuh suka di usia 20-an memang ga semudah itu.
+
         </p>
 
 
+
         <p>
+
           Tapi mungkin itu bukan hal yang buruk.
+
         </p>
 
 
+
         <p>
+
           Mungkin karena sekarang kita sudah cukup dewasa untuk tidak hanya bertanya, <strong>“Apakah aku suka dia?”</strong> tapi juga, <strong>“Apakah aku suka dengan diriku sendiri ketika aku menjalani hidup bersamanya?”</strong>
+
         </p>
 
 
+
         <p>
+
           Dan menurutku, pertanyaan itu jauh lebih penting.
+
         </p>
 
 
+
         <p>
+
           Jadi untuk semua “potensi” yang pernah aku lepaskan, terima kasih sudah pernah hadir. Maafkan aku kalau akhirnya aku memilih jalan yang berbeda. Aku harap kamu juga menemukan seseorang yang membuatmu tidak perlu mempertanyakan apakah kamu harus memilih antara cinta dan kehidupan yang kamu inginkan.
+
         </p>
 
 
+
         <p>
+
           Dan untuk diriku sendiri, semoga suatu hari nanti aku bisa jatuh suka lagi.
+
         </p>
 
 
+
         <p>
+
           Bukan dengan terburu-buru. Bukan hanya karena seseorang membuatku deg-degan. Tapi karena setelah semua pertimbangan, semua mimpi, semua prinsip, dan semua perjalanan panjang ini, aku tetap bisa berkata,
+
         </p>
 
 
+
         <p>
+
           <strong>“I think I like you.”</strong>
+
         </p>
 
 
+
         <p>
+
           Dan kali ini, semoga kita sama-sama menuju tempat yang sama.
+
         </p>
 
 
+
         <p>
+
           Untuk “potensi” yang pernah kamu lepaskan sebelumnya, apakah ada pesan yang mau kamu sampaikan untuknya?
+
         </p>
+
 
 
         <p>
+
           Kirim pesannya di bawah ya~
+
         </p>
+
 
 
       </div>
@@ -986,8 +1158,12 @@
 
 
 
+
+
     <!-- =====================================================
+
          ONE COMMENT SECTION ONLY
+
     ===================================================== -->
 
     <section class="comments-section">
@@ -995,25 +1171,37 @@
       <div class="comments-header">
 
         <h2 class="comments-title">
+
           Pesan dari pembaca
+
         </h2>
 
         <span
+
           class="comments-count"
+
           id="messageCount"
+
         >
+
           0 pesan
+
         </span>
 
       </div>
 
 
 
+
+
       <!-- FORM -->
 
       <form
+
         class="comment-form"
+
         id="commentForm"
+
       >
 
         <div class="form-row">
@@ -1021,31 +1209,47 @@
           <div class="form-group">
 
             <label
+
               class="form-label"
+
               for="senderName"
+
             >
+
               From
+
             </label>
 
             <input
+
               type="text"
+
               id="senderName"
+
               maxlength="80"
+
               placeholder="Namamu (opsional)"
+
             >
 
           </div>
 
 
+
           <label class="anonymous-option">
 
             <input
+
               type="checkbox"
+
               id="anonymousCheck"
+
             >
 
             <span>
+
               Kirim sebagai anonim
+
             </span>
 
           </label>
@@ -1054,53 +1258,84 @@
 
 
 
+
+
         <div class="message-group">
 
           <label
+
             class="form-label"
+
             for="messageText"
+
           >
+
             Pesan
+
           </label>
 
           <textarea
+
             id="messageText"
+
             maxlength="2000"
+
             placeholder="Tulis sesuatu yang ingin kamu sampaikan..."
+
             required
+
           ></textarea>
 
         </div>
 
 
 
+
+
         <button
+
           type="submit"
+
           class="submit-button"
+
           id="sendMessage"
+
         >
+
           Kirim pesan
+
         </button>
 
 
+
         <div
+
           class="form-status"
+
           id="formStatus"
+
         ></div>
 
       </form>
 
 
 
+
+
       <!-- COMMENTS -->
 
       <div
+
         class="comments-list"
+
         id="messagesContainer"
+
       >
 
         <div class="comments-loading">
+
           Memuat komentar...
+
         </div>
 
       </div>
@@ -1111,135 +1346,200 @@
 
 
 
+
+
   <!-- =======================================================
+
        FOOTER
+
   ======================================================= -->
 
   <footer class="site-footer">
+
     © tatsyafira
+
   </footer>
 
 
 
+
+
   <!-- =======================================================
+
        SUPABASE
+
   ======================================================= -->
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 
+
   <script>
 
     /* =======================================================
+
        SUPABASE CONNECTION
+
     ======================================================= */
 
     const SUPABASE_URL =
+
       "https://gtaljywggqalmfqizjhj.supabase.co";
 
     const SUPABASE_KEY =
+
       "sb_publishable_Lvgk-7rPMaxhO7TAOdGp6Q_MWACHYtR";
 
     const supabaseClient =
+
       window.supabase.createClient(
+
         SUPABASE_URL,
+
         SUPABASE_KEY
+
       );
 
 
+
     /* =======================================================
+
        ARTICLE IDENTIFIER
+
     ======================================================= */
 
     const ARTICLE_SLUG =
+
       "jatuh-suka-di-usia-20-an";
 
 
+
     /* =======================================================
+
        ELEMENTS
+
     ======================================================= */
 
     const commentForm =
+
       document.getElementById("commentForm");
 
     const senderName =
+
       document.getElementById("senderName");
 
     const messageText =
+
       document.getElementById("messageText");
 
     const anonymousCheck =
+
       document.getElementById("anonymousCheck");
 
     const sendMessage =
+
       document.getElementById("sendMessage");
 
     const formStatus =
+
       document.getElementById("formStatus");
 
     const messagesContainer =
+
       document.getElementById("messagesContainer");
 
     const messageCount =
+
       document.getElementById("messageCount");
 
 
+
     /* =======================================================
+
        ESCAPE HTML
+
     ======================================================= */
 
     function escapeHTML(text) {
 
       const div =
+
         document.createElement("div");
 
       div.textContent =
+
         text ?? "";
 
       return div.innerHTML;
+
     }
 
 
+
     /* =======================================================
+
        FORMAT DATE
+
     ======================================================= */
 
     function formatDate(dateString) {
 
       if (!dateString) {
+
         return "";
+
       }
 
       const date =
+
         new Date(dateString);
 
       return date.toLocaleDateString(
+
         "id-ID",
+
         {
+
           day: "numeric",
+
           month: "long",
+
           year: "numeric"
+
         }
+
       );
+
     }
 
 
+
     /* =======================================================
+
        LOAD COMMENTS
+
     ======================================================= */
 
     async function loadMessages() {
 
       messagesContainer.innerHTML = `
+
         <div class="comments-loading">
+
           Memuat komentar...
+
         </div>
+
       `;
 
 
+
       const {
+
         data,
+
         error
+
       } = await supabaseClient
 
         .from("comments")
@@ -1247,81 +1547,127 @@
         .select("*")
 
         .eq(
+
           "article",
+
           ARTICLE_SLUG
+
         )
 
         .order(
+
           "created_at",
+
           {
+
             ascending: false
+
           }
+
         );
+
 
 
       if (error) {
 
         console.error(
+
           "Error loading comments:",
+
           error
+
         );
 
         messagesContainer.innerHTML = `
+
           <div class="comments-empty">
+
             Belum ada pesan.
+
           </div>
+
         `;
 
         messageCount.textContent =
+
           "0 pesan";
 
         return;
+
       }
 
 
+
       const comments =
+
         data || [];
 
 
+
       messageCount.textContent =
+
         `${comments.length} pesan`;
+
 
 
       if (comments.length === 0) {
 
         messagesContainer.innerHTML = `
+
           <div class="comments-empty">
+
             Belum ada pesan.
+
           </div>
+
         `;
 
         return;
+
       }
 
 
+
       messagesContainer.innerHTML =
+
         comments
+
           .map(comment => {
 
             const anonymous =
+
               comment.is_anonymous === true ||
+
               comment.anonymous === true;
 
 
+
             const name =
+
               anonymous
+
                 ? "Anonim"
+
                 : (
+
                     comment.sender_name ||
+
                     comment.name ||
+
                     "Pembaca"
+
                   );
 
 
+
             const message =
+
               comment.message ||
+
               comment.content ||
+
               "";
+
 
 
             return `
@@ -1329,19 +1675,27 @@
               <article class="comment-box">
 
                 <div class="comment-message">
+
                   ${escapeHTML(message)}
+
                 </div>
 
                 <div class="comment-footer">
 
                   <span class="comment-author">
+
                     ${escapeHTML(name)}
+
                   </span>
 
                   <span class="comment-date">
+
                     ${formatDate(
+
                       comment.created_at
+
                     )}
+
                   </span>
 
                 </div>
@@ -1351,51 +1705,71 @@
             `;
 
           })
+
           .join("");
+
     }
 
 
+
     /* =======================================================
+
        SUBMIT COMMENT
+
     ======================================================= */
 
     commentForm.addEventListener(
+
       "submit",
+
       async function(event) {
 
         event.preventDefault();
 
 
+
         const message =
+
           messageText.value.trim();
 
         const name =
+
           senderName.value.trim();
 
         const isAnonymous =
+
           anonymousCheck.checked;
+
 
 
         if (!message) {
 
           formStatus.textContent =
+
             "Tulis pesan terlebih dahulu.";
 
           return;
+
         }
+
 
 
         sendMessage.disabled = true;
 
         sendMessage.textContent =
+
           "Mengirim...";
 
         formStatus.textContent =
+
           "";
 
 
+
         const {
+
           error
+
         } = await supabaseClient
 
           .from("comments")
@@ -1403,39 +1777,53 @@
           .insert({
 
             article:
+
               ARTICLE_SLUG,
 
             name:
+
               isAnonymous
+
                 ? null
+
                 : name,
 
             message:
+
               message,
 
             is_anonymous:
+
               isAnonymous
 
           });
 
 
+
         if (error) {
 
           console.error(
+
             "Error submitting comment:",
+
             error
+
           );
 
           formStatus.textContent =
+
             "Pesan belum berhasil dikirim. Coba lagi.";
 
           sendMessage.disabled = false;
 
           sendMessage.textContent =
+
             "Kirim pesan";
 
           return;
+
         }
+
 
 
         /* SUCCESS */
@@ -1449,31 +1837,43 @@
         senderName.disabled = false;
 
         senderName.placeholder =
+
           "Namamu (opsional)";
 
 
+
         formStatus.textContent =
+
           "Pesanmu sudah terkirim. Terima kasih 🤍";
+
 
 
         sendMessage.disabled = false;
 
         sendMessage.textContent =
+
           "Kirim pesan";
+
 
 
         await loadMessages();
 
       }
+
     );
 
 
+
     /* =======================================================
+
        ANONYMOUS TOGGLE
+
     ======================================================= */
 
     anonymousCheck.addEventListener(
+
       "change",
+
       function() {
 
         if (anonymousCheck.checked) {
@@ -1483,6 +1883,7 @@
           senderName.value = "";
 
           senderName.placeholder =
+
             "Akan dikirim sebagai anonim";
 
         } else {
@@ -1490,16 +1891,21 @@
           senderName.disabled = false;
 
           senderName.placeholder =
+
             "Namamu (opsional)";
 
         }
 
       }
+
     );
 
 
+
     /* =======================================================
+
        START
+
     ======================================================= */
 
     loadMessages();
@@ -1507,5 +1913,7 @@
   </script>
 
 
+
 </body>
+
 </html>

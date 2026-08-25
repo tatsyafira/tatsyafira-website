@@ -155,7 +155,7 @@ nav {
 
     display: block;
 
-    width: 130px;
+    width: 135px;
 
     height: auto;
 }
@@ -1564,571 +1564,10 @@ footer {
     display: block;
     margin-bottom: 12px;
 }
-/* ===== CATATAN TYPOGRAPHY ===== */
-
-#catatan .section-heading h2 {
-    font-size: 25px !important;
-    line-height: 1.08;
-    letter-spacing: -1px;
-}
-
-#catatan .handwriting-label {
-    width: 230px;
-}
-/* =====================================================
-   CATATAN — HOMEPAGE EDITORIAL PREVIEW
-   ===================================================== */
-
-.catatan-preview {
-    background: #ffffff;
-    padding: 110px 8% 130px;
-    color: #252525;
-}
-
-
-/* -------------------------
-   HEADER
-------------------------- */
-
-.catatan-header {
-    max-width: 1200px;
-    margin: 0 auto 65px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 40px;
-}
-
-.catatan-label {
-    display: block;
-
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 48px;
-    font-style: italic;
-    line-height: 1;
-
-    margin-bottom: 22px;
-
-    color: #222;
-}
-
-.catatan-header h2 {
-    margin: 0;
-
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 42px;
-    font-weight: 500;
-    line-height: 1.15;
-    letter-spacing: -0.5px;
-
-    color: #222;
-}
-
-
-/* -------------------------
-   SEE ALL
-------------------------- */
-
-.catatan-see-all {
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 500;
-
-    color: #333;
-    text-decoration: none;
-
-    white-space: nowrap;
-
-    padding-bottom: 6px;
-
-    transition: opacity 0.2s ease;
-}
-
-.catatan-see-all:hover {
-    opacity: 0.55;
-}
-
-
-/* -------------------------
-   LIST
-------------------------- */
-
-.catatan-list {
-    max-width: 1200px;
-    margin: 0 auto;
-
-    border-top: 1px solid #e7e7e7;
-}
-
-
-/* -------------------------
-   INDIVIDUAL NOTE
-------------------------- */
-
-.catatan-item {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 70px;
-
-    padding: 42px 0;
-
-    border-bottom: 1px solid #e7e7e7;
-
-    align-items: center;
-}
-
-
-/* -------------------------
-   TEXT
-------------------------- */
-
-.catatan-content {
-    max-width: 700px;
-}
-
-.catatan-meta {
-    font-family: inherit;
-    font-size: 13px;
-    color: #777;
-
-    margin-bottom: 13px;
-}
-
-.catatan-item h3 {
-    margin: 0 0 13px;
-
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 1.15;
-
-    letter-spacing: -0.3px;
-
-    color: #222;
-}
-
-.catatan-excerpt {
-    margin: 0 0 18px;
-
-    font-family: inherit;
-    font-size: 15px;
-    line-height: 1.7;
-
-    color: #777;
-
-    max-width: 680px;
-}
-
-.catatan-info {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    font-size: 13px;
-    color: #777;
-}
-
-.catatan-info span:first-child {
-    color: #555;
-}
-
-
-/* -------------------------
-   IMAGE
-------------------------- */
-
-.catatan-image {
-    width: 100%;
-    height: 190px;
-
-    overflow: hidden;
-
-    background: #f4f4f4;
-}
-
-.catatan-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition: transform 0.5s ease;
-}
-
-.catatan-item:hover .catatan-image img {
-    transform: scale(1.03);
-}
 
 
 /* =====================================================
-   RESPONSIVE
-   ===================================================== */
-
-@media (max-width: 900px) {
-
-    .catatan-preview {
-        padding: 80px 6% 100px;
-    }
-
-    .catatan-header {
-        margin-bottom: 45px;
-    }
-
-    .catatan-header h2 {
-        font-size: 36px;
-    }
-
-    .catatan-label {
-        font-size: 42px;
-    }
-
-    .catatan-item {
-        grid-template-columns: 1fr 240px;
-        gap: 40px;
-    }
-
-    .catatan-item h3 {
-        font-size: 28px;
-    }
-
-    .catatan-image {
-        height: 160px;
-    }
-}
-
-
-@media (max-width: 650px) {
-
-    .catatan-preview {
-        padding: 70px 24px 80px;
-    }
-
-    .catatan-header {
-        display: block;
-    }
-
-    .catatan-label {
-        font-size: 40px;
-        margin-bottom: 18px;
-    }
-
-    .catatan-header h2 {
-        font-size: 32px;
-    }
-
-    .catatan-see-all {
-        display: inline-block;
-        margin-top: 25px;
-    }
-
-    .catatan-item {
-        grid-template-columns: 1fr;
-        gap: 22px;
-        padding: 32px 0;
-    }
-
-    .catatan-image {
-        order: -1;
-
-        width: 100%;
-        height: 210px;
-    }
-
-    .catatan-item h3 {
-        font-size: 27px;
-    }
-
-    .catatan-excerpt {
-        font-size: 14px;
-    }
-}
-/* =====================================================
-   CATATAN — HOMEPAGE EDITORIAL PREVIEW
-   ===================================================== */
-
-.catatan-preview {
-    background: #ffffff;
-    padding: 110px 8% 130px;
-    color: #252525;
-}
-
-
-/* =========================
-   HEADER
-========================= */
-
-.catatan-header {
-    max-width: 1200px;
-    margin: 0 auto 65px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 40px;
-}
-
-
-/* Your handwritten Catatan PNG */
-
-.catatan-heading {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.catatan-heading-image {
-    display: block;
-
-    width: 190px;
-    height: auto;
-
-    margin-bottom: 25px;
-}
-
-
-/* Subtitle */
-
-.catatan-header h2 {
-    margin: 0;
-
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 42px;
-    font-weight: 500;
-    line-height: 1.15;
-
-    letter-spacing: -0.5px;
-
-    color: #222;
-}
-
-
-/* =========================
-   SEE ALL
-========================= */
-
-.catatan-see-all {
-    font-size: 14px;
-    font-weight: 500;
-
-    color: #333;
-    text-decoration: none;
-
-    white-space: nowrap;
-
-    padding-bottom: 6px;
-
-    transition: opacity 0.2s ease;
-}
-
-.catatan-see-all:hover {
-    opacity: 0.55;
-}
-
-
-/* =========================
-   NOTES LIST
-========================= */
-
-.catatan-list {
-    max-width: 1200px;
-    margin: 0 auto;
-
-    border-top: 1px solid #e7e7e7;
-}
-
-
-/* =========================
-   NOTE
-========================= */
-
-.catatan-item {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-
-    gap: 70px;
-
-    padding: 42px 0;
-
-    border-bottom: 1px solid #e7e7e7;
-
-    align-items: center;
-}
-
-
-/* =========================
-   TEXT
-========================= */
-
-.catatan-content {
-    max-width: 700px;
-}
-
-.catatan-meta {
-    font-size: 13px;
-    color: #777;
-
-    margin-bottom: 13px;
-}
-
-.catatan-item h3 {
-    margin: 0 0 13px;
-
-    font-family: "Cormorant Garamond", Georgia, serif;
-
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 1.15;
-
-    letter-spacing: -0.3px;
-
-    color: #222;
-}
-
-.catatan-excerpt {
-    margin: 0 0 18px;
-
-    font-size: 15px;
-    line-height: 1.7;
-
-    color: #777;
-
-    max-width: 680px;
-}
-
-.catatan-info {
-    display: flex;
-    align-items: center;
-
-    gap: 8px;
-
-    font-size: 13px;
-    color: #777;
-}
-
-.catatan-info span:first-child {
-    color: #555;
-}
-
-
-/* =========================
-   IMAGE PREVIEW
-========================= */
-
-.catatan-image {
-    width: 100%;
-    height: 190px;
-
-    overflow: hidden;
-
-    background: #f4f4f4;
-}
-
-.catatan-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition: transform 0.5s ease;
-}
-
-.catatan-item:hover .catatan-image img {
-    transform: scale(1.03);
-}
-
-
-/* =====================================================
-   TABLET
-   ===================================================== */
-
-@media (max-width: 900px) {
-
-    .catatan-preview {
-        padding: 80px 6% 100px;
-    }
-
-    .catatan-heading-image {
-        width: 165px;
-    }
-
-    .catatan-header h2 {
-        font-size: 36px;
-    }
-
-    .catatan-item {
-        grid-template-columns: 1fr 240px;
-        gap: 40px;
-    }
-
-    .catatan-item h3 {
-        font-size: 28px;
-    }
-
-    .catatan-image {
-        height: 160px;
-    }
-}
-
-
-/* =====================================================
-   MOBILE
-   ===================================================== */
-
-@media (max-width: 650px) {
-
-    .catatan-preview {
-        padding: 70px 24px 80px;
-    }
-
-    .catatan-header {
-        display: block;
-    }
-
-    .catatan-heading-image {
-        width: 145px;
-        margin-bottom: 20px;
-    }
-
-    .catatan-header h2 {
-        font-size: 32px;
-    }
-
-    .catatan-see-all {
-        display: inline-block;
-
-        margin-top: 25px;
-    }
-
-    .catatan-item {
-        grid-template-columns: 1fr;
-
-        gap: 22px;
-
-        padding: 32px 0;
-    }
-
-    .catatan-image {
-        order: -1;
-
-        width: 100%;
-        height: 210px;
-    }
-
-    .catatan-item h3 {
-        font-size: 27px;
-    }
-
-    .catatan-excerpt {
-        font-size: 14px;
-    }
-}
-/* =====================================================
-   CATATAN — HOMEPAGE EDITORIAL PREVIEW
+   CATATAN â€” HOMEPAGE EDITORIAL PREVIEW
    ===================================================== */
 
 .catatan-preview {
@@ -2429,6 +1868,8 @@ footer {
         font-size: 14px;
     }
 }
+
+
 /* =====================================================
    FULL CATATAN PAGE
    ===================================================== */
@@ -3087,44 +2528,22 @@ footer {
         right: 0;
     }
 }
-.catatan-page .site-logo {
-    display: flex;
-    align-items: center;
 
-    text-decoration: none;
-}
 
-.catatan-page .site-logo img {
-    width: 145px;
-    height: auto;
-    display: block;
-}
-/* ONLY CATATAN PAGE */
+/* =====================================================
+   CATATAN PAGE â€” CANONICAL PAGE OVERRIDES
+   ===================================================== */
+
 .catatan-page {
-    background: #ffffff;
+    background: #ffffff !important;
     color: #242424;
+    min-height: 100vh;
 }
-
-.catatan-page .catatan-hero {
-    background: #ffffff;
-}
-
-.catatan-page .catatan-content {
-    background: #ffffff;
-}
-/* =========================================
-   CATATAN PAGE — WHITE MEDIUM-STYLE LAYOUT
-   ========================================= */
 
 body.catatan-page,
 body.catatan-page::before,
 body.catatan-page::after {
     background: #ffffff !important;
-}
-
-.catatan-page {
-    background: #ffffff !important;
-    min-height: 100vh;
 }
 
 .catatan-page .catatan-hero,
@@ -3134,9 +2553,18 @@ body.catatan-page::after {
 .catatan-page .catatan-sidebar {
     background: #ffffff !important;
 }
-/* =========================================
-   CATATAN ARTICLE LINK
-========================================= */
+
+.catatan-page .site-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.catatan-page .site-logo img {
+    width: 145px;
+    height: auto;
+    display: block;
+}
 
 .catatan-article-link {
     display: block;
@@ -3152,6 +2580,9 @@ body.catatan-page::after {
 .catatan-article-link:hover .catatan-article {
     opacity: 0.65;
 }
+
+
+
 /* =========================================================
    FULL ARTICLE PAGE
    JATUH SUKA DI USIA 20-AN
@@ -3312,103 +2743,6 @@ body.catatan-page::after {
 }
 
 
-/* =========================================================
-   READER MESSAGES
-========================================================= */
-
-.reader-messages {
-    max-width: 680px;
-    margin: 0 auto;
-}
-
-
-.reader-messages-header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 35px;
-}
-
-
-.reader-messages-header h2 {
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 38px;
-    font-weight: 500;
-    margin: 0;
-    color: #222222;
-}
-
-
-.reader-messages-header span {
-    font-family: "Inter", sans-serif;
-    font-size: 13px;
-    color: #999999;
-}
-
-
-/* =========================================================
-   MESSAGE FORM
-========================================================= */
-
-.message-form {
-    border: 1px solid #dedede;
-    padding: 28px;
-    margin-bottom: 60px;
-}
-
-
-.message-field {
-    margin-bottom: 22px;
-}
-
-
-.message-field label {
-    display: block;
-    font-family: "Inter", sans-serif;
-    font-size: 13px;
-    color: #555555;
-    margin-bottom: 8px;
-}
-
-
-.message-field input,
-.message-field textarea {
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #dedede;
-    background: #ffffff;
-    padding: 13px 14px;
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    color: #222222;
-    outline: none;
-}
-
-
-.message-field input:focus,
-.message-field textarea:focus {
-    border-color: #aaa;
-}
-
-
-.message-field textarea {
-    min-height: 150px;
-    resize: vertical;
-    line-height: 1.6;
-}
-
-
-.message-field input::placeholder,
-.message-field textarea::placeholder {
-    color: #aaa;
-}
-
-
-/* =========================================================
-   ANONYMOUS CHECKBOX
-========================================================= */
-
 .anonymous-option {
     display: flex;
     align-items: center;
@@ -3530,67 +2864,7 @@ body.catatan-page::after {
 
 
 /* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 700px) {
-
-    .full-article {
-        padding: 70px 22px 100px;
-    }
-
-
-    .full-article-header h1 {
-        font-size: 50px;
-    }
-
-
-    .full-article-image {
-        min-height: 220px;
-        margin: 50px auto 60px;
-    }
-
-
-    .article-text p {
-        font-size: 17px;
-        line-height: 1.8;
-    }
-
-
-    .reader-question {
-        margin-top: 80px;
-        margin-bottom: 70px;
-        padding: 40px 0;
-    }
-
-
-    .reader-question h2 {
-        font-size: 32px;
-    }
-
-
-    .reader-messages-header h2 {
-        font-size: 32px;
-    }
-
-
-    .reader-messages-header {
-        align-items: flex-end;
-    }
-
-
-    .message-form {
-        padding: 20px;
-    }
-
-
-    .reader-message-text {
-        font-size: 24px;
-    }
-
-}
-/* =========================================================
-   READER MESSAGES — CLEAN CATATAN / SENDTHESONG STYLE
+   READER MESSAGES â€” CLEAN CATATAN / SENDTHESONG STYLE
    ========================================================= */
 
 /* Main reader messages section */
@@ -3806,23 +3080,98 @@ body.catatan-page::after {
         padding: 23px;
     }
 }
-.logo {
-  display: flex;
-  align-items: center;
+
+
+
+
+/* =====================================================
+   CATATAN TYPOGRAPHY / LEGACY LABEL SUPPORT
+   ===================================================== */
+
+#catatan .section-heading h2 {
+    font-size: 25px !important;
+    line-height: 1.08;
+    letter-spacing: -1px;
 }
 
-.logo img {
-  width: 90px;
-  height: auto;
-  display: block;
+#catatan .handwriting-label {
+    width: 230px;
 }
-.logo img {
-  width: 135px;
-  height: auto;
-  display: block;
+
+.catatan-label {
+    display: block;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 48px;
+    font-style: italic;
+    line-height: 1;
+    margin-bottom: 22px;
+    color: #222;
 }
+
+.reader-messages-header span {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    color: #999999;
+}
+
+@media (max-width: 900px) {
+    .catatan-header {
+        margin-bottom: 45px;
+    }
+
+    .catatan-label {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 650px) {
+    .catatan-label {
+        font-size: 40px;
+        margin-bottom: 18px;
+    }
+}
+
 /* =====================================================
-   ARTICLE HEADER LOGO — NORMAL SIZE
+   ARTICLE â€” TABLET / LARGE MOBILE FALLBACK
+   ===================================================== */
+
+@media (max-width: 700px) {
+    .full-article {
+        padding: 70px 22px 100px;
+    }
+
+    .full-article-header h1 {
+        font-size: 50px;
+    }
+
+    .full-article-image {
+        min-height: 220px;
+        margin: 50px auto 60px;
+    }
+
+    .article-text p {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+    .reader-question {
+        margin-top: 80px;
+        margin-bottom: 70px;
+        padding: 40px 0;
+    }
+
+    .reader-question h2 {
+        font-size: 32px;
+    }
+
+    .reader-message-text {
+        font-size: 24px;
+    }
+}
+
+
+/* =====================================================
+   ARTICLE HEADER / READING OVERRIDES â€” CANONICAL
    ===================================================== */
 
 .site-header .logo {
@@ -3834,13 +3183,13 @@ body.catatan-page::after {
 
 .site-header .logo img {
     width: 135px !important;
-    height: auto !important;
     max-width: 135px !important;
     max-height: 45px !important;
+    height: auto !important;
     object-fit: contain !important;
     display: block !important;
 }
-/* ARTICLE READING FONT — OVERRIDE */
+
 .article-content,
 .article-content p,
 .article-body,
@@ -3856,6 +3205,7 @@ body.catatan-page::after {
     font-size: 20px !important;
     line-height: 1.8 !important;
 }
+
 .article-hero-image {
     width: 100%;
     max-width: 300px;
@@ -3863,62 +3213,296 @@ body.catatan-page::after {
     display: block;
     margin: 50px auto 60px;
 }
-/* MOBILE ARTICLE LAYOUT */
+
+/* =====================================================
+   MOBILE ARTICLE â€” JATUH SUKA DI USIA 20-AN
+   ===================================================== */
+
 @media (max-width: 600px) {
 
-    .article {
+    /* Article reading column */
+    .article,
+    .full-article {
         width: 100%;
         max-width: 100%;
-        padding: 0 24px;
+        padding-left: 24px;
+        padding-right: 24px;
         box-sizing: border-box;
     }
 
-    .article-title {
+    /* Main article title */
+    .article-title,
+    .full-article-header h1 {
         font-size: 48px;
         line-height: 1.08;
         margin-bottom: 40px;
     }
 
-    .article-content {
+    /* Article body column */
+    .article-content,
+    .article-text {
         width: 100%;
-        max-width: 100%;
-        margin: 0 auto;
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
         box-sizing: border-box;
     }
 
-    .article-hero-image {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 30px 0 40px;
-        object-fit: contain;
+    /* Hero image: full reading-column width, proportional and uncropped. */
+    .article-hero-image,
+    .full-article-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 0 !important;
+        height: auto !important;
+        display: block !important;
+        margin: 30px 0 40px !important;
+        overflow: hidden;
+        object-fit: contain !important;
         border-radius: 8px;
     }
 
+    .full-article-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+    }
+
+    /* Opening paragraph / intro */
     .article-opening {
         font-size: 22px;
         line-height: 1.5;
         margin-bottom: 32px;
     }
 
-    .article-content p {
-        font-size: 18px;
-        line-height: 1.8;
+    /* Body copy */
+    .article-content p,
+    .article-text p,
+    .article-body p,
+    .full-article p {
+        font-size: 18px !important;
+        line-height: 1.8 !important;
         margin-bottom: 32px;
     }
 
+    /* Reader section */
+    .reader-question {
+        margin-top: 80px;
+        margin-bottom: 70px;
+        padding: 40px 0;
+    }
+
+    .reader-question h2 {
+        font-size: 32px;
+    }
+
+    .reader-messages-header h2 {
+        font-size: 26px;
+    }
+
+    .reader-message-text {
+        font-size: 24px;
+    }
 }
-/* MOBILE ARTICLE IMAGE */
+/* =====================================================
+   ARTICLE — JATUH SUKA DI USIA 20-AN
+   ===================================================== */
+
+/* Main article container */
+main .article {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+/* Article title area */
+main .article-title {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Hero image */
+main .article .article-hero-image {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 40px auto 45px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Actual reading column */
+main .article .article-content {
+    width: 100%;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Article text */
+main .article .article-content p,
+main .article .article-body p,
+main .article .full-article p {
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 20px !important;
+    line-height: 1.8 !important;
+    margin-bottom: 32px;
+}
+
+/* Opening line */
+main .article .article-opening {
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 26px;
+    line-height: 1.5;
+    margin-bottom: 35px;
+}
+
+
+/* =====================================================
+   MOBILE — ARTICLE
+   ===================================================== */
+
 @media (max-width: 600px) {
+
+    /* Keep the whole article comfortably inside the screen */
+    main .article {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
+        box-sizing: border-box;
+    }
+
+    /* Category */
+    main .article .article-category {
+        font-size: 13px;
+        letter-spacing: 2px;
+        margin-bottom: 24px;
+    }
+
+    /* Title */
+    main .article .article-title {
+        width: 100%;
+        max-width: 100%;
+        font-size: 48px !important;
+        line-height: 1.08 !important;
+        margin: 0 0 38px;
+    }
+
+    /* Hero image */
+    main .article .article-hero-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 0 auto 18px !important;
+        display: block;
+        object-fit: contain !important;
+        border-radius: 14px;
+    }
+
+    /* Reading column */
+    main .article .article-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Opening sentence */
+    main .article .article-opening {
+        font-family: Georgia, "Times New Roman", serif !important;
+        font-size: 25px !important;
+        line-height: 1.45 !important;
+        text-align: center;
+        margin: 0 0 34px;
+    }
+
+    /* Body text */
+    main .article .article-content p,
+    main .article .article-body p,
+    main .article .full-article p {
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-size: 18px !important;
+        line-height: 1.75 !important;
+        margin: 0 0 32px;
+    }
+}
+/* =====================================================
+   FINAL ARTICLE WIDTH OVERRIDE
+   ===================================================== */
+
+.article {
+    width: 100% !important;
+    max-width: 1000px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    box-sizing: border-box !important;
+}
+
+.article-content {
+    width: 680px !important;
+    max-width: 680px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+}
+
+.article-content p,
+.article-body p,
+.full-article p {
+    max-width: 680px !important;
+}
+
+.article-hero-image {
+    display: block !important;
+    width: 900px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .article {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+    .article-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .article-content p,
+    .article-body p,
+    .full-article p {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
 
     .article-hero-image {
         width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
-        display: block !important;
-        margin: 30px 0 40px !important;
-        border-radius: 8px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        border-radius: 14px !important;
     }
-
 }
