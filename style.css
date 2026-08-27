@@ -4278,3 +4278,34 @@ main .article .article-opening {
         aspect-ratio: 16 / 9 !important;
     }
 }
+.back-home-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 18px;
+    padding: 14px 22px;
+
+    border: 1px solid #171717;
+    border-radius: 999px;
+
+    background: transparent;
+    color: #171717;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
+}
+
+.back-home-btn:hover {
+    background: #171717;
+    color: #ffffff;
+    transform: translateY(-2px);
+}

@@ -224,12 +224,9 @@
                 </p>
 
 
-                <a
-                    href="#"
-                    class="button primary"
-                >
-                    Mulai Tes Gratis →
-                </a>
+               <a href="english-test.html" class="button primary">
+    Mulai Tes Gratis →
+</a>
 
 
             </div>
@@ -315,6 +312,10 @@
             <div class="class-grid">
 
 
+                <!-- =========================================
+                     CLASS 01 — FULL
+                     ========================================= -->
+
                 <article class="class-card">
 
 
@@ -339,14 +340,18 @@
                     </p>
 
 
-                    <a href="#">
-                        Lihat kelas →
-                    </a>
+                    <span class="class-full">
+                        Kelas penuh
+                    </span>
 
 
                 </article>
 
 
+
+                <!-- =========================================
+                     CLASS 02 — GRAMMAR
+                     ========================================= -->
 
                 <article class="class-card featured-class">
 
@@ -372,14 +377,22 @@
                     </p>
 
 
-                    <a href="#">
-                        Lihat kelas →
+                    <a
+                        href="https://forms.gle/X3ZVmiyoSck37xDS8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Daftar →
                     </a>
 
 
                 </article>
 
 
+
+                <!-- =========================================
+                     CLASS 03 — VOCABULARY
+                     ========================================= -->
 
                 <article class="class-card">
 
@@ -405,8 +418,12 @@
                     </p>
 
 
-                    <a href="#">
-                        Lihat kelas →
+                    <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfG12N4Y3hsG7n0WW3E2iJMxYzWjbSWGjbcz9A_aNYFFZSR3Q/viewform?usp=sharing&ouid=111761535831212837573"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Daftar →
                     </a>
 
 
@@ -914,6 +931,7 @@
 
                     `;
 
+
                     return;
 
                 }
@@ -950,9 +968,9 @@
                             /* IMAGE */
 
                             const imageURL =
-    article.image_url ||
-    article.image ||
-    "images/catatan.png";
+                                article.image_url ||
+                                article.image ||
+                                "images/catatan.png";
 
 
 
@@ -967,7 +985,7 @@
                                ================================================= */
 
                             const articleURL =
-    "artikel-" + article.slug + ".html";
+                                "artikel-" + article.slug + ".html";
 
 
 
@@ -1092,10 +1110,12 @@
                             `;
 
                         }
+
                     ).join("");
 
 
             }
+
 
             catch (error) {
 

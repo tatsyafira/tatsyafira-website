@@ -1,0 +1,2718 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>English Diagnostic Test — Tatsyafira</title>
+
+
+    <style>
+
+        :root {
+            --ink: #171717;
+            --muted: #777;
+            --line: #dedbd4;
+            --paper: #f8f7f3;
+            --card: #ffffff;
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+
+            background: var(--paper);
+
+            color: var(--ink);
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+        }
+
+
+        button,
+        a {
+            font: inherit;
+        }
+
+
+        .test-shell {
+
+            width:
+                min(
+                    820px,
+                    calc(100% - 40px)
+                );
+
+            margin: 0 auto;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 56px 0;
+        }
+
+
+        .screen {
+            width: 100%;
+        }
+
+
+        .hidden {
+            display: none !important;
+        }
+
+
+
+        /* =========================================
+           TYPOGRAPHY
+           ========================================= */
+
+        .eyebrow {
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size: 12px;
+
+            letter-spacing: .16em;
+
+            text-transform: uppercase;
+
+            color: var(--muted);
+
+            margin-bottom: 18px;
+        }
+
+
+        h1 {
+
+            font-size:
+                clamp(
+                    42px,
+                    7vw,
+                    72px
+                );
+
+            line-height: 1.02;
+
+            font-weight: 400;
+
+            letter-spacing: -.04em;
+
+            margin:
+                0 0 24px;
+        }
+
+
+        h2 {
+
+            font-size:
+                clamp(
+                    34px,
+                    5vw,
+                    54px
+                );
+
+            line-height: 1.05;
+
+            font-weight: 400;
+
+            letter-spacing: -.035em;
+
+            margin:
+                0 0 22px;
+        }
+
+
+        p {
+
+            font-size: 19px;
+
+            line-height: 1.6;
+
+            color: #555;
+        }
+
+
+
+        /* =========================================
+           BUTTONS
+           ========================================= */
+
+        .primary-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-top: 26px;
+
+            border: 0;
+
+            background: var(--ink);
+
+            color: #fff;
+
+            padding:
+                16px 24px;
+
+            border-radius: 999px;
+
+            cursor: pointer;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size: 14px;
+
+            text-decoration: none;
+
+            transition:
+                transform .2s ease,
+                opacity .2s ease;
+        }
+
+
+        .primary-btn:hover {
+
+            transform:
+                translateY(-2px);
+
+            opacity: .88;
+        }
+
+
+        .primary-btn:disabled {
+
+            opacity: .35;
+
+            cursor: not-allowed;
+
+            transform: none;
+        }
+
+
+        .back-home-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-top: 18px;
+
+            padding:
+                14px 22px;
+
+            border:
+                1px solid #171717;
+
+            border-radius: 999px;
+
+            background: transparent;
+
+            color: #171717;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            text-decoration: none;
+
+            transition:
+                background .2s ease,
+                color .2s ease,
+                transform .2s ease;
+        }
+
+
+        .back-home-btn:hover {
+
+            background: #171717;
+
+            color: #ffffff;
+
+            transform:
+                translateY(-2px);
+        }
+
+
+
+        /* =========================================
+           PROGRESS
+           ========================================= */
+
+        .test-top {
+
+            margin-bottom: 42px;
+        }
+
+
+        .progress-row {
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items: center;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size: 13px;
+
+            color: var(--muted);
+
+            margin-bottom: 12px;
+        }
+
+
+        .progress-track {
+
+            height: 5px;
+
+            background: #e5e2db;
+
+            overflow: hidden;
+
+            border-radius: 10px;
+        }
+
+
+        .progress-fill {
+
+            height: 100%;
+
+            width: 0;
+
+            background: var(--ink);
+
+            transition:
+                width .35s ease;
+        }
+
+
+
+        /* =========================================
+           QUESTION
+           ========================================= */
+
+        .question-number {
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size: 13px;
+
+            color: var(--muted);
+
+            margin-bottom: 18px;
+        }
+
+
+        .question {
+
+            font-size:
+                clamp(
+                    30px,
+                    5vw,
+                    48px
+                );
+
+            line-height: 1.12;
+
+            letter-spacing: -.025em;
+
+            margin:
+                0 0 34px;
+
+            font-weight: 400;
+        }
+
+
+
+        /* =========================================
+           ANSWERS
+           ========================================= */
+
+        .options {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 14px;
+        }
+
+
+        .option {
+
+            border:
+                1px solid var(--line);
+
+            background:
+                var(--card);
+
+            border-radius: 18px;
+
+            padding:
+                21px 22px;
+
+            text-align: left;
+
+            cursor: pointer;
+
+            display: flex;
+
+            gap: 14px;
+
+            align-items: flex-start;
+
+            min-height: 76px;
+
+            transition:
+                transform .18s ease,
+                border-color .18s ease,
+                background .18s ease,
+                box-shadow .18s ease;
+        }
+
+
+        .option:hover {
+
+            transform:
+                translateY(-3px);
+
+            border-color: #999;
+
+            box-shadow:
+                0 8px 24px
+                rgba(0, 0, 0, .06);
+        }
+
+
+        .option.selected {
+
+            border-color:
+                var(--ink);
+
+            background:
+                #efede7;
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        .option-letter {
+
+            width: 30px;
+
+            height: 30px;
+
+            border:
+                1px solid #bbb;
+
+            border-radius: 50%;
+
+            display: grid;
+
+            place-items: center;
+
+            flex:
+                0 0 30px;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size: 12px;
+        }
+
+
+        .option.selected
+        .option-letter {
+
+            background:
+                var(--ink);
+
+            color:
+                white;
+
+            border-color:
+                var(--ink);
+        }
+
+
+        .option-text {
+
+            font-size: 18px;
+
+            line-height: 1.35;
+        }
+
+
+        .next-row {
+
+            display: flex;
+
+            justify-content:
+                flex-end;
+
+            margin-top: 24px;
+        }
+
+
+
+        /* =========================================
+           ANALYSIS
+           ========================================= */
+
+        .analysis {
+
+            text-align: center;
+        }
+
+
+        .loader {
+
+            width: 70px;
+
+            height: 70px;
+
+            border:
+                2px solid #dedbd4;
+
+            border-top-color:
+                var(--ink);
+
+            border-radius: 50%;
+
+            margin:
+                0 auto 30px;
+
+            animation:
+                spin .9s linear infinite;
+        }
+
+
+        @keyframes spin {
+
+            to {
+                transform: rotate(360deg);
+            }
+
+        }
+
+
+        .analysis-list {
+
+            margin:
+                34px auto 0;
+
+            width:
+                min(
+                    420px,
+                    100%
+                );
+
+            text-align: left;
+
+            font-family:
+                Arial,
+                sans-serif;
+        }
+
+
+        .analysis-item {
+
+            padding:
+                13px 0;
+
+            border-bottom:
+                1px solid var(--line);
+
+            color: #777;
+        }
+
+
+        .analysis-item.done {
+
+            color: var(--ink);
+        }
+
+
+
+        /* =========================================
+           RESULT
+           ========================================= */
+
+        .result-card {
+
+            background:
+                var(--card);
+
+            border:
+                1px solid var(--line);
+
+            border-radius: 28px;
+
+            padding:
+                clamp(
+                    28px,
+                    6vw,
+                    58px
+                );
+        }
+
+
+        .level {
+
+            font-size:
+                clamp(
+                    64px,
+                    12vw,
+                    110px
+                );
+
+            line-height: .9;
+
+            letter-spacing: -.06em;
+
+            margin:
+                12px 0 30px;
+        }
+
+
+        .score-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 14px;
+
+            margin:
+                34px 0;
+        }
+
+
+        .score-box {
+
+            border:
+                1px solid var(--line);
+
+            border-radius: 18px;
+
+            padding: 20px;
+        }
+
+
+        .score-label {
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size: 12px;
+
+            letter-spacing: .12em;
+
+            text-transform: uppercase;
+
+            color: var(--muted);
+        }
+
+
+        .score-value {
+
+            font-size: 34px;
+
+            margin-top: 8px;
+        }
+
+
+        .recommendation {
+
+            border-top:
+                1px solid var(--line);
+
+            padding-top: 30px;
+        }
+
+
+        .recommendation h3 {
+
+            font-size: 32px;
+
+            font-weight: 400;
+
+            margin:
+                8px 0 12px;
+
+            letter-spacing: -.03em;
+        }
+
+
+        .recommendation p {
+
+            margin-bottom: 0;
+        }
+
+
+        .result-actions {
+
+            display: flex;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 0 18px;
+        }
+
+
+
+        /* =========================================
+           MOBILE
+           ========================================= */
+
+        @media (max-width: 600px) {
+
+            .test-shell {
+
+                width:
+                    calc(100% - 28px);
+
+                padding:
+                    34px 0;
+            }
+
+
+            .options {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .question {
+
+                font-size: 32px;
+            }
+
+
+            .option {
+
+                min-height: 68px;
+
+                padding: 18px;
+            }
+
+
+            .option-text {
+
+                font-size: 17px;
+            }
+
+
+            .score-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .result-card {
+
+                border-radius: 22px;
+
+                padding:
+                    28px 22px;
+            }
+
+
+            .result-actions {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap: 0;
+            }
+
+
+            .back-home-btn {
+
+                margin-top: 14px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="test-shell">
+
+
+    <!-- =========================================
+         WELCOME
+         ========================================= -->
+
+    <section
+        id="welcome"
+        class="screen"
+    >
+
+        <div class="eyebrow">
+            English Check
+        </div>
+
+
+        <h1>
+            Find your English level.
+        </h1>
+
+
+        <p>
+            35 questions covering grammar
+            and vocabulary. Take the test
+            and discover which area you
+            should focus on next.
+        </p>
+
+
+        <button
+            class="primary-btn"
+            id="startBtn"
+        >
+            Start Test →
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================================
+         QUIZ
+         ========================================= -->
+
+    <section
+        id="quiz"
+        class="screen hidden"
+    >
+
+        <div class="test-top">
+
+
+            <div class="progress-row">
+
+                <span id="progressText">
+                    Question 1 / 35
+                </span>
+
+
+                <span id="percentText">
+                    3%
+                </span>
+
+            </div>
+
+
+            <div class="progress-track">
+
+                <div
+                    id="progressFill"
+                    class="progress-fill"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+
+        <div
+            id="questionNumber"
+            class="question-number"
+        ></div>
+
+
+        <h2
+            id="questionText"
+            class="question"
+        ></h2>
+
+
+        <div
+            id="options"
+            class="options"
+        ></div>
+
+
+        <div class="next-row">
+
+            <button
+                id="nextBtn"
+                class="primary-btn"
+                disabled
+            >
+                Next →
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         ANALYSIS
+         ========================================= -->
+
+    <section
+        id="analysis"
+        class="screen hidden"
+    >
+
+        <div class="analysis">
+
+
+            <div class="loader"></div>
+
+
+            <div class="eyebrow">
+                Almost there
+            </div>
+
+
+            <h2>
+                Analyzing your English...
+            </h2>
+
+
+            <p>
+                Kami sedang melihat hasil
+                grammar dan vocabulary kamu.
+            </p>
+
+
+            <div class="analysis-list">
+
+
+                <div
+                    class="analysis-item"
+                    id="a1"
+                >
+                    Checking your answers
+                </div>
+
+
+                <div
+                    class="analysis-item"
+                    id="a2"
+                >
+                    Evaluating grammar
+                </div>
+
+
+                <div
+                    class="analysis-item"
+                    id="a3"
+                >
+                    Evaluating vocabulary
+                </div>
+
+
+                <div
+                    class="analysis-item"
+                    id="a4"
+                >
+                    Finding your recommended next step
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         RESULT
+         ========================================= -->
+
+    <section
+        id="result"
+        class="screen hidden"
+    >
+
+
+        <div class="eyebrow">
+            Your Result
+        </div>
+
+
+        <div class="result-card">
+
+
+            <div class="score-label">
+                Estimated English Level
+            </div>
+
+
+            <div
+                id="level"
+                class="level"
+            >
+                A1
+            </div>
+
+
+            <p id="summary"></p>
+
+
+
+            <!-- SCORES -->
+
+            <div class="score-grid">
+
+
+                <div class="score-box">
+
+
+                    <div class="score-label">
+                        Grammar
+                    </div>
+
+
+                    <div
+                        id="grammarScore"
+                        class="score-value"
+                    >
+                        0%
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="score-box">
+
+
+                    <div class="score-label">
+                        Vocabulary
+                    </div>
+
+
+                    <div
+                        id="vocabScore"
+                        class="score-value"
+                    >
+                        0%
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- RECOMMENDATION -->
+
+            <div class="recommendation">
+
+
+                <div class="score-label">
+                    Your Next Step
+                </div>
+
+
+                <h3
+                    id="recommendationTitle"
+                ></h3>
+
+
+                <p
+                    id="recommendationText"
+                ></p>
+
+
+                <div class="result-actions">
+
+
+                    <a
+                        id="registerBtn"
+                        class="primary-btn"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Daftar →
+                    </a>
+
+
+                    <a
+                        href="index.html"
+                        class="back-home-btn"
+                    >
+                        ← Back to Tatsyafira
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</div>
+
+
+
+<script>
+
+
+/* =====================================================
+   QUESTION BANK — 35 QUESTIONS
+   ===================================================== */
+
+const questions = [
+
+    {
+        number: 1,
+        skill: "Grammar",
+        subskill: "Present Simple",
+        level: "B1",
+        question:
+            "The research team ___ its findings to the public every December.",
+        options: [
+            "presented",
+            "presents",
+            "is presenting",
+            "has presented"
+        ],
+        answer: "B"
+    },
+
+
+    {
+        number: 2,
+        skill: "Grammar",
+        subskill: "Present Continuous",
+        level: "B1",
+        question:
+            "Please be quiet. The committee ___ the final proposal right now.",
+        options: [
+            "reviews",
+            "reviewed",
+            "is reviewing",
+            "has reviewed"
+        ],
+        answer: "C"
+    },
+
+
+    {
+        number: 3,
+        skill: "Grammar",
+        subskill: "Present Perfect",
+        level: "B1+",
+        question:
+            "Researchers ___ several significant changes in consumer behaviour over the past decade.",
+        options: [
+            "identified",
+            "have identified",
+            "are identifying",
+            "had identified"
+        ],
+        answer: "B"
+    },
+
+
+    {
+        number: 4,
+        skill: "Grammar",
+        subskill: "Present Perfect Continuous",
+        level: "B2",
+        question:
+            "She looks exhausted because she ___ on the project since early this morning.",
+        options: [
+            "worked",
+            "has worked",
+            "has been working",
+            "is working"
+        ],
+        answer: "C"
+    },
+
+
+    {
+        number: 5,
+        skill: "Grammar",
+        subskill: "Past Simple",
+        level: "B1",
+        question:
+            "The company ___ its first international office in 2018.",
+        options: [
+            "opens",
+            "has opened",
+            "opened",
+            "was opening"
+        ],
+        answer: "C"
+    },
+
+
+    {
+        number: 6,
+        skill: "Grammar",
+        subskill: "Past Continuous",
+        level: "B1+",
+        question:
+            "At 9 p.m. last night, I ___ the financial report when my manager called.",
+        options: [
+            "prepared",
+            "was preparing",
+            "have prepared",
+            "had prepared"
+        ],
+        answer: "B"
+    },
+
+
+    {
+        number: 7,
+        skill: "Grammar",
+        subskill: "Past Perfect",
+        level: "B2",
+        question:
+            "By the time the investors arrived, the CEO ___ the presentation.",
+        options: [
+            "finished",
+            "has finished",
+            "had finished",
+            "was finishing"
+        ],
+        answer: "C"
+    },
+
+
+    {
+        number: 8,
+        skill: "Grammar",
+        subskill: "Past Perfect Continuous",
+        level: "B2",
+        question:
+            "They were frustrated because they ___ for three hours before the system finally worked.",
+        options: [
+            "waited",
+            "had waited",
+            "had been waiting",
+            "were waiting"
+        ],
+        answer: "C"
+    },
+
+
+    {
+        number: 9,
+        skill: "Grammar",
+        subskill: "Future Simple",
+        level: "B1",
+        question:
+            "I think the new policy ___ significantly affect small businesses.",
+        options: [
+            "is",
+            "will",
+            "has",
+            "would"
+        ],
+        answer: "B"
+    },
+
+
+    {
+        number: 10,
+        skill: "Grammar",
+        subskill: "Future Continuous",
+        level: "B2",
+        question:
+            "This time next week, we ___ across Europe for our research project.",
+        options: [
+            "travel",
+            "will travel",
+            "will be travelling",
+            "have travelled"
+        ],
+        answer: "C"
+    },
+
+
+    {
+        number: 11,
+        skill: "Grammar",
+        subskill: "Future Perfect",
+        level: "B2",
+        question:
+            "By the end of this semester, she ___ all the required courses.",
+        options: [
+            "completes",
+            "will complete",
+            "will have completed",
+            "has completed"
+        ],
+        answer: "C"
+    },
+
+
+    {
+        number: 12,
+        skill: "Grammar",
+        subskill: "Future Perfect Continuous",
+        level: "C1",
+        question:
+            "By June, he ___ at the company for ten years.",
+        options: [
+            "will work",
+            "will have worked",
+            "will have been working",
+            "has been working"
+        ],
+        answer: "C"
+    },
+
+
+    {
+        number: 13,
+        skill: "Grammar",
+        subskill: "Mixed Tenses",
+        level: "B2",
+        question:
+            "I ___ this book for two weeks, but I still haven't finished it.",
+        options: [
+            "read",
+            "have been reading",
+            "was reading",
+            "had read"
+        ],
+        answer: "B"
+    },
+
+
+    {
+        number: 14,
+        skill: "Grammar",
+        subskill: "Mixed Tenses",
+        level: "C1",
+        question:
+            "When we arrived at the station, the train ___ already ___.",
+        options: [
+            "has / left",
+            "was / leaving",
+            "had / left",
+            "will have / left"
+        ],
+        answer: "C"
+    },
+
+
+    {
+        number: 15,
+        skill: "Grammar",
+        subskill: "Tense Contrast",
+        level: "C1",
+        question:
+            "She ___ in Istanbul for three years before she moved to Berlin.",
+        options: [
+            "has lived",
+            "had lived",
+            "has been living",
+            "lives"
+        ],
+        answer: "B"
+    },
+
+
+    {
+        number: 16,
+        skill: "Grammar",
+        subskill: "Zero Conditional",
+        level: "B1",
+        question:
+            "If a plant ___ enough sunlight, it generally grows more slowly.",
+        options: [
+            "doesn't receive",
+            "didn't receive",
+            "won't receive",
+            "wouldn't receive"
+        ],
+        answer: "A"
+    },
+
+
+    {
+        number: 17,
+        skill: "Grammar",
+        subskill: "First Conditional",
+        level: "B1+",
+        question:
+            "If the negotiations ___ successful, the company will expand into the new market.",
+        options: [
+            "are",
+            "were",
+            "will be",
+            "would be"
+        ],
+        answer: "A"
+    },
+
+
+    {
+        number: 18,
+        skill: "Grammar",
+        subskill: "Second Conditional",
+        level: "B2",
+        question:
+            "If I ___ in your position, I would reconsider the offer.",
+        options: [
+            "am",
+            "were",
+            "will be",
+            "had been"
+        ],
+        answer: "B"
+    },
+
+
+    {
+        number: 19,
+        skill: "Grammar",
+        subskill: "Third Conditional",
+        level: "B2+",
+        question:
+            "If they ___ the warning earlier, they would have avoided the crisis.",
+        options: [
+            "noticed",
+            "have noticed",
+            "had noticed",
+            "would notice"
+        ],
+        answer: "C"
+    },
+
+
+    {
+        number: 20,
+        skill: "Grammar",
+        subskill: "Mixed Conditional",
+        level: "C1",
+        question:
+            "If she had accepted the scholarship, she ___ abroad now.",
+        options: [
+            "studied",
+            "would be studying",
+            "will study",
+            "would have studied"
+        ],
+        answer: "B"
+    },
+
+
+    {
+        number: 21,
+        skill: "Grammar",
+        subskill: "Preposition",
+        level: "B1+",
+        question:
+            "The manager is responsible ___ ensuring that all employees follow the policy.",
+        options: [
+            "of",
+            "for",
+            "to",
+            "with"
+        ],
+        answer: "B"
+    },
+
+
+    {
+        number: 22,
+        skill: "Grammar",
+        subskill: "Preposition",
+        level: "B2",
+        question:
+            "The report provides insight ___ the factors influencing consumer behaviour.",
+        options: [
+            "on",
+            "at",
+            "into",
+            "for"
+        ],
+        answer: "C"
+    },
+
+
+    {
+        number: 23,
+        skill: "Grammar",
+        subskill: "Preposition",
+        level: "B2",
+        question:
+            "She has always been highly interested ___ international development.",
+        options: [
+            "on",
+            "at",
+            "in",
+            "for"
+        ],
+        answer: "C"
+    },
+
+
+    {
+        number: 24,
+        skill: "Grammar",
+        subskill: "Preposition",
+        level: "B2+",
+        question:
+            "The policy was introduced in response ___ growing concerns about unemployment.",
+        options: [
+            "of",
+            "to",
+            "with",
+            "for"
+        ],
+        answer: "B"
+    },
+
+
+    {
+        number: 25,
+        skill: "Grammar",
+        subskill: "Preposition",
+        level: "C1",
+        question:
+            "The findings are consistent ___ previous studies conducted in the same region.",
+        options: [
+            "to",
+            "on",
+            "with",
+            "for"
+        ],
+        answer: "C"
+    },
+
+
+    {
+        number: 26,
+        skill: "Vocabulary",
+        subskill: "Synonym",
+        level: "B2",
+        question:
+            "Which word is closest in meaning to 'substantial'?",
+        options: [
+            "minor",
+            "considerable",
+            "uncertain",
+            "temporary"
+        ],
+        answer: "B"
+    },
+
+
+    {
+        number: 27,
+        skill: "Vocabulary",
+        subskill: "Antonym",
+        level: "B2",
+        question:
+            "Which word is the closest opposite of 'reluctant'?",
+        options: [
+            "eager",
+            "uncertain",
+            "cautious",
+            "hesitant"
+        ],
+        answer: "A"
+    },
+
+
+    {
+        number: 28,
+        skill: "Vocabulary",
+        subskill: "Synonym",
+        level: "B2+",
+        question:
+            "Which word is closest in meaning to 'mitigate'?",
+        options: [
+            "intensify",
+            "reduce",
+            "predict",
+            "justify"
+        ],
+        answer: "B"
+    },
+
+
+    {
+        number: 29,
+        skill: "Vocabulary",
+        subskill: "Antonym",
+        level: "B2+",
+        question:
+            "Which word is the closest opposite of 'scarce'?",
+        options: [
+            "abundant",
+            "limited",
+            "rare",
+            "insufficient"
+        ],
+        answer: "A"
+    },
+
+
+    {
+        number: 30,
+        skill: "Vocabulary",
+        subskill: "Synonym",
+        level: "C1",
+        question:
+            "Which word is closest in meaning to 'pervasive'?",
+        options: [
+            "widespread",
+            "temporary",
+            "isolated",
+            "uncertain"
+        ],
+        answer: "A"
+    },
+
+
+    {
+        number: 31,
+        skill: "Vocabulary",
+        subskill: "Synonym",
+        level: "C1",
+        question:
+            "In the sentence 'The evidence was compelling enough to change the committee's decision,' what does 'compelling' most nearly mean?",
+        options: [
+            "confusing",
+            "persuasive",
+            "irrelevant",
+            "incomplete"
+        ],
+        answer: "B"
+    },
+
+
+    {
+        number: 32,
+        skill: "Vocabulary",
+        subskill: "Antonym",
+        level: "C1",
+        question:
+            "Which word is the closest opposite of 'ambiguous'?",
+        options: [
+            "vague",
+            "explicit",
+            "unclear",
+            "equivocal"
+        ],
+        answer: "B"
+    },
+
+
+    {
+        number: 33,
+        skill: "Vocabulary",
+        subskill: "Synonym",
+        level: "C1",
+        question:
+            "Which word is closest in meaning to 'conspicuous'?",
+        options: [
+            "noticeable",
+            "hidden",
+            "ordinary",
+            "irrelevant"
+        ],
+        answer: "A"
+    },
+
+
+    {
+        number: 34,
+        skill: "Vocabulary",
+        subskill: "Synonym",
+        level: "C1",
+        question:
+            "Which word is closest in meaning to 'pragmatic'?",
+        options: [
+            "idealistic",
+            "practical",
+            "emotional",
+            "theoretical"
+        ],
+        answer: "B"
+    },
+
+
+    {
+        number: 35,
+        skill: "Vocabulary",
+        subskill: "Context",
+        level: "C1",
+        question:
+            "The minister's statement was deliberately 'equivocal', avoiding a clear commitment to either position. What does 'equivocal' mean here?",
+        options: [
+            "definite",
+            "ambiguous",
+            "enthusiastic",
+            "confrontational"
+        ],
+        answer: "B"
+    }
+
+];
+
+
+
+/* =====================================================
+   REGISTRATION LINKS
+   ===================================================== */
+
+const registrationLinks = {
+
+    grammar:
+        "https://forms.gle/X3ZVmiyoSck37xDS8",
+
+    vocabulary:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfG12N4Y3hsG7n0WW3E2iJMxYzWjbSWGjbcz9A_aNYFFZSR3Q/viewform?usp=sharing&ouid=111761535831212837573"
+
+};
+
+
+
+/* =====================================================
+   TEST STATE
+   ===================================================== */
+
+let current = 0;
+
+let answers =
+    new Array(
+        questions.length
+    ).fill(null);
+
+
+
+/* =====================================================
+   ELEMENTS
+   ===================================================== */
+
+const welcome =
+    document.getElementById(
+        "welcome"
+    );
+
+
+const quiz =
+    document.getElementById(
+        "quiz"
+    );
+
+
+const analysis =
+    document.getElementById(
+        "analysis"
+    );
+
+
+const result =
+    document.getElementById(
+        "result"
+    );
+
+
+const progressText =
+    document.getElementById(
+        "progressText"
+    );
+
+
+const percentText =
+    document.getElementById(
+        "percentText"
+    );
+
+
+const progressFill =
+    document.getElementById(
+        "progressFill"
+    );
+
+
+const questionNumber =
+    document.getElementById(
+        "questionNumber"
+    );
+
+
+const questionText =
+    document.getElementById(
+        "questionText"
+    );
+
+
+const options =
+    document.getElementById(
+        "options"
+    );
+
+
+const nextBtn =
+    document.getElementById(
+        "nextBtn"
+    );
+
+
+
+/* =====================================================
+   START TEST
+   ===================================================== */
+
+document
+    .getElementById(
+        "startBtn"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            welcome.classList.add(
+                "hidden"
+            );
+
+            quiz.classList.remove(
+                "hidden"
+            );
+
+            renderQuestion();
+
+        }
+    );
+
+
+
+/* =====================================================
+   RENDER QUESTION
+   ===================================================== */
+
+function renderQuestion() {
+
+    const q =
+        questions[current];
+
+
+    const total =
+        questions.length;
+
+
+    const number =
+        current + 1;
+
+
+    const percent =
+        Math.round(
+            (
+                number /
+                total
+            ) * 100
+        );
+
+
+    progressText.textContent =
+        `Question ${number} / ${total}`;
+
+
+    percentText.textContent =
+        `${percent}%`;
+
+
+    progressFill.style.width =
+        `${percent}%`;
+
+
+    questionNumber.textContent =
+        `${q.skill} · ${q.subskill}`;
+
+
+    questionText.textContent =
+        q.question;
+
+
+    options.innerHTML =
+        "";
+
+
+    nextBtn.disabled =
+        answers[current] === null;
+
+
+    nextBtn.textContent =
+        current === total - 1
+            ? "See My Result →"
+            : "Next →";
+
+
+
+    q.options.forEach(
+        (text, index) => {
+
+            const letter =
+                String.fromCharCode(
+                    65 + index
+                );
+
+
+            const button =
+                document.createElement(
+                    "button"
+                );
+
+
+            button.type =
+                "button";
+
+
+            button.className =
+                "option";
+
+
+            if (
+                answers[current] ===
+                letter
+            ) {
+
+                button.classList.add(
+                    "selected"
+                );
+
+            }
+
+
+            const letterSpan =
+                document.createElement(
+                    "span"
+                );
+
+
+            letterSpan.className =
+                "option-letter";
+
+
+            letterSpan.textContent =
+                letter;
+
+
+            const textSpan =
+                document.createElement(
+                    "span"
+                );
+
+
+            textSpan.className =
+                "option-text";
+
+
+            textSpan.textContent =
+                text;
+
+
+            button.appendChild(
+                letterSpan
+            );
+
+
+            button.appendChild(
+                textSpan
+            );
+
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    answers[current] =
+                        letter;
+
+
+                    document
+                        .querySelectorAll(
+                            ".option"
+                        )
+                        .forEach(
+                            element => {
+
+                                element
+                                    .classList
+                                    .remove(
+                                        "selected"
+                                    );
+
+                            }
+                        );
+
+
+                    button.classList.add(
+                        "selected"
+                    );
+
+
+                    nextBtn.disabled =
+                        false;
+
+                }
+            );
+
+
+            options.appendChild(
+                button
+            );
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   NEXT BUTTON
+   ===================================================== */
+
+nextBtn.addEventListener(
+    "click",
+    () => {
+
+        if (
+            answers[current] ===
+            null
+        ) {
+
+            return;
+
+        }
+
+
+        if (
+            current <
+            questions.length - 1
+        ) {
+
+            current++;
+
+            renderQuestion();
+
+            window.scrollTo(
+                {
+                    top: 0,
+                    behavior: "smooth"
+                }
+            );
+
+        }
+
+        else {
+
+            startAnalysis();
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   ANALYSIS
+   ===================================================== */
+
+function startAnalysis() {
+
+    quiz.classList.add(
+        "hidden"
+    );
+
+
+    analysis.classList.remove(
+        "hidden"
+    );
+
+
+    const steps = [
+        "a1",
+        "a2",
+        "a3",
+        "a4"
+    ];
+
+
+    steps.forEach(
+        (id, index) => {
+
+            setTimeout(
+                () => {
+
+                    const element =
+                        document.getElementById(
+                            id
+                        );
+
+
+                    element.classList.add(
+                        "done"
+                    );
+
+
+                    if (
+                        !element.textContent
+                            .startsWith("✓")
+                    ) {
+
+                        element.textContent =
+                            "✓ " +
+                            element.textContent;
+
+                    }
+
+                },
+                700 *
+                (index + 1)
+            );
+
+        }
+    );
+
+
+    setTimeout(
+        showResult,
+        3500
+    );
+
+}
+
+
+
+/* =====================================================
+   CALCULATE RESULTS
+   ===================================================== */
+
+function calculateResults() {
+
+    let totalCorrect = 0;
+
+    let grammarCorrect = 0;
+
+    let vocabularyCorrect = 0;
+
+    let grammarTotal = 0;
+
+    let vocabularyTotal = 0;
+
+
+
+    questions.forEach(
+        (q, index) => {
+
+            const skill =
+                (
+                    q.skill ||
+                    ""
+                ).toLowerCase();
+
+
+            const correct =
+                answers[index] ===
+                q.answer;
+
+
+            if (correct) {
+
+                totalCorrect++;
+
+            }
+
+
+            if (
+                skill.includes(
+                    "grammar"
+                )
+            ) {
+
+                grammarTotal++;
+
+
+                if (correct) {
+
+                    grammarCorrect++;
+
+                }
+
+            }
+
+
+            if (
+                skill.includes(
+                    "vocabulary"
+                )
+            ) {
+
+                vocabularyTotal++;
+
+
+                if (correct) {
+
+                    vocabularyCorrect++;
+
+                }
+
+            }
+
+        }
+    );
+
+
+
+    /* =========================================
+       OVERALL SCORE
+       ========================================= */
+
+    const overall =
+        Math.round(
+            (
+                totalCorrect /
+                questions.length
+            ) * 100
+        );
+
+
+    /* =========================================
+       GRAMMAR SCORE
+       ========================================= */
+
+    const grammar =
+        grammarTotal > 0
+            ? Math.round(
+                (
+                    grammarCorrect /
+                    grammarTotal
+                ) * 100
+            )
+            : 0;
+
+
+    /* =========================================
+       VOCABULARY SCORE
+       ========================================= */
+
+    const vocabulary =
+        vocabularyTotal > 0
+            ? Math.round(
+                (
+                    vocabularyCorrect /
+                    vocabularyTotal
+                ) * 100
+            )
+            : 0;
+
+
+
+    /* =========================================
+       ENGLISH LEVEL
+       ========================================= */
+
+    let level;
+
+
+    if (
+        overall < 40
+    ) {
+
+        level = "A1";
+
+    }
+
+    else if (
+        overall < 60
+    ) {
+
+        level = "A2";
+
+    }
+
+    else if (
+        overall < 75
+    ) {
+
+        level = "B1";
+
+    }
+
+    else if (
+        overall < 90
+    ) {
+
+        level = "B2";
+
+    }
+
+    else {
+
+        level = "C1";
+
+    }
+
+
+
+    /* =========================================
+       BALANCED DIAGNOSIS SYSTEM
+       =========================================
+
+       Grammar = 25 questions
+       Vocabulary = 10 questions
+
+       We compare percentages, NOT raw
+       numbers of correct answers.
+
+       A 10-point difference is enough
+       to identify the weaker area.
+    */
+
+    let recommendation;
+
+
+    const difference =
+        grammar -
+        vocabulary;
+
+
+
+    /*
+       BOTH ARE WEAK
+
+       Example:
+       Grammar = 40%
+       Vocabulary = 40%
+
+       Grammar is recommended first
+       because it provides the foundation.
+    */
+
+    if (
+        grammar < 50 &&
+        vocabulary < 50
+    ) {
+
+        recommendation =
+            "grammar";
+
+    }
+
+
+    /*
+       VOCABULARY IS CLEARLY WEAKER
+
+       Example:
+       Grammar = 80%
+       Vocabulary = 60%
+
+       Difference = +20
+
+       → Vocabulary Intensive
+    */
+
+    else if (
+        difference >= 10
+    ) {
+
+        recommendation =
+            "vocabulary";
+
+    }
+
+
+    /*
+       GRAMMAR IS CLEARLY WEAKER
+
+       Example:
+       Grammar = 55%
+       Vocabulary = 75%
+
+       Difference = -20
+
+       → Grammar Intensive
+    */
+
+    else if (
+        difference <= -10
+    ) {
+
+        recommendation =
+            "grammar";
+
+    }
+
+
+    /*
+       GRAMMAR IS VERY WEAK
+
+       Even if the difference is small,
+       very weak grammar should trigger
+       Grammar Intensive.
+    */
+
+    else if (
+        grammar < 50
+    ) {
+
+        recommendation =
+            "grammar";
+
+    }
+
+
+    /*
+       VOCABULARY IS VERY WEAK
+
+       If vocabulary is the only major
+       weak area, recommend Vocabulary.
+    */
+
+    else if (
+        vocabulary < 50
+    ) {
+
+        recommendation =
+            "vocabulary";
+
+    }
+
+
+    /*
+       BOTH ARE REASONABLY STRONG
+       AND RELATIVELY BALANCED
+    */
+
+    else {
+
+        recommendation =
+            "strong";
+
+    }
+
+
+
+    return {
+
+        overall,
+
+        grammar,
+
+        vocabulary,
+
+        level,
+
+        recommendation
+
+    };
+
+}
+
+
+
+/* =====================================================
+   SHOW RESULT
+   ===================================================== */
+
+function showResult() {
+
+    const resultData =
+        calculateResults();
+
+
+    console.log(
+        "TEST RESULT:",
+        resultData
+    );
+
+
+    analysis.classList.add(
+        "hidden"
+    );
+
+
+    result.classList.remove(
+        "hidden"
+    );
+
+
+
+    /* =========================================
+       LEVEL
+       ========================================= */
+
+    document
+        .getElementById(
+            "level"
+        )
+        .textContent =
+            resultData.level;
+
+
+
+    /* =========================================
+       SCORES
+       ========================================= */
+
+    document
+        .getElementById(
+            "grammarScore"
+        )
+        .textContent =
+            `${resultData.grammar}%`;
+
+
+    document
+        .getElementById(
+            "vocabScore"
+        )
+        .textContent =
+            `${resultData.vocabulary}%`;
+
+
+
+    let summary = "";
+
+    let recommendationTitle = "";
+
+    let recommendationText = "";
+
+    let registrationLink = "";
+
+
+
+    /* =========================================
+       GRAMMAR INTENSIVE
+       ========================================= */
+
+    if (
+        resultData.recommendation ===
+        "grammar"
+    ) {
+
+
+        summary =
+            `Nilai keseluruhan kamu adalah ${resultData.overall}%. Dari hasil tes ini, grammar kamu masih menjadi bagian yang paling perlu diperkuat dibandingkan vocabulary.`;
+
+
+        recommendationTitle =
+            "Grammar Intensive";
+
+
+        recommendationText =
+            "Dari hasil tes ini, kamu masih perlu memperkuat grammar. Di kelas Grammar Intensive, kamu akan belajar grammar dari dasar hingga mampu menggunakannya dengan lebih tepat, termasuk tenses, conditional sentences, gerund, infinitive, dan berbagai struktur kalimat dalam bahasa Inggris.";
+
+
+        registrationLink =
+            registrationLinks.grammar;
+
+    }
+
+
+
+    /* =========================================
+       VOCABULARY INTENSIVE
+       ========================================= */
+
+    else if (
+        resultData.recommendation ===
+        "vocabulary"
+    ) {
+
+
+        summary =
+            `Nilai keseluruhan kamu adalah ${resultData.overall}%. Dari hasil tes ini, vocabulary kamu masih menjadi bagian yang paling perlu dikembangkan dibandingkan grammar.`;
+
+
+        recommendationTitle =
+            "Vocabulary Intensive";
+
+
+        recommendationText =
+            "Dari hasil tes ini, grammar kamu sudah cukup baik, tetapi vocabulary masih perlu dikembangkan. Di kelas Vocabulary Intensive, kamu akan belajar berbagai kosakata penting untuk membantu kamu memahami bacaan, berbicara, menulis, dan berkomunikasi dalam bahasa Inggris dengan lebih percaya diri.";
+
+
+        registrationLink =
+            registrationLinks.vocabulary;
+
+    }
+
+
+
+    /* =========================================
+       STRONG FOUNDATION
+       ========================================= */
+
+    else {
+
+
+        summary =
+            `Nilai keseluruhan kamu adalah ${resultData.overall}%. Hasil tes menunjukkan bahwa kemampuan grammar dan vocabulary kamu sudah cukup seimbang dan tidak terlihat memiliki kelemahan utama pada kedua bagian tersebut.`;
+
+
+        recommendationTitle =
+            "Fondasi bahasa Inggris kamu sudah kuat";
+
+
+        recommendationText =
+            "Kamu sudah memiliki dasar yang cukup baik dalam grammar dan vocabulary. Terus kembangkan kemampuanmu melalui latihan yang lebih menantang, membaca berbagai jenis bacaan, dan menggunakan bahasa Inggris dalam kehidupan sehari-hari.";
+
+    }
+
+
+
+    /* =========================================
+       INSERT RESULT
+       ========================================= */
+
+    document
+        .getElementById(
+            "summary"
+        )
+        .textContent =
+            summary;
+
+
+    document
+        .getElementById(
+            "recommendationTitle"
+        )
+        .textContent =
+            recommendationTitle;
+
+
+    document
+        .getElementById(
+            "recommendationText"
+        )
+        .textContent =
+            recommendationText;
+
+
+
+    /* =========================================
+       REGISTRATION BUTTON
+       ========================================= */
+
+    const registerButton =
+        document.getElementById(
+            "registerBtn"
+        );
+
+
+    if (
+        registrationLink
+    ) {
+
+        registerButton.href =
+            registrationLink;
+
+        registerButton.style.display =
+            "inline-flex";
+
+    }
+
+    else {
+
+        registerButton.style.display =
+            "none";
+
+    }
+
+
+
+    /* =========================================
+       SCROLL TO RESULT
+       ========================================= */
+
+    window.scrollTo(
+        {
+            top: 0,
+            behavior: "smooth"
+        }
+    );
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
