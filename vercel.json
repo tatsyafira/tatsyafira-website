@@ -4,12 +4,21 @@
       "source": "/artikel-jatuh-suka.html",
       "destination": "/jatuh-suka",
       "permanent": true
+    },
+    {
+      "source": "/artikel-ad-maiora.html",
+      "destination": "/ad-maiora",
+      "permanent": true
     }
   ],
   "rewrites": [
     {
       "source": "/jatuh-suka",
       "destination": "/artikel-jatuh-suka.html"
+    },
+    {
+      "source": "/ad-maiora",
+      "destination": "/artikel-ad-maiora.html"
     }
   ]
 }

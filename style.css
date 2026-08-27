@@ -3639,121 +3639,224 @@ main .article .article-opening {
     display: block;
 }
 /* =========================================================
-   MOBILE ARTICLE PREVIEW
+   FINAL MOBILE CATATAN LAYOUT
    ========================================================= */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 700px) {
 
-    /* Article card */
-    .article-card,
+    /* ARTICLE LIST */
+    .catatan-articles {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* EACH ARTICLE */
     .catatan-article {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 32px 0;
-        box-sizing: border-box;
-    }
+        display: grid !important;
 
-    /* Article content */
-    .article-content {
-        width: 100%;
-        max-width: 100%;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    /* Date */
-    .article-date {
-        font-size: 14px;
-        margin-bottom: 14px;
-    }
-
-    /* Title */
-    .article-card h2,
-    .catatan-article h2 {
-        font-size: 32px;
-        line-height: 1.15;
-        margin: 0 0 18px 0;
-        max-width: 100%;
-    }
-
-    /* Preview text */
-    .article-preview {
-        font-size: 18px;
-        line-height: 1.55;
-        margin: 0 0 20px 0;
-        max-width: 100%;
-    }
-
-    /* Category + reading time */
-    .article-meta {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 12px;
-        width: 100%;
-        text-align: left;
-        margin-top: 0;
-    }
-
-    /* IMAGE */
-    .article-image {
-        position: relative !important;
-        top: auto !important;
-        right: auto !important;
-        bottom: auto !important;
-        left: auto !important;
+        /* ONE COLUMN ON MOBILE */
+        grid-template-columns: 1fr !important;
 
         width: 100% !important;
         max-width: 100% !important;
-        height: auto !important;
 
-        margin: 24px 0 0 0 !important;
+        gap: 0 !important;
 
-        display: block;
-        overflow: hidden;
+        padding: 36px 0 !important;
+        margin: 0 !important;
+
+        box-sizing: border-box !important;
+
+        position: relative !important;
     }
 
-    .article-image img {
-        display: block;
+    /* TEXT AREA */
+    .catatan-article .article-content {
+        display: block !important;
+
         width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        box-sizing: border-box !important;
+    }
+
+    /* DATE */
+    .catatan-article .article-date {
+        display: block !important;
+
+        width: 100% !important;
+
+        margin: 0 0 14px 0 !important;
+
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+
+        text-align: left !important;
+    }
+
+    /* TITLE */
+    .catatan-article .article-content h2 {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 0 16px 0 !important;
+        padding: 0 !important;
+
+        font-size: 32px !important;
+        line-height: 1.15 !important;
+
+        text-align: left !important;
+
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
+    }
+
+    /* PREVIEW */
+    .catatan-article .article-preview {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 0 20px 0 !important;
+        padding: 0 !important;
+
+        font-size: 17px !important;
+        line-height: 1.55 !important;
+
+        text-align: left !important;
+
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
+
+        box-sizing: border-box !important;
+    }
+
+    /* CATEGORY + READING TIME */
+    .catatan-article .article-meta {
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        gap: 10px !important;
+
+        text-align: left !important;
+
+        font-size: 13px !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .catatan-article .article-meta span {
+        display: inline-block !important;
+
+        width: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        text-align: left !important;
+
+        white-space: nowrap !important;
+    }
+
+    /* IMAGE */
+    .catatan-article .article-image {
+        display: block !important;
+
+        position: relative !important;
+
+        grid-column: 1 !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
         height: auto !important;
 
-        max-width: 100%;
-        object-fit: contain;
+        aspect-ratio: 4 / 3 !important;
+
+        margin: 28px 0 0 0 !important;
+        padding: 0 !important;
+
+        overflow: hidden !important;
+
+        box-sizing: border-box !important;
+
+        order: initial !important;
+    }
+
+    /* IMAGE ITSELF */
+    .catatan-article .article-image img {
+        display: block !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        object-fit: cover !important;
+
+        box-sizing: border-box !important;
+    }
+
+    /* LINK MUST NOT CHANGE THE LAYOUT */
+    .catatan-article-link {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        text-decoration: none !important;
+
+        box-sizing: border-box !important;
     }
 }
 
 
 /* =========================================================
-   SMALL PHONES
+   SMALL PHONE
    ========================================================= */
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
 
-    .article-card,
     .catatan-article {
-        padding: 28px 0;
+        padding: 30px 0 !important;
     }
 
-    .article-card h2,
-    .catatan-article h2 {
-        font-size: 28px;
-        line-height: 1.15;
+    .catatan-article .article-content h2 {
+        font-size: 29px !important;
+        line-height: 1.15 !important;
     }
 
-    .article-preview {
-        font-size: 17px;
-        line-height: 1.5;
+    .catatan-article .article-preview {
+        font-size: 16px !important;
+        line-height: 1.55 !important;
     }
 
-    .article-image {
-        margin-top: 22px !important;
-    }
-
-    .article-image img {
-        width: 100% !important;
-        height: auto !important;
+    .catatan-article .article-image {
+        margin-top: 24px !important;
     }
 }
