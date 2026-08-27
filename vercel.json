@@ -9,6 +9,11 @@
       "source": "/artikel-ad-maiora.html",
       "destination": "/ad-maiora",
       "permanent": true
+    },
+    {
+      "source": "/english-test.html",
+      "destination": "/english-test",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -19,6 +24,11 @@
     {
       "source": "/ad-maiora",
       "destination": "/artikel-ad-maiora.html"
+    },
+    {
+      "source": "/english-test",
+      "destination": "/english-test.html"
     }
   ]
+  
 }
