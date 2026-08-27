@@ -1620,7 +1620,7 @@ footer {
     margin: 0;
 
     font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 34px;
+    font-size: 25px;
     font-weight: 500;
     line-height: 1.15;
 
@@ -3505,4 +3505,136 @@ main .article .article-opening {
         margin-right: auto !important;
         border-radius: 14px !important;
     }
+}
+.catatan-article {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    column-gap: 50px;
+    align-items: center;
+    padding: 48px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.catatan-article-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.article-content {
+    min-width: 0;
+}
+
+.article-image {
+    width: 280px;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 2px;
+    justify-self: center;
+    align-self: center;
+}
+
+.article-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-content {
+    min-width: 0;
+}
+
+.article-date {
+    margin-bottom: 18px;
+}
+
+.article-preview {
+    margin-bottom: 0;
+}
+
+.article-meta {
+    display: flex;
+    gap: 14px;
+    margin-top: 22px;
+    font-size: 14px;
+    color: #777;
+}
+
+.article-image {
+    width: 240px;
+    height: 160px;
+    overflow: hidden;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.catatan-item-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.catatan-item-link:hover {
+    color: inherit;
+}
+
+.catatan-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    column-gap: 50px;
+    align-items: center;
+}
+
+.catatan-content {
+    min-width: 0;
+}
+
+.catatan-image {
+    width: 280px;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    justify-self: center;
+    align-self: center;
+}
+
+.catatan-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.catatan-item-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.catatan-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    column-gap: 50px;
+    align-items: center;
+}
+
+.catatan-content {
+    min-width: 0;
+}
+
+.catatan-image {
+    width: 280px;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    justify-self: center;
+}
+
+.catatan-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }

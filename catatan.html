@@ -1,51 +1,282 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Catatan — Tatsyafira</title>
 
-    <!-- Editorial Serif Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+
+    <!-- =====================================================
+         ARTICLE CARD LAYOUT
+         ===================================================== -->
+
+    <style>
+
+    /* =====================================================
+       ARTICLE CARD
+       ===================================================== */
+
+    .catatan-article-link {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: inherit;
+    }
+
+
+    .catatan-article {
+        display: grid !important;
+
+        /* LEFT = text
+           RIGHT = image */
+        grid-template-columns: minmax(0, 1fr) 260px !important;
+
+        column-gap: 50px;
+
+        align-items: start;
+
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 42px 0;
+
+        border-bottom: 1px solid #e5e5e5;
+
+        overflow: hidden;
+    }
+
+
+    /* =====================================================
+       LEFT SIDE
+       ===================================================== */
+
+    .article-content {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+
+    /* DATE */
+
+    .article-date {
+        margin-bottom: 16px;
+    }
+
+
+    /* TITLE */
+
+    .article-content h2 {
+        max-width: 100% !important;
+
+        margin-left: 0;
+        margin-right: 0;
+
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+
+    /* PREVIEW */
+
+    .article-preview {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin-left: 0;
+        margin-right: 0;
+
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       CATEGORY + READ TIME
+       DIRECTLY UNDER PREVIEW
+       ===================================================== */
+
+    .article-meta {
+        position: static !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: flex-start !important;
+
+        justify-content: flex-start !important;
+
+        text-align: left !important;
+
+        width: 100% !important;
+
+        margin-top: 24px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        padding: 0 !important;
+
+        gap: 6px !important;
+
+        box-sizing: border-box;
+    }
+
+
+    .article-meta span {
+        display: block;
+
+        width: auto;
+
+        text-align: left !important;
+
+        margin: 0;
+    }
+
+
+    /* =====================================================
+       RIGHT SIDE IMAGE
+       ===================================================== */
+
+    .article-image {
+        width: 260px !important;
+        max-width: 260px !important;
+
+        min-width: 0;
+
+        margin: 0;
+
+        padding: 0;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+    }
+
+
+    .article-image img {
+        display: block;
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        max-width: 100% !important;
+
+        object-fit: contain;
+
+        margin: 0;
+    }
+
+
+    /* =====================================================
+       MOBILE
+       ===================================================== */
+
+    @media (max-width: 768px) {
+
+        .catatan-article {
+            display: flex !important;
+
+            flex-direction: column;
+
+            gap: 25px;
+
+            width: 100%;
+        }
+
+
+        .article-content {
+            width: 100% !important;
+        }
+
+
+        .article-image {
+            width: 100% !important;
+            max-width: 100% !important;
+
+            order: 2;
+        }
+
+
+        .article-content {
+            order: 1;
+        }
+
+    }
+
+</style>
+
 </head>
 
 
 <body class="catatan-page">
 
 
-    <!-- =========================
+    <!-- =====================================================
          NAVIGATION
-    ========================== -->
+         ===================================================== -->
 
     <header class="site-header">
 
-       <a href="index.html" class="site-logo">
-    <img src="images/tatsyafira-logo.png" alt="Tatsyafira">
-</a>
+        <a href="index.html"
+           class="site-logo">
+
+            <img src="images/tatsyafira-logo.png"
+                 alt="Tatsyafira">
+
+        </a>
+
 
         <nav class="site-nav">
 
-            <a href="catatan.html" class="active">
+            <a href="catatan.html"
+               class="active">
                 Catatan
             </a>
+
 
             <a href="index.html#belajar">
                 Belajar
             </a>
 
+
             <a href="index.html#kelas">
                 Kelas
             </a>
 
+
             <a href="index.html#resources">
                 Resources
             </a>
+
 
             <a href="index.html#toko">
                 Toko
@@ -57,13 +288,14 @@
 
 
 
-    <!-- =========================
+    <!-- =====================================================
          CATATAN HERO
-    ========================== -->
+         ===================================================== -->
 
     <main>
 
         <section class="catatan-page-hero">
+
 
             <div class="catatan-page-heading">
 
@@ -73,31 +305,29 @@
                     class="catatan-page-title"
                 >
 
+
                 <p>
-                    Ruang untuk menulis, memahami, dan merayakan
-                    hal-hal kecil yang berarti.
+                    Isi hati dan kepala Tatsyafira :)
                 </p>
 
             </div>
 
 
-            <!-- Optional illustration -->
-            <div class="catatan-hero-image">
 
-                <img
-                    src="images/catatan-hero.png"
-                    alt=""
-                >
+            <!--
+            The large hero image has been removed.
 
-            </div>
+            Your article images will now appear automatically
+            beside each individual article.
+            -->
 
         </section>
 
 
 
-        <!-- =========================
+        <!-- =================================================
              NOTES AREA
-        ========================== -->
+             ================================================= -->
 
         <section class="catatan-library">
 
@@ -108,34 +338,93 @@
 
                 <div class="catatan-categories">
 
-                    <a href="#" class="category active">
+
+                    <a href="#"
+                       class="category active"
+                       data-category="Semua Catatan">
+
                         <span>●</span>
-                        <span>Semua Catatan</span>
-                        <span>12</span>
+
+                        <span>
+                            Semua Catatan
+                        </span>
+
+                        <span id="count-all">
+                            0
+                        </span>
+
                     </a>
 
-                    <a href="#" class="category">
+
+
+                    <a href="#"
+                       class="category"
+                       data-category="Refleksi">
+
                         <span></span>
-                        <span>Refleksi</span>
-                        <span>4</span>
+
+                        <span>
+                            Refleksi
+                        </span>
+
+                        <span id="count-refleksi">
+                            0
+                        </span>
+
                     </a>
 
-                    <a href="#" class="category">
+
+
+                    <a href="#"
+                       class="category"
+                       data-category="Perjalanan">
+
                         <span></span>
-                        <span>Perjalanan</span>
-                        <span>3</span>
+
+                        <span>
+                            Perjalanan
+                        </span>
+
+                        <span id="count-perjalanan">
+                            0
+                        </span>
+
                     </a>
 
-                    <a href="#" class="category">
+
+
+                    <a href="#"
+                       class="category"
+                       data-category="Pelajaran">
+
                         <span></span>
-                        <span>Pelajaran</span>
-                        <span>3</span>
+
+                        <span>
+                            Pelajaran
+                        </span>
+
+                        <span id="count-pelajaran">
+                            0
+                        </span>
+
                     </a>
 
-                    <a href="#" class="category">
+
+
+                    <a href="#"
+                       class="category"
+                       data-category="Ide & Pemikiran">
+
                         <span></span>
-                        <span>Ide & Pemikiran</span>
-                        <span>2</span>
+
+                        <span>
+                            Ide & Pemikiran
+                        </span>
+
+                        <span id="count-ide">
+                            0
+                        </span>
+
                     </a>
 
                 </div>
@@ -144,46 +433,601 @@
 
 
 
-            <!-- NOTES -->
+            <!-- =================================================
+                 ARTICLES
+                 ================================================= -->
 
- <div class="catatan-articles">
+            <div
+                class="catatan-articles"
+                id="catatan-articles"
+            >
 
-    <!-- ARTICLE 1 -->
-    <a href="artikel-jatuh-suka.html" class="catatan-article-link">
+                <!-- Articles automatically appear here -->
 
-    <article class="catatan-article">
-
-        <div class="article-content">
-
-            <div class="article-date">
-                25 Agustus 2026
             </div>
 
-            <h2>
-                Jatuh Suka di Usia 20-an
-            </h2>
-
-            <p class="article-preview">
-                <!-- Preview tulisan akan ditambahkan nanti. -->
-            </p>
-
-        </div>
-
-        <div class="article-meta">
-            <span>Refleksi</span>
-            <span>5 min read</span>
-        </div>
-
-    </article>
-
-</a>
-
-</div>
 
         </section>
 
     </main>
 
 
+
+    <!-- =====================================================
+         SUPABASE
+         ===================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+
+    <script>
+
+
+        /* =====================================================
+           SUPABASE CONNECTION
+           ===================================================== */
+
+        const SUPABASE_URL =
+            "https://gtaljywggqalmfqizjhj.supabase.co";
+
+
+        const SUPABASE_ANON_KEY =
+            "sb_publishable_Lvgk-7rPMaxhO7TAOdGp6Q_MWACHYtR";
+
+
+        const supabaseClient =
+            supabase.createClient(
+                SUPABASE_URL,
+                SUPABASE_ANON_KEY
+            );
+
+
+
+        /* =====================================================
+           GET ARTICLES
+           ===================================================== */
+
+        async function loadArticles() {
+
+            const {
+                data: articles,
+                error
+            } = await supabaseClient
+
+                .from("articles")
+
+                .select("*")
+
+                .order(
+                    "date",
+                    {
+                        ascending: false
+                    }
+                );
+
+
+            /* ERROR */
+
+            if (error) {
+
+                console.error(
+                    "Error loading articles:",
+                    error
+                );
+
+
+                document.getElementById(
+                    "catatan-articles"
+                ).innerHTML = `
+
+                    <p style="padding: 20px;">
+                        Catatan belum dapat dimuat.
+                    </p>
+
+                `;
+
+                return;
+            }
+
+
+
+            /* =================================================
+               UPDATE CATEGORY COUNTS
+               ================================================= */
+
+            const allCount =
+                articles.length;
+
+
+            const refleksiCount =
+                articles.filter(
+                    article =>
+                        article.category === "Refleksi"
+                ).length;
+
+
+            const perjalananCount =
+                articles.filter(
+                    article =>
+                        article.category === "Perjalanan"
+                ).length;
+
+
+            const pelajaranCount =
+                articles.filter(
+                    article =>
+                        article.category === "Pelajaran"
+                ).length;
+
+
+            const ideCount =
+                articles.filter(
+                    article =>
+                        article.category === "Ide & Pemikiran"
+                ).length;
+
+
+
+            document.getElementById(
+                "count-all"
+            ).textContent =
+                allCount;
+
+
+            document.getElementById(
+                "count-refleksi"
+            ).textContent =
+                refleksiCount;
+
+
+            document.getElementById(
+                "count-perjalanan"
+            ).textContent =
+                perjalananCount;
+
+
+            document.getElementById(
+                "count-pelajaran"
+            ).textContent =
+                pelajaranCount;
+
+
+            document.getElementById(
+                "count-ide"
+            ).textContent =
+                ideCount;
+
+
+
+            /* =================================================
+               DISPLAY ARTICLES
+               ================================================= */
+
+            displayArticles(articles);
+
+
+
+            /* =================================================
+               CATEGORY FILTER
+               ================================================= */
+
+            setupCategoryFilters(articles);
+
+        }
+
+
+
+        /* =====================================================
+           DISPLAY ARTICLE CARDS
+           ===================================================== */
+
+        function displayArticles(articles) {
+
+            const container =
+                document.getElementById(
+                    "catatan-articles"
+                );
+
+
+            /* NO ARTICLES */
+
+            if (!articles.length) {
+
+                container.innerHTML = `
+
+                    <p style="padding: 20px;">
+                        Belum ada catatan.
+                    </p>
+
+                `;
+
+                return;
+            }
+
+
+
+            /* =================================================
+               CREATE EACH ARTICLE
+               ================================================= */
+
+            container.innerHTML =
+
+                articles.map(article => {
+
+
+                    /* -----------------------------------------
+                       DATE
+                       ----------------------------------------- */
+
+                    const formattedDate =
+                        formatDate(article.date);
+
+
+
+                    /* -----------------------------------------
+                       IMAGE
+
+                       IMPORTANT:
+
+                       This automatically takes the image
+                       stored in the Supabase "image" column.
+
+                       Every article can therefore have
+                       its own image.
+                       ----------------------------------------- */
+
+                    const imageHTML =
+    article.image_url
+
+                        ? `
+
+                            <div class="article-image">
+
+                                <img
+                                    src="${article.image_url}"
+                                    alt="${escapeHTML(article.title)}"
+                                >
+
+                            </div>
+
+                        `
+
+                        : `
+
+                            <div class="article-image"></div>
+
+                        `;
+
+
+
+                    /* -----------------------------------------
+                       ARTICLE LINK
+                       ----------------------------------------- */
+
+const articleURL =
+    "artikel-" + article.slug + ".html";
+
+
+
+                    /* =================================================
+                       ARTICLE CARD
+
+                       IMPORTANT STRUCTURE:
+
+                       LEFT:
+                       date
+                       title
+                       preview
+                       category + read time
+
+                       RIGHT:
+                       image
+                       ================================================= */
+
+                    return `
+
+                        <a
+                            href="artikel-jatuh-suka.html"
+                            class="catatan-article-link"
+                        >
+
+
+                            <article class="catatan-article">
+
+
+                                <!-- =========================
+                                     LEFT CONTENT
+                                     ========================= -->
+
+                                <div class="article-content">
+
+
+                                    <!-- DATE -->
+
+                                    <div class="article-date">
+
+                                        ${formattedDate}
+
+                                    </div>
+
+
+
+                                    <!-- TITLE -->
+
+                                    <h2>
+
+                                        ${escapeHTML(
+                                            article.title
+                                        )}
+
+                                    </h2>
+
+
+
+                                    <!-- PREVIEW -->
+
+                                    <p class="article-preview">
+
+                                        ${escapeHTML(
+                                            article.excerpt || ""
+                                        )}
+
+                                    </p>
+
+
+
+                                    <!-- =====================
+                                         META
+
+                                         NOW UNDER PREVIEW
+                                         ===================== -->
+
+                                    <div class="article-meta">
+
+
+                                        <span>
+
+                                            ${escapeHTML(
+                                                article.category || ""
+                                            )}
+
+                                        </span>
+
+
+                                        <span>
+
+                                            ${escapeHTML(
+                                                article.read_time || ""
+                                            )}
+
+                                        </span>
+
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <!-- =========================
+                                     RIGHT IMAGE
+                                     ========================= -->
+
+                                ${imageHTML}
+
+
+                            </article>
+
+
+                        </a>
+
+                    `;
+
+                }).join("");
+
+        }
+
+
+
+        /* =====================================================
+           CATEGORY FILTERS
+           ===================================================== */
+
+        function setupCategoryFilters(articles) {
+
+
+            const categories =
+                document.querySelectorAll(
+                    ".category"
+                );
+
+
+            categories.forEach(
+                categoryLink => {
+
+
+                    categoryLink.addEventListener(
+                        "click",
+                        function(event) {
+
+
+                            event.preventDefault();
+
+
+
+                            /* ---------------------------------
+                               REMOVE ACTIVE
+                               --------------------------------- */
+
+                            categories.forEach(
+                                link => {
+
+                                    link.classList.remove(
+                                        "active"
+                                    );
+
+                                }
+                            );
+
+
+
+                            /* ---------------------------------
+                               ADD ACTIVE
+                               --------------------------------- */
+
+                            this.classList.add(
+                                "active"
+                            );
+
+
+
+                            /* ---------------------------------
+                               GET CATEGORY
+                               --------------------------------- */
+
+                            const selectedCategory =
+                                this.dataset.category;
+
+
+
+                            /* ---------------------------------
+                               SHOW ALL
+                               --------------------------------- */
+
+                            if (
+                                selectedCategory ===
+                                "Semua Catatan"
+                            ) {
+
+                                displayArticles(
+                                    articles
+                                );
+
+                            }
+
+
+                            /* ---------------------------------
+                               FILTER
+                               --------------------------------- */
+
+                            else {
+
+                                const filteredArticles =
+
+                                    articles.filter(
+                                        article =>
+                                            article.category ===
+                                            selectedCategory
+                                    );
+
+
+                                displayArticles(
+                                    filteredArticles
+                                );
+
+                            }
+
+                        }
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        /* =====================================================
+           DATE FORMATTER
+           ===================================================== */
+
+        function formatDate(dateString) {
+
+
+            if (!dateString) {
+
+                return "";
+
+            }
+
+
+
+            const date =
+                new Date(dateString);
+
+
+
+            return date.toLocaleDateString(
+                "id-ID",
+                {
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric"
+                }
+            );
+
+        }
+
+
+
+        /* =====================================================
+           SECURITY HELPER
+           ===================================================== */
+
+        function escapeHTML(text) {
+
+
+            if (!text) {
+
+                return "";
+
+            }
+
+
+
+            return String(text)
+
+                .replace(
+                    /&/g,
+                    "&amp;"
+                )
+
+                .replace(
+                    /</g,
+                    "&lt;"
+                )
+
+                .replace(
+                    />/g,
+                    "&gt;"
+                )
+
+                .replace(
+                    /"/g,
+                    "&quot;"
+                )
+
+                .replace(
+                    /'/g,
+                    "&#039;"
+                );
+
+        }
+
+
+
+        /* =====================================================
+           START
+           ===================================================== */
+
+        loadArticles();
+
+
+    </script>
+
+
 </body>
+
 </html>

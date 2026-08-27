@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kita Semua Dilahirkan untuk Hal-Hal Besar dalam Hidup — tatsyafira</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #222222;
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* HEADER */
+
+    .site-header {
+      width: 100%;
+      height: 72px;
+      background: #ffffff;
+      border-bottom: 1px solid #eeeeee;
+      position: relative;
+      z-index: 10;
+    }
+
+    .nav {
+      width: min(1200px, calc(100% - 64px));
+      height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      width: 135px;
+      height: 42px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .logo img {
+      display: block;
+      width: 135px !important;
+      height: auto !important;
+      max-width: 135px !important;
+      max-height: 42px !important;
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+    }
+
+    .nav-links a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #333333;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.55;
+    }
+
+    .nav-links a.active {
+      font-weight: 600;
+    }
+
+
+    /* ARTICLE */
+
+    .article {
+      width: min(1000px, calc(100% - 48px));
+      margin: 0 auto;
+      padding-top: 105px;
+      padding-bottom: 80px;
+    }
+
+    .article-category {
+      width: 760px;
+      max-width: 100%;
+      margin: 0 auto 22px;
+      font-size: 13px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #999999;
+    }
+
+    .article-title {
+      width: 760px;
+      max-width: 100%;
+      margin: 0 auto 48px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(42px, 6vw, 68px);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      color: #1f1f1f;
+    }
+
+
+    /* HERO IMAGE */
+
+    .article-hero {
+      width: 900px;
+      max-width: 100%;
+      margin: 0 auto 24px;
+    }
+
+    .article-hero-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 1.72;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 12px;
+    }
+
+
+    /* ARTICLE CONTENT */
+
+    .article-content {
+      width: 680px;
+      max-width: 100%;
+      margin: 0 auto;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      line-height: 1.8;
+      color: #292929;
+    }
+
+    .article-content p {
+      margin-bottom: 32px;
+    }
+
+    .article-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .article-content strong {
+      font-weight: 600;
+    }
+
+    .article-content em {
+      font-style: italic;
+    }
+
+    .article-opening {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 25px;
+      line-height: 1.5;
+      font-style: italic;
+      text-align: center;
+      color: #222222;
+      margin-bottom: 42px;
+    }
+
+
+    /* COMMENTS */
+
+    .comments-section {
+      width: min(1000px, calc(100% - 48px));
+      margin: 90px auto 120px;
+      padding-top: 70px;
+      border-top: 1px solid #eeeeee;
+    }
+
+    .comments-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 38px;
+    }
+
+    .comments-title {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 34px;
+      font-weight: 500;
+      color: #222222;
+    }
+
+    .comments-count {
+      font-size: 13px;
+      color: #999999;
+    }
+
+    .comment-form {
+      background: #ffffff;
+      border: 1px solid #dedede;
+      border-radius: 8px;
+      padding: 34px;
+      margin-bottom: 55px;
+    }
+
+    .form-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .form-group {
+      flex: 1;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #555555;
+      margin-bottom: 9px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid #dddddd;
+      border-radius: 6px;
+      background: #ffffff;
+      padding: 13px 14px;
+      font-family: "DM Sans", sans-serif;
+      font-size: 14px;
+      color: #222222;
+      outline: none;
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    input {
+      height: 48px;
+    }
+
+    textarea {
+      min-height: 145px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #999999;
+      box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.03);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #aaaaaa;
+    }
+
+    .anonymous-option {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      height: 48px;
+      white-space: nowrap;
+      font-size: 13px;
+      color: #666666;
+    }
+
+    .anonymous-option input {
+      width: 17px;
+      height: 17px;
+      padding: 0;
+      accent-color: #222222;
+    }
+
+    .message-group {
+      margin-bottom: 22px;
+    }
+
+    .submit-button {
+      border: none;
+      border-radius: 6px;
+      background: #222222;
+      color: #ffffff;
+      padding: 12px 22px;
+      font-family: "DM Sans", sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .submit-button:hover {
+      background: #444444;
+    }
+
+    .submit-button:active {
+      transform: translateY(1px);
+    }
+
+    .submit-button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .form-status {
+      margin-top: 14px;
+      font-size: 13px;
+      color: #888888;
+    }
+
+    .comments-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .comment-box {
+      background: #ffffff;
+      border: 1px solid #dedede;
+      border-radius: 10px;
+      min-height: 190px;
+      padding: 25px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .comment-box:hover {
+      border-color: #cccccc;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .comment-message {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #333333;
+      margin-bottom: 28px;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .comment-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #eeeeee;
+    }
+
+    .comment-author {
+      font-family: "DM Sans", sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      color: #555555;
+    }
+
+    .comment-date {
+      font-family: "DM Sans", sans-serif;
+      font-size: 11px;
+      color: #aaaaaa;
+    }
+
+    .comments-empty,
+    .comments-loading {
+      font-size: 14px;
+      color: #999999;
+      padding: 12px 0;
+    }
+
+
+    /* FOOTER */
+
+    .site-footer {
+      border-top: 1px solid #eeeeee;
+      padding: 35px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: #999999;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      .site-header {
+        height: 64px;
+      }
+
+      .nav {
+        width: calc(100% - 32px);
+        height: 64px;
+      }
+
+      .logo {
+        width: 110px;
+        height: 36px;
+      }
+
+      .logo img {
+        width: 110px !important;
+        max-width: 110px !important;
+        max-height: 36px !important;
+      }
+
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .nav-links a:nth-child(4),
+      .nav-links a:nth-child(5) {
+        display: none;
+      }
+
+      .article {
+        width: calc(100% - 48px);
+        max-width: 100%;
+        padding-top: 62px;
+        padding-bottom: 65px;
+      }
+
+      .article-category {
+        width: 100%;
+        margin-bottom: 24px;
+        font-size: 13px;
+        letter-spacing: 2px;
+      }
+
+      .article-title {
+        width: 100%;
+        max-width: 100%;
+        font-size: 43px;
+        line-height: 1.12;
+        letter-spacing: -1px;
+        margin-bottom: 38px;
+      }
+
+      .article-hero {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 17px;
+      }
+
+      .article-hero-image {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 1.78 / 1;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 14px;
+      }
+
+      .article-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: 1.75;
+      }
+
+      .article-content p {
+        margin-bottom: 32px;
+      }
+
+      .article-opening {
+        width: 100%;
+        font-size: 25px;
+        line-height: 1.45;
+        text-align: center;
+        margin-bottom: 34px;
+      }
+
+      .comments-section {
+        width: calc(100% - 36px);
+        margin-top: 60px;
+        margin-bottom: 70px;
+        padding-top: 50px;
+      }
+
+      .comments-header {
+        margin-bottom: 28px;
+      }
+
+      .comments-title {
+        font-size: 28px;
+      }
+
+      .comment-form {
+        padding: 24px;
+        margin-bottom: 40px;
+      }
+
+      .form-row {
+        display: block;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .anonymous-option {
+        height: auto;
+      }
+
+      .comments-list {
+        grid-template-columns: 1fr;
+      }
+
+      .comment-box {
+        min-height: 170px;
+        padding: 22px;
+      }
+
+      .comment-message {
+        font-size: 16px;
+      }
+
+    }
+
+
+    @media (max-width: 390px) {
+
+      .article {
+        width: calc(100% - 36px);
+      }
+
+      .article-title {
+        font-size: 39px;
+      }
+
+      .article-content {
+        font-size: 17px;
+        line-height: 1.75;
+      }
+
+      .article-opening {
+        font-size: 23px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+
+    <nav class="nav">
+
+      <a href="index.html" class="logo">
+
+        <img
+          src="images/tatsyafira-logo.png"
+          alt="tatsyafira"
+        >
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a href="catatan.html" class="active">
+          Catatan
+        </a>
+
+        <a href="index.html">
+          Belajar
+        </a>
+
+        <a href="#">
+          Kelas
+        </a>
+
+        <a href="#">
+          Resources
+        </a>
+
+        <a href="#">
+          Toko
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- ARTICLE -->
+
+  <main>
+
+    <article class="article">
+
+
+      <div class="article-category">
+        Refleksi
+      </div>
+
+
+      <h1 class="article-title">
+        Kita Semua Dilahirkan untuk Hal-Hal Besar dalam Hidup
+      </h1>
+
+
+      <figure class="article-hero">
+
+        <img
+          src="images/ad-maiora-cover.jpg"
+          alt="Kita Semua Dilahirkan untuk Hal-Hal Besar dalam Hidup"
+          class="article-hero-image"
+        >
+
+      </figure>
+
+
+      <div class="article-content">
+
+
+        <p>
+          <strong>Ad Maiora Natus Sum.</strong>
+          Sulit untuk membayangkannya saat kita masih berada di titik
+          terendah dalam hidup. Rasanya hal-hal besar itu adalah sebuah
+          kemustahilan. Kalimat seperti “kamu dilahirkan untuk hal-hal besar”
+          terdengar terlalu jauh, terlalu besar, bahkan mungkin sedikit naif
+          ketika kita sendiri sedang berusaha bertahan dengan keadaan yang ada.
+          Karena itu adalah exactly what I felt 10 tahun yang lalu. Aku masih
+          berumur 13 tahun kala itu, anak SMP yang masih kebingungan akan banyak
+          hal dan harus menghadapi realita bahwa aku ditinggal ibuku, menyisakan
+          aku, ayah, dan adik-adikku yang masih lebih kecil lagi: Bita, 10 tahun,
+          Lala, 9 tahun, dan Reza, 6 tahun. Bayangkan perasaanku saat itu.
+          Betapa kecil dan lemahnya aku.
+        </p>
+
+
+        <p>
+          Keluargaku tinggal di sebuah kampung di kaki gunung, di Yogyakarta,
+          Desa Sukoharjo. TK-ku dulu berjarak hanya beberapa langkah dari rumah,
+          lalu aku sekolah SD dan SMP di sekolah negeri di kota Yogyakarta.
+          Aku tidak pernah keluar negeri. Sepanjang hidupku banyak aku habiskan
+          di kampung, makan buah talok di sepanjang jalan desa, main di sungai
+          bersama teman-teman rumahku, atau bermain di pelataran Masjid Baiturrahim.
+          Aku masih ingat bekas luka di lututku karena jatuh tersungkur dari
+          ayunan di pelataran masjid yang didorong begitu keras oleh teman ngajiku.
+          Dulu saat ibu masih ada, aku sering ikut tahlilan, yasinan, atau pengajian
+          di desa dan pulang excited membawa besek. Kemanapun ibu pergi, aku
+          mengikutinya. Aku ingat membeli snack di warung Almh. Mbah Sudi untuk
+          membeli ciki kesukaanku, sementara ibu mengobrol dengan beliau
+          menggunakan bahasa Jawa alus. Itulah kehidupanku, dan itulah yang aku
+          yakini akan kujalani seumur hidup.
+        </p>
+
+
+        <p>
+          Membayangkan kota besar seperti Jakarta saja membuatku merasa seperti
+          sedang membayangkan tempat yang berbeda. Setiap kali kami ke Jakarta
+          untuk mengunjungi Uwa-ku, aku merasa,
+          <em>“I don't belong here. This place is too big for me.”</em>
+          Orang-orang menggunakan style dan pakaian yang jauh berbeda dari apa
+          yang biasa kulihat di Jogja. Gedung-gedungnya tinggi, jalanannya ramai,
+          semuanya terasa besar. Dan aku merasa kecil. Jadi ketika pertama kali
+          mengenal kalimat <em>Ad Maiora Natus Sum</em>, kalimat itu sama sekali
+          bukan sesuatu yang terasa ditujukan untukku. Mungkin hanya sebutan
+          untuk orang-orang besar, mereka yang memiliki akses ke uang, koneksi,
+          dan kesempatan yang lebih luas. Bukan aku pastinya. Ucap Syafira,
+          13 tahun, saat dunianya seluas kota Yogyakarta dan uang jajan Rp5.000
+          sehari yang biasa kubelikan nasi goreng dalam plastik mika di kantin
+          seharga Rp3.000, dan aku masih bisa beli kerupuk Rp500 dan es teh.
+          Segitu kecilnya duniaku waktu itu.
+        </p>
+
+
+        <p>
+          Kehilangan ibu membuatku merasa lebih kecil. Masih ingat bahwa aku
+          mengikuti beliau kemanapun beliau pergi? Kini aku justru kebingungan,
+          tidak tahu kemana harus melangkah, sementara ada adik-adik kecil yang
+          kini seperti “mengikuti”ku kemanapun aku pergi. Saat aku sendiri masih
+          kebingungan mencari jalanku sendiri. Ada tanggung jawab yang tiba-tiba
+          terasa terlalu besar untuk anak berusia 13 tahun, sementara aku bahkan
+          belum tahu ingin menjadi siapa.
+        </p>
+
+
+        <p>
+          Beberapa tahun kemudian, aku masuk ke salah satu SMA favorit di kota
+          Yogyakarta, SMA 3 Yogyakarta, yang berisi orang-orang paling hebat dan
+          pandai yang pernah aku temui. Teman-temanku semuanya adalah orang-orang
+          yang sangat berhasil. Aku melihat kehidupan mereka, lalu melihat diriku
+          sendiri dan berpikir, <em>“Apalah aku?”</em> Anak biasa, tidak punya
+          prestasi yang spesial seperti teman-temanku, ga menarik, dan ga punya
+          ibu pula. Jujur, kala itu aku merasa jadi orang paling menyedihkan di
+          sekolah. Apalagi beban yang kubawa setelah ibu pergi membuatku bahkan
+          tidak terlalu mengurus diriku sendiri. Saat itu aku merasa jadi anak
+          paling kumel, ga terurus, ga menarik di sekolah. Jujur ga terpikirkan
+          untuk merawat diriku saat itu. Setelah semua yang terjadi, rasanya ada
+          banyak hal lain yang jauh lebih penting untuk kupikirkan.
+        </p>
+
+
+        <p>
+          Beberapa bulan setelahnya, sekolah kami punya kerja sama student
+          exchange ke Belanda. Tapi mereka yang tertarik diwajibkan membayar
+          sekian puluh juta untuk berangkat. “Wah, asiknya ya,” kataku.
+          “Andai saja aku punya uang sebanyak itu, pengen sekali aku lihat
+          Belanda seperti apa.” Beberapa temanku akhirnya berangkat, dan aku
+          mengamati asiknya kehidupan mereka selama di Belanda dan keliling Eropa.
+          Seperti dunia yang berbeda. Aku melihat tempat-tempat yang bahkan
+          namanya terasa jauh sekali dari kehidupanku dan hanya bisa berpikir,
+          <em>“Andai aku punya akses ke uang dan kesempatan seperti itu.”</em>
+          Tapi Syafira yang kini berusia 15 tahun lagi-lagi harus dihadapkan
+          pada realita. <em>“Ncen ketoke uripku yo neng Jogja ngene.”</em>
+          Sepertinya hidupku memang di Jogja saja. Dan aku tidak punya banyak
+          yang bisa kukeluhkan, karena memang sedari awal pilihan lain tidak
+          pernah terasa ada dalam hidupku.
+        </p>
+
+
+        <p>
+          Hingga sebuah kesempatan datang. Sebuah program bernama KL-YES,
+          beasiswa untuk sekolah selama satu tahun di Amerika Serikat. Tau
+          apa yang pertama kali ada di pikiranku kala itu?
+          <em>“Gamungkin. Gamungkin orang seperti kamu bisa lolos.”</em>
+          Sudah biasa-biasa aja, ga menarik, ga spesial, ga pinter-pinter amat,
+          gapunya ibu lagi, berharap apa sebenarnya? Aku melihat profil
+          kakak-kakak yang sudah pernah lolos. Orang-orang keren semua.
+          Ketua OSIS, pemenang olimpiade hingga tingkat internasional,
+          punya prestasi yang banyak sekali. Aku melihat mereka dan kembali
+          bertanya, <em>“Apalah aku?”</em>
+        </p>
+
+
+        <p>
+          Tapi di sisi lain, aku pengen banget bisa ke Amerika. Aku pengen
+          banget nyoba. Ini adalah satu-satunya kesempatan yang bahkan dengan
+          latar belakangku aku bisa coba, karena aku tidak harus membayar
+          puluhan atau ratusan juta untuk bisa ke sana. Aku cukup mengirimkan
+          berkas dan mengikuti proses seleksinya. Dan entah kenapa waktu itu
+          aku berpikir, <em>“Aku kayaknya bakal mati dengan rasa penyesalan
+          yang begitu dalam kalau aku ga pernah nyoba sama sekali.”</em>
+          Aku tidak yakin akan lolos. Bahkan mungkin kemungkinan besarnya
+          adalah aku tidak lolos. Tapi aku ingin tahu, bagaimana kalau aku
+          mencoba?
+        </p>
+
+
+        <p>
+          Deadline untuk pendaftaran masih di semester depan. Kalian tahu
+          apa yang aku lakukan? Aku mencoba seperti orang gila. Minggu
+          berikutnya aku minta tolong ke guruku untuk memberikan list lomba
+          apa saja yang tersedia. Aku mau mencoba semuanya. Pilihanku jatuh
+          ke lomba pidato bahasa Inggris, bukan karena aku sudah jago, tapi
+          karena aku ingin punya tempat untuk latihan supaya suatu hari aku
+          bisa terlihat keren saat bicara bahasa Inggris. Aku daftar, latihan
+          sendiri, lihat video YouTube orang-orang yang menang, tiru gaya
+          bicaranya, lihat bagaimana mereka berdiri, bagaimana mereka
+          menggunakan tangan, bagaimana mereka menyampaikan setiap kata,
+          lalu kuulang lagi. Dan di lomba pertamaku, aku gagal. Bahkan sampai
+          semifinal pun tidak.
+        </p>
+
+
+        <p>
+          <strong>Ad Maiora Natus Sum.</strong>
+          Mungkin memang bukan untuk orang sepertiku. Tapi aku masih punya
+          satu semester dan aku gamau nyerah. Berikutnya aku coba ikut lomba
+          newscasting bahasa Inggris dan lomba speech lagi. Aku ulangi hal
+          yang sama. Latihan, ikut lomba, gagal, belajar, lalu coba lagi.
+          Sampai akhirnya aku berhasil mendapatkan juara 2 dan juara 3.
+          Kali ini aku mulai tahu lingkungannya seperti apa, aku mulai tahu
+          alurnya, dan aku lebih tahu metode seperti apa yang biasanya
+          digunakan oleh orang-orang yang bisa menang. Jadi aku coba lagi
+          dan coba lagi sampai akhirnya aku memenangkan beberapa kejuaraan
+          dalam satu semester itu.
+        </p>
+
+
+        <p>
+          Berikutnya aku mengikuti lomba debat bahasa Inggris. Aku ingat
+          sekali aku bahkan ga bisa ngomong dengan lancar dan gagap karena
+          bahasa Inggrisku jelek sekali waktu itu. Tapi aku gamau nyerah
+          karena aku melihat orang-orang yang bisa berbicara bahasa Inggris
+          dengan lancar dan menurutku mereka keren banget, hampir kayak bule.
+          <em>“Kok iso yo ngomonge lancar ngono? Aku yo pengen iso kek ngono,”</em>
+          pikirku dalam hati. Selama berbulan-bulan aku latihan. Setiap hari
+          seusai pulang sekolah, dari jam 3 sampai jam 6 atau 7 malam, aku
+          latihan di sekolah bersama teman-temanku. Aku belajar bicara,
+          belajar berargumen, belajar menyusun kata, belajar supaya tidak
+          gagap, belajar supaya tidak takut. Hingga akhirnya aku mendapatkan
+          Best Speaker NSDC di Yogyakarta.
+        </p>
+
+
+        <p>
+          Dan mungkin di situlah sesuatu mulai berubah. Bukan karena tiba-tiba
+          aku menjadi anak paling pintar atau paling berbakat. Tapi aku mulai
+          melihat bahwa ternyata ada sesuatu yang bisa kulakukan kalau aku mau
+          mencoba berkali-kali. Aku mulai memahami bahwa mungkin orang yang
+          terlihat hebat di luar sana juga tidak selalu terlahir langsung hebat.
+          Mungkin mereka hanya sudah mencoba lebih dulu, sudah gagal lebih banyak,
+          dan sudah belajar lebih banyak dari kegagalan-kegagalan itu. Untuk
+          pertama kalinya, aku mulai punya sedikit alasan untuk percaya pada
+          diriku sendiri.
+        </p>
+
+
+        <p>
+          Dengan portofolio itu aku jadi lebih mantap untuk daftar seleksi
+          KL-YES. Dengan semua usaha yang kulakukan selama satu semester itu,
+          pada bulan Agustus 2019 aku akhirnya berangkat ke Colorado, Amerika
+          Serikat. Perempuan yang seumur hidupnya bahkan hampir tidak pernah
+          keluar Pulau Jawa ini akhirnya pertama kali menjejakkan kakinya di
+          Amerika Serikat. Perempuan yang dulu merasa Jakarta terlalu besar
+          untuknya, yang dulu hanya bisa melihat Belanda dari postingan
+          teman-temannya, sekarang berada ribuan kilometer dari rumahnya.
+        </p>
+
+
+        <p>
+          Dan kalau aku bisa kembali ke Syafira yang berumur 13 tahun,
+          mungkin aku hanya ingin bilang satu hal:
+          <em>“Kamu ternyata tidak sekecil itu.”</em>
+        </p>
+
+
+        <p>
+          Sekarang, di usia 23 tahun, <strong>Ad Maiora Natus Sum</strong>
+          bukan lagi sekadar kalimat yang menurutku ditujukan untuk orang-orang
+          besar saja, yang punya akses ke uang dan kesempatan lebih besar.
+          Menurutku ini adalah sebuah rasa percaya. Sebuah keyakinan bahwa
+          mungkin kita memang dilahirkan untuk hal-hal besar dalam hidup,
+          tetapi kita juga harus berani memperjuangkannya. Aku percaya tidak
+          ada satu pun orang yang bekerja begitu keras dan pada akhirnya
+          tidak menjadi apa-apa. Mungkin hasilnya tidak selalu datang dalam
+          bentuk yang kita bayangkan, mungkin jalannya tidak selalu lurus,
+          dan mungkin kamu sudah berusaha bertahun-tahun tetapi belum melihat
+          hasilnya. Aku juga pernah ada di sana.
+        </p>
+
+
+        <p>
+          Aku pernah menjadi anak 15 tahun yang melihat teman-temannya pergi
+          ke Belanda dan hanya bisa berkata, <em>“When yah?”</em> Aku pernah
+          merasa bahwa mungkin hidupku memang hanya akan berada di Jogja.
+          Aku pernah melihat profil orang-orang yang jauh lebih hebat dariku
+          dan berpikir, <em>“Gamungkin aku bisa.”</em> Tapi ternyata,
+          kesempatan yang membawaku ke Amerika tidak berhenti di Amerika.
+          Program KL-YES itu ternyata bukan hanya membawaku ke Colorado.
+          Program itu membawaku ke kehidupan yang jauh lebih besar dari apa
+          yang pernah kubayangkan saat SMA. Dari sana aku bertemu lebih banyak
+          orang, mendapatkan lebih banyak kesempatan, dan akhirnya bisa
+          mengunjungi lebih dari 25 negara lain di dunia. Aku pernah
+          menghabiskan senja di Roma, Italia, mengelilingi kanal di Belanda,
+          dan datang ke kota-kota yang dulu hanya bisa kulihat dari postingan
+          media sosial teman-temanku. Tempat-tempat yang dulu waktu SMA hanya
+          bisa membuatku berkata, <em>“When yah?”</em>
+        </p>
+
+
+        <p>
+          Ternyata jawabannya adalah: <strong>nanti.</strong>
+        </p>
+
+
+        <p>
+          Tapi “nanti” itu hanya datang setelah aku mau mencoba. Setelah aku
+          mau gagal. Setelah aku mau terlihat bodoh. Setelah aku mau menjadi
+          anak yang belum bisa, lalu tetap latihan setiap hari sampai akhirnya
+          bisa. Dan mungkin itu juga yang ingin kusampaikan kepadamu. Kamu
+          mungkin bisa mencoba setiap langkah yang pernah kulakukan dan
+          berusaha sekeras yang pernah aku lakukan, tapi mungkin kamu tidak
+          akan berakhir di Amerika Serikat seperti aku. Dan itu tidak apa-apa.
+          Karena mungkin tujuan dari perjuanganmu memang bukan Amerika. Mungkin
+          Tuhan sedang membawamu ke jalan lain yang sama hebatnya, ke kota lain,
+          ke pekerjaan lain, ke kesempatan lain, ke kehidupan lain yang bahkan
+          sekarang belum bisa kamu bayangkan.
+        </p>
+
+
+        <p>
+          Aku percaya ketika seseorang benar-benar berusaha, hidupnya akan
+          bergerak. Mungkin tidak selalu ke arah yang dia rencanakan, tapi
+          bergerak. Ad Maiora Natus Sum adalah sebuah rasa percaya, bahkan
+          ketika dalam prosesnya sekarang kamu belum melihat hasilnya. Karena
+          hal-hal besar dalam hidup seringkali tidak terlihat besar ketika
+          kita sedang menjalaninya. Dulu aku hanya mengira sedang ikut lomba
+          speech. Ternyata aku sedang membuka pintu. Dulu aku hanya mengira
+          sedang mengirim formulir beasiswa. Ternyata aku sedang mengubah arah
+          hidupku. Dan mungkin hari ini kamu juga sedang melakukan sesuatu
+          yang menurutmu kecil. Mungkin kamu sedang belajar, sedang mengirim
+          satu aplikasi, sedang mengikuti satu lomba, atau sedang mencoba
+          sesuatu yang membuatmu takut. Kamu tidak pernah tahu. Bisa jadi,
+          itu adalah pintu pertama menuju kehidupan yang jauh lebih besar dari
+          yang bisa kamu bayangkan sekarang.
+        </p>
+
+
+        <p>
+          Jadi kalau hari ini kamu mendapati bahwa hal-hal besar itu terasa
+          tidak mungkin, aku harap kamu ingat aku. Aku harap kamu ingat cerita
+          ini. Bukan supaya kamu percaya bahwa hidupmu akan persis seperti
+          hidupku, tapi supaya kamu percaya bahwa keadaanmu hari ini tidak
+          selalu menjadi batas dari kehidupanmu besok. Kamu boleh lahir dari
+          keluarga sederhana. Boleh tinggal di kota kecil. Boleh belum punya
+          koneksi. Boleh belum punya prestasi. Boleh belum tahu kamu sebenarnya
+          mau jadi apa. Bahkan boleh merasa sangat kecil. Aku juga pernah.
+          Tapi jangan biarkan keadaanmu hari ini membuatmu percaya bahwa hanya
+          itu kehidupan yang tersedia untukmu.
+        </p>
+
+
+        <p>
+          Karena mungkin, di luar apa yang bisa kamu lihat sekarang, ada
+          kehidupan yang jauh lebih besar yang sedang menunggumu. Mungkin kamu
+          belum melihat jalannya. Mungkin kamu belum tahu kesempatan itu datang
+          dari mana. Mungkin sekarang kamu bahkan masih merasa seperti Syafira
+          umur 13 tahun yang hanya punya uang jajan Rp5.000 dan dunia yang
+          terasa begitu kecil. Tapi tetaplah mencoba. Tetaplah belajar.
+          Tetaplah disiplin. Tetaplah konsisten. Dan yang paling penting,
+          tetaplah percaya bahkan ketika hasilnya belum kelihatan.
+        </p>
+
+
+        <p>
+          Karena dulu aku juga tidak tahu bahwa lomba speech yang bahkan gagal
+          sampai semifinal akan membawaku ke lomba-lomba berikutnya. Aku tidak
+          tahu bahwa latihan debat sampai jam 7 malam akan membawaku mendapatkan
+          Best Speaker. Aku tidak tahu bahwa semua itu akan membawaku ke Amerika.
+          Dan aku juga tidak tahu bahwa Amerika nantinya akan membawaku ke
+          kehidupan yang jauh lebih besar lagi. Aku hanya tahu satu hal:
+          <strong>aku ingin mencoba.</strong>
+        </p>
+
+
+        <p>
+          Mungkin itu saja yang perlu kamu lakukan hari ini. Tidak harus
+          langsung tahu bagaimana caranya mencapai kehidupan yang besar itu.
+          Tidak harus langsung tahu akan berakhir di mana. Cukup ambil satu
+          kesempatan yang ada di depanmu. Coba. Kalau gagal, coba lagi. Kalau
+          masih gagal, belajar lagi. Karena mungkin hal-hal besar dalam hidup
+          memang tidak langsung terlihat besar ketika kita sedang menjalaninya.
+        </p>
+
+
+        <p>
+          Sepuluh tahun yang lalu, aku tidak pernah membayangkan bahwa anak
+          perempuan yang dunianya hanya seluas Yogyakarta akan suatu hari
+          duduk di pesawat menuju Amerika Serikat. Aku tidak tahu bahwa dunia
+          yang dulu terasa terlalu besar untukku ternyata memang sebesar itu,
+          dan ternyata aku juga bisa menjadi bagian di dalamnya. Jadi kalau
+          hari ini kamu merasa terlalu kecil untuk mimpi yang kamu punya,
+          aku harap kamu ingat:
+          <strong>aku juga pernah merasa begitu. Dan ternyata, aku tidak sekecil
+          itu. Kamu juga mungkin tidak.</strong>
+        </p>
+
+
+        <p>
+          <strong>Ad Maiora Natus Sum.</strong>
+        </p>
+
+
+        <p>
+          Kita semua dilahirkan untuk hal-hal besar dalam hidup. Mungkin bukan
+          karena kita terlahir istimewa, bukan karena kita memiliki akses
+          paling besar, dan bukan karena sejak awal kita sudah tahu akan menjadi
+          siapa. Tapi karena kita berani percaya bahwa kehidupan kita bisa
+          menjadi lebih besar dari keadaan kita hari ini, lalu kita memilih
+          untuk memperjuangkannya.
+        </p>
+
+
+        <p>
+          Dan siapa tahu, mungkin suatu hari nanti, kamu juga akan melihat ke
+          belakang dan menyadari bahwa sesuatu yang dulu kamu anggap sebagai
+          langkah kecil ternyata adalah awal dari kehidupan yang jauh lebih
+          besar dari yang pernah kamu bayangkan.
+        </p>
+
+
+      </div>
+
+    </article>
+
+
+
+    <!-- COMMENTS -->
+
+    <section class="comments-section">
+
+      <div class="comments-header">
+
+        <h2 class="comments-title">
+          Pesan dari pembaca
+        </h2>
+
+        <span
+          class="comments-count"
+          id="messageCount"
+        >
+          0 pesan
+        </span>
+
+      </div>
+
+
+      <form
+        class="comment-form"
+        id="commentForm"
+      >
+
+        <div class="form-row">
+
+          <div class="form-group">
+
+            <label
+              class="form-label"
+              for="senderName"
+            >
+              From
+            </label>
+
+            <input
+              type="text"
+              id="senderName"
+              maxlength="80"
+              placeholder="Namamu (opsional)"
+            >
+
+          </div>
+
+
+          <label class="anonymous-option">
+
+            <input
+              type="checkbox"
+              id="anonymousCheck"
+            >
+
+            <span>
+              Kirim sebagai anonim
+            </span>
+
+          </label>
+
+        </div>
+
+
+        <div class="message-group">
+
+          <label
+            class="form-label"
+            for="messageText"
+          >
+            Pesan
+          </label>
+
+          <textarea
+            id="messageText"
+            maxlength="2000"
+            placeholder="Tulis sesuatu yang ingin kamu sampaikan..."
+            required
+          ></textarea>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="submit-button"
+          id="sendMessage"
+        >
+          Kirim pesan
+        </button>
+
+
+        <div
+          class="form-status"
+          id="formStatus"
+        ></div>
+
+      </form>
+
+
+      <div
+        class="comments-list"
+        id="messagesContainer"
+      >
+
+        <div class="comments-loading">
+          Memuat komentar...
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+    © tatsyafira
+  </footer>
+
+
+
+  <!-- SUPABASE -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script>
+
+    const SUPABASE_URL =
+      "https://gtaljywggqalmfqizjhj.supabase.co";
+
+    const SUPABASE_KEY =
+      "sb_publishable_Lvgk-7rPMaxhO7TAOdGp6Q_MWACHYtR";
+
+    const supabaseClient =
+      window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_KEY
+      );
+
+
+    /* THIS IS THE ONLY ARTICLE-SPECIFIC COMMENT ID */
+
+    const ARTICLE_SLUG =
+      "ad-maiora";
+
+
+    const commentForm =
+      document.getElementById("commentForm");
+
+    const senderName =
+      document.getElementById("senderName");
+
+    const messageText =
+      document.getElementById("messageText");
+
+    const anonymousCheck =
+      document.getElementById("anonymousCheck");
+
+    const sendMessage =
+      document.getElementById("sendMessage");
+
+    const formStatus =
+      document.getElementById("formStatus");
+
+    const messagesContainer =
+      document.getElementById("messagesContainer");
+
+    const messageCount =
+      document.getElementById("messageCount");
+
+
+    function escapeHTML(text) {
+
+      const div =
+        document.createElement("div");
+
+      div.textContent =
+        text ?? "";
+
+      return div.innerHTML;
+
+    }
+
+
+    function formatDate(dateString) {
+
+      if (!dateString) {
+        return "";
+      }
+
+      const date =
+        new Date(dateString);
+
+      return date.toLocaleDateString(
+        "id-ID",
+        {
+          day: "numeric",
+          month: "long",
+          year: "numeric"
+        }
+      );
+
+    }
+
+
+    async function loadMessages() {
+
+      messagesContainer.innerHTML = `
+        <div class="comments-loading">
+          Memuat komentar...
+        </div>
+      `;
+
+
+      const {
+        data,
+        error
+      } = await supabaseClient
+
+        .from("comments")
+
+        .select("*")
+
+        .eq(
+          "article",
+          ARTICLE_SLUG
+        )
+
+        .order(
+          "created_at",
+          {
+            ascending: false
+          }
+        );
+
+
+      if (error) {
+
+        console.error(
+          "Error loading comments:",
+          error
+        );
+
+        messagesContainer.innerHTML = `
+          <div class="comments-empty">
+            Belum ada pesan.
+          </div>
+        `;
+
+        messageCount.textContent =
+          "0 pesan";
+
+        return;
+
+      }
+
+
+      const comments =
+        data || [];
+
+
+      messageCount.textContent =
+        `${comments.length} pesan`;
+
+
+      if (comments.length === 0) {
+
+        messagesContainer.innerHTML = `
+          <div class="comments-empty">
+            Belum ada pesan.
+          </div>
+        `;
+
+        return;
+
+      }
+
+
+      messagesContainer.innerHTML =
+        comments
+          .map(comment => {
+
+            const anonymous =
+              comment.is_anonymous === true ||
+              comment.anonymous === true;
+
+
+            const name =
+              anonymous
+                ? "Anonim"
+                : (
+                    comment.sender_name ||
+                    comment.name ||
+                    "Pembaca"
+                  );
+
+
+            const message =
+              comment.message ||
+              comment.content ||
+              "";
+
+
+            return `
+
+              <article class="comment-box">
+
+                <div class="comment-message">
+                  ${escapeHTML(message)}
+                </div>
+
+                <div class="comment-footer">
+
+                  <span class="comment-author">
+                    ${escapeHTML(name)}
+                  </span>
+
+                  <span class="comment-date">
+                    ${formatDate(
+                      comment.created_at
+                    )}
+                  </span>
+
+                </div>
+
+              </article>
+
+            `;
+
+          })
+          .join("");
+
+    }
+
+
+    commentForm.addEventListener(
+      "submit",
+      async function(event) {
+
+        event.preventDefault();
+
+
+        const message =
+          messageText.value.trim();
+
+        const name =
+          senderName.value.trim();
+
+        const isAnonymous =
+          anonymousCheck.checked;
+
+
+        if (!message) {
+
+          formStatus.textContent =
+            "Tulis pesan terlebih dahulu.";
+
+          return;
+
+        }
+
+
+        sendMessage.disabled = true;
+
+        sendMessage.textContent =
+          "Mengirim...";
+
+        formStatus.textContent =
+          "";
+
+
+        const {
+          error
+        } = await supabaseClient
+
+          .from("comments")
+
+          .insert({
+
+            article:
+              ARTICLE_SLUG,
+
+            name:
+              isAnonymous
+                ? null
+                : name,
+
+            message:
+              message,
+
+            is_anonymous:
+              isAnonymous
+
+          });
+
+
+        if (error) {
+
+          console.error(
+            "Error submitting comment:",
+            error
+          );
+
+          formStatus.textContent =
+            "Pesan belum berhasil dikirim. Coba lagi.";
+
+          sendMessage.disabled = false;
+
+          sendMessage.textContent =
+            "Kirim pesan";
+
+          return;
+
+        }
+
+
+        messageText.value = "";
+
+        senderName.value = "";
+
+        anonymousCheck.checked = false;
+
+        senderName.disabled = false;
+
+        senderName.placeholder =
+          "Namamu (opsional)";
+
+
+        formStatus.textContent =
+          "Pesanmu sudah terkirim. Terima kasih 🤍";
+
+
+        sendMessage.disabled = false;
+
+        sendMessage.textContent =
+          "Kirim pesan";
+
+
+        await loadMessages();
+
+      }
+    );
+
+
+    anonymousCheck.addEventListener(
+      "change",
+      function() {
+
+        if (anonymousCheck.checked) {
+
+          senderName.disabled = true;
+
+          senderName.value = "";
+
+          senderName.placeholder =
+            "Akan dikirim sebagai anonim";
+
+        } else {
+
+          senderName.disabled = false;
+
+          senderName.placeholder =
+            "Namamu (opsional)";
+
+        }
+
+      }
+    );
+
+
+    loadMessages();
+
+  </script>
+
+
+</body>
+
+</html>
