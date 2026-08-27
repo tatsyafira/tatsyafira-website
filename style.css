@@ -1567,7 +1567,7 @@ footer {
 
 
 /* =====================================================
-   CATATAN â€” HOMEPAGE EDITORIAL PREVIEW
+   CATATAN Ã¢â‚¬â€ HOMEPAGE EDITORIAL PREVIEW
    ===================================================== */
 
 .catatan-preview {
@@ -2531,7 +2531,7 @@ footer {
 
 
 /* =====================================================
-   CATATAN PAGE â€” CANONICAL PAGE OVERRIDES
+   CATATAN PAGE Ã¢â‚¬â€ CANONICAL PAGE OVERRIDES
    ===================================================== */
 
 .catatan-page {
@@ -2864,7 +2864,7 @@ body.catatan-page::after {
 
 
 /* =========================================================
-   READER MESSAGES â€” CLEAN CATATAN / SENDTHESONG STYLE
+   READER MESSAGES Ã¢â‚¬â€ CLEAN CATATAN / SENDTHESONG STYLE
    ========================================================= */
 
 /* Main reader messages section */
@@ -3132,7 +3132,7 @@ body.catatan-page::after {
 }
 
 /* =====================================================
-   ARTICLE â€” TABLET / LARGE MOBILE FALLBACK
+   ARTICLE Ã¢â‚¬â€ TABLET / LARGE MOBILE FALLBACK
    ===================================================== */
 
 @media (max-width: 700px) {
@@ -3171,7 +3171,7 @@ body.catatan-page::after {
 
 
 /* =====================================================
-   ARTICLE HEADER / READING OVERRIDES â€” CANONICAL
+   ARTICLE HEADER / READING OVERRIDES Ã¢â‚¬â€ CANONICAL
    ===================================================== */
 
 .site-header .logo {
@@ -3215,7 +3215,7 @@ body.catatan-page::after {
 }
 
 /* =====================================================
-   MOBILE ARTICLE â€” JATUH SUKA DI USIA 20-AN
+   MOBILE ARTICLE Ã¢â‚¬â€ JATUH SUKA DI USIA 20-AN
    ===================================================== */
 
 @media (max-width: 600px) {
@@ -3306,7 +3306,7 @@ body.catatan-page::after {
     }
 }
 /* =====================================================
-   ARTICLE — JATUH SUKA DI USIA 20-AN
+   ARTICLE â€” JATUH SUKA DI USIA 20-AN
    ===================================================== */
 
 /* Main article container */
@@ -3366,7 +3366,7 @@ main .article .article-opening {
 
 
 /* =====================================================
-   MOBILE — ARTICLE
+   MOBILE â€” ARTICLE
    ===================================================== */
 
 @media (max-width: 600px) {
@@ -3858,5 +3858,196 @@ main .article .article-opening {
 
     .catatan-article .article-image {
         margin-top: 24px !important;
+    }
+}
+
+/* =========================================================
+   FINAL FIX â€” INDEX CATATAN MOBILE PREVIEW
+   =========================================================
+   This fixes the homepage (#catatan) article cards on phones.
+   The homepage uses .catatan-item/.catatan-content/.catatan-image,
+   while the full Catatan page uses .catatan-article. Both are kept
+   separate so the desktop design is preserved.
+*/
+
+@media screen and (max-width: 700px) {
+
+    /* Prevent the homepage preview from creating horizontal overflow. */
+    #catatan,
+    .catatan-preview,
+    .catatan-list {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Homepage article row becomes a clean vertical card. */
+    #catatan .catatan-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        gap: 0 !important;
+        padding: 32px 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Text always stays inside the card. */
+    #catatan .catatan-item .catatan-content,
+    #catatan .catatan-item .article-content {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+        overflow: visible !important;
+    }
+
+    /* Date */
+    #catatan .catatan-item .catatan-meta,
+    #catatan .catatan-item .article-date {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 0 12px !important;
+        padding: 0 !important;
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+        text-align: left !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Article title â€” no fixed desktop width. */
+    #catatan .catatan-item h2,
+    #catatan .catatan-item h3,
+    #catatan .catatan-item .article-title {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 14px !important;
+        padding: 0 !important;
+        font-size: 30px !important;
+        line-height: 1.12 !important;
+        text-align: left !important;
+        overflow-wrap: anywhere !important;
+        word-break: normal !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Excerpt */
+    #catatan .catatan-item .catatan-excerpt,
+    #catatan .catatan-item .article-preview {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 17px !important;
+        padding: 0 !important;
+        font-size: 16px !important;
+        line-height: 1.55 !important;
+        text-align: left !important;
+        overflow-wrap: anywhere !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Category + reading time */
+    #catatan .catatan-item .catatan-info,
+    #catatan .catatan-item .article-meta {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        flex-wrap: wrap !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        gap: 8px !important;
+        font-size: 13px !important;
+        text-align: left !important;
+        box-sizing: border-box !important;
+    }
+
+    #catatan .catatan-item .catatan-info span,
+    #catatan .catatan-item .article-meta span {
+        width: auto !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    /* Homepage preview image â€” placed AFTER the text on mobile. */
+    #catatan .catatan-item .catatan-image,
+    #catatan .catatan-item .article-image {
+        position: relative !important;
+        display: block !important;
+        order: 2 !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 4 / 3 !important;
+        margin: 24px 0 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        justify-self: stretch !important;
+        align-self: stretch !important;
+        box-sizing: border-box !important;
+    }
+
+    #catatan .catatan-item .catatan-image img,
+    #catatan .catatan-item .article-image img {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        object-fit: cover !important;
+        box-sizing: border-box !important;
+    }
+
+    /* The link must occupy the full card without changing its layout. */
+    #catatan .catatan-item-link,
+    #catatan .catatan-article-link {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+        text-decoration: none !important;
+    }
+}
+
+/* Smaller phones */
+@media screen and (max-width: 480px) {
+
+    #catatan .catatan-item {
+        padding: 28px 0 !important;
+    }
+
+    #catatan .catatan-item h2,
+    #catatan .catatan-item h3,
+    #catatan .catatan-item .article-title {
+        font-size: 28px !important;
+        line-height: 1.12 !important;
+    }
+
+    #catatan .catatan-item .catatan-excerpt,
+    #catatan .catatan-item .article-preview {
+        font-size: 16px !important;
+        line-height: 1.55 !important;
+    }
+
+    #catatan .catatan-item .catatan-image,
+    #catatan .catatan-item .article-image {
+        margin-top: 22px !important;
     }
 }
