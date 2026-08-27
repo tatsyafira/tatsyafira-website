@@ -3638,3 +3638,122 @@ main .article .article-opening {
     object-fit: cover;
     display: block;
 }
+/* =========================================================
+   MOBILE ARTICLE PREVIEW
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Article card */
+    .article-card,
+    .catatan-article {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 32px 0;
+        box-sizing: border-box;
+    }
+
+    /* Article content */
+    .article-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Date */
+    .article-date {
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+
+    /* Title */
+    .article-card h2,
+    .catatan-article h2 {
+        font-size: 32px;
+        line-height: 1.15;
+        margin: 0 0 18px 0;
+        max-width: 100%;
+    }
+
+    /* Preview text */
+    .article-preview {
+        font-size: 18px;
+        line-height: 1.55;
+        margin: 0 0 20px 0;
+        max-width: 100%;
+    }
+
+    /* Category + reading time */
+    .article-meta {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    /* IMAGE */
+    .article-image {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+
+        margin: 24px 0 0 0 !important;
+
+        display: block;
+        overflow: hidden;
+    }
+
+    .article-image img {
+        display: block;
+        width: 100% !important;
+        height: auto !important;
+
+        max-width: 100%;
+        object-fit: contain;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .article-card,
+    .catatan-article {
+        padding: 28px 0;
+    }
+
+    .article-card h2,
+    .catatan-article h2 {
+        font-size: 28px;
+        line-height: 1.15;
+    }
+
+    .article-preview {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .article-image {
+        margin-top: 22px !important;
+    }
+
+    .article-image img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
