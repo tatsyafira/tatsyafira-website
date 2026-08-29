@@ -1,0 +1,2115 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Rage, Rage Against the Dying of the Light — tatsyafira
+  </title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #222222;
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+    .site-header {
+      width: 100%;
+      height: 72px;
+      background: #ffffff;
+      border-bottom: 1px solid #eeeeee;
+      position: relative;
+      z-index: 10;
+    }
+
+    .nav {
+      width: min(1200px, calc(100% - 64px));
+      height: 72px;
+      margin: 0 auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      width: 135px;
+      height: 42px;
+
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .logo img {
+      display: block;
+
+      width: 135px !important;
+      height: auto !important;
+
+      max-width: 135px !important;
+      max-height: 42px !important;
+
+      object-fit: contain;
+      object-position: left center;
+    }
+
+
+    /* NAVIGATION */
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+    }
+
+    .nav-links a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #333333;
+
+      transition:
+        opacity 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.55;
+    }
+
+    .nav-links a.active {
+      font-weight: 600;
+    }
+
+
+    /* =========================================================
+       ARTICLE
+    ========================================================= */
+
+    .article {
+      width: min(1000px, calc(100% - 48px));
+
+      margin: 0 auto;
+
+      padding-top: 105px;
+      padding-bottom: 80px;
+    }
+
+
+    /* CATEGORY */
+
+    .article-category {
+      width: 760px;
+      max-width: 100%;
+
+      margin: 0 auto 22px;
+
+      font-size: 13px;
+      letter-spacing: 2.5px;
+
+      text-transform: uppercase;
+
+      color: #999999;
+    }
+
+
+    /* TITLE */
+
+    .article-title {
+      width: 760px;
+      max-width: 100%;
+
+      margin: 0 auto 48px;
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: clamp(42px, 6vw, 68px);
+
+      font-weight: 500;
+
+      line-height: 1.08;
+
+      letter-spacing: -1.5px;
+
+      color: #1f1f1f;
+    }
+
+
+    /* =========================================================
+       HERO IMAGE
+    ========================================================= */
+
+    .article-hero {
+      width: 900px;
+      max-width: 100%;
+
+      margin: 0 auto 24px;
+    }
+
+    .article-hero-image {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      aspect-ratio: 3 / 1.72;
+
+      object-fit: cover;
+      object-position: center;
+
+      border-radius: 12px;
+    }
+
+
+    /* =========================================================
+       ARTICLE CONTENT
+    ========================================================= */
+
+    .article-content {
+      width: 680px;
+      max-width: 100%;
+
+      margin: 0 auto;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 20px;
+
+      line-height: 1.8;
+
+      color: #292929;
+    }
+
+    .article-content p {
+      margin-bottom: 32px;
+    }
+
+    .article-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .article-content strong {
+      font-weight: 600;
+    }
+
+    .article-content em {
+      font-style: italic;
+    }
+
+
+    /* OPENING QUOTE */
+
+    .article-opening {
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 25px;
+
+      line-height: 1.5;
+
+      font-style: italic;
+
+      text-align: center;
+
+      color: #222222;
+
+      margin-bottom: 42px;
+    }
+
+
+    /* =========================================================
+       COMMENT SECTION
+    ========================================================= */
+
+    .comments-section {
+      width: min(
+        1000px,
+        calc(100% - 48px)
+      );
+
+      margin: 90px auto 120px;
+
+      padding-top: 70px;
+
+      border-top: 1px solid #eeeeee;
+    }
+
+    .comments-header {
+      display: flex;
+
+      align-items: baseline;
+
+      justify-content: space-between;
+
+      margin-bottom: 38px;
+    }
+
+    .comments-title {
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 34px;
+
+      font-weight: 500;
+
+      color: #222222;
+    }
+
+    .comments-count {
+      font-size: 13px;
+      color: #999999;
+    }
+
+
+    /* =========================================================
+       COMMENT FORM
+    ========================================================= */
+
+    .comment-form {
+      background: #ffffff;
+
+      border: 1px solid #dedede;
+
+      border-radius: 8px;
+
+      padding: 34px;
+
+      margin-bottom: 55px;
+    }
+
+    .form-row {
+      display: flex;
+
+      align-items: flex-end;
+
+      gap: 18px;
+
+      margin-bottom: 22px;
+    }
+
+    .form-group {
+      flex: 1;
+    }
+
+    .form-label {
+      display: block;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+      color: #555555;
+
+      margin-bottom: 9px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+
+      border: 1px solid #dddddd;
+
+      border-radius: 6px;
+
+      background: #ffffff;
+
+      padding: 13px 14px;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 14px;
+
+      color: #222222;
+
+      outline: none;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    input {
+      height: 48px;
+    }
+
+    textarea {
+      min-height: 145px;
+
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #999999;
+
+      box-shadow:
+        0 0 0 2px
+        rgba(0, 0, 0, 0.03);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #aaaaaa;
+    }
+
+
+    /* ANONYMOUS */
+
+    .anonymous-option {
+      display: flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      height: 48px;
+
+      white-space: nowrap;
+
+      font-size: 13px;
+
+      color: #666666;
+    }
+
+    .anonymous-option input {
+      width: 17px;
+      height: 17px;
+
+      padding: 0;
+
+      accent-color: #222222;
+    }
+
+
+    /* MESSAGE */
+
+    .message-group {
+      margin-bottom: 22px;
+    }
+
+
+    /* SUBMIT */
+
+    .submit-button {
+      border: none;
+
+      border-radius: 6px;
+
+      background: #222222;
+
+      color: #ffffff;
+
+      padding: 12px 22px;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+      cursor: pointer;
+
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .submit-button:hover {
+      background: #444444;
+    }
+
+    .submit-button:active {
+      transform: translateY(1px);
+    }
+
+    .submit-button:disabled {
+      opacity: 0.5;
+
+      cursor: not-allowed;
+    }
+
+    .form-status {
+      margin-top: 14px;
+
+      font-size: 13px;
+
+      color: #888888;
+    }
+
+
+    /* =========================================================
+       COMMENT CARDS
+    ========================================================= */
+
+    .comments-list {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
+
+      gap: 18px;
+    }
+
+    .comment-box {
+      background: #ffffff;
+
+      border: 1px solid #dedede;
+
+      border-radius: 10px;
+
+      min-height: 190px;
+
+      padding: 25px 26px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .comment-box:hover {
+      border-color: #cccccc;
+
+      box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.04);
+    }
+
+    .comment-message {
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 17px;
+
+      line-height: 1.7;
+
+      color: #333333;
+
+      margin-bottom: 28px;
+
+      white-space: pre-wrap;
+
+      overflow-wrap: anywhere;
+    }
+
+    .comment-footer {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+      padding-top: 15px;
+
+      border-top:
+        1px solid #eeeeee;
+    }
+
+    .comment-author {
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 12px;
+
+      font-weight: 600;
+
+      color: #555555;
+    }
+
+    .comment-date {
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 11px;
+
+      color: #aaaaaa;
+    }
+
+    .comments-empty,
+    .comments-loading {
+      font-size: 14px;
+
+      color: #999999;
+
+      padding: 12px 0;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    .site-footer {
+      border-top:
+        1px solid #eeeeee;
+
+      padding: 35px 24px;
+
+      text-align: center;
+
+      font-size: 13px;
+
+      color: #999999;
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 700px) {
+
+      .site-header {
+        height: 64px;
+      }
+
+      .nav {
+        width: calc(100% - 32px);
+
+        height: 64px;
+      }
+
+      .logo {
+        width: 110px;
+
+        height: 36px;
+      }
+
+      .logo img {
+        width: 110px !important;
+
+        max-width: 110px !important;
+
+        max-height: 36px !important;
+      }
+
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .nav-links a:nth-child(4),
+      .nav-links a:nth-child(5) {
+        display: none;
+      }
+
+
+      .article {
+        width: calc(100% - 48px);
+
+        max-width: 100%;
+
+        padding-top: 62px;
+
+        padding-bottom: 65px;
+      }
+
+      .article-category {
+        width: 100%;
+
+        margin-bottom: 24px;
+
+        font-size: 13px;
+
+        letter-spacing: 2px;
+      }
+
+      .article-title {
+        width: 100%;
+
+        max-width: 100%;
+
+        font-size: 43px;
+
+        line-height: 1.12;
+
+        letter-spacing: -1px;
+
+        margin-bottom: 38px;
+      }
+
+      .article-hero {
+        width: 100%;
+
+        max-width: 100%;
+
+        margin: 0 auto 17px;
+      }
+
+      .article-hero-image {
+        display: block;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 1.78 / 1;
+
+        object-fit: cover;
+
+        object-position: center;
+
+        border-radius: 14px;
+      }
+
+      .article-content {
+        width: 100%;
+
+        max-width: 100%;
+
+        margin: 0 auto;
+
+        font-size: 18px;
+
+        line-height: 1.75;
+      }
+
+      .article-content p {
+        margin-bottom: 32px;
+      }
+
+      .article-opening {
+        width: 100%;
+
+        font-size: 25px;
+
+        line-height: 1.45;
+
+        text-align: center;
+
+        margin-bottom: 34px;
+      }
+
+      .comments-section {
+        width: calc(100% - 36px);
+
+        margin-top: 60px;
+
+        margin-bottom: 70px;
+
+        padding-top: 50px;
+      }
+
+      .comments-header {
+        margin-bottom: 28px;
+      }
+
+      .comments-title {
+        font-size: 28px;
+      }
+
+      .comment-form {
+        padding: 24px;
+
+        margin-bottom: 40px;
+      }
+
+      .form-row {
+        display: block;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .anonymous-option {
+        height: auto;
+      }
+
+      .comments-list {
+        grid-template-columns: 1fr;
+      }
+
+      .comment-box {
+        min-height: 170px;
+
+        padding: 22px;
+      }
+
+      .comment-message {
+        font-size: 16px;
+      }
+
+    }
+
+
+    /* =========================================================
+       SMALL MOBILE
+    ========================================================= */
+
+    @media (max-width: 390px) {
+
+      .article {
+        width: calc(100% - 36px);
+      }
+
+      .article-title {
+        font-size: 39px;
+      }
+
+      .article-content {
+        font-size: 17px;
+
+        line-height: 1.75;
+      }
+
+      .article-opening {
+        font-size: 23px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =======================================================
+       HEADER
+  ======================================================= -->
+
+  <header class="site-header">
+
+    <nav class="nav">
+
+
+      <!-- LOGO -->
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+
+        <img
+          src="images/tatsyafira-logo.png"
+          alt="tatsyafira"
+        >
+
+      </a>
+
+
+      <!-- NAVIGATION -->
+
+      <div class="nav-links">
+
+        <a
+          href="catatan.html"
+          class="active"
+        >
+          Catatan
+        </a>
+
+        <a href="index.html">
+          Belajar
+        </a>
+
+        <a href="#">
+          Kelas
+        </a>
+
+        <a href="#">
+          Resources
+        </a>
+
+        <a href="#">
+          Toko
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =======================================================
+       ARTICLE
+  ======================================================= -->
+
+  <main>
+
+    <article class="article">
+
+
+      <!-- CATEGORY -->
+
+      <div class="article-category">
+        Refleksi
+      </div>
+
+
+      <!-- TITLE -->
+
+      <h1 class="article-title">
+        Rage, Rage Against the Dying of the Light
+      </h1>
+
+
+      <!-- HERO -->
+
+      <figure class="article-hero">
+
+        <img
+          src="images/rage-cover.jpg"
+          alt="Rage, Rage Against the Dying of the Light"
+          class="article-hero-image"
+        >
+
+      </figure>
+
+
+      <!-- =====================================================
+           ARTICLE CONTENT
+      ===================================================== -->
+
+      <div class="article-content">
+
+
+        <!-- OPENING -->
+
+        <p class="article-opening">
+
+          “Jangan pergi dengan lembut menuju malam yang baik.
+          Mengamuklah, mengamuklah melawan padamnya cahaya.”
+
+          — Dylan Thomas
+
+        </p>
+
+
+        <p>
+
+          Dulu, aku mengira puisi ini berbicara tentang kematian.
+          Mungkin karena aku mengenal kehilangan terlalu dini,
+          aku memahami kata <em>kematian</em> secara harfiah.
+          Bagiku, puisi ini terdengar seperti permintaan untuk
+          melawan sesuatu yang tidak bisa dilawan; menahan seseorang
+          agar tidak pergi, menggenggam tangannya sedikit lebih erat,
+          seolah dengan begitu ia akan memilih untuk tetap tinggal.
+
+        </p>
+
+
+        <p>
+
+          Tapi semakin dewasa, aku mulai memahami bahwa kematian
+          bukan satu-satunya hal yang dapat memadamkan cahaya seseorang.
+          Kadang-kadang, cahaya itu mulai padam jauh sebelum seseorang
+          benar-benar mati.
+
+        </p>
+
+
+        <p>
+
+          Cahaya itu bisa padam ketika seorang anak berusia tiga belas
+          tahun menyadari bahwa ibunya tidak akan pulang. Ketika kamu
+          menjadi anak perempuan tertua dan perlahan mengerti bahwa
+          menjadi dewasa bukan lagi sesuatu yang bisa kamu tunda.
+          Ketika kamu melihat kehidupan yang pernah kamu bayangkan,
+          lalu menyadari bahwa beberapa bagiannya tidak akan pernah
+          terjadi. Ketika kamu meninggalkan rumah, membawa sebuah koper
+          yang entah bagaimana harus memuat seluruh dirimu; segala sesuatu
+          yang telah kamu menjadi, sekaligus segala sesuatu yang harus
+          kamu tinggalkan.
+
+        </p>
+
+
+        <p>
+
+          Dan mungkin, kegelapan yang paling menakutkan adalah kegelapan
+          yang datang tanpa suara. Kamu masih belajar. Masih tertawa.
+          Masih mengejar mimpi. Masih membangun sesuatu. Masih menjadi
+          seseorang. Dari luar, cahayanya masih terlihat. Tapi kamu tahu
+          betapa melelahkannya mempertahankan cahaya itu agar tetap menyala.
+
+        </p>
+
+
+        <p>
+
+          Aku sering bertanya-tanya:
+          <strong>
+            Apakah aku akan menjadi orang yang sama jika hidup pernah
+            lebih lembut kepadaku?
+          </strong>
+
+        </p>
+
+
+        <p>
+
+          Mungkin. Mungkin aku akan menjadi seseorang yang berani
+          bermimpi lebih kecil. Mungkin aku tidak akan begitu takut
+          pada kegagalan jika sejak kecil aku tidak pernah belajar
+          bahwa hidup bisa mengambil sesuatu darimu tanpa meminta izin.
+          Mungkin aku tidak akan memiliki hubungan yang begitu rumit
+          dengan ambisi, hubungan di mana sebuah mimpi tidak pernah
+          terasa hanya sebagai mimpi, tetapi seperti sesuatu yang harus
+          kubuktikan bahwa aku pantas mendapatkannya.
+
+        </p>
+
+
+        <p>
+
+          Aku telah mengejar kesempatan melintasi batas negara.
+          Aku pernah mengajukan kesempatan yang dulu mungkin terdengar
+          terlalu besar untuk dibayangkan oleh diriku sendiri.
+          Aku pernah duduk di ruang kelas yang jauh dari rumah,
+          belajar menavigasi kota-kota yang asing, memulai kembali
+          kehidupan di tempat di mana tidak seorang pun mengenal namaku.
+          Aku membangun sesuatu, mengajar, menulis, dan berkali-kali
+          mencoba menciptakan masa depan dari potongan-potongan
+          kehidupan yang tersisa di tanganku.
+
+        </p>
+
+
+        <p>
+
+          Orang mungkin melihat semua itu sebagai pencapaian.
+          Dan memang, itu adalah pencapaian. Tetapi pencapaian
+          hanyalah bagian cerita yang terlihat.
+
+        </p>
+
+
+        <p>
+
+          Tidak banyak yang melihat anak perempuan di balik daftar
+          prestasi itu. Anak perempuan yang belajar terlalu dini bahwa
+          mencintai seseorang tidak menjamin kamu bisa memilikinya
+          selamanya. Yang belajar bahwa terkadang kamu harus terus
+          hidup meskipun ada bagian dari dirimu yang ingin waktu
+          berhenti di satu titik. Yang belajar memasukkan hidupnya
+          ke dalam koper. Yang belajar mengucapkan selamat tinggal
+          tanpa pernah benar-benar menjadi ahli dalam melakukannya.
+          Yang terus berjalan, bukan karena ia tidak takut, tetapi
+          karena terkadang berdiri diam berarti harus berhadapan
+          dengan semua hal yang telah hilang.
+
+        </p>
+
+
+        <p>
+
+          Mungkin itulah arti <em>rage</em> bagiku.
+          Bukan kemarahan. Bukan kepahitan. Bukan menjadi keras.
+          Melainkan <strong>penolakan</strong>. Penolakan untuk
+          membiarkan apa yang pernah terjadi kepadaku menentukan
+          apa yang masih mungkin terjadi kepadaku.
+
+        </p>
+
+
+        <p>
+
+          Ada sesuatu yang menarik dari kata yang dipilih Dylan Thomas.
+          <strong>Rage.</strong> Mengamuk. Mengamuklah melawan
+          penindasan dalam hidup, mengamuklah dengan sistem yang curang,
+          mengamuklah dengan mereka yang mengambil hak yang seharusnya
+          milikmu, mengamuklah dengan ketidak adilan.
+
+        </p>
+
+
+        <p>
+
+          Ada keputusasaan di dalam kata itu. Ada kesedihan.
+          Ada keberanian. Ada suara seseorang yang tahu bahwa cahaya
+          sedang perlahan padam dan tidak bersedia menerimanya begitu saja.
+
+        </p>
+
+
+        <p>
+
+          Dan sekarang, aku rasa aku mengerti. Karena ada banyak saat
+          dalam hidup ketika aku sebenarnya punya alasan untuk mengecilkan
+          hidupku sendiri. Untuk berkata, <em>Mungkin sudah cukup.</em>
+          Mungkin aku harus berhenti bermimpi. Mungkin aku harus berhenti
+          mencoba membangun sesuatu yang lebih besar dari diriku sendiri.
+          Mungkin aku harus menerima bahwa tidak semua orang mendapatkan
+          kehidupan yang mereka inginkan.
+
+        </p>
+
+
+        <p>
+
+          Tetapi selalu ada sesuatu di dalam diriku yang menjawab:
+          <strong>Tidak.</strong>
+
+        </p>
+
+
+        <p>
+
+          Bukan karena aku tahu aku akan berhasil. Aku tidak tahu.
+          Aku bergerak maju berkali-kali tanpa bukti bahwa pintu
+          berikutnya akan terbukaTetap pergi. Tetap mencoba.
+          Tetap memulai lagi.
+
+        </p>
+
+
+        <p>
+
+          Dan mungkin itulah bagian dari ceritaku yang paling sering
+          disalahpahami. Aku tidak pernah benar-benar berjalan karena
+          aku tidak takut. Aku berjalan karena aku tahu rasa takut
+          tidak boleh menjadi penentu arah hidupku. Mungkin keberanian
+          bukan tentang tidak takut pada akhir. Mungkin keberanian adalah
+          mengetahui bahwa akhir itu mungkin menyakitkan, lalu tetap
+          memilih berjalan menuju masa depan.
+
+        </p>
+
+
+        <p>
+
+          Ada satu bagian lain dari puisi itu yang semakin kupahami
+          seiring bertambahnya usia:
+          <strong>
+            “Old age should burn and rave at close of day.”
+          </strong>
+          Terbakar. Mengamuk. Hidup dengan begitu penuh sehingga
+          bahkan ketika kegelapan mulai mendekat, ia tidak mampu
+          membuatmu diam.
+
+        </p>
+
+
+        <p>
+
+          Dan mungkin, itulah yang kuinginkan dari hidupku.
+          Bukan kehidupan tanpa kegelapan. Karena sekarang aku tahu,
+          itu tidak mungkin. Akan selalu ada hal-hal yang tidak bisa
+          kita selamatkan. Orang-orang yang tidak bisa kita bawa kembali.
+          Pintu-pintu yang akan tertutup. Negara-negara yang harus kita
+          tinggalkan. Versi diri kita yang perlahan akan hilang.
+          Mimpi-mimpi yang tidak pernah terwujud. Orang-orang yang
+          memilih pergi.
+
+        </p>
+
+
+        <p>
+
+          Ada pagi-pagi ketika bangun dari tempat tidur saja terasa
+          seperti sebuah bentuk keimanan. Maka mungkin tujuan hidup
+          bukanlah membuat kegelapan tidak pernah datang.
+          Tujuannya adalah
+          <strong>
+            memiliki cahaya yang tetap menjadi milikmu.
+          </strong>
+          Dan ketika segala sesuatu di sekitarmu menjadi gelap,
+          terkadang kamu harus menjadi orang yang melindunginya sendiri.
+
+        </p>
+
+
+        <p>
+
+          Mungkin itulah alasan aku terus mengejar hal-hal yang dulu
+          terasa mustahil. Bukan karena aku membutuhkan dunia untuk
+          tahu bahwa aku berhasil. Tetapi karena ada sesuatu yang
+          sangat personal dari membuktikan bahwa hidupku bisa jauh
+          lebih besar daripada keadaan yang pernah diberikan kepadaku.
+
+        </p>
+
+
+        <p>
+
+          Aku tidak ingin bab tersulit dalam hidupku menjadi judul
+          dari seluruh bukuku. Aku tidak ingin kehilangan menjadi
+          hal paling penting yang pernah terjadi kepadaku. Aku tidak
+          ingin fakta bahwa aku kehilangan seseorang yang kucintai
+          ketika berusia tiga belas tahun menjadi penjelasan untuk
+          setiap versi diriku setelahnya.
+
+        </p>
+
+
+        <p>
+
+          Aku ingin itu tetap menjadi bagian dari ceritaku.
+          Bagian yang menyakitkan. Bagian yang membentukku.
+          Bagian yang akan selalu kubawa. Tetapi
+          <strong>bukan akhir ceritanya.</strong>
+
+        </p>
+
+
+        <p>
+
+          Dan mungkin, itulah arti
+          <em>rage against the dying of the light</em> bagiku.
+          Menolak membiarkan kehilangan berubah menjadi takdir.
+          Membiarkan diriku berduka tanpa membiarkan duka menentukan
+          sebesar apa hidup yang boleh kumiliki.
+
+        </p>
+
+
+        <p>
+
+          Berkata: <em>Ya, ini menyakitiku. Ya, ini mengubahku.
+          Ya, ada hal-hal yang akan kubawa sepanjang hidupku.</em>
+
+        </p>
+
+
+        <p>
+
+          <strong>Tetapi aku masih di sini.</strong>
+
+        </p>
+
+
+        <p>
+
+          Dan selama aku masih di sini, masih ada sesuatu yang bisa
+          kubangun. Sesuatu yang bisa kupelajari. Tempat yang bisa
+          kudatangi. Versi diriku yang belum kukenal. Seseorang yang
+          bisa kubantu. Seseorang yang bisa kucintai. Sebuah cerita
+          yang masih bisa kutulis.
+
+        </p>
+
+
+        <p>
+
+          Kadang aku memikirkan diriku yang berusia tiga belas tahun.
+          Ia tidak mungkin membayangkan tempat-tempat yang suatu hari
+          akan ia datangi. Ia tidak mungkin membayangkan belajar
+          di negara-negara yang dulu hanya ia kenal dari peta.
+          Ia tidak mungkin membayangkan kesempatan yang akan ia dapatkan,
+          ruang kelas yang akan ia datangi, buku yang akan ia tulis,
+          orang-orang yang akan ia temui, dan mimpi-mimpi yang akan
+          ia kejar.
+
+        </p>
+
+
+        <p>
+
+          Dan mungkin yang paling tidak bisa ia bayangkan adalah ini:
+          <strong>
+            setelah kehilangan begitu banyak, ia masih akan menjadi
+            seseorang yang menginginkan lebih banyak dari kehidupan.
+          </strong>
+
+        </p>
+
+
+        <p>
+
+          Kalau aku bisa berbicara kepada anak perempuan itu sekarang,
+          aku tidak akan berkata,
+          <em>Semuanya akan baik-baik saja.</em>
+          Karena aku tidak tahu apakah semuanya akan selalu baik-baik saja.
+          Aku akan mengatakan sesuatu yang berbeda.
+
+        </p>
+
+
+        <p>
+
+          <strong>Teruslah berjalan.</strong>
+
+        </p>
+
+
+        <p>
+
+          Dan di suatu tempat di depanmu ada kehidupan yang bahkan
+          belum mampu dibayangkan oleh anak perempuan yang sedang
+          berdiri di dalam kegelapan itu.
+
+        </p>
+
+
+        <p>
+
+          Mungkin itu sebabnya sekarang aku tidak lagi membaca
+          kata-kata Dylan Thomas sebagai perintah untuk mengalahkan
+          kematian. Aku membacanya sebagai perintah untuk
+          <strong>hidup sebelum kematian datang.</strong>
+
+        </p>
+
+
+        <p>
+
+          Mencintai dengan sungguh-sungguh. Bermimpi tanpa meminta
+          maaf karena mimpimu terlalu besar. Belajar sampai hal-hal
+          yang dulu membuatmu gentar menjadi sesuatu yang akhirnya
+          bisa kamu pahami. Pergi ketika pergi memang diperlukan.
+          Memulai kembali ketika memulai kembali terasa menakutkan.
+          Membangun sesuatu yang berarti dari waktu yang kamu punya.
+          Membiarkan dirimu merasakan sesuatu dengan dalam tanpa
+          menganggap bahwa menjadi perasa berarti menjadi lemah.
+
+        </p>
+
+
+        <p>
+
+          Dan ketika kehidupan kembali mengambil sesuatu darimu;
+          berdukalah. Tidak apa-apa. Menangislah. Rindukanlah.
+          Tetapi suatu hari nanti, ketika kamu sudah siap,
+          <strong>berdirilah.</strong>
+
+        </p>
+
+
+        <p>
+
+          Bukan karena kamu sudah lupa. Tetapi karena mengingat
+          seseorang tidak mengharuskanmu berhenti hidup.
+
+        </p>
+
+
+        <p>
+
+          Pada akhirnya, kita semua akan sampai pada malam itu.
+          Dan mungkin itulah kenyataan paling kejam dari puisi ini.
+          Cahaya itu memang suatu hari akan padam.
+          Ada akhir yang tidak bisa kita negosiasikan.
+          Ada perpisahan yang tidak bisa kita cegah.
+          Ada orang-orang yang tidak bisa kita selamatkan.
+          Ada halaman terakhir dalam setiap cerita.
+
+        </p>
+
+
+        <p>
+
+          Tetapi mungkin makna hidup kita tidak ditentukan oleh
+          apakah kita berhasil mencegah datangnya malam.
+          Mungkin makna itu ditentukan oleh
+          <strong>
+            seberapa terang kita memilih untuk menyala sebelum malam tiba.
+          </strong>
+
+        </p>
+
+
+        <p>
+
+          Dan ketika aku melihat kembali semua yang telah hilang,
+          semua yang telah kulewati, semua yang telah kubangun,
+          dan semua hal yang masih cukup nekat untuk kuimpikan,
+          aku akhirnya memahami puisi itu dengan cara yang berbeda.
+
+        </p>
+
+
+        <p>
+
+          <em>Rage</em> bukan berarti marah kepada kehidupan.
+          <em>Rage</em> berarti melihat semua hal yang pernah mencoba
+          membuatmu percaya bahwa ceritamu sudah selesai, lalu
+          menjawab dengan tenang:
+
+        </p>
+
+
+        <p>
+
+          <strong>Belum.</strong>
+
+        </p>
+
+
+        <p>
+
+          Belum, selama masih ada cahaya.
+          Belum, selama masih ada sesuatu yang bisa menjadi.
+          Belum, selama masih ada mimpi yang belum kukejar.
+          Belum, selama masih ada dunia yang belum kulihat.
+          Belum, selama masih ada cinta yang masih bisa kuberikan.
+          Belum, selama masih ada kehidupan di depanku.
+
+        </p>
+
+
+        <p>
+
+          Jadi tidak, aku tidak akan pergi dengan lembut menuju
+          malam itu. Aku akan membawa dukaku. Aku akan membawa
+          luka-lukaku. Aku akan membawa setiap perpisahan yang
+          pernah membentukku. Dan aku akan tetap berjalan.
+
+        </p>
+
+
+        <p>
+
+          Dan selama aku masih hidup, aku akan menjaganya tetap menyala.
+
+        </p>
+
+
+        <p>
+
+          <strong>
+            Rage, rage against the dying of the light.
+          </strong>
+
+        </p>
+
+
+      </div>
+
+    </article>
+
+
+
+    <!-- =====================================================
+         COMMENTS
+    ===================================================== -->
+
+    <section class="comments-section">
+
+
+      <div class="comments-header">
+
+        <h2 class="comments-title">
+          Pesan dari pembaca
+        </h2>
+
+        <span
+          class="comments-count"
+          id="messageCount"
+        >
+          0 pesan
+        </span>
+
+      </div>
+
+
+      <!-- FORM -->
+
+      <form
+        class="comment-form"
+        id="commentForm"
+      >
+
+
+        <div class="form-row">
+
+
+          <div class="form-group">
+
+            <label
+              class="form-label"
+              for="senderName"
+            >
+              From
+            </label>
+
+            <input
+              type="text"
+              id="senderName"
+              maxlength="80"
+              placeholder="Namamu (opsional)"
+            >
+
+          </div>
+
+
+          <label class="anonymous-option">
+
+            <input
+              type="checkbox"
+              id="anonymousCheck"
+            >
+
+            <span>
+              Kirim sebagai anonim
+            </span>
+
+          </label>
+
+
+        </div>
+
+
+
+        <div class="message-group">
+
+          <label
+            class="form-label"
+            for="messageText"
+          >
+            Pesan
+          </label>
+
+          <textarea
+            id="messageText"
+            maxlength="2000"
+            placeholder="Tulis sesuatu yang ingin kamu sampaikan..."
+            required
+          ></textarea>
+
+        </div>
+
+
+
+        <button
+          type="submit"
+          class="submit-button"
+          id="sendMessage"
+        >
+          Kirim pesan
+        </button>
+
+
+        <div
+          class="form-status"
+          id="formStatus"
+        ></div>
+
+
+      </form>
+
+
+
+      <!-- COMMENTS LIST -->
+
+      <div
+        class="comments-list"
+        id="messagesContainer"
+      >
+
+        <div class="comments-loading">
+          Memuat komentar...
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================= -->
+
+  <footer class="site-footer">
+
+    © tatsyafira
+
+  </footer>
+
+
+
+  <!-- =======================================================
+       SUPABASE
+  ======================================================= -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+  <script>
+
+
+    /* =======================================================
+       SUPABASE CONNECTION
+    ======================================================= */
+
+    const SUPABASE_URL =
+      "https://gtaljywggqalmfqizjhj.supabase.co";
+
+
+    const SUPABASE_KEY =
+      "sb_publishable_Lvgk-7rPMaxhO7TAOdGp6Q_MWACHYtR";
+
+
+    const supabaseClient =
+      window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_KEY
+      );
+
+
+
+    /* =======================================================
+       ARTICLE IDENTIFIER
+    ======================================================= */
+
+    const ARTICLE_SLUG =
+      "rage";
+
+
+
+    /* =======================================================
+       ELEMENTS
+    ======================================================= */
+
+    const commentForm =
+      document.getElementById(
+        "commentForm"
+      );
+
+
+    const senderName =
+      document.getElementById(
+        "senderName"
+      );
+
+
+    const messageText =
+      document.getElementById(
+        "messageText"
+      );
+
+
+    const anonymousCheck =
+      document.getElementById(
+        "anonymousCheck"
+      );
+
+
+    const sendMessage =
+      document.getElementById(
+        "sendMessage"
+      );
+
+
+    const formStatus =
+      document.getElementById(
+        "formStatus"
+      );
+
+
+    const messagesContainer =
+      document.getElementById(
+        "messagesContainer"
+      );
+
+
+    const messageCount =
+      document.getElementById(
+        "messageCount"
+      );
+
+
+
+    /* =======================================================
+       ESCAPE HTML
+    ======================================================= */
+
+    function escapeHTML(text) {
+
+      const div =
+        document.createElement("div");
+
+      div.textContent =
+        text ?? "";
+
+      return div.innerHTML;
+
+    }
+
+
+
+    /* =======================================================
+       FORMAT DATE
+    ======================================================= */
+
+    function formatDate(dateString) {
+
+      if (!dateString) {
+        return "";
+      }
+
+      const date =
+        new Date(dateString);
+
+      return date.toLocaleDateString(
+        "id-ID",
+        {
+          day: "numeric",
+          month: "long",
+          year: "numeric"
+        }
+      );
+
+    }
+
+
+
+    /* =======================================================
+       LOAD COMMENTS
+    ======================================================= */
+
+    async function loadMessages() {
+
+
+      messagesContainer.innerHTML = `
+
+        <div class="comments-loading">
+          Memuat komentar...
+        </div>
+
+      `;
+
+
+
+      const {
+        data,
+        error
+      } = await supabaseClient
+
+        .from("comments")
+
+        .select("*")
+
+        .eq(
+          "article",
+          ARTICLE_SLUG
+        )
+
+        .order(
+          "created_at",
+          {
+            ascending: false
+          }
+        );
+
+
+
+      if (error) {
+
+        console.error(
+          "Error loading comments:",
+          error
+        );
+
+
+        messagesContainer.innerHTML = `
+
+          <div class="comments-empty">
+            Belum ada pesan.
+          </div>
+
+        `;
+
+
+        messageCount.textContent =
+          "0 pesan";
+
+
+        return;
+
+      }
+
+
+
+      const comments =
+        data || [];
+
+
+
+      messageCount.textContent =
+        `${comments.length} pesan`;
+
+
+
+      if (comments.length === 0) {
+
+        messagesContainer.innerHTML = `
+
+          <div class="comments-empty">
+            Belum ada pesan.
+          </div>
+
+        `;
+
+        return;
+
+      }
+
+
+
+      messagesContainer.innerHTML =
+
+        comments
+
+          .map(comment => {
+
+
+            const anonymous =
+              comment.is_anonymous === true ||
+              comment.anonymous === true;
+
+
+
+            const name =
+              anonymous
+
+                ? "Anonim"
+
+                : (
+                    comment.sender_name ||
+                    comment.name ||
+                    "Pembaca"
+                  );
+
+
+
+            const message =
+              comment.message ||
+              comment.content ||
+              "";
+
+
+
+            return `
+
+              <article class="comment-box">
+
+
+                <div class="comment-message">
+
+                  ${escapeHTML(message)}
+
+                </div>
+
+
+                <div class="comment-footer">
+
+
+                  <span class="comment-author">
+
+                    ${escapeHTML(name)}
+
+                  </span>
+
+
+                  <span class="comment-date">
+
+                    ${formatDate(
+                      comment.created_at
+                    )}
+
+                  </span>
+
+
+                </div>
+
+
+              </article>
+
+            `;
+
+          })
+
+          .join("");
+
+    }
+
+
+
+    /* =======================================================
+       SUBMIT COMMENT
+    ======================================================= */
+
+    commentForm.addEventListener(
+
+      "submit",
+
+      async function(event) {
+
+
+        event.preventDefault();
+
+
+
+        const message =
+          messageText.value.trim();
+
+
+        const name =
+          senderName.value.trim();
+
+
+        const isAnonymous =
+          anonymousCheck.checked;
+
+
+
+        if (!message) {
+
+          formStatus.textContent =
+            "Tulis pesan terlebih dahulu.";
+
+          return;
+
+        }
+
+
+
+        sendMessage.disabled =
+          true;
+
+
+        sendMessage.textContent =
+          "Mengirim...";
+
+
+        formStatus.textContent =
+          "";
+
+
+
+        const {
+          error
+        } = await supabaseClient
+
+          .from("comments")
+
+          .insert({
+
+            article:
+              ARTICLE_SLUG,
+
+            name:
+              isAnonymous
+                ? null
+                : name,
+
+            message:
+              message,
+
+            is_anonymous:
+              isAnonymous
+
+          });
+
+
+
+        if (error) {
+
+          console.error(
+            "Error submitting comment:",
+            error
+          );
+
+
+          formStatus.textContent =
+            "Pesan belum berhasil dikirim. Coba lagi.";
+
+
+          sendMessage.disabled =
+            false;
+
+
+          sendMessage.textContent =
+            "Kirim pesan";
+
+
+          return;
+
+        }
+
+
+
+        /* SUCCESS */
+
+        messageText.value =
+          "";
+
+
+        senderName.value =
+          "";
+
+
+        anonymousCheck.checked =
+          false;
+
+
+        senderName.disabled =
+          false;
+
+
+        senderName.placeholder =
+          "Namamu (opsional)";
+
+
+        formStatus.textContent =
+          "Pesanmu sudah terkirim. Terima kasih 🤍";
+
+
+        sendMessage.disabled =
+          false;
+
+
+        sendMessage.textContent =
+          "Kirim pesan";
+
+
+        await loadMessages();
+
+      }
+
+    );
+
+
+
+    /* =======================================================
+       ANONYMOUS TOGGLE
+    ======================================================= */
+
+    anonymousCheck.addEventListener(
+
+      "change",
+
+      function() {
+
+
+        if (anonymousCheck.checked) {
+
+
+          senderName.disabled =
+            true;
+
+
+          senderName.value =
+            "";
+
+
+          senderName.placeholder =
+            "Akan dikirim sebagai anonim";
+
+
+        } else {
+
+
+          senderName.disabled =
+            false;
+
+
+          senderName.placeholder =
+            "Namamu (opsional)";
+
+        }
+
+      }
+
+    );
+
+
+
+    /* =======================================================
+       START
+    ======================================================= */
+
+    loadMessages();
+
+
+  </script>
+
+
+</body>
+
+</html>

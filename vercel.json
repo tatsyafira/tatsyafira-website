@@ -11,11 +11,17 @@
       "permanent": true
     },
     {
+      "source": "/artikel-rage.html",
+      "destination": "/rage",
+      "permanent": true
+    },
+    {
       "source": "/english-test.html",
       "destination": "/english-test",
       "permanent": true
     }
   ],
+
   "rewrites": [
     {
       "source": "/jatuh-suka",
@@ -26,9 +32,12 @@
       "destination": "/artikel-ad-maiora.html"
     },
     {
+      "source": "/rage",
+      "destination": "/artikel-rage.html"
+    },
+    {
       "source": "/english-test",
       "destination": "/english-test.html"
     }
   ]
-  
 }
