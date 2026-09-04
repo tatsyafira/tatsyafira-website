@@ -16,6 +16,11 @@
       "permanent": true
     },
     {
+      "source": "/artikel-cara-berpikirmu.html",
+      "destination": "/cara-berpikirmu",
+      "permanent": true
+    },
+    {
       "source": "/english-test.html",
       "destination": "/english-test",
       "permanent": true
@@ -34,6 +39,10 @@
     {
       "source": "/rage",
       "destination": "/artikel-rage.html"
+    },
+    {
+      "source": "/cara-berpikirmu",
+      "destination": "/artikel-cara-berpikirmu.html"
     },
     {
       "source": "/english-test",

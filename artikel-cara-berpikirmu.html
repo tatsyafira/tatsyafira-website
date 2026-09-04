@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Aku Ingin Duduk dan Mengagumi Cara Berpikirmu — tatsyafira</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #222222;
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .site-header {
+      width: 100%;
+      height: 72px;
+      background: #ffffff;
+      border-bottom: 1px solid #eeeeee;
+      position: relative;
+      z-index: 10;
+    }
+
+    .nav {
+      width: min(1200px, calc(100% - 64px));
+      height: 72px;
+      margin: 0 auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      width: 135px;
+      height: 42px;
+
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .logo img {
+      display: block;
+
+      width: 135px !important;
+      height: auto !important;
+
+      max-width: 135px !important;
+      max-height: 42px !important;
+
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+    }
+
+    .nav-links a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #333333;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.55;
+    }
+
+    .nav-links a.active {
+      font-weight: 600;
+    }
+
+
+    /* =========================
+       ARTICLE
+    ========================= */
+
+    .article {
+      width: min(1000px, calc(100% - 48px));
+      margin: 0 auto;
+
+      padding-top: 105px;
+      padding-bottom: 80px;
+    }
+
+    .article-category {
+      width: 760px;
+      max-width: 100%;
+
+      margin: 0 auto 22px;
+
+      font-size: 13px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+
+      color: #999999;
+    }
+
+    .article-title {
+      width: 760px;
+      max-width: 100%;
+
+      margin: 0 auto 48px;
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: clamp(42px, 6vw, 68px);
+      font-weight: 500;
+
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+
+      color: #1f1f1f;
+    }
+
+
+    /* =========================
+       HERO IMAGE
+    ========================= */
+
+    .article-hero {
+      width: 900px;
+      max-width: 100%;
+
+      margin: 0 auto 24px;
+    }
+
+    .article-hero-image {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      aspect-ratio: 3 / 1.72;
+
+      object-fit: cover;
+      object-position: center;
+
+      border-radius: 12px;
+    }
+
+
+    /* =========================
+       ARTICLE CONTENT
+    ========================= */
+
+    .article-content {
+      width: 680px;
+      max-width: 100%;
+
+      margin: 0 auto;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 20px;
+      line-height: 1.8;
+
+      color: #292929;
+    }
+
+    .article-content p {
+      margin-bottom: 32px;
+    }
+
+    .article-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .article-content strong {
+      font-weight: 600;
+    }
+
+    .article-content em {
+      font-style: italic;
+    }
+
+
+    /* =========================
+       COMMENTS
+    ========================= */
+
+    .comments-section {
+      width: min(1000px, calc(100% - 48px));
+
+      margin: 90px auto 120px;
+
+      padding-top: 70px;
+
+      border-top: 1px solid #eeeeee;
+    }
+
+    .comments-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+
+      margin-bottom: 38px;
+    }
+
+    .comments-title {
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 34px;
+      font-weight: 500;
+
+      color: #222222;
+    }
+
+    .comments-count {
+      font-size: 13px;
+      color: #999999;
+    }
+
+
+    /* =========================
+       COMMENT FORM
+    ========================= */
+
+    .comment-form {
+      background: #ffffff;
+
+      border: 1px solid #dedede;
+      border-radius: 8px;
+
+      padding: 34px;
+
+      margin-bottom: 55px;
+    }
+
+    .form-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 18px;
+
+      margin-bottom: 22px;
+    }
+
+    .form-group {
+      flex: 1;
+    }
+
+    .form-label {
+      display: block;
+
+      font-size: 13px;
+      font-weight: 600;
+
+      color: #555555;
+
+      margin-bottom: 9px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+
+      border: 1px solid #dddddd;
+      border-radius: 6px;
+
+      background: #ffffff;
+
+      padding: 13px 14px;
+
+      font-family: "DM Sans", sans-serif;
+      font-size: 14px;
+
+      color: #222222;
+
+      outline: none;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    input {
+      height: 48px;
+    }
+
+    textarea {
+      min-height: 145px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #999999;
+
+      box-shadow:
+        0 0 0 2px
+        rgba(0, 0, 0, 0.03);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #aaaaaa;
+    }
+
+    .anonymous-option {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+
+      height: 48px;
+
+      white-space: nowrap;
+
+      font-size: 13px;
+      color: #666666;
+    }
+
+    .anonymous-option input {
+      width: 17px;
+      height: 17px;
+
+      padding: 0;
+
+      accent-color: #222222;
+    }
+
+    .message-group {
+      margin-bottom: 22px;
+    }
+
+    .submit-button {
+      border: none;
+      border-radius: 6px;
+
+      background: #222222;
+      color: #ffffff;
+
+      padding: 12px 22px;
+
+      font-family: "DM Sans", sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+
+      cursor: pointer;
+
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .submit-button:hover {
+      background: #444444;
+    }
+
+    .submit-button:active {
+      transform: translateY(1px);
+    }
+
+    .submit-button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .form-status {
+      margin-top: 14px;
+
+      font-size: 13px;
+      color: #888888;
+    }
+
+
+    /* =========================
+       COMMENT CARDS
+    ========================= */
+
+    .comments-list {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 18px;
+    }
+
+    .comment-box {
+      background: #ffffff;
+
+      border: 1px solid #dedede;
+      border-radius: 10px;
+
+      min-height: 190px;
+
+      padding: 25px 26px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .comment-box:hover {
+      border-color: #cccccc;
+
+      box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.04);
+    }
+
+    .comment-message {
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 17px;
+      line-height: 1.7;
+
+      color: #333333;
+
+      margin-bottom: 28px;
+
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .comment-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 15px;
+
+      padding-top: 15px;
+
+      border-top: 1px solid #eeeeee;
+    }
+
+    .comment-author {
+      font-family: "DM Sans", sans-serif;
+
+      font-size: 12px;
+      font-weight: 600;
+
+      color: #555555;
+    }
+
+    .comment-date {
+      font-family: "DM Sans", sans-serif;
+
+      font-size: 11px;
+      color: #aaaaaa;
+    }
+
+    .comments-empty,
+    .comments-loading {
+      font-size: 14px;
+      color: #999999;
+
+      padding: 12px 0;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .site-footer {
+      border-top: 1px solid #eeeeee;
+
+      padding: 35px 24px;
+
+      text-align: center;
+
+      font-size: 13px;
+      color: #999999;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+      .site-header {
+        height: 64px;
+      }
+
+      .nav {
+        width: calc(100% - 32px);
+        height: 64px;
+      }
+
+      .logo {
+        width: 110px;
+        height: 36px;
+      }
+
+      .logo img {
+        width: 110px !important;
+        max-width: 110px !important;
+        max-height: 36px !important;
+      }
+
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .nav-links a:nth-child(4),
+      .nav-links a:nth-child(5) {
+        display: none;
+      }
+
+      .article {
+        width: calc(100% - 48px);
+
+        padding-top: 62px;
+        padding-bottom: 65px;
+      }
+
+      .article-category {
+        width: 100%;
+        margin-bottom: 24px;
+      }
+
+      .article-title {
+        width: 100%;
+
+        font-size: 43px;
+        line-height: 1.12;
+
+        letter-spacing: -1px;
+
+        margin-bottom: 38px;
+      }
+
+      .article-hero {
+        width: 100%;
+        margin-bottom: 17px;
+      }
+
+      .article-hero-image {
+        width: 100%;
+
+        aspect-ratio: 1.78 / 1;
+
+        border-radius: 14px;
+      }
+
+      .article-content {
+        width: 100%;
+
+        font-size: 18px;
+        line-height: 1.75;
+      }
+
+      .article-content p {
+        margin-bottom: 32px;
+      }
+
+      .comments-section {
+        width: calc(100% - 36px);
+
+        margin-top: 60px;
+        margin-bottom: 70px;
+
+        padding-top: 50px;
+      }
+
+      .comments-header {
+        margin-bottom: 28px;
+      }
+
+      .comments-title {
+        font-size: 28px;
+      }
+
+      .comment-form {
+        padding: 24px;
+        margin-bottom: 40px;
+      }
+
+      .form-row {
+        display: block;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .anonymous-option {
+        height: auto;
+      }
+
+      .comments-list {
+        grid-template-columns: 1fr;
+      }
+
+      .comment-box {
+        min-height: 170px;
+        padding: 22px;
+      }
+
+      .comment-message {
+        font-size: 16px;
+      }
+
+    }
+
+
+    @media (max-width: 390px) {
+
+      .article {
+        width: calc(100% - 36px);
+      }
+
+      .article-title {
+        font-size: 39px;
+      }
+
+      .article-content {
+        font-size: 17px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+
+    <nav class="nav">
+
+      <a href="index.html" class="logo">
+
+        <img
+          src="images/tatsyafira-logo.png"
+          alt="tatsyafira"
+        >
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a href="catatan.html" class="active">
+          Catatan
+        </a>
+
+        <a href="index.html">
+          Belajar
+        </a>
+
+        <a href="#">
+          Kelas
+        </a>
+
+        <a href="#">
+          Resources
+        </a>
+
+        <a href="#">
+          Toko
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- ARTICLE -->
+
+  <main>
+
+    <article class="article">
+
+
+      <div class="article-category">
+        Refleksi
+      </div>
+
+
+      <h1 class="article-title">
+        Aku Ingin Duduk dan Mengagumi Cara Berpikirmu
+      </h1>
+
+
+      <figure class="article-hero">
+
+        <img
+          src="images/cara-berpikirmu-cover.jpg"
+          alt="Aku Ingin Duduk dan Mengagumi Cara Berpikirmu"
+          class="article-hero-image"
+        >
+
+      </figure>
+
+
+
+      <div class="article-content">
+
+
+        <p>
+          Aku tidak tahu kapan tepatnya aku mulai menginginkan hal ini dari seseorang, tapi mereka bilang bahwa sepanjang kamu hidup bersama seseorang, indah parasnya mungkin akan memudar, status dan jabatan bisa berubah, pekerjaan bisa berganti, dan uang bisa datang maupun pergi. Pada akhirnya, setelah semua hal yang mungkin dulu membuat kalian tertarik satu sama lain perlahan berubah, kalian tetap akan menghabiskan kehidupan dengan duduk di tempat yang sama, menjalani hari-hari yang sama, dan mengobrol. Bertukar pikiran. Mendengarkan cerita yang mungkin sudah pernah kalian dengar sebelumnya. Membicarakan hal-hal besar dan kecil yang terjadi di kehidupan kalian. Entah kenapa, semakin dewasa, kalimat itu semakin masuk akal bagiku.
+        </p>
+
+
+        <p>
+          Kalau suatu hari nanti aku jatuh cinta lagi, aku tidak hanya ingin jatuh cinta pada wajahmu, caramu memperlakukanku, atau bagaimana perasaanku ketika sedang bersamamu. Aku ingin duduk dan mengagumi cara berpikirmu.
+        </p>
+
+
+        <p>
+          Aku ingin mendengarkanmu menjelaskan sesuatu yang mungkin belum pernah terpikirkan olehku sebelumnya, lalu diam-diam berpikir, <em>“Oh, I never thought about it that way.”</em> Aku ingin melihat bagaimana kamu mengambil keputusan, bagaimana kamu memperlakukan orang yang tidak bisa memberikan apa-apa untukmu, bagaimana kamu berbicara ketika sedang marah, bagaimana kamu menghadapi kegagalan, bagaimana kamu memandang uang, keluarga, pekerjaan, Tuhan, dan kehidupan. Karena mungkin setelah melewati begitu banyak hal dalam hidup, aku mulai menyadari bahwa yang sebenarnya membuat seseorang menarik bagiku bukan lagi sekadar, <em>“dia tipeku banget.”</em> Aku ingin tahu isi kepalanya. Aku ingin tahu bagaimana dia berpikir ketika tidak ada yang melihat.
+        </p>
+
+
+        <p>
+          Mungkin karena aku sendiri menghabiskan terlalu banyak waktu di dalam kepalaku. Aku terbiasa memikirkan banyak hal: masa depan, keputusan yang harus kuambil, keluarga, pekerjaan, pendidikan, mimpi-mimpi yang ingin kukejar, kota mana yang mungkin akan kutinggali selanjutnya, apa yang harus kulakukan setelah ini, dan bagaimana caranya membawa semua hal yang ingin kubangun menjadi sesuatu yang nyata. Kadang aku sendiri juga capek dengan isi kepalaku. Tapi mungkin itu juga alasan mengapa aku tidak bisa membayangkan hidup bersama seseorang yang membuatku berhenti bertanya. Aku ingin seseorang yang justru membuat pertanyaanku semakin banyak. Bukan karena dia akan membuat hidupku lebih rumit nantinya, tapi karena cara berpikirnya membuat duniaku terasa lebih luas.
+        </p>
+
+
+        <p>
+          Aku ingin bisa duduk bersamanya selama berjam-jam dan membicarakan sesuatu yang awalnya tidak penting, lalu entah bagaimana percakapan itu membawa kami ke pembahasan tentang kehidupan, manusia, ekonomi, pendidikan, keluarga, negara, agama, mimpi, atau kenapa manusia mengambil keputusan tertentu. Aku ingin pulang dari percakapan itu sambil berpikir, <em>“Tadi sebenarnya kita ngobrolin apa sih?”</em> tapi besoknya masih kepikiran. Mungkin itu yang kumaksud dengan mengagumi seseorang. Bukan mengagumi karena dia sempurna atau selalu benar, tapi mengagumi cara dia melihat dunia. Aku ingin menjadi orang yang masih bisa terkejut dengan pemikiranmu bahkan setelah bertahun-tahun mengenalmu. Aku ingin suatu hari nanti kita sedang makan malam, lalu kamu mengatakan sesuatu yang membuatku berhenti mengunyah sebentar dan berpikir, <em>“Hah? Kok aku nggak pernah kepikiran dari sisi itu ya?”</em> Menurutku, itu romantis sekali.
+        </p>
+
+
+        <p>
+          Aku sudah terlalu lama menjadi seseorang yang harus bisa mengurus banyak hal sendiri. Sejak kecil aku belajar bahwa hidup tidak selalu memberi kita kemewahan untuk sekadar menjadi anak-anak. Ada masa ketika aku harus memikirkan hal-hal yang sebenarnya terlalu besar untuk anak seusia itu. Ada kehilangan yang membuatku tumbuh lebih cepat dan ada tanggung jawab yang membuatku belajar berdiri bahkan ketika sebenarnya aku juga ingin ada seseorang yang memegang tanganku. Mungkin karena itu, sekarang aku tidak mencari seseorang untuk menyelamatkanku. Aku sudah tahu bagaimana caranya menyelamatkan diriku sendiri. Aku tidak membutuhkan seseorang untuk membuktikan bahwa aku bisa hidup. Aku sudah tahu aku bisa.
+        </p>
+
+
+        <p>
+          Tapi mungkin setelah selama ini menjadi orang yang selalu bisa, aku ingin menemukan seseorang yang membuatku berkata, <strong>“Ternyata aku tidak harus melakukan semuanya sendirian.”</strong>
+        </p>
+
+
+        <p>
+          Ada perbedaan antara membutuhkan seseorang karena kita tidak bisa hidup tanpanya, dan memilih seseorang karena hidup terasa lebih baik ketika kita berjalan bersamanya. Aku ingin yang kedua.
+        </p>
+
+
+        <p>
+          Aku ingin melihatmu mengejar sesuatu yang kamu percaya, bahkan kalau itu bukan sesuatu yang kupahami sejak awal. Aku ingin mendengar alasanmu, bertanya, dan berbeda pendapat. Aku ingin mungkin suatu hari kita berdebat tentang sesuatu di meja makan, lalu aku diam karena ternyata argumenmu masuk akal. Dan mungkin lima menit kemudian aku bilang, <em>“Okay, you actually have a point.”</em> Haha. Aku ingin hubungan yang membuatku tetap menjadi perempuan yang punya mimpi-mimpi besar, yang mungkin punya terlalu banyak ide dan kadang terlalu bersemangat menceritakan semuanya. Yang bisa tiba-tiba datang kepadamu dan berkata, <em>“Aku kepikiran sesuatu,”</em> dan kamu sudah tahu bahwa kemungkinan besar setelah itu hidup kita akan sedikit lebih ribet.
+        </p>
+
+
+        <p>
+          Tapi aku ingin kamu tetap mendengarkan.
+        </p>
+
+
+        <p>
+          Aku ingin seseorang yang ketika aku berkata, <em>“Aku ingin melakukan ini,”</em> tidak selalu langsung menjawab dengan, <em>“Emang bisa?”</em> Aku ingin seseorang yang mungkin akan melihatku dengan bingung terlebih dahulu, mempertanyakan idenya, bahkan menunjukkan semua risiko yang ada, lalu akhirnya duduk di sebelahku dan berkata, <em>“Oke. Let's figure it out.”</em> Karena mungkin selama ini aku terlalu sering harus berkata pada diriku sendiri, <em>“Oke, let's figure it out.”</em> Dan mungkin, suatu hari, aku ingin ada seseorang yang mengatakannya bersamaku.
+        </p>
+
+
+        <p>
+          Aku juga tidak ingin dicintai hanya karena aku terlihat kuat. Aku ingin dicintai bahkan ketika aku sedang tidak kuat. Aku ingin bisa berkata, <em>“Aku takut,”</em> tanpa merasa bahwa aku mengecewakanmu. Aku ingin bisa berkata, <em>“Aku tidak tahu,”</em> tanpa merasa harus langsung mencari jawabannya. Aku ingin mengalami hari yang buruk tanpa merasa harus tetap menjadi versi diriku yang paling menyenangkan. Aku ingin bisa pulang dan berkata, <em>“Hari ini berat sekali,”</em> tanpa harus menjelaskan kenapa aku masih sanggup menjalaninya. Karena mungkin setelah terlalu lama menjadi perempuan yang selalu terlihat bisa, aku ingin dicintai oleh seseorang yang juga bisa melihat ketika aku sebenarnya sedang tidak baik-baik saja.
+        </p>
+
+
+        <p>
+          Dan mungkin cara seseorang berpikir akan terlihat paling jelas bukan ketika dia sedang mencoba membuatmu jatuh cinta, tapi dari hal-hal kecil yang dia lakukan ketika tidak ada yang melihat. Bagaimana kamu memperlakukan orang yang tidak punya kuasa. Bagaimana kamu berbicara tentang orang yang tidak kamu sukai. Bagaimana kamu memperlakukan keluargamu ketika tidak ada orang lain yang melihat. Bagaimana kamu berbicara kepada pelayan restoran. Bagaimana kamu memperlakukan seseorang ketika kamu sebenarnya tidak membutuhkan apa pun darinya. Karena mungkin dari sana aku akan tahu siapa kamu sebenarnya. Bukan dari cara kamu memperlakukanku ketika sedang jatuh cinta, tapi dari cara kamu memperlakukan dunia ketika tidak ada alasan untuk berpura-pura baik.
+        </p>
+
+
+        <p>
+          Dan mungkin, di usia ini, itu yang membuat seseorang benar-benar menarik bagiku. Bukan seberapa banyak negara yang pernah dia kunjungi, bukan seberapa besar gajinya, bukan seberapa bagus pekerjaannya, dan bukan seberapa keren pencapaiannya. Aku ingin tahu apa yang dia lakukan dengan semua itu. Aku ingin seseorang yang punya kapasitas untuk berpikir lebih besar dari dirinya sendiri. Seseorang yang ketika melihat masalah tidak hanya bertanya, <em>“Apa yang bisa menguntungkanku?”</em>, tapi juga, <em>“Apa yang bisa kulakukan?”</em> Seseorang yang ketika memiliki lebih banyak kesempatan tidak hanya menggunakannya untuk dirinya sendiri.
+        </p>
+
+
+        <p>
+          Mungkin karena aku sendiri selalu punya mimpi yang lebih besar dari sekadar hidup untuk diriku sendiri, aku juga ingin seseorang yang memahami itu. Aku ingin kita bisa punya kehidupan yang nyaman, tapi bukan hanya untuk nyaman. Aku ingin kita bisa punya uang, tapi bukan hanya untuk membeli lebih banyak barang. Aku ingin kita punya pendidikan, tapi bukan hanya untuk menambah gelar di belakang nama. Aku ingin kita pergi ke banyak tempat, tapi bukan hanya untuk mengumpulkan paspor yang penuh cap. Aku ingin semua yang kita punya punya arti. Aku ingin suatu hari nanti melihat semua hal yang sudah kami bangun dan tahu bahwa keberadaan kami di dunia ini meninggalkan sesuatu, sekecil apa pun.
+        </p>
+
+
+        <p>
+          Mungkin itu juga yang membuatku tertarik pada orang-orang yang punya cara berpikir besar. Bukan berarti mereka harus punya mimpi untuk menjadi orang paling kaya, paling terkenal, atau paling berpengaruh. Tapi aku suka orang yang ketika berbicara tentang hidupnya, pikirannya tidak berhenti pada dirinya sendiri. Orang yang bisa bermimpi tentang sesuatu yang lebih besar daripada sekadar, <em>“Apa yang akan membuat hidupku nyaman?”</em> Karena mungkin setelah kita mendapatkan semua yang selama ini kita perjuangkan, pertanyaan berikutnya adalah: <strong>“Lalu, apa yang akan kita lakukan dengan semua yang sudah kita punya?”</strong> Dan menurutku, pertanyaan itu sangat menentukan siapa seseorang sebenarnya.
+        </p>
+
+
+        <p>
+          Mungkin suatu hari nanti, sambil duduk di sebuah kota yang bahkan hari ini belum kita tahu akan menjadi rumah kita, aku ingin melihatmu berbicara tentang sesuatu yang kamu cintai dan berpikir, <em>“Ya Allah, aku suka sekali cara orang ini berpikir.”</em> Mungkin kita tidak akan selalu setuju tentang banyak hal, tapi justru mungkin karena kita tidak selalu sepakat, kamu membuatku ingin berpikir lebih, membuatku mempertanyakan sesuatu, membuatku melihat sesuatu dari sisi lain, dan membuatku ingin belajar lebih banyak. Dan mungkin aku juga ingin melakukan hal yang sama untukmu.
+        </p>
+
+
+        <p>
+          Aku tidak ingin menjadi perempuan yang hanya kamu cintai. Aku ingin menjadi perempuan yang kamu hormati pikirannya. Yang pendapatnya kamu cari. Yang keberadaannya membuatmu berpikir lebih jauh. Yang ketika aku mengatakan sesuatu, kamu tidak selalu harus setuju, tapi kamu tetap mendengarkan karena kamu tahu pikiranku juga layak untuk dipertimbangkan. Karena menurutku, dicintai itu indah. Tapi ada sesuatu yang berbeda ketika kita merasa dihormati oleh seseorang yang kita cintai.
+        </p>
+
+
+        <p>
+          Aku ingin kita bisa bertumbuh bersama tanpa salah satu dari kita harus menjadi lebih kecil agar yang lain merasa lebih besar. Aku ingin kamu punya mimpimu sendiri dan aku ingin punya mimpiku sendiri. Lalu suatu hari, ketika salah satu dari kita sedang terlalu lelah untuk percaya pada mimpinya sendiri, yang lain bisa berkata, <em>“Aku masih percaya.”</em> Bukan untuk menggantikan perjuangannya, tapi untuk mengingatkannya bahwa dia tidak berjalan sendirian.
+        </p>
+
+
+        <p>
+          Karena akhirnya, aku tidak mencari seseorang yang hidupnya sudah selesai. Aku mencari seseorang yang masih ingin bertumbuh. Seseorang yang masih punya rasa ingin tahu, masih mau belajar, masih bisa berkata, <em>“Aku salah,”</em> dan masih bisa berubah pikiran ketika menemukan sesuatu yang lebih benar. Seseorang yang masih punya mimpi yang membuat matanya hidup dan berbinar-binar ketika menceritakannya. Seseorang yang masih bisa kagum, masih bisa bertanya, dan masih merasa bahwa dunia ini terlalu luas untuk merasa sudah mengetahui semuanya.
+        </p>
+
+
+        <p>
+          Mungkin aku ingin jatuh cinta kepada seseorang yang membuatku kagum bukan karena dia paling hebat di ruangan itu, tapi karena <strong>cara dia berpikir membuatku ingin menjadi manusia yang lebih baik.</strong>
+        </p>
+
+
+        <p>
+          Dan kalau suatu hari nanti aku menemukan orang itu, mungkin aku tidak akan buru-buru mengatakan, <em>“Aku mencintaimu.”</em> Mungkin aku hanya akan duduk di sebelahnya, mendengarkan, melihat bagaimana pikirannya bekerja, dan mendengar cerita-cerita yang mungkin tidak menarik bagi siapa pun selain dirinya, tapi entah kenapa aku ingin mendengarkan semuanya.
+        </p>
+
+
+        <p>
+          Lalu diam-diam tersenyum dan berpikir,
+        </p>
+
+
+        <p>
+          <strong>“Aku ingin duduk lebih lama di sini dan mengagumi cara berpikirmu.”</strong>
+        </p>
+
+
+        <p>
+          Karena setelah semua tempat yang pernah ingin kukunjungi, semua mimpi yang ingin kukejar, semua hal yang ingin kubangun, dan semua kehidupan yang ingin kualami, mungkin pada akhirnya aku tidak mencari seseorang untuk menjadi tujuan dari perjalananku. Aku hanya ingin menemukan seseorang yang ketika aku berjalan begitu jauh, aku bisa menoleh ke samping dan berpikir,
+        </p>
+
+
+        <p>
+          <strong>“Untungnya, aku bertemu kamu di perjalanan ini.”</strong>
+        </p>
+
+
+      </div>
+
+    </article>
+
+
+
+    <!-- COMMENTS -->
+
+    <section class="comments-section">
+
+      <div class="comments-header">
+
+        <h2 class="comments-title">
+          Pesan dari pembaca
+        </h2>
+
+        <span class="comments-count" id="messageCount">
+          0 pesan
+        </span>
+
+      </div>
+
+
+      <form
+        class="comment-form"
+        id="commentForm"
+      >
+
+        <div class="form-row">
+
+          <div class="form-group">
+
+            <label
+              class="form-label"
+              for="senderName"
+            >
+              From
+            </label>
+
+            <input
+              type="text"
+              id="senderName"
+              maxlength="80"
+              placeholder="Namamu (opsional)"
+            >
+
+          </div>
+
+
+          <label class="anonymous-option">
+
+            <input
+              type="checkbox"
+              id="anonymousCheck"
+            >
+
+            <span>
+              Kirim sebagai anonim
+            </span>
+
+          </label>
+
+        </div>
+
+
+        <div class="message-group">
+
+          <label
+            class="form-label"
+            for="messageText"
+          >
+            Pesan
+          </label>
+
+          <textarea
+            id="messageText"
+            maxlength="2000"
+            placeholder="Tulis sesuatu yang ingin kamu sampaikan..."
+            required
+          ></textarea>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="submit-button"
+          id="sendMessage"
+        >
+          Kirim pesan
+        </button>
+
+
+        <div
+          class="form-status"
+          id="formStatus"
+        ></div>
+
+      </form>
+
+
+      <div
+        class="comments-list"
+        id="messagesContainer"
+      >
+
+        <div class="comments-loading">
+          Memuat komentar...
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <footer class="site-footer">
+    © tatsyafira
+  </footer>
+
+
+
+  <!-- SUPABASE -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+  <script>
+
+    const SUPABASE_URL =
+      "https://gtaljywggqalmfqizjhj.supabase.co";
+
+
+    const SUPABASE_KEY =
+      "sb_publishable_Lvgk-7rPMaxhO7TAOdGp6Q_MWACHYtR";
+
+
+    const supabaseClient =
+      window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_KEY
+      );
+
+
+    /* ARTICLE IDENTIFIER */
+
+    const ARTICLE_SLUG =
+      "cara-berpikirmu";
+
+
+    /* ELEMENTS */
+
+    const commentForm =
+      document.getElementById("commentForm");
+
+
+    const senderName =
+      document.getElementById("senderName");
+
+
+    const messageText =
+      document.getElementById("messageText");
+
+
+    const anonymousCheck =
+      document.getElementById("anonymousCheck");
+
+
+    const sendMessage =
+      document.getElementById("sendMessage");
+
+
+    const formStatus =
+      document.getElementById("formStatus");
+
+
+    const messagesContainer =
+      document.getElementById("messagesContainer");
+
+
+    const messageCount =
+      document.getElementById("messageCount");
+
+
+    function escapeHTML(text) {
+
+      const div =
+        document.createElement("div");
+
+      div.textContent =
+        text ?? "";
+
+      return div.innerHTML;
+
+    }
+
+
+    function formatDate(dateString) {
+
+      if (!dateString) {
+        return "";
+      }
+
+      const date =
+        new Date(dateString);
+
+      return date.toLocaleDateString(
+        "id-ID",
+        {
+          day: "numeric",
+          month: "long",
+          year: "numeric"
+        }
+      );
+
+    }
+
+
+    /* LOAD COMMENTS */
+
+    async function loadMessages() {
+
+      messagesContainer.innerHTML = `
+        <div class="comments-loading">
+          Memuat komentar...
+        </div>
+      `;
+
+
+      const {
+        data,
+        error
+      } = await supabaseClient
+        .from("comments")
+        .select("*")
+        .eq("article", ARTICLE_SLUG)
+        .order(
+          "created_at",
+          {
+            ascending: false
+          }
+        );
+
+
+      if (error) {
+
+        console.error(
+          "Error loading comments:",
+          error
+        );
+
+        messagesContainer.innerHTML = `
+          <div class="comments-empty">
+            Belum ada pesan.
+          </div>
+        `;
+
+        messageCount.textContent =
+          "0 pesan";
+
+        return;
+
+      }
+
+
+      const comments =
+        data || [];
+
+
+      messageCount.textContent =
+        `${comments.length} pesan`;
+
+
+      if (comments.length === 0) {
+
+        messagesContainer.innerHTML = `
+          <div class="comments-empty">
+            Belum ada pesan.
+          </div>
+        `;
+
+        return;
+
+      }
+
+
+      messagesContainer.innerHTML =
+        comments
+          .map(comment => {
+
+            const anonymous =
+              comment.is_anonymous === true ||
+              comment.anonymous === true;
+
+
+            const name =
+              anonymous
+                ? "Anonim"
+                : (
+                    comment.sender_name ||
+                    comment.name ||
+                    "Pembaca"
+                  );
+
+
+            const message =
+              comment.message ||
+              comment.content ||
+              "";
+
+
+            return `
+
+              <article class="comment-box">
+
+                <div class="comment-message">
+                  ${escapeHTML(message)}
+                </div>
+
+                <div class="comment-footer">
+
+                  <span class="comment-author">
+                    ${escapeHTML(name)}
+                  </span>
+
+                  <span class="comment-date">
+                    ${formatDate(comment.created_at)}
+                  </span>
+
+                </div>
+
+              </article>
+
+            `;
+
+          })
+          .join("");
+
+    }
+
+
+    /* SUBMIT COMMENT */
+
+    commentForm.addEventListener(
+      "submit",
+      async function(event) {
+
+        event.preventDefault();
+
+
+        const message =
+          messageText.value.trim();
+
+
+        const name =
+          senderName.value.trim();
+
+
+        const isAnonymous =
+          anonymousCheck.checked;
+
+
+        if (!message) {
+
+          formStatus.textContent =
+            "Tulis pesan terlebih dahulu.";
+
+          return;
+
+        }
+
+
+        sendMessage.disabled =
+          true;
+
+
+        sendMessage.textContent =
+          "Mengirim...";
+
+
+        formStatus.textContent =
+          "";
+
+
+        const {
+          error
+        } = await supabaseClient
+          .from("comments")
+          .insert({
+
+            article:
+              ARTICLE_SLUG,
+
+            name:
+              isAnonymous
+                ? null
+                : name,
+
+            message:
+              message,
+
+            is_anonymous:
+              isAnonymous
+
+          });
+
+
+        if (error) {
+
+          console.error(
+            "Error submitting comment:",
+            error
+          );
+
+
+          formStatus.textContent =
+            "Pesan belum berhasil dikirim. Coba lagi.";
+
+
+          sendMessage.disabled =
+            false;
+
+
+          sendMessage.textContent =
+            "Kirim pesan";
+
+
+          return;
+
+        }
+
+
+        messageText.value =
+          "";
+
+
+        senderName.value =
+          "";
+
+
+        anonymousCheck.checked =
+          false;
+
+
+        senderName.disabled =
+          false;
+
+
+        senderName.placeholder =
+          "Namamu (opsional)";
+
+
+        formStatus.textContent =
+          "Pesanmu sudah terkirim. Terima kasih 🤍";
+
+
+        sendMessage.disabled =
+          false;
+
+
+        sendMessage.textContent =
+          "Kirim pesan";
+
+
+        await loadMessages();
+
+      }
+    );
+
+
+    /* ANONYMOUS TOGGLE */
+
+    anonymousCheck.addEventListener(
+      "change",
+      function() {
+
+        if (anonymousCheck.checked) {
+
+          senderName.disabled =
+            true;
+
+
+          senderName.value =
+            "";
+
+
+          senderName.placeholder =
+            "Akan dikirim sebagai anonim";
+
+        } else {
+
+          senderName.disabled =
+            false;
+
+
+          senderName.placeholder =
+            "Namamu (opsional)";
+
+        }
+
+      }
+    );
+
+
+    /* START */
+
+    loadMessages();
+
+  </script>
+
+
+</body>
+</html>
