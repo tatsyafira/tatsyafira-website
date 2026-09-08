@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="id">
 
 <head>
@@ -12,13 +11,13 @@
   >
 
   <title>
-    Untuk Jatuh Cinta dengan Ia yang Membaca — tatsyafira
+    Untuk Jatuh Cinta dengan Ia yang Membaca — Tatsyafira
   </title>
 
 
-  <!-- =======================================================
+  <!-- =====================================================
        FONTS
-  ======================================================== -->
+  ====================================================== -->
 
   <link
     rel="preconnect"
@@ -39,10 +38,9 @@
 
   <style>
 
-
-    /* =========================================================
+    /* =====================================================
        RESET
-    ========================================================= */
+    ====================================================== */
 
     * {
       box-sizing: border-box;
@@ -57,136 +55,213 @@
 
 
     body {
+
       background: #ffffff;
+
       color: #222222;
-      font-family: "DM Sans", sans-serif;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
       line-height: 1.7;
-    }
 
-
-    a {
-      color: inherit;
-      text-decoration: none;
     }
 
 
     img {
+
+      max-width: 100%;
+
       display: block;
+
+    }
+
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
     }
 
 
 
-    /* =========================================================
+    /* =====================================================
        HEADER
-    ========================================================= */
+       SAME STRUCTURE AS OTHER ARTICLES
+    ====================================================== */
 
     .site-header {
+
       width: 100%;
+
       height: 72px;
+
       background: #ffffff;
-      border-bottom: 1px solid #eeeeee;
+
+      border-bottom:
+        1px solid #eeeeee;
+
       position: relative;
-      z-index: 10;
+
+      z-index: 100;
+
     }
 
 
     .nav {
-      width: min(1200px, calc(100% - 64px));
+
+      width:
+        min(
+          1200px,
+          calc(100% - 64px)
+        );
+
       height: 72px;
+
       margin: 0 auto;
 
       display: flex;
+
       align-items: center;
-      justify-content: space-between;
+
+      justify-content:
+        space-between;
+
     }
 
 
+    /* LOGO */
+
     .logo {
+
       display: flex;
+
       align-items: center;
 
       width: 135px;
+
       height: 42px;
 
       flex-shrink: 0;
 
       overflow: hidden;
+
     }
 
 
     .logo img {
+
       display: block;
 
       width: 135px !important;
+
       height: auto !important;
 
       max-width: 135px !important;
+
       max-height: 42px !important;
 
       object-fit: contain;
-      object-position: left center;
+
+      object-position:
+        left center;
+
     }
 
 
+
+    /* NAVIGATION */
+
     .nav-links {
+
       display: flex;
+
       align-items: center;
+
       gap: 38px;
+
     }
 
 
     .nav-links a {
+
       font-size: 15px;
+
       font-weight: 500;
+
       color: #333333;
 
-      transition: opacity 0.2s ease;
+      transition:
+        opacity 0.2s ease;
+
     }
 
 
     .nav-links a:hover {
+
       opacity: 0.55;
+
     }
 
 
     .nav-links a.active {
+
       font-weight: 600;
+
     }
 
 
 
-    /* =========================================================
+    /* =====================================================
        ARTICLE
-    ========================================================= */
+    ====================================================== */
 
     .article {
-      width: min(1000px, calc(100% - 48px));
+
+      width:
+        min(
+          900px,
+          calc(100% - 48px)
+        );
+
       margin: 0 auto;
 
       padding-top: 105px;
-      padding-bottom: 80px;
+
+      padding-bottom: 40px;
+
     }
 
 
-    .article-category {
-      width: 760px;
-      max-width: 100%;
 
-      margin: 0 auto 22px;
+    /* =====================================================
+       CATEGORY
+    ====================================================== */
+
+    .article-category {
 
       font-size: 13px;
+
       letter-spacing: 2.5px;
+
       text-transform: uppercase;
 
       color: #999999;
+
+      margin-bottom: 22px;
+
     }
 
 
-    .article-title {
-      width: 760px;
-      max-width: 100%;
 
-      margin: 0 auto 48px;
+    /* =====================================================
+       TITLE
+    ====================================================== */
+
+    .article-title {
 
       font-family:
         "Playfair Display",
@@ -207,74 +282,117 @@
       letter-spacing: -1.5px;
 
       color: #1f1f1f;
+
+      max-width: 850px;
+
+      margin-bottom: 48px;
+
     }
 
 
 
-    /* =========================================================
-       HERO IMAGE
-    ========================================================= */
+    /* =====================================================
+       COVER IMAGE
+    ====================================================== */
 
-    .article-hero {
-      width: 900px;
-      max-width: 100%;
+    .cover-figure {
 
-      margin: 0 auto 20px;
+      margin-bottom: 22px;
+
     }
 
 
-    .article-hero-image {
-      display: block;
+    .cover-image {
 
       width: 100%;
+
+      border-radius: 14px;
+
+      overflow: hidden;
+
+      background: #f5f3f1;
+
+    }
+
+
+    .cover-image img {
+
+      width: 100%;
+
       height: auto;
 
       object-fit: contain;
 
-      border-radius: 12px;
     }
 
 
 
-    /* =========================================================
+    /* =====================================================
        SPOTIFY
-    ========================================================= */
+    ====================================================== */
 
     .spotify-section {
-      width: 680px;
-      max-width: 100%;
 
-      margin: 0 auto 55px;
+      width: 100%;
+
+      margin-bottom: 70px;
+
     }
 
 
     .spotify-player {
+
       width: 100%;
 
       overflow: hidden;
 
       border-radius: 12px;
+
     }
 
 
     .spotify-player iframe {
-      display: block;
 
       width: 100%;
+
       height: 152px;
 
       border: 0;
+
+      display: block;
+
+    }
+
+
+    .spotify-caption {
+
+      text-align: center;
+
+      margin-top: 14px;
+
+      font-size: 13px;
+
+      color: #999999;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
     }
 
 
 
-    /* =========================================================
+    /* =====================================================
        ARTICLE CONTENT
-    ========================================================= */
+    ====================================================== */
 
     .article-content {
-      width: 680px;
-      max-width: 100%;
+
+      width:
+        min(
+          760px,
+          100%
+        );
 
       margin: 0 auto;
 
@@ -284,89 +402,105 @@
         serif;
 
       font-size: 20px;
+
       line-height: 1.8;
 
       color: #292929;
+
     }
 
 
     .article-content p {
+
       margin-bottom: 32px;
+
     }
 
 
     .article-content p:last-child {
+
       margin-bottom: 0;
+
     }
 
 
     .article-content strong {
-      font-weight: 600;
+
+      font-weight: 700;
+
     }
 
 
     .article-content em {
+
       font-style: italic;
+
     }
 
+
+
+    /* =====================================================
+       OPENING PARAGRAPH
+    ====================================================== */
 
     .article-opening {
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-      font-size: 25px;
-
-      line-height: 1.5;
 
       font-style: italic;
 
-      text-align: center;
-
-      color: #222222;
-
-      margin-bottom: 42px;
     }
 
 
 
-    /* =========================================================
-       ARTICLE IMAGE
-    ========================================================= */
+    /* =====================================================
+       ARTICLE IMAGES
+    ====================================================== */
 
     .article-figure {
+
       width: 100%;
 
-      margin: 50px 0;
+      margin:
+        55px 0
+        14px;
+
     }
 
 
-    .article-inline-image {
+    .article-image {
+
       width: 100%;
 
       aspect-ratio: 4 / 3;
 
-      overflow: hidden;
+      background: #f5f3f1;
 
       border-radius: 10px;
 
-      background: #f5f5f5;
+      overflow: hidden;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
     }
 
 
-    .article-inline-image img {
+    .article-image img {
+
       width: 100%;
+
       height: 100%;
 
       object-fit: contain;
 
-      object-position: center;
     }
 
 
     .image-caption {
-      margin-top: 11px;
+
+      margin-top: 12px;
 
       font-family:
         "DM Sans",
@@ -379,15 +513,42 @@
       text-align: center;
 
       color: #999999;
+
     }
 
 
 
-    /* =========================================================
-       COMMENTS
-    ========================================================= */
+    /* =====================================================
+       QUOTE STYLE
+    ====================================================== */
+
+    .article-quote {
+
+      margin:
+        42px 0;
+
+      padding:
+        10px 0;
+
+    }
+
+
+    .article-quote p {
+
+      font-weight: 700;
+
+      margin-bottom: 0;
+
+    }
+
+
+
+    /* =====================================================
+       COMMENTS SECTION
+    ====================================================== */
 
     .comments-section {
+
       width:
         min(
           1000px,
@@ -402,23 +563,28 @@
 
       border-top:
         1px solid #eeeeee;
+
     }
 
 
     .comments-header {
+
       display: flex;
 
       align-items: baseline;
 
-      justify-content: space-between;
+      justify-content:
+        space-between;
 
       gap: 20px;
 
       margin-bottom: 38px;
+
     }
 
 
     .comments-title {
+
       font-family:
         "Playfair Display",
         Georgia,
@@ -429,22 +595,28 @@
       font-weight: 500;
 
       color: #222222;
+
     }
 
 
     .comments-count {
+
       font-size: 13px;
 
       color: #999999;
+
+      white-space: nowrap;
+
     }
 
 
 
-    /* =========================================================
+    /* =====================================================
        COMMENT FORM
-    ========================================================= */
+    ====================================================== */
 
     .comment-form {
+
       background: #ffffff;
 
       border:
@@ -455,10 +627,12 @@
       padding: 34px;
 
       margin-bottom: 55px;
+
     }
 
 
     .form-row {
+
       display: flex;
 
       align-items: flex-end;
@@ -466,15 +640,19 @@
       gap: 18px;
 
       margin-bottom: 22px;
+
     }
 
 
     .form-group {
+
       flex: 1;
+
     }
 
 
     .form-label {
+
       display: block;
 
       font-size: 13px;
@@ -484,11 +662,13 @@
       color: #555555;
 
       margin-bottom: 9px;
+
     }
 
 
     input,
     textarea {
+
       width: 100%;
 
       border:
@@ -498,9 +678,7 @@
 
       background: #ffffff;
 
-      padding:
-        13px
-        14px;
+      padding: 13px 14px;
 
       font-family:
         "DM Sans",
@@ -515,43 +693,51 @@
       transition:
         border-color 0.2s ease,
         box-shadow 0.2s ease;
+
     }
 
 
     input {
+
       height: 48px;
+
     }
 
 
     textarea {
+
       min-height: 145px;
 
       resize: vertical;
+
     }
 
 
     input:focus,
     textarea:focus {
+
       border-color: #999999;
 
       box-shadow:
         0 0 0 2px
-        rgba(
-          0,
-          0,
-          0,
-          0.03
-        );
+        rgba(0, 0, 0, 0.03);
+
     }
 
 
     input::placeholder,
     textarea::placeholder {
+
       color: #aaaaaa;
+
     }
 
 
+
+    /* ANONYMOUS */
+
     .anonymous-option {
+
       display: flex;
 
       align-items: center;
@@ -565,25 +751,38 @@
       font-size: 13px;
 
       color: #666666;
+
     }
 
 
     .anonymous-option input {
+
       width: 17px;
+
       height: 17px;
 
       padding: 0;
 
       accent-color: #222222;
+
     }
 
+
+
+    /* MESSAGE */
 
     .message-group {
+
       margin-bottom: 22px;
+
     }
 
 
+
+    /* BUTTON */
+
     .submit-button {
+
       border: none;
 
       border-radius: 6px;
@@ -593,8 +792,7 @@
       color: #ffffff;
 
       padding:
-        12px
-        22px;
+        12px 22px;
 
       font-family:
         "DM Sans",
@@ -609,58 +807,67 @@
       transition:
         background 0.2s ease,
         transform 0.2s ease;
+
     }
 
 
     .submit-button:hover {
+
       background: #444444;
+
     }
 
 
     .submit-button:active {
+
       transform:
         translateY(1px);
+
     }
 
 
     .submit-button:disabled {
+
       opacity: 0.5;
 
       cursor: not-allowed;
+
     }
 
 
     .form-status {
+
       margin-top: 14px;
 
       font-size: 13px;
 
       color: #888888;
+
     }
 
 
 
-    /* =========================================================
+    /* =====================================================
        COMMENT CARDS
-    ========================================================= */
+    ====================================================== */
 
     .comments-list {
+
       display: grid;
 
       grid-template-columns:
         repeat(
           2,
-          minmax(
-            0,
-            1fr
-          )
+          minmax(0, 1fr)
         );
 
       gap: 18px;
+
     }
 
 
     .comment-box {
+
       background: #ffffff;
 
       border:
@@ -671,36 +878,35 @@
       min-height: 190px;
 
       padding:
-        25px
-        26px;
+        25px 26px;
 
       display: flex;
 
       flex-direction: column;
 
-      justify-content: space-between;
+      justify-content:
+        space-between;
 
       transition:
         border-color 0.2s ease,
         box-shadow 0.2s ease;
+
     }
 
 
     .comment-box:hover {
+
       border-color: #cccccc;
 
       box-shadow:
         0 3px 12px
-        rgba(
-          0,
-          0,
-          0,
-          0.04
-        );
+        rgba(0, 0, 0, 0.04);
+
     }
 
 
     .comment-message {
+
       font-family:
         "Playfair Display",
         Georgia,
@@ -717,15 +923,18 @@
       white-space: pre-wrap;
 
       overflow-wrap: anywhere;
+
     }
 
 
     .comment-footer {
+
       display: flex;
 
       align-items: center;
 
-      justify-content: space-between;
+      justify-content:
+        space-between;
 
       gap: 15px;
 
@@ -733,10 +942,12 @@
 
       border-top:
         1px solid #eeeeee;
+
     }
 
 
     .comment-author {
+
       font-family:
         "DM Sans",
         sans-serif;
@@ -746,10 +957,12 @@
       font-weight: 600;
 
       color: #555555;
+
     }
 
 
     .comment-date {
+
       font-family:
         "DM Sans",
         sans-serif;
@@ -757,257 +970,257 @@
       font-size: 11px;
 
       color: #aaaaaa;
+
     }
 
 
     .comments-empty,
     .comments-loading {
+
       font-size: 14px;
 
       color: #999999;
 
       padding: 12px 0;
+
     }
 
 
 
-    /* =========================================================
+    /* =====================================================
        FOOTER
-    ========================================================= */
+    ====================================================== */
 
     .site-footer {
+
       border-top:
         1px solid #eeeeee;
 
       padding:
-        35px
-        24px;
+        35px 24px;
 
       text-align: center;
 
       font-size: 13px;
 
       color: #999999;
+
     }
 
 
 
-    /* =========================================================
+    /* =====================================================
        MOBILE
-    ========================================================= */
+    ====================================================== */
 
     @media (max-width: 700px) {
 
+
       .site-header {
+
         height: 64px;
+
       }
 
 
       .nav {
+
         width:
-          calc(
-            100% - 32px
-          );
+          calc(100% - 32px);
 
         height: 64px;
+
       }
 
 
       .logo {
+
         width: 110px;
+
         height: 36px;
+
       }
 
 
       .logo img {
+
         width: 110px !important;
 
         max-width: 110px !important;
 
         max-height: 36px !important;
+
       }
 
 
       .nav-links {
+
         gap: 16px;
+
       }
 
 
       .nav-links a {
+
         font-size: 12px;
+
       }
 
 
       .nav-links a:nth-child(4),
       .nav-links a:nth-child(5) {
+
         display: none;
+
       }
 
+
+      /* ARTICLE */
 
       .article {
+
         width:
-          calc(
-            100% - 48px
-          );
+          calc(100% - 36px);
 
-        max-width: 100%;
+        padding-top: 65px;
 
-        padding-top: 62px;
+        padding-bottom: 40px;
 
-        padding-bottom: 65px;
-      }
-
-
-      .article-category {
-        width: 100%;
-
-        margin-bottom: 24px;
-
-        font-size: 13px;
-
-        letter-spacing: 2px;
       }
 
 
       .article-title {
-        width: 100%;
 
-        max-width: 100%;
-
-        font-size: 43px;
-
-        line-height: 1.12;
+        font-size: 42px;
 
         letter-spacing: -1px;
 
-        margin-bottom: 38px;
-      }
+        margin-bottom: 40px;
 
-
-      .article-hero {
-        width: 100%;
-
-        max-width: 100%;
-
-        margin:
-          0 auto
-          17px;
       }
 
 
       .article-content {
-        width: 100%;
 
-        max-width: 100%;
+        font-size: 17px;
 
-        margin: 0 auto;
+        line-height: 1.9;
 
-        font-size: 18px;
-
-        line-height: 1.75;
       }
 
 
       .article-content p {
-        margin-bottom: 32px;
+
+        margin-bottom: 30px;
+
       }
 
 
       .spotify-section {
-        width: 100%;
 
-        margin-bottom: 45px;
+        margin-bottom: 55px;
+
       }
 
 
+      .spotify-player iframe {
+
+        height: 152px;
+
+      }
+
+
+      .article-figure {
+
+        margin-top: 45px;
+
+      }
+
+
+      /* COMMENTS */
+
       .comments-section {
+
         width:
-          calc(
-            100% - 36px
-          );
+          calc(100% - 36px);
 
         margin-top: 60px;
 
         margin-bottom: 70px;
 
         padding-top: 50px;
+
       }
 
 
       .comments-header {
+
         margin-bottom: 28px;
+
       }
 
 
       .comments-title {
+
         font-size: 28px;
+
       }
 
 
       .comment-form {
+
         padding: 24px;
 
         margin-bottom: 40px;
+
       }
 
 
       .form-row {
+
         display: block;
+
       }
 
 
       .form-group {
+
         margin-bottom: 20px;
+
       }
 
 
       .anonymous-option {
+
         height: auto;
+
       }
 
 
       .comments-list {
+
         grid-template-columns: 1fr;
+
       }
 
 
       .comment-box {
+
         min-height: 170px;
 
         padding: 22px;
+
       }
 
 
       .comment-message {
+
         font-size: 16px;
+
       }
+
 
     }
-
-
-    @media (max-width: 390px) {
-
-      .article {
-        width:
-          calc(
-            100% - 36px
-          );
-      }
-
-
-      .article-title {
-        font-size: 39px;
-      }
-
-
-      .article-content {
-        font-size: 17px;
-
-        line-height: 1.75;
-      }
-
-    }
-
 
   </style>
 
@@ -1019,9 +1232,9 @@
 
 
 
-  <!-- =======================================================
+  <!-- =====================================================
        HEADER
-  ======================================================== -->
+  ====================================================== -->
 
   <header class="site-header">
 
@@ -1043,7 +1256,6 @@
 
 
       <div class="nav-links">
-
 
         <a
           href="catatan.html"
@@ -1072,7 +1284,6 @@
           Toko
         </a>
 
-
       </div>
 
 
@@ -1082,53 +1293,66 @@
 
 
 
-  <!-- =======================================================
+  <!-- =====================================================
        ARTICLE
-  ======================================================== -->
+  ====================================================== -->
 
   <main>
 
 
-    <article class="article ia-yang-membaca-article">
+    <article class="article">
 
 
       <div class="article-category">
-        Refleksi
+
+        Catatan
+
       </div>
 
 
 
       <h1 class="article-title">
+
         Untuk Jatuh Cinta dengan Ia yang Membaca
+
       </h1>
 
 
 
-      <!-- COVER IMAGE -->
+      <!-- =================================================
+           COVER IMAGE
+      ================================================== -->
 
-      <figure class="article-hero">
+      <figure class="cover-figure">
 
-        <img
-          src="images/ia-yang-membaca-cover.jpg"
-          alt="Untuk Jatuh Cinta dengan Ia yang Membaca"
-          class="article-hero-image"
-        >
+        <div class="cover-image">
+
+          <img
+            src="images/ia-yang-membaca-cover.jpg"
+            alt="Untuk Jatuh Cinta dengan Ia yang Membaca"
+          >
+
+        </div>
 
       </figure>
 
 
 
-      <!-- SPOTIFY -->
+      <!-- =================================================
+           SPOTIFY
+      ================================================== -->
 
       <section class="spotify-section">
 
         <div class="spotify-player">
 
           <iframe
-            src="https://open.spotify.com/embed/track/5JESuE80fvausWHjcT9QVh?utm_source=generator#t=127"
+            data-testid="embed-iframe"
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/5JESuE80fvausWHjcT9QVh?utm_source=generator"
             width="100%"
             height="152"
-            frameborder="0"
+            frameBorder="0"
             allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
@@ -1136,18 +1360,23 @@
 
         </div>
 
+
+        <div class="spotify-caption">
+
+          Dengarkan sambil membaca.
+
+        </div>
+
       </section>
 
 
 
-      <!-- ===================================================
+      <!-- =================================================
            ARTICLE CONTENT
-      ==================================================== -->
+      ================================================== -->
 
       <div class="article-content">
 
-
-        <!-- PARAGRAPH 1 -->
 
         <p class="article-opening">
 
@@ -1226,11 +1455,15 @@
         </p>
 
 
-        <p>
+        <div class="article-quote">
 
-          <strong>“Ya... pemerintahan saat ini memang tidak kompeten.”</strong>
+          <p>
 
-        </p>
+            “Ya... pemerintahan saat ini memang tidak kompeten.”
+
+          </p>
+
+        </div>
 
 
         <p>
@@ -1269,18 +1502,27 @@
 
 
 
-        <!-- IMAGE 1 -->
+        <!-- ===============================================
+             IMAGE 1
+        ================================================ -->
 
         <figure class="article-figure">
 
-          <div class="article-inline-image">
+          <div class="article-image">
 
             <img
               src="images/ia-yang-membaca-1.jpg"
-              alt="Ia yang Membaca"
+              alt="Dalam perjalan ke Trondheim, Norwegia"
             >
 
           </div>
+
+
+          <figcaption class="image-caption">
+
+            Dalam perjalan ke Trondheim, Norwegia.
+
+          </figcaption>
 
         </figure>
 
@@ -1308,18 +1550,27 @@
 
 
 
-        <!-- IMAGE 2 -->
+        <!-- ===============================================
+             IMAGE 2
+        ================================================ -->
 
         <figure class="article-figure">
 
-          <div class="article-inline-image">
+          <div class="article-image">
 
             <img
               src="images/ia-yang-membaca-2.jpg"
-              alt="Coby dan Jaap"
+              alt="Coby dan Jaap dalam perjalanan bersama"
             >
 
           </div>
+
+
+          <figcaption class="image-caption">
+
+            Salah satu potongan perjalanan bersama Coby dan Jaap.
+
+          </figcaption>
 
         </figure>
 
@@ -1346,11 +1597,15 @@
         </p>
 
 
-        <p>
+        <div class="article-quote">
 
-          <strong><em>I see my future there.</em></strong>
+          <p>
 
-        </p>
+            <em>I see my future there.</em>
+
+          </p>
+
+        </div>
 
 
         <p>
@@ -1381,11 +1636,15 @@
         </p>
 
 
-        <p>
+        <div class="article-quote">
 
-          <strong>“Aku baru baca sesuatu yang menarik.”</strong>
+          <p>
 
-        </p>
+            “Aku baru baca sesuatu yang menarik.”
+
+          </p>
+
+        </div>
 
 
         <p>
@@ -1395,11 +1654,15 @@
         </p>
 
 
-        <p>
+        <div class="article-quote">
 
-          <strong>“Ceritain.”</strong>
+          <p>
 
-        </p>
+            “Ceritain.”
+
+          </p>
+
+        </div>
 
 
         <p>
@@ -1493,11 +1756,15 @@
         </p>
 
 
-        <p>
+        <div class="article-quote">
 
-          <strong>“Aku belum tahu. Ceritakan lebih banyak.”</strong>
+          <p>
 
-        </p>
+            “Aku belum tahu. Ceritakan lebih banyak.”
+
+          </p>
+
+        </div>
 
 
         <p>
@@ -1556,11 +1823,15 @@
         </p>
 
 
-        <p>
+        <div class="article-quote">
 
-          <strong>“Aku baru baca sesuatu yang menarik.”</strong>
+          <p>
 
-        </p>
+            “Aku baru baca sesuatu yang menarik.”
+
+          </p>
+
+        </div>
 
 
         <p>
@@ -1570,11 +1841,15 @@
         </p>
 
 
-        <p>
+        <div class="article-quote">
 
-          <strong>“Ceritain.”</strong>
+          <p>
 
-        </p>
+            “Ceritain.”
+
+          </p>
+
+        </div>
 
 
         <p>
@@ -1640,11 +1915,15 @@
         </p>
 
 
-        <p>
+        <div class="article-quote">
 
-          <strong>“Aku baru baca sesuatu yang menarik.”</strong>
+          <p>
 
-        </p>
+            “Aku baru baca sesuatu yang menarik.”
+
+          </p>
+
+        </div>
 
 
         <p>
@@ -1670,9 +1949,10 @@
 
       <div class="comments-header">
 
-
         <h2 class="comments-title">
+
           Pesan dari pembaca
+
         </h2>
 
 
@@ -1683,10 +1963,11 @@
           0 pesan
         </span>
 
-
       </div>
 
 
+
+      <!-- FORM -->
 
       <form
         class="comment-form"
@@ -1698,7 +1979,6 @@
 
 
           <div class="form-group">
-
 
             <label
               class="form-label"
@@ -1715,24 +1995,22 @@
               placeholder="Namamu (opsional)"
             >
 
-
           </div>
 
 
 
           <label class="anonymous-option">
 
-
             <input
               type="checkbox"
               id="anonymousCheck"
             >
 
-
             <span>
-              Kirim sebagai anonim
-            </span>
 
+              Kirim sebagai anonim
+
+            </span>
 
           </label>
 
@@ -1742,7 +2020,6 @@
 
 
         <div class="message-group">
-
 
           <label
             class="form-label"
@@ -1759,7 +2036,6 @@
             required
           ></textarea>
 
-
         </div>
 
 
@@ -1769,7 +2045,9 @@
           class="submit-button"
           id="sendMessage"
         >
+
           Kirim pesan
+
         </button>
 
 
@@ -1784,13 +2062,17 @@
 
 
 
+      <!-- COMMENTS -->
+
       <div
         class="comments-list"
         id="messagesContainer"
       >
 
         <div class="comments-loading">
-          Memuat komentar...
+
+          Memuat pesan...
+
         </div>
 
       </div>
@@ -1803,21 +2085,21 @@
 
 
 
-  <!-- =======================================================
+  <!-- =====================================================
        FOOTER
-  ======================================================== -->
+  ====================================================== -->
 
   <footer class="site-footer">
 
-    © tatsyafira
+    © Tatsyafira
 
   </footer>
 
 
 
-  <!-- =======================================================
+  <!-- =====================================================
        SUPABASE
-  ======================================================== -->
+  ====================================================== -->
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
@@ -1826,9 +2108,9 @@
   <script>
 
 
-    /* =======================================================
+    /* =====================================================
        SUPABASE CONNECTION
-    ======================================================== */
+    ====================================================== */
 
     const SUPABASE_URL =
       "https://gtaljywggqalmfqizjhj.supabase.co";
@@ -1846,25 +2128,18 @@
 
 
 
-    /* =======================================================
+    /* =====================================================
        ARTICLE IDENTIFIER
+    ====================================================== */
 
-       IMPORTANT:
-       This is ONLY a text identifier.
-
-       We DO NOT look up an article in another table.
-       We DO NOT use article_id.
-       We DO NOT query an articles table.
-    ======================================================== */
-
-    const ARTICLE =
+    const ARTICLE_SLUG =
       "ia-yang-membaca";
 
 
 
-    /* =======================================================
+    /* =====================================================
        ELEMENTS
-    ======================================================== */
+    ====================================================== */
 
     const commentForm =
       document.getElementById(
@@ -1915,20 +2190,18 @@
 
 
 
-    /* =======================================================
+    /* =====================================================
        ESCAPE HTML
-    ======================================================== */
+    ====================================================== */
 
-    function escapeHTML(text) {
+    function escapeHTML(value) {
 
       const div =
-        document.createElement(
-          "div"
-        );
+        document.createElement("div");
 
 
       div.textContent =
-        text ?? "";
+        value || "";
 
 
       return div.innerHTML;
@@ -1937,60 +2210,67 @@
 
 
 
-    /* =======================================================
+    /* =====================================================
        FORMAT DATE
-    ======================================================== */
+    ====================================================== */
 
     function formatDate(dateString) {
 
       if (!dateString) {
+
         return "";
+
       }
 
-
       const date =
-        new Date(
-          dateString
-        );
 
+        new Date(dateString);
 
       return date.toLocaleDateString(
+
         "id-ID",
+
         {
+
           day: "numeric",
+
           month: "long",
+
           year: "numeric"
-        }
-      );
+
+          }
+        );
 
     }
 
 
 
     /* =======================================================
+
        LOAD COMMENTS
 
-       DATABASE COLUMN:
-       article
-
-       NOT:
-       article_slug
-       article_id
-    ======================================================== */
+    ======================================================= */
 
     async function loadMessages() {
 
-
       messagesContainer.innerHTML = `
+
         <div class="comments-loading">
+
           Memuat komentar...
+
         </div>
+
       `;
 
 
+
       const {
+
         data,
+
         error
+
       } = await supabaseClient
 
         .from("comments")
@@ -1998,157 +2278,174 @@
         .select("*")
 
         .eq(
+
           "article",
-          ARTICLE
+
+          ARTICLE_SLUG
+
         )
 
         .order(
+
           "created_at",
+
           {
+
             ascending: false
+
           }
+
         );
+
 
 
       if (error) {
 
-
         console.error(
-          "LOAD COMMENTS ERROR:",
+
+          "Error loading comments:",
+
           error
+
         );
 
-
         messagesContainer.innerHTML = `
+
           <div class="comments-empty">
+
             Belum ada pesan.
+
           </div>
+
         `;
 
-
         messageCount.textContent =
-          "0 pesan";
 
+          "0 pesan";
 
         return;
 
       }
+
 
 
       const comments =
+
         data || [];
 
 
+
       messageCount.textContent =
+
         `${comments.length} pesan`;
 
 
-      if (
-        comments.length === 0
-      ) {
 
+      if (comments.length === 0) {
 
         messagesContainer.innerHTML = `
-          <div class="comments-empty">
-            Belum ada pesan. Jadilah yang pertama meninggalkan pesan 🤍
-          </div>
-        `;
 
+          <div class="comments-empty">
+
+            Belum ada pesan.
+
+          </div>
+
+        `;
 
         return;
 
       }
 
 
+
       messagesContainer.innerHTML =
+
         comments
-          .map(
-            function(comment) {
+
+          .map(comment => {
+
+            const anonymous =
+
+              comment.is_anonymous === true ||
+
+              comment.anonymous === true;
 
 
-              const isAnonymous =
-                comment.is_anonymous === true;
+
+            const name =
+
+              anonymous
+
+                ? "Anonim"
+
+                : (
+
+                    comment.sender_name ||
+
+                    comment.name ||
+
+                    "Pembaca"
+
+                  );
 
 
-              const displayName =
-                isAnonymous
-                  ? "Anonim"
-                  : (
-                      comment.name ||
-                      "Pembaca"
-                    );
+
+            const message =
+
+              comment.message ||
+
+              comment.content ||
+
+              "";
 
 
-              const displayMessage =
-                comment.message ||
-                "";
 
+            return `
 
-              return `
+              <article class="comment-box">
 
-                <article class="comment-box">
+                <div class="comment-message">
 
+                  ${escapeHTML(message)}
 
-                  <div class="comment-message">
+                </div>
 
-                    ${escapeHTML(
-                      displayMessage
+                <div class="comment-footer">
+
+                  <span class="comment-author">
+
+                    ${escapeHTML(name)}
+
+                  </span>
+
+                  <span class="comment-date">
+
+                    ${formatDate(
+
+                      comment.created_at
+
                     )}
 
-                  </div>
+                  </span>
 
+                </div>
 
-                  <div class="comment-footer">
+              </article>
 
+            `;
 
-                    <span class="comment-author">
-
-                      ${escapeHTML(
-                        displayName
-                      )}
-
-                    </span>
-
-
-                    <span class="comment-date">
-
-                      ${formatDate(
-                        comment.created_at
-                      )}
-
-                    </span>
-
-
-                  </div>
-
-
-                </article>
-
-              `;
-
-
-            }
-          )
+          })
 
           .join("");
 
-
     }
 
+ /* =======================================================
 
-
-    /* =======================================================
        SUBMIT COMMENT
 
-       INSERT DIRECTLY TO:
-
-       comments.article
-       comments.name
-       comments.message
-       comments.is_anonymous
-
-       NO ARTICLE LOOKUP.
-    ======================================================== */
+    ======================================================= */
 
     commentForm.addEventListener(
 
@@ -2156,48 +2453,52 @@
 
       async function(event) {
 
-
         event.preventDefault();
 
 
+
         const message =
+
           messageText.value.trim();
 
-
         const name =
+
           senderName.value.trim();
 
-
         const isAnonymous =
+
           anonymousCheck.checked;
+
 
 
         if (!message) {
 
-
           formStatus.textContent =
-            "Tulis pesan terlebih dahulu.";
 
+            "Tulis pesan terlebih dahulu.";
 
           return;
 
         }
 
 
-        sendMessage.disabled =
-          true;
 
+        sendMessage.disabled = true;
 
         sendMessage.textContent =
+
           "Mengirim...";
 
-
         formStatus.textContent =
+
           "";
 
 
+
         const {
+
           error
+
         } = await supabaseClient
 
           .from("comments")
@@ -2205,88 +2506,86 @@
           .insert({
 
             article:
-              ARTICLE,
 
+              ARTICLE_SLUG,
 
             name:
-              isAnonymous
-                ? null
-                : (
-                    name ||
-                    null
-                  ),
 
+              isAnonymous
+
+                ? null
+
+                : name,
 
             message:
+
               message,
 
-
             is_anonymous:
+
               isAnonymous
 
           });
 
 
+
         if (error) {
 
-
           console.error(
-            "INSERT COMMENT ERROR:",
+
+            "Error submitting comment:",
+
             error
+
           );
 
-
           formStatus.textContent =
-            "Pesan belum berhasil dikirim. Coba lagi ya.";
 
+            "Pesan belum berhasil dikirim. Coba lagi.";
 
-          sendMessage.disabled =
-            false;
-
+          sendMessage.disabled = false;
 
           sendMessage.textContent =
-            "Kirim pesan";
 
+            "Kirim pesan";
 
           return;
 
         }
 
 
-        messageText.value =
-          "";
 
+        /* SUCCESS */
 
-        senderName.value =
-          "";
+        messageText.value = "";
 
+        senderName.value = "";
 
-        anonymousCheck.checked =
-          false;
+        anonymousCheck.checked = false;
 
-
-        senderName.disabled =
-          false;
-
+        senderName.disabled = false;
 
         senderName.placeholder =
+
           "Namamu (opsional)";
 
 
+
         formStatus.textContent =
+
           "Pesanmu sudah terkirim. Terima kasih 🤍";
 
 
-        sendMessage.disabled =
-          false;
 
+        sendMessage.disabled = false;
 
         sendMessage.textContent =
+
           "Kirim pesan";
 
 
-        await loadMessages();
 
+        await loadMessages();
 
       }
 
@@ -2295,8 +2594,10 @@
 
 
     /* =======================================================
+
        ANONYMOUS TOGGLE
-    ======================================================== */
+
+    ======================================================= */
 
     anonymousCheck.addEventListener(
 
@@ -2304,37 +2605,25 @@
 
       function() {
 
+        if (anonymousCheck.checked) {
 
-        if (
-          anonymousCheck.checked
-        ) {
+          senderName.disabled = true;
 
-
-          senderName.disabled =
-            true;
-
-
-          senderName.value =
-            "";
-
+          senderName.value = "";
 
           senderName.placeholder =
-            "Akan dikirim sebagai anonim";
 
+            "Akan dikirim sebagai anonim";
 
         } else {
 
-
-          senderName.disabled =
-            false;
-
+          senderName.disabled = false;
 
           senderName.placeholder =
+
             "Namamu (opsional)";
 
-
         }
-
 
       }
 
@@ -2343,13 +2632,15 @@
 
 
     /* =======================================================
-       INITIAL LOAD
-    ======================================================== */
+
+       START
+
+    ======================================================= */
 
     loadMessages();
 
-
   </script>
+
 
 
 </body>
