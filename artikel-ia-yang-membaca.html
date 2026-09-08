@@ -1,0 +1,2615 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Untuk Jatuh Cinta dengan Ia yang Membaca — Tatsyafira
+  </title>
+
+
+  <!-- =====================================================
+       FONTS
+  ====================================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <style>
+
+    /* =====================================================
+       RESET
+    ====================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      background: #ffffff;
+
+      color: #222222;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      line-height: 1.7;
+
+    }
+
+
+    img {
+
+      max-width: 100%;
+
+      display: block;
+
+    }
+
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+
+
+    /* =====================================================
+       HEADER
+       SAME STRUCTURE AS OTHER ARTICLES
+    ====================================================== */
+
+    .site-header {
+
+      width: 100%;
+
+      height: 72px;
+
+      background: #ffffff;
+
+      border-bottom:
+        1px solid #eeeeee;
+
+      position: relative;
+
+      z-index: 100;
+
+    }
+
+
+    .nav {
+
+      width:
+        min(
+          1200px,
+          calc(100% - 64px)
+        );
+
+      height: 72px;
+
+      margin: 0 auto;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content:
+        space-between;
+
+    }
+
+
+    /* LOGO */
+
+    .logo {
+
+      display: flex;
+
+      align-items: center;
+
+      width: 135px;
+
+      height: 42px;
+
+      flex-shrink: 0;
+
+      overflow: hidden;
+
+    }
+
+
+    .logo img {
+
+      display: block;
+
+      width: 135px !important;
+
+      height: auto !important;
+
+      max-width: 135px !important;
+
+      max-height: 42px !important;
+
+      object-fit: contain;
+
+      object-position:
+        left center;
+
+    }
+
+
+
+    /* NAVIGATION */
+
+    .nav-links {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 38px;
+
+    }
+
+
+    .nav-links a {
+
+      font-size: 15px;
+
+      font-weight: 500;
+
+      color: #333333;
+
+      transition:
+        opacity 0.2s ease;
+
+    }
+
+
+    .nav-links a:hover {
+
+      opacity: 0.55;
+
+    }
+
+
+    .nav-links a.active {
+
+      font-weight: 600;
+
+    }
+
+
+
+    /* =====================================================
+       ARTICLE
+    ====================================================== */
+
+    .article {
+
+      width:
+        min(
+          900px,
+          calc(100% - 48px)
+        );
+
+      margin: 0 auto;
+
+      padding-top: 105px;
+
+      padding-bottom: 40px;
+
+    }
+
+
+
+    /* =====================================================
+       CATEGORY
+    ====================================================== */
+
+    .article-category {
+
+      font-size: 13px;
+
+      letter-spacing: 2.5px;
+
+      text-transform: uppercase;
+
+      color: #999999;
+
+      margin-bottom: 22px;
+
+    }
+
+
+
+    /* =====================================================
+       TITLE
+    ====================================================== */
+
+    .article-title {
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          42px,
+          6vw,
+          68px
+        );
+
+      font-weight: 500;
+
+      line-height: 1.08;
+
+      letter-spacing: -1.5px;
+
+      color: #1f1f1f;
+
+      max-width: 850px;
+
+      margin-bottom: 48px;
+
+    }
+
+
+
+    /* =====================================================
+       COVER IMAGE
+    ====================================================== */
+
+    .cover-figure {
+
+      margin-bottom: 22px;
+
+    }
+
+
+    .cover-image {
+
+      width: 100%;
+
+      border-radius: 14px;
+
+      overflow: hidden;
+
+      background: #f5f3f1;
+
+    }
+
+
+    .cover-image img {
+
+      width: 100%;
+
+      height: auto;
+
+      object-fit: contain;
+
+    }
+
+
+
+    /* =====================================================
+       SPOTIFY
+    ====================================================== */
+
+    .spotify-section {
+
+      width: 100%;
+
+      margin-bottom: 70px;
+
+    }
+
+
+    .spotify-player {
+
+      width: 100%;
+
+      overflow: hidden;
+
+      border-radius: 12px;
+
+    }
+
+
+    .spotify-player iframe {
+
+      width: 100%;
+
+      height: 152px;
+
+      border: 0;
+
+      display: block;
+
+    }
+
+
+    .spotify-caption {
+
+      text-align: center;
+
+      margin-top: 14px;
+
+      font-size: 13px;
+
+      color: #999999;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+    }
+
+
+
+    /* =====================================================
+       ARTICLE CONTENT
+    ====================================================== */
+
+    .article-content {
+
+      width:
+        min(
+          760px,
+          100%
+        );
+
+      margin: 0 auto;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 20px;
+
+      line-height: 1.8;
+
+      color: #292929;
+
+    }
+
+
+    .article-content p {
+
+      margin-bottom: 32px;
+
+    }
+
+
+    .article-content p:last-child {
+
+      margin-bottom: 0;
+
+    }
+
+
+    .article-content strong {
+
+      font-weight: 700;
+
+    }
+
+
+    .article-content em {
+
+      font-style: italic;
+
+    }
+
+
+
+    /* =====================================================
+       OPENING PARAGRAPH
+    ====================================================== */
+
+    .article-opening {
+
+      font-style: italic;
+
+    }
+
+
+
+    /* =====================================================
+       ARTICLE IMAGES
+    ====================================================== */
+
+    .article-figure {
+
+      width: 100%;
+
+      margin:
+        55px 0
+        14px;
+
+    }
+
+
+    .article-image {
+
+      width: 100%;
+
+      aspect-ratio: 4 / 3;
+
+      background: #f5f3f1;
+
+      border-radius: 10px;
+
+      overflow: hidden;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+    }
+
+
+    .article-image img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: contain;
+
+    }
+
+
+    .image-caption {
+
+      margin-top: 12px;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 13px;
+
+      line-height: 1.6;
+
+      text-align: center;
+
+      color: #999999;
+
+    }
+
+
+
+    /* =====================================================
+       QUOTE STYLE
+    ====================================================== */
+
+    .article-quote {
+
+      margin:
+        42px 0;
+
+      padding:
+        10px 0;
+
+    }
+
+
+    .article-quote p {
+
+      font-weight: 700;
+
+      margin-bottom: 0;
+
+    }
+
+
+
+    /* =====================================================
+       COMMENTS SECTION
+    ====================================================== */
+
+    .comments-section {
+
+      width:
+        min(
+          1000px,
+          calc(100% - 48px)
+        );
+
+      margin:
+        90px auto
+        120px;
+
+      padding-top: 70px;
+
+      border-top:
+        1px solid #eeeeee;
+
+    }
+
+
+    .comments-header {
+
+      display: flex;
+
+      align-items: baseline;
+
+      justify-content:
+        space-between;
+
+      gap: 20px;
+
+      margin-bottom: 38px;
+
+    }
+
+
+    .comments-title {
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 34px;
+
+      font-weight: 500;
+
+      color: #222222;
+
+    }
+
+
+    .comments-count {
+
+      font-size: 13px;
+
+      color: #999999;
+
+      white-space: nowrap;
+
+    }
+
+
+
+    /* =====================================================
+       COMMENT FORM
+    ====================================================== */
+
+    .comment-form {
+
+      background: #ffffff;
+
+      border:
+        1px solid #dedede;
+
+      border-radius: 8px;
+
+      padding: 34px;
+
+      margin-bottom: 55px;
+
+    }
+
+
+    .form-row {
+
+      display: flex;
+
+      align-items: flex-end;
+
+      gap: 18px;
+
+      margin-bottom: 22px;
+
+    }
+
+
+    .form-group {
+
+      flex: 1;
+
+    }
+
+
+    .form-label {
+
+      display: block;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+      color: #555555;
+
+      margin-bottom: 9px;
+
+    }
+
+
+    input,
+    textarea {
+
+      width: 100%;
+
+      border:
+        1px solid #dddddd;
+
+      border-radius: 6px;
+
+      background: #ffffff;
+
+      padding: 13px 14px;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 14px;
+
+      color: #222222;
+
+      outline: none;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+    }
+
+
+    input {
+
+      height: 48px;
+
+    }
+
+
+    textarea {
+
+      min-height: 145px;
+
+      resize: vertical;
+
+    }
+
+
+    input:focus,
+    textarea:focus {
+
+      border-color: #999999;
+
+      box-shadow:
+        0 0 0 2px
+        rgba(0, 0, 0, 0.03);
+
+    }
+
+
+    input::placeholder,
+    textarea::placeholder {
+
+      color: #aaaaaa;
+
+    }
+
+
+
+    /* ANONYMOUS */
+
+    .anonymous-option {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      height: 48px;
+
+      white-space: nowrap;
+
+      font-size: 13px;
+
+      color: #666666;
+
+    }
+
+
+    .anonymous-option input {
+
+      width: 17px;
+
+      height: 17px;
+
+      padding: 0;
+
+      accent-color: #222222;
+
+    }
+
+
+
+    /* MESSAGE */
+
+    .message-group {
+
+      margin-bottom: 22px;
+
+    }
+
+
+
+    /* BUTTON */
+
+    .submit-button {
+
+      border: none;
+
+      border-radius: 6px;
+
+      background: #222222;
+
+      color: #ffffff;
+
+      padding:
+        12px 22px;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+      cursor: pointer;
+
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+
+    }
+
+
+    .submit-button:hover {
+
+      background: #444444;
+
+    }
+
+
+    .submit-button:active {
+
+      transform:
+        translateY(1px);
+
+    }
+
+
+    .submit-button:disabled {
+
+      opacity: 0.5;
+
+      cursor: not-allowed;
+
+    }
+
+
+    .form-status {
+
+      margin-top: 14px;
+
+      font-size: 13px;
+
+      color: #888888;
+
+    }
+
+
+
+    /* =====================================================
+       COMMENT CARDS
+    ====================================================== */
+
+    .comments-list {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
+
+      gap: 18px;
+
+    }
+
+
+    .comment-box {
+
+      background: #ffffff;
+
+      border:
+        1px solid #dedede;
+
+      border-radius: 10px;
+
+      min-height: 190px;
+
+      padding:
+        25px 26px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content:
+        space-between;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+    }
+
+
+    .comment-box:hover {
+
+      border-color: #cccccc;
+
+      box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.04);
+
+    }
+
+
+    .comment-message {
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 17px;
+
+      line-height: 1.7;
+
+      color: #333333;
+
+      margin-bottom: 28px;
+
+      white-space: pre-wrap;
+
+      overflow-wrap: anywhere;
+
+    }
+
+
+    .comment-footer {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content:
+        space-between;
+
+      gap: 15px;
+
+      padding-top: 15px;
+
+      border-top:
+        1px solid #eeeeee;
+
+    }
+
+
+    .comment-author {
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 12px;
+
+      font-weight: 600;
+
+      color: #555555;
+
+    }
+
+
+    .comment-date {
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 11px;
+
+      color: #aaaaaa;
+
+    }
+
+
+    .comments-empty,
+    .comments-loading {
+
+      font-size: 14px;
+
+      color: #999999;
+
+      padding: 12px 0;
+
+    }
+
+
+
+    /* =====================================================
+       FOOTER
+    ====================================================== */
+
+    .site-footer {
+
+      border-top:
+        1px solid #eeeeee;
+
+      padding:
+        35px 24px;
+
+      text-align: center;
+
+      font-size: 13px;
+
+      color: #999999;
+
+    }
+
+
+
+    /* =====================================================
+       MOBILE
+    ====================================================== */
+
+    @media (max-width: 700px) {
+
+
+      .site-header {
+
+        height: 64px;
+
+      }
+
+
+      .nav {
+
+        width:
+          calc(100% - 32px);
+
+        height: 64px;
+
+      }
+
+
+      .logo {
+
+        width: 110px;
+
+        height: 36px;
+
+      }
+
+
+      .logo img {
+
+        width: 110px !important;
+
+        max-width: 110px !important;
+
+        max-height: 36px !important;
+
+      }
+
+
+      .nav-links {
+
+        gap: 16px;
+
+      }
+
+
+      .nav-links a {
+
+        font-size: 12px;
+
+      }
+
+
+      .nav-links a:nth-child(4),
+      .nav-links a:nth-child(5) {
+
+        display: none;
+
+      }
+
+
+      /* ARTICLE */
+
+      .article {
+
+        width:
+          calc(100% - 36px);
+
+        padding-top: 65px;
+
+        padding-bottom: 40px;
+
+      }
+
+
+      .article-title {
+
+        font-size: 42px;
+
+        letter-spacing: -1px;
+
+        margin-bottom: 40px;
+
+      }
+
+
+      .article-content {
+
+        font-size: 17px;
+
+        line-height: 1.9;
+
+      }
+
+
+      .article-content p {
+
+        margin-bottom: 30px;
+
+      }
+
+
+      .spotify-section {
+
+        margin-bottom: 55px;
+
+      }
+
+
+      .spotify-player iframe {
+
+        height: 152px;
+
+      }
+
+
+      .article-figure {
+
+        margin-top: 45px;
+
+      }
+
+
+      /* COMMENTS */
+
+      .comments-section {
+
+        width:
+          calc(100% - 36px);
+
+        margin-top: 60px;
+
+        margin-bottom: 70px;
+
+        padding-top: 50px;
+
+      }
+
+
+      .comments-header {
+
+        margin-bottom: 28px;
+
+      }
+
+
+      .comments-title {
+
+        font-size: 28px;
+
+      }
+
+
+      .comment-form {
+
+        padding: 24px;
+
+        margin-bottom: 40px;
+
+      }
+
+
+      .form-row {
+
+        display: block;
+
+      }
+
+
+      .form-group {
+
+        margin-bottom: 20px;
+
+      }
+
+
+      .anonymous-option {
+
+        height: auto;
+
+      }
+
+
+      .comments-list {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .comment-box {
+
+        min-height: 170px;
+
+        padding: 22px;
+
+      }
+
+
+      .comment-message {
+
+        font-size: 16px;
+
+      }
+
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header class="site-header">
+
+    <nav class="nav">
+
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+
+        <img
+          src="images/tatsyafira-logo.png"
+          alt="tatsyafira"
+        >
+
+      </a>
+
+
+
+      <div class="nav-links">
+
+        <a
+          href="catatan.html"
+          class="active"
+        >
+          Catatan
+        </a>
+
+
+        <a href="index.html">
+          Belajar
+        </a>
+
+
+        <a href="#">
+          Kelas
+        </a>
+
+
+        <a href="#">
+          Resources
+        </a>
+
+
+        <a href="#">
+          Toko
+        </a>
+
+      </div>
+
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       ARTICLE
+  ====================================================== -->
+
+  <main>
+
+
+    <article class="article">
+
+
+      <div class="article-category">
+
+        Refleksi
+
+      </div>
+
+
+
+      <h1 class="article-title">
+
+        Untuk Jatuh Cinta dengan Ia yang Membaca
+
+      </h1>
+
+
+
+      <!-- =================================================
+           COVER IMAGE
+      ================================================== -->
+
+      <figure class="cover-figure">
+
+        <div class="cover-image">
+
+          <img
+            src="images/ia-yang-membaca-cover.jpg"
+            alt="Untuk Jatuh Cinta dengan Ia yang Membaca"
+          >
+
+        </div>
+
+      </figure>
+
+
+
+      <!-- =================================================
+           SPOTIFY
+      ================================================== -->
+
+      <section class="spotify-section">
+
+        <div class="spotify-player">
+
+          <iframe
+            data-testid="embed-iframe"
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/5JESuE80fvausWHjcT9QVh?utm_source=generator"
+            width="100%"
+            height="152"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+
+        </div>
+
+
+        <div class="spotify-caption">
+
+          Dengarkan sambil membaca.
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =================================================
+           ARTICLE CONTENT
+      ================================================== -->
+
+      <div class="article-content">
+
+
+        <p class="article-opening">
+
+          Di dunia yang membuat begitu banyak mata tertuju untuk melihat keindahan tubuh perempuan, kamu justru memilih untuk menundukkan pandanganmu pada bait-bait paragraf di antara lembaran halaman usang yang sedang kamu baca. Kacamata membingkai wajahmu yang menunduk, matamu bergerak perlahan mengikuti deretan kata tentang dunia yang mungkin tidak pernah kamu lihat sendiri; tentang politik, agama, ekonomi, sejarah, filsafat, atau mungkin sebuah cerita fiksi tentang manusia-manusia yang bahkan tidak pernah benar-benar ada.
+
+        </p>
+
+
+        <p>
+
+          Entah kenapa, ada sesuatu yang sangat menarik bagiku dari pemandangan itu.
+
+        </p>
+
+
+        <p>
+
+          Di saat dunia terus menawarkan hiburan yang bisa selesai dalam beberapa detik, kamu bersedia duduk diam selama berjam-jam untuk mengikuti pemikiran seseorang melalui ratusan halaman. Di saat satu video belum selesai dan algoritma sudah menawarkan sepuluh video lainnya, kamu memilih untuk tinggal lebih lama. Tinggal pada satu gagasan. Satu cerita. Satu pertanyaan. Satu pemikiran manusia yang mungkin ditulis puluhan atau bahkan ratusan tahun sebelum kamu lahir.
+
+        </p>
+
+
+        <p>
+
+          Mungkin itu sebabnya aku ingin jatuh cinta dengan ia yang membaca.
+
+        </p>
+
+
+        <p>
+
+          Aku ingin membicarakan Kafka dan Tolstoy denganmu. Aku ingin suatu hari membaca buku yang sama lalu memperdebatkan tokoh-tokohnya, mempertanyakan keputusan-keputusan mereka, dan entah bagaimana percakapan tentang sebuah cerita fiksi bisa membawa kita berbicara tentang kehidupan kita sendiri. Aku ingin mendengar pendapatmu tentang sesuatu yang mungkin selama ini belum pernah terpikirkan olehku, lalu diam-diam berpikir, <em>“Oh, I never thought about it that way.”</em>
+
+        </p>
+
+
+        <p>
+
+          Di saat yang sama, aku ingin mentadabburi Al-Qur'an bersamamu di setiap sudut bumi yang nanti akan kita jelajahi. Mungkin kita sedang berada di sebuah kota yang sama sekali asing, jauh dari rumah, lalu menemukan sebuah ayat yang entah kenapa terasa begitu dekat dengan kehidupan yang sedang kita jalani. Aku ingin membaca dunia bersamamu, tapi juga membaca kembali diri kita melalui semua hal yang kita temukan di dalamnya.
+
+        </p>
+
+
+        <p>
+
+          Aku ingin bersamamu dan merasa bahwa tidak ada batas dari apa yang bisa kita bicarakan. Karena banyaknya buku yang kamu habiskan seperti samudra yang begitu dalam, aku ingin selalu merasa bahwa masih ada sesuatu yang belum kuketahui tentangmu. Ada pemikiran yang belum pernah kamu ceritakan, sebuah buku yang pernah mengubah cara pandangmu, atau sebuah kalimat yang pernah tinggal lama di kepalamu. Aku tidak ingin kehabisan bahan bicara saat bersamamu.
+
+        </p>
+
+
+        <p>
+
+          Aku ingin berargumen dan berdebat denganmu tentang politik di Indonesia. Aku ingin kita mungkin memulai percakapan dari satu berita yang kita lihat pagi itu, lalu entah bagaimana satu jam kemudian kita sudah membahas sistem pendidikan, ekonomi, korupsi, kebijakan publik, orang-orang yang seharusnya berada di pemerintahan, dan kenapa negara sebesar Indonesia masih memiliki begitu banyak hal yang membuat rakyatnya harus berjuang lebih keras dari seharusnya. Membahas rezim yang hanya sibuk mementingkan isi perutnya sendiri, sementara keputusan-keputusan yang mereka buat justru perlahan meracuni perut yang lainnya.
+
+        </p>
+
+
+        <p>
+
+          Justru aku ingin kadang-kadang merasa kesal karena argumenmu ternyata masuk akal. Haha.
+
+        </p>
+
+
+        <p>
+
+          Aku ingin duduk berhadapan denganmu, merasa sangat yakin bahwa pendapatku benar, lalu beberapa menit kemudian harus mengakui, <em>“Okay, kamu benar juga.”</em> Aku ingin kamu membantahku ketika aku salah, bukan hanya mengangguk karena ingin menjaga suasana tetap nyaman. Aku ingin kita bisa berbeda pendapat tanpa merasa bahwa perbedaan itu adalah ancaman. Ada sesuatu yang menarik dari seseorang yang pikirannya tak bisa kubaca. Seseorang yang <em>unpredictable</em>, setiap hal yang kamu sampaikan adalah hal baru yang tak kusangka-sangka.
+
+        </p>
+
+
+        <p>
+
+          Dan mungkin, setelah berdebat panjang, membaca berbagai sudut pandang, mencoba memahami kenapa sebuah keputusan diambil dan siapa yang sebenarnya diuntungkan dari keputusan tersebut, kita akhirnya menatap satu sama lain dan sampai pada kesimpulan yang mungkin, untuk sekali ini, tidak jauh berbeda:
+
+        </p>
+
+
+        <div class="article-quote">
+
+          <p>
+
+            “Ya... pemerintahan saat ini memang tidak kompeten.”
+
+          </p>
+
+        </div>
+
+
+        <p>
+
+          Aku ingin percakapan kita bisa dimulai dari sesuatu yang sederhana, lalu entah bagaimana berakhir dengan pembahasan tentang manusia, Tuhan, sejarah, keluarga, ekonomi, atau kehidupan yang bahkan tidak kita rencanakan untuk dibicarakan sebelumnya. Aku ingin suatu hari kita membicarakan Kafka, keesokan harinya membahas kebijakan ekonomi Indonesia, lalu malam berikutnya membuka Al-Qur'an dan mencoba memahami satu ayat yang terasa begitu dekat dengan kehidupan kita.
+
+        </p>
+
+
+        <p>
+
+          Aku ingin hidup bersamamu dan tidak pernah merasa bahwa dunia kita kehabisan hal untuk dibicarakan.
+
+        </p>
+
+
+        <p>
+
+          Mungkin terdengar sangat sederhana, tapi menurutku salah satu bentuk kehidupan yang paling indah adalah bisa menghabiskan puluhan tahun bersama seseorang dan tetap memiliki sesuatu untuk dibicarakan. Setelah semua cerita tentang masa kecil sudah kamu dengar. Setelah kamu tahu makanan kesukaannya, kebiasaan buruknya, cerita keluarganya, dan mungkin bahkan sudah bisa menebak apa yang akan ia katakan sebelum ia selesai berbicara. Setelah puluhan tahun, aku masih ingin bisa duduk bersamamu dan mendengar sesuatu yang baru. Bukan karena aku belum mengenalmu, tapi karena kamu tidak pernah berhenti bertumbuh.
+
+        </p>
+
+
+        <p>
+
+          Semua pemikiran-pemikiran besar di dunia lahir dari orang-orang yang gemar membaca. Marie dan Pierre Curie, pasangan peraih Nobel Kimia, dan Marie, perempuan pertama yang berdiri di antara ilmuwan-ilmuwan besar kala itu, bahkan pernah mengatakan bahwa ia <em>tidak membenci buku-buku yang membosankan</em>. Artinya, ia bersedia mengikuti pemikiran yang rumit dan melelahkan karena memiliki keinginan untuk terus mencari kebenaran. Cukup rendah hati untuk mengakui bahwa masih banyak yang belum diketahui dan ingin mengetahui lebih banyak lagi.
+
+        </p>
+
+
+        <p>
+
+          Habibie dan Ainun, misalnya, pasangan legendaris yang mengubah Indonesia, memiliki perpustakaan pribadi di kediaman mereka, <strong>The Habibie &amp; Ainun Library</strong>, yang menyimpan sekitar <strong>5.000 buku</strong> koleksi mereka.
+
+        </p>
+
+
+
+        <!-- ===============================================
+             IMAGE 1
+        ================================================ -->
+
+        <figure class="article-figure">
+
+          <div class="article-image">
+
+            <img
+              src="images/ia-yang-membaca-1.jpg"
+              alt="Dalam perjalan ke Trondheim, Norwegia."
+            >
+
+          </div>
+
+
+          <figcaption class="image-caption">
+
+            Dalam perjalan ke Trondheim, Norwegia.
+
+          </figcaption>
+
+        </figure>
+
+
+
+        <p>
+
+          Dalam perjalananku di Norwegia pada bulan Maret 2025, aku pernah melihat gambaran kecil tentang bentuk kehidupan yang mungkin ingin kumiliki suatu hari nanti.
+
+        </p>
+
+
+        <p>
+
+          Aku menghabiskan beberapa minggu tinggal bersama Coby dan Jaap, sepasang <em>host parents</em>-ku di Trondheim. Kota yang tenang di ujung utara Norwegia, tempat kampus teknologi terbesar di Norwegia berdiri, dan tempat musim dingin terasa begitu panjang. Tinggal bersama mereka membuatku mengenal rutinitas sederhana yang terasa sangat Scandinavian; memulai pagi dengan teh hangat, roti lapis, <em>brunost</em> atau keju cokelat manis khas Norwegia, dan <em>cheese slicer</em> yang selalu mereka gunakan untuk memotong keju dengan begitu rapi.
+
+        </p>
+
+
+        <p>
+
+          Di luar rumah, udara dingin dan jalanan tertutup salju. Tapi rumah mereka terasa sangat hangat. Mungkin karena rumah itu dipenuhi oleh kehidupan yang sudah mereka jalani selama puluhan tahun. Perjalanan-perjalanan yang pernah mereka lakukan, benda-benda yang mereka bawa pulang dari berbagai tempat, karya seni, dan tentu saja, buku-buku. Kulkas mereka terisi dengan magnet-magnet dan polaroid dari setiap negara yang mereka jelajahi bersama. Lima puluh tahun bersama, bayangkan. Dan rak buku yang penuh dengan buku-buku yang mereka beli di sudut kota setiap negara yang mereka jelajahi. Tentang pemikiran besar, sejarah, atau fiksi.
+
+        </p>
+
+
+
+        <!-- ===============================================
+             IMAGE 2
+        ================================================ -->
+
+        <figure class="article-figure">
+
+          <div class="article-image">
+
+            <img
+              src="images/ia-yang-membaca-2.jpg"
+              alt="Coby dan Jaap dalam perjalanan bersama"
+            >
+
+          </div>
+
+
+          <figcaption class="image-caption">
+
+            Salah satu potongan perjalanan bersama Coby dan Jaap.
+
+          </figcaption>
+
+        </figure>
+
+
+
+        <p>
+
+          Ada satu kebiasaan mereka yang sampai sekarang masih tinggal di kepalaku. Setelah sarapan, Coby dan Jaap sering menghabiskan waktu dengan membaca buku masing-masing. Mereka duduk bersama, membaca hal yang berbeda, lalu pada suatu waktu mulai membicarakan apa yang mereka temukan. Buku terbaru yang mereka baca, sebuah pemikiran yang menarik, sesuatu yang mereka setujui, atau mungkin justru tidak mereka setujui.
+
+        </p>
+
+
+        <p>
+
+          Aku melihat dua orang yang telah menghabiskan begitu banyak tahun bersama, tapi tetap memiliki sesuatu yang baru untuk dibawa ke dalam percakapan mereka.
+
+        </p>
+
+
+        <p>
+
+          Dan entah kenapa, aku melihat mereka lalu berpikir,
+
+        </p>
+
+
+        <div class="article-quote">
+
+          <p>
+
+            <em>I see my future there.</em>
+
+          </p>
+
+        </div>
+
+
+        <p>
+
+          Aku melihat dua orang yang sudah berada jauh di usia yang mungkin sekarang masih terasa sangat jauh bagiku, tapi mereka belum berhenti menemukan dunia. Mereka mungkin sudah menghabiskan puluhan tahun bersama, sudah mengetahui begitu banyak cerita satu sama lain, sudah melewati fase-fase kehidupan yang bahkan sekarang belum bisa kubayangkan. Tapi mereka masih bisa duduk di meja yang sama, membawa sesuatu yang baru dari dunia masing-masing, dan kemudian membaginya satu sama lain.
+
+        </p>
+
+
+        <p>
+
+          Mungkin itu yang ingin kumiliki suatu hari nanti.
+
+        </p>
+
+
+        <p>
+
+          Seseorang yang tetap berjalan bersamaku menuju kehidupan yang semakin luas. Aku tidak ingin hubungan membuat dunia kami semakin kecil dan akhirnya hanya berputar pada pekerjaan, tagihan, catatan pajak, rumah, anak-anak, lalu mengulang semuanya lagi setiap hari. Aku ingin kami tetap menjadi manusia yang terus memiliki rasa penasaran. Tetap membaca. Tetap belajar. Tetap menemukan sesuatu yang membuat kami berkata, <em>“Eh, aku baru tahu sesuatu.”</em>
+
+        </p>
+
+
+        <p>
+
+          Aku ingin ketika kami sudah berumur 70 tahun nanti, mungkin rambut kami sudah berubah menjadi putih dan perjalanan tidak lagi secepat ketika kami masih muda, kami masih bisa duduk bersama di meja makan. Tak banyak yang ditawarkan dari tubuh kami berdua, dan mungkin dengan teh hangat di tangan, mungkin dengan kacamata baca yang sudah semakin tebal, haha. Kamu membaca bukumu dan aku membaca bukuku. Lalu salah satu dari kami menutup bukunya dan berkata,
+
+        </p>
+
+
+        <div class="article-quote">
+
+          <p>
+
+            “Aku baru baca sesuatu yang menarik.”
+
+          </p>
+
+        </div>
+
+
+        <p>
+
+          Dan setelah puluhan tahun hidup bersamaku, aku ingin kamu masih menjawab,
+
+        </p>
+
+
+        <div class="article-quote">
+
+          <p>
+
+            “Ceritain.”
+
+          </p>
+
+        </div>
+
+
+        <p>
+
+          Karena menurutku, mungkin itu salah satu bentuk cinta yang paling indah. Bukan ketika kita sudah mengetahui semuanya tentang seseorang dan akhirnya tidak ada lagi yang bisa ditemukan. Tapi ketika kita terus menjalani kehidupan masing-masing dengan rasa penasaran, terus membaca halaman-halaman baru, lalu pulang kepada satu sama lain untuk berkata, <em>“Aku menemukan sesuatu hari ini.”</em>
+
+        </p>
+
+
+        <p>
+
+          Mungkin buku memang hanya benda bagi sebagian orang. Deretan halaman dengan terlalu banyak tulisan yang harus diselesaikan. Tapi bagiku, seseorang yang membaca sering kali sedang melakukan sesuatu yang lebih besar daripada sekadar menyelesaikan sebuah buku. Ia sedang membiarkan dirinya bertemu dengan pemikiran manusia lain. Ia sedang mencoba memahami kehidupan yang belum pernah ia jalani, tempat yang belum pernah ia datangi, dan manusia-manusia yang mungkin tidak akan pernah ia temui.
+
+        </p>
+
+
+        <p>
+
+          Melalui buku, seseorang yang hidup ratusan tahun sebelum kita lahir bisa duduk bersama kita. Kita bisa mengetahui apa yang ia pikirkan tentang manusia, apa yang ia percayai, apa yang ia takutkan, dan bagaimana ia melihat dunia pada masanya. Kita bisa setuju dengannya, tidak setuju dengannya, bahkan merasa bahwa pemikirannya sudah tidak relevan. Tapi sebelum kita membentuk pendapat sendiri, setidaknya kita telah memberikan diri kita kesempatan untuk melihat dunia melalui mata orang lain.
+
+        </p>
+
+
+        <p>
+
+          Mungkin itu sebabnya aku merasa pemikiran manusia tidak pernah benar-benar lahir dari ruang kosong. Sebelum seseorang memiliki gagasan, mungkin ada puluhan, ratusan, bahkan ribuan pemikiran lain yang pernah ia temui. Ia membaca, mengamati, mendengar, lalu memikirkan semuanya kembali. Kadang ia setuju, kadang ia tidak. Kadang sebuah buku justru membuatnya semakin yakin dengan apa yang ia percayai, dan kadang sebuah buku membuatnya mempertanyakan sesuatu yang selama ini ia anggap benar.
+
+        </p>
+
+
+        <p>
+
+          Lalu dari situlah lahir pemikiran-pemikiran baru.
+
+        </p>
+
+
+        <p>
+
+          Seseorang membaca apa yang pernah dipikirkan manusia sebelum dirinya, lalu bertanya, <em>“Tapi bagaimana kalau sebenarnya tidak seperti itu?”</em>
+
+        </p>
+
+
+        <p>
+
+          Mungkin sederhana, tapi aku rasa banyak perubahan besar dalam sejarah manusia dimulai dari seseorang yang cukup penasaran untuk membaca sesuatu, lalu cukup berani untuk memikirkan kembali apa yang sudah ada.
+
+        </p>
+
+
+        <p>
+
+          <strong>Untuk jatuh cinta dengan ia yang membaca.</strong> Karena semakin banyak kehidupan dan dunia yang ia temui melalui buku-buku itu, semakin luas pula kemungkinan cara ia melihat dunia yang sedang kami tinggali.
+
+        </p>
+
+
+        <p>
+
+          Aku tidak mencari seseorang yang bisa mengutip nama-nama penulis terkenal hanya untuk terdengar pintar. Aku tidak membutuhkanmu menjelaskan filsafat kepadaku setiap kali makan malam, <em>please</em>. Tapi aku suka seseorang yang masih memiliki rasa ingin tahu. Seseorang yang ketika tidak mengetahui sesuatu memilih untuk mencari tahu. Seseorang yang tidak merasa malu mengatakan, <em>“Aku belum pernah membaca tentang itu.”</em>
+
+        </p>
+
+
+        <p>
+
+          Karena menurutku, semakin banyak seseorang membaca, semakin ia sadar bahwa ternyata ia tidak tahu sebanyak itu.
+
+        </p>
+
+
+        <p>
+
+          Ada ribuan buku yang belum pernah ia buka. Jutaan kehidupan yang belum pernah ia pahami. Ada sejarah yang belum pernah ia pelajari, gagasan yang belum pernah masuk ke dalam kepalanya, dan dunia yang bahkan belum pernah ia bayangkan sebelumnya.
+
+        </p>
+
+
+        <p>
+
+          Mungkin karena itu, orang yang benar-benar membaca sering kali tidak sibuk ingin terlihat paling tahu. Ia tahu betapa luasnya dunia dan betapa kecilnya bagian yang sudah berhasil ia pahami.
+
+        </p>
+
+
+        <p>
+
+          Dan di dunia yang membuat kita semua ingin terlihat tahu segalanya, ada sesuatu yang sangat menenangkan dari seseorang yang masih mau berkata,
+
+        </p>
+
+
+        <div class="article-quote">
+
+          <p>
+
+            “Aku belum tahu. Ceritakan lebih banyak.”
+
+          </p>
+
+        </div>
+
+
+        <p>
+
+          Mungkin itu juga yang aku cari.
+
+        </p>
+
+
+        <p>
+
+          Aku ingin jatuh cinta dengan seseorang yang tidak pernah berhenti membuka halaman berikutnya. Seseorang yang tidak merasa hidupnya sudah selesai untuk dipelajari. Seseorang yang setelah lulus kuliah masih membaca. Setelah mendapatkan pekerjaan impiannya masih membaca. Setelah menikah masih membaca. Setelah memiliki anak masih membaca. Setelah berumur 70 tahun nanti pun masih membuka sebuah buku baru dan berpikir, <em>“Menarik juga ya.”</em>
+
+        </p>
+
+
+        <p>
+
+          Aku ingin banyaknya buku yang kamu habiskan membuatmu seperti samudra yang dalam. Aku ingin merasa bahwa selalu ada sesuatu yang belum kuketahui tentangmu. Ada buku yang pernah kamu baca dan belum pernah kamu ceritakan kepadaku. Ada sebuah gagasan yang pernah mengubah cara berpikirmu. Ada cerita yang mungkin pernah membuatmu menangis ketika tidak ada orang lain yang melihat. Ada ayat yang pernah kamu baca ketika hidup sedang sulit dan akhirnya tinggal bersamamu sampai hari ini.
+
+        </p>
+
+
+        <p>
+
+          Aku ingin mengenalmu selama bertahun-tahun dan tetap merasa bahwa aku belum selesai mengenalmu. Aku ingin tidak pernah kehabisan bahan bicara saat bersamamu.
+
+        </p>
+
+
+        <p>
+
+          Dan mungkin, setelah melihat Coby dan Jaap di Trondheim, aku akhirnya menyadari bahwa ini adalah salah satu bentuk kehidupan yang ingin kumiliki. Aku tidak ingin jatuh cinta kepada seseorang hanya karena pada awal hubungan kami selalu ada hal baru yang membuat semuanya terasa menarik, lalu beberapa tahun kemudian kami kehabisan dunia untuk dibicarakan. Aku ingin bertambah tua bersama seseorang sambil terus menambahkan dunia baru ke dalam diri kami masing-masing.
+
+        </p>
+
+
+        <p>
+
+          Mungkin ketika kami sudah berumur 70 tahun nanti, rambut kami sudah memutih dan kehidupan kami tidak lagi sama seperti sekarang. Mungkin kami tidak bisa bepergian sebanyak ketika muda. Mungkin kami lebih sering menghabiskan pagi di rumah dengan secangkir teh daripada mengejar pesawat ke negara lain.
+
+        </p>
+
+
+        <p>
+
+          Tapi aku ingin kami masih membaca.
+
+        </p>
+
+
+        <p>
+
+          Aku ingin suatu hari duduk di meja yang sama, seperti yang pernah kulihat di rumah hangat Coby dan Jaap di Trondheim. Kamu membaca bukumu, aku membaca bukuku. Lalu salah satu dari kami selesai membaca satu bagian, menutup bukunya, dan berkata,
+
+        </p>
+
+
+        <div class="article-quote">
+
+          <p>
+
+            “Aku baru baca sesuatu yang menarik.”
+
+          </p>
+
+        </div>
+
+
+        <p>
+
+          Dan setelah puluhan tahun hidup bersamaku, setelah mengetahui hampir semua cerita yang bisa kita ceritakan tentang hidup masing-masing, aku ingin kamu masih menjawab,
+
+        </p>
+
+
+        <div class="article-quote">
+
+          <p>
+
+            “Ceritain.”
+
+          </p>
+
+        </div>
+
+
+        <p>
+
+          Karena mungkin, pada akhirnya, aku tidak hanya ingin jatuh cinta kepada seseorang yang membaca buku. Aku ingin jatuh cinta kepada seseorang yang masih percaya bahwa selalu ada sesuatu yang bisa dipelajari dari kehidupan. Seseorang yang masih penasaran. Masih ingin tahu. Masih mau berubah pikiran ketika menemukan sesuatu yang lebih benar. Masih memiliki kerendahan hati untuk menyadari bahwa ada terlalu banyak hal yang belum ia pahami.
+
+        </p>
+
+
+        <p>
+
+          Dan kalau suatu hari nanti aku menemukanmu, mungkin aku tidak akan langsung jatuh cinta karena buku yang sedang kamu baca.
+
+        </p>
+
+
+        <p>
+
+          Mungkin aku akan jatuh cinta pada sesuatu yang lebih besar dari itu.
+
+        </p>
+
+
+        <p>
+
+          Pada rasa penasaranmu.
+
+        </p>
+
+
+        <p>
+
+          Pada cara kamu memandang dunia.
+
+        </p>
+
+
+        <p>
+
+          Pada kerendahan hatimu untuk mengetahui bahwa ada terlalu banyak hal yang belum kamu pahami.
+
+        </p>
+
+
+        <p>
+
+          Dan pada keinginanmu untuk tetap mencari tahu.
+
+        </p>
+
+
+        <p>
+
+          Lalu mungkin, setelah semua perjalanan yang ingin kita lakukan, semua kota yang ingin kita datangi, semua buku yang ingin kita baca, semua perdebatan yang belum selesai, dan semua kehidupan yang masih ingin kita pahami, aku hanya ingin satu hal sederhana.
+
+        </p>
+
+
+        <p>
+
+          Aku ingin suatu hari nanti menutup sebuah buku, menoleh kepadamu, lalu berkata,
+
+        </p>
+
+
+        <div class="article-quote">
+
+          <p>
+
+            “Aku baru baca sesuatu yang menarik.”
+
+          </p>
+
+        </div>
+
+
+        <p>
+
+          Dan selama puluhan tahun setelahnya, aku harap kamu masih ingin mendengarkan ceritaku.
+
+        </p>
+
+
+      </div>
+
+
+    </article>
+
+
+
+    <!-- =====================================================
+         COMMENTS
+    ====================================================== -->
+
+    <section class="comments-section">
+
+
+      <div class="comments-header">
+
+        <h2 class="comments-title">
+
+          Pesan dari pembaca
+
+        </h2>
+
+
+        <span
+          class="comments-count"
+          id="messageCount"
+        >
+          0 pesan
+        </span>
+
+      </div>
+
+
+
+      <!-- FORM -->
+
+      <form
+        class="comment-form"
+        id="commentForm"
+      >
+
+
+        <div class="form-row">
+
+
+          <div class="form-group">
+
+            <label
+              class="form-label"
+              for="senderName"
+            >
+              From
+            </label>
+
+
+            <input
+              type="text"
+              id="senderName"
+              maxlength="80"
+              placeholder="Namamu (opsional)"
+            >
+
+          </div>
+
+
+
+          <label class="anonymous-option">
+
+            <input
+              type="checkbox"
+              id="anonymousCheck"
+            >
+
+            <span>
+
+              Kirim sebagai anonim
+
+            </span>
+
+          </label>
+
+
+        </div>
+
+
+
+        <div class="message-group">
+
+          <label
+            class="form-label"
+            for="messageText"
+          >
+            Pesan
+          </label>
+
+
+          <textarea
+            id="messageText"
+            maxlength="2000"
+            placeholder="Tulis sesuatu yang ingin kamu sampaikan..."
+            required
+          ></textarea>
+
+        </div>
+
+
+
+        <button
+          type="submit"
+          class="submit-button"
+          id="sendMessage"
+        >
+
+          Kirim pesan
+
+        </button>
+
+
+
+        <div
+          class="form-status"
+          id="formStatus"
+        ></div>
+
+
+      </form>
+
+
+
+      <!-- COMMENTS -->
+
+      <div
+        class="comments-list"
+        id="messagesContainer"
+      >
+
+        <div class="comments-loading">
+
+          Memuat pesan...
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="site-footer">
+
+    © Tatsyafira
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       SUPABASE
+  ====================================================== -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+
+  <script>
+
+
+    /* =====================================================
+       SUPABASE CONNECTION
+    ====================================================== */
+
+    const SUPABASE_URL =
+      "https://gtaljywggqalmfqizjhj.supabase.co";
+
+
+    const SUPABASE_KEY =
+      "sb_publishable_Lvgk-7rPMaxhO7TAOdGp6Q_MWACHYtR";
+
+
+    const supabaseClient =
+      window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_KEY
+      );
+
+
+
+    /* =====================================================
+       ARTICLE IDENTIFIER
+    ====================================================== */
+
+    const ARTICLE_SLUG =
+      "ia-yang-membaca";
+
+
+
+    /* =====================================================
+       ELEMENTS
+    ====================================================== */
+
+    const commentForm =
+      document.getElementById(
+        "commentForm"
+      );
+
+
+    const senderName =
+      document.getElementById(
+        "senderName"
+      );
+
+
+    const messageText =
+      document.getElementById(
+        "messageText"
+      );
+
+
+    const anonymousCheck =
+      document.getElementById(
+        "anonymousCheck"
+      );
+
+
+    const sendMessage =
+      document.getElementById(
+        "sendMessage"
+      );
+
+
+    const formStatus =
+      document.getElementById(
+        "formStatus"
+      );
+
+
+    const messagesContainer =
+      document.getElementById(
+        "messagesContainer"
+      );
+
+
+    const messageCount =
+      document.getElementById(
+        "messageCount"
+      );
+
+
+
+    /* =====================================================
+       ESCAPE HTML
+    ====================================================== */
+
+    function escapeHTML(value) {
+
+      const div =
+        document.createElement("div");
+
+
+      div.textContent =
+        value || "";
+
+
+      return div.innerHTML;
+
+    }
+
+
+
+    /* =====================================================
+       FORMAT DATE
+    ====================================================== */
+
+    function formatDate(value) {
+
+      if (!value) {
+        return "";
+      }
+
+
+      return new Date(value)
+        .toLocaleDateString(
+          "id-ID",
+          {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+          }
+        );
+
+    }
+
+
+
+    /* =====================================================
+       LOAD ARTICLE ID
+    ====================================================== */
+
+    async function getArticleId() {
+
+      const {
+        data,
+        error
+      } = await supabaseClient
+        .from("articles")
+        .select("id")
+        .eq(
+          "slug",
+          ARTICLE_SLUG
+        )
+        .single();
+
+
+      if (error) {
+
+        console.error(
+          "Error finding article:",
+          error
+        );
+
+
+        return null;
+
+      }
+
+
+      return data.id;
+
+    }
+
+
+
+    /* =====================================================
+       LOAD COMMENTS
+    ====================================================== */
+
+    async function loadComments() {
+
+
+      messagesContainer.innerHTML =
+        `
+          <div class="comments-loading">
+            Memuat pesan...
+          </div>
+        `;
+
+
+      const articleId =
+        await getArticleId();
+
+
+      if (!articleId) {
+
+        messagesContainer.innerHTML =
+          `
+            <div class="comments-empty">
+              Belum ada pesan.
+            </div>
+          `;
+
+
+        return;
+
+      }
+
+
+
+      const {
+        data,
+        error
+      } = await supabaseClient
+        .from("comments")
+        .select("*")
+        .eq(
+          "article_id",
+          articleId
+        )
+        .order(
+          "created_at",
+          {
+            ascending: false
+          }
+        );
+
+
+      if (error) {
+
+        console.error(
+          "Error loading comments:",
+          error
+        );
+
+
+        messagesContainer.innerHTML =
+          `
+            <div class="comments-empty">
+              Belum ada pesan.
+            </div>
+          `;
+
+
+        return;
+
+      }
+
+
+
+      messageCount.textContent =
+        `${data.length} ${
+          data.length === 1
+            ? "pesan"
+            : "pesan"
+        }`;
+
+
+
+      if (
+        !data ||
+        data.length === 0
+      ) {
+
+        messagesContainer.innerHTML =
+          `
+            <div class="comments-empty">
+              Belum ada pesan. Jadilah yang pertama meninggalkan pesan.
+            </div>
+          `;
+
+
+        return;
+
+      }
+
+
+
+      messagesContainer.innerHTML =
+        data.map(
+          comment => {
+
+
+            const author =
+              comment.is_anonymous
+                ? "Anonim"
+                : (
+                    comment.name ||
+                    "Anonim"
+                  );
+
+
+            return `
+
+              <article class="comment-box">
+
+
+                <div
+                  class="comment-message"
+                >
+
+                  ${escapeHTML(
+                    comment.message
+                  )}
+
+                </div>
+
+
+
+                <div
+                  class="comment-footer"
+                >
+
+
+                  <div
+                    class="comment-author"
+                  >
+
+                    ${escapeHTML(
+                      author
+                    )}
+
+                  </div>
+
+
+
+                  <div
+                    class="comment-date"
+                  >
+
+                    ${formatDate(
+                      comment.created_at
+                    )}
+
+                  </div>
+
+
+                </div>
+
+
+              </article>
+
+            `;
+
+          }
+        ).join("");
+
+    }
+
+
+
+    /* =====================================================
+       SUBMIT COMMENT
+    ====================================================== */
+
+    commentForm.addEventListener(
+      "submit",
+      async event => {
+
+
+        event.preventDefault();
+
+
+        const message =
+          messageText.value
+            .trim();
+
+
+        if (!message) {
+
+          formStatus.textContent =
+            "Pesan tidak boleh kosong.";
+
+
+          return;
+
+        }
+
+
+
+        sendMessage.disabled =
+          true;
+
+
+        sendMessage.textContent =
+          "Mengirim...";
+
+
+        formStatus.textContent =
+          "";
+
+
+
+        const articleId =
+          await getArticleId();
+
+
+        if (!articleId) {
+
+          formStatus.textContent =
+            "Artikel belum ditemukan di database.";
+
+
+          sendMessage.disabled =
+            false;
+
+
+          sendMessage.textContent =
+            "Kirim pesan";
+
+
+          return;
+
+        }
+
+
+
+        const isAnonymous =
+          anonymousCheck.checked;
+
+
+        const name =
+          isAnonymous
+            ? null
+            : (
+                senderName.value.trim() ||
+                null
+              );
+
+
+
+        const {
+          error
+        } = await supabaseClient
+          .from("comments")
+          .insert(
+            {
+              article_id:
+                articleId,
+
+              name:
+                name,
+
+              message:
+                message,
+
+              is_anonymous:
+                isAnonymous
+            }
+          );
+
+
+
+        if (error) {
+
+          console.error(
+            "Error sending comment:",
+            error
+          );
+
+
+          formStatus.textContent =
+            "Pesan belum berhasil dikirim. Coba lagi ya.";
+
+
+          sendMessage.disabled =
+            false;
+
+
+          sendMessage.textContent =
+            "Kirim pesan";
+
+
+          return;
+
+        }
+
+
+
+        commentForm.reset();
+
+
+        formStatus.textContent =
+          "Pesanmu sudah terkirim 🤍";
+
+
+        sendMessage.disabled =
+          false;
+
+
+        sendMessage.textContent =
+          "Kirim pesan";
+
+
+        await loadComments();
+
+
+      }
+    );
+
+
+
+    /* =====================================================
+       START
+    ====================================================== */
+
+    loadComments();
+
+
+  </script>
+
+
+</body>
+
+</html>

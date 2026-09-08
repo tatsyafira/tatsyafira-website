@@ -21,6 +21,11 @@
       "permanent": true
     },
     {
+      "source": "/artikel-ia-yang-membaca.html",
+      "destination": "/ia-yang-membaca",
+      "permanent": true
+    },
+    {
       "source": "/english-test.html",
       "destination": "/english-test",
       "permanent": true
@@ -43,6 +48,10 @@
     {
       "source": "/cara-berpikirmu",
       "destination": "/artikel-cara-berpikirmu.html"
+    },
+    {
+      "source": "/ia-yang-membaca",
+      "destination": "/artikel-ia-yang-membaca.html"
     },
     {
       "source": "/english-test",
