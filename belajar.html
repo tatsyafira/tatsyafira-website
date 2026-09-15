@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Belajar — Tatsyafira</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <style>
+
+        /* =====================================================
+           BELAJAR PAGE
+           Small page-specific adjustments only.
+           The main website styling still comes from style.css.
+           ===================================================== */
+
+        .belajar-page {
+            padding-top: 80px;
+            padding-bottom: 100px;
+        }
+
+
+        /* =====================================================
+           PAGE INTRO
+           ===================================================== */
+
+        .belajar-intro {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 40px 70px;
+        }
+
+
+        .belajar-intro .eyebrow {
+            margin-bottom: 18px;
+        }
+
+
+        .belajar-intro h1 {
+            max-width: 800px;
+            margin: 0 0 24px;
+            font-size: clamp(44px, 6vw, 72px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+        }
+
+
+        .belajar-intro p {
+            max-width: 680px;
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           MAIN PAGE SECTIONS
+           ===================================================== */
+
+        .belajar-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 70px 40px;
+        }
+
+
+        .belajar-section + .belajar-section {
+            padding-top: 40px;
+        }
+
+
+        .belajar-section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 40px;
+            margin-bottom: 42px;
+        }
+
+
+        .belajar-section-heading h2 {
+            margin: 0;
+            max-width: 700px;
+            font-size: clamp(32px, 4vw, 48px);
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+
+        .belajar-section-heading p {
+            max-width: 420px;
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           RESOURCE CARDS
+           ===================================================== */
+
+        .belajar-resource-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+
+        .belajar-resource-card {
+            display: flex;
+            flex-direction: column;
+            min-height: 250px;
+            padding: 30px;
+            border: 1px solid #e5e5e5;
+            border-radius: 20px;
+            background: #ffffff;
+            text-decoration: none;
+            color: inherit;
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+
+        .belajar-resource-card:hover {
+            transform: translateY(-3px);
+            border-color: #d8d8d8;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+        }
+
+
+        .belajar-resource-number {
+            display: block;
+            margin-bottom: 35px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+
+        .belajar-resource-card h3 {
+            margin: 0 0 12px;
+            font-size: 24px;
+            line-height: 1.2;
+        }
+
+
+        .belajar-resource-card p {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+
+        .belajar-resource-link {
+            margin-top: auto;
+            padding-top: 25px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+
+        /* =====================================================
+           PRACTICE SECTION
+           ===================================================== */
+
+        .latihan-section {
+            margin-top: 40px;
+            padding-top: 90px;
+            padding-bottom: 100px;
+            background: #f8f7f5;
+        }
+
+
+        .latihan-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+
+        .latihan-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+
+        .latihan-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 330px;
+            padding: 34px;
+            border-radius: 22px;
+            background: #ffffff;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+
+        .latihan-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+        }
+
+
+        .latihan-number {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 45px;
+        }
+
+
+        .latihan-type {
+            margin: 0 0 12px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+
+        .latihan-card h3 {
+            margin: 0 0 15px;
+            font-size: 28px;
+            line-height: 1.15;
+        }
+
+
+        .latihan-card p {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+
+        .latihan-button {
+            margin-top: auto;
+            padding-top: 30px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+
+        /* =====================================================
+           NOTE
+           ===================================================== */
+
+        .belajar-note {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px 100px;
+        }
+
+
+        .belajar-note-inner {
+            padding: 35px 40px;
+            border-radius: 20px;
+            background: #f4eef0;
+        }
+
+
+        .belajar-note-inner p {
+            max-width: 760px;
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .belajar-intro {
+                padding: 60px 25px 50px;
+            }
+
+
+            .belajar-section {
+                padding: 55px 25px;
+            }
+
+
+            .belajar-section-heading {
+                display: block;
+            }
+
+
+            .belajar-section-heading h2 {
+                margin-bottom: 18px;
+            }
+
+
+            .belajar-resource-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .latihan-inner {
+                padding: 0 25px;
+            }
+
+
+            .latihan-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .belajar-note {
+                padding: 0 25px 70px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .belajar-page {
+                padding-top: 30px;
+            }
+
+
+            .belajar-intro h1 {
+                font-size: 44px;
+                letter-spacing: -1.5px;
+            }
+
+
+            .belajar-intro p {
+                font-size: 16px;
+            }
+
+
+            .belajar-resource-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .belajar-resource-card {
+                min-height: 220px;
+                padding: 25px;
+            }
+
+
+            .latihan-card {
+                min-height: 290px;
+                padding: 28px;
+            }
+
+
+            .belajar-note-inner {
+                padding: 28px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         Same navigation structure as the rest of the website
+         ===================================================== -->
+
+    <header class="site-header">
+
+        <nav class="nav">
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <img
+                    src="images/tatsyafira-logo.png"
+                    alt="Tatsyafira"
+                >
+
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="catatan.html">
+                    Catatan
+                </a>
+
+
+                <a
+                    href="belajar.html"
+                    class="active"
+                >
+                    Belajar
+                </a>
+
+
+                <a href="#">
+                    Kelas
+                </a>
+
+
+                <a href="#">
+                    Resources
+                </a>
+
+
+                <a href="#">
+                    Toko
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <main class="belajar-page">
+
+
+        <!-- =====================================================
+             INTRO
+             ===================================================== -->
+
+        <section class="belajar-intro">
+
+            <p class="eyebrow">
+                BELAJAR
+            </p>
+
+
+            <h1>
+                Belajar bahasa Inggris,
+                sedikit demi sedikit.
+            </h1>
+
+
+            <p>
+                Kumpulan materi dan latihan yang bisa kamu gunakan
+                untuk belajar mandiri, mengulang materi kelas,
+                atau sekadar menguji kemampuanmu.
+            </p>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             BELAJAR — RESOURCES
+             ===================================================== -->
+
+        <section class="belajar-section">
+
+
+            <div class="belajar-section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        MATERI
+                    </p>
+
+
+                    <h2>
+                        Belajar sebelum
+                        mulai latihan.
+                    </h2>
+
+                </div>
+
+
+                <p>
+                    Materi singkat yang bisa kamu buka kembali
+                    kapan saja. Mulai dari grammar sampai
+                    vocabulary untuk kebutuhan akademik dan tes.
+                </p>
+
+            </div>
+
+
+
+            <div class="belajar-resource-grid">
+
+
+                <!-- RESOURCE 01 -->
+
+                <a
+                    href="#"
+                    class="belajar-resource-card"
+                >
+
+                    <span class="belajar-resource-number">
+                        01
+                    </span>
+
+
+                    <h3>
+                        12 Tenses
+                    </h3>
+
+
+                    <p>
+                        Ringkasan penggunaan, pola kalimat,
+                        contoh, dan perbedaan setiap tense.
+                    </p>
+
+
+                    <span class="belajar-resource-link">
+                        Pelajari →
+                    </span>
+
+                </a>
+
+
+
+                <!-- RESOURCE 02 -->
+
+                <a
+                    href="#"
+                    class="belajar-resource-card"
+                >
+
+                    <span class="belajar-resource-number">
+                        02
+                    </span>
+
+
+                    <h3>
+                        Conditional Sentences
+                    </h3>
+
+
+                    <p>
+                        Memahami zero, first, second,
+                        third, dan mixed conditionals.
+                    </p>
+
+
+                    <span class="belajar-resource-link">
+                        Pelajari →
+                    </span>
+
+                </a>
+
+
+
+                <!-- RESOURCE 03 -->
+
+                <a
+                    href="#"
+                    class="belajar-resource-card"
+                >
+
+                    <span class="belajar-resource-number">
+                        03
+                    </span>
+
+
+                    <h3>
+                        Prepositions
+                    </h3>
+
+
+                    <p>
+                        Memahami penggunaan preposition
+                        yang sering muncul dalam bahasa Inggris.
+                    </p>
+
+
+                    <span class="belajar-resource-link">
+                        Pelajari →
+                    </span>
+
+                </a>
+
+
+
+                <!-- RESOURCE 04 -->
+
+                <a
+                    href="#"
+                    class="belajar-resource-card"
+                >
+
+                    <span class="belajar-resource-number">
+                        04
+                    </span>
+
+
+                    <h3>
+                        Subject–Verb Agreement
+                    </h3>
+
+
+                    <p>
+                        Panduan sederhana untuk memahami
+                        hubungan subject dan verb dalam kalimat.
+                    </p>
+
+
+                    <span class="belajar-resource-link">
+                        Pelajari →
+                    </span>
+
+                </a>
+
+
+
+                <!-- RESOURCE 05 -->
+
+                <a
+                    href="#"
+                    class="belajar-resource-card"
+                >
+
+                    <span class="belajar-resource-number">
+                        05
+                    </span>
+
+
+                    <h3>
+                        Academic Vocabulary
+                    </h3>
+
+
+                    <p>
+                        Kumpulan vocabulary yang sering digunakan
+                        dalam pendidikan, ekonomi, politik,
+                        teknologi, dan topik akademik lainnya.
+                    </p>
+
+
+                    <span class="belajar-resource-link">
+                        Buka vocabulary bank →
+                    </span>
+
+                </a>
+
+
+
+                <!-- RESOURCE 06 -->
+
+                <a
+                    href="#"
+                    class="belajar-resource-card"
+                >
+
+                    <span class="belajar-resource-number">
+                        06
+                    </span>
+
+
+                    <h3>
+                        TOEFL & IELTS
+                    </h3>
+
+
+                    <p>
+                        Materi dan catatan untuk membantu
+                        mempersiapkan grammar, vocabulary,
+                        dan reading untuk tes bahasa Inggris.
+                    </p>
+
+
+                    <span class="belajar-resource-link">
+                        Lihat materi →
+                    </span>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             LATIHAN
+             ===================================================== -->
+
+        <section class="latihan-section">
+
+
+            <div class="latihan-inner">
+
+
+                <div class="belajar-section-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            LATIHAN
+                        </p>
+
+
+                        <h2>
+                            Sekarang, coba
+                            gunakan yang kamu pelajari.
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+                        Latihan dibuat supaya kamu tidak hanya
+                        memahami materi, tapi juga terbiasa
+                        menggunakannya.
+                    </p>
+
+                </div>
+
+
+
+                <div class="latihan-grid">
+
+
+                    <!-- =================================================
+                         PRACTICE 01 — GRAMMAR
+                         ================================================= -->
+
+                    <a
+                        href="grammar-practice.html"
+                        class="latihan-card"
+                    >
+
+                        <span class="latihan-number">
+                            01
+                        </span>
+
+
+                        <p class="latihan-type">
+                            GRAMMAR
+                        </p>
+
+
+                        <h3>
+                            Grammar Practice
+                        </h3>
+
+
+                        <p>
+                            Latihan 12 tenses, conditional,
+                            prepositions, subject–verb agreement,
+                            multiple choice, dan translation.
+                        </p>
+
+
+                        <span class="latihan-button">
+                            Mulai latihan →
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- =================================================
+                         PRACTICE 02 — VOCABULARY
+                         ================================================= -->
+
+                    <a
+                        href="vocabulary-practice.html"
+                        class="latihan-card"
+                    >
+
+                        <span class="latihan-number">
+                            02
+                        </span>
+
+
+                        <p class="latihan-type">
+                            VOCABULARY
+                        </p>
+
+
+                        <h3>
+                            Vocabulary Practice
+                        </h3>
+
+
+                        <p>
+                            Temukan arti atau kata yang paling
+                            mendekati dari vocabulary dalam
+                            passage akademik.
+                        </p>
+
+
+                        <span class="latihan-button">
+                            Mulai latihan →
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- =================================================
+                         PRACTICE 03 — SPEAKING
+                         ================================================= -->
+
+                    <a
+                        href="improv-speaking.html"
+                        class="latihan-card"
+                    >
+
+                        <span class="latihan-number">
+                            03
+                        </span>
+
+
+                        <p class="latihan-type">
+                            SPEAKING
+                        </p>
+
+
+                        <h3>
+                            Improv Speaking
+                        </h3>
+
+
+                        <p>
+                            Dapatkan pertanyaan spontan tentang
+                            kehidupan, pendidikan, ekonomi,
+                            teknologi, dan isu yang dekat
+                            dengan kehidupan Indonesia.
+                        </p>
+
+
+                        <span class="latihan-button">
+                            Dapatkan topik →
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             NOTE
+             ===================================================== -->
+
+        <section class="belajar-note">
+
+            <div class="belajar-note-inner">
+
+                <p>
+                    <strong>
+                        Belajar tidak harus selalu serius.
+                    </strong>
+                    Buka satu materi, coba beberapa soal,
+                    atau ambil satu pertanyaan dan bicara
+                    selama beberapa menit. Yang penting,
+                    terus digunakan.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            <img
+                src="images/tatsyafira-logo.png"
+                alt="Tatsyafira"
+            >
+
+
+            <p>
+                Menulis. Mengajar. Bertumbuh.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="catatan.html">
+                Catatan
+            </a>
+
+
+            <a href="belajar.html">
+                Belajar
+            </a>
+
+
+            <a href="#">
+                Kelas
+            </a>
+
+
+            <a href="#">
+                Resources
+            </a>
+
+
+            <a href="#">
+                Toko
+            </a>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 Tatsyafira. All rights reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

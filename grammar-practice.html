@@ -1,0 +1,2887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Grammar Practice | Tatsyafira</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #fafafa;
+      color: #222;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 28px 24px 10px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: #777;
+      transition: 0.2s;
+    }
+
+    .back-link:hover {
+      color: #111;
+    }
+
+    .brand {
+      display: flex;
+      justify-content: center;
+      margin: 8px 0 5px;
+    }
+
+    .brand img {
+      width: 105px;
+      height: auto;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 55px auto 35px;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 42px;
+      line-height: 1.15;
+      font-weight: 400;
+      margin: 0 0 16px;
+    }
+
+    .intro p {
+      max-width: 620px;
+      margin: 0 auto;
+      color: #777;
+      font-size: 17px;
+    }
+
+    .test-container {
+      max-width: 850px;
+      margin: 0 auto 100px;
+      padding: 0 20px;
+    }
+
+    .test-card {
+      background: white;
+      border: 1px solid #e7e7e7;
+      border-radius: 18px;
+      padding: 40px;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.04);
+    }
+
+    .progress-wrapper {
+      margin-bottom: 38px;
+    }
+
+    .progress-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 9px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #888;
+    }
+
+    .progress-bar {
+      height: 5px;
+      background: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: #222;
+      transition: width 0.3s ease;
+    }
+
+    .category-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 12px;
+    }
+
+    .question {
+      font-size: 25px;
+      line-height: 1.45;
+      margin: 0 0 27px;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .option {
+      position: relative;
+    }
+
+    .option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .option label {
+      display: block;
+      padding: 15px 18px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .option label:hover {
+      border-color: #999;
+      background: #fafafa;
+    }
+
+    .option input:checked + label {
+      border-color: #222;
+      background: #f6f6f6;
+    }
+
+    .translation-box {
+      width: 100%;
+      min-height: 120px;
+      resize: vertical;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 16px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      line-height: 1.6;
+      outline: none;
+    }
+
+    .translation-box:focus {
+      border-color: #555;
+    }
+
+    .translation-note {
+      margin-top: 10px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #999;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 35px;
+      gap: 12px;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+    }
+
+    .nav-button {
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-size: 13px;
+      border: 1px solid #222;
+      background: #222;
+      color: white;
+      transition: 0.2s;
+    }
+
+    .nav-button:hover {
+      opacity: 0.8;
+    }
+
+    .nav-button.secondary {
+      background: white;
+      color: #222;
+    }
+
+    .nav-button:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* =========================
+       RESULT
+    ========================= */
+
+    .result {
+      max-width: 1000px;
+      margin: 0 auto 100px;
+      padding: 0 20px;
+    }
+
+    .result-header {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .result-header h2 {
+      font-size: 42px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin: 0 0 10px;
+    }
+
+    .score {
+      font-size: 60px;
+      margin: 10px 0;
+    }
+
+    .score-subtitle {
+      color: #777;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .diagnosis-card {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 25px;
+    }
+
+    .diagnosis-card h3 {
+      font-size: 24px;
+      font-weight: 400;
+      margin: 0 0 14px;
+    }
+
+    .diagnosis-card p {
+      color: #666;
+      margin: 0;
+    }
+
+    .recommendation {
+      margin-top: 22px;
+      padding: 18px;
+      background: #f7f7f7;
+      border-radius: 10px;
+    }
+
+    .recommendation strong {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 7px;
+    }
+
+    .category-results {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .category-result {
+      border: 1px solid #e8e8e8;
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .category-result-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 9px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    .category-result-bar {
+      height: 5px;
+      background: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .category-result-fill {
+      height: 100%;
+      background: #222;
+    }
+
+    /* =========================
+       REVIEW
+    ========================= */
+
+    .wrong-section {
+      margin-top: 55px;
+    }
+
+    .section-heading {
+      margin-bottom: 22px;
+    }
+
+    .section-heading .small-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #999;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-heading h3 {
+      font-size: 32px;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .wrong-card,
+    .review-card {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      padding: 25px;
+      margin-bottom: 16px;
+    }
+
+    .wrong-card {
+      border-left: 4px solid #777;
+    }
+
+    .review-card.correct {
+      border-left: 3px solid #bbb;
+    }
+
+    .review-card.incorrect {
+      border-left: 3px solid #555;
+    }
+
+    .review-number {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: #999;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .review-question {
+      font-size: 20px;
+      line-height: 1.5;
+      margin-bottom: 17px;
+    }
+
+    .answer-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+
+    .answer-box {
+      background: #f8f8f8;
+      border-radius: 9px;
+      padding: 13px 15px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    .answer-box strong {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #999;
+      margin-bottom: 5px;
+    }
+
+    .accepted-answers {
+      margin-bottom: 18px;
+      padding: 15px;
+      background: #fafafa;
+      border-radius: 9px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    .accepted-answers-title {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #999;
+      margin-bottom: 7px;
+    }
+
+    .accepted-answer {
+      margin: 4px 0;
+    }
+
+    .explanation {
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+      color: #555;
+      font-size: 15px;
+    }
+
+    .status {
+      display: inline-block;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 9px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      background: #f1f1f1;
+    }
+
+    .full-review {
+      margin-top: 65px;
+    }
+
+    .option-review {
+      margin-bottom: 18px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .option-review-line {
+      padding: 6px 0;
+    }
+
+    .correct-option {
+      font-weight: bold;
+    }
+
+    .restart-area {
+      text-align: center;
+      margin-top: 45px;
+    }
+
+    .restart-button {
+      display: inline-block;
+      padding: 12px 23px;
+      border: 1px solid #222;
+      border-radius: 999px;
+      background: white;
+      color: #222;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      margin: 5px;
+      transition: 0.2s;
+    }
+
+    .restart-button:hover {
+      background: #222;
+      color: white;
+    }
+
+    .back-button {
+      display: inline-block;
+      padding: 12px 23px;
+      border-radius: 999px;
+      background: #222;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      margin: 5px;
+      transition: 0.2s;
+    }
+
+    .back-button:hover {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 700px) {
+
+      .topbar {
+        padding: 20px 18px 10px;
+      }
+
+      .intro {
+        margin-top: 35px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .test-card {
+        padding: 25px 20px;
+      }
+
+      .question {
+        font-size: 21px;
+      }
+
+      .category-results {
+        grid-template-columns: 1fr;
+      }
+
+      .answer-row {
+        grid-template-columns: 1fr;
+      }
+
+      .result-header h2 {
+        font-size: 34px;
+      }
+
+      .score {
+        font-size: 50px;
+      }
+
+      .section-heading h3 {
+        font-size: 27px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header class="topbar">
+
+    <a href="belajar.html" class="back-link">
+      ← Back to Belajar
+    </a>
+
+    <div class="brand">
+      <img
+        src="images/tatsyafira-logo.png"
+        alt="Tatsyafira"
+      >
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       INTRO
+  ========================= -->
+
+  <section class="intro">
+
+    <div class="eyebrow">
+      Grammar Practice
+    </div>
+
+    <h1>
+      How strong is your grammar?
+    </h1>
+
+    <p>
+      Test your understanding of tenses, conditionals,
+      subject–verb agreement, active and passive voice,
+      and prepositions.
+    </p>
+
+  </section>
+
+
+  <!-- =========================
+       TEST
+  ========================= -->
+
+  <main id="testArea" class="test-container">
+
+    <div class="test-card">
+
+      <div class="progress-wrapper">
+
+        <div class="progress-top">
+
+          <span id="questionCounter">
+            Question 1 of 40
+          </span>
+
+          <span id="categoryCounter">
+            Tenses
+          </span>
+
+        </div>
+
+        <div class="progress-bar">
+
+          <div
+            id="progressFill"
+            class="progress-fill"
+          ></div>
+
+        </div>
+
+      </div>
+
+
+      <div id="questionArea"></div>
+
+
+      <div class="navigation">
+
+        <button
+          id="previousButton"
+          class="nav-button secondary"
+          onclick="previousQuestion()"
+        >
+          Previous
+        </button>
+
+        <button
+          id="nextButton"
+          class="nav-button"
+          onclick="nextQuestion()"
+        >
+          Next
+        </button>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- =========================
+       RESULTS
+  ========================= -->
+
+  <section
+    id="resultArea"
+    class="result hidden"
+  >
+
+    <div class="result-header">
+
+      <div class="eyebrow">
+        Your Grammar Diagnosis
+      </div>
+
+      <h2 id="resultTitle"></h2>
+
+      <div class="score">
+        <span id="scoreNumber"></span>/40
+      </div>
+
+      <div
+        id="scoreSubtitle"
+        class="score-subtitle"
+      ></div>
+
+    </div>
+
+
+    <!-- DIAGNOSIS -->
+
+    <div class="diagnosis-card">
+
+      <h3>
+        Diagnosis
+      </h3>
+
+      <p id="diagnosisText"></p>
+
+      <div
+        id="recommendationBox"
+        class="recommendation"
+      ></div>
+
+      <div
+        id="categoryResults"
+        class="category-results"
+      ></div>
+
+    </div>
+
+
+    <!-- WRONG ANSWERS -->
+
+    <div class="wrong-section">
+
+      <div class="section-heading">
+
+        <div class="small-label">
+          Your mistakes
+        </div>
+
+        <h3 id="wrongHeading"></h3>
+
+      </div>
+
+      <div id="wrongAnswers"></div>
+
+    </div>
+
+
+    <!-- FULL REVIEW -->
+
+    <div class="full-review">
+
+      <div class="section-heading">
+
+        <div class="small-label">
+          Complete review
+        </div>
+
+        <h3>
+          Answer Key &amp; Pembahasan
+        </h3>
+
+      </div>
+
+      <div id="fullReview"></div>
+
+    </div>
+
+
+    <!-- BUTTONS -->
+
+    <div class="restart-area">
+
+      <button
+        class="restart-button"
+        onclick="restartTest()"
+      >
+        Try Again
+      </button>
+
+      <a
+        href="belajar.html"
+        class="back-button"
+      >
+        Back to Belajar
+      </a>
+
+    </div>
+
+  </section>
+
+
+<script>
+
+/* =========================================================
+   QUESTION BANK
+========================================================= */
+
+const questions = [
+
+  /* =======================================================
+     TENSES — 1–10
+  ======================================================= */
+
+  {
+    number: 1,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "She usually _____ coffee in the morning, but today she _____ tea.",
+
+    options: [
+      "drinks / drinks",
+      "drinks / is drinking",
+      "is drinking / drinks",
+      "drank / is drinking"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "<strong>Drinks</strong> is used for a regular habit, while <strong>is drinking</strong> is used for an action happening around now. The words “usually” and “today” give us the clues."
+  },
+
+
+  {
+    number: 2,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "When I arrived at the station, the train _____ already _____.",
+
+    options: [
+      "has / left",
+      "was / leaving",
+      "had / left",
+      "will / leave"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "Use the <strong>past perfect</strong> (had + past participle) for an action that happened before another action in the past. The train left before I arrived."
+  },
+
+
+  {
+    number: 3,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "I _____ this book twice already.",
+
+    options: [
+      "read",
+      "have read",
+      "had read",
+      "am reading"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "Use the <strong>present perfect</strong> (have/has + past participle) for an experience or completed action connected to the present. “Already” is a common clue."
+  },
+
+
+  {
+    number: 4,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "At 8 p.m. last night, I _____ for the exam.",
+
+    options: [
+      "studied",
+      "was studying",
+      "had studied",
+      "have studied"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "Use the <strong>past continuous</strong> for an action that was in progress at a specific time in the past: “At 8 p.m. last night, I was studying.”"
+  },
+
+
+  {
+    number: 5,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "By next year, she _____ her PhD.",
+
+    options: [
+      "completes",
+      "will complete",
+      "will have completed",
+      "has completed"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "Use the <strong>future perfect</strong> (will have + past participle) when an action will be completed before a specific future time: “By next year, she will have completed...”"
+  },
+
+
+  {
+    number: 6,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "She _____ in Berlin since 2020.",
+
+    options: [
+      "lives",
+      "lived",
+      "is living",
+      "has been living"
+    ],
+
+    answer: 3,
+
+    explanation:
+      "Use the <strong>present perfect continuous</strong> for an action or situation that started in the past and continues until now. “Since 2020” gives the starting point."
+  },
+
+
+  {
+    number: 7,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "He _____ for two hours when the meeting finally ended.",
+
+    options: [
+      "waited",
+      "has waited",
+      "had been waiting",
+      "was waiting"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "Use the <strong>past perfect continuous</strong> (had been + -ing) for an activity that continued for a period of time before another past event."
+  },
+
+
+  {
+    number: 8,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "Right now, the technician _____ the system.",
+
+    options: [
+      "repairs",
+      "repaired",
+      "is repairing",
+      "has repaired"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "“Right now” indicates an action happening at this moment, so we use the <strong>present continuous</strong>: is repairing."
+  },
+
+
+  {
+    number: 9,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "By the time we arrive, the train _____.",
+
+    options: [
+      "leaves",
+      "will leave",
+      "will have left",
+      "had left"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "The train will leave before we arrive, so the action will be completed before another future point. Use the <strong>future perfect</strong>: will have left."
+  },
+
+
+  {
+    number: 10,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "By the end of the semester, students _____ several research papers.",
+
+    options: [
+      "write",
+      "will write",
+      "will have written",
+      "are writing"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "“By the end of the semester” refers to a future deadline. Because the papers will be completed before that deadline, use the <strong>future perfect</strong>: will have written."
+  },
+
+
+  /* =======================================================
+     CONDITIONALS — 11–15
+  ======================================================= */
+
+  {
+    number: 11,
+    category: "Conditionals",
+    type: "mcq",
+
+    question:
+      "If water _____ to 100°C, it boils.",
+
+    options: [
+      "will heat",
+      "heated",
+      "heats",
+      "is heating"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "This is a <strong>zero conditional</strong>, used for general truths. The structure is: <strong>If + present simple, present simple</strong>."
+  },
+
+
+  {
+    number: 12,
+    category: "Conditionals",
+    type: "mcq",
+
+    question:
+      "If you _____ early, you will get a better seat.",
+
+    options: [
+      "arrive",
+      "arrived",
+      "will arrive",
+      "had arrived"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "This is a <strong>first conditional</strong>. The structure is: <strong>If + present simple, will + base verb</strong>. Therefore: “If you arrive early...”"
+  },
+
+
+  {
+    number: 13,
+    category: "Conditionals",
+    type: "mcq",
+
+    question:
+      "If I _____ more time yesterday, I would have helped you.",
+
+    options: [
+      "have",
+      "had",
+      "had had",
+      "would have"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "This is a <strong>third conditional</strong>, describing an unreal past situation. The structure is <strong>If + past perfect, would have + past participle</strong>: “If I had had more time...”"
+  },
+
+
+  {
+    number: 14,
+    category: "Conditionals",
+    type: "mcq",
+
+    question:
+      "If I _____ rich, I would travel the world.",
+
+    options: [
+      "am",
+      "was",
+      "were",
+      "had been"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "This is a <strong>second conditional</strong> for an unreal or hypothetical present situation. With “I,” formal English uses <strong>were</strong>: “If I were rich...”"
+  },
+
+
+  {
+    number: 15,
+    category: "Conditionals",
+    type: "mcq",
+
+    question:
+      "If they _____ the warning, the accident could have been avoided.",
+
+    options: [
+      "follow",
+      "followed",
+      "had followed",
+      "would follow"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "This describes an unreal past condition, so it uses the <strong>third conditional</strong>: If + past perfect. Therefore: “If they had followed the warning...”"
+  },
+
+
+  /* =======================================================
+     SUBJECT–VERB AGREEMENT — 16–21
+  ======================================================= */
+
+  {
+    number: 16,
+    category: "Subject–Verb Agreement",
+    type: "mcq",
+
+    question:
+      "Every student _____ to take a test.",
+
+    options: [
+      "have",
+      "has",
+      "are",
+      "were"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "“Every” takes a <strong>singular noun and singular verb</strong>. Therefore, “Every student has...” is correct."
+  },
+
+
+  {
+    number: 17,
+    category: "Subject–Verb Agreement",
+    type: "mcq",
+
+    question:
+      "A large number of letters _____ received yesterday.",
+
+    options: [
+      "was",
+      "is",
+      "were",
+      "has"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "“A number of + plural noun” takes a <strong>plural verb</strong>. Therefore: “A large number of letters were received.”"
+  },
+
+
+  {
+    number: 18,
+    category: "Subject–Verb Agreement",
+    type: "mcq",
+
+    question:
+      "The house between the two bungalows _____ empty.",
+
+    options: [
+      "are",
+      "were",
+      "have",
+      "is"
+    ],
+
+    answer: 3,
+
+    explanation:
+      "The main subject is <strong>the house</strong>, which is singular. The phrase “between the two bungalows” does not change the subject. Therefore: “The house is empty.”"
+  },
+
+
+  {
+    number: 19,
+    category: "Subject–Verb Agreement",
+    type: "mcq",
+
+    question:
+      "Ten miles _____ too far to walk.",
+
+    options: [
+      "are",
+      "were",
+      "is",
+      "have"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "A measurement or distance considered as <strong>one amount</strong> normally takes a singular verb: “Ten miles is too far.”"
+  },
+
+
+  {
+    number: 20,
+    category: "Subject–Verb Agreement",
+    type: "mcq",
+
+    question:
+      "Either my sister or the neighbours _____ looking after the dog.",
+
+    options: [
+      "is",
+      "was",
+      "are",
+      "has"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "With <strong>either...or</strong>, the verb generally agrees with the subject closest to it. “The neighbours” is plural, so we use <strong>are</strong>."
+  },
+
+
+  {
+    number: 21,
+    category: "Subject–Verb Agreement",
+    type: "mcq",
+
+    question:
+      "Physics _____ my favourite subject.",
+
+    options: [
+      "are",
+      "were",
+      "have",
+      "is"
+    ],
+
+    answer: 3,
+
+    explanation:
+      "Although “physics” ends in -s, the academic subject is treated as <strong>singular</strong>: “Physics is my favourite subject.”"
+  },
+
+
+  /* =======================================================
+     ACTIVE / PASSIVE — 22–26
+  ======================================================= */
+
+  {
+    number: 22,
+    category: "Active–Passive Voice",
+    type: "mcq",
+
+    question:
+      "Social media _____ by millions every day.",
+
+    options: [
+      "mention",
+      "is mentioned",
+      "is mentioning",
+      "has mentioned"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "The subject receives the action, so we need the <strong>passive voice</strong>. “Social media is mentioned by millions...”"
+  },
+
+
+  {
+    number: 23,
+    category: "Active–Passive Voice",
+    type: "mcq",
+
+    question:
+      "The project _____ by the team last week.",
+
+    options: [
+      "completed",
+      "was completed",
+      "is completed",
+      "has completed"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "The project receives the action and the event happened last week. Therefore we need the <strong>past simple passive</strong>: was completed."
+  },
+
+
+  {
+    number: 24,
+    category: "Active–Passive Voice",
+    type: "mcq",
+
+    question:
+      "The report _____ by the manager right now.",
+
+    options: [
+      "reviews",
+      "is reviewed",
+      "is being reviewed",
+      "has been reviewed"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "“Right now” indicates an action currently in progress. For a passive action in progress, use the <strong>present continuous passive</strong>: is being reviewed."
+  },
+
+
+  {
+    number: 25,
+    category: "Active–Passive Voice",
+    type: "mcq",
+
+    question:
+      "The results _____ online by now.",
+
+    options: [
+      "are published",
+      "were published",
+      "have been published",
+      "will publish"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "“By now” refers to an action completed before the present moment. Use the <strong>present perfect passive</strong>: have been published."
+  },
+
+
+  {
+    number: 26,
+    category: "Active–Passive Voice",
+    type: "mcq",
+
+    question:
+      "The book _____ by many students before the exam.",
+
+    options: [
+      "has read",
+      "has been read",
+      "was reading",
+      "is reading"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "The book receives the action, so we need passive voice. “Has been read” is the correct <strong>present perfect passive</strong> form."
+  },
+
+
+  /* =======================================================
+     PREPOSITIONS — 27–30
+  ======================================================= */
+
+  {
+    number: 27,
+    category: "Prepositions",
+    type: "mcq",
+
+    question:
+      "She has lived in Istanbul _____ 2022.",
+
+    options: [
+      "for",
+      "since",
+      "at",
+      "by"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "Use <strong>since</strong> with a starting point in time: since 2022. Use “for” with a duration, such as “for four years.”"
+  },
+
+
+  {
+    number: 28,
+    category: "Prepositions",
+    type: "mcq",
+
+    question:
+      "I studied _____ three hours last night.",
+
+    options: [
+      "since",
+      "at",
+      "for",
+      "by"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "Use <strong>for</strong> with a duration: for three hours."
+  },
+
+
+  {
+    number: 29,
+    category: "Prepositions",
+    type: "mcq",
+
+    question:
+      "The meeting starts _____ 9 a.m.",
+
+    options: [
+      "in",
+      "on",
+      "at",
+      "for"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "Use <strong>at</strong> for a specific clock time: at 9 a.m."
+  },
+
+
+  {
+    number: 30,
+    category: "Prepositions",
+    type: "mcq",
+
+    question:
+      "The assignment must be submitted _____ Friday.",
+
+    options: [
+      "at",
+      "by",
+      "since",
+      "for"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "Use <strong>by</strong> to express a deadline. “By Friday” means Friday is the latest acceptable time for submission."
+  },
+
+
+  /* =======================================================
+     TRANSLATION — 31–40
+  ======================================================= */
+
+  {
+    number: 31,
+    category: "Tenses",
+    type: "translation",
+
+    question:
+      "Aku sedang makan ayam goreng sekarang.",
+
+    acceptedAnswers: [
+      "I am eating fried chicken now"
+    ],
+
+    explanation:
+      "“Sedang makan sekarang” describes an action happening at this moment, so use the <strong>present continuous</strong>: am/is/are + verb-ing. Therefore: “I am eating fried chicken now.”"
+  },
+
+
+  {
+    number: 32,
+    category: "Tenses",
+    type: "translation",
+
+    question:
+      "Aku sudah membaca buku itu dua kali.",
+
+    acceptedAnswers: [
+      "I have read the book twice",
+      "I have read that book twice"
+    ],
+
+    explanation:
+      "“Sudah ... dua kali” describes an experience or completed action connected to the present. Use the <strong>present perfect</strong>: have + past participle. Both “the book” and “that book” are acceptable translations of “buku itu.”"
+  },
+
+
+  {
+    number: 33,
+    category: "Conditionals",
+    type: "translation",
+
+    question:
+      "Jika aku belajar, aku akan lulus ujian.",
+
+    acceptedAnswers: [
+      "If I study, I will pass the exam",
+      "If I study, I will pass the test"
+    ],
+
+    explanation:
+      "This is a <strong>first conditional</strong>: If + present simple, will + base verb. Both <strong>exam</strong> and <strong>test</strong> are acceptable translations of “ujian” in this context."
+  },
+
+
+  {
+    number: 34,
+    category: "Conditionals",
+    type: "translation",
+
+    question:
+      "Jika aku lebih tinggi, aku akan bermain basket.",
+
+    acceptedAnswers: [
+      "If I were taller, I would play basketball"
+    ],
+
+    explanation:
+      "This is a <strong>second conditional</strong> because it describes a hypothetical present situation. The standard structure is: If + past simple, would + base verb. With “I,” <strong>were</strong> is the standard formal form."
+  },
+
+
+  {
+    number: 35,
+    category: "Subject–Verb Agreement",
+    type: "translation",
+
+    question:
+      "Setiap siswa memiliki tugas.",
+
+    acceptedAnswers: [
+      "Every student has an assignment",
+      "Every student has a task"
+    ],
+
+    explanation:
+      "“Every student” is grammatically singular, so the verb must be <strong>has</strong>, not have. Both “assignment” and “task” can naturally translate “tugas” depending on context."
+  },
+
+
+  {
+    number: 36,
+    category: "Subject–Verb Agreement",
+    type: "translation",
+
+    question:
+      "Sepuluh kilometer terlalu jauh untuk berjalan.",
+
+    acceptedAnswers: [
+      "Ten kilometers is too far to walk"
+    ],
+
+    explanation:
+      "A distance viewed as one measurement takes a <strong>singular verb</strong>: “Ten kilometers is too far to walk.”"
+  },
+
+
+  {
+    number: 37,
+    category: "Active–Passive Voice",
+    type: "translation",
+
+    question:
+      "Buku itu dibaca oleh banyak siswa.",
+
+    acceptedAnswers: [
+      "The book is read by many students",
+      "That book is read by many students"
+    ],
+
+    explanation:
+      "The Indonesian sentence is passive. For a general present passive, use <strong>is + past participle</strong>. Both “the book” and “that book” can translate “buku itu.”"
+  },
+
+
+  {
+    number: 38,
+    category: "Active–Passive Voice",
+    type: "translation",
+
+    question:
+      "Laporan itu sedang diperiksa oleh manajer sekarang.",
+
+    acceptedAnswers: [
+      "The report is being checked by the manager now",
+      "That report is being checked by the manager now"
+    ],
+
+    explanation:
+      "“Sedang diperiksa sekarang” describes an action currently in progress in passive voice. Use the <strong>present continuous passive</strong>: is being + past participle."
+  },
+
+
+  {
+    number: 39,
+    category: "Tenses",
+    type: "translation",
+
+    question:
+      "Dia (perempuan) sudah tinggal di Istanbul sejak 2022.",
+
+    acceptedAnswers: [
+      "She has lived in Istanbul since 2022",
+      "She has been living in Istanbul since 2022"
+    ],
+
+    explanation:
+      "“Sejak 2022” requires <strong>since</strong> because 2022 is a starting point. Both <strong>has lived</strong> and <strong>has been living</strong> are grammatically possible. The continuous form places more emphasis on the ongoing nature of the situation."
+  },
+
+
+  {
+    number: 40,
+    category: "Tenses",
+    type: "translation",
+
+    question:
+      "Ketika dia (perempuan) menelepon, aku sudah belajar selama tiga jam.",
+
+    acceptedAnswers: [
+      "When she called, I had been studying for three hours",
+      "When she called me, I had been studying for three hours"
+    ],
+
+    explanation:
+      "This sentence specifically tests the <strong>past perfect continuous</strong>. The studying continued for three hours before another past event — “she called.” Therefore we use <strong>had been studying</strong>. “For three hours” expresses the duration of the activity."
+  }
+
+];
+
+
+/* =========================================================
+   STATE
+========================================================= */
+
+let currentQuestion = 0;
+
+let userAnswers =
+  new Array(questions.length).fill(null);
+
+
+/* =========================================================
+   UTILITY FUNCTIONS
+========================================================= */
+
+function escapeHTML(value) {
+
+  if (
+    value === null ||
+    value === undefined
+  ) {
+    return "";
+  }
+
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+
+function normalize(text) {
+
+  return String(text || "")
+    .toLowerCase()
+    .replace(/[.,!?;:"'“”‘’()]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+
+function isCorrect(question, userAnswer) {
+
+  if (
+    userAnswer === null ||
+    userAnswer === undefined ||
+    userAnswer === ""
+  ) {
+    return false;
+  }
+
+
+  /* Multiple choice */
+
+  if (question.type === "mcq") {
+
+    return userAnswer === question.answer;
+  }
+
+
+  /* Translation */
+
+  const normalizedUser =
+    normalize(userAnswer);
+
+
+  return question.acceptedAnswers.some(
+    answer =>
+      normalize(answer) === normalizedUser
+  );
+}
+
+
+/* =========================================================
+   RENDER QUESTION
+========================================================= */
+
+function renderQuestion() {
+
+  const question =
+    questions[currentQuestion];
+
+
+  const questionArea =
+    document.getElementById("questionArea");
+
+
+  document.getElementById("questionCounter")
+    .textContent =
+      `Question ${question.number} of ${questions.length}`;
+
+
+  document.getElementById("categoryCounter")
+    .textContent =
+      question.category;
+
+
+  const progress =
+    ((currentQuestion + 1) /
+      questions.length) * 100;
+
+
+  document.getElementById("progressFill")
+    .style.width =
+      progress + "%";
+
+
+  let html = `
+
+    <div class="category-label">
+      ${escapeHTML(question.category)}
+    </div>
+
+    <div class="question">
+      ${escapeHTML(question.question)}
+    </div>
+
+  `;
+
+
+  /* MULTIPLE CHOICE */
+
+  if (question.type === "mcq") {
+
+    html += `
+      <div class="options">
+    `;
+
+
+    question.options.forEach(
+      (option, index) => {
+
+        const checked =
+          userAnswers[currentQuestion] === index
+            ? "checked"
+            : "";
+
+
+        html += `
+
+          <div class="option">
+
+            <input
+              type="radio"
+              id="option-${currentQuestion}-${index}"
+              name="question-${currentQuestion}"
+              value="${index}"
+              ${checked}
+              onchange="saveMCQAnswer(${index})"
+            >
+
+            <label
+              for="option-${currentQuestion}-${index}"
+            >
+              ${escapeHTML(option)}
+            </label>
+
+          </div>
+
+        `;
+      }
+    );
+
+
+    html += `
+      </div>
+    `;
+
+  }
+
+
+  /* TRANSLATION */
+
+  else {
+
+    const saved =
+      userAnswers[currentQuestion] || "";
+
+
+    html += `
+
+      <textarea
+        id="translationAnswer"
+        class="translation-box"
+        placeholder="Write your English translation here..."
+        oninput="saveTranslationAnswer()"
+      >${escapeHTML(saved)}</textarea>
+
+      <div class="translation-note">
+        Capitalization and punctuation are not important.
+        Alternative correct translations may be accepted.
+      </div>
+
+    `;
+  }
+
+
+  questionArea.innerHTML =
+    html;
+
+
+  document.getElementById("previousButton")
+    .disabled =
+      currentQuestion === 0;
+
+
+  const nextButton =
+    document.getElementById("nextButton");
+
+
+  if (
+    currentQuestion ===
+    questions.length - 1
+  ) {
+
+    nextButton.textContent =
+      "Submit Test";
+
+    nextButton.onclick =
+      submitTest;
+
+  } else {
+
+    nextButton.textContent =
+      "Next";
+
+    nextButton.onclick =
+      nextQuestion;
+  }
+}
+
+
+/* =========================================================
+   SAVE ANSWERS
+========================================================= */
+
+function saveMCQAnswer(index) {
+
+  userAnswers[currentQuestion] =
+    index;
+}
+
+
+function saveTranslationAnswer() {
+
+  const input =
+    document.getElementById(
+      "translationAnswer"
+    );
+
+
+  if (input) {
+
+    userAnswers[currentQuestion] =
+      input.value;
+  }
+}
+
+
+function saveCurrentAnswer() {
+
+  const question =
+    questions[currentQuestion];
+
+
+  if (
+    question.type ===
+    "translation"
+  ) {
+
+    const input =
+      document.getElementById(
+        "translationAnswer"
+      );
+
+
+    if (input) {
+
+      userAnswers[currentQuestion] =
+        input.value.trim();
+    }
+  }
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+function nextQuestion() {
+
+  saveCurrentAnswer();
+
+
+  const answer =
+    userAnswers[currentQuestion];
+
+
+  if (
+    answer === null ||
+    answer === ""
+  ) {
+
+    alert(
+      "Please answer this question before continuing."
+    );
+
+    return;
+  }
+
+
+  if (
+    currentQuestion <
+    questions.length - 1
+  ) {
+
+    currentQuestion++;
+
+    renderQuestion();
+
+  } else {
+
+    submitTest();
+  }
+}
+
+
+function previousQuestion() {
+
+  saveCurrentAnswer();
+
+
+  if (
+    currentQuestion > 0
+  ) {
+
+    currentQuestion--;
+
+    renderQuestion();
+  }
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+function submitTest() {
+
+  saveCurrentAnswer();
+
+
+  const unanswered = [];
+
+
+  questions.forEach(
+    (question, index) => {
+
+      if (
+        userAnswers[index] === null ||
+        userAnswers[index] === ""
+      ) {
+
+        unanswered.push(
+          index + 1
+        );
+      }
+    }
+  );
+
+
+  if (
+    unanswered.length > 0
+  ) {
+
+    alert(
+      "Please answer all questions first.\n\n" +
+      "Unanswered question(s): " +
+      unanswered.join(", ")
+    );
+
+
+    currentQuestion =
+      unanswered[0] - 1;
+
+
+    renderQuestion();
+
+
+    return;
+  }
+
+
+  showResults();
+}
+
+
+/* =========================================================
+   SHOW RESULTS
+========================================================= */
+
+function showResults() {
+
+  let score = 0;
+
+
+  questions.forEach(
+    (question, index) => {
+
+      if (
+        isCorrect(
+          question,
+          userAnswers[index]
+        )
+      ) {
+
+        score++;
+      }
+    }
+  );
+
+
+  const percentage =
+    Math.round(
+      (score / questions.length) *
+      100
+    );
+
+
+  document.getElementById("testArea")
+    .classList.add("hidden");
+
+
+  document.getElementById("resultArea")
+    .classList.remove("hidden");
+
+
+  let title;
+
+
+  if (percentage >= 90) {
+
+    title =
+      "Very Strong Grammar";
+
+  } else if (percentage >= 75) {
+
+    title =
+      "Strong Grammar";
+
+  } else if (percentage >= 60) {
+
+    title =
+      "Developing Grammar";
+
+  } else {
+
+    title =
+      "Grammar Foundation Needs Strengthening";
+  }
+
+
+  document.getElementById("resultTitle")
+    .textContent =
+      title;
+
+
+  document.getElementById("scoreNumber")
+    .textContent =
+      score;
+
+
+  document.getElementById("scoreSubtitle")
+    .textContent =
+      `${percentage}% correct · ${
+        questions.length - score
+      } question(s) to review`;
+
+
+  renderDiagnosis(
+    score,
+    percentage
+  );
+
+
+  renderWrongAnswers();
+
+
+  renderFullReview();
+
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+/* =========================================================
+   DIAGNOSIS
+========================================================= */
+
+function renderDiagnosis(
+  score,
+  percentage
+) {
+
+  const categories = {};
+
+
+  questions.forEach(
+    (question, index) => {
+
+      if (
+        !categories[question.category]
+      ) {
+
+        categories[question.category] = {
+          correct: 0,
+          total: 0
+        };
+      }
+
+
+      categories[
+        question.category
+      ].total++;
+
+
+      if (
+        isCorrect(
+          question,
+          userAnswers[index]
+        )
+      ) {
+
+        categories[
+          question.category
+        ].correct++;
+      }
+    }
+  );
+
+
+  const categoryNames =
+    Object.keys(categories);
+
+
+  let weakestCategory =
+    null;
+
+  let weakestPercentage =
+    101;
+
+
+  categoryNames.forEach(
+    category => {
+
+      const data =
+        categories[category];
+
+
+      const percent =
+        (data.correct /
+          data.total) * 100;
+
+
+      if (
+        percent <
+        weakestPercentage
+      ) {
+
+        weakestPercentage =
+          percent;
+
+        weakestCategory =
+          category;
+      }
+    }
+  );
+
+
+  let diagnosis;
+
+
+  if (percentage >= 90) {
+
+    diagnosis =
+      `Excellent work. Your overall grammar foundation is very strong. You answered ${score} out of ${questions.length} questions correctly. You are ready to move beyond basic accuracy and focus on more advanced structures, vocabulary, reading, writing, and speaking.`;
+
+  } else if (percentage >= 75) {
+
+    diagnosis =
+      `You have a solid grammar foundation. You answered ${score} out of ${questions.length} questions correctly. Most of your core structures are working well, but there are still some areas worth reviewing.`;
+
+  } else if (percentage >= 60) {
+
+    diagnosis =
+      `You have a developing grammar foundation. You understand several important structures, but some patterns still need more practice and reinforcement.`;
+
+  } else {
+
+    diagnosis =
+      `Your grammar foundation needs more structured practice. This is not a problem — the purpose of this test is to identify exactly which areas you should work on next.`;
+  }
+
+
+  if (weakestCategory) {
+
+    diagnosis +=
+      ` Your weakest category was <strong>${escapeHTML(
+        weakestCategory
+      )}</strong> with ${Math.round(
+        weakestPercentage
+      )}%.`;
+  }
+
+
+  document.getElementById("diagnosisText")
+    .innerHTML =
+      diagnosis;
+
+
+  /* RECOMMENDATION */
+
+  let recommendation;
+
+
+  if (
+    weakestCategory &&
+    weakestPercentage < 70
+  ) {
+
+    recommendation =
+      `Prioritize <strong>${escapeHTML(
+        weakestCategory
+      )}</strong> first. Review the explanations below, then practice this topic again before moving to more advanced grammar.`;
+
+  } else if (
+    percentage >= 85
+  ) {
+
+    recommendation =
+      `Your grammar foundation is strong. Your next step should be applying grammar in longer reading, writing, speaking, and real-world English situations.`;
+
+  } else {
+
+    recommendation =
+      `Continue with balanced grammar practice, while paying special attention to the questions you missed below.`;
+  }
+
+
+  document.getElementById(
+    "recommendationBox"
+  ).innerHTML = `
+
+    <strong>
+      Recommended next step
+    </strong>
+
+    ${recommendation}
+
+  `;
+
+
+  /* CATEGORY RESULTS */
+
+  const categoryResults =
+    document.getElementById(
+      "categoryResults"
+    );
+
+
+  categoryResults.innerHTML = "";
+
+
+  categoryNames.forEach(
+    category => {
+
+      const data =
+        categories[category];
+
+
+      const percent =
+        Math.round(
+          (data.correct /
+            data.total) * 100
+        );
+
+
+      categoryResults.innerHTML += `
+
+        <div class="category-result">
+
+          <div class="category-result-top">
+
+            <span>
+              ${escapeHTML(category)}
+            </span>
+
+            <span>
+              ${data.correct}/${data.total}
+              · ${percent}%
+            </span>
+
+          </div>
+
+
+          <div class="category-result-bar">
+
+            <div
+              class="category-result-fill"
+              style="width:${percent}%"
+            ></div>
+
+          </div>
+
+        </div>
+
+      `;
+    }
+  );
+}
+
+
+/* =========================================================
+   WRONG ANSWERS
+========================================================= */
+
+function renderWrongAnswers() {
+
+  const wrongAnswers =
+    document.getElementById(
+      "wrongAnswers"
+    );
+
+
+  const wrongQuestions = [];
+
+
+  questions.forEach(
+    (question, index) => {
+
+      if (
+        !isCorrect(
+          question,
+          userAnswers[index]
+        )
+      ) {
+
+        wrongQuestions.push({
+          question,
+          index
+        });
+      }
+    }
+  );
+
+
+  document.getElementById(
+    "wrongHeading"
+  ).textContent =
+    wrongQuestions.length === 0
+      ? "Perfect score — no mistakes!"
+      : `${wrongQuestions.length} question(s) to review`;
+
+
+  if (
+    wrongQuestions.length === 0
+  ) {
+
+    wrongAnswers.innerHTML = `
+
+      <div class="wrong-card">
+
+        <div class="status">
+          Perfect
+        </div>
+
+        <div class="review-question">
+          You answered every question correctly.
+        </div>
+
+        <div class="explanation">
+          You still have access to the complete
+          answer key below so you can review
+          all of the grammar rules.
+        </div>
+
+      </div>
+
+    `;
+
+    return;
+  }
+
+
+  wrongAnswers.innerHTML = "";
+
+
+  wrongQuestions.forEach(
+    item => {
+
+      const question =
+        item.question;
+
+      const index =
+        item.index;
+
+
+      const userAnswer =
+        getDisplayedUserAnswer(
+          question,
+          index
+        );
+
+
+      const correctAnswers =
+        getCorrectAnswers(question);
+
+
+      wrongAnswers.innerHTML += `
+
+        <div class="wrong-card">
+
+          <div class="status">
+            Question ${question.number} · Incorrect
+          </div>
+
+
+          <div class="review-number">
+            ${escapeHTML(question.category)}
+          </div>
+
+
+          <div class="review-question">
+            ${escapeHTML(question.question)}
+          </div>
+
+
+          <div class="answer-row">
+
+            <div class="answer-box">
+
+              <strong>
+                Your answer
+              </strong>
+
+              ${escapeHTML(userAnswer)}
+
+            </div>
+
+
+            <div class="answer-box">
+
+              <strong>
+                Accepted answer(s)
+              </strong>
+
+              ${correctAnswers
+                .map(answer =>
+                  escapeHTML(answer)
+                )
+                .join("<br>")}
+
+            </div>
+
+          </div>
+
+
+          <div class="explanation">
+
+            <strong>
+              Pembahasan:
+            </strong>
+
+            <br><br>
+
+            ${question.explanation}
+
+          </div>
+
+        </div>
+
+      `;
+    }
+  );
+}
+
+
+/* =========================================================
+   FULL ANSWER KEY & PEMBAHASAN
+========================================================= */
+
+function renderFullReview() {
+
+  const fullReview =
+    document.getElementById(
+      "fullReview"
+    );
+
+
+  fullReview.innerHTML = "";
+
+
+  questions.forEach(
+    (question, index) => {
+
+      const correct =
+        isCorrect(
+          question,
+          userAnswers[index]
+        );
+
+
+      const userAnswer =
+        getDisplayedUserAnswer(
+          question,
+          index
+        );
+
+
+      const correctAnswers =
+        getCorrectAnswers(question);
+
+
+      let optionsHTML = "";
+
+
+      /* MCQ OPTIONS */
+
+      if (
+        question.type === "mcq"
+      ) {
+
+        optionsHTML = `
+
+          <div class="option-review">
+
+            ${question.options
+              .map(
+                (option, optionIndex) => {
+
+                  const isCorrectOption =
+                    optionIndex ===
+                    question.answer;
+
+
+                  const letter =
+                    String.fromCharCode(
+                      65 + optionIndex
+                    );
+
+
+                  return `
+
+                    <div
+                      class="
+                        option-review-line
+                        ${
+                          isCorrectOption
+                            ? "correct-option"
+                            : ""
+                        }
+                      "
+                    >
+
+                      ${letter}.
+                      ${escapeHTML(option)}
+
+                      ${
+                        isCorrectOption
+                          ? " ✓"
+                          : ""
+                      }
+
+                    </div>
+
+                  `;
+                }
+              )
+              .join("")}
+
+          </div>
+
+        `;
+
+      }
+
+
+      /* TRANSLATION ACCEPTED ANSWERS */
+
+      else {
+
+        optionsHTML = `
+
+          <div class="accepted-answers">
+
+            <div class="accepted-answers-title">
+              Accepted answer(s)
+            </div>
+
+            ${correctAnswers
+              .map(
+                answer => `
+
+                  <div class="accepted-answer">
+                    ✓ ${escapeHTML(answer)}
+                  </div>
+
+                `
+              )
+              .join("")}
+
+          </div>
+
+        `;
+      }
+
+
+      fullReview.innerHTML += `
+
+        <div
+          class="
+            review-card
+            ${
+              correct
+                ? "correct"
+                : "incorrect"
+            }
+          "
+        >
+
+          <div class="status">
+
+            Question ${question.number}
+            ·
+            ${
+              correct
+                ? "Correct ✓"
+                : "Incorrect ✕"
+            }
+
+          </div>
+
+
+          <div class="review-number">
+
+            ${escapeHTML(question.category)}
+
+          </div>
+
+
+          <div class="review-question">
+
+            ${escapeHTML(question.question)}
+
+          </div>
+
+
+          ${optionsHTML}
+
+
+          <div class="answer-row">
+
+            <div class="answer-box">
+
+              <strong>
+                Your answer
+              </strong>
+
+              ${escapeHTML(userAnswer)}
+
+            </div>
+
+
+            <div class="answer-box">
+
+              <strong>
+                Correct answer
+              </strong>
+
+              ${correctAnswers
+                .map(answer =>
+                  escapeHTML(answer)
+                )
+                .join("<br>")}
+
+            </div>
+
+          </div>
+
+
+          <div class="explanation">
+
+            <strong>
+              Pembahasan:
+            </strong>
+
+            <br><br>
+
+            ${question.explanation}
+
+          </div>
+
+        </div>
+
+      `;
+    }
+  );
+}
+
+
+/* =========================================================
+   ANSWER HELPERS
+========================================================= */
+
+function getCorrectAnswers(question) {
+
+  if (
+    question.type === "mcq"
+  ) {
+
+    return [
+      question.options[
+        question.answer
+      ]
+    ];
+  }
+
+
+  return question.acceptedAnswers;
+}
+
+
+function getDisplayedUserAnswer(
+  question,
+  index
+) {
+
+  const answer =
+    userAnswers[index];
+
+
+  if (
+    answer === null ||
+    answer === undefined ||
+    answer === ""
+  ) {
+
+    return "No answer";
+  }
+
+
+  if (
+    question.type === "mcq"
+  ) {
+
+    return (
+      question.options[answer] ||
+      "No answer"
+    );
+  }
+
+
+  return answer;
+}
+
+
+/* =========================================================
+   RESTART
+========================================================= */
+
+function restartTest() {
+
+  currentQuestion = 0;
+
+
+  userAnswers =
+    new Array(
+      questions.length
+    ).fill(null);
+
+
+  document.getElementById(
+    "resultArea"
+  ).classList.add("hidden");
+
+
+  document.getElementById(
+    "testArea"
+  ).classList.remove("hidden");
+
+
+  renderQuestion();
+
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+/* =========================================================
+   START TEST
+========================================================= */
+
+renderQuestion();
+
+</script>
+
+</body>
+</html>

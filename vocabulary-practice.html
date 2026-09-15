@@ -1,0 +1,3084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vocabulary Practice | Tatsyafira</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #fafafa;
+      color: #222;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .topbar {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 28px 24px 10px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: #777;
+      transition: 0.2s;
+    }
+
+    .back-link:hover {
+      color: #111;
+    }
+
+    .brand {
+      display: flex;
+      justify-content: center;
+      margin: 8px 0 5px;
+    }
+
+    .brand img {
+      width: 105px;
+      height: auto;
+    }
+
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      max-width: 760px;
+      margin: 55px auto 35px;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 42px;
+      line-height: 1.15;
+      font-weight: 400;
+      margin: 0 0 16px;
+    }
+
+    .intro p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #777;
+      font-size: 17px;
+    }
+
+
+    /* =========================
+       TEST
+    ========================= */
+
+    .test-container {
+      max-width: 850px;
+      margin: 0 auto 100px;
+      padding: 0 20px;
+    }
+
+    .test-card {
+      background: white;
+      border: 1px solid #e7e7e7;
+      border-radius: 18px;
+      padding: 40px;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.04);
+    }
+
+    .progress-wrapper {
+      margin-bottom: 38px;
+    }
+
+    .progress-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 9px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #888;
+    }
+
+    .progress-bar {
+      height: 5px;
+      background: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: #222;
+      transition: width 0.3s ease;
+    }
+
+    .category-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 10px;
+    }
+
+    .question-type {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 12px;
+    }
+
+    .question {
+      font-size: 24px;
+      line-height: 1.5;
+      margin: 0 0 27px;
+    }
+
+    .target-word {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      color: #555;
+      background: #f6f6f6;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 22px;
+    }
+
+    .target-word strong {
+      color: #222;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .option {
+      position: relative;
+    }
+
+    .option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .option label {
+      display: block;
+      padding: 15px 18px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .option label:hover {
+      border-color: #999;
+      background: #fafafa;
+    }
+
+    .option input:checked + label {
+      border-color: #222;
+      background: #f6f6f6;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 35px;
+      gap: 12px;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+    }
+
+    .nav-button {
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-size: 13px;
+      border: 1px solid #222;
+      background: #222;
+      color: white;
+      transition: 0.2s;
+    }
+
+    .nav-button:hover {
+      opacity: 0.8;
+    }
+
+    .nav-button.secondary {
+      background: white;
+      color: #222;
+    }
+
+    .nav-button:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+
+    /* =========================
+       RESULTS
+    ========================= */
+
+    .result {
+      max-width: 1000px;
+      margin: 0 auto 100px;
+      padding: 0 20px;
+    }
+
+    .result-header {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .result-header h2 {
+      font-size: 42px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin: 0 0 10px;
+    }
+
+    .score {
+      font-size: 60px;
+      margin: 10px 0;
+    }
+
+    .score-subtitle {
+      color: #777;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .diagnosis-card {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 25px;
+    }
+
+    .diagnosis-card h3 {
+      font-size: 24px;
+      font-weight: 400;
+      margin: 0 0 14px;
+    }
+
+    .diagnosis-card p {
+      color: #666;
+      margin: 0;
+    }
+
+    .recommendation {
+      margin-top: 22px;
+      padding: 18px;
+      background: #f7f7f7;
+      border-radius: 10px;
+      color: #555;
+    }
+
+    .recommendation strong {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 7px;
+    }
+
+    .category-results {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .category-result {
+      border: 1px solid #e8e8e8;
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .category-result-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 9px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    .category-result-bar {
+      height: 5px;
+      background: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .category-result-fill {
+      height: 100%;
+      background: #222;
+    }
+
+
+    /* =========================
+       VOCABULARY DIAGNOSIS
+    ========================= */
+
+    .vocab-focus {
+      margin-top: 25px;
+      padding-top: 25px;
+      border-top: 1px solid #eee;
+    }
+
+    .vocab-focus h4 {
+      font-size: 19px;
+      font-weight: 400;
+      margin: 0 0 15px;
+    }
+
+    .focus-word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .focus-word {
+      background: #f5f5f5;
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #555;
+    }
+
+
+    /* =========================
+       REVIEW
+    ========================= */
+
+    .wrong-section {
+      margin-top: 55px;
+    }
+
+    .section-heading {
+      margin-bottom: 22px;
+    }
+
+    .section-heading .small-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #999;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-heading h3 {
+      font-size: 32px;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .wrong-card,
+    .review-card {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      padding: 25px;
+      margin-bottom: 16px;
+    }
+
+    .wrong-card {
+      border-left: 4px solid #777;
+    }
+
+    .review-card.correct {
+      border-left: 3px solid #bbb;
+    }
+
+    .review-card.incorrect {
+      border-left: 3px solid #555;
+    }
+
+    .review-number {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: #999;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .review-question {
+      font-size: 20px;
+      line-height: 1.5;
+      margin-bottom: 17px;
+    }
+
+    .answer-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+
+    .answer-box {
+      background: #f8f8f8;
+      border-radius: 9px;
+      padding: 13px 15px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    .answer-box strong {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #999;
+      margin-bottom: 5px;
+    }
+
+    .option-review {
+      margin-bottom: 18px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .option-review-line {
+      padding: 6px 0;
+    }
+
+    .correct-option {
+      font-weight: bold;
+    }
+
+    .explanation {
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+      color: #555;
+      font-size: 15px;
+    }
+
+    .status {
+      display: inline-block;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 9px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      background: #f1f1f1;
+    }
+
+    .full-review {
+      margin-top: 65px;
+    }
+
+    .restart-area {
+      text-align: center;
+      margin-top: 45px;
+    }
+
+    .restart-button {
+      display: inline-block;
+      padding: 12px 23px;
+      border: 1px solid #222;
+      border-radius: 999px;
+      background: white;
+      color: #222;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      margin: 5px;
+      transition: 0.2s;
+    }
+
+    .restart-button:hover {
+      background: #222;
+      color: white;
+    }
+
+    .back-button {
+      display: inline-block;
+      padding: 12px 23px;
+      border-radius: 999px;
+      background: #222;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      margin: 5px;
+      transition: 0.2s;
+    }
+
+    .back-button:hover {
+      opacity: 0.8;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+      .topbar {
+        padding: 20px 18px 10px;
+      }
+
+      .intro {
+        margin-top: 35px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .test-card {
+        padding: 25px 20px;
+      }
+
+      .question {
+        font-size: 21px;
+      }
+
+      .category-results {
+        grid-template-columns: 1fr;
+      }
+
+      .answer-row {
+        grid-template-columns: 1fr;
+      }
+
+      .result-header h2 {
+        font-size: 34px;
+      }
+
+      .score {
+        font-size: 50px;
+      }
+
+      .section-heading h3 {
+        font-size: 27px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header class="topbar">
+
+    <a
+      href="belajar.html"
+      class="back-link"
+    >
+      ← Back to Belajar
+    </a>
+
+    <div class="brand">
+
+      <img
+        src="images/tatsyafira-logo.png"
+        alt="Tatsyafira"
+      >
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       INTRO
+  ========================= -->
+
+  <section class="intro">
+
+    <div class="eyebrow">
+      Vocabulary Practice
+    </div>
+
+    <h1>
+      How strong is your vocabulary?
+    </h1>
+
+    <p>
+      Practice academic vocabulary through
+      context, synonyms, antonyms, collocations,
+      and TOEFL-style vocabulary questions.
+    </p>
+
+  </section>
+
+
+  <!-- =========================
+       TEST
+  ========================= -->
+
+  <main
+    id="testArea"
+    class="test-container"
+  >
+
+    <div class="test-card">
+
+      <div class="progress-wrapper">
+
+        <div class="progress-top">
+
+          <span id="questionCounter">
+            Question 1 of 40
+          </span>
+
+          <span id="questionType">
+            Meaning in Context
+          </span>
+
+        </div>
+
+        <div class="progress-bar">
+
+          <div
+            id="progressFill"
+            class="progress-fill"
+          ></div>
+
+        </div>
+
+      </div>
+
+
+      <div id="questionArea"></div>
+
+
+      <div class="navigation">
+
+        <button
+          id="previousButton"
+          class="nav-button secondary"
+          onclick="previousQuestion()"
+        >
+          Previous
+        </button>
+
+        <button
+          id="nextButton"
+          class="nav-button"
+          onclick="nextQuestion()"
+        >
+          Next
+        </button>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- =========================
+       RESULT
+  ========================= -->
+
+  <section
+    id="resultArea"
+    class="result hidden"
+  >
+
+    <div class="result-header">
+
+      <div class="eyebrow">
+        Your Vocabulary Diagnosis
+      </div>
+
+      <h2 id="resultTitle"></h2>
+
+      <div class="score">
+
+        <span id="scoreNumber"></span>/40
+
+      </div>
+
+      <div
+        id="scoreSubtitle"
+        class="score-subtitle"
+      ></div>
+
+    </div>
+
+
+    <!-- =========================
+         MAIN DIAGNOSIS
+    ========================= -->
+
+    <div class="diagnosis-card">
+
+      <h3>
+        Diagnosis
+      </h3>
+
+      <p id="diagnosisText"></p>
+
+
+      <div
+        id="recommendationBox"
+        class="recommendation"
+      ></div>
+
+
+      <div
+        id="categoryResults"
+        class="category-results"
+      ></div>
+
+
+      <div
+        id="vocabFocus"
+        class="vocab-focus"
+      ></div>
+
+    </div>
+
+
+    <!-- =========================
+         WRONG ANSWERS
+    ========================= -->
+
+    <div class="wrong-section">
+
+      <div class="section-heading">
+
+        <div class="small-label">
+          Your mistakes
+        </div>
+
+        <h3 id="wrongHeading"></h3>
+
+      </div>
+
+      <div id="wrongAnswers"></div>
+
+    </div>
+
+
+    <!-- =========================
+         FULL REVIEW
+    ========================= -->
+
+    <div class="full-review">
+
+      <div class="section-heading">
+
+        <div class="small-label">
+          Complete review
+        </div>
+
+        <h3>
+          Answer Key &amp; Pembahasan
+        </h3>
+
+      </div>
+
+      <div id="fullReview"></div>
+
+    </div>
+
+
+    <!-- =========================
+         BUTTONS
+    ========================= -->
+
+    <div class="restart-area">
+
+      <button
+        class="restart-button"
+        onclick="restartTest()"
+      >
+        Try Again
+      </button>
+
+      <a
+        href="belajar.html"
+        class="back-button"
+      >
+        Back to Belajar
+      </a>
+
+    </div>
+
+  </section>
+
+
+<script>
+
+
+/* =========================================================
+   QUESTION BANK
+   40 QUESTIONS
+========================================================= */
+
+const questions = [
+
+  /* =======================================================
+     EDUCATION — 1 TO 8
+  ======================================================= */
+
+
+  {
+    number: 1,
+    category: "Education",
+    type: "Meaning in Context",
+
+    question:
+      "A well-designed curriculum provides students with a clear structure for what they are expected to learn throughout the academic year.",
+
+    targetWord:
+      "curriculum",
+
+    options: [
+      "a plan of subjects and learning content",
+      "a student's final grade",
+      "a teacher's professional qualification",
+      "a university admission requirement"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Curriculum</strong> refers to the subjects, content, and learning experiences planned for a course or educational program. In the sentence, it describes the structure of what students are expected to learn."
+  },
+
+
+  {
+    number: 2,
+    category: "Education",
+    type: "Closest Meaning",
+
+    question:
+      "The ability to read and write is considered an essential foundation for academic success.",
+
+    targetWord:
+      "literacy",
+
+    options: [
+      "the ability to read and write",
+      "the ability to memorize information",
+      "the ability to conduct scientific research",
+      "the ability to communicate politically"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Literacy</strong> means the ability to read and write. Your class material specifically uses literacy as a fundamental skill for academic success."
+  },
+
+
+  {
+    number: 3,
+    category: "Education",
+    type: "Meaning in Context",
+
+    question:
+      "Teachers use regular assessment to monitor students' progress and identify areas that require additional support.",
+
+    targetWord:
+      "assessment",
+
+    options: [
+      "the process of evaluating learning or performance",
+      "the process of designing a curriculum",
+      "the process of applying for university",
+      "the process of teaching a new subject"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Assessment</strong> is the process of evaluating students' learning, knowledge, skills, or performance. Exams and assignments are common forms of assessment."
+  },
+
+
+  {
+    number: 4,
+    category: "Education",
+    type: "Closest Meaning",
+
+    question:
+      "Technology can facilitate the learning process by giving students faster access to information and educational resources.",
+
+    targetWord:
+      "facilitate",
+
+    options: [
+      "make something easier",
+      "make something more expensive",
+      "prevent something from happening",
+      "measure something accurately"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Facilitate</strong> means to make a process easier or smoother. Here, technology makes learning easier by improving access to resources."
+  },
+
+
+  {
+    number: 5,
+    category: "Education",
+    type: "Synonym",
+
+    question:
+      "Which word is closest in meaning to <strong>fundamental</strong>?",
+
+    options: [
+      "temporary",
+      "basic and extremely important",
+      "optional",
+      "unusual"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "<strong>Fundamental</strong> means basic, essential, or extremely important to something. Education is described as fundamental because it is a major foundation of social development."
+  },
+
+
+  {
+    number: 6,
+    category: "Education",
+    type: "Context Completion",
+
+    question:
+      "Schools should ______ equal access to education by providing support to students from different backgrounds.",
+
+    options: [
+      "promote",
+      "violate",
+      "restrict",
+      "fluctuate"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Promote</strong> means to encourage or support something. “Promote equal access” is an appropriate academic collocation."
+  },
+
+
+  {
+    number: 7,
+    category: "Education",
+    type: "Closest Meaning",
+
+    question:
+      "Students from disadvantaged communities may face greater barriers to accessing quality education.",
+
+    targetWord:
+      "disadvantaged",
+
+    options: [
+      "having fewer advantages or opportunities",
+      "having exceptional academic ability",
+      "having complete financial independence",
+      "having greater political authority"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Disadvantaged</strong> describes people or groups that have fewer opportunities or resources compared with others."
+  },
+
+
+  {
+    number: 8,
+    category: "Education",
+    type: "Meaning in Context",
+
+    question:
+      "Strong analytical skills allow students to examine information carefully and identify relationships between ideas.",
+
+    targetWord:
+      "analytical",
+
+    options: [
+      "related to examining information logically",
+      "related to memorizing information quickly",
+      "related to communicating emotionally",
+      "related to following instructions without question"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Analytical</strong> refers to examining information carefully and logically in order to understand it or reach a conclusion."
+  },
+
+
+  /* =======================================================
+     POLITICS & GOVERNMENT — 9 TO 16
+  ======================================================= */
+
+
+  {
+    number: 9,
+    category: "Politics & Government",
+    type: "Meaning in Context",
+
+    question:
+      "Government officials exercise authority when they make decisions that affect public institutions.",
+
+    targetWord:
+      "authority",
+
+    options: [
+      "the power or right to make decisions",
+      "the obligation to obey another country",
+      "the process of holding an election",
+      "the distribution of public resources"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Authority</strong> refers to the power or right to make decisions, give orders, or control something."
+  },
+
+
+  {
+    number: 10,
+    category: "Politics & Government",
+    type: "Closest Meaning",
+
+    question:
+      "Governments establish regulations to define acceptable behavior and administrative procedures.",
+
+    targetWord:
+      "regulations",
+
+    options: [
+      "official rules",
+      "political campaigns",
+      "international negotiations",
+      "economic forecasts"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Regulations</strong> are official rules established by an authority or government."
+  },
+
+
+  {
+    number: 11,
+    category: "Politics & Government",
+    type: "Meaning in Context",
+
+    question:
+      "The legislative body is responsible for debating and passing laws.",
+
+    targetWord:
+      "legislative body",
+
+    options: [
+      "a group responsible for making laws",
+      "a group responsible for enforcing court decisions",
+      "a group responsible for conducting elections",
+      "a group responsible for managing international trade"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "A <strong>legislative body</strong> is the branch or institution responsible for making and passing laws."
+  },
+
+
+  {
+    number: 12,
+    category: "Politics & Government",
+    type: "Closest Meaning",
+
+    question:
+      "Government transparency can strengthen public trust because citizens can see how decisions are made.",
+
+    targetWord:
+      "transparency",
+
+    options: [
+      "openness and clarity",
+      "political authority",
+      "legal punishment",
+      "economic independence"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Transparency</strong> means openness and clarity, particularly about decisions, actions, information, or processes."
+  },
+
+
+  {
+    number: 13,
+    category: "Politics & Government",
+    type: "Meaning in Context",
+
+    question:
+      "Officials must be held accountable for decisions that affect the public.",
+
+    targetWord:
+      "accountable",
+
+    options: [
+      "responsible for their actions",
+      "free from all legal obligations",
+      "protected from public criticism",
+      "authorized to ignore regulations"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Accountable</strong> means responsible for actions or decisions and expected to explain or justify them."
+  },
+
+
+  {
+    number: 14,
+    category: "Politics & Government",
+    type: "Opposite Meaning",
+
+    question:
+      "Which word is closest in meaning to the opposite of <strong>legitimacy</strong> when discussing political authority?",
+
+    options: [
+      "lawfulness",
+      "acceptance",
+      "illegitimacy",
+      "stability"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "<strong>Legitimacy</strong> refers to being lawful, justified, or accepted as rightful. Its opposite is <strong>illegitimacy</strong>."
+  },
+
+
+  {
+    number: 15,
+    category: "Politics & Government",
+    type: "Meaning in Context",
+
+    question:
+      "A country's sovereignty allows it to make decisions about its internal affairs without external control.",
+
+    targetWord:
+      "sovereignty",
+
+    options: [
+      "the right of a state to govern itself",
+      "the responsibility to obey another country",
+      "the process of negotiating a trade agreement",
+      "the ability to control international markets"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Sovereignty</strong> refers to the authority of a state to govern itself and make its own decisions without outside interference."
+  },
+
+
+  {
+    number: 16,
+    category: "Politics & Government",
+    type: "Context Completion",
+
+    question:
+      "International disputes are often addressed through ______ rather than military force.",
+
+    options: [
+      "diplomacy",
+      "legislation",
+      "compliance",
+      "accountability"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Diplomacy</strong> involves negotiation and communication between countries or political groups, particularly when resolving disagreements."
+  },
+
+
+  /* =======================================================
+     ECONOMICS — 17 TO 24
+  ======================================================= */
+
+
+  {
+    number: 17,
+    category: "Economics",
+    type: "Meaning in Context",
+
+    question:
+      "Higher productivity allows firms to produce more goods and services with the same amount of resources.",
+
+    targetWord:
+      "productivity",
+
+    options: [
+      "the efficiency with which inputs are converted into output",
+      "the total amount of money consumers spend",
+      "the number of workers employed by a company",
+      "the level of government taxation"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Productivity</strong> concerns how efficiently resources such as labor and capital are used to produce goods or services."
+  },
+
+
+  {
+    number: 18,
+    category: "Economics",
+    type: "Closest Meaning",
+
+    question:
+      "Household consumption increased after wages and employment opportunities improved.",
+
+    targetWord:
+      "consumption",
+
+    options: [
+      "the use or purchase of goods and services",
+      "the production of government regulations",
+      "the distribution of natural resources",
+      "the movement of workers between countries"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Consumption</strong> refers to the use or purchase of goods and services by consumers."
+  },
+
+
+  {
+    number: 19,
+    category: "Economics",
+    type: "Meaning in Context",
+
+    question:
+      "The government must carefully allocate limited resources among education, healthcare, and infrastructure.",
+
+    targetWord:
+      "allocate",
+
+    options: [
+      "distribute or assign",
+      "destroy completely",
+      "borrow from another country",
+      "increase unexpectedly"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Allocate</strong> means to distribute or assign resources, money, time, or responsibilities for particular purposes."
+  },
+
+
+  {
+    number: 20,
+    category: "Economics",
+    type: "Closest Meaning",
+
+    question:
+      "Economic inequality can restrict opportunities for people from low-income households.",
+
+    targetWord:
+      "inequality",
+
+    options: [
+      "an unequal distribution of resources or opportunities",
+      "a balanced distribution of income",
+      "rapid economic development",
+      "an increase in employment"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Inequality</strong> refers to differences or unequal distribution of income, resources, opportunities, or social conditions."
+  },
+
+
+  {
+    number: 21,
+    category: "Economics",
+    type: "Meaning in Context",
+
+    question:
+      "A budget deficit occurs when government spending exceeds government revenue.",
+
+    targetWord:
+      "deficit",
+
+    options: [
+      "a situation in which spending is greater than revenue",
+      "a situation in which revenue exceeds spending",
+      "a balanced financial position",
+      "an increase in foreign investment"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "A <strong>deficit</strong> occurs when expenditure is greater than income or revenue during a particular period."
+  },
+
+
+  {
+    number: 22,
+    category: "Economics",
+    type: "Closest Meaning",
+
+    question:
+      "The exchange rate determines how much one currency is worth relative to another.",
+
+    targetWord:
+      "exchange rate",
+
+    options: [
+      "the value of one currency relative to another",
+      "the amount of tax paid on imports",
+      "the total value of national production",
+      "the cost of producing a domestic product"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "An <strong>exchange rate</strong> is the value of one currency expressed in terms of another currency."
+  },
+
+
+  {
+    number: 23,
+    category: "Economics",
+    type: "Context Completion",
+
+    question:
+      "The government increased public investment to ______ economic activity during the recession.",
+
+    options: [
+      "stimulate",
+      "violate",
+      "restrict",
+      "allocate"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Stimulate</strong> means to encourage or increase activity. Governments may use spending or other policies to stimulate economic activity."
+  },
+
+
+  {
+    number: 24,
+    category: "Economics",
+    type: "Meaning in Context",
+
+    question:
+      "Investment in transportation and communication is important because adequate infrastructure supports economic development.",
+
+    targetWord:
+      "infrastructure",
+
+    options: [
+      "basic systems and facilities supporting society and economic activity",
+      "individual consumer preferences",
+      "government election campaigns",
+      "short-term financial profits"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Infrastructure</strong> includes essential systems and facilities such as transportation, energy, and communication networks."
+  },
+
+
+  /* =======================================================
+     ECONOMICS — 25 TO 28
+  ======================================================= */
+
+
+  {
+    number: 25,
+    category: "Economics",
+    type: "Closest Meaning",
+
+    question:
+      "A competitive market can improve market efficiency by encouraging firms to use resources effectively.",
+
+    targetWord:
+      "efficiency",
+
+    options: [
+      "the ability to achieve results with minimal waste",
+      "the ability to increase government spending",
+      "the process of reducing international trade",
+      "the amount of money borrowed by consumers"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Efficiency</strong> refers to achieving a desired result while using resources effectively and minimizing waste."
+  },
+
+
+  {
+    number: 26,
+    category: "Economics",
+    type: "Meaning in Context",
+
+    question:
+      "Income inequality may reduce economic mobility because people from disadvantaged backgrounds have fewer opportunities to improve their socioeconomic position.",
+
+    targetWord:
+      "economic mobility",
+
+    options: [
+      "the ability to move to a different socioeconomic position",
+      "the movement of money between banks",
+      "the movement of workers between countries",
+      "the expansion of international trade"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Economic mobility</strong> refers to the ability of individuals or households to move to a different economic or socioeconomic position."
+  },
+
+
+  {
+    number: 27,
+    category: "Economics",
+    type: "Context Completion",
+
+    question:
+      "A country's ______ policy involves decisions about government spending and taxation.",
+
+    options: [
+      "fiscal",
+      "foreign",
+      "educational",
+      "environmental"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Fiscal policy</strong> concerns government spending and taxation and is used to influence economic activity."
+  },
+
+
+  {
+    number: 28,
+    category: "Economics",
+    type: "Opposite Meaning",
+
+    question:
+      "Which word is closest in meaning to the opposite of <strong>economic stability</strong>?",
+
+    options: [
+      "economic security",
+      "economic volatility",
+      "economic balance",
+      "economic growth"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "<strong>Stability</strong> describes a steady and secure condition. <strong>Volatility</strong> refers to frequent or unpredictable changes, making it the closest opposite."
+  },
+
+
+  /* =======================================================
+     ENVIRONMENT — 29 TO 34
+  ======================================================= */
+
+
+  {
+    number: 29,
+    category: "Environment",
+    type: "Meaning in Context",
+
+    question:
+      "Rapid industrialization has contributed to environmental degradation in many regions.",
+
+    targetWord:
+      "environmental degradation",
+
+    options: [
+      "the deterioration or damage of the natural environment",
+      "the protection of natural ecosystems",
+      "the expansion of renewable energy",
+      "the improvement of environmental conditions"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Environmental degradation</strong> means the deterioration or damage of the natural environment."
+  },
+
+
+  {
+    number: 30,
+    category: "Environment",
+    type: "Closest Meaning",
+
+    question:
+      "Deforestation destroys habitats and can reduce biodiversity.",
+
+    targetWord:
+      "biodiversity",
+
+    options: [
+      "the variety of living organisms in an environment",
+      "the amount of pollution in an ecosystem",
+      "the number of environmental regulations",
+      "the level of carbon emissions"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Biodiversity</strong> refers to the variety of living organisms, including different species, within an ecosystem or environment."
+  },
+
+
+  {
+    number: 31,
+    category: "Environment",
+    type: "Context Completion",
+
+    question:
+      "Governments promote renewable energy in order to reduce dependence on ______.",
+
+    options: [
+      "fossil fuels",
+      "biodiversity",
+      "natural habitats",
+      "environmental awareness"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Fossil fuels</strong> such as coal, oil, and natural gas are major sources of greenhouse-gas emissions. Renewable energy is promoted as an alternative."
+  },
+
+
+  {
+    number: 32,
+    category: "Environment",
+    type: "Closest Meaning",
+
+    question:
+      "Conservation efforts aim to preserve endangered species and maintain ecological balance.",
+
+    targetWord:
+      "conservation",
+
+    options: [
+      "the protection and careful management of natural resources",
+      "the expansion of industrial activity",
+      "the destruction of natural habitats",
+      "the measurement of economic growth"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Conservation</strong> involves protecting and carefully managing natural environments, resources, and species."
+  },
+
+
+  {
+    number: 33,
+    category: "Environment",
+    type: "Meaning in Context",
+
+    question:
+      "Climate adaptation strategies help societies cope with environmental changes that are already occurring.",
+
+    targetWord:
+      "adaptation",
+
+    options: [
+      "adjustment to existing or changing conditions",
+      "complete prevention of climate change",
+      "the removal of all environmental risks",
+      "the expansion of fossil-fuel production"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "In environmental policy, <strong>adaptation</strong> means adjusting to the effects of climate or environmental changes that are already occurring."
+  },
+
+
+  {
+    number: 34,
+    category: "Environment",
+    type: "Opposite Meaning",
+
+    question:
+      "Which word is closest in meaning to the opposite of <strong>preservation</strong> of natural habitats?",
+
+    options: [
+      "protection",
+      "conservation",
+      "destruction",
+      "maintenance"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "<strong>Preservation</strong> means protecting something and keeping it in its existing condition. <strong>Destruction</strong> is its opposite."
+  },
+
+
+  /* =======================================================
+     TECHNOLOGY — 35 TO 40
+  ======================================================= */
+
+
+  {
+    number: 35,
+    category: "Technology",
+    type: "Meaning in Context",
+
+    question:
+      "Technological advancement has accelerated innovation across many industries.",
+
+    targetWord:
+      "advancement",
+
+    options: [
+      "progress or development",
+      "decline or deterioration",
+      "political regulation",
+      "economic inequality"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Advancement</strong> means progress or development. Technological advancement therefore refers to progress in technology."
+  },
+
+
+  {
+    number: 36,
+    category: "Technology",
+    type: "Closest Meaning",
+
+    question:
+      "Automation allows organizations to reduce repetitive tasks and improve operational efficiency.",
+
+    targetWord:
+      "automation",
+
+    options: [
+      "the use of technology to perform tasks with limited human intervention",
+      "the process of training employees manually",
+      "the process of increasing paperwork",
+      "the reduction of technological capability"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Automation</strong> refers to using technology or systems to perform tasks automatically, reducing the need for direct human intervention."
+  },
+
+
+  {
+    number: 37,
+    category: "Technology",
+    type: "Meaning in Context",
+
+    question:
+      "Large amounts of information can be organized and analyzed through effective data processing systems.",
+
+    targetWord:
+      "data processing",
+
+    options: [
+      "the collection, organization, and handling of data",
+      "the deletion of all digital information",
+      "the protection of physical buildings",
+      "the creation of political regulations"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Data processing</strong> refers to the collection, organization, manipulation, and handling of data so that it can be used effectively."
+  },
+
+
+  {
+    number: 38,
+    category: "Technology",
+    type: "Meaning in Context",
+
+    question:
+      "The digital divide can prevent some communities from benefiting from online education and employment opportunities.",
+
+    targetWord:
+      "digital divide",
+
+    options: [
+      "unequal access to digital technology and resources",
+      "the division of data into separate files",
+      "the difference between two computer algorithms",
+      "the separation of public and private institutions"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "The <strong>digital divide</strong> refers to unequal access to digital technologies, internet connectivity, devices, or digital skills."
+  },
+
+
+  {
+    number: 39,
+    category: "Technology",
+    type: "Closest Meaning",
+
+    question:
+      "Privacy and data security have become major ethical concerns as digital technologies become more deeply embedded in everyday life.",
+
+    targetWord:
+      "embedded",
+
+    options: [
+      "deeply integrated or firmly established",
+      "completely removed",
+      "temporarily tested",
+      "legally prohibited"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "In this context, <strong>embedded</strong> means deeply integrated or firmly established within something. Digital technology has become a deeply integrated part of everyday life."
+  },
+
+
+  {
+    number: 40,
+    category: "Technology",
+    type: "Meaning in Context",
+
+    question:
+      "Rapid technological disruption requires workers and organizations to adapt to changing economic conditions.",
+
+    targetWord:
+      "technological disruption",
+
+    options: [
+      "major changes caused by new technology that alter existing systems or industries",
+      "the complete disappearance of technological development",
+      "the improvement of traditional systems without change",
+      "the reduction of digital connectivity"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "<strong>Technological disruption</strong> refers to major changes caused by new technologies that significantly alter existing industries, processes, jobs, or business models."
+  }
+
+];
+
+
+/* =========================================================
+   STATE
+========================================================= */
+
+let currentQuestion = 0;
+
+let userAnswers =
+  new Array(questions.length).fill(null);
+
+
+/* =========================================================
+   UTILITY
+========================================================= */
+
+function escapeHTML(value) {
+
+  if (
+    value === null ||
+    value === undefined
+  ) {
+    return "";
+  }
+
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+
+/* =========================================================
+   RENDER QUESTION
+========================================================= */
+
+function renderQuestion() {
+
+  const question =
+    questions[currentQuestion];
+
+
+  document.getElementById(
+    "questionCounter"
+  ).textContent =
+    `Question ${question.number} of ${questions.length}`;
+
+
+  document.getElementById(
+    "questionType"
+  ).textContent =
+    question.type;
+
+
+  const progress =
+    ((currentQuestion + 1) /
+      questions.length) * 100;
+
+
+  document.getElementById(
+    "progressFill"
+  ).style.width =
+    progress + "%";
+
+
+  let html = `
+
+    <div class="category-label">
+      ${escapeHTML(question.category)}
+    </div>
+
+    <div class="question-type">
+      ${escapeHTML(question.type)}
+    </div>
+
+  `;
+
+
+  if (question.targetWord) {
+
+    html += `
+
+      <div class="target-word">
+
+        <strong>
+          Vocabulary:
+        </strong>
+
+        ${escapeHTML(
+          question.targetWord
+        )}
+
+      </div>
+
+    `;
+  }
+
+
+  html += `
+
+    <div class="question">
+      ${question.question}
+    </div>
+
+    <div class="options">
+
+  `;
+
+
+  question.options.forEach(
+    (option, index) => {
+
+      const checked =
+        userAnswers[currentQuestion] === index
+          ? "checked"
+          : "";
+
+
+      html += `
+
+        <div class="option">
+
+          <input
+            type="radio"
+            id="option-${currentQuestion}-${index}"
+            name="question-${currentQuestion}"
+            value="${index}"
+            ${checked}
+            onchange="saveAnswer(${index})"
+          >
+
+          <label
+            for="option-${currentQuestion}-${index}"
+          >
+            ${escapeHTML(option)}
+          </label>
+
+        </div>
+
+      `;
+    }
+  );
+
+
+  html += `
+    </div>
+  `;
+
+
+  document.getElementById(
+    "questionArea"
+  ).innerHTML =
+    html;
+
+
+  document.getElementById(
+    "previousButton"
+  ).disabled =
+    currentQuestion === 0;
+
+
+  const nextButton =
+    document.getElementById(
+      "nextButton"
+    );
+
+
+  if (
+    currentQuestion ===
+    questions.length - 1
+  ) {
+
+    nextButton.textContent =
+      "Submit Test";
+
+    nextButton.onclick =
+      submitTest;
+
+  } else {
+
+    nextButton.textContent =
+      "Next";
+
+    nextButton.onclick =
+      nextQuestion;
+  }
+
+}
+
+
+/* =========================================================
+   SAVE ANSWER
+========================================================= */
+
+function saveAnswer(index) {
+
+  userAnswers[currentQuestion] =
+    index;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+function nextQuestion() {
+
+  if (
+    userAnswers[currentQuestion] ===
+    null
+  ) {
+
+    alert(
+      "Please answer this question before continuing."
+    );
+
+    return;
+  }
+
+
+  if (
+    currentQuestion <
+    questions.length - 1
+  ) {
+
+    currentQuestion++;
+
+    renderQuestion();
+
+  } else {
+
+    submitTest();
+  }
+}
+
+
+function previousQuestion() {
+
+  if (
+    currentQuestion > 0
+  ) {
+
+    currentQuestion--;
+
+    renderQuestion();
+  }
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+function submitTest() {
+
+  const unanswered = [];
+
+
+  questions.forEach(
+    (question, index) => {
+
+      if (
+        userAnswers[index] === null
+      ) {
+
+        unanswered.push(
+          index + 1
+        );
+      }
+
+    }
+  );
+
+
+  if (
+    unanswered.length > 0
+  ) {
+
+    alert(
+      "Please answer all questions first.\n\n" +
+      "Unanswered question(s): " +
+      unanswered.join(", ")
+    );
+
+
+    currentQuestion =
+      unanswered[0] - 1;
+
+
+    renderQuestion();
+
+    return;
+  }
+
+
+  showResults();
+}
+
+
+/* =========================================================
+   CHECK ANSWER
+========================================================= */
+
+function isCorrect(
+  question,
+  index
+) {
+
+  return (
+    userAnswers[index] ===
+    question.answer
+  );
+}
+
+
+/* =========================================================
+   RESULTS
+========================================================= */
+
+function showResults() {
+
+  let score = 0;
+
+
+  questions.forEach(
+    (question, index) => {
+
+      if (
+        isCorrect(
+          question,
+          index
+        )
+      ) {
+
+        score++;
+      }
+
+    }
+  );
+
+
+  const percentage =
+    Math.round(
+      (score /
+        questions.length) *
+      100
+    );
+
+
+  document.getElementById(
+    "testArea"
+  ).classList.add(
+    "hidden"
+  );
+
+
+  document.getElementById(
+    "resultArea"
+  ).classList.remove(
+    "hidden"
+  );
+
+
+  let title;
+
+
+  if (percentage >= 90) {
+
+    title =
+      "Excellent Vocabulary";
+
+  } else if (percentage >= 75) {
+
+    title =
+      "Strong Vocabulary";
+
+  } else if (percentage >= 60) {
+
+    title =
+      "Developing Vocabulary";
+
+  } else {
+
+    title =
+      "Vocabulary Needs Strengthening";
+  }
+
+
+  document.getElementById(
+    "resultTitle"
+  ).textContent =
+    title;
+
+
+  document.getElementById(
+    "scoreNumber"
+  ).textContent =
+    score;
+
+
+  document.getElementById(
+    "scoreSubtitle"
+  ).textContent =
+    `${percentage}% correct · ${
+      questions.length - score
+    } question(s) to review`;
+
+
+  renderDiagnosis(
+    score,
+    percentage
+  );
+
+
+  renderWrongAnswers();
+
+
+  renderFullReview();
+
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+/* =========================================================
+   DIAGNOSIS
+========================================================= */
+
+function renderDiagnosis(
+  score,
+  percentage
+) {
+
+  const categories = {};
+
+
+  questions.forEach(
+    (question, index) => {
+
+      if (
+        !categories[
+          question.category
+        ]
+      ) {
+
+        categories[
+          question.category
+        ] = {
+          correct: 0,
+          total: 0,
+          missedWords: []
+        };
+      }
+
+
+      categories[
+        question.category
+      ].total++;
+
+
+      if (
+        isCorrect(
+          question,
+          index
+        )
+      ) {
+
+        categories[
+          question.category
+        ].correct++;
+
+      } else if (
+        question.targetWord
+      ) {
+
+        categories[
+          question.category
+        ].missedWords.push(
+          question.targetWord
+        );
+      }
+
+    }
+  );
+
+
+  const categoryNames =
+    Object.keys(categories);
+
+
+  let weakestCategory =
+    null;
+
+  let weakestPercentage =
+    101;
+
+
+  categoryNames.forEach(
+    category => {
+
+      const data =
+        categories[category];
+
+
+      const percent =
+        (data.correct /
+          data.total) *
+        100;
+
+
+      if (
+        percent <
+        weakestPercentage
+      ) {
+
+        weakestPercentage =
+          percent;
+
+        weakestCategory =
+          category;
+      }
+
+    }
+  );
+
+
+  let diagnosis;
+
+
+  if (percentage >= 90) {
+
+    diagnosis =
+      `Excellent work. You answered ${score} out of 40 questions correctly. Your performance shows strong control of academic vocabulary across the topics covered in this practice.`;
+
+  } else if (percentage >= 75) {
+
+    diagnosis =
+      `You have a strong vocabulary foundation. You answered ${score} out of 40 questions correctly. Your main opportunity is to become more precise with academic vocabulary in context and with words that have similar meanings.`;
+
+  } else if (percentage >= 60) {
+
+    diagnosis =
+      `Your vocabulary is developing. You know many of the words, but you need more repeated exposure to academic vocabulary in context and more practice distinguishing words with similar meanings.`;
+
+  } else {
+
+    diagnosis =
+      `Your academic vocabulary foundation needs strengthening. The best next step is systematic review of the vocabulary you missed, followed by repeated practice in academic contexts.`;
+  }
+
+
+  if (weakestCategory) {
+
+    diagnosis +=
+      ` Your weakest topic area was <strong>${escapeHTML(
+        weakestCategory
+      )}</strong> with ${Math.round(
+        weakestPercentage
+      )}%.`;
+  }
+
+
+  document.getElementById(
+    "diagnosisText"
+  ).innerHTML =
+    diagnosis;
+
+
+  /* =========================
+     RECOMMENDATION
+  ========================= */
+
+  let recommendation;
+
+
+  if (
+    weakestPercentage < 70
+  ) {
+
+    recommendation =
+      `Your first priority should be reviewing <strong>${escapeHTML(
+        weakestCategory
+      )}</strong>. Pay particular attention to the words you missed below and learn them through example sentences rather than memorizing Indonesian translations alone.`;
+
+  } else if (
+    percentage >= 85
+  ) {
+
+    recommendation =
+      `Your vocabulary foundation is strong. Move toward more difficult academic reading and continue learning words through context, collocations, and repeated exposure.`;
+
+  } else {
+
+    recommendation =
+      `Continue practicing all five topic areas. When you make a mistake, do not only memorize the correct answer — identify why the other option does not fit the context.`;
+  }
+
+
+  document.getElementById(
+    "recommendationBox"
+  ).innerHTML = `
+
+    <strong>
+      Recommended next step
+    </strong>
+
+    ${recommendation}
+
+  `;
+
+
+  /* =========================
+     CATEGORY RESULTS
+  ========================= */
+
+  const categoryResults =
+    document.getElementById(
+      "categoryResults"
+    );
+
+
+  categoryResults.innerHTML =
+    "";
+
+
+  categoryNames.forEach(
+    category => {
+
+      const data =
+        categories[category];
+
+
+      const percent =
+        Math.round(
+          (data.correct /
+            data.total) *
+          100
+        );
+
+
+      categoryResults.innerHTML += `
+
+        <div class="category-result">
+
+          <div class="category-result-top">
+
+            <span>
+              ${escapeHTML(category)}
+            </span>
+
+            <span>
+              ${data.correct}/${data.total}
+              · ${percent}%
+            </span>
+
+          </div>
+
+
+          <div class="category-result-bar">
+
+            <div
+              class="category-result-fill"
+              style="width:${percent}%"
+            ></div>
+
+          </div>
+
+        </div>
+
+      `;
+
+    }
+  );
+
+
+  /* =========================
+     MISSED VOCABULARY
+  ========================= */
+
+  const focus =
+    document.getElementById(
+      "vocabFocus"
+    );
+
+
+  const missedWords = [];
+
+
+  categoryNames.forEach(
+    category => {
+
+      categories[
+        category
+      ].missedWords.forEach(
+        word => {
+
+          if (
+            !missedWords.includes(word)
+          ) {
+
+            missedWords.push(word);
+          }
+
+        }
+      );
+
+    }
+  );
+
+
+  if (
+    missedWords.length === 0
+  ) {
+
+    focus.innerHTML = `
+
+      <h4>
+        Vocabulary to review
+      </h4>
+
+      <p>
+        You did not miss any vocabulary
+        items that were specifically tagged
+        to a target word. Excellent.
+      </p>
+
+    `;
+
+  } else {
+
+    focus.innerHTML = `
+
+      <h4>
+        Vocabulary to review
+      </h4>
+
+      <div class="focus-word-list">
+
+        ${missedWords.map(
+          word => `
+            <span class="focus-word">
+              ${escapeHTML(word)}
+            </span>
+          `
+        ).join("")}
+
+      </div>
+
+    `;
+  }
+
+}
+
+
+/* =========================================================
+   WRONG ANSWERS
+========================================================= */
+
+function renderWrongAnswers() {
+
+  const wrongAnswers =
+    document.getElementById(
+      "wrongAnswers"
+    );
+
+
+  const wrongQuestions = [];
+
+
+  questions.forEach(
+    (question, index) => {
+
+      if (
+        !isCorrect(
+          question,
+          index
+        )
+      ) {
+
+        wrongQuestions.push({
+          question,
+          index
+        });
+      }
+
+    }
+  );
+
+
+  document.getElementById(
+    "wrongHeading"
+  ).textContent =
+    wrongQuestions.length === 0
+      ? "Perfect score — no mistakes!"
+      : `${wrongQuestions.length} question(s) to review`;
+
+
+  if (
+    wrongQuestions.length === 0
+  ) {
+
+    wrongAnswers.innerHTML = `
+
+      <div class="wrong-card">
+
+        <div class="status">
+          Perfect
+        </div>
+
+        <div class="review-question">
+          You answered every question correctly.
+        </div>
+
+        <div class="explanation">
+          Excellent. You can still use the
+          complete review below to revisit
+          the vocabulary and explanations.
+        </div>
+
+      </div>
+
+    `;
+
+    return;
+  }
+
+
+  wrongAnswers.innerHTML =
+    "";
+
+
+  wrongQuestions.forEach(
+    item => {
+
+      const question =
+        item.question;
+
+      const index =
+        item.index;
+
+
+      const userAnswer =
+        question.options[
+          userAnswers[index]
+        ];
+
+
+      const correctAnswer =
+        question.options[
+          question.answer
+        ];
+
+
+      wrongAnswers.innerHTML += `
+
+        <div class="wrong-card">
+
+          <div class="status">
+            Question ${question.number}
+            · Incorrect
+          </div>
+
+
+          <div class="review-number">
+
+            ${escapeHTML(
+              question.category
+            )}
+
+          </div>
+
+
+          ${
+            question.targetWord
+              ? `
+                <div class="review-number">
+
+                  Target vocabulary:
+                  ${escapeHTML(
+                    question.targetWord
+                  )}
+
+                </div>
+              `
+              : ""
+          }
+
+
+          <div class="review-question">
+
+            ${question.question}
+
+          </div>
+
+
+          <div class="answer-row">
+
+            <div class="answer-box">
+
+              <strong>
+                Your answer
+              </strong>
+
+              ${escapeHTML(
+                userAnswer
+              )}
+
+            </div>
+
+
+            <div class="answer-box">
+
+              <strong>
+                Correct answer
+              </strong>
+
+              ${escapeHTML(
+                correctAnswer
+              )}
+
+            </div>
+
+          </div>
+
+
+          <div class="explanation">
+
+            <strong>
+              Pembahasan:
+            </strong>
+
+            <br><br>
+
+            ${question.explanation}
+
+          </div>
+
+        </div>
+
+      `;
+    }
+  );
+}
+
+
+/* =========================================================
+   FULL REVIEW
+========================================================= */
+
+function renderFullReview() {
+
+  const fullReview =
+    document.getElementById(
+      "fullReview"
+    );
+
+
+  fullReview.innerHTML =
+    "";
+
+
+  questions.forEach(
+    (question, index) => {
+
+      const correct =
+        isCorrect(
+          question,
+          index
+        );
+
+
+      const userAnswer =
+        question.options[
+          userAnswers[index]
+        ];
+
+
+      let optionsHTML = `
+
+        <div class="option-review">
+
+      `;
+
+
+      question.options.forEach(
+        (option, optionIndex) => {
+
+          const isCorrectOption =
+            optionIndex ===
+            question.answer;
+
+
+          const letter =
+            String.fromCharCode(
+              65 + optionIndex
+            );
+
+
+          optionsHTML += `
+
+            <div
+              class="
+                option-review-line
+                ${
+                  isCorrectOption
+                    ? "correct-option"
+                    : ""
+                }
+              "
+            >
+
+              ${letter}.
+              ${escapeHTML(option)}
+
+              ${
+                isCorrectOption
+                  ? " ✓"
+                  : ""
+              }
+
+            </div>
+
+          `;
+        }
+      );
+
+
+      optionsHTML += `
+        </div>
+      `;
+
+
+      fullReview.innerHTML += `
+
+        <div
+          class="
+            review-card
+            ${
+              correct
+                ? "correct"
+                : "incorrect"
+            }
+          "
+        >
+
+          <div class="status">
+
+            Question ${question.number}
+            ·
+            ${
+              correct
+                ? "Correct ✓"
+                : "Incorrect ✕"
+            }
+
+          </div>
+
+
+          <div class="review-number">
+
+            ${escapeHTML(
+              question.category
+            )}
+
+            ·
+
+            ${escapeHTML(
+              question.type
+            )}
+
+          </div>
+
+
+          ${
+            question.targetWord
+              ? `
+                <div class="target-word">
+
+                  <strong>
+                    Vocabulary:
+                  </strong>
+
+                  ${escapeHTML(
+                    question.targetWord
+                  )}
+
+                </div>
+              `
+              : ""
+          }
+
+
+          <div class="review-question">
+
+            ${question.question}
+
+          </div>
+
+
+          ${optionsHTML}
+
+
+          <div class="answer-row">
+
+            <div class="answer-box">
+
+              <strong>
+                Your answer
+              </strong>
+
+              ${escapeHTML(
+                userAnswer
+              )}
+
+            </div>
+
+
+            <div class="answer-box">
+
+              <strong>
+                Correct answer
+              </strong>
+
+              ${escapeHTML(
+                question.options[
+                  question.answer
+                ]
+              )}
+
+            </div>
+
+          </div>
+
+
+          <div class="explanation">
+
+            <strong>
+              Pembahasan:
+            </strong>
+
+            <br><br>
+
+            ${question.explanation}
+
+          </div>
+
+        </div>
+
+      `;
+    }
+  );
+}
+
+
+/* =========================================================
+   RESTART
+========================================================= */
+
+function restartTest() {
+
+  currentQuestion = 0;
+
+
+  userAnswers =
+    new Array(
+      questions.length
+    ).fill(null);
+
+
+  document.getElementById(
+    "resultArea"
+  ).classList.add(
+    "hidden"
+  );
+
+
+  document.getElementById(
+    "testArea"
+  ).classList.remove(
+    "hidden"
+  );
+
+
+  renderQuestion();
+
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+/* =========================================================
+   START
+========================================================= */
+
+renderQuestion();
+
+</script>
+
+</body>
+</html>
