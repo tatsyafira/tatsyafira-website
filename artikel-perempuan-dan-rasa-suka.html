@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Perempuan dan Rasa Suka yang Ia Pendam — Tatsyafira
+  </title>
+
+  <!-- =====================================================
+       FONTS
+  ====================================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <style>
+
+    /* =====================================================
+       RESET
+    ====================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #222222;
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =====================================================
+       HEADER
+       SAME STRUCTURE AS OTHER ARTICLES
+    ====================================================== */
+
+    .site-header {
+      width: 100%;
+      height: 72px;
+      background: #ffffff;
+      border-bottom: 1px solid #eeeeee;
+      position: relative;
+      z-index: 100;
+    }
+
+    .nav {
+      width: min(1200px, calc(100% - 64px));
+      height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* LOGO */
+
+    .logo {
+      display: flex;
+      align-items: center;
+      width: 135px;
+      height: 42px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .logo img {
+      display: block;
+      width: 135px !important;
+      height: auto !important;
+      max-width: 135px !important;
+      max-height: 42px !important;
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    /* NAVIGATION */
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+    }
+
+    .nav-links a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #333333;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.55;
+    }
+
+    .nav-links a.active {
+      font-weight: 600;
+    }
+
+
+    /* =====================================================
+       ARTICLE
+    ====================================================== */
+
+    .article {
+      width: min(900px, calc(100% - 48px));
+      margin: 0 auto;
+      padding-top: 105px;
+      padding-bottom: 40px;
+    }
+
+
+    /* =====================================================
+       CATEGORY
+    ====================================================== */
+
+    .article-category {
+      font-size: 13px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #999999;
+      margin-bottom: 22px;
+    }
+
+
+    /* =====================================================
+       TITLE
+    ====================================================== */
+
+    .article-title {
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          42px,
+          6vw,
+          68px
+        );
+
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      color: #1f1f1f;
+      max-width: 850px;
+      margin-bottom: 48px;
+    }
+
+
+    /* =====================================================
+       COVER IMAGE
+    ====================================================== */
+
+    .cover-figure {
+      margin-bottom: 22px;
+    }
+
+    .cover-image {
+      width: 100%;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #f5f3f1;
+    }
+
+    .cover-image img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+
+    /* =====================================================
+       SPOTIFY
+    ====================================================== */
+
+    .spotify-section {
+      width: 100%;
+      margin-bottom: 70px;
+    }
+
+    .spotify-player {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .spotify-player iframe {
+      width: 100%;
+      height: 152px;
+      border: 0;
+      display: block;
+    }
+
+    .spotify-caption {
+      text-align: center;
+      margin-top: 14px;
+      font-size: 13px;
+      color: #999999;
+      font-family: "DM Sans", sans-serif;
+    }
+
+
+    /* =====================================================
+       ARTICLE CONTENT
+    ====================================================== */
+
+    .article-content {
+      width: min(760px, 100%);
+      margin: 0 auto;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 20px;
+      line-height: 1.8;
+      color: #292929;
+    }
+
+    .article-content p {
+      margin-bottom: 32px;
+    }
+
+    .article-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .article-content strong {
+      font-weight: 700;
+    }
+
+    .article-content em {
+      font-style: italic;
+    }
+
+
+    /* =====================================================
+       OPENING PARAGRAPH
+    ====================================================== */
+
+    .article-opening {
+      font-style: italic;
+    }
+
+
+    /* =====================================================
+       ARTICLE IMAGES
+    ====================================================== */
+
+    .article-figure {
+      width: 100%;
+      margin:
+        55px 0
+        14px;
+    }
+
+    .article-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: #f5f3f1;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .article-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .image-caption {
+      margin-top: 12px;
+      font-family: "DM Sans", sans-serif;
+      font-size: 13px;
+      line-height: 1.6;
+      text-align: center;
+      color: #999999;
+    }
+
+
+    /* =====================================================
+       QUOTE STYLE
+    ====================================================== */
+
+    .article-quote {
+      margin:
+        42px 0;
+      padding:
+        10px 0;
+    }
+
+    .article-quote p {
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+
+
+    /* =====================================================
+       COMMENTS SECTION
+    ====================================================== */
+
+    .comments-section {
+      width:
+        min(
+          1000px,
+          calc(100% - 48px)
+        );
+
+      margin:
+        90px auto
+        120px;
+
+      padding-top: 70px;
+
+      border-top:
+        1px solid #eeeeee;
+    }
+
+    .comments-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 38px;
+    }
+
+    .comments-title {
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 34px;
+      font-weight: 500;
+      color: #222222;
+    }
+
+    .comments-count {
+      font-size: 13px;
+      color: #999999;
+      white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       COMMENT FORM
+    ====================================================== */
+
+    .comment-form {
+      background: #ffffff;
+      border:
+        1px solid #dedede;
+      border-radius: 8px;
+      padding: 34px;
+      margin-bottom: 55px;
+    }
+
+    .form-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .form-group {
+      flex: 1;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #555555;
+      margin-bottom: 9px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border:
+        1px solid #dddddd;
+
+      border-radius: 6px;
+      background: #ffffff;
+      padding: 13px 14px;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 14px;
+      color: #222222;
+      outline: none;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    input {
+      height: 48px;
+    }
+
+    textarea {
+      min-height: 145px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #999999;
+      box-shadow:
+        0 0 0 2px
+        rgba(0, 0, 0, 0.03);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #aaaaaa;
+    }
+
+
+    /* ANONYMOUS */
+
+    .anonymous-option {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      height: 48px;
+      white-space: nowrap;
+      font-size: 13px;
+      color: #666666;
+    }
+
+    .anonymous-option input {
+      width: 17px;
+      height: 17px;
+      padding: 0;
+      accent-color: #222222;
+    }
+
+
+    /* MESSAGE */
+
+    .message-group {
+      margin-bottom: 22px;
+    }
+
+
+    /* BUTTON */
+
+    .submit-button {
+      border: none;
+      border-radius: 6px;
+      background: #222222;
+      color: #ffffff;
+
+      padding:
+        12px 22px;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .submit-button:hover {
+      background: #444444;
+    }
+
+    .submit-button:active {
+      transform:
+        translateY(1px);
+    }
+
+    .submit-button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .form-status {
+      margin-top: 14px;
+      font-size: 13px;
+      color: #888888;
+    }
+
+
+    /* =====================================================
+       COMMENT CARDS
+    ====================================================== */
+
+    .comments-list {
+      display: grid;
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
+      gap: 18px;
+    }
+
+    .comment-box {
+      background: #ffffff;
+      border:
+        1px solid #dedede;
+      border-radius: 10px;
+      min-height: 190px;
+
+      padding:
+        25px 26px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content:
+        space-between;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .comment-box:hover {
+      border-color: #cccccc;
+      box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.04);
+    }
+
+    .comment-message {
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 17px;
+      line-height: 1.7;
+      color: #333333;
+      margin-bottom: 28px;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .comment-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding-top: 15px;
+      border-top:
+        1px solid #eeeeee;
+    }
+
+    .comment-author {
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 12px;
+      font-weight: 600;
+      color: #555555;
+    }
+
+    .comment-date {
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 11px;
+      color: #aaaaaa;
+    }
+
+    .comments-empty,
+    .comments-loading {
+      font-size: 14px;
+      color: #999999;
+      padding: 12px 0;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ====================================================== */
+
+    .site-footer {
+      border-top:
+        1px solid #eeeeee;
+
+      padding:
+        35px 24px;
+
+      text-align: center;
+      font-size: 13px;
+      color: #999999;
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ====================================================== */
+
+    @media (max-width: 700px) {
+
+      .site-header {
+        height: 64px;
+      }
+
+      .nav {
+        width:
+          calc(100% - 32px);
+        height: 64px;
+      }
+
+      .logo {
+        width: 110px;
+        height: 36px;
+      }
+
+      .logo img {
+        width: 110px !important;
+        max-width: 110px !important;
+        max-height: 36px !important;
+      }
+
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .nav-links a:nth-child(4),
+      .nav-links a:nth-child(5) {
+        display: none;
+      }
+
+
+      /* ARTICLE */
+
+      .article {
+        width:
+          calc(100% - 36px);
+
+        padding-top: 65px;
+        padding-bottom: 40px;
+      }
+
+      .article-title {
+        font-size: 42px;
+        letter-spacing: -1px;
+        margin-bottom: 40px;
+      }
+
+      .article-content {
+        font-size: 17px;
+        line-height: 1.9;
+      }
+
+      .article-content p {
+        margin-bottom: 30px;
+      }
+
+      .spotify-section {
+        margin-bottom: 55px;
+      }
+
+      .spotify-player iframe {
+        height: 152px;
+      }
+
+      .article-figure {
+        margin-top: 45px;
+      }
+
+
+      /* COMMENTS */
+
+      .comments-section {
+        width:
+          calc(100% - 36px);
+
+        margin-top: 60px;
+        margin-bottom: 70px;
+        padding-top: 50px;
+      }
+
+      .comments-header {
+        margin-bottom: 28px;
+      }
+
+      .comments-title {
+        font-size: 28px;
+      }
+
+      .comment-form {
+        padding: 24px;
+        margin-bottom: 40px;
+      }
+
+      .form-row {
+        display: block;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .anonymous-option {
+        height: auto;
+      }
+
+      .comments-list {
+        grid-template-columns: 1fr;
+      }
+
+      .comment-box {
+        min-height: 170px;
+        padding: 22px;
+      }
+
+      .comment-message {
+        font-size: 16px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header class="site-header">
+
+    <nav class="nav">
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+
+        <img
+          src="images/tatsyafira-logo.png"
+          alt="tatsyafira"
+        >
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a
+          href="catatan.html"
+          class="active"
+        >
+          Catatan
+        </a>
+
+        <a href="belajar.html">
+          Belajar
+        </a>
+
+        <a href="#">
+          Kelas
+        </a>
+
+        <a href="#">
+          Resources
+        </a>
+
+        <a href="#">
+          Toko
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       ARTICLE
+  ====================================================== -->
+
+  <main>
+
+    <article class="article">
+
+
+      <div class="article-category">
+        Refleksi
+      </div>
+
+
+      <h1 class="article-title">
+        Perempuan dan Rasa Suka yang Ia Pendam
+      </h1>
+
+
+      <!-- =================================================
+           COVER IMAGE
+      ================================================== -->
+
+      <figure class="cover-figure">
+
+        <div class="cover-image">
+
+          <img
+            src="images/perempuan-dan-rasa-suka-cover.jpg"
+            alt="Perempuan dan Rasa Suka yang Ia Pendam"
+          >
+
+        </div>
+
+      </figure>
+
+
+      <!-- =================================================
+           SPOTIFY
+      ================================================== -->
+
+      <section class="spotify-section">
+
+        <div class="spotify-player">
+
+          <iframe
+            data-testid="embed-iframe"
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/0yDghAfS3CT7Di30WoJE7h?utm_source=generator&si=c4652b3374dc4f98"
+            width="100%"
+            height="152"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+
+        </div>
+
+
+        <div class="spotify-caption">
+          Dengarkan sambil membaca.
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           ARTICLE CONTENT
+      ================================================== -->
+
+      <div class="article-content">
+
+        <p class="article-opening">
+          Salahkah aku ketika menaruh hati pada seseorang yang bahkan tidak kuketahui akan memiliki perasaan yang sama kepadaku?
+        </p>
+
+        <p>
+          Aku sering memikirkan pertanyaan ini karena semakin dewasa, aku semakin sadar bahwa menjadi perempuan yang menyukai seseorang punya bentuk keresahan yang agak berbeda. Kita bisa melakukan begitu banyak hal dalam hidup ketika kita menginginkannya. Kita bisa mengejar pendidikan, membangun karier, pergi ke negara lain, memulai bisnis, pindah kota, bahkan memulai kehidupan dari nol. Tetapi ketika urusannya adalah menyukai seseorang, tiba-tiba ada begitu banyak hal yang tidak bisa kita pastikan.
+        </p>
+
+        <p>
+          Kalau aku menyukaimu, sebenarnya apa yang bisa kulakukan?
+        </p>
+
+        <p>
+          Aku bisa mengenalmu, memperhatikanmu, memberi sedikit tanda, mungkin mencoba membuka percakapan. Tapi pada akhirnya, ada satu langkah yang secara sosial masih sangat lekat dengan laki-laki: datang. Datang kepadaku. Datang kepada keluargaku. Mengatakan bahwa kamu serius. Membicarakan masa depan. Meminta izin. Meminang.
+        </p>
+
+        <p>
+          Aku tidak mungkin tiba-tiba datang ke rumahmu, menemui orang tuamu, lalu berkata bahwa aku menyukai anak mereka dan ingin menikah dengannya. Bukan karena seorang perempuan tidak mampu melakukannya, tetapi karena kita hidup dalam struktur sosial yang selama berabad-abad lebih sering menempatkan laki-laki sebagai pihak yang datang dan mengejar, sementara perempuan ditempatkan sebagai pihak yang menunggu untuk dipilih.
+        </p>
+
+        <p>
+          Dan kalau kita melihat sejarah, ini bukan hanya soal cara orang berpacaran. Dalam masyarakat seperti Inggris, misalnya, posisi hukum perempuan yang menikah bahkan pernah jauh lebih terbatas. Di bawah <em>common law</em>, properti perempuan yang menikah dapat berada di bawah kendali suaminya, dan identitas hukum perempuan dalam perkawinan sangat dibatasi. Reformasi melalui Married Women's Property Acts pada 1870 dan 1882 baru memberikan perempuan hak yang jauh lebih besar untuk memiliki dan mengendalikan properti mereka sendiri. Bahkan dalam perdebatan parlemen Inggris pada abad ke-19, masih ada argumen bahwa keluarga seharusnya memiliki “one head” dan laki-laki adalah orang yang tepat untuk menjadi kepala keluarga.
+        </p>
+
+        <p>
+          Tentu, perempuan hari ini memiliki jauh lebih banyak kebebasan. Kita bisa menyatakan perasaan, mengejar seseorang, melamar, atau menentukan sendiri apakah kita ingin menikah. Tetapi menariknya, warisan sosial itu kadang masih terasa bahkan ketika kita tidak pernah secara sadar memilihnya. Laki-laki datang. Perempuan menunggu. Laki-laki menyatakan. Perempuan menerima atau menolak. Dan ketika aku menjadi perempuan yang menyukai seseorang, tiba-tiba aku sadar bahwa ada bagian dari hidupku yang tidak bisa kuatur dengan cara yang biasanya kulakukan.
+        </p>
+
+        <p>
+          Karena kalau aku menyukaimu, aku tidak bisa membuatmu menyukaiku.
+        </p>
+
+        <p>
+          Aku tidak bisa mempercepat kesadaranmu.
+        </p>
+
+        <p>
+          Aku tidak bisa memutuskan kapan kamu akan datang.
+        </p>
+
+        <p>
+          Dan mungkin yang paling menyebalkan adalah aku bahkan tidak tahu apakah kamu sedang menunggu sesuatu dariku, atau sebenarnya tidak pernah memikirkan aku dengan cara yang sama sekali.
+        </p>
+
+        <p>
+          Mungkin kamu juga sedang memperhatikanku. Mungkin kamu juga takut ditolak. Mungkin kamu mengira aku tidak tertarik. Mungkin kamu sedang sibuk membangun hidupmu sendiri dan belum ingin mengajak siapa pun masuk ke dalamnya. Atau mungkin memang hanya aku yang merasakan semua ini.
+        </p>
+
+        <p>
+          Aku tidak tahu.
+        </p>
+
+        <p>
+          Dan karena aku tidak tahu, aku harus hidup dengan ketidakpastian itu setiap hari.
+        </p>
+
+        <p>
+          Ini bagian dari rasa suka yang tidak banyak dibicarakan orang. Kita sering membayangkan jatuh cinta sebagai sesuatu yang indah, tetapi jarang membicarakan betapa melelahkannya menyimpan sebuah perasaan ketika kita tidak tahu harus meletakkannya di mana.
+        </p>
+
+        <p>
+          Ada hari-hari ketika aku ingin sekali berhenti memikirkanmu.
+        </p>
+
+        <p>
+          Bukan karena aku tidak suka. Justru karena aku terlalu suka, sampai aku tahu bahwa kalau tidak hati-hati, perasaan ini bisa mengambil ruang yang seharusnya menjadi milik hidupku sendiri.
+        </p>
+
+        <p>
+          Aku harus mengingatkan diriku untuk kembali belajar ketika pikiranku mulai pergi ke tempat lain. Kembali bekerja ketika konsentrasiku mulai pecah. Kembali kepada mimpi-mimpiku ketika pikiranku mulai sibuk membayangkan kemungkinan-kemungkinan yang bahkan belum tentu pernah terjadi.
+        </p>
+
+        <p>
+          Dan ternyata ada sesuatu yang sangat melelahkan dari berusaha <strong>tidak dikuasai oleh perasaan yang sebenarnya ingin kita rasakan.</strong>
+        </p>
+
+        <p>
+          Karena aku tidak ingin suatu hari melihat hidupku dan menyadari bahwa terlalu banyak hal yang kucapai hanya karena aku sedang berusaha melupakan seseorang.
+        </p>
+
+        <p>
+          Aku tidak ingin pergi jauh hanya supaya bisa berhenti memikirkanmu. Aku tidak ingin bekerja lebih keras hanya supaya kepalaku cukup sibuk untuk tidak mengingatmu. Aku tidak ingin membangun karier, mencapai mimpi, atau menjadi perempuan yang hebat hanya sebagai kompensasi karena seseorang tidak memilihku.
+        </p>
+
+        <p>
+          Aku ingin semua yang kulakukan tetap menjadi milikku.
+        </p>
+
+        <p>
+          Mimpi-mimpiku harus tetap menjadi mimpi-mimpiku.
+        </p>
+
+        <p>
+          Perjalananku harus tetap menjadi perjalananku.
+        </p>
+
+        <p>
+          Dan hidupku tidak boleh berubah menjadi cerita tentang seorang perempuan yang sepanjang hidupnya berusaha membuktikan bahwa ia cukup berharga untuk dicintai oleh seseorang.
+        </p>
+
+        <p>
+          Mungkin itu yang membuat perjuangan ini terasa begitu pelik.
+        </p>
+
+        <p>
+          Aku sedang mencoba menjaga dua hal sekaligus: mengakui bahwa aku menyukaimu, dan memastikan bahwa rasa suka ini tidak menjadi pusat hidupku.
+        </p>
+
+        <p>
+          Aku tidak bisa menghapus perasaan ini begitu saja. Aku juga tidak mau berpura-pura bahwa aku tidak merasakan apa-apa. Tetapi setiap hari aku seperti harus mengambil kembali sedikit demi sedikit ruang yang mulai diambilnya.
+        </p>
+
+        <p>
+          Ketika aku ingin memikirkanmu, aku kembali kepada pekerjaanku.
+        </p>
+
+        <p>
+          Ketika aku mulai membayangkan terlalu jauh, aku kembali kepada apa yang benar-benar ada di hadapanku.
+        </p>
+
+        <p>
+          Ketika aku mulai bertanya apakah kamu akan memilihku, aku mengingatkan diriku bahwa masih ada begitu banyak hal dalam hidup yang bisa kupilih sendiri.
+        </p>
+
+        <p>
+          Dan mungkin itu bentuk perjuangan yang tidak terlihat dari perempuan yang sedang memendam rasa.
+        </p>
+
+        <p>
+          Orang lain mungkin melihatku baik-baik saja. Aku tetap kuliah. Tetap bepergian. Tetap bekerja. Tetap tertawa. Tetap mengejar banyak hal.
+        </p>
+
+        <p>
+          Tidak ada yang tahu bahwa sebagian dari diriku sedang berperang setiap hari untuk memastikan bahwa satu perasaan tidak mengambil seluruh ruang di dalam kepala.
+        </p>
+
+        <p>
+          Karena betapa anehnya: aku bisa memutuskan untuk pergi ke negara lain sendirian. Aku bisa memulai sesuatu dari nol. Aku bisa menghadapi kegagalan, mencari jalan lain, membangun hidupku sendiri.
+        </p>
+
+        <p>
+          Tapi aku tidak bisa melakukan satu hal yang sangat sederhana:
+        </p>
+
+        <p>
+          <strong>membuat seseorang mencintaiku.</strong>
+        </p>
+
+        <p>
+          Dan mungkin di situlah rasa tidak berdaya itu muncul.
+        </p>
+
+        <p>
+          Bukan karena aku tidak punya kekuatan sebagai perempuan. Justru karena aku tahu betapa banyak hal yang bisa kulakukan untuk hidupku sendiri, sehingga rasanya semakin aneh ketika berhadapan dengan sesuatu yang tidak bisa kuusahakan sendirian.
+        </p>
+
+        <p>
+          Aku bisa memperbaiki diriku, tetapi tidak bisa memperbaiki perasaanmu.
+        </p>
+
+        <p>
+          Aku bisa memberimu kesempatan untuk mengenalku, tetapi tidak bisa menentukan apa yang akan kamu rasakan setelah mengenalku.
+        </p>
+
+        <p>
+          Aku bisa menunggu, tetapi tidak bisa membuatmu datang.
+        </p>
+
+        <p>
+          Dan mungkin itu sebabnya rasa suka yang dipendam kadang terasa seperti sebuah bentuk ketidakberdayaan yang sangat sunyi.
+        </p>
+
+        <p>
+          Karena tidak ada yang bisa kulawan.
+        </p>
+
+        <p>
+          Tidak ada orang yang bisa kusalahkan.
+        </p>
+
+        <p>
+          Kamu bahkan mungkin tidak melakukan kesalahan apa pun.
+        </p>
+
+        <p>
+          Kamu hanya belum memilihku.
+        </p>
+
+        <p>
+          Dan aku harus belajar menerima bahwa seseorang berhak tidak memilih kita, bahkan ketika kita sangat berharap ia melakukannya.
+        </p>
+
+        <p>
+          Mungkin ini juga alasan mengapa perempuan bisa menjadi sangat teliti ketika sedang menyukai seseorang. Kita mulai membaca hal-hal kecil karena kita tidak memiliki kepastian. Cara kamu membalas pesan. Cara kamu melihatku ketika sedang berbicara. Apakah kamu mencari alasan untuk berada di dekatku. Apakah kamu mengingat sesuatu yang pernah kukatakan.
+        </p>
+
+        <p>
+          Ketika tidak ada jawaban, hal-hal kecil menjadi satu-satunya informasi yang kita punya.
+        </p>
+
+        <p>
+          Dan mungkin di sisi lain, ada laki-laki yang melakukan hal yang sama. Bisa jadi dia juga sedang bertanya-tanya apakah kita menyukainya. Bisa jadi dia juga sedang menunggu tanda. Dua orang bisa sama-sama takut salah membaca keadaan, sama-sama menyimpan kemungkinan, lalu akhirnya tidak pernah melakukan apa-apa.
+        </p>
+
+        <p>
+          Bukankah itu lucu sekaligus menyedihkan?
+        </p>
+
+        <p>
+          Dua orang bisa sama-sama memiliki rasa dan tetap tidak pernah menjadi apa-apa.
+        </p>
+
+        <p>
+          Bukan karena tidak ada perasaan, tetapi karena tidak ada yang tahu apakah perasaan itu benar-benar dimiliki oleh dua orang.
+        </p>
+
+        <p>
+          Dan mungkin itu yang membuat rasa suka yang dipendam begitu sulit dilepaskan. Tidak ada hubungan yang bisa disebut gagal, karena hubungan itu bahkan belum pernah dimulai. Tidak ada perpisahan yang jelas, karena tidak pernah ada sesuatu yang benar-benar dimiliki. Yang ada hanya kemungkinan.
+        </p>
+
+        <p>
+          <em>Bagaimana kalau sebenarnya dia juga suka?</em>
+        </p>
+
+        <p>
+          <em>Bagaimana kalau waktu itu aku mengatakan sesuatu?</em>
+        </p>
+
+        <p>
+          <em>Bagaimana kalau dia sebenarnya sedang menunggu?</em>
+        </p>
+
+        <p>
+          Kita tidak sedang berduka atas sebuah hubungan. Kita sedang berduka atas <strong>kemungkinan sebuah hubungan.</strong>
+        </p>
+
+        <p>
+          Dan kemungkinan adalah sesuatu yang sangat sulit dikuburkan karena ia tidak pernah benar-benar mati.
+        </p>
+
+        <p>
+          Tetapi di tengah semua itu, ada satu hal lain yang juga harus kuwaspadai: jangan sampai aku jatuh cinta bukan kepada dirimu, tetapi kepada versi dirimu yang kubangun sendiri.
+        </p>
+
+        <p>
+          Karena ketika kita menyukai seseorang dari jauh, kita mudah mengisi bagian-bagian yang tidak kita ketahui dengan imajinasi. Kita melihat dia pintar, lalu membayangkan percakapan panjang dengannya. Kita melihat dia baik kepada orang lain, lalu membayangkan dia akan menjadi pasangan yang baik. Kita melihat beberapa hal yang kita kagumi dan perlahan mengisi ruang kosong dengan apa yang ingin kita percaya.
+        </p>
+
+        <p>
+          Padahal kita mungkin belum benar-benar mengenalnya.
+        </p>
+
+        <p>
+          Kita belum tahu bagaimana dia ketika marah, gagal, kecewa, kehilangan uang, menghadapi keluarganya, atau ketika hidup tidak berjalan sesuai keinginannya.
+        </p>
+
+        <p>
+          Ada perbedaan antara menyukai seseorang dan mengenal seseorang.
+        </p>
+
+        <p>
+          Dan mungkin semakin dewasa, kita perlu belajar membedakan keduanya.
+        </p>
+
+        <p>
+          Aku juga mulai memahami bahwa tidak semua rasa suka harus berakhir menjadi hubungan. Ada orang yang hadir dan membuat kita mengerti sesuatu tentang diri sendiri. Dari seseorang yang kita sukai, kita mungkin baru sadar bahwa ternyata kita ingin pasangan yang senang membaca, yang punya rasa ingin tahu, yang dekat dengan keluarganya, yang punya prinsip, atau yang membuat kita merasa aman menjadi diri sendiri.
+        </p>
+
+        <p>
+          Rasa itu mungkin tidak membawa kita kepada orang tersebut. Tetapi ia bisa menunjukkan kepada kita seperti apa seseorang yang ingin kita temui.
+        </p>
+
+        <p>
+          Dan mungkin itu juga yang membuatku tidak ingin membenci perasaan ini.
+        </p>
+
+        <p>
+          Tentu aku ingin kamu memiliki perasaan yang sama. Ada bagian kecil dalam diriku yang ingin suatu hari kamu tahu dan ternyata selama ini kamu juga merasakan sesuatu. Tetapi aku juga mulai mengerti bahwa berharap dan menunggu adalah dua hal yang berbeda.
+        </p>
+
+        <p>
+          Aku boleh berharap kepadamu. Tetapi aku tidak ingin hidupku berhenti sambil menunggu kemungkinan itu.
+        </p>
+
+        <p>
+          Karena betapa mudahnya seseorang memenuhi kepala kita tanpa pernah benar-benar hadir dalam kehidupan kita. Kita bisa membayangkan percakapan yang belum pernah terjadi, tempat-tempat yang belum pernah kita datangi bersama, bahkan kehidupan yang belum tentu pernah menjadi milik kita. Dan tanpa sadar, kita sudah menjalani sebuah hubungan seorang diri.
+        </p>
+
+        <p>
+          Orangnya mungkin bahkan tidak tahu apa-apa.
+        </p>
+
+        <p>
+          Sementara kita sudah mengalami semuanya di kepala.
+        </p>
+
+        <p>
+          Jadi mungkin perjuanganku sekarang bukan untuk berhenti menyukaimu.
+        </p>
+
+        <p>
+          Aku rasa kita tidak selalu bisa mengatur kepada siapa hati kita tertarik.
+        </p>
+
+        <p>
+          Perjuanganku adalah memastikan bahwa ketika rasa ini belum memiliki jawaban, <strong>aku tetap memiliki kehidupan yang berjalan.</strong>
+        </p>
+
+        <p>
+          Aku tetap ingin mengejar mimpi-mimpiku bukan supaya suatu hari kamu melihatku dan berpikir aku layak dicintai. Aku ingin mengejar semuanya karena memang itulah hidup yang kuinginkan.
+        </p>
+
+        <p>
+          Aku ingin tetap pergi ke tempat-tempat yang ingin kukunjungi, belajar hal-hal yang membuatku penasaran, membangun sesuatu yang bisa kubanggakan, membaca buku-buku yang membuat pikiranku berkembang, dan menjadi perempuan yang bahkan sebelum dicintai oleh siapa pun sudah tahu bahwa hidupnya berharga.
+        </p>
+
+        <p>
+          Karena kalau suatu hari kamu datang, aku tidak ingin memberikan seluruh hidupku kepadamu.
+        </p>
+
+        <p>
+          Aku ingin mengajakmu masuk ke kehidupan yang sudah kubangun.
+        </p>
+
+        <p>
+          Dan kalau kamu tidak pernah datang, aku juga tidak ingin merasa bahwa semua yang kulakukan menjadi sia-sia hanya karena kamu tidak ada di dalamnya.
+        </p>
+
+        <p>
+          Mungkin itulah satu-satunya cara yang kutemukan untuk berdamai dengan rasa tidak berdaya ini.
+        </p>
+
+        <p>
+          Aku tidak bisa memilih apakah kamu akan mencintaiku.
+        </p>
+
+        <p>
+          Tapi aku masih bisa memilih untuk tidak berhenti mencintai hidupku sendiri.
+        </p>
+
+        <p>
+          Aku juga tidak tahu apa yang sedang terjadi di dalam kepalamu. Mungkin kamu tidak pernah memikirkanku sama sekali. Mungkin kamu pernah, tetapi tidak cukup untuk membuatmu melakukan sesuatu. Mungkin kamu juga sedang menyimpan rasa yang sama dan tidak pernah tahu bahwa aku merasakan hal yang sama.
+        </p>
+
+        <p>
+          Aku tidak tahu.
+        </p>
+
+        <p>
+          Dan mungkin aku memang tidak akan pernah tahu.
+        </p>
+
+        <p>
+          Tapi kalau memang ada satu hal yang ingin kuubah dari cara perempuan memandang rasa sukanya sendiri, mungkin aku ingin kita berhenti menganggap bahwa menunggu berarti hidup kita sedang berhenti.
+        </p>
+
+        <p>
+          Kita boleh menunggu seseorang datang, tetapi kita tidak harus menunggu kehidupan dimulai.
+        </p>
+
+        <p>
+          Kalau suatu hari nanti kamu datang, aku ingin kamu menemukan seorang perempuan yang sedang tumbuh, bukan seseorang yang berdiri di tempat yang sama selama bertahun-tahun hanya karena menunggumu sadar.
+        </p>
+
+        <p>
+          Dan kalau kamu tidak pernah datang, semoga aku tetap bisa melihat ke belakang dan tidak menyesal pernah memiliki rasa ini.
+        </p>
+
+        <p>
+          Karena mungkin rasa suka tidak selalu datang untuk menjadi sebuah hubungan. Kadang ia datang untuk memperlihatkan kepada kita bahwa hati kita masih bisa mengagumi seseorang, bahwa kita masih bisa berharap, dan bahwa kita ternyata mampu merasakan sesuatu yang begitu dalam tanpa harus memilikinya.
+        </p>
+
+        <p>
+          Mungkin itulah perempuan dan rasa yang ia pendam: bukan sekadar cerita tentang seorang perempuan yang menyukai seseorang dalam diam, tetapi tentang seorang perempuan yang setiap hari harus belajar hidup dengan sesuatu yang tidak bisa ia pastikan ujungnya.
+        </p>
+
+        <p>
+          Ia punya rasa, tetapi tidak punya kepastian.
+        </p>
+
+        <p>
+          Ia punya harapan, tetapi tidak punya kendali atas hasilnya.
+        </p>
+
+        <p>
+          Ia ingin seseorang datang, tetapi tidak bisa membuatnya datang.
+        </p>
+
+        <p>
+          Dan sementara semua itu terjadi di dalam dirinya, <strong>hidup tetap meminta ia untuk berjalan.</strong>
+        </p>
+
+        <p>
+          Jadi aku akan berjalan.
+        </p>
+
+        <p>
+          Aku akan tetap mengejar hidupku, meskipun ada bagian kecil dari diriku yang masih berharap kamu suatu hari akan datang.
+        </p>
+
+        <p>
+          Bukan karena rasa ini tidak penting.
+        </p>
+
+        <p>
+          Justru karena ia penting, aku tidak ingin ia menghabiskan seluruh diriku.
+        </p>
+
+        <p>
+          Dan kalau suatu hari ternyata kamu memang datang, aku ingin bisa melihatmu dan tahu bahwa selama ini aku tidak menunggumu dengan meninggalkan hidupku.
+        </p>
+
+        <p>
+          <strong>Aku sedang menjalani hidupku. Kamu hanya kebetulan menjadi seseorang yang ingin kuajak masuk ke dalamnya.</strong>
+        </p>
+
+        <p>
+          karena perempuan tak pernah punya kesempatan untuk mengatakan apa yang ia rasakan, tuliskan semua rasa terpendam itu di kolom komentar :)
+        </p>
+
+      </div>
+
+    </article>
+
+  </main>
+
+
+  <!-- =====================================================
+       COMMENTS
+  ====================================================== -->
+
+  <section class="comments-section">
+
+    <div class="comments-header">
+
+      <h2 class="comments-title">
+        Pesan dari pembaca
+      </h2>
+
+      <span
+        class="comments-count"
+        id="commentsCount"
+      >
+        0 pesan
+      </span>
+
+    </div>
+
+
+    <form
+      class="comment-form"
+      id="commentForm"
+    >
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label
+            class="form-label"
+            for="nameInput"
+          >
+            From
+          </label>
+
+          <input
+            id="nameInput"
+            type="text"
+            placeholder="Namamu"
+          >
+
+        </div>
+
+
+        <label class="anonymous-option">
+
+          <input
+            id="anonymousInput"
+            type="checkbox"
+          >
+
+          Kirim sebagai anonim
+
+        </label>
+
+      </div>
+
+
+      <div class="form-group message-group">
+
+        <label
+          class="form-label"
+          for="messageInput"
+        >
+          Pesan
+        </label>
+
+        <textarea
+          id="messageInput"
+          placeholder="Tulis pesanmu di sini..."
+          required
+        ></textarea>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="submit-button"
+        id="submitButton"
+      >
+        Kirim pesan
+      </button>
+
+
+      <div
+        class="form-status"
+        id="formStatus"
+      ></div>
+
+    </form>
+
+
+    <div
+      class="comments-list"
+      id="commentsList"
+    ></div>
+
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="site-footer">
+
+    © 2026 Tatsyafira. All rights reserved.
+
+  </footer>
+
+
+  <!-- =====================================================
+       SUPABASE
+  ====================================================== -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+  <script>
+
+    const SUPABASE_URL =
+      "https://gtaljywggqalmfqizjhj.supabase.co";
+
+    const SUPABASE_KEY =
+      "sb_publishable_Lvgk-7rPMaxhO7TAOdGp6Q_MWACHYtR";
+
+    const supabaseClient =
+      window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_KEY
+      );
+
+
+    const ARTICLE_SLUG =
+      "perempuan-dan-rasa-suka-yang-ia-pendam";
+
+
+    const commentsList =
+      document.getElementById("commentsList");
+
+    const commentsCount =
+      document.getElementById("commentsCount");
+
+    const commentForm =
+      document.getElementById("commentForm");
+
+    const nameInput =
+      document.getElementById("nameInput");
+
+    const anonymousInput =
+      document.getElementById("anonymousInput");
+
+    const messageInput =
+      document.getElementById("messageInput");
+
+    const submitButton =
+      document.getElementById("submitButton");
+
+    const formStatus =
+      document.getElementById("formStatus");
+
+
+    /* =====================================================
+       ESCAPE HTML
+    ====================================================== */
+
+    function escapeHtml(value) {
+
+      return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+    }
+
+
+    /* =====================================================
+       FORMAT DATE
+    ====================================================== */
+
+    function formatDate(dateString) {
+
+      const date =
+        new Date(dateString);
+
+      return date.toLocaleDateString(
+        "id-ID",
+        {
+          day: "numeric",
+          month: "long",
+          year: "numeric"
+        }
+      );
+
+    }
+
+
+    /* =====================================================
+       LOAD COMMENTS
+    ====================================================== */
+
+    async function loadMessages() {
+
+      commentsList.innerHTML =
+        `<div class="comments-loading">
+          Memuat pesan...
+        </div>`;
+
+
+      const { data, error } =
+        await supabaseClient
+          .from("comments")
+          .select("*")
+          .eq("article", ARTICLE_SLUG)
+          .order(
+            "created_at",
+            {
+              ascending: false
+            }
+          );
+
+
+      if (error) {
+
+        console.error(error);
+
+        commentsList.innerHTML =
+          `<div class="comments-empty">
+            Belum bisa memuat pesan.
+          </div>`;
+
+        return;
+
+      }
+
+
+      commentsCount.textContent =
+        `${data.length} ${data.length === 1 ? "pesan" : "pesan"}`;
+
+
+      if (!data.length) {
+
+        commentsList.innerHTML =
+          `<div class="comments-empty">
+            Belum ada pesan dari pembaca.
+          </div>`;
+
+        return;
+
+      }
+
+
+      commentsList.innerHTML =
+        data.map(comment => {
+
+          const author =
+            comment.is_anonymous
+              ? "Anonim"
+              : (
+                  comment.name ||
+                  "Anonim"
+                );
+
+
+          return `
+            <div class="comment-box">
+
+              <div class="comment-message">
+                ${escapeHtml(comment.message)}
+              </div>
+
+              <div class="comment-footer">
+
+                <span class="comment-author">
+                  ${escapeHtml(author)}
+                </span>
+
+                <span class="comment-date">
+                  ${formatDate(comment.created_at)}
+                </span>
+
+              </div>
+
+            </div>
+          `;
+
+        }).join("");
+
+    }
+
+
+    /* =====================================================
+       SUBMIT COMMENT
+    ====================================================== */
+
+    commentForm.addEventListener(
+      "submit",
+      async function(event) {
+
+        event.preventDefault();
+
+        formStatus.textContent = "";
+
+        const name =
+          nameInput.value.trim();
+
+        const message =
+          messageInput.value.trim();
+
+        const isAnonymous =
+          anonymousInput.checked;
+
+
+        if (!message) {
+
+          formStatus.textContent =
+            "Tulis pesanmu terlebih dahulu.";
+
+          return;
+
+        }
+
+
+        submitButton.disabled = true;
+
+        submitButton.textContent =
+          "Mengirim...";
+
+
+        const { error } =
+          await supabaseClient
+            .from("comments")
+            .insert([
+
+              {
+                article: ARTICLE_SLUG,
+                name: isAnonymous
+                  ? null
+                  : (
+                      name ||
+                      "Anonim"
+                    ),
+                message: message,
+                is_anonymous: isAnonymous
+              }
+
+            ]);
+
+
+        if (error) {
+
+          console.error(error);
+
+          formStatus.textContent =
+            "Pesan belum berhasil dikirim. Coba lagi.";
+
+          submitButton.disabled = false;
+
+          submitButton.textContent =
+            "Kirim pesan";
+
+          return;
+
+        }
+
+
+        commentForm.reset();
+
+        formStatus.textContent =
+          "Pesan berhasil dikirim.";
+
+
+        submitButton.disabled = false;
+
+        submitButton.textContent =
+          "Kirim pesan";
+
+
+        await loadMessages();
+
+      }
+    );
+
+
+    /* =====================================================
+       INITIAL LOAD
+    ====================================================== */
+
+    loadMessages();
+
+  </script>
+
+</body>
+
+</html>
