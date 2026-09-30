@@ -26,6 +26,11 @@
       "permanent": true
     },
     {
+      "source": "/artikel-perempuan-dan-rasa-suka-yang-ia-pendam.html",
+      "destination": "/perempuan-dan-rasa-suka-yang-ia-pendam",
+      "permanent": true
+    },
+    {
       "source": "/english-test.html",
       "destination": "/english-test",
       "permanent": true
@@ -52,6 +57,10 @@
     {
       "source": "/ia-yang-membaca",
       "destination": "/artikel-ia-yang-membaca.html"
+    },
+    {
+      "source": "/perempuan-dan-rasa-suka-yang-ia-pendam",
+      "destination": "/artikel-perempuan-dan-rasa-suka-yang-ia-pendam.html"
     },
     {
       "source": "/english-test",
