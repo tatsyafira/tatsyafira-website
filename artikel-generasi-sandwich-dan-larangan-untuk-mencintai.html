@@ -1,0 +1,2150 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Generasi Sandwich dan Larangan untuk Mencintai — Tatsyafira
+  </title>
+
+
+  <!-- =====================================================
+       FONTS
+  ====================================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <style>
+
+    /* =====================================================
+       RESET
+    ====================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #222222;
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =====================================================
+       HEADER
+       SAME AS PREVIOUS ARTICLE
+    ====================================================== */
+
+    .site-header {
+      width: 100%;
+      height: 72px;
+      background: #ffffff;
+      border-bottom: 1px solid #eeeeee;
+      position: relative;
+      z-index: 100;
+    }
+
+    .nav {
+      width: min(1200px, calc(100% - 64px));
+      height: 72px;
+      margin: 0 auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      width: 135px;
+      height: 42px;
+
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .logo img {
+      display: block;
+
+      width: 135px !important;
+      height: auto !important;
+
+      max-width: 135px !important;
+      max-height: 42px !important;
+
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+    }
+
+    .nav-links a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #333333;
+
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.55;
+    }
+
+    .nav-links a.active {
+      font-weight: 600;
+    }
+
+
+    /* =====================================================
+       ARTICLE
+    ====================================================== */
+
+    .article {
+      width: min(900px, calc(100% - 48px));
+      margin: 0 auto;
+
+      padding-top: 105px;
+      padding-bottom: 40px;
+    }
+
+
+    /* =====================================================
+       CATEGORY
+    ====================================================== */
+
+    .article-category {
+      font-size: 13px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+
+      color: #999999;
+      margin-bottom: 22px;
+    }
+
+
+    /* =====================================================
+       TITLE
+    ====================================================== */
+
+    .article-title {
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: clamp(42px, 6vw, 68px);
+
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+
+      color: #1f1f1f;
+
+      max-width: 850px;
+      margin-bottom: 48px;
+    }
+
+
+    /* =====================================================
+       COVER IMAGE
+    ====================================================== */
+
+    .cover-figure {
+      margin-bottom: 22px;
+    }
+
+    .cover-image {
+      width: 100%;
+
+      border-radius: 14px;
+      overflow: hidden;
+
+      background: #f5f3f1;
+    }
+
+    .cover-image img {
+      width: 100%;
+      height: auto;
+
+      object-fit: contain;
+    }
+
+
+    /* =====================================================
+       SPOTIFY
+    ====================================================== */
+
+    .spotify-section {
+      width: 100%;
+      margin-bottom: 70px;
+    }
+
+    .spotify-player {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .spotify-player iframe {
+      width: 100%;
+      height: 352px;
+
+      border: 0;
+      display: block;
+    }
+
+    .spotify-caption {
+      text-align: center;
+
+      margin-top: 14px;
+
+      font-size: 13px;
+      color: #999999;
+
+      font-family: "DM Sans", sans-serif;
+    }
+
+
+    /* =====================================================
+       ARTICLE CONTENT
+    ====================================================== */
+
+    .article-content {
+      width: min(760px, 100%);
+      margin: 0 auto;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 20px;
+      line-height: 1.8;
+
+      color: #292929;
+    }
+
+    .article-content p {
+      margin-bottom: 32px;
+    }
+
+    .article-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .article-content strong {
+      font-weight: 700;
+    }
+
+    .article-content em {
+      font-style: italic;
+    }
+
+
+    /* =====================================================
+       OPENING
+    ====================================================== */
+
+    .article-opening {
+      font-style: italic;
+    }
+
+
+    /* =====================================================
+       ARTICLE HEADINGS
+    ====================================================== */
+
+    .article-content h3 {
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 30px;
+      line-height: 1.25;
+
+      font-weight: 500;
+
+      color: #222222;
+
+      margin-top: 65px;
+      margin-bottom: 32px;
+    }
+
+
+    /* =====================================================
+       ARTICLE IMAGES
+    ====================================================== */
+
+    .article-figure {
+      width: 100%;
+      margin: 55px 0 14px;
+    }
+
+    .article-image {
+      width: 100%;
+
+      aspect-ratio: 4 / 3;
+
+      background: #f5f3f1;
+
+      border-radius: 10px;
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .article-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+    }
+
+    .image-caption {
+      margin-top: 12px;
+
+      font-family: "DM Sans", sans-serif;
+
+      font-size: 13px;
+      line-height: 1.6;
+
+      text-align: center;
+
+      color: #999999;
+    }
+
+
+    /* =====================================================
+       QUOTE STYLE
+    ====================================================== */
+
+    .article-quote {
+      margin: 42px 0;
+      padding: 10px 0;
+    }
+
+    .article-quote p {
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+
+
+    /* =====================================================
+       COMMENTS SECTION
+       SAME AS PREVIOUS ARTICLE
+    ====================================================== */
+
+    .comments-section {
+      width: min(1000px, calc(100% - 48px));
+
+      margin: 90px auto 120px;
+
+      padding-top: 70px;
+
+      border-top: 1px solid #eeeeee;
+    }
+
+    .comments-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+
+      gap: 20px;
+
+      margin-bottom: 38px;
+    }
+
+    .comments-title {
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 34px;
+
+      font-weight: 500;
+
+      color: #222222;
+    }
+
+    .comments-count {
+      font-size: 13px;
+      color: #999999;
+
+      white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       COMMENT FORM
+    ====================================================== */
+
+    .comment-form {
+      background: #ffffff;
+
+      border: 1px solid #dedede;
+
+      border-radius: 8px;
+
+      padding: 34px;
+
+      margin-bottom: 55px;
+    }
+
+    .form-row {
+      display: flex;
+
+      align-items: flex-end;
+
+      gap: 18px;
+
+      margin-bottom: 22px;
+    }
+
+    .form-group {
+      flex: 1;
+    }
+
+    .form-label {
+      display: block;
+
+      font-size: 13px;
+      font-weight: 600;
+
+      color: #555555;
+
+      margin-bottom: 9px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+
+      border: 1px solid #dddddd;
+
+      border-radius: 6px;
+
+      background: #ffffff;
+
+      padding: 13px 14px;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 14px;
+
+      color: #222222;
+
+      outline: none;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    input {
+      height: 48px;
+    }
+
+    textarea {
+      min-height: 145px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #999999;
+
+      box-shadow:
+        0 0 0 2px
+        rgba(0, 0, 0, 0.03);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #aaaaaa;
+    }
+
+
+    /* =====================================================
+       ANONYMOUS
+    ====================================================== */
+
+    .anonymous-option {
+      display: flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      height: 48px;
+
+      white-space: nowrap;
+
+      font-size: 13px;
+
+      color: #666666;
+    }
+
+    .anonymous-option input {
+      width: 17px;
+      height: 17px;
+
+      padding: 0;
+
+      accent-color: #222222;
+    }
+
+
+    /* =====================================================
+       MESSAGE
+    ====================================================== */
+
+    .message-group {
+      margin-bottom: 22px;
+    }
+
+
+    /* =====================================================
+       BUTTON
+    ====================================================== */
+
+    .submit-button {
+      border: none;
+
+      border-radius: 6px;
+
+      background: #222222;
+
+      color: #ffffff;
+
+      padding: 12px 22px;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+      cursor: pointer;
+
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .submit-button:hover {
+      background: #444444;
+    }
+
+    .submit-button:active {
+      transform: translateY(1px);
+    }
+
+    .submit-button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .form-status {
+      margin-top: 14px;
+
+      font-size: 13px;
+
+      color: #888888;
+    }
+
+
+    /* =====================================================
+       COMMENT CARDS
+    ====================================================== */
+
+    .comments-list {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
+
+      gap: 18px;
+    }
+
+    .comment-box {
+      background: #ffffff;
+
+      border: 1px solid #dedede;
+
+      border-radius: 10px;
+
+      min-height: 190px;
+
+      padding: 25px 26px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .comment-box:hover {
+      border-color: #cccccc;
+
+      box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.04);
+    }
+
+    .comment-message {
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 17px;
+
+      line-height: 1.7;
+
+      color: #333333;
+
+      margin-bottom: 28px;
+
+      white-space: pre-wrap;
+
+      overflow-wrap: anywhere;
+    }
+
+    .comment-footer {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+      padding-top: 15px;
+
+      border-top: 1px solid #eeeeee;
+    }
+
+    .comment-author {
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 12px;
+
+      font-weight: 600;
+
+      color: #555555;
+    }
+
+    .comment-date {
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 11px;
+
+      color: #aaaaaa;
+    }
+
+    .comments-empty,
+    .comments-loading {
+      font-size: 14px;
+
+      color: #999999;
+
+      padding: 12px 0;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ====================================================== */
+
+    .site-footer {
+      border-top: 1px solid #eeeeee;
+
+      padding: 35px 24px;
+
+      text-align: center;
+
+      font-size: 13px;
+
+      color: #999999;
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ====================================================== */
+
+    @media (max-width: 700px) {
+
+      .site-header {
+        height: 64px;
+      }
+
+      .nav {
+        width: calc(100% - 32px);
+
+        height: 64px;
+      }
+
+      .logo {
+        width: 110px;
+        height: 36px;
+      }
+
+      .logo img {
+        width: 110px !important;
+
+        max-width: 110px !important;
+        max-height: 36px !important;
+      }
+
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .nav-links a:nth-child(4),
+      .nav-links a:nth-child(5) {
+        display: none;
+      }
+
+
+      /* ARTICLE */
+
+      .article {
+        width: calc(100% - 36px);
+
+        padding-top: 65px;
+        padding-bottom: 40px;
+      }
+
+      .article-title {
+        font-size: 42px;
+
+        letter-spacing: -1px;
+
+        margin-bottom: 40px;
+      }
+
+      .article-content {
+        font-size: 17px;
+
+        line-height: 1.9;
+      }
+
+      .article-content p {
+        margin-bottom: 30px;
+      }
+
+      .article-content h3 {
+        font-size: 27px;
+
+        margin-top: 55px;
+        margin-bottom: 28px;
+      }
+
+
+      /* SPOTIFY */
+
+      .spotify-section {
+        margin-bottom: 55px;
+      }
+
+      .spotify-player iframe {
+        height: 352px;
+      }
+
+
+      /* COMMENTS */
+
+      .comments-section {
+        width: calc(100% - 36px);
+
+        margin-top: 60px;
+        margin-bottom: 70px;
+
+        padding-top: 50px;
+      }
+
+      .comments-header {
+        margin-bottom: 28px;
+      }
+
+      .comments-title {
+        font-size: 28px;
+      }
+
+      .comment-form {
+        padding: 24px;
+
+        margin-bottom: 40px;
+      }
+
+      .form-row {
+        display: block;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .anonymous-option {
+        height: auto;
+      }
+
+      .comments-list {
+        grid-template-columns: 1fr;
+      }
+
+      .comment-box {
+        min-height: 170px;
+
+        padding: 22px;
+      }
+
+      .comment-message {
+        font-size: 16px;
+      }
+
+    }
+
+
+    @media (max-width: 390px) {
+
+      .article {
+        width: calc(100% - 36px);
+      }
+
+      .article-title {
+        font-size: 39px;
+      }
+
+      .article-content {
+        font-size: 17px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header class="site-header">
+
+    <nav class="nav">
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+
+        <img
+          src="images/tatsyafira-logo.png"
+          alt="tatsyafira"
+        >
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a
+          href="catatan.html"
+          class="active"
+        >
+          Catatan
+        </a>
+
+        <a href="belajar.html">
+          Belajar
+        </a>
+
+        <a href="#">
+          Kelas
+        </a>
+
+        <a href="#">
+          Resources
+        </a>
+
+        <a href="#">
+          Toko
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       ARTICLE
+  ====================================================== -->
+
+  <main>
+
+    <article class="article">
+
+
+      <div class="article-category">
+        Refleksi
+      </div>
+
+
+      <h1 class="article-title">
+        Generasi Sandwich dan Larangan untuk Mencintai
+      </h1>
+
+
+      <!-- =================================================
+           COVER IMAGE
+      ================================================== -->
+
+      <figure class="cover-figure">
+
+        <div class="cover-image">
+
+          <img
+            src="images/generasi-sandwich-cover.png"
+            alt="Generasi Sandwich dan Larangan untuk Mencintai"
+          >
+
+        </div>
+
+      </figure>
+
+
+      <!-- =================================================
+           SPOTIFY
+      ================================================== -->
+
+      <section class="spotify-section">
+
+        <div class="spotify-player">
+
+          <iframe
+            data-testid="embed-iframe"
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/7obj53PDpxszVdU35jVv5P?utm_source=generator&si=91913440afb944cd"
+            width="100%"
+            height="352"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+
+        </div>
+
+
+        <div class="spotify-caption">
+          Dengarkan sambil membaca.
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           ARTICLE CONTENT
+      ================================================== -->
+
+      <div class="article-content">
+
+
+        <p class="article-opening">
+          <strong>Bagaimana aku bisa memikirkan maharmu, saat aku masih sibuk memikirkan isi perutku dan keluargaku?</strong>
+        </p>
+
+
+        <p>
+          Mungkin ini bukan pertanyaan yang pernah kita bayangkan akan muncul ketika kita masih kecil. Dulu, ketika membayangkan jatuh cinta, yang ada di kepala kita mungkin hanya seseorang yang kita sukai, jalan bersama, berbicara sampai malam, lalu suatu hari menikah dan membangun rumah kecil dengan orang yang kita cintai. Kita tidak pernah diajarkan untuk membayangkan bahwa suatu hari, sebelum memikirkan siapa yang ingin kita nikahi, kita mungkin harus terlebih dahulu menghitung isi rekening, biaya rumah, pendidikan adik, kesehatan orang tua, tabungan darurat, cicilan, dan kemungkinan-kemungkinan buruk yang bahkan belum terjadi.
+        </p>
+
+        <p>
+          Tetapi semakin dewasa, semakin banyak orang menyadari bahwa cinta tidak pernah berdiri sendirian. Ia selalu datang bersama kehidupan yang sudah lebih dulu kita miliki.
+        </p>
+
+        <p>
+          Ada orang yang ketika menerima gaji pertamanya bisa memikirkan, “Aku mau beli mobil.” Ada yang berpikir ingin traveling, mengambil master, pindah ke apartemen yang lebih nyaman, atau mulai investasi. Tetapi ada juga yang ketika menerima gaji pertama justru membuka daftar kebutuhan keluarganya. Ayah harus berobat. Ibu perlu uang untuk belanja. Adik masih kuliah. Cicilan rumah belum selesai. Ada tagihan yang jatuh tempo minggu depan. Dan setelah semuanya dibayar, baru ia bertanya kepada dirinya sendiri, “Masih berapa yang tersisa untuk hidupku?”
+        </p>
+
+        <p>
+          Di situlah generasi sandwich berada.
+        </p>
+
+        <p>
+          Mereka bukan sekadar orang yang suatu hari memiliki anak lalu harus mengurus orang tua pada saat bersamaan. Dalam konteks yang lebih luas, ada anak muda yang bahkan sebelum membangun keluarga sendiri sudah menjadi bagian penting dari sistem ekonomi keluarganya. Mereka bekerja bukan hanya untuk membangun masa depan mereka, tetapi juga untuk memastikan keluarga yang membesarkan mereka tetap berjalan.
+        </p>
+
+        <p>
+          Dan menurutku, inilah yang sering hilang ketika kita membicarakan anak muda, pernikahan, dan cinta.
+        </p>
+
+        <p>
+          Kita terlalu mudah mengatakan bahwa generasi sekarang terlalu takut menikah, terlalu banyak menghitung, terlalu materialistis, atau terlalu ingin hidup nyaman. Padahal mungkin sebagian dari mereka justru <strong>terlalu sadar terhadap konsekuensi sebuah keluarga.</strong>
+        </p>
+
+        <p>
+          Mereka tahu bahwa menikah bukan hanya tentang menemukan seseorang yang baik. Ada dua keluarga yang bertemu. Ada kemungkinan orang tua yang menua. Ada pekerjaan yang bisa hilang. Ada anak yang mungkin lahir. Ada biaya pendidikan. Ada rumah sakit. Ada kebutuhan sehari-hari. Ada masa tua yang harus dipersiapkan.
+        </p>
+
+        <p>
+          Jadi ketika seseorang mengatakan, “Aku belum siap menikah,” mungkin kita seharusnya tidak buru-buru mengartikannya sebagai “aku tidak mau berkomitmen”.
+        </p>
+
+        <p>
+          Bisa jadi ia sedang mengatakan, <strong>“Aku belum tahu bagaimana caranya membangun satu keluarga tanpa meninggalkan keluarga yang sudah menjadi tanggung jawabku.”</strong>
+        </p>
+
+
+        <h3>
+          Mungkin kita pernah salah memahami Hafiz
+        </h3>
+
+
+        <p>
+          Mungkin pembaca <em>Lima Tanya yang Tertinggal Saat Ibu Pergi</em> cukup familiar dengan Hafiz.
+        </p>
+
+        <p>
+          Anak laki-laki sederhana yang pada beberapa bagian mungkin membuat pembaca geram. <em>Kenapa diam saja? Kenapa Hafiz tidak bergerak mengejar sesuatu yang ia inginkan? Kenapa dia seperti pasrah?</em>
+        </p>
+
+        <p>
+          Aku memahami kenapa pembaca bisa merasa begitu. Dari luar, Hafiz memang terlihat seperti seseorang yang terlalu diam. Ia tidak mengejar dengan cara yang dramatis. Ia tidak datang membawa janji besar. Ia tidak tiba-tiba berkata bahwa ia akan meninggalkan semuanya demi seseorang yang Ia suka.
+        </p>
+
+        <p>
+          Tetapi setelah menulisnya, aku justru semakin memahami bahwa Hafiz bukan anak laki-laki yang tidak punya keinginan. <strong>Ia adalah anak laki-laki yang terlalu sadar terhadap harga dari sebuah keinginan.</strong>
+        </p>
+
+        <p>
+          Dalam cerita, ketika tokoh utama, perempuan yang Ia cintai, mengalami masalah finansial untuk keberangkatannya ke Jerman, Hafiz ingin membantu. Tetapi ia tahu kemampuan ekonominya sendiri. Ia bukan laki-laki yang memiliki tabungan besar dalam euro. Ia punya ayah yang sakit, ibu yang menjahit untuk kebutuhan rumah, adik yang masih harus dibiayai, dan gaji yang kadang bahkan nyaris tidak cukup untuk dikirim ke rumah.
+        </p>
+
+        <p>
+          Jadi ketika Hafiz diam, pertanyaannya bukan selalu, <strong>“Kenapa dia tidak berjuang?”</strong>
+        </p>
+
+        <p>
+          Kadang pertanyaannya harus berubah menjadi, <strong>“Apa yang harus ia korbankan kalau ia memilih untuk berjuang?”</strong>
+        </p>
+
+        <p>
+          Karena ada orang-orang yang bisa mengejar cinta dengan seluruh tenaga mereka. Ada pula orang-orang yang setiap kali ingin mengejar sesuatu harus terlebih dahulu melihat ke belakang dan memastikan tidak ada keluarganya yang akan jatuh ketika ia pergi.
+        </p>
+
+        <p>
+          Dan mungkin itu sebabnya Hafiz terasa sangat realistis.
+        </p>
+
+        <p>
+          Ada jutaan anak muda yang tidak pernah benar-benar mengatakan bahwa mereka menyerah pada mimpi. Mereka hanya belajar mengurutkan prioritas. Hari ini adik sekolah dulu. Besok orang tua berobat dulu. Nanti kalau sudah cukup uang, baru kuliah. Kalau sudah punya pekerjaan tetap, baru menikah. Kalau sudah punya rumah, baru punya anak.
+        </p>
+
+        <p>
+          Masalahnya, kata <strong>“nanti”</strong> bisa menjadi sangat panjang ketika seseorang tidak pernah diberikan cukup ruang untuk mengejar kehidupannya sendiri.
+        </p>
+
+        <p>
+          Ada sebuah tanda <strong>“dilarang mencintai”</strong> yang tidak pernah benar-benar terlihat oleh mata, tetapi keberadaannya terasa begitu nyata bagi anak-anak generasi roti lapis.
+        </p>
+
+        <p>
+          Tidak ada papan besar yang mengatakan, <em>jangan jatuh cinta.</em>
+        </p>
+
+        <p>
+          Tidak ada yang melarang kita menikah.
+        </p>
+
+        <p>
+          Tidak ada yang mengatakan bahwa kita tidak boleh mempunyai keluarga sendiri.
+        </p>
+
+        <p>
+          Tetapi ada cicilan. Ada biaya pendidikan. Ada orang tua yang semakin tua. Ada adik yang masih membutuhkan bantuan. Ada pekerjaan yang belum stabil. Ada rumah yang harus dibayar. Ada tubuh yang sewaktu-waktu bisa sakit dan membutuhkan uang.
+        </p>
+
+        <p>
+          Dan akhirnya, kita belajar bahwa mencintai seseorang bukan hanya tentang apakah kita menginginkannya. <strong>Kita juga harus bertanya apakah kehidupan kita mampu menanggung konsekuensi dari keinginan itu.</strong>
+        </p>
+
+        <p>
+          Tetapi tentu saja, generasi sandwich tidak pernah memandang jenis kelamin. Laki-laki maupun perempuan, tidak ada yang benar-benar kebal dari kenyataan ini. Hafiz mungkin menggambarkan seorang laki-laki yang merasa belum mampu datang kepada perempuan yang ia cintai karena ada keluarga yang masih harus ia pikirkan, tetapi ada banyak perempuan yang berdiri di posisi yang sama. Perempuan yang bekerja dan sebagian gajinya dikirim pulang. Perempuan yang menunda melanjutkan pendidikan karena adiknya masih membutuhkan biaya. Perempuan yang belum berani meninggalkan pekerjaan yang tidak ia sukai karena ada rumah yang ikut bergantung pada penghasilannya. Pada akhirnya, ketika sebuah keluarga membutuhkan seseorang untuk menopang kehidupan mereka, tagihan tidak pernah bertanya apakah yang membayarnya laki-laki atau perempuan.
+        </p>
+
+        <p>
+          Dan mungkin karena aku berada cukup dekat dengan kenyataan itu, aku mengerti kenapa urusan mencintai seseorang tidak pernah terasa sesederhana, <em>“Kalau suka, ya perjuangkan.”</em> Sebagai seseorang yang setiap bulannya juga harus memikirkan bagaimana bertahan hidup, bagaimana biaya kuliah adikku terpenuhi, bagaimana menghadapi kebutuhan-kebutuhan keluarga yang kadang muncul tanpa peringatan, aku justru berpikir seribu kali ketika membayangkan membangun kehidupan dengan seseorang.
+        </p>
+
+        <p>
+          Karena ketika aku mencintaimu, aku tidak datang kepadamu sebagai manusia tanpa sejarah dan tanpa tanggungan. Aku datang dengan kehidupan yang sudah berjalan jauh sebelum kamu ada di dalamnya. Ada keluarga yang selama ini menjadi bagian dari perhitunganku. Ada kebutuhan yang tidak bisa tiba-tiba kuhentikan hanya karena aku menikah. Ada orang-orang yang tetap ingin kubantu bahkan ketika nanti aku sudah membangun rumah tanggaku sendiri.
+        </p>
+
+        <p>
+          Dan di situlah pertanyaan tentang cinta berubah menjadi jauh lebih rumit: <strong>apa iya aku akan mencintaimu, membangun hidup bersamamu, lalu membawa seluruh beban yang kutanggung hari ini ke dalam kehidupan kita?</strong>
+        </p>
+
+        <p>
+          Bagaimana kalau uang yang seharusnya kita tabung untuk rumah harus kubagi untuk biaya pendidikan adikku? Bagaimana kalau ketika kita sedang menyiapkan kelahiran anak pertama, keluargaku membutuhkan bantuan? Bagaimana kalau kamu memiliki tanggungan yang sama? Bagaimana kalau dua orang dari generasi sandwich menikah dan bukannya memulai kehidupan dari nol, mereka justru memulai dari angka minus karena masing-masing membawa tanggung jawab dari keluarga sebelumnya?
+        </p>
+
+        <p>
+          Aku rasa inilah bagian dari generasi sandwich yang jarang dibicarakan. Kita sering melihatnya sebagai persoalan seseorang yang harus “membantu keluarga”, seolah keputusan itu berdiri sendiri. Padahal ketika seseorang mulai membangun rumah tangga, setiap rupiah yang dialokasikan untuk satu kebutuhan hampir selalu berarti ada kebutuhan lain yang harus menunggu. Kita tidak lagi hanya berbicara tentang <em>uangku</em>. Ada <em>uang kita</em>. Ada masa depan pasangan. Ada kemungkinan anak. Ada dana darurat. Ada rumah. Ada pendidikan. Ada masa tua. Lalu di antara semua itu, masih ada keluarga yang telah menjadi tanggung jawab bahkan sebelum hubungan tersebut dimulai.
+        </p>
+
+        <p>
+          Dan aku tidak ingin membingkai membantu keluarga sebagai sesuatu yang buruk. Aku mencintai keluargaku. Kalau mereka membutuhkan bantuan dan aku mampu, tentu aku ingin membantu. Tetapi justru karena aku mencintai mereka, aku sering memikirkan satu pertanyaan yang rasanya tidak pernah punya jawaban sederhana: <strong>pengorbanan mana yang sebenarnya harus kudahulukan?</strong>
+        </p>
+
+        <p>
+          Apakah menjadi anak yang baik berarti aku harus selalu mendahulukan keluarga tempat aku dilahirkan? Tetapi ketika aku menikah nanti, bukankah aku juga sedang membangun keluarga baru yang berhak memiliki keamanan finansialnya sendiri? Kalau aku terus mengambil dari masa depan rumah tanggaku untuk menyelesaikan masalah keluarga hari ini, sampai kapan pengorbanan itu masih bisa disebut bentuk kasih sayang, dan kapan ia mulai menjadi perpindahan beban dari satu generasi kepada generasi berikutnya?
+        </p>
+
+        <p>
+          Karena itu, untuk mencintaimu saja aku menghitung lagi.
+        </p>
+
+        <p>
+          Bukan menghitung apakah kamu cukup kaya. Bukan pula menghitung apa yang bisa kudapatkan darimu. Aku sedang menghitung apakah aku punya cukup ruang dalam hidupku untuk membangun sesuatu bersamamu tanpa menjadikanmu ikut membayar harga dari keadaan yang tidak pernah kamu ciptakan. Aku sedang menghitung apakah aku bisa menjadi pasanganmu tanpa berhenti menjadi kakak, anak, dan bagian dari keluarga yang selama ini membutuhkan diriku. Aku sedang menghitung apakah aku bisa memberikan masa depan yang layak kepada keluarga yang kelak kita bangun tanpa merasa sedang mengkhianati keluarga yang membesarkanku.
+        </p>
+
+        <p>
+          Dan semakin kupikirkan, semakin aku sadar bahwa dilema ini sebenarnya menunjukkan sesuatu yang jauh lebih besar daripada persoalan personal. <strong>Mengapa begitu banyak anak muda harus memilih antara menjadi anak yang bertanggung jawab dan menjadi manusia yang punya kesempatan membangun kehidupannya sendiri?</strong>
+        </p>
+
+
+        <h3>
+          Kenapa harus memilih?
+        </h3>
+
+
+        <p>
+          Aku teringat satu kalimat yang mungkin terdengar sederhana:
+        </p>
+
+        <p>
+          <strong>“Biarkan adikku saja yang berkuliah. Aku bekerja saja.”</strong>
+        </p>
+
+        <p>
+          Dan setiap kali mendengarnya, aku ingin bertanya, <strong>kenapa kita harus memilih?</strong>
+        </p>
+
+        <p>
+          Kenapa seorang anak harus mengorbankan pendidikannya supaya adiknya bisa sekolah?
+        </p>
+
+        <p>
+          Kenapa seseorang harus memilih antara menjadi anak yang membantu keluarganya dan menjadi manusia yang membangun masa depannya sendiri?
+        </p>
+
+        <p>
+          Pendidikan adalah hak dasar umat manusia (katanya)
+        </p>
+
+        <p>
+          Tetapi hak secara hukum dan pengalaman hidup di lapangan adalah dua hal yang tidak selalu identik. Ketika seseorang ingin melanjutkan pendidikan tinggi, persoalannya bukan hanya uang kuliah. Ada biaya tempat tinggal, transportasi, makanan, perangkat, buku, dan pendapatan yang mungkin hilang karena ia memilih kuliah daripada bekerja penuh waktu.
+        </p>
+
+        <p>
+          Pemerintah memang mengalokasikan anggaran besar untuk pendidikan dan berbagai program bantuan pendidikan. Tetapi keberadaan anggaran tidak otomatis berarti setiap keluarga Indonesia terbebas dari keputusan-keputusan sulit di tingkat rumah tangga.
+        </p>
+
+        <p>
+          Dan justru di situlah menurutku kita harus lebih kritis.
+        </p>
+
+        <p>
+          Kalau seorang anak harus berkata, <em>“Adikku saja yang kuliah, aku bekerja,”</em> kita tidak cukup hanya memuji pengorbanannya.
+        </p>
+
+        <p>
+          Kita juga perlu bertanya: <strong>mengapa sistem membuat pengorbanan itu terasa seperti pilihan yang paling masuk akal?</strong>
+        </p>
+
+        <p>
+          Dalam keadaan yang ideal, seseorang tidak seharusnya harus mengorbankan seluruh kesempatan pendidikannya hanya karena keluarganya sedang kesulitan. Ia seharusnya punya akses pada pendidikan yang layak, kesempatan kerja yang produktif, dan penghasilan yang cukup untuk memenuhi kebutuhan hidupnya tanpa harus menjadi satu-satunya jaring pengaman bagi seluruh keluarganya.
+        </p>
+
+        <p>
+          Di sinilah menurutku pembicaraan mengenai generasi sandwich harus bergerak lebih jauh daripada sekadar nasihat, <em>“Kamu harus pintar mengatur keuangan.”</em>
+        </p>
+
+        <p>
+          Tentu kita perlu belajar mengelola uang. Kita perlu tahu bagaimana membuat dana darurat, memahami utang, merencanakan investasi, mempersiapkan pensiun, dan melindungi keluarga dari risiko yang bisa menghancurkan kondisi finansial dalam satu kejadian.
+        </p>
+
+        <p>
+          Tetapi ada sesuatu yang perlu kita akui:
+        </p>
+
+        <p>
+          <strong>literasi finansial tidak bisa menciptakan uang yang memang tidak ada.</strong>
+        </p>
+
+        <p>
+          Data terbaru memang menunjukkan bahwa literasi keuangan masyarakat Indonesia sudah berada pada tingkat yang cukup baik dan terus berkembang. Tetapi angka-angka itu justru membuatku ingin mengajukan pertanyaan yang berbeda: <strong>apa yang sebenarnya mau dikelola ketika uang yang masuk setiap bulan bahkan hanya cukup untuk memenuhi kebutuhan dasar seseorang? Untuk sekedar mengisi perut dan mempertahankan atap di atas kepalanya.</strong>
+        </p>
+
+        <p>
+          Seseorang bisa tahu bahwa ia seharusnya menabung.
+        </p>
+
+        <p>
+          Ia bisa tahu tentang investasi.
+        </p>
+
+        <p>
+          Ia bisa tahu tentang compound interest.
+        </p>
+
+        <p>
+          Ia bisa tahu pentingnya dana darurat dan pensiun.
+        </p>
+
+        <p>
+          Tetapi kalau setelah membayar makan, tempat tinggal, transportasi, pendidikan adik, obat orang tua, tagihan, dan kebutuhan rumah tangga tidak ada lagi uang yang tersisa, apa yang sebenarnya bisa ia sisihkan?
+        </p>
+
+        <p>
+          Tidak ada disposable income untuk ditabung.
+        </p>
+
+        <p>
+          Tidak ada disposable income untuk diinvestasikan.
+        </p>
+
+        <p>
+          Bahkan kadang tidak ada disposable income untuk dikelola.
+        </p>
+
+        <p>
+          Di titik tertentu, persoalannya bukan lagi <strong>“Apakah kamu tahu cara mengelola uang?”</strong>
+        </p>
+
+        <p>
+          Tetapi:
+        </p>
+
+        <p>
+          <strong>“Apakah kamu memiliki cukup uang untuk dikelola?”</strong>
+        </p>
+
+        <p>
+          Dan menurutku, ini perbedaan yang sangat penting.
+        </p>
+
+        <p>
+          Jangan sampai kita menggunakan literasi finansial untuk memindahkan seluruh tanggung jawab kepada individu. Seolah-olah kalau seseorang masih hidup dari gaji ke gaji, masalahnya pasti karena ia belum cukup pintar membuat budgeting.
+        </p>
+
+        <p>
+          Ada kondisi di mana seseorang sudah sangat disiplin.
+        </p>
+
+        <p>
+          Sudah berhemat.
+        </p>
+
+        <p>
+          Sudah mengurangi keinginannya sendiri.
+        </p>
+
+        <p>
+          Sudah tidak membeli barang-barang yang tidak diperlukan.
+        </p>
+
+        <p>
+          Sudah bekerja keras.
+        </p>
+
+        <p>
+          Tetapi pendapatannya memang hanya cukup untuk membuat keluarganya bertahan.
+        </p>
+
+        <p>
+          Kemiskinan tidak selalu diwariskan dalam bentuk uang yang sedikit. Kadang ia diwariskan dalam bentuk <strong>tidak adanya ruang untuk merencanakan masa depan.</strong>
+        </p>
+
+        <p>
+          Dan di sinilah lingkaran itu mulai terbentuk.
+        </p>
+
+        <p>
+          Seseorang menghabiskan sebagian besar penghasilannya di usia produktif untuk menopang keluarganya. Ia membayar pendidikan adik-adiknya. Ia membantu orang tua. Ia menanggung kebutuhan rumah. Ia mungkin bahkan menunda rumahnya sendiri, pernikahannya sendiri, atau anaknya sendiri.
+        </p>
+
+        <p>
+          Lalu usia berjalan.
+        </p>
+
+        <p>
+          Orang tua semakin tua.
+        </p>
+
+        <p>
+          Kemampuan bekerja semakin terbatas.
+        </p>
+
+        <p>
+          Dan tiba-tiba ia menyadari bahwa uang yang seharusnya menjadi dana hari tuanya sudah banyak digunakan untuk membiayai kehidupan generasi sebelumnya.
+        </p>
+
+        <p>
+          Sekarang siapa yang membiayai hidupnya?
+        </p>
+
+        <p>
+          <strong>Anaknya.</strong>
+        </p>
+
+        <p>
+          Dan lingkaran itu dimulai lagi.
+        </p>
+
+        <p>
+          <strong>Anak membantu orang tua. Anak kemudian menikah. Anak memiliki anak. Anak masih membantu orang tua. Anak harus membiayai anaknya. Lalu suatu hari anaknya sendiri tumbuh dan menemukan bahwa ia juga harus melakukan hal yang sama.</strong>
+        </p>
+
+        <p>
+          Begitulah lingkarannya.
+        </p>
+
+        <p>
+          Bukan karena setiap orang tua sengaja ingin membebani anaknya.
+        </p>
+
+        <p>
+          Bukan pula karena setiap anak tidak mampu mengelola uang.
+        </p>
+
+        <p>
+          Tetapi karena ketika perlindungan ekonomi tidak cukup kuat, keluarga menjadi tempat terakhir untuk menyerap semua risiko.
+        </p>
+
+        <p>
+          <strong>Satu generasi membayar masa lalu sambil mencoba membeli masa depannya sendiri.</strong>
+        </p>
+
+        <p>
+          Dan ketika ia gagal membeli masa depannya karena seluruh penghasilannya sudah habis untuk masa lalu, generasi berikutnya kembali diminta membayar.
+        </p>
+
+        <p>
+          Itulah lingkaran setan generasi sandwich.
+        </p>
+
+
+        <h3>
+          Dan akhirnya, kita kembali kepada cinta
+        </h3>
+
+
+        <p>
+          Mungkin inilah bagian yang paling menyedihkan.
+        </p>
+
+        <p>
+          Kita hidup di zaman ketika secara teori kita punya lebih banyak kebebasan untuk memilih siapa yang kita cintai. Tetapi kebebasan untuk mencintai tidak selalu berarti kebebasan untuk membangun kehidupan bersama.
+        </p>
+
+        <p>
+          Ketika masih kecil, pertanyaannya sederhana: <em>“Kamu suka dia?”</em>
+        </p>
+
+        <p>
+          Ketika dewasa, pertanyaannya berubah menjadi: apakah kalian cocok? Mau tinggal di mana? Bagaimana dengan orang tua? Siapa yang akan membayar rumah? Bagaimana kalau salah satu kehilangan pekerjaan? Bagaimana kalau orang tua sakit? Bagaimana kalau adik masih membutuhkan bantuan? Kalau punya anak, siapa yang akan mengurusnya?
+        </p>
+
+        <p>
+          Dan tiba-tiba, <strong>jatuh cinta terasa seperti mengisi spreadsheet.</strong>
+        </p>
+
+        <p>
+          Kita semakin sadar bahwa cinta akan berhadapan dengan dunia nyata.
+        </p>
+
+        <p>
+          Mungkin ada laki-laki yang sebenarnya mencintai seorang perempuan, tetapi ia tidak datang karena ia merasa belum mampu. Bukan karena ia tidak punya rasa, tetapi karena ia tahu bahwa datang berarti membawa pertanyaan tentang masa depan yang belum bisa ia jawab.
+        </p>
+
+        <p>
+          Hafiz adalah contoh yang ingin kubicarakan di sini. Dalam novel, ia bukan laki-laki tanpa perasaan. Ia justru sangat peduli. Tetapi ia tahu bahwa seseorang yang Ia cintai memiliki mimpi besar dan kehidupan yang luas, sementara dirinya datang dari keluarga yang membutuhkan dirinya.
+        </p>
+
+        <p>
+          Dan bukankah banyak orang di dunia nyata berada dalam posisi yang sama?
+        </p>
+
+        <p>
+          Dua orang bisa saling menyukai, tetapi salah satunya berpikir, <em>aku belum cukup mapan.</em>
+        </p>
+
+        <p>
+          Yang lain berpikir, <em>aku masih harus membantu keluargaku.</em>
+        </p>
+
+        <p>
+          Keduanya punya perasaan, tetapi kehidupan meminta mereka menghitung sesuatu yang tidak pernah diajarkan ketika mereka pertama kali belajar tentang cinta.
+        </p>
+
+        <p>
+          <strong>Berapa harga sebuah keluarga?</strong>
+        </p>
+
+        <p>
+          Mungkin itu sebabnya ada sebuah tanda <strong>“larangan mencintai”</strong> yang tidak pernah benar-benar terlihat oleh mata.
+        </p>
+
+        <p>
+          Tidak ada papan yang mengatakan, <em>“Dilarang jatuh cinta.”</em>
+        </p>
+
+        <p>
+          Tetapi ada biaya hidup.
+        </p>
+
+        <p>
+          Ada orang tua yang menua.
+        </p>
+
+        <p>
+          Ada adik yang belum selesai sekolah.
+        </p>
+
+        <p>
+          Ada gaji yang belum cukup.
+        </p>
+
+        <p>
+          Ada pekerjaan yang tidak pasti.
+        </p>
+
+        <p>
+          Ada pendidikan yang mahal.
+        </p>
+
+        <p>
+          Ada keluarga yang tidak memiliki cukup aset untuk menghadapi satu keadaan darurat.
+        </p>
+
+        <p>
+          Dan ketika semua itu bertemu di dalam kehidupan satu orang, ia mungkin akhirnya sampai pada kesimpulan yang sangat sederhana:
+        </p>
+
+        <p>
+          <strong>Aku ingin mencintaimu. Aku hanya tidak tahu apakah aku mampu.</strong>
+        </p>
+
+        <p>
+          Dan mungkin inilah yang selama ini kita salah pahami dari banyak Hafiz di dunia nyata.
+        </p>
+
+        <p>
+          Kita mengira mereka tidak berani.
+        </p>
+
+        <p>
+          Padahal mungkin mereka sedang menghitung.
+        </p>
+
+        <p>
+          Kita mengira mereka pasrah.
+        </p>
+
+        <p>
+          Padahal mungkin mereka sedang memilih siapa yang tidak boleh mereka kecewakan.
+        </p>
+
+        <p>
+          Kita mengira mereka tidak punya mimpi.
+        </p>
+
+        <p>
+          Padahal mungkin mereka hanya belajar bahwa setiap mimpi memiliki biaya, dan mereka tidak selalu memiliki uang untuk membayarnya.
+        </p>
+
+        <p>
+          Karena ada orang-orang yang ketika jatuh cinta hanya perlu bertanya, <strong>“Apakah aku bahagia bersamanya?”</strong>
+        </p>
+
+        <p>
+          Tetapi bagi generasi sandwich, pertanyaannya bisa jauh lebih panjang.
+        </p>
+
+        <p>
+          <em>Kalau aku menikah dengannya, apakah aku masih bisa membantu Ayah?</em>
+        </p>
+
+        <p>
+          <em>Kalau kami punya anak, apakah aku masih bisa membiayai adikku?</em>
+        </p>
+
+        <p>
+          <em>Kalau orang tuaku sakit, apakah aku punya cukup tabungan?</em>
+        </p>
+
+        <p>
+          <em>Kalau pekerjaanku hilang, siapa yang akan menanggung keluargaku?</em>
+        </p>
+
+        <p>
+          Dan mungkin setelah semua pertanyaan itu selesai, barulah seseorang berani bertanya:
+        </p>
+
+        <p>
+          <strong>“Jadi, apakah aku masih punya ruang untuk mencintai?”</strong>
+        </p>
+
+        <p>
+          Aku tidak tahu apakah kita bisa menyelesaikan persoalan sebesar ini hanya dengan meminta anak muda lebih pandai mengatur uang. Menurutku itu terlalu mudah. Literasi finansial penting, tetapi seseorang tidak bisa membuat penghasilan yang tidak ada menjadi cukup hanya dengan membuat spreadsheet yang lebih bagus. Pendidikan finansial penting, tetapi ia tidak menggantikan pekerjaan yang layak, pendidikan yang terjangkau, perlindungan sosial, akses kesehatan, dan sistem pensiun yang mampu melindungi manusia ketika mereka tidak lagi produktif.
+        </p>
+
+        <p>
+          Tanggung jawab keluarga memang tidak akan pernah bisa sepenuhnya dihapus. Kita tetap akan memiliki orang tua yang kita cintai, saudara yang kita bantu, dan keluarga yang ingin kita lindungi. Tetapi sebuah negara dan sistem sosial yang lebih kuat seharusnya membantu memastikan bahwa <strong>keluarga bukan satu-satunya institusi yang bertanggung jawab atas keselamatan ekonomi seseorang.</strong>
+        </p>
+
+        <p>
+          Karena kalau satu-satunya alasan seorang anak bisa kuliah adalah kakaknya bersedia berhenti kuliah, ada sesuatu yang perlu kita pertanyakan.
+        </p>
+
+        <p>
+          Kalau satu-satunya cara seorang ibu bisa bertahan di masa tua adalah anaknya mengorbankan seluruh tabungannya, ada sesuatu yang perlu kita pertanyakan.
+        </p>
+
+        <p>
+          Kalau seorang laki-laki merasa tidak boleh mencintai perempuan yang ia cintai karena ia tahu keluarganya masih membutuhkan seluruh penghasilannya, ada sesuatu yang perlu kita pertanyakan.
+        </p>
+
+        <p>
+          Dan kalau seorang perempuan harus menghitung apakah ia mampu mencintai seseorang karena ia tahu sebagian masa depannya masih harus digunakan untuk keluarganya, kita juga perlu bertanya: <strong>mengapa membangun keluarga baru harus selalu berarti memilih keluarga mana yang harus dikorbankan?</strong>
+        </p>
+
+        <p>
+          Bukan kepada Hafiz.
+        </p>
+
+        <p>
+          <strong>Kepada keadaan yang membuat terlalu banyak orang harus menjadi Hafiz.</strong>
+        </p>
+
+        <p>
+          Itulah mengapa aku tidak ingin melihat persoalan ini hanya sebagai cerita tentang anak muda yang takut menikah.
+        </p>
+
+        <p>
+          Mungkin mereka bukan takut menikah. Mereka hanya tahu bahwa setelah akad selesai, tagihan-tagihan tidak ikut menghilang.
+        </p>
+
+        <p>
+          Mungkin mereka tidak tidak percaya pada cinta. Mereka hanya tahu bahwa cinta membutuhkan tempat untuk tumbuh, dan tempat itu tidak selalu tersedia ketika seseorang masih sibuk memastikan keluarganya bisa makan bulan depan.
+        </p>
+
+        <p>
+          Dan mungkin, di dunia yang sedikit lebih baik, seseorang tidak perlu berkata, <strong>“Biarkan adikku saja yang berkuliah. Aku bekerja saja.”</strong>
+        </p>
+
+        <p>
+          Ia bisa kuliah.
+        </p>
+
+        <p>
+          Adiknya juga bisa kuliah.
+        </p>
+
+        <p>
+          Ia bisa mendapatkan pekerjaan yang membayar cukup untuk hidup.
+        </p>
+
+        <p>
+          Orang tuanya bisa menua tanpa seluruh masa depan anaknya menjadi jaminan hari tua.
+        </p>
+
+        <p>
+          Ia bisa menabung untuk masa depannya tanpa merasa bersalah.
+        </p>
+
+        <p>
+          Ia bisa membangun rumah tangga tanpa merasa bahwa setiap rupiah yang ia keluarkan untuk keluarganya sendiri adalah sebuah pengkhianatan terhadap keluarga yang membesarkannya.
+        </p>
+
+        <p>
+          Dan ketika suatu hari ia bertemu seseorang yang ia cintai, ia tidak harus melihat rekening banknya terlebih dahulu sebelum berani berkata:
+        </p>
+
+        <p>
+          <strong>“Aku ingin membangun kehidupan bersamamu.”</strong>
+        </p>
+
+        <p>
+          Karena barangkali yang kita butuhkan bukan generasi muda yang lebih pandai mengorbankan dirinya.
+        </p>
+
+        <p>
+          Kita membutuhkan <strong>sistem yang membuat pengorbanan itu tidak selalu menjadi satu-satunya jalan.</strong>
+        </p>
+
+        <p>
+          Dan mungkin, sampai keadaan itu berubah, akan selalu ada sebuah tanda yang tidak terlihat oleh mata tetapi sangat nyata bagi mereka yang hidup di dalamnya:
+        </p>
+
+        <p>
+          <strong>larangan untuk mencintai.</strong>
+        </p>
+
+        <p>
+          Bukan karena mereka tidak ingin mencintai.
+        </p>
+
+        <p>
+          Bukan karena mereka tidak percaya pada cinta.
+        </p>
+
+        <p>
+          Tapi karena untuk mencintaimu saja aku harus memastikan dulu bahwa perutku dan keluargaku tidak kelaparan untuk membayar harga dari cinta yang kuberikan untukmu.
+        </p>
+
+      </div>
+
+    </article>
+
+  </main>
+
+
+  <!-- =====================================================
+       COMMENTS
+  ====================================================== -->
+
+  <section class="comments-section">
+
+    <div class="comments-header">
+
+      <h2 class="comments-title">
+        Pesan dari pembaca
+      </h2>
+
+      <span
+        class="comments-count"
+        id="messageCount"
+      >
+        0 pesan
+      </span>
+
+    </div>
+
+
+    <!-- FORM -->
+
+    <form
+      class="comment-form"
+      id="commentForm"
+    >
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label
+            class="form-label"
+            for="senderName"
+          >
+            From
+          </label>
+
+          <input
+            type="text"
+            id="senderName"
+            maxlength="80"
+            placeholder="Namamu (opsional)"
+          >
+
+        </div>
+
+
+        <label class="anonymous-option">
+
+          <input
+            type="checkbox"
+            id="anonymousCheck"
+          >
+
+          <span>
+            Kirim sebagai anonim
+          </span>
+
+        </label>
+
+      </div>
+
+
+      <div class="message-group">
+
+        <label
+          class="form-label"
+          for="messageText"
+        >
+          Pesan
+        </label>
+
+        <textarea
+          id="messageText"
+          maxlength="2000"
+          placeholder="Tulis sesuatu yang ingin kamu sampaikan..."
+          required
+        ></textarea>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="submit-button"
+        id="sendMessage"
+      >
+        Kirim pesan
+      </button>
+
+
+      <div
+        class="form-status"
+        id="formStatus"
+      ></div>
+
+    </form>
+
+
+    <!-- COMMENTS -->
+
+    <div
+      class="comments-list"
+      id="messagesContainer"
+    >
+
+      <div class="comments-loading">
+        Memuat komentar...
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="site-footer">
+    © tatsyafira
+  </footer>
+
+
+  <!-- =====================================================
+       SUPABASE
+  ====================================================== -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+  <script>
+
+    /* =======================================================
+       SUPABASE CONNECTION
+    ======================================================= */
+
+    const SUPABASE_URL =
+      "https://gtaljywggqalmfqizjhj.supabase.co";
+
+    const SUPABASE_KEY =
+      "sb_publishable_Lvgk-7rPMaxhO7TAOdGp6Q_MWACHYtR";
+
+    const supabaseClient =
+      window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_KEY
+      );
+
+
+    /* =======================================================
+       ARTICLE IDENTIFIER
+    ======================================================= */
+
+    const ARTICLE_SLUG =
+      "generasi-sandwich-dan-larangan-untuk-mencintai";
+
+
+    /* =======================================================
+       ELEMENTS
+    ======================================================= */
+
+    const commentForm =
+      document.getElementById("commentForm");
+
+    const senderName =
+      document.getElementById("senderName");
+
+    const messageText =
+      document.getElementById("messageText");
+
+    const anonymousCheck =
+      document.getElementById("anonymousCheck");
+
+    const sendMessage =
+      document.getElementById("sendMessage");
+
+    const formStatus =
+      document.getElementById("formStatus");
+
+    const messagesContainer =
+      document.getElementById("messagesContainer");
+
+    const messageCount =
+      document.getElementById("messageCount");
+
+
+    /* =======================================================
+       ESCAPE HTML
+    ======================================================= */
+
+    function escapeHTML(text) {
+
+      const div =
+        document.createElement("div");
+
+      div.textContent =
+        text ?? "";
+
+      return div.innerHTML;
+    }
+
+
+    /* =======================================================
+       FORMAT DATE
+    ======================================================= */
+
+    function formatDate(dateString) {
+
+      if (!dateString) {
+        return "";
+      }
+
+      const date =
+        new Date(dateString);
+
+      return date.toLocaleDateString(
+        "id-ID",
+        {
+          day: "numeric",
+          month: "short",
+          year: "numeric"
+        }
+      );
+    }
+
+
+    /* =======================================================
+       LOAD COMMENTS
+    ======================================================= */
+
+    async function loadComments() {
+
+      messagesContainer.innerHTML = `
+        <div class="comments-loading">
+          Memuat komentar...
+        </div>
+      `;
+
+      const {
+        data,
+        error
+      } = await supabaseClient
+        .from("comments")
+        .select("*")
+        .eq("article", ARTICLE_SLUG)
+        .order(
+          "created_at",
+          {
+            ascending: false
+          }
+        );
+
+
+      if (error) {
+
+        console.error(
+          "Error loading comments:",
+          error
+        );
+
+        messagesContainer.innerHTML = `
+          <div class="comments-empty">
+            Komentar belum dapat dimuat.
+          </div>
+        `;
+
+        messageCount.textContent =
+          "0 pesan";
+
+        return;
+      }
+
+
+      const comments =
+        data || [];
+
+
+      messageCount.textContent =
+        `${comments.length} ${
+          comments.length === 1
+            ? "pesan"
+            : "pesan"
+        }`;
+
+
+      if (!comments.length) {
+
+        messagesContainer.innerHTML = `
+          <div class="comments-empty">
+            Belum ada pesan. Jadilah yang pertama menulis :)
+          </div>
+        `;
+
+        return;
+      }
+
+
+      messagesContainer.innerHTML =
+        comments
+          .map(comment => {
+
+            const isAnonymous =
+              comment.is_anonymous;
+
+            const author =
+              isAnonymous
+                ? "Anonim"
+                : (
+                    comment.name ||
+                    "Pembaca"
+                  );
+
+            const message =
+              escapeHTML(
+                comment.message || ""
+              );
+
+            const date =
+              formatDate(
+                comment.created_at
+              );
+
+
+            return `
+
+              <article class="comment-box">
+
+                <div class="comment-message">
+                  ${message}
+                </div>
+
+                <div class="comment-footer">
+
+                  <span class="comment-author">
+                    ${escapeHTML(author)}
+                  </span>
+
+                  <span class="comment-date">
+                    ${date}
+                  </span>
+
+                </div>
+
+              </article>
+
+            `;
+
+          })
+          .join("");
+
+    }
+
+
+    /* =======================================================
+       SUBMIT COMMENT
+    ======================================================= */
+
+    commentForm.addEventListener(
+      "submit",
+      async function(event) {
+
+        event.preventDefault();
+
+
+        const message =
+          messageText.value.trim();
+
+        const name =
+          senderName.value.trim();
+
+        const isAnonymous =
+          anonymousCheck.checked;
+
+
+        if (!message) {
+
+          formStatus.textContent =
+            "Tulis pesan terlebih dahulu.";
+
+          return;
+        }
+
+
+        sendMessage.disabled = true;
+
+        formStatus.textContent =
+          "Mengirim pesan...";
+
+
+        const {
+          error
+        } = await supabaseClient
+          .from("comments")
+          .insert([
+            {
+              article: ARTICLE_SLUG,
+              name:
+                isAnonymous
+                  ? null
+                  : (
+                      name ||
+                      "Pembaca"
+                    ),
+              message: message,
+              is_anonymous:
+                isAnonymous
+            }
+          ]);
+
+
+        if (error) {
+
+          console.error(
+            "Error submitting comment:",
+            error
+          );
+
+          formStatus.textContent =
+            "Pesan belum berhasil dikirim. Coba lagi.";
+
+          sendMessage.disabled = false;
+
+          return;
+        }
+
+
+        messageText.value = "";
+        senderName.value = "";
+        anonymousCheck.checked = false;
+
+        formStatus.textContent =
+          "Pesan berhasil dikirim. Terima kasih :)";
+
+
+        sendMessage.disabled = false;
+
+
+        await loadComments();
+
+      }
+    );
+
+
+    /* =======================================================
+       INITIAL LOAD
+    ======================================================= */
+
+    loadComments();
+
+  </script>
+
+</body>
+
+</html>
