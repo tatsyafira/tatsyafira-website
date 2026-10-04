@@ -1,0 +1,2667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Grammar Practice | Tatsyafira</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #fafafa;
+      color: #222;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 28px 24px 10px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: #777;
+      transition: 0.2s;
+    }
+
+    .back-link:hover {
+      color: #111;
+    }
+
+    .brand {
+      display: flex;
+      justify-content: center;
+      margin: 8px 0 5px;
+    }
+
+    .brand img {
+      width: 105px;
+      height: auto;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 55px auto 35px;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 42px;
+      line-height: 1.15;
+      font-weight: 400;
+      margin: 0 0 16px;
+    }
+
+    .intro p {
+      max-width: 620px;
+      margin: 0 auto;
+      color: #777;
+      font-size: 17px;
+    }
+
+    .test-container {
+      max-width: 850px;
+      margin: 0 auto 100px;
+      padding: 0 20px;
+    }
+
+    .test-card {
+      background: white;
+      border: 1px solid #e7e7e7;
+      border-radius: 18px;
+      padding: 40px;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.04);
+    }
+
+    .progress-wrapper {
+      margin-bottom: 38px;
+    }
+
+    .progress-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 9px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #888;
+    }
+
+    .progress-bar {
+      height: 5px;
+      background: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: #222;
+      transition: width 0.3s ease;
+    }
+
+    .category-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 12px;
+    }
+
+    .question {
+      font-size: 25px;
+      line-height: 1.45;
+      margin: 0 0 27px;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .option {
+      position: relative;
+    }
+
+    .option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .option label {
+      display: block;
+      padding: 15px 18px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .option label:hover {
+      border-color: #999;
+      background: #fafafa;
+    }
+
+    .option input:checked + label {
+      border-color: #222;
+      background: #f6f6f6;
+    }
+
+    .translation-box {
+      width: 100%;
+      min-height: 120px;
+      resize: vertical;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 16px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      line-height: 1.6;
+      outline: none;
+    }
+
+    .translation-box:focus {
+      border-color: #555;
+    }
+
+    .translation-note {
+      margin-top: 10px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #999;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 35px;
+      gap: 12px;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+    }
+
+    .nav-button {
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-size: 13px;
+      border: 1px solid #222;
+      background: #222;
+      color: white;
+      transition: 0.2s;
+    }
+
+    .nav-button:hover {
+      opacity: 0.8;
+    }
+
+    .nav-button.secondary {
+      background: white;
+      color: #222;
+    }
+
+    .nav-button:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* =========================
+       RESULT
+    ========================= */
+
+    .result {
+      max-width: 1000px;
+      margin: 0 auto 100px;
+      padding: 0 20px;
+    }
+
+    .result-header {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .result-header h2 {
+      font-size: 42px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin: 0 0 10px;
+    }
+
+    .score {
+      font-size: 60px;
+      margin: 10px 0;
+    }
+
+    .score-subtitle {
+      color: #777;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .diagnosis-card {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 25px;
+    }
+
+    .diagnosis-card h3 {
+      font-size: 24px;
+      font-weight: 400;
+      margin: 0 0 14px;
+    }
+
+    .diagnosis-card p {
+      color: #666;
+      margin: 0;
+    }
+
+    .recommendation {
+      margin-top: 22px;
+      padding: 18px;
+      background: #f7f7f7;
+      border-radius: 10px;
+    }
+
+    .recommendation strong {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 7px;
+    }
+
+    .category-results {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .category-result {
+      border: 1px solid #e8e8e8;
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .category-result-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 9px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    .category-result-bar {
+      height: 5px;
+      background: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .category-result-fill {
+      height: 100%;
+      background: #222;
+    }
+
+    /* =========================
+       REVIEW
+    ========================= */
+
+    .wrong-section {
+      margin-top: 55px;
+    }
+
+    .section-heading {
+      margin-bottom: 22px;
+    }
+
+    .section-heading .small-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #999;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-heading h3 {
+      font-size: 32px;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .wrong-card,
+    .review-card {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      padding: 25px;
+      margin-bottom: 16px;
+    }
+
+    .wrong-card {
+      border-left: 4px solid #777;
+    }
+
+    .review-card.correct {
+      border-left: 3px solid #bbb;
+    }
+
+    .review-card.incorrect {
+      border-left: 3px solid #555;
+    }
+
+    .review-number {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: #999;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .review-question {
+      font-size: 20px;
+      line-height: 1.5;
+      margin-bottom: 17px;
+    }
+
+    .answer-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+
+    .answer-box {
+      background: #f8f8f8;
+      border-radius: 9px;
+      padding: 13px 15px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    .answer-box strong {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #999;
+      margin-bottom: 5px;
+    }
+
+    .accepted-answers {
+      margin-bottom: 18px;
+      padding: 15px;
+      background: #fafafa;
+      border-radius: 9px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    .accepted-answers-title {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #999;
+      margin-bottom: 7px;
+    }
+
+    .accepted-answer {
+      margin: 4px 0;
+    }
+
+    .explanation {
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+      color: #555;
+      font-size: 15px;
+    }
+
+    .status {
+      display: inline-block;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 9px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      background: #f1f1f1;
+    }
+
+    .full-review {
+      margin-top: 65px;
+    }
+
+    .option-review {
+      margin-bottom: 18px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .option-review-line {
+      padding: 6px 0;
+    }
+
+    .correct-option {
+      font-weight: bold;
+    }
+
+    .restart-area {
+      text-align: center;
+      margin-top: 45px;
+    }
+
+    .restart-button {
+      display: inline-block;
+      padding: 13px 25px;
+      border-radius: 999px;
+      background: #222;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      cursor: pointer;
+      border: none;
+    }
+
+    @media (max-width: 700px) {
+      .topbar {
+        padding: 22px 18px 10px;
+      }
+
+      .intro {
+        margin-top: 45px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .test-card {
+        padding: 25px 20px;
+      }
+
+      .question {
+        font-size: 22px;
+      }
+
+      .category-results {
+        grid-template-columns: 1fr;
+      }
+
+      .answer-row {
+        grid-template-columns: 1fr;
+      }
+
+      .result-header h2 {
+        font-size: 34px;
+      }
+
+      .score {
+        font-size: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+
+    <a href="belajar.html" class="back-link">
+      ← Back to Belajar
+    </a>
+
+    <div class="brand">
+      <img src="images/tatsyafira-logo.png" alt="Tatsyafira">
+    </div>
+
+  </div>
+
+
+  <section class="intro">
+
+    <div class="eyebrow">
+      English Assessment
+    </div>
+
+    <h1>
+      Grammar Test
+    </h1>
+
+    <p>
+      Test your understanding of English grammar through
+      tenses, conditionals, subject-verb agreement,
+      passive voice, and prepositions.
+    </p>
+
+  </section>
+
+
+  <section class="test-container" id="testContainer">
+
+    <div class="test-card">
+
+      <div class="progress-wrapper">
+
+        <div class="progress-top">
+
+          <span id="questionCounter">
+            Question 1 of 50
+          </span>
+
+          <span id="categoryCounter">
+            Tenses
+          </span>
+
+        </div>
+
+        <div class="progress-bar">
+
+          <div
+            class="progress-fill"
+            id="progressFill">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div id="questionArea"></div>
+
+
+      <div class="navigation">
+
+        <button
+          class="nav-button secondary"
+          id="prevButton"
+          onclick="previousQuestion()">
+
+          Previous
+
+        </button>
+
+
+        <button
+          class="nav-button"
+          id="nextButton"
+          onclick="nextQuestion()">
+
+          Next
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section
+    class="result hidden"
+    id="resultSection">
+
+    <div class="result-header">
+
+      <h2>
+        Your Grammar Result
+      </h2>
+
+      <div
+        class="score"
+        id="scoreDisplay">
+        0%
+      </div>
+
+      <div
+        class="score-subtitle"
+        id="scoreSubtitle">
+      </div>
+
+    </div>
+
+
+    <div id="diagnosisArea"></div>
+
+    <div id="categoryResults"></div>
+
+    <div
+      class="wrong-section"
+      id="wrongSection">
+
+      <div class="section-heading">
+
+        <div class="small-label">
+          Learn from your mistakes
+        </div>
+
+        <h3>
+          Questions to Review
+        </h3>
+
+      </div>
+
+      <div id="wrongAnswers"></div>
+
+    </div>
+
+
+    <div class="full-review">
+
+      <div class="section-heading">
+
+        <div class="small-label">
+          Complete Review
+        </div>
+
+        <h3>
+          All Questions
+        </h3>
+
+      </div>
+
+      <div id="fullReview"></div>
+
+    </div>
+
+
+    <div class="restart-area">
+
+      <button
+        class="restart-button"
+        onclick="restartTest()">
+
+        Take the Test Again
+
+      </button>
+
+    </div>
+
+  </section>
+
+
+<script>
+
+/* =========================================================
+   QUESTION BANK
+========================================================= */
+
+const questions = [
+
+  /* =======================================================
+     TENSES — 1–10
+  ======================================================= */
+
+  {
+    number: 1,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "She usually _____ coffee in the morning, but today she _____ tea.",
+
+    options: [
+      "drinks / drinks",
+      "drinks / is drinking",
+      "is drinking / drinks",
+      "drank / is drinking"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "<strong>Drinks</strong> is used for a regular habit, while <strong>is drinking</strong> is used for an action happening around now. The words “usually” and “today” give us the clues."
+  },
+
+
+  {
+    number: 2,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "When I arrived at the station, the train _____ already _____.",
+
+    options: [
+      "has / left",
+      "was / leaving",
+      "had / left",
+      "will / leave"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "Use the <strong>past perfect</strong> (had + past participle) for an action that happened before another action in the past. The train left before I arrived."
+  },
+
+
+  {
+    number: 3,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "I _____ this book twice already.",
+
+    options: [
+      "read",
+      "have read",
+      "had read",
+      "am reading"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "Use the <strong>present perfect</strong> (have/has + past participle) for an experience or completed action connected to the present. “Already” is a common clue."
+  },
+
+
+  {
+    number: 4,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "At 8 p.m. last night, I _____ for the exam.",
+
+    options: [
+      "studied",
+      "was studying",
+      "have studied",
+      "study"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "A specific time in progress in the past calls for the <strong>past continuous</strong>: was/were + verb-ing."
+  },
+
+
+  {
+    number: 5,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "She _____ in Istanbul since 2024.",
+
+    options: [
+      "lives",
+      "lived",
+      "has lived",
+      "is living"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "Use the <strong>present perfect</strong> with “since” when an action or situation started in the past and continues to the present."
+  },
+
+
+  {
+    number: 6,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "By next year, I _____ from university.",
+
+    options: [
+      "graduate",
+      "will graduate",
+      "will have graduated",
+      "graduated"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "“By next year” indicates a future deadline. Use the <strong>future perfect</strong>: will have + past participle."
+  },
+
+
+  {
+    number: 7,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "They _____ dinner when I called them.",
+
+    options: [
+      "have",
+      "were having",
+      "had",
+      "are having"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "The action was already in progress when another past action happened, so use the <strong>past continuous</strong>."
+  },
+
+
+  {
+    number: 8,
+    category: "Conditionals",
+    type: "mcq",
+
+    question:
+      "If we _____ water to 100°C, it boils.",
+
+    options: [
+      "will heat",
+      "heated",
+      "heat",
+      "heats"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "This is a <strong>zero conditional</strong>, used for general truths. The structure is: <strong>If + present simple, present simple</strong>. Because the subject is “we,” the correct verb is <strong>heat</strong>, not “heats.”"
+  },
+
+
+  {
+    number: 9,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "By the time we arrive, the train _____.",
+
+    options: [
+      "leaves",
+      "will leave",
+      "will have left",
+      "had left"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "The train will leave before we arrive, so the action will be completed before another future point. Use the <strong>future perfect</strong>: will have left."
+  },
+
+
+  {
+    number: 10,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "By the end of the semester, students _____ several research papers.",
+
+    options: [
+      "write",
+      "will write",
+      "will have written",
+      "are writing"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "“By the end of the semester” refers to a future deadline. Because the papers will be completed before that deadline, use the <strong>future perfect</strong>: will have written."
+  },
+
+
+  /* =======================================================
+     CONDITIONALS — 11–15
+  ======================================================= */
+
+  {
+    number: 11,
+    category: "Conditionals",
+    type: "mcq",
+
+    question:
+      "If you _____ early, you will get a better seat.",
+
+    options: [
+      "arrive",
+      "arrived",
+      "will arrive",
+      "had arrived"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "This is a <strong>first conditional</strong>. The structure is: <strong>If + present simple, will + base verb</strong>. Therefore: “If you arrive early...”"
+  },
+
+
+  {
+    number: 12,
+    category: "Conditionals",
+    type: "mcq",
+
+    question:
+      "If I _____ more time yesterday, I would have helped you.",
+
+    options: [
+      "have",
+      "had",
+      "had had",
+      "would have"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "This is a <strong>third conditional</strong>, describing an unreal past situation. The structure is <strong>If + past perfect, would have + past participle</strong>: “If I had had more time...”"
+  },
+
+
+  {
+    number: 13,
+    category: "Conditionals",
+    type: "mcq",
+
+    question:
+      "If I were you, I _____ the opportunity.",
+
+    options: [
+      "take",
+      "will take",
+      "would take",
+      "had taken"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "This is the <strong>second conditional</strong>, used for an unreal or hypothetical present/future situation: If + past simple, would + base verb."
+  },
+
+
+  {
+    number: 14,
+    category: "Conditionals",
+    type: "mcq",
+
+    question:
+      "If she had studied harder, she _____ the exam.",
+
+    options: [
+      "passes",
+      "would pass",
+      "would have passed",
+      "will have passed"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "The sentence describes an unreal past situation, so use the <strong>third conditional</strong>: had + past participle → would have + past participle."
+  },
+
+
+  {
+    number: 15,
+    category: "Conditionals",
+    type: "mcq",
+
+    question:
+      "If it rains tomorrow, we _____ at home.",
+
+    options: [
+      "stay",
+      "stayed",
+      "will stay",
+      "would stay"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "This is a <strong>first conditional</strong>: If + present simple, will + base verb."
+  },
+
+
+  /* =======================================================
+     SUBJECT-VERB AGREEMENT — 16–20
+  ======================================================= */
+
+  {
+    number: 16,
+    category: "Subject-Verb Agreement",
+    type: "mcq",
+
+    question:
+      "The number of international students _____ increasing every year.",
+
+    options: [
+      "are",
+      "were",
+      "is",
+      "have"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "The subject is <strong>the number</strong>, which is singular. Therefore, use <strong>is</strong>."
+  },
+
+
+  {
+    number: 17,
+    category: "Subject-Verb Agreement",
+    type: "mcq",
+
+    question:
+      "A number of students _____ applied for the scholarship.",
+
+    options: [
+      "has",
+      "have",
+      "is",
+      "was"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "<strong>A number of + plural noun</strong> takes a plural verb. Therefore: “A number of students <strong>have</strong> applied...”"
+  },
+
+
+  {
+    number: 18,
+    category: "Subject-Verb Agreement",
+    type: "mcq",
+
+    question:
+      "Neither the manager nor the employees _____ available today.",
+
+    options: [
+      "is",
+      "was",
+      "are",
+      "has"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "With <strong>neither...nor</strong>, the verb generally agrees with the subject closest to it. “Employees” is plural, so use <strong>are</strong>."
+  },
+
+
+  {
+    number: 19,
+    category: "Subject-Verb Agreement",
+    type: "mcq",
+
+    question:
+      "Everyone in the class _____ submitted the assignment.",
+
+    options: [
+      "have",
+      "has",
+      "are",
+      "were"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "<strong>Everyone</strong> is grammatically singular, so it takes <strong>has</strong>."
+  },
+
+
+  {
+    number: 20,
+    category: "Subject-Verb Agreement",
+    type: "mcq",
+
+    question:
+      "The quality of these products _____ improved significantly.",
+
+    options: [
+      "have",
+      "are",
+      "has",
+      "were"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "The main subject is <strong>quality</strong>, which is singular. Therefore, use <strong>has</strong>."
+  },
+
+
+  /* =======================================================
+     PASSIVE VOICE — 21–25
+  ======================================================= */
+
+  {
+    number: 21,
+    category: "Passive Voice",
+    type: "mcq",
+
+    question:
+      "The report _____ by the manager yesterday.",
+
+    options: [
+      "completed",
+      "was completed",
+      "has completed",
+      "is completing"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "The report receives the action, so the sentence needs the <strong>passive voice</strong>. Because “yesterday” refers to the past, use <strong>was completed</strong>."
+  },
+
+
+  {
+    number: 22,
+    category: "Passive Voice",
+    type: "mcq",
+
+    question:
+      "English _____ in many countries around the world.",
+
+    options: [
+      "speaks",
+      "is spoken",
+      "spoke",
+      "has speaking"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "English receives the action. Use the <strong>present simple passive</strong>: is + past participle."
+  },
+
+
+  {
+    number: 23,
+    category: "Passive Voice",
+    type: "mcq",
+
+    question:
+      "The documents _____ before the meeting started.",
+
+    options: [
+      "had been prepared",
+      "have prepared",
+      "were preparing",
+      "prepare"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "The documents were completed before another past event. Use the <strong>past perfect passive</strong>: had been + past participle."
+  },
+
+
+  {
+    number: 24,
+    category: "Passive Voice",
+    type: "mcq",
+
+    question:
+      "A new bridge _____ next year.",
+
+    options: [
+      "will build",
+      "will be built",
+      "is building",
+      "built"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "The bridge receives the action, and the action will happen in the future. Use the <strong>future passive</strong>: will be + past participle."
+  },
+
+
+  {
+    number: 25,
+    category: "Passive Voice",
+    type: "mcq",
+
+    question:
+      "The problem _____ right now.",
+
+    options: [
+      "is being discussed",
+      "is discussing",
+      "has discussed",
+      "was discussed"
+    ],
+
+    answer: 0,
+
+    explanation:
+      "“Right now” shows an action in progress. Because the subject receives the action, use the <strong>present continuous passive</strong>: is being + past participle."
+  },
+
+
+  /* =======================================================
+     PREPOSITIONS — 26–30
+  ======================================================= */
+
+  {
+    number: 26,
+    category: "Prepositions",
+    type: "mcq",
+
+    question:
+      "The meeting starts _____ 9 a.m.",
+
+    options: [
+      "in",
+      "on",
+      "at",
+      "by"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "Use <strong>at</strong> with specific clock times: at 9 a.m."
+  },
+
+
+  {
+    number: 27,
+    category: "Prepositions",
+    type: "mcq",
+
+    question:
+      "I was born _____ May 20, 2003.",
+
+    options: [
+      "at",
+      "on",
+      "in",
+      "by"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "Use <strong>on</strong> with specific dates: on May 20, 2003."
+  },
+
+
+  {
+    number: 28,
+    category: "Prepositions",
+    type: "mcq",
+
+    question:
+      "She has lived in Istanbul _____ 2024.",
+
+    options: [
+      "for",
+      "since",
+      "during",
+      "at"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "Use <strong>since</strong> with a starting point in time: since 2024."
+  },
+
+
+  {
+    number: 29,
+    category: "Prepositions",
+    type: "mcq",
+
+    question:
+      "We stayed in London _____ three days.",
+
+    options: [
+      "since",
+      "during",
+      "for",
+      "at"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "Use <strong>for</strong> to describe a duration of time: for three days."
+  },
+
+
+  {
+    number: 30,
+    category: "Prepositions",
+    type: "mcq",
+
+    question:
+      "I usually study _____ the evening.",
+
+    options: [
+      "at",
+      "on",
+      "in",
+      "by"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "Use <strong>in</strong> with parts of the day such as the morning, afternoon, and evening."
+  },
+
+
+  /* =======================================================
+     MIXED GRAMMAR — 31–40
+  ======================================================= */
+
+  {
+    number: 31,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "I _____ my homework before I went to bed.",
+
+    options: [
+      "finish",
+      "have finished",
+      "had finished",
+      "am finishing"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "The homework was completed before another past event, so use the <strong>past perfect</strong>."
+  },
+
+
+  {
+    number: 32,
+    category: "Subject-Verb Agreement",
+    type: "mcq",
+
+    question:
+      "My brother, together with his friends, _____ going to the event.",
+
+    options: [
+      "are",
+      "were",
+      "is",
+      "have"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "The main subject is <strong>my brother</strong>. “Together with his friends” does not change the singular subject."
+  },
+
+
+  {
+    number: 33,
+    category: "Prepositions",
+    type: "mcq",
+
+    question:
+      "The university was established _____ 1995.",
+
+    options: [
+      "at",
+      "on",
+      "in",
+      "for"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "Use <strong>in</strong> with years: in 1995."
+  },
+
+
+  {
+    number: 34,
+    category: "Conditionals",
+    type: "mcq",
+
+    question:
+      "If I _____ enough money, I would travel around Europe.",
+
+    options: [
+      "have",
+      "had",
+      "will have",
+      "had had"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "This is a <strong>second conditional</strong>: If + past simple, would + base verb."
+  },
+
+
+  {
+    number: 35,
+    category: "Passive Voice",
+    type: "mcq",
+
+    question:
+      "The invitations _____ next Monday.",
+
+    options: [
+      "will send",
+      "will be sent",
+      "are sending",
+      "sent"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "The invitations receive the action, so use the <strong>future passive</strong>: will be sent."
+  },
+
+
+  {
+    number: 36,
+    category: "Tenses",
+    type: "mcq",
+
+    question:
+      "She _____ for two hours before she finally took a break.",
+
+    options: [
+      "studied",
+      "has studied",
+      "had been studying",
+      "is studying"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "The action continued for a period before another past event. Use the <strong>past perfect continuous</strong>."
+  },
+
+
+  {
+    number: 37,
+    category: "Subject-Verb Agreement",
+    type: "mcq",
+
+    question:
+      "The information _____ very useful for the students.",
+
+    options: [
+      "are",
+      "were",
+      "is",
+      "have"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "<strong>Information</strong> is an uncountable noun and takes a singular verb: is."
+  },
+
+
+  {
+    number: 38,
+    category: "Prepositions",
+    type: "mcq",
+
+    question:
+      "I have been studying English _____ five years.",
+
+    options: [
+      "since",
+      "for",
+      "during",
+      "at"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "Use <strong>for</strong> with a period of time: for five years."
+  },
+
+
+  {
+    number: 39,
+    category: "Conditionals",
+    type: "mcq",
+
+    question:
+      "If she had known about the opportunity, she _____ for it.",
+
+    options: [
+      "applies",
+      "would apply",
+      "would have applied",
+      "will apply"
+    ],
+
+    answer: 2,
+
+    explanation:
+      "This is a <strong>third conditional</strong>: If + past perfect, would have + past participle."
+  },
+
+
+  {
+    number: 40,
+    category: "Passive Voice",
+    type: "mcq",
+
+    question:
+      "The new policy _____ by the government last month.",
+
+    options: [
+      "introduced",
+      "was introduced",
+      "has introduced",
+      "is introducing"
+    ],
+
+    answer: 1,
+
+    explanation:
+      "The policy receives the action, and the action happened in the past. Use the <strong>past simple passive</strong>: was introduced."
+  },
+
+
+  /* =======================================================
+     CLASSICAL / SHORT ANSWER — 41–50
+  ======================================================= */
+
+  {
+    number: 41,
+    category: "Tenses",
+    type: "short",
+
+    question:
+      "Right now, we _____ (look) at the view.",
+
+    acceptedAnswers: [
+      "are looking"
+    ],
+
+    explanation:
+      "“Right now” indicates an action happening at this moment, so use the <strong>present continuous</strong>: are looking."
+  },
+
+
+  {
+    number: 42,
+    category: "Tenses",
+    type: "short",
+
+    question:
+      "She _____ (finish) her assignment before the teacher arrived.",
+
+    acceptedAnswers: [
+      "had finished"
+    ],
+
+    explanation:
+      "The assignment was completed before another past action, so use the <strong>past perfect</strong>: had finished."
+  },
+
+
+  {
+    number: 43,
+    category: "Conditionals",
+    type: "short",
+
+    question:
+      "If I _____ you, I _____ (take) the decision.",
+
+    acceptedAnswers: [
+      "were, would take",
+      "were, would take the decision"
+    ],
+
+    explanation:
+      "This is the <strong>second conditional</strong>: If + past simple, would + base verb. With “I,” the standard form is <strong>were</strong>."
+  },
+
+
+  {
+    number: 44,
+    category: "Passive Voice",
+    type: "short",
+
+    question:
+      "The documents _____ (send) yesterday.",
+
+    acceptedAnswers: [
+      "were sent"
+    ],
+
+    explanation:
+      "The documents receive the action, and “yesterday” indicates the past. Use the <strong>past simple passive</strong>: were sent."
+  },
+
+
+  {
+    number: 45,
+    category: "Subject-Verb Agreement",
+    type: "short",
+
+    question:
+      "The number of applicants _____ (increase) every year.",
+
+    acceptedAnswers: [
+      "increases"
+    ],
+
+    explanation:
+      "The subject is <strong>the number</strong>, which is singular. Therefore, use <strong>increases</strong>."
+  },
+
+
+  {
+    number: 46,
+    category: "Prepositions",
+    type: "short",
+
+    question:
+      "I usually wake up _____ 7 a.m.",
+
+    acceptedAnswers: [
+      "at 7 a.m.",
+      "at 7 am",
+      "at 7am"
+    ],
+
+    explanation:
+      "Use <strong>at</strong> with a specific clock time."
+  },
+
+
+  {
+    number: 47,
+    category: "Tenses",
+    type: "short",
+
+    question:
+      "By next December, I _____ (complete) my degree.",
+
+    acceptedAnswers: [
+      "will have completed"
+    ],
+
+    explanation:
+      "“By next December” gives a future deadline, so use the <strong>future perfect</strong>: will have completed."
+  },
+
+
+  {
+    number: 48,
+    category: "Conditionals",
+    type: "short",
+
+    question:
+      "If they _____ (study) harder, they would have passed the exam.",
+
+    acceptedAnswers: [
+      "had studied"
+    ],
+
+    explanation:
+      "This describes an unreal past situation, so use the <strong>past perfect</strong> in the if-clause: had studied."
+  },
+
+
+  {
+    number: 49,
+    category: "Passive Voice",
+    type: "short",
+
+    question:
+      "The building _____ (construct) in 2025.",
+
+    acceptedAnswers: [
+      "was constructed"
+    ],
+
+    explanation:
+      "The building receives the action, and the action happened in the past. Use the <strong>past simple passive</strong>: was constructed."
+  },
+
+
+  {
+    number: 50,
+    category: "Prepositions",
+    type: "short",
+
+    question:
+      "She has lived in Turkey _____ 2024.",
+
+    acceptedAnswers: [
+      "since 2024",
+      "since"
+    ],
+
+    explanation:
+      "Use <strong>since</strong> with a starting point in time: since 2024."
+  }
+
+];
+
+
+/* =========================================================
+   STATE
+========================================================= */
+
+let currentQuestion = 0;
+
+let userAnswers =
+  new Array(questions.length).fill(null);
+
+
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+function escapeHTML(value) {
+
+  return String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
+}
+
+
+/* =========================================================
+   NORMALIZE SHORT ANSWERS
+========================================================= */
+
+function normalize(text) {
+
+  return String(text || "")
+    .toLowerCase()
+    .replace(/[.,!?;:"'“”‘’()]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+}
+
+
+/* =========================================================
+   CHECK ANSWER
+========================================================= */
+
+function isCorrect(question, userAnswer) {
+
+  if (
+    userAnswer === null ||
+    userAnswer === undefined ||
+    userAnswer === ""
+  ) {
+    return false;
+  }
+
+
+  /* Multiple choice */
+
+  if (question.type === "mcq") {
+
+    return userAnswer === question.answer;
+
+  }
+
+
+  /* Short answer */
+
+  const normalizedUser =
+    normalize(userAnswer);
+
+  return question.acceptedAnswers.some(
+    answer =>
+      normalize(answer) === normalizedUser
+  );
+
+}
+
+
+/* =========================================================
+   RENDER QUESTION
+========================================================= */
+
+function renderQuestion() {
+
+  const question =
+    questions[currentQuestion];
+
+
+  const questionArea =
+    document.getElementById("questionArea");
+
+
+  document.getElementById("questionCounter")
+    .textContent =
+      `Question ${question.number} of ${questions.length}`;
+
+
+  document.getElementById("categoryCounter")
+    .textContent =
+      question.category;
+
+
+  const progress =
+    ((currentQuestion + 1) /
+      questions.length) * 100;
+
+
+  document.getElementById("progressFill")
+    .style.width =
+      progress + "%";
+
+
+  let html = `
+
+    <div class="category-label">
+      ${escapeHTML(question.category)}
+    </div>
+
+    <div class="question">
+      ${escapeHTML(question.question)}
+    </div>
+
+  `;
+
+
+  /* MULTIPLE CHOICE */
+
+  if (question.type === "mcq") {
+
+    html += `
+      <div class="options">
+    `;
+
+
+    question.options.forEach(
+      (option, index) => {
+
+        const checked =
+          userAnswers[currentQuestion] === index
+            ? "checked"
+            : "";
+
+
+        html += `
+
+          <div class="option">
+
+            <input
+              type="radio"
+              id="option-${index}"
+              name="question-${question.number}"
+              value="${index}"
+              ${checked}
+              onchange="saveMCQAnswer(${index})"
+            >
+
+            <label for="option-${index}">
+              ${escapeHTML(option)}
+            </label>
+
+          </div>
+
+        `;
+
+      }
+    );
+
+
+    html += `
+      </div>
+    `;
+
+  }
+
+
+  /* SHORT ANSWER */
+
+  else {
+
+    const saved =
+      userAnswers[currentQuestion] || "";
+
+
+    html += `
+
+      <textarea
+        class="translation-box"
+        id="shortAnswer"
+        placeholder="Type your answer here..."
+        oninput="saveShortAnswer(this.value)"
+      >${escapeHTML(saved)}</textarea>
+
+      <div class="translation-note">
+        Capitalization does not matter, but spelling and grammar do.
+      </div>
+
+    `;
+
+  }
+
+
+  questionArea.innerHTML = html;
+
+
+  document.getElementById("prevButton")
+    .disabled =
+      currentQuestion === 0;
+
+
+  document.getElementById("nextButton")
+    .textContent =
+      currentQuestion === questions.length - 1
+        ? "Finish Test"
+        : "Next";
+
+}
+
+
+/* =========================================================
+   SAVE ANSWERS
+========================================================= */
+
+function saveMCQAnswer(index) {
+
+  userAnswers[currentQuestion] = index;
+
+}
+
+
+function saveShortAnswer(value) {
+
+  userAnswers[currentQuestion] = value;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+function nextQuestion() {
+
+  if (currentQuestion <
+      questions.length - 1) {
+
+    currentQuestion++;
+
+    renderQuestion();
+
+  } else {
+
+    showResults();
+
+  }
+
+}
+
+
+function previousQuestion() {
+
+  if (currentQuestion > 0) {
+
+    currentQuestion--;
+
+    renderQuestion();
+
+  }
+
+}
+
+
+/* =========================================================
+   RESULTS
+========================================================= */
+
+function showResults() {
+
+  let score = 0;
+
+
+  questions.forEach(
+    (question, index) => {
+
+      if (
+        isCorrect(
+          question,
+          userAnswers[index]
+        )
+      ) {
+
+        score++;
+
+      }
+
+    }
+  );
+
+
+  const percentage =
+    Math.round(
+      (score / questions.length) * 100
+    );
+
+
+  document.getElementById("testContainer")
+    .classList.add("hidden");
+
+
+  document.getElementById("resultSection")
+    .classList.remove("hidden");
+
+
+  document.getElementById("scoreDisplay")
+    .textContent =
+      `${score}/${questions.length}`;
+
+
+  document.getElementById("scoreSubtitle")
+    .textContent =
+      `${percentage}% correct`;
+
+
+  renderDiagnosis(percentage);
+
+  renderCategoryResults();
+
+  renderWrongAnswers();
+
+  renderFullReview();
+
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+}
+
+
+/* =========================================================
+   DIAGNOSIS
+========================================================= */
+
+function renderDiagnosis(percentage) {
+
+  let level = "";
+
+  let description = "";
+
+  let recommendation = "";
+
+
+  if (percentage >= 90) {
+
+    level = "Advanced grammar control";
+
+    description =
+      "You demonstrate strong control of the grammar structures tested in this assessment. You are likely comfortable handling complex English sentences and academic contexts.";
+
+    recommendation =
+      "You can start focusing more heavily on scholarship essays, academic writing, study-abroad applications, interviews, and advanced English communication.";
+
+  }
+
+  else if (percentage >= 80) {
+
+    level = "Strong upper-intermediate";
+
+    description =
+      "You have a solid understanding of most major grammar structures, although some areas may still need refinement.";
+
+    recommendation =
+      "You are in a good position to work on academic writing, scholarship applications, TOEFL/IELTS preparation, and more advanced vocabulary.";
+
+  }
+
+  else if (percentage >= 70) {
+
+    level = "Upper-intermediate developing";
+
+    description =
+      "You understand many important grammar patterns, but some structures are not yet consistently accurate.";
+
+    recommendation =
+      "Before relying heavily on your English for scholarship essays or study-abroad applications, strengthen your weaker grammar areas through targeted practice.";
+
+  }
+
+  else if (percentage >= 60) {
+
+    level = "Intermediate";
+
+    description =
+      "You have a useful foundation, but several grammar structures still need more consistent practice.";
+
+    recommendation =
+      "Focus on mastering the core grammar structures before moving into highly demanding academic writing or scholarship applications.";
+
+  }
+
+  else {
+
+    level = "Developing foundation";
+
+    description =
+      "Your results suggest that several core grammar structures still need substantial practice.";
+
+    recommendation =
+      "Spend more time strengthening your grammar foundation, especially tenses, conditionals, passive voice, subject-verb agreement, and prepositions before moving to advanced academic English.";
+
+  }
+
+
+  document.getElementById("diagnosisArea")
+    .innerHTML = `
+
+      <div class="diagnosis-card">
+
+        <h3>
+          ${level}
+        </h3>
+
+        <p>
+          ${description}
+        </p>
+
+        <div class="recommendation">
+
+          <strong>
+            What to do next
+          </strong>
+
+          ${recommendation}
+
+        </div>
+
+      </div>
+
+    `;
+
+}
+
+
+/* =========================================================
+   CATEGORY RESULTS
+========================================================= */
+
+function renderCategoryResults() {
+
+  const categories = {};
+
+
+  questions.forEach(
+    (question, index) => {
+
+      if (!categories[question.category]) {
+
+        categories[question.category] = {
+          correct: 0,
+          total: 0
+        };
+
+      }
+
+
+      categories[question.category].total++;
+
+
+      if (
+        isCorrect(
+          question,
+          userAnswers[index]
+        )
+      ) {
+
+        categories[question.category].correct++;
+
+      }
+
+    }
+  );
+
+
+  let html = `
+
+    <div class="diagnosis-card">
+
+      <h3>
+        Your Grammar Breakdown
+      </h3>
+
+      <p>
+        This shows which areas are strongest and which ones may need more practice.
+      </p>
+
+      <div class="category-results">
+
+  `;
+
+
+  Object.entries(categories).forEach(
+    ([category, data]) => {
+
+      const percentage =
+        Math.round(
+          (data.correct / data.total) * 100
+        );
+
+
+      html += `
+
+        <div class="category-result">
+
+          <div class="category-result-top">
+
+            <span>
+              ${escapeHTML(category)}
+            </span>
+
+            <span>
+              ${data.correct}/${data.total}
+            </span>
+
+          </div>
+
+          <div class="category-result-bar">
+
+            <div
+              class="category-result-fill"
+              style="width:${percentage}%">
+            </div>
+
+          </div>
+
+        </div>
+
+      `;
+
+    }
+  );
+
+
+  html += `
+
+      </div>
+
+    </div>
+
+  `;
+
+
+  document.getElementById("categoryResults")
+    .innerHTML = html;
+
+}
+
+
+/* =========================================================
+   WRONG ANSWERS
+========================================================= */
+
+function renderWrongAnswers() {
+
+  const wrong =
+    questions
+      .map(
+        (question, index) => ({
+          question,
+          index
+        })
+      )
+      .filter(
+        ({ question, index }) =>
+          !isCorrect(
+            question,
+            userAnswers[index]
+          )
+      );
+
+
+  const container =
+    document.getElementById("wrongAnswers");
+
+
+  if (wrong.length === 0) {
+
+    container.innerHTML = `
+
+      <div class="wrong-card">
+
+        <div class="status">
+          Perfect
+        </div>
+
+        <div>
+          You answered every question correctly.
+          Excellent work.
+        </div>
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  let html = "";
+
+
+  wrong.forEach(
+    ({ question, index }) => {
+
+      html += createReviewCard(
+        question,
+        index,
+        true
+      );
+
+    }
+  );
+
+
+  container.innerHTML = html;
+
+}
+
+
+/* =========================================================
+   REVIEW CARD
+========================================================= */
+
+function createReviewCard(
+  question,
+  index,
+  wrongOnly = false
+) {
+
+  const correct =
+    isCorrect(
+      question,
+      userAnswers[index]
+    );
+
+
+  let userAnswerText = "No answer";
+
+
+  if (
+    userAnswers[index] !== null &&
+    userAnswers[index] !== ""
+  ) {
+
+    if (question.type === "mcq") {
+
+      userAnswerText =
+        question.options[userAnswers[index]];
+
+    } else {
+
+      userAnswerText =
+        userAnswers[index];
+
+    }
+
+  }
+
+
+  let correctAnswerText = "";
+
+
+  if (question.type === "mcq") {
+
+    correctAnswerText =
+      question.options[question.answer];
+
+  } else {
+
+    correctAnswerText =
+      question.acceptedAnswers[0];
+
+  }
+
+
+  let acceptedHTML = "";
+
+
+  if (question.type === "short") {
+
+    acceptedHTML = `
+
+      <div class="accepted-answers">
+
+        <div class="accepted-answers-title">
+          Accepted answers
+        </div>
+
+        ${
+          question.acceptedAnswers
+            .map(
+              answer => `
+                <div class="accepted-answer">
+                  ${escapeHTML(answer)}
+                </div>
+              `
+            )
+            .join("")
+        }
+
+      </div>
+
+    `;
+
+  }
+
+
+  return `
+
+    <div class="${wrongOnly ? "wrong-card" : "review-card " + (correct ? "correct" : "incorrect")}">
+
+      <div class="review-number">
+
+        Question ${question.number}
+        · ${escapeHTML(question.category)}
+
+      </div>
+
+
+      <div class="review-question">
+
+        ${escapeHTML(question.question)}
+
+      </div>
+
+
+      <div class="answer-row">
+
+        <div class="answer-box">
+
+          <strong>
+            Your answer
+          </strong>
+
+          ${escapeHTML(userAnswerText)}
+
+        </div>
+
+
+        <div class="answer-box">
+
+          <strong>
+            Correct answer
+          </strong>
+
+          ${escapeHTML(correctAnswerText)}
+
+        </div>
+
+      </div>
+
+
+      ${acceptedHTML}
+
+
+      <div class="explanation">
+
+        ${question.explanation}
+
+      </div>
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   FULL REVIEW
+========================================================= */
+
+function renderFullReview() {
+
+  let html = "";
+
+
+  questions.forEach(
+    (question, index) => {
+
+      html += createReviewCard(
+        question,
+        index,
+        false
+      );
+
+    }
+  );
+
+
+  document.getElementById("fullReview")
+    .innerHTML = html;
+
+}
+
+
+/* =========================================================
+   RESTART
+========================================================= */
+
+function restartTest() {
+
+  currentQuestion = 0;
+
+  userAnswers =
+    new Array(questions.length).fill(null);
+
+
+  document.getElementById("resultSection")
+    .classList.add("hidden");
+
+
+  document.getElementById("testContainer")
+    .classList.remove("hidden");
+
+
+  renderQuestion();
+
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+}
+
+
+/* =========================================================
+   INITIALIZE
+========================================================= */
+
+renderQuestion();
+
+</script>
+
+</body>
+</html>
