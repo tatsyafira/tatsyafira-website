@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="id">
 
 <head>
@@ -13,371 +12,3360 @@
 
     <title>Belajar — Tatsyafira</title>
 
+    <meta
+        name="description"
+        content="Belajar bahasa Inggris bersama Tatsyafira — materi, latihan, grammar, vocabulary, speaking, dan persiapan TOEFL."
+    >
+
+    <!-- GOOGLE FONTS -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- MAIN WEBSITE CSS -->
     <link
         rel="stylesheet"
         href="style.css"
     >
 
+
     <style>
 
-        /* =====================================================
-           BELAJAR PAGE
+        /* =========================================================
+           BELAJAR — TATSYAFIRA
+           
+           Page-specific design.
+           
+           Identity:
+           Ivory / white / soft blue
+           Playfair Display + DM Sans
+           Editorial + playful learning ecosystem
+        ========================================================= */
 
-           Small page-specific adjustments only.
 
-           The main website styling still comes from style.css.
-        ===================================================== */
+        :root {
+
+            --learn-ivory:
+                #fffdfa;
+
+            --learn-white:
+                #ffffff;
+
+            --learn-ink:
+                #171717;
+
+            --learn-muted:
+                #77736d;
+
+            --learn-line:
+                #e5e1db;
+
+            --learn-blue:
+                #73a9ea;
+
+            --learn-blue-dark:
+                #4d8fe0;
+
+            --learn-blue-pale:
+                #eef6ff;
+
+            --learn-blue-soft:
+                #dcecff;
+
+            --learn-yellow:
+                #f7e8ad;
+
+            --learn-pink:
+                #f4dce6;
+
+            --learn-green:
+                #e2eee5;
+
+        }
+
+
+        /* =========================================================
+           BASE
+        ========================================================= */
 
         .belajar-page {
-            padding-top: 80px;
-            padding-bottom: 100px;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            background:
+                var(--learn-ivory);
+
         }
 
 
-        /* =====================================================
-           PAGE INTRO
-        ===================================================== */
+        .belajar-page *,
+        .belajar-page *::before,
+        .belajar-page *::after {
 
-        .belajar-intro {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 80px 40px 70px;
+            box-sizing:
+                border-box;
+
         }
 
 
-        .belajar-intro .eyebrow {
-            margin-bottom: 18px;
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        .belajar-header-space {
+
+            height:
+                1px;
+
         }
 
 
-        .belajar-intro h1 {
-            max-width: 800px;
-            margin: 0 0 24px;
-            font-size: clamp(44px, 6vw, 72px);
-            line-height: 1.05;
-            letter-spacing: -2px;
+        /*
+            The global header from style.css remains intact.
+            We only make sure the page starts directly underneath it.
+        */
+
+        .site-header {
+
+            z-index:
+                100;
+
         }
 
 
-        .belajar-intro p {
-            max-width: 680px;
-            margin: 0;
-            font-size: 18px;
-            line-height: 1.7;
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .learning-hero {
+
+            position:
+                relative;
+
+            min-height:
+                760px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            overflow:
+                hidden;
+
+            padding:
+                120px 7vw 110px;
+
+            background:
+
+                radial-gradient(
+                    ellipse at 50% 42%,
+                    rgba(220,236,255,.95),
+                    transparent 34%
+                ),
+
+                radial-gradient(
+                    ellipse at 18% 65%,
+                    rgba(244,220,230,.55),
+                    transparent 28%
+                ),
+
+                radial-gradient(
+                    ellipse at 85% 30%,
+                    rgba(247,232,173,.35),
+                    transparent 25%
+                ),
+
+                var(--learn-ivory);
+
         }
 
 
-        /* =====================================================
-           MAIN PAGE SECTIONS
-        ===================================================== */
+        .learning-hero::before {
 
-        .belajar-section {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 70px 40px;
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                620px;
+
+            height:
+                620px;
+
+            border:
+                1px solid
+                rgba(115,169,234,.18);
+
+            border-radius:
+                50%;
+
+            left:
+                50%;
+
+            top:
+                50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            pointer-events:
+                none;
+
         }
 
 
-        .belajar-section + .belajar-section {
-            padding-top: 40px;
+        .learning-hero::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                900px;
+
+            height:
+                900px;
+
+            border:
+                1px dashed
+                rgba(115,169,234,.16);
+
+            border-radius:
+                50%;
+
+            left:
+                50%;
+
+            top:
+                50%;
+
+            transform:
+                translate(-50%, -50%)
+                rotate(18deg);
+
+            pointer-events:
+                none;
+
         }
 
 
-        .belajar-section-heading {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            gap: 40px;
-            margin-bottom: 42px;
+        .learning-hero-inner {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            width:
+                100%;
+
+            max-width:
+                1180px;
+
+            margin:
+                0 auto;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                minmax(0, 1.1fr)
+                minmax(320px, .9fr);
+
+            align-items:
+                center;
+
+            gap:
+                70px;
+
         }
 
 
-        .belajar-section-heading h2 {
-            margin: 0;
-            max-width: 700px;
-            font-size: clamp(32px, 4vw, 48px);
-            line-height: 1.1;
-            letter-spacing: -1px;
+        .learning-hero-copy {
+
+            max-width:
+                720px;
+
         }
 
 
-        .belajar-section-heading p {
-            max-width: 420px;
-            margin: 0;
-            font-size: 16px;
-            line-height: 1.7;
+        .learning-eyebrow {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+            margin:
+                0 0 24px;
+
+            font-size:
+                12px;
+
+            line-height:
+                1;
+
+            letter-spacing:
+                3px;
+
+            font-weight:
+                600;
+
+            color:
+                var(--learn-muted);
+
         }
 
 
-        /* =====================================================
-           RESOURCE CARDS
-        ===================================================== */
+        .learning-eyebrow::before {
 
-        .belajar-resource-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
+            content:
+                "";
+
+            width:
+                34px;
+
+            height:
+                1px;
+
+            background:
+                var(--learn-blue-dark);
+
         }
 
 
-        .belajar-resource-card {
-            display: flex;
-            flex-direction: column;
-            min-height: 250px;
-            padding: 30px;
-            border: 1px solid #e5e5e5;
-            border-radius: 20px;
-            background: #ffffff;
-            text-decoration: none;
-            color: inherit;
+        .learning-hero h1 {
+
+            margin:
+                0;
+
+            max-width:
+                760px;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(
+                    56px,
+                    7.5vw,
+                    108px
+                );
+
+            font-weight:
+                500;
+
+            line-height:
+                .94;
+
+            letter-spacing:
+                -5px;
+
+        }
+
+
+        .learning-hero h1 em {
+
+            display:
+                block;
+
+            font-weight:
+                400;
+
+        }
+
+
+        .learning-hero-description {
+
+            max-width:
+                620px;
+
+            margin:
+                32px 0 0;
+
+            font-size:
+                18px;
+
+            line-height:
+                1.75;
+
+            color:
+                #66625d;
+
+        }
+
+
+        .learning-hero-actions {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            align-items:
+                center;
+
+            gap:
+                14px;
+
+            margin:
+                34px 0 0;
+
+        }
+
+
+        .learning-primary-button {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                14px;
+
+            padding:
+                15px 23px;
+
+            border:
+                1px solid
+                var(--learn-ink);
+
+            border-radius:
+                999px;
+
+            background:
+                var(--learn-ink);
+
+            color:
+                white;
+
+            font-size:
+                14px;
+
+            font-weight:
+                600;
+
             transition:
-                transform 0.2s ease,
-                border-color 0.2s ease,
-                box-shadow 0.2s ease;
+                transform .3s ease,
+                background .3s ease,
+                gap .3s ease;
+
         }
 
 
-        .belajar-resource-card:hover {
-            transform: translateY(-3px);
-            border-color: #d8d8d8;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+        .learning-primary-button:hover {
+
+            transform:
+                translateY(-3px);
+
+            gap:
+                19px;
+
+            background:
+                var(--learn-blue-dark);
+
+            border-color:
+                var(--learn-blue-dark);
+
         }
 
 
-        .belajar-resource-number {
-            display: block;
-            margin-bottom: 35px;
-            font-size: 13px;
-            letter-spacing: 1px;
-            font-weight: 600;
+        .learning-secondary-button {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+
+            padding:
+                14px 20px;
+
+            border:
+                1px solid
+                var(--learn-line);
+
+            border-radius:
+                999px;
+
+            background:
+                rgba(255,255,255,.75);
+
+            font-size:
+                14px;
+
+            font-weight:
+                600;
+
+            transition:
+                transform .3s ease,
+                border-color .3s ease;
+
         }
 
 
-        .belajar-resource-card h3 {
-            margin: 0 0 12px;
-            font-size: 24px;
-            line-height: 1.2;
+        .learning-secondary-button:hover {
+
+            transform:
+                translateY(-3px);
+
+            border-color:
+                var(--learn-blue);
+
         }
 
 
-        .belajar-resource-card p {
-            margin: 0;
-            font-size: 15px;
-            line-height: 1.7;
+        /* =========================================================
+           HERO — LEARNING MAP
+        ========================================================= */
+
+        .learning-map {
+
+            position:
+                relative;
+
+            min-height:
+                470px;
+
         }
 
 
-        .belajar-resource-link {
-            margin-top: auto;
-            padding-top: 25px;
-            font-size: 14px;
-            font-weight: 600;
+        .learning-orbit {
+
+            position:
+                absolute;
+
+            left:
+                50%;
+
+            top:
+                50%;
+
+            width:
+                390px;
+
+            height:
+                390px;
+
+            border:
+                1px dashed
+                rgba(77,143,224,.28);
+
+            border-radius:
+                50%;
+
+            transform:
+                translate(-50%, -50%)
+                rotate(-12deg);
+
+            animation:
+                orbitFloat 8s
+                ease-in-out
+                infinite;
+
         }
 
 
-        /* =====================================================
+        .learning-orbit::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            inset:
+                42px;
+
+            border:
+                1px solid
+                rgba(77,143,224,.16);
+
+            border-radius:
+                50%;
+
+        }
+
+
+        .learning-center-card {
+
+            position:
+                absolute;
+
+            left:
+                50%;
+
+            top:
+                50%;
+
+            z-index:
+                4;
+
+            width:
+                190px;
+
+            min-height:
+                190px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            text-align:
+                center;
+
+            padding:
+                24px;
+
+            border:
+                1px solid
+                rgba(0,0,0,.08);
+
+            border-radius:
+                50%;
+
+            background:
+                rgba(255,255,255,.92);
+
+            box-shadow:
+                0 22px 60px
+                rgba(50,80,110,.12);
+
+            transform:
+                translate(-50%, -50%);
+
+            animation:
+                centerPulse 4s
+                ease-in-out
+                infinite;
+
+        }
+
+
+        .learning-center-icon {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            width:
+                54px;
+
+            height:
+                54px;
+
+            margin-bottom:
+                12px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--learn-blue-pale);
+
+            font-size:
+                25px;
+
+        }
+
+
+        .learning-center-card strong {
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                23px;
+
+            font-weight:
+                500;
+
+        }
+
+
+        .learning-center-card span {
+
+            margin-top:
+                5px;
+
+            color:
+                var(--learn-muted);
+
+            font-size:
+                11px;
+
+            letter-spacing:
+                1.4px;
+
+            text-transform:
+                uppercase;
+
+        }
+
+
+        .learning-node {
+
+            position:
+                absolute;
+
+            z-index:
+                5;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            width:
+                115px;
+
+            height:
+                115px;
+
+            padding:
+                12px;
+
+            border:
+                1px solid
+                rgba(0,0,0,.08);
+
+            border-radius:
+                50%;
+
+            background:
+                white;
+
+            box-shadow:
+                0 12px 35px
+                rgba(50,80,110,.10);
+
+            text-align:
+                center;
+
+            transition:
+                transform .35s
+                cubic-bezier(.22,1,.36,1),
+                box-shadow .35s ease;
+
+        }
+
+
+        .learning-node:hover {
+
+            transform:
+                scale(1.08);
+
+            box-shadow:
+                0 22px 50px
+                rgba(50,80,110,.17);
+
+        }
+
+
+        .learning-node-icon {
+
+            font-size:
+                25px;
+
+            margin-bottom:
+                7px;
+
+        }
+
+
+        .learning-node strong {
+
+            font-size:
+                12px;
+
+            line-height:
+                1.2;
+
+        }
+
+
+        .learning-node small {
+
+            margin-top:
+                4px;
+
+            color:
+                var(--learn-muted);
+
+            font-size:
+                9px;
+
+        }
+
+
+        .learning-node-grammar {
+
+            left:
+                0;
+
+            top:
+                40px;
+
+        }
+
+
+        .learning-node-vocab {
+
+            right:
+                0;
+
+            top:
+                85px;
+
+        }
+
+
+        .learning-node-speaking {
+
+            left:
+                10px;
+
+            bottom:
+                25px;
+
+        }
+
+
+        .learning-node-test {
+
+            right:
+                25px;
+
+            bottom:
+                0;
+
+        }
+
+
+        .learning-node-grammar::before,
+        .learning-node-vocab::before,
+        .learning-node-speaking::before,
+        .learning-node-test::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                8px;
+
+            height:
+                8px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--learn-blue);
+
+            box-shadow:
+                0 0 0 6px
+                rgba(115,169,234,.12);
+
+        }
+
+
+        .learning-node-grammar::before {
+
+            right:
+                -4px;
+
+            top:
+                50%;
+
+        }
+
+
+        .learning-node-vocab::before {
+
+            left:
+                -4px;
+
+            top:
+                50%;
+
+        }
+
+
+        .learning-node-speaking::before {
+
+            right:
+                -4px;
+
+            top:
+                35%;
+
+        }
+
+
+        .learning-node-test::before {
+
+            left:
+                -4px;
+
+            top:
+                35%;
+
+        }
+
+
+        /* =========================================================
+           QUICK PATH
+        ========================================================= */
+
+        .learning-path-section {
+
+            position:
+                relative;
+
+            padding:
+                0 7vw 110px;
+
+        }
+
+
+        .learning-path-inner {
+
+            max-width:
+                1180px;
+
+            margin:
+                0 auto;
+
+            padding:
+                48px;
+
+            border:
+                1px solid
+                var(--learn-line);
+
+            border-radius:
+                30px;
+
+            background:
+                white;
+
+            box-shadow:
+                0 20px 60px
+                rgba(30,45,60,.06);
+
+        }
+
+
+        .learning-path-heading {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                flex-end;
+
+            gap:
+                40px;
+
+            margin-bottom:
+                38px;
+
+        }
+
+
+        .learning-path-heading h2 {
+
+            max-width:
+                650px;
+
+            margin:
+                12px 0 0;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(
+                    38px,
+                    5vw,
+                    65px
+                );
+
+            font-weight:
+                500;
+
+            line-height:
+                .98;
+
+            letter-spacing:
+                -2.5px;
+
+        }
+
+
+        .learning-path-heading h2 em {
+
+            font-weight:
+                400;
+
+        }
+
+
+        .learning-path-heading > p {
+
+            max-width:
+                360px;
+
+            margin:
+                0;
+
+            color:
+                var(--learn-muted);
+
+            font-size:
+                15px;
+
+            line-height:
+                1.7;
+
+        }
+
+
+        .learning-path-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap:
+                0;
+
+            border-top:
+                1px solid
+                var(--learn-line);
+
+            border-bottom:
+                1px solid
+                var(--learn-line);
+
+        }
+
+
+        .path-step {
+
+            position:
+                relative;
+
+            min-height:
+                180px;
+
+            padding:
+                28px 25px;
+
+            border-right:
+                1px solid
+                var(--learn-line);
+
+            text-decoration:
+                none;
+
+            transition:
+                background .3s ease,
+                transform .3s ease;
+
+        }
+
+
+        .path-step:last-child {
+
+            border-right:
+                none;
+
+        }
+
+
+        .path-step:hover {
+
+            background:
+                var(--learn-blue-pale);
+
+            transform:
+                translateY(-4px);
+
+        }
+
+
+        .path-step-number {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            width:
+                35px;
+
+            height:
+                35px;
+
+            margin-bottom:
+                28px;
+
+            border:
+                1px solid
+                var(--learn-line);
+
+            border-radius:
+                50%;
+
+            font-size:
+                11px;
+
+            font-weight:
+                600;
+
+            transition:
+                background .3s ease,
+                border-color .3s ease;
+
+        }
+
+
+        .path-step:hover .path-step-number {
+
+            background:
+                var(--learn-blue);
+
+            border-color:
+                var(--learn-blue);
+
+            color:
+                white;
+
+        }
+
+
+        .path-step h3 {
+
+            margin:
+                0 0 8px;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                24px;
+
+            font-weight:
+                500;
+
+        }
+
+
+        .path-step p {
+
+            margin:
+                0;
+
+            color:
+                var(--learn-muted);
+
+            font-size:
+                13px;
+
+            line-height:
+                1.6;
+
+        }
+
+
+        .path-step-arrow {
+
+            position:
+                absolute;
+
+            right:
+                22px;
+
+            top:
+                28px;
+
+            font-size:
+                20px;
+
+            color:
+                var(--learn-muted);
+
+            transition:
+                transform .3s ease,
+                color .3s ease;
+
+        }
+
+
+        .path-step:hover .path-step-arrow {
+
+            transform:
+                translate(4px,-4px);
+
+            color:
+                var(--learn-blue-dark);
+
+        }
+
+
+        /* =========================================================
+           MATERIAL SECTION
+        ========================================================= */
+
+        .learning-materials {
+
+            padding:
+                90px 7vw 110px;
+
+            background:
+                var(--learn-blue-pale);
+
+        }
+
+
+        .learning-materials-inner {
+
+            max-width:
+                1180px;
+
+            margin:
+                0 auto;
+
+        }
+
+
+        .learning-section-intro {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr .75fr;
+
+            gap:
+                60px;
+
+            align-items:
+                end;
+
+            margin-bottom:
+                48px;
+
+        }
+
+
+        .learning-section-label {
+
+            margin:
+                0 0 15px;
+
+            font-size:
+                11px;
+
+            letter-spacing:
+                3px;
+
+            font-weight:
+                600;
+
+            color:
+                var(--learn-muted);
+
+        }
+
+
+        .learning-section-intro h2 {
+
+            margin:
+                0;
+
+            max-width:
+                720px;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(
+                    45px,
+                    5vw,
+                    70px
+                );
+
+            font-weight:
+                500;
+
+            line-height:
+                .98;
+
+            letter-spacing:
+                -3px;
+
+        }
+
+
+        .learning-section-intro h2 em {
+
+            font-weight:
+                400;
+
+        }
+
+
+        .learning-section-intro > p {
+
+            margin:
+                0;
+
+            color:
+                #66625d;
+
+            font-size:
+                15px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        .material-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                16px;
+
+        }
+
+
+        .material-card {
+
+            position:
+                relative;
+
+            min-height:
+                300px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            padding:
+                30px;
+
+            overflow:
+                hidden;
+
+            border:
+                1px solid
+                rgba(0,0,0,.08);
+
+            border-radius:
+                24px;
+
+            background:
+                white;
+
+            text-decoration:
+                none;
+
+            transition:
+                transform .45s
+                cubic-bezier(.22,1,.36,1),
+                box-shadow .45s ease,
+                border-color .3s ease;
+
+        }
+
+
+        .material-card::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                170px;
+
+            height:
+                170px;
+
+            right:
+                -65px;
+
+            bottom:
+                -65px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--learn-blue-pale);
+
+            transition:
+                transform .5s
+                cubic-bezier(.22,1,.36,1);
+
+        }
+
+
+        .material-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            border-color:
+                rgba(77,143,224,.28);
+
+            box-shadow:
+                0 25px 60px
+                rgba(45,75,110,.12);
+
+        }
+
+
+        .material-card:hover::before {
+
+            transform:
+                scale(1.45);
+
+        }
+
+
+        .material-card-top {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+        }
+
+
+        .material-icon {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            width:
+                48px;
+
+            height:
+                48px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--learn-blue-pale);
+
+            font-size:
+                21px;
+
+            transition:
+                transform .35s ease;
+
+        }
+
+
+        .material-card:hover .material-icon {
+
+            transform:
+                rotate(-8deg)
+                scale(1.08);
+
+        }
+
+
+        .material-arrow {
+
+            font-size:
+                20px;
+
+            color:
+                var(--learn-muted);
+
+            transition:
+                transform .3s ease;
+
+        }
+
+
+        .material-card:hover .material-arrow {
+
+            transform:
+                translate(5px,-5px);
+
+        }
+
+
+        .material-number {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            margin:
+                35px 0 12px;
+
+            font-size:
+                10px;
+
+            letter-spacing:
+                2.5px;
+
+            font-weight:
+                600;
+
+            color:
+                var(--learn-muted);
+
+        }
+
+
+        .material-card h3 {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            margin:
+                0 0 12px;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                29px;
+
+            line-height:
+                1.05;
+
+            font-weight:
+                500;
+
+        }
+
+
+        .material-card p {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            max-width:
+                310px;
+
+            margin:
+                0;
+
+            color:
+                var(--learn-muted);
+
+            font-size:
+                14px;
+
+            line-height:
+                1.65;
+
+        }
+
+
+        .material-link {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            margin-top:
+                auto;
+
+            padding-top:
+                25px;
+
+            font-size:
+                13px;
+
+            font-weight:
+                600;
+
+        }
+
+
+        /* Individual material moods */
+
+        .material-card.grammar {
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #f4f9ff
+                );
+
+        }
+
+
+        .material-card.conditionals {
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #faf6f2
+                );
+
+        }
+
+
+        .material-card.prepositions {
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #f5f9f5
+                );
+
+        }
+
+
+        .material-card.agreement {
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #f7f5ff
+                );
+
+        }
+
+
+        .material-card.vocabulary {
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #fff8ef
+                );
+
+        }
+
+
+        .material-card.toefl {
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #f4f8ff
+                );
+
+        }
+
+
+        /* =========================================================
            PRACTICE SECTION
-        ===================================================== */
+        ========================================================= */
 
-        .latihan-section {
-            margin-top: 40px;
-            padding-top: 90px;
-            padding-bottom: 100px;
-            background: #f8f7f5;
+        .practice-section {
+
+            position:
+                relative;
+
+            padding:
+                110px 7vw 120px;
+
+            overflow:
+                hidden;
+
+            background:
+                var(--learn-ivory);
+
         }
 
 
-        .latihan-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 40px;
+        .practice-section::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                500px;
+
+            height:
+                500px;
+
+            right:
+                -180px;
+
+            top:
+                80px;
+
+            border-radius:
+                50%;
+
+            background:
+                rgba(220,236,255,.6);
+
+            filter:
+                blur(10px);
+
+            pointer-events:
+                none;
+
         }
 
 
-        .latihan-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+        .practice-inner {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            max-width:
+                1180px;
+
+            margin:
+                0 auto;
+
         }
 
 
-        .latihan-card {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            min-height: 330px;
-            padding: 34px;
-            border-radius: 22px;
-            background: #ffffff;
-            text-decoration: none;
-            color: inherit;
-            border: 1px solid rgba(0, 0, 0, 0.06);
+        .practice-heading {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                flex-end;
+
+            gap:
+                60px;
+
+            margin-bottom:
+                50px;
+
+        }
+
+
+        .practice-heading h2 {
+
+            margin:
+                0;
+
+            max-width:
+                720px;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(
+                    46px,
+                    5.5vw,
+                    78px
+                );
+
+            font-weight:
+                500;
+
+            line-height:
+                .96;
+
+            letter-spacing:
+                -3px;
+
+        }
+
+
+        .practice-heading h2 em {
+
+            font-weight:
+                400;
+
+        }
+
+
+        .practice-heading-copy {
+
+            max-width:
+                350px;
+
+            color:
+                var(--learn-muted);
+
+            font-size:
+                15px;
+
+            line-height:
+                1.75;
+
+        }
+
+
+        .practice-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap:
+                18px;
+
+        }
+
+
+        .practice-card {
+
+            position:
+                relative;
+
+            min-height:
+                340px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            padding:
+                34px;
+
+            overflow:
+                hidden;
+
+            border:
+                1px solid
+                rgba(0,0,0,.08);
+
+            border-radius:
+                28px;
+
+            background:
+                white;
+
+            text-decoration:
+                none;
+
             transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
-        }
-
-
-        .latihan-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
-        }
-
-
-        .latihan-number {
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 45px;
-        }
-
-
-        .latihan-type {
-            margin: 0 0 12px;
-            font-size: 12px;
-            letter-spacing: 2px;
-            font-weight: 600;
-        }
-
-
-        .latihan-card h3 {
-            margin: 0 0 15px;
-            font-size: 28px;
-            line-height: 1.15;
-        }
-
-
-        .latihan-card p {
-            margin: 0;
-            font-size: 15px;
-            line-height: 1.7;
-        }
-
-
-        .latihan-button {
-            margin-top: auto;
-            padding-top: 30px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-
-        /* =====================================================
-           NOTE
-        ===================================================== */
-
-        .belajar-note {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 40px 100px;
-        }
-
-
-        .belajar-note-inner {
-            padding: 35px 40px;
-            border-radius: 20px;
-            background: #f4eef0;
-        }
-
-
-        .belajar-note-inner p {
-            max-width: 760px;
-            margin: 0;
-            font-size: 16px;
-            line-height: 1.7;
-        }
-
-
-        /* =====================================================
-           RESPONSIVE
-        ===================================================== */
-
-        @media (max-width: 900px) {
-
-            .belajar-intro {
-                padding: 60px 25px 50px;
-            }
-
-
-            .belajar-section {
-                padding: 55px 25px;
-            }
-
-
-            .belajar-section-heading {
-                display: block;
-            }
-
-
-            .belajar-section-heading h2 {
-                margin-bottom: 18px;
-            }
-
-
-            .belajar-resource-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-
-            .latihan-inner {
-                padding: 0 25px;
-            }
-
-
-            .latihan-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-
-            .belajar-note {
-                padding: 0 25px 70px;
-            }
+                transform .45s
+                cubic-bezier(.22,1,.36,1),
+                box-shadow .45s ease;
 
         }
 
 
-        @media (max-width: 600px) {
+        .practice-card::after {
 
-            .belajar-page {
-                padding-top: 30px;
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                220px;
+
+            height:
+                220px;
+
+            right:
+                -80px;
+
+            bottom:
+                -80px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--learn-blue-pale);
+
+            transition:
+                transform .5s
+                cubic-bezier(.22,1,.36,1);
+
+        }
+
+
+        .practice-card:hover {
+
+            transform:
+                translateY(-9px);
+
+            box-shadow:
+                0 28px 65px
+                rgba(30,45,60,.12);
+
+        }
+
+
+        .practice-card:hover::after {
+
+            transform:
+                scale(1.45);
+
+        }
+
+
+        .practice-card-top {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+        }
+
+
+        .practice-icon {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            width:
+                54px;
+
+            height:
+                54px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--learn-blue-pale);
+
+            font-size:
+                23px;
+
+        }
+
+
+        .practice-card-number {
+
+            color:
+                var(--learn-muted);
+
+            font-size:
+                11px;
+
+            letter-spacing:
+                2px;
+
+            font-weight:
+                600;
+
+        }
+
+
+        .practice-card-label {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            margin:
+                42px 0 10px;
+
+            font-size:
+                10px;
+
+            letter-spacing:
+                2.5px;
+
+            font-weight:
+                600;
+
+            color:
+                var(--learn-muted);
+
+        }
+
+
+        .practice-card h3 {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            margin:
+                0 0 15px;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                36px;
+
+            line-height:
+                1;
+
+            font-weight:
+                500;
+
+        }
+
+
+        .practice-card h3 em {
+
+            font-weight:
+                400;
+
+        }
+
+
+        .practice-card p {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            max-width:
+                470px;
+
+            margin:
+                0;
+
+            color:
+                var(--learn-muted);
+
+            font-size:
+                14px;
+
+            line-height:
+                1.7;
+
+        }
+
+
+        .practice-card-footer {
+
+            position:
+                relative;
+
+            z-index:
+                3;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            margin-top:
+                auto;
+
+            padding-top:
+                28px;
+
+            font-size:
+                13px;
+
+            font-weight:
+                600;
+
+        }
+
+
+        .practice-card-footer span:last-child {
+
+            font-size:
+                19px;
+
+            transition:
+                transform .3s ease;
+
+        }
+
+
+        .practice-card:hover
+        .practice-card-footer
+        span:last-child {
+
+            transform:
+                translateX(7px);
+
+        }
+
+
+        /* =========================================================
+           LEARNING LOOP
+        ========================================================= */
+
+        .learning-loop {
+
+            padding:
+                0 7vw 120px;
+
+            background:
+                var(--learn-ivory);
+
+        }
+
+
+        .learning-loop-inner {
+
+            max-width:
+                1180px;
+
+            margin:
+                0 auto;
+
+            padding:
+                55px;
+
+            border:
+                1px solid
+                var(--learn-line);
+
+            border-radius:
+                30px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff,
+                    #f8fbff
+                );
+
+        }
+
+
+        .learning-loop-heading {
+
+            text-align:
+                center;
+
+            margin-bottom:
+                45px;
+
+        }
+
+
+        .learning-loop-heading p {
+
+            margin:
+                0 0 13px;
+
+            font-size:
+                11px;
+
+            letter-spacing:
+                3px;
+
+            font-weight:
+                600;
+
+            color:
+                var(--learn-muted);
+
+        }
+
+
+        .learning-loop-heading h2 {
+
+            margin:
+                0;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(
+                    40px,
+                    5vw,
+                    64px
+                );
+
+            font-weight:
+                500;
+
+            line-height:
+                1;
+
+            letter-spacing:
+                -2px;
+
+        }
+
+
+        .learning-loop-heading h2 em {
+
+            font-weight:
+                400;
+
+        }
+
+
+        .loop-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            position:
+                relative;
+
+        }
+
+
+        .loop-item {
+
+            position:
+                relative;
+
+            text-align:
+                center;
+
+            padding:
+                0 25px;
+
+        }
+
+
+        .loop-item:not(:last-child)::after {
+
+            content:
+                "→";
+
+            position:
+                absolute;
+
+            right:
+                -8px;
+
+            top:
+                32px;
+
+            color:
+                var(--learn-blue-dark);
+
+            font-size:
+                22px;
+
+        }
+
+
+        .loop-circle {
+
+            width:
+                70px;
+
+            height:
+                70px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            margin:
+                0 auto 18px;
+
+            border:
+                1px solid
+                rgba(77,143,224,.25);
+
+            border-radius:
+                50%;
+
+            background:
+                white;
+
+            font-size:
+                24px;
+
+            transition:
+                transform .35s ease,
+                background .35s ease;
+
+        }
+
+
+        .loop-item:hover .loop-circle {
+
+            transform:
+                translateY(-5px)
+                rotate(-5deg);
+
+            background:
+                var(--learn-blue-soft);
+
+        }
+
+
+        .loop-item strong {
+
+            display:
+                block;
+
+            margin-bottom:
+                6px;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                22px;
+
+            font-weight:
+                500;
+
+        }
+
+
+        .loop-item p {
+
+            margin:
+                0;
+
+            color:
+                var(--learn-muted);
+
+            font-size:
+                13px;
+
+            line-height:
+                1.6;
+
+        }
+
+
+        /* =========================================================
+           FINAL CTA
+        ========================================================= */
+
+        .learning-final {
+
+            position:
+                relative;
+
+            padding:
+                130px 7vw 150px;
+
+            overflow:
+                hidden;
+
+            text-align:
+                center;
+
+            background:
+                var(--learn-blue-pale);
+
+        }
+
+
+        .learning-final::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                550px;
+
+            height:
+                550px;
+
+            left:
+                50%;
+
+            top:
+                50%;
+
+            border:
+                1px dashed
+                rgba(77,143,224,.2);
+
+            border-radius:
+                50%;
+
+            transform:
+                translate(-50%,-50%);
+
+            animation:
+                slowRotate 20s
+                linear
+                infinite;
+
+        }
+
+
+        .learning-final-inner {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            max-width:
+                800px;
+
+            margin:
+                0 auto;
+
+        }
+
+
+        .learning-final-label {
+
+            margin:
+                0 0 18px;
+
+            font-size:
+                11px;
+
+            letter-spacing:
+                3px;
+
+            font-weight:
+                600;
+
+            color:
+                var(--learn-muted);
+
+        }
+
+
+        .learning-final h2 {
+
+            margin:
+                0;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(
+                    52px,
+                    7vw,
+                    92px
+                );
+
+            line-height:
+                .94;
+
+            letter-spacing:
+                -4px;
+
+            font-weight:
+                500;
+
+        }
+
+
+        .learning-final h2 em {
+
+            font-weight:
+                400;
+
+        }
+
+
+        .learning-final p {
+
+            max-width:
+                550px;
+
+            margin:
+                28px auto 32px;
+
+            color:
+                var(--learn-muted);
+
+            font-size:
+                16px;
+
+            line-height:
+                1.7;
+
+        }
+
+
+        /* =========================================================
+           SCROLL REVEAL
+        ========================================================= */
+
+        .learn-reveal {
+
+            opacity:
+                0;
+
+            transform:
+                translateY(35px);
+
+            transition:
+                opacity .85s ease,
+                transform .85s
+                cubic-bezier(.22,1,.36,1);
+
+        }
+
+
+        .learn-reveal.visible {
+
+            opacity:
+                1;
+
+            transform:
+                translateY(0);
+
+        }
+
+
+        .material-card.learn-reveal:nth-child(2) {
+
+            transition-delay:
+                80ms;
+
+        }
+
+
+        .material-card.learn-reveal:nth-child(3) {
+
+            transition-delay:
+                160ms;
+
+        }
+
+
+        .material-card.learn-reveal:nth-child(4) {
+
+            transition-delay:
+                80ms;
+
+        }
+
+
+        .material-card.learn-reveal:nth-child(5) {
+
+            transition-delay:
+                160ms;
+
+        }
+
+
+        .material-card.learn-reveal:nth-child(6) {
+
+            transition-delay:
+                240ms;
+
+        }
+
+
+        .practice-card.learn-reveal:nth-child(2) {
+
+            transition-delay:
+                120ms;
+
+        }
+
+
+        .practice-card.learn-reveal:nth-child(3) {
+
+            transition-delay:
+                180ms;
+
+        }
+
+
+        .practice-card.learn-reveal:nth-child(4) {
+
+            transition-delay:
+                240ms;
+
+        }
+
+
+        /* =========================================================
+           ANIMATIONS
+        ========================================================= */
+
+        @keyframes orbitFloat {
+
+            0%,
+            100% {
+
+                transform:
+                    translate(-50%, -50%)
+                    rotate(-12deg);
+
+            }
+
+            50% {
+
+                transform:
+                    translate(-50%, -50%)
+                    rotate(2deg);
+
+            }
+
+        }
+
+
+        @keyframes centerPulse {
+
+            0%,
+            100% {
+
+                box-shadow:
+                    0 22px 60px
+                    rgba(50,80,110,.12);
+
+            }
+
+            50% {
+
+                box-shadow:
+                    0 28px 75px
+                    rgba(77,143,224,.19);
+
+            }
+
+        }
+
+
+        @keyframes slowRotate {
+
+            from {
+
+                transform:
+                    translate(-50%,-50%)
+                    rotate(0deg);
+
+            }
+
+            to {
+
+                transform:
+                    translate(-50%,-50%)
+                    rotate(360deg);
+
+            }
+
+        }
+
+
+        /* =========================================================
+           RESPONSIVE — TABLET
+        ========================================================= */
+
+        @media (max-width: 1000px) {
+
+            .learning-hero {
+
+                padding:
+                    100px 5vw 90px;
+
             }
 
 
-            .belajar-intro h1 {
-                font-size: 44px;
-                letter-spacing: -1.5px;
+            .learning-hero-inner {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    30px;
+
             }
 
 
-            .belajar-intro p {
-                font-size: 16px;
+            .learning-hero-copy {
+
+                max-width:
+                    800px;
+
             }
 
 
-            .belajar-resource-grid {
-                grid-template-columns: 1fr;
+            .learning-map {
+
+                max-width:
+                    650px;
+
+                width:
+                    100%;
+
+                margin:
+                    0 auto;
+
             }
 
 
-            .belajar-resource-card {
-                min-height: 220px;
-                padding: 25px;
+            .learning-path-section,
+            .learning-materials,
+            .practice-section,
+            .learning-loop {
+
+                padding-left:
+                    5vw;
+
+                padding-right:
+                    5vw;
+
             }
 
 
-            .latihan-grid {
-                grid-template-columns: 1fr;
+            .learning-path-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
             }
 
 
-            .latihan-card {
-                min-height: 290px;
-                padding: 28px;
+            .path-step:nth-child(2) {
+
+                border-right:
+                    none;
+
             }
 
 
-            .belajar-note-inner {
-                padding: 28px;
+            .path-step:nth-child(-n+2) {
+
+                border-bottom:
+                    1px solid
+                    var(--learn-line);
+
+            }
+
+
+            .material-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            .learning-section-intro {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    25px;
+
+            }
+
+
+            .practice-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .loop-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                row-gap:
+                    45px;
+
+            }
+
+
+            .loop-item:nth-child(2)::after {
+
+                display:
+                    none;
+
+            }
+
+
+            .loop-item:nth-child(3)::after {
+
+                display:
+                    block;
+
+            }
+
+        }
+
+
+        /* =========================================================
+           RESPONSIVE — MOBILE
+        ========================================================= */
+
+        @media (max-width: 650px) {
+
+            .learning-hero {
+
+                min-height:
+                    auto;
+
+                padding:
+                    85px 24px 65px;
+
+            }
+
+
+            .learning-hero h1 {
+
+                font-size:
+                    clamp(
+                        48px,
+                        14vw,
+                        72px
+                    );
+
+                letter-spacing:
+                    -3px;
+
+            }
+
+
+            .learning-hero-description {
+
+                font-size:
+                    16px;
+
+            }
+
+
+            .learning-hero-actions {
+
+                align-items:
+                    stretch;
+
+                flex-direction:
+                    column;
+
+            }
+
+
+            .learning-primary-button,
+            .learning-secondary-button {
+
+                width:
+                    100%;
+
+            }
+
+
+            .learning-map {
+
+                min-height:
+                    410px;
+
+                transform:
+                    scale(.88);
+
+                transform-origin:
+                    center top;
+
+                margin-bottom:
+                    -50px;
+
+            }
+
+
+            .learning-orbit {
+
+                width:
+                    310px;
+
+                height:
+                    310px;
+
+            }
+
+
+            .learning-center-card {
+
+                width:
+                    150px;
+
+                min-height:
+                    150px;
+
+            }
+
+
+            .learning-node {
+
+                width:
+                    92px;
+
+                height:
+                    92px;
+
+            }
+
+
+            .learning-node-grammar {
+
+                left:
+                    0;
+
+                top:
+                    45px;
+
+            }
+
+
+            .learning-node-vocab {
+
+                right:
+                    0;
+
+                top:
+                    80px;
+
+            }
+
+
+            .learning-node-speaking {
+
+                left:
+                    8px;
+
+                bottom:
+                    10px;
+
+            }
+
+
+            .learning-node-test {
+
+                right:
+                    5px;
+
+                bottom:
+                    0;
+
+            }
+
+
+            .learning-path-section,
+            .learning-materials,
+            .practice-section,
+            .learning-loop {
+
+                padding-left:
+                    20px;
+
+                padding-right:
+                    20px;
+
+            }
+
+
+            .learning-path-inner {
+
+                padding:
+                    28px 20px;
+
+                border-radius:
+                    22px;
+
+            }
+
+
+            .learning-path-heading {
+
+                display:
+                    block;
+
+            }
+
+
+            .learning-path-heading h2 {
+
+                font-size:
+                    43px;
+
+            }
+
+
+            .learning-path-heading > p {
+
+                margin-top:
+                    20px;
+
+            }
+
+
+            .learning-path-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .path-step {
+
+                min-height:
+                    150px;
+
+                border-right:
+                    none;
+
+                border-bottom:
+                    1px solid
+                    var(--learn-line);
+
+            }
+
+
+            .path-step:last-child {
+
+                border-bottom:
+                    none;
+
+            }
+
+
+            .material-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .learning-section-intro h2 {
+
+                font-size:
+                    48px;
+
+            }
+
+
+            .material-card {
+
+                min-height:
+                    280px;
+
+            }
+
+
+            .practice-heading {
+
+                display:
+                    block;
+
+            }
+
+
+            .practice-heading-copy {
+
+                margin-top:
+                    22px;
+
+            }
+
+
+            .practice-heading h2 {
+
+                font-size:
+                    48px;
+
+            }
+
+
+            .practice-card {
+
+                min-height:
+                    310px;
+
+                padding:
+                    28px;
+
+            }
+
+
+            .practice-card h3 {
+
+                font-size:
+                    32px;
+
+            }
+
+
+            .learning-loop-inner {
+
+                padding:
+                    40px 20px;
+
+                border-radius:
+                    22px;
+
+            }
+
+
+            .loop-grid {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    35px;
+
+            }
+
+
+            .loop-item {
+
+                padding:
+                    0 10px;
+
+            }
+
+
+            .loop-item::after {
+
+                display:
+                    none !important;
+
+            }
+
+
+            .learning-final {
+
+                padding:
+                    100px 24px;
+
+            }
+
+
+            .learning-final h2 {
+
+                font-size:
+                    55px;
+
+                letter-spacing:
+                    -3px;
+
+            }
+
+        }
+
+
+        /* =========================================================
+           REDUCED MOTION
+        ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration:
+                    0.01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    0.01ms !important;
+
+                scroll-behavior:
+                    auto !important;
+
+            }
+
+            .learn-reveal {
+
+                opacity:
+                    1;
+
+                transform:
+                    none;
+
             }
 
         }
@@ -390,18 +3378,17 @@
 <body>
 
 
-    <!-- =====================================================
+    <!-- =========================================================
          HEADER
-         Same navigation structure as the rest of the website
-    ===================================================== -->
+    ========================================================= -->
 
-    <header class="site-header">
+    <header class="site-header site-header-overlay">
 
-        <nav class="nav">
+        <div class="header-inner">
 
             <a
                 href="index.html"
-                class="logo"
+                class="site-logo"
             >
 
                 <img
@@ -412,12 +3399,14 @@
             </a>
 
 
-            <div class="nav-links">
+            <nav
+                class="site-nav"
+                aria-label="Main navigation"
+            >
 
                 <a href="catatan.html">
                     Catatan
                 </a>
-
 
                 <a
                     href="belajar.html"
@@ -426,24 +3415,17 @@
                     Belajar
                 </a>
 
-
-                <a href="#">
-                    Kelas
-                </a>
-
-
-                <a href="#">
+                <a href="index.html#resources">
                     Resources
                 </a>
 
-
-                <a href="#">
+                <a href="index.html#toko">
                     Toko
                 </a>
 
-            </div>
+            </nav>
 
-        </nav>
+        </div>
 
     </header>
 
@@ -452,437 +3434,338 @@
 
 
         <!-- =====================================================
-             INTRO
+             HERO
         ===================================================== -->
 
-        <section class="belajar-intro">
+        <section class="learning-hero">
 
-            <p class="eyebrow">
-                BELAJAR
-            </p>
+            <div class="learning-hero-inner">
 
 
-            <h1>
-                Belajar bahasa Inggris,
-                sedikit demi sedikit.
-            </h1>
+                <div class="learning-hero-copy learn-reveal">
 
-
-            <p>
-                Kumpulan materi dan latihan yang bisa kamu gunakan
-                untuk belajar mandiri, mengulang materi kelas,
-                atau sekadar menguji kemampuanmu.
-            </p>
-
-        </section>
-
-
-        <!-- =====================================================
-             BELAJAR — RESOURCES
-        ===================================================== -->
-
-        <section class="belajar-section">
-
-
-            <div class="belajar-section-heading">
-
-                <div>
-
-                    <p class="eyebrow">
-                        MATERI
+                    <p class="learning-eyebrow">
+                        01 — BELAJAR BERSAMA
                     </p>
 
 
-                    <h2>
-                        Belajar sebelum
-                        mulai latihan.
-                    </h2>
+                    <h1>
+
+                        Belajar bahasa Inggris,
+
+                        <em>
+                            bareng Tatsyafira.
+                        </em>
+
+                    </h1>
+
+
+                    <p class="learning-hero-description">
+
+                        Di page “belajar” ini, aku memberikan beberapa resources dan latihan gratis 
+untuk teman-teman belajar bahasa inggris mulai dari materi dasar 
+grammar bahasa inggris, sampai ke vocabulary bahasa inggris, dan lainnya! 
+Ada latihan, test, dan diagnosis bahasa inggris gratis juga untuk teman-teman semua!
+
+
+                    </p>
+
+
+                    <div class="learning-hero-actions">
+
+                        <a
+                            href="#practice"
+                            class="learning-primary-button"
+                        >
+
+                            Mulai latihan
+
+                            <span>
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="#materi"
+                            class="learning-secondary-button"
+                        >
+
+                            Lihat materi
+
+                            <span>
+                                ↓
+                            </span>
+
+                        </a>
+
+                    </div>
 
                 </div>
 
 
-            </div>
+                <!-- =================================================
+                     LEARNING MAP
+                ================================================= -->
 
+                <div class="learning-map learn-reveal">
 
-            <div class="belajar-resource-grid">
 
+                    <div class="learning-orbit"></div>
 
-                <!-- RESOURCE 01 -->
 
-                <a
-                    href="#"
-                    class="belajar-resource-card"
-                >
+                    <div class="learning-center-card">
 
-                    <span class="belajar-resource-number">
-                        01
-                    </span>
+                        <div class="learning-center-icon">
+                            ✦
+                        </div>
 
+                        <strong>
+                            Your English
+                        </strong>
 
-                    <h3>
-                        12 Tenses
-                    </h3>
+                        <span>
+                            learning journey
+                        </span>
 
+                    </div>
 
-                    <p>
-                        Ringkasan penggunaan, pola kalimat,
-                        contoh, dan perbedaan setiap tense.
-                    </p>
 
+                    <!-- GRAMMAR -->
 
-                    <span class="belajar-resource-link">
-                        Pelajari →
-                    </span>
+                    <a
+                        href="grammar-practice.html"
+                        class="learning-node learning-node-grammar"
+                    >
 
-                </a>
+                        <span class="learning-node-icon">
+                            📚
+                        </span>
 
+                        <strong>
+                            Grammar
+                        </strong>
 
-                <!-- RESOURCE 02 -->
+                        <small>
+                            build the base
+                        </small>
 
-                <a
-                    href="#"
-                    class="belajar-resource-card"
-                >
+                    </a>
 
-                    <span class="belajar-resource-number">
-                        02
-                    </span>
 
+                    <!-- VOCABULARY -->
 
-                    <h3>
-                        Conditional Sentences
-                    </h3>
+                    <a
+                        href="vocabulary-practice.html"
+                        class="learning-node learning-node-vocab"
+                    >
 
+                        <span class="learning-node-icon">
+                            🧠
+                        </span>
 
-                    <p>
-                        Memahami zero, first, second,
-                        third, dan mixed conditionals.
-                    </p>
+                        <strong>
+                            Vocabulary
+                        </strong>
 
+                        <small>
+                            words you use
+                        </small>
 
-                    <span class="belajar-resource-link">
-                        Pelajari →
-                    </span>
+                    </a>
 
-                </a>
 
+                    <!-- SPEAKING -->
 
-                <!-- RESOURCE 03 -->
+                    <a
+                        href="improv-speaking.html"
+                        class="learning-node learning-node-speaking"
+                    >
 
-                <a
-                    href="#"
-                    class="belajar-resource-card"
-                >
+                        <span class="learning-node-icon">
+                            🎙️
+                        </span>
 
-                    <span class="belajar-resource-number">
-                        03
-                    </span>
+                        <strong>
+                            Speaking
+                        </strong>
 
+                        <small>
+                            use it
+                        </small>
 
-                    <h3>
-                        Prepositions
-                    </h3>
+                    </a>
 
 
-                    <p>
-                        Memahami penggunaan preposition
-                        yang sering muncul dalam bahasa Inggris.
-                    </p>
+                    <!-- TEST -->
 
+                    <a
+                        href="grammar-test.html"
+                        class="learning-node learning-node-test"
+                    >
 
-                    <span class="belajar-resource-link">
-                        Pelajari →
-                    </span>
+                        <span class="learning-node-icon">
+                            ✎
+                        </span>
 
-                </a>
+                        <strong>
+                            Test
+                        </strong>
 
+                        <small>
+                            know your level
+                        </small>
 
-                <!-- RESOURCE 04 -->
+                    </a>
 
-                <a
-                    href="#"
-                    class="belajar-resource-card"
-                >
-
-                    <span class="belajar-resource-number">
-                        04
-                    </span>
-
-
-                    <h3>
-                        Subject–Verb Agreement
-                    </h3>
-
-
-                    <p>
-                        Panduan sederhana untuk memahami
-                        hubungan subject dan verb dalam kalimat.
-                    </p>
-
-
-                    <span class="belajar-resource-link">
-                        Pelajari →
-                    </span>
-
-                </a>
-
-
-                <!-- RESOURCE 05 -->
-
-                <a
-                    href="#"
-                    class="belajar-resource-card"
-                >
-
-                    <span class="belajar-resource-number">
-                        05
-                    </span>
-
-
-                    <h3>
-                        Academic Vocabulary
-                    </h3>
-
-
-                    <p>
-                        Kumpulan vocabulary yang sering digunakan
-                        dalam pendidikan, ekonomi, politik,
-                        teknologi, dan topik akademik lainnya.
-                    </p>
-
-
-                    <span class="belajar-resource-link">
-                        Buka vocabulary bank →
-                    </span>
-
-                </a>
-
-
-                <!-- RESOURCE 06 -->
-
-                <a
-                    href="#"
-                    class="belajar-resource-card"
-                >
-
-                    <span class="belajar-resource-number">
-                        06
-                    </span>
-
-
-                    <h3>
-                        TOEFL & IELTS
-                    </h3>
-
-
-                    <p>
-                        Materi dan catatan untuk membantu
-                        mempersiapkan grammar, vocabulary,
-                        dan reading untuk tes bahasa Inggris.
-                    </p>
-
-
-                    <span class="belajar-resource-link">
-                        Lihat materi →
-                    </span>
-
-                </a>
-
+                </div>
 
             </div>
 
         </section>
 
 
+
         <!-- =====================================================
-             LATIHAN
+             QUICK PATH
         ===================================================== -->
 
-        <section class="latihan-section">
+        <section class="learning-path-section">
+
+            <div class="learning-path-inner learn-reveal">
 
 
-            <div class="latihan-inner">
-
-
-                <div class="belajar-section-heading">
+                <div class="learning-path-heading">
 
                     <div>
 
-                        <p class="eyebrow">
-                            LATIHAN
+                        <p class="learning-section-label">
+                            FIND YOUR STARTING POINT
                         </p>
 
-
                         <h2>
-                            Sekarang, coba
-                            gunakan yang kamu pelajari.
+
+                            Kamu mau mulai
+                            <em>
+                                dari mana?
+                            </em>
+
                         </h2>
 
                     </div>
 
 
                     <p>
-                        Latihan dibuat supaya kamu tidak hanya
-                        memahami materi, tapi juga terbiasa
-                        menggunakannya.
+
+                        Tidak perlu mempelajari semuanya sekaligus.
+                        Pilih bagian yang paling kamu butuhkan,
+                        lalu lanjutkan ke tahap berikutnya.
+
                     </p>
 
                 </div>
 
 
-                <div class="latihan-grid">
+                <div class="learning-path-grid">
 
-
-                    <!-- =================================================
-                         PRACTICE 01 — GRAMMAR
-                    ================================================= -->
 
                     <a
                         href="grammar-practice.html"
-                        class="latihan-card"
+                        class="path-step"
                     >
 
-                        <span class="latihan-number">
+                        <span class="path-step-number">
                             01
                         </span>
 
-
-                        <p class="latihan-type">
-                            GRAMMAR
-                        </p>
-
+                        <span class="path-step-arrow">
+                            ↗
+                        </span>
 
                         <h3>
-                            Grammar Practice
+                            Grammar
                         </h3>
 
-
                         <p>
-                            Latihan 12 tenses, conditional,
-                            prepositions, subject–verb agreement,
-                            multiple choice, dan translation.
+                            Kalau kamu sering tahu maksudnya,
+                            tapi masih bingung menyusun kalimat.
                         </p>
-
-
-                        <span class="latihan-button">
-                            Mulai latihan →
-                        </span>
 
                     </a>
 
-
-                    <!-- =================================================
-                         PRACTICE 02 — GRAMMAR TEST
-                    ================================================= -->
-
-                    <a
-                        href="grammar-test.html"
-                        class="latihan-card"
-                    >
-
-                        <span class="latihan-number">
-                            02
-                        </span>
-
-
-                        <p class="latihan-type">
-                            GRAMMAR TEST
-                        </p>
-
-
-                        <h3>
-                            Grammar Test
-                        </h3>
-
-
-                        <p>
-                            Uji kemampuan grammar melalui 50 soal
-                            yang mencakup tenses, conditionals,
-                            passive voice, prepositions, dan
-                            subject–verb agreement.
-                        </p>
-
-
-                        <span class="latihan-button">
-                            Mulai tes →
-                        </span>
-
-                    </a>
-
-
-                    <!-- =================================================
-                         PRACTICE 03 — VOCABULARY
-                    ================================================= -->
 
                     <a
                         href="vocabulary-practice.html"
-                        class="latihan-card"
+                        class="path-step"
                     >
 
-                        <span class="latihan-number">
-                            03
+                        <span class="path-step-number">
+                            02
                         </span>
 
-
-                        <p class="latihan-type">
-                            VOCABULARY
-                        </p>
-
+                        <span class="path-step-arrow">
+                            ↗
+                        </span>
 
                         <h3>
-                            Vocabulary Practice
+                            Vocabulary
                         </h3>
 
-
                         <p>
-                            Temukan arti atau kata yang paling
-                            mendekati dari vocabulary dalam
-                            passage akademik.
+                            Kalau kamu tahu grammar,
+                            tapi sering kehabisan kata.
                         </p>
-
-
-                        <span class="latihan-button">
-                            Mulai latihan →
-                        </span>
 
                     </a>
 
 
-                    <!-- =================================================
-                         PRACTICE 04 — SPEAKING
-                    ================================================= -->
-
                     <a
                         href="improv-speaking.html"
-                        class="latihan-card"
+                        class="path-step"
                     >
 
-                        <span class="latihan-number">
+                        <span class="path-step-number">
+                            03
+                        </span>
+
+                        <span class="path-step-arrow">
+                            ↗
+                        </span>
+
+                        <h3>
+                            Speaking
+                        </h3>
+
+                        <p>
+                            Kalau kamu sebenarnya bisa,
+                            tapi masih takut mulai bicara.
+                        </p>
+
+                    </a>
+
+
+                    <a
+                        href="grammar-test.html"
+                        class="path-step"
+                    >
+
+                        <span class="path-step-number">
                             04
                         </span>
 
-
-                        <p class="latihan-type">
-                            SPEAKING
-                        </p>
-
+                        <span class="path-step-arrow">
+                            ↗
+                        </span>
 
                         <h3>
-                            Improv Speaking
+                            Test yourself
                         </h3>
 
-
                         <p>
-                            Dapatkan pertanyaan spontan tentang
-                            kehidupan, pendidikan, ekonomi,
-                            teknologi, dan isu yang dekat
-                            dengan kehidupan Indonesia.
+                            Kalau kamu ingin tahu
+                            bagian mana yang masih perlu diperbaiki.
                         </p>
-
-
-                        <span class="latihan-button">
-                            Dapatkan topik →
-                        </span>
 
                     </a>
 
@@ -894,13 +3777,843 @@
         </section>
 
 
+
         <!-- =====================================================
-             NOTE
+             MATERIAL
         ===================================================== -->
 
-        <section class="belajar-note">
+        <section
+            class="learning-materials"
+            id="materi"
+        >
 
-            <div class="belajar-note-inner">
+            <div class="learning-materials-inner">
+
+
+                <div class="learning-section-intro learn-reveal">
+
+                    <div>
+
+                        <p class="learning-section-label">
+                            02 — MATERI
+                        </p>
+
+                        <h2>
+
+                            Kumpulan
+                            <em>
+                                materi.
+                            </em>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        Mulai dari konsep yang paling sering
+                        muncul dalam bahasa Inggris. Setiap materi
+                        dibuat sebagai pintu masuk sebelum kamu
+                        masuk ke latihan.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="material-grid">
+
+
+                    <!-- 01 -->
+
+                    <a
+                        href="grammar-practice.html"
+                        class="material-card grammar learn-reveal"
+                    >
+
+                        <div class="material-card-top">
+
+                            <span class="material-icon">
+                                📚
+                            </span>
+
+                            <span class="material-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+
+                        <p class="material-number">
+                            01 · GRAMMAR
+                        </p>
+
+
+                        <h3>
+                            12 Tenses
+                        </h3>
+
+
+                        <p>
+
+                            Ringkasan penggunaan,
+                            pola kalimat, contoh,
+                            dan perbedaan setiap tense.
+
+                        </p>
+
+
+                        <div class="material-link">
+
+                            <span>
+                                Pelajari melalui practice
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 02 -->
+
+                    <a
+                        href="grammar-practice.html"
+                        class="material-card conditionals learn-reveal"
+                    >
+
+                        <div class="material-card-top">
+
+                            <span class="material-icon">
+                                ◌
+                            </span>
+
+                            <span class="material-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+
+                        <p class="material-number">
+                            02 · GRAMMAR
+                        </p>
+
+
+                        <h3>
+                            Conditional Sentences
+                        </h3>
+
+
+                        <p>
+
+                            Zero, first, second,
+                            third, dan mixed conditionals
+                            dalam penggunaan nyata.
+
+                        </p>
+
+
+                        <div class="material-link">
+
+                            <span>
+                                Practice conditionals
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 03 -->
+
+                    <a
+                        href="grammar-practice.html"
+                        class="material-card prepositions learn-reveal"
+                    >
+
+                        <div class="material-card-top">
+
+                            <span class="material-icon">
+                                ↑
+                            </span>
+
+                            <span class="material-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+
+                        <p class="material-number">
+                            03 · GRAMMAR
+                        </p>
+
+
+                        <h3>
+                            Prepositions
+                        </h3>
+
+
+                        <p>
+
+                            Memahami penggunaan
+                            preposition yang sering muncul
+                            dalam bahasa Inggris.
+
+                        </p>
+
+
+                        <div class="material-link">
+
+                            <span>
+                                Practice grammar
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 04 -->
+
+                    <a
+                        href="grammar-practice.html"
+                        class="material-card agreement learn-reveal"
+                    >
+
+                        <div class="material-card-top">
+
+                            <span class="material-icon">
+                                ✓
+                            </span>
+
+                            <span class="material-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+
+                        <p class="material-number">
+                            04 · GRAMMAR
+                        </p>
+
+
+                        <h3>
+                            Subject–Verb Agreement
+                        </h3>
+
+
+                        <p>
+
+                            Panduan sederhana untuk memahami
+                            hubungan subject dan verb
+                            dalam kalimat.
+
+                        </p>
+
+
+                        <div class="material-link">
+
+                            <span>
+                                Check your grammar
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 05 -->
+
+                    <a
+                        href="vocabulary-practice.html"
+                        class="material-card vocabulary learn-reveal"
+                    >
+
+                        <div class="material-card-top">
+
+                            <span class="material-icon">
+                                🧠
+                            </span>
+
+                            <span class="material-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+
+                        <p class="material-number">
+                            05 · VOCABULARY
+                        </p>
+
+
+                        <h3>
+                            Academic Vocabulary
+                        </h3>
+
+
+                        <p>
+
+                            Vocabulary yang sering digunakan
+                            dalam pendidikan, ekonomi,
+                            politik, teknologi, dan topik akademik.
+
+                        </p>
+
+
+                        <div class="material-link">
+
+                            <span>
+                                Open vocabulary practice
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 06 -->
+
+                    <a
+                        href="grammar-test.html"
+                        class="material-card toefl learn-reveal"
+                    >
+
+                        <div class="material-card-top">
+
+                            <span class="material-icon">
+                                ✎
+                            </span>
+
+                            <span class="material-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+
+                        <p class="material-number">
+                            06 · TEST PREP
+                        </p>
+
+
+                        <h3>
+                            TOEFL & IELTS
+                        </h3>
+
+
+                        <p>
+
+                            Materi dan latihan untuk membantu
+                            mempersiapkan grammar, vocabulary,
+                            reading, dan kemampuan tes bahasa Inggris.
+
+                        </p>
+
+
+                        <div class="material-link">
+
+                            <span>
+                                Test your foundation
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PRACTICE
+        ===================================================== -->
+
+        <section
+            class="practice-section"
+            id="practice"
+        >
+
+            <div class="practice-inner">
+
+
+                <div class="practice-heading learn-reveal">
+
+                    <div>
+
+                        <p class="learning-section-label">
+                            03 — LATIHAN
+                        </p>
+
+                        <h2>
+
+                            Latihan
+                            <em>
+                                dan Test.
+                            </em>
+
+
+                        </h2>
+
+                    </div>
+
+
+                    <p class="practice-heading-copy">
+
+                        Setelah memahami materi,
+                        sekarang waktunya mencoba.
+                        Semua latihan di bawah ini langsung
+                        terhubung dengan halaman practice
+                        yang sudah tersedia.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="practice-grid">
+
+
+                    <!-- GRAMMAR PRACTICE -->
+
+                    <a
+                        href="grammar-practice.html"
+                        class="practice-card learn-reveal"
+                    >
+
+                        <div class="practice-card-top">
+
+                            <span class="practice-icon">
+                                📚
+                            </span>
+
+                            <span class="practice-card-number">
+                                01
+                            </span>
+
+                        </div>
+
+
+                        <p class="practice-card-label">
+                            GRAMMAR
+                        </p>
+
+
+                        <h3>
+
+                            Grammar
+                            <em>
+                                Practice.
+                            </em>
+
+                        </h3>
+
+
+                        <p>
+
+                            Latihan 12 tenses, conditional,
+                            prepositions, subject–verb agreement,
+                            multiple choice, dan translation.
+
+                        </p>
+
+
+                        <div class="practice-card-footer">
+
+                            <span>
+                                Mulai Grammar Practice
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- GRAMMAR TEST -->
+
+                    <a
+                        href="grammar-test.html"
+                        class="practice-card learn-reveal"
+                    >
+
+                        <div class="practice-card-top">
+
+                            <span class="practice-icon">
+                                ✎
+                            </span>
+
+                            <span class="practice-card-number">
+                                02
+                            </span>
+
+                        </div>
+
+
+                       
+
+
+                        <h3>
+
+                            Grammar
+                            <em>
+                                Test
+                            </em>
+
+                        </h3>
+
+
+                        <p>
+
+                            Uji kemampuan grammar melalui
+                            50 soal yang mencakup tenses,
+                            conditionals, passive voice,
+                            prepositions, dan subject–verb agreement.
+
+                        </p>
+
+
+                        <div class="practice-card-footer">
+
+                            <span>
+                                Mulai Grammar Test
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- VOCABULARY -->
+
+                    <a
+                        href="vocabulary-practice.html"
+                        class="practice-card learn-reveal"
+                    >
+
+                        <div class="practice-card-top">
+
+                            <span class="practice-icon">
+                                🧠
+                            </span>
+
+                            <span class="practice-card-number">
+                                03
+                            </span>
+
+                        </div>
+
+
+                        <p class="practice-card-label">
+                            VOCABULARY
+                        </p>
+
+
+                        <h3>
+
+                            Vocabulary
+                            <em>
+                                Practice.
+                            </em>
+
+                        </h3>
+
+
+                        <p>
+
+                            Temukan arti atau kata yang paling
+                            mendekati dari vocabulary dalam
+                            passage akademik.
+
+                        </p>
+
+
+                        <div class="practice-card-footer">
+
+                            <span>
+                                Mulai Vocabulary Practice
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- SPEAKING -->
+
+                    <a
+                        href="improv-speaking.html"
+                        class="practice-card learn-reveal"
+                    >
+
+                        <div class="practice-card-top">
+
+                            <span class="practice-icon">
+                                🎙️
+                            </span>
+
+                            <span class="practice-card-number">
+                                04
+                            </span>
+
+                        </div>
+
+
+                        <p class="practice-card-label">
+                            SPEAKING
+                        </p>
+
+
+                        <h3>
+
+                            Speaking
+                            <em>
+                                Practice.
+                            </em>
+
+                        </h3>
+
+
+                        <p>
+
+                            Latihan spontan untuk membantu kamu
+                            berhenti menerjemahkan setiap kata
+                            di kepala dan mulai benar-benar berbicara.
+
+                        </p>
+
+
+                        <div class="practice-card-footer">
+
+                            <span>
+                                Start Speaking Practice
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             LEARNING LOOP
+        ===================================================== -->
+
+        <section class="learning-loop">
+
+            <div class="learning-loop-inner learn-reveal">
+
+
+                <div class="learning-loop-heading">
+
+                    <p>
+                        THE LEARNING LOOP
+                    </p>
+
+                    <h2>
+
+                        Learn.
+                        <em>
+                            Practice.
+                        </em>
+                        Repeat.
+
+                    </h2>
+
+                </div>
+
+
+                <div class="loop-grid">
+
+
+                    <div class="loop-item">
+
+                        <div class="loop-circle">
+                            01
+                        </div>
+
+                        <strong>
+                            Learn
+                        </strong>
+
+                        <p>
+                            Pahami konsep dan pola
+                            sebelum menghafalnya.
+                        </p>
+
+                    </div>
+
+
+                    <div class="loop-item">
+
+                        <div class="loop-circle">
+                            02
+                        </div>
+
+                        <strong>
+                            Practice
+                        </strong>
+
+                        <p>
+                            Kerjakan latihan dan
+                            lihat kesalahanmu.
+                        </p>
+
+                    </div>
+
+
+                    <div class="loop-item">
+
+                        <div class="loop-circle">
+                            03
+                        </div>
+
+                        <strong>
+                            Apply
+                        </strong>
+
+                        <p>
+                            Gunakan vocabulary dan grammar
+                            dalam situasi nyata.
+                        </p>
+
+                    </div>
+
+
+                    <div class="loop-item">
+
+                        <div class="loop-circle">
+                            04
+                        </div>
+
+                        <strong>
+                            Repeat
+                        </strong>
+
+                        <p>
+                            Kembali ke bagian yang masih
+                            terasa sulit dan coba lagi.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FINAL CTA
+        ===================================================== -->
+
+        <section class="learning-final">
+
+            <div class="learning-final-inner learn-reveal">
+
+                <p class="learning-final-label">
+                    YOUR NEXT STEP
+                </p>
+
+
+                <h2>
+
+                    Ready to
+                    <em>
+                        practice?
+                    </em>
+
+                </h2>
+
+
+                <p>
+
+                    Tidak perlu menunggu sampai bahasa Inggrismu
+                    sempurna. Mulai dari satu latihan,
+                    lalu lihat sejauh mana kamu berkembang.
+
+                </p>
+
+
+                <a
+                    href="grammar-practice.html"
+                    class="learning-primary-button"
+                >
+
+                    Start with Grammar
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
 
             </div>
 
@@ -910,12 +4623,12 @@
     </main>
 
 
-    <!-- =====================================================
+
+    <!-- =========================================================
          FOOTER
-    ===================================================== -->
+    ========================================================= -->
 
     <footer>
-
 
         <div class="footer-logo">
 
@@ -923,7 +4636,6 @@
                 src="images/tatsyafira-logo.png"
                 alt="Tatsyafira"
             >
-
 
             <p>
                 Menulis. Mengajar. Bertumbuh.
@@ -938,23 +4650,19 @@
                 Catatan
             </a>
 
-
             <a href="belajar.html">
                 Belajar
             </a>
 
-
-            <a href="#">
+            <a href="index.html#belajar">
                 Kelas
             </a>
 
-
-            <a href="#">
+            <a href="index.html#resources">
                 Resources
             </a>
 
-
-            <a href="#">
+            <a href="index.html#toko">
                 Toko
             </a>
 
@@ -965,8 +4673,96 @@
             © 2026 Tatsyafira. All rights reserved.
         </p>
 
-
     </footer>
+
+
+
+    <!-- =========================================================
+         SCROLL ANIMATION
+    ========================================================= -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                const revealItems =
+                    document.querySelectorAll(
+                        ".learn-reveal"
+                    );
+
+
+                if (
+                    !("IntersectionObserver" in window)
+                ) {
+
+                    revealItems.forEach(
+                        function (item) {
+
+                            item.classList.add(
+                                "visible"
+                            );
+
+                        }
+                    );
+
+                    return;
+
+                }
+
+
+                const revealObserver =
+                    new IntersectionObserver(
+                        function (
+                            entries,
+                            observer
+                        ) {
+
+                            entries.forEach(
+                                function (entry) {
+
+                                    if (
+                                        entry.isIntersecting
+                                    ) {
+
+                                        entry.target.classList.add(
+                                            "visible"
+                                        );
+
+                                        observer.unobserve(
+                                            entry.target
+                                        );
+
+                                    }
+
+                                }
+                            );
+
+                        },
+                        {
+                            threshold: 0.12,
+                            rootMargin: "0px 0px -40px 0px"
+                        }
+                    );
+
+
+                revealItems.forEach(
+                    function (item) {
+
+                        revealObserver.observe(
+                            item
+                        );
+
+                    }
+                );
+
+
+            }
+        );
+
+    </script>
 
 
 </body>

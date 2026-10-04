@@ -1,16 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="id">
 
 <head>
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Catatan — Tatsyafira</title>
 
-    <!-- Fonts -->
+
+    <!-- =====================================================
+         FONTS
+    ====================================================== -->
+
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
 
@@ -18,221 +25,20 @@
           href="https://fonts.gstatic.com"
           crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap"
-          rel="stylesheet">
-
-    <link rel="stylesheet"
-          href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+        rel="stylesheet"
+    >
 
 
     <!-- =====================================================
-         ARTICLE CARD LAYOUT
-         ===================================================== -->
-
-    <style>
-
-    /* =====================================================
-       ARTICLE CARD
-       ===================================================== */
-
-    .catatan-article-link {
-        display: block;
-        width: 100%;
-        text-decoration: none;
-        color: inherit;
-    }
-
-
-    .catatan-article {
-        display: grid !important;
-
-        /* LEFT = text
-           RIGHT = image */
-        grid-template-columns: minmax(0, 1fr) 260px !important;
-
-        column-gap: 50px;
-
-        align-items: start;
-
-        width: 100%;
-        max-width: 100%;
-
-        box-sizing: border-box;
-
-        padding: 42px 0;
-
-        border-bottom: 1px solid #e5e5e5;
-
-        overflow: hidden;
-    }
-
-
-    /* =====================================================
-       LEFT SIDE
-       ===================================================== */
-
-    .article-content {
-        width: 100% !important;
-        min-width: 0 !important;
-        max-width: 100% !important;
-
-        box-sizing: border-box;
-
-        overflow: hidden;
-    }
-
-
-    /* DATE */
-
-    .article-date {
-        margin-bottom: 16px;
-    }
-
-
-    /* TITLE */
-
-    .article-content h2 {
-        max-width: 100% !important;
-
-        margin-left: 0;
-        margin-right: 0;
-
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-    }
-
-
-    /* PREVIEW */
-
-    .article-preview {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        margin-left: 0;
-        margin-right: 0;
-
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-
-        box-sizing: border-box;
-    }
-
-
-    /* =====================================================
-       CATEGORY + READ TIME
-       DIRECTLY UNDER PREVIEW
-       ===================================================== */
-
-    .article-meta {
-        position: static !important;
-
-        display: flex !important;
-
-        flex-direction: column !important;
-
-        align-items: flex-start !important;
-
-        justify-content: flex-start !important;
-
-        text-align: left !important;
-
-        width: 100% !important;
-
-        margin-top: 24px !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-
-        padding: 0 !important;
-
-        gap: 6px !important;
-
-        box-sizing: border-box;
-    }
-
-
-    .article-meta span {
-        display: block;
-
-        width: auto;
-
-        text-align: left !important;
-
-        margin: 0;
-    }
-
-
-    /* =====================================================
-       RIGHT SIDE IMAGE
-       ===================================================== */
-
-    .article-image {
-        width: 260px !important;
-        max-width: 260px !important;
-
-        min-width: 0;
-
-        margin: 0;
-
-        padding: 0;
-
-        overflow: hidden;
-
-        box-sizing: border-box;
-    }
-
-
-    .article-image img {
-        display: block;
-
-        width: 100% !important;
-
-        height: auto !important;
-
-        max-width: 100% !important;
-
-        object-fit: contain;
-
-        margin: 0;
-    }
-
-
-    /* =====================================================
-       MOBILE
-       ===================================================== */
-
-    @media (max-width: 768px) {
-
-        .catatan-article {
-            display: flex !important;
-
-            flex-direction: column;
-
-            gap: 25px;
-
-            width: 100%;
-        }
-
-
-        .article-content {
-            width: 100% !important;
-        }
-
-
-        .article-image {
-            width: 100% !important;
-            max-width: 100% !important;
-
-            order: 2;
-        }
-
-
-        .article-content {
-            order: 1;
-        }
-
-    }
-
-</style>
+         GLOBAL STYLESHEET
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
 </head>
 
@@ -240,43 +46,47 @@
 <body class="catatan-page">
 
 
-    <!-- =====================================================
-         NAVIGATION
-         ===================================================== -->
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-    <header class="site-header">
+<header class="site-header">
 
-        <a href="index.html"
-           class="site-logo">
+    <div class="catatan-header-inner">
 
-            <img src="images/tatsyafira-logo.png"
-                 alt="Tatsyafira">
+        <a
+            href="index.html"
+            class="site-logo"
+        >
+
+            <img
+                src="images/tatsyafira-logo.png"
+                alt="Tatsyafira"
+            >
 
         </a>
 
 
         <nav class="site-nav">
 
-            <a href="catatan.html"
-               class="active">
+            <a
+                href="catatan.html"
+                class="active"
+            >
                 Catatan
             </a>
 
-
-            <a href="index.html#belajar">
+            <a href="belajar.html">
                 Belajar
             </a>
-
 
             <a href="index.html#kelas">
                 Kelas
             </a>
 
-
             <a href="index.html#resources">
                 Resources
             </a>
-
 
             <a href="index.html#toko">
                 Toko
@@ -284,748 +94,1099 @@
 
         </nav>
 
-    </header>
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main>
+
+
+    <!-- =====================================================
+         EDITORIAL HERO
+    ====================================================== -->
+
+    <section class="catatan-hero">
+
+        <div class="catatan-hero-inner">
+
+
+            <div class="catatan-hero-kicker">
+
+                <span class="catatan-hero-line"></span>
+
+                <span>
+                    CATATAN
+                </span>
+
+            </div>
+
+
+            <div class="catatan-hero-main">
+
+
+                <div class="catatan-hero-copy">
+
+                    <h1>
+
+                        Tempat aku
+                        <em>
+                            berpikir,
+                        </em>
+
+                        <br>
+
+                        menulis, dan
+                        <em>
+                            bertumbuh.
+                        </em>
+
+                    </h1>
+
+                </div>
+
+
+                <div class="catatan-hero-description">
+
+                    <p>
+                        Isi hati, kepala, perjalanan,
+                        dan hal-hal yang sedang kupelajari
+                        sepanjang hidup.
+                    </p>
+
+                    <span>
+                        Oleh Tatsyafira
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="catatan-hero-bottom">
+
+                <span>
+                    ESSAYS · STORIES · IDEAS
+                </span>
+
+                <span>
+                    ↓ Scroll to read
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
 
 
 
     <!-- =====================================================
-         CATATAN HERO
-         ===================================================== -->
+         ARTICLE LIBRARY
+    ====================================================== -->
 
-    <main>
-
-        <section class="catatan-page-hero">
+    <section class="catatan-library">
 
 
-            <div class="catatan-page-heading">
-
-                <img
-                    src="images/catatan.png"
-                    alt="Catatan"
-                    class="catatan-page-title"
-                >
+        <div class="catatan-library-inner">
 
 
-                <p>
-                    Isi hati dan kepala Tatsyafira :)
-                </p>
+            <!-- =================================================
+                 LIBRARY HEADER
+            ================================================== -->
+
+            <div class="catatan-library-header">
+
+
+                <div>
+
+                    <p class="catatan-section-label">
+                        THE JOURNAL
+                    </p>
+
+                    <h2>
+                        Catatan yang
+                        <em>
+                            tertinggal.
+                        </em>
+                    </h2>
+
+                </div>
+
+
+                <div class="catatan-library-intro">
+
+                    <p>
+                        Pilih topik yang ingin kamu baca,
+                        atau cari sesuatu yang sedang
+                        ingin kamu temukan.
+                    </p>
+
+                </div>
 
             </div>
 
 
 
-            <!--
-            The large hero image has been removed.
+            <!-- =================================================
+                 FILTER / SEARCH BAR
+            ================================================== -->
 
-            Your article images will now appear automatically
-            beside each individual article.
-            -->
-
-        </section>
+            <div class="catatan-controls">
 
 
+                <div
+                    class="catatan-categories"
+                    id="catatan-categories"
+                >
 
-        <!-- =================================================
-             NOTES AREA
-             ================================================= -->
-
-        <section class="catatan-library">
-
-
-            <!-- SIDEBAR -->
-
-            <aside class="catatan-sidebar">
-
-                <div class="catatan-categories">
-
-
-                    <a href="#"
-                       class="category active"
-                       data-category="Semua Catatan">
-
-                        <span>●</span>
+                    <button
+                        type="button"
+                        class="category active"
+                        data-category="Semua Catatan"
+                    >
 
                         <span>
-                            Semua Catatan
+                            Semua
                         </span>
 
-                        <span id="count-all">
+                        <span
+                            class="category-count"
+                            id="count-all"
+                        >
                             0
                         </span>
 
-                    </a>
+                    </button>
 
 
-
-                    <a href="#"
-                       class="category"
-                       data-category="Refleksi">
-
-                        <span></span>
+                    <button
+                        type="button"
+                        class="category"
+                        data-category="Refleksi"
+                    >
 
                         <span>
                             Refleksi
                         </span>
 
-                        <span id="count-refleksi">
+                        <span
+                            class="category-count"
+                            id="count-refleksi"
+                        >
                             0
                         </span>
 
-                    </a>
+                    </button>
 
 
-
-                    <a href="#"
-                       class="category"
-                       data-category="Perjalanan">
-
-                        <span></span>
+                    <button
+                        type="button"
+                        class="category"
+                        data-category="Perjalanan"
+                    >
 
                         <span>
                             Perjalanan
                         </span>
 
-                        <span id="count-perjalanan">
+                        <span
+                            class="category-count"
+                            id="count-perjalanan"
+                        >
                             0
                         </span>
 
-                    </a>
+                    </button>
 
 
-
-                    <a href="#"
-                       class="category"
-                       data-category="Pelajaran">
-
-                        <span></span>
+                    <button
+                        type="button"
+                        class="category"
+                        data-category="Pelajaran"
+                    >
 
                         <span>
                             Pelajaran
                         </span>
 
-                        <span id="count-pelajaran">
+                        <span
+                            class="category-count"
+                            id="count-pelajaran"
+                        >
                             0
                         </span>
 
-                    </a>
+                    </button>
 
 
-
-                    <a href="#"
-                       class="category"
-                       data-category="Ide & Pemikiran">
-
-                        <span></span>
+                    <button
+                        type="button"
+                        class="category"
+                        data-category="Ide & Pemikiran"
+                    >
 
                         <span>
                             Ide & Pemikiran
                         </span>
 
-                        <span id="count-ide">
+                        <span
+                            class="category-count"
+                            id="count-ide"
+                        >
                             0
                         </span>
 
-                    </a>
+                    </button>
 
                 </div>
 
-            </aside>
+
+
+                <div class="catatan-search">
+
+                    <span class="search-icon">
+                        /
+                    </span>
+
+                    <input
+                        type="search"
+                        id="article-search"
+                        placeholder="Cari catatan..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+            </div>
 
 
 
             <!-- =================================================
-                 ARTICLES
-                 ================================================= -->
+                 ARTICLE AREA
+            ================================================== -->
 
             <div
                 class="catatan-articles"
                 id="catatan-articles"
             >
 
-                <!-- Articles automatically appear here -->
+                <div class="catatan-loading">
+
+                    <div class="loading-line"></div>
+
+                    <div class="loading-line"></div>
+
+                    <div class="loading-line short"></div>
+
+                </div>
 
             </div>
 
 
-        </section>
+        </div>
 
-    </main>
+    </section>
 
 
 
     <!-- =====================================================
-         SUPABASE
-         ===================================================== -->
+         CLOSING
+    ====================================================== -->
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <section class="catatan-closing">
+
+        <div class="catatan-closing-line"></div>
+
+        <p>
+            A LIFE IN PROGRESS
+        </p>
+
+        <h2>
+
+            There is always
+            <em>
+                more to write.
+            </em>
+
+        </h2>
+
+        <a href="index.html">
+            Back to Tatsyafira →
+        </a>
+
+    </section>
+
+
+</main>
 
 
 
-    <script>
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
 
 
-        /* =====================================================
-           SUPABASE CONNECTION
-           ===================================================== */
+        <div class="footer-brand">
 
-        const SUPABASE_URL =
-            "https://gtaljywggqalmfqizjhj.supabase.co";
+            <img
+                src="images/tatsyafira-logo.png"
+                alt="Tatsyafira"
+            >
+
+            <p>
+                Menulis. Mengajar. Bertumbuh.
+            </p>
+
+        </div>
 
 
-        const SUPABASE_ANON_KEY =
-            "sb_publishable_Lvgk-7rPMaxhO7TAOdGp6Q_MWACHYtR";
+        <div class="footer-links">
+
+            <a href="catatan.html">
+                Catatan
+            </a>
+
+            <a href="belajar.html">
+                Belajar
+            </a>
+
+            <a href="index.html#kelas">
+                Kelas
+            </a>
+
+            <a href="index.html#resources">
+                Resources
+            </a>
+
+            <a href="index.html#toko">
+                Toko
+            </a>
+
+        </div>
 
 
-        const supabaseClient =
-            supabase.createClient(
-                SUPABASE_URL,
-                SUPABASE_ANON_KEY
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Tatsyafira
+        </span>
+
+        <span>
+            Made with curiosity.
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     SUPABASE
+========================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+<script>
+
+
+/* =========================================================
+   SUPABASE CONNECTION
+========================================================= */
+
+const SUPABASE_URL =
+    "https://gtaljywggqalmfqizjhj.supabase.co";
+
+
+const SUPABASE_ANON_KEY =
+    "sb_publishable_Lvgk-7rPMaxhO7TAOdGp6Q_MWACHYtR";
+
+
+const supabaseClient =
+    supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+    );
+
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const articlesContainer =
+    document.getElementById(
+        "catatan-articles"
+    );
+
+
+const searchInput =
+    document.getElementById(
+        "article-search"
+    );
+
+
+const categoryButtons =
+    document.querySelectorAll(
+        ".category"
+    );
+
+
+
+/* =========================================================
+   STATE
+========================================================= */
+
+let allArticles = [];
+
+let activeCategory =
+    "Semua Catatan";
+
+let searchTerm =
+    "";
+
+
+
+/* =========================================================
+   SECURITY
+========================================================= */
+
+function escapeHTML(value) {
+
+    return String(value ?? "")
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+
+/* =========================================================
+   DATE FORMATTER
+========================================================= */
+
+function formatDate(dateString) {
+
+    if (!dateString) {
+
+        return "";
+
+    }
+
+
+    const date =
+        new Date(dateString);
+
+
+    return date.toLocaleDateString(
+        "id-ID",
+        {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        }
+    );
+
+}
+
+
+
+/* =========================================================
+   UPDATE CATEGORY COUNTS
+========================================================= */
+
+function updateCategoryCounts(
+    articles
+) {
+
+    document.getElementById(
+        "count-all"
+    ).textContent =
+        articles.length;
+
+
+    document.getElementById(
+        "count-refleksi"
+    ).textContent =
+
+        articles.filter(
+            article =>
+                article.category ===
+                "Refleksi"
+        ).length;
+
+
+    document.getElementById(
+        "count-perjalanan"
+    ).textContent =
+
+        articles.filter(
+            article =>
+                article.category ===
+                "Perjalanan"
+        ).length;
+
+
+    document.getElementById(
+        "count-pelajaran"
+    ).textContent =
+
+        articles.filter(
+            article =>
+                article.category ===
+                "Pelajaran"
+        ).length;
+
+
+    document.getElementById(
+        "count-ide"
+    ).textContent =
+
+        articles.filter(
+            article =>
+                article.category ===
+                "Ide & Pemikiran"
+        ).length;
+
+}
+
+
+
+/* =========================================================
+   FILTER ARTICLES
+========================================================= */
+
+function getFilteredArticles() {
+
+    return allArticles.filter(
+        article => {
+
+
+            const matchesCategory =
+
+                activeCategory ===
+                "Semua Catatan"
+
+                    ? true
+
+                    : article.category ===
+                      activeCategory;
+
+
+
+            if (!matchesCategory) {
+
+                return false;
+
+            }
+
+
+
+            if (!searchTerm) {
+
+                return true;
+
+            }
+
+
+
+            const searchableText =
+
+                [
+
+                    article.title,
+
+                    article.excerpt,
+
+                    article.category
+
+                ]
+
+                .filter(Boolean)
+
+                .join(" ")
+
+                .toLowerCase();
+
+
+
+            return searchableText.includes(
+                searchTerm
             );
 
-
-
-        /* =====================================================
-           GET ARTICLES
-           ===================================================== */
-
-        async function loadArticles() {
-
-            const {
-                data: articles,
-                error
-            } = await supabaseClient
-
-                .from("articles")
-
-                .select("*")
-
-                .order(
-                    "date",
-                    {
-                        ascending: false
-                    }
-                );
-
-
-            /* ERROR */
-
-            if (error) {
-
-                console.error(
-                    "Error loading articles:",
-                    error
-                );
-
-
-                document.getElementById(
-                    "catatan-articles"
-                ).innerHTML = `
-
-                    <p style="padding: 20px;">
-                        Catatan belum dapat dimuat.
-                    </p>
-
-                `;
-
-                return;
-            }
-
-
-
-            /* =================================================
-               UPDATE CATEGORY COUNTS
-               ================================================= */
-
-            const allCount =
-                articles.length;
-
-
-            const refleksiCount =
-                articles.filter(
-                    article =>
-                        article.category === "Refleksi"
-                ).length;
-
-
-            const perjalananCount =
-                articles.filter(
-                    article =>
-                        article.category === "Perjalanan"
-                ).length;
-
-
-            const pelajaranCount =
-                articles.filter(
-                    article =>
-                        article.category === "Pelajaran"
-                ).length;
-
-
-            const ideCount =
-                articles.filter(
-                    article =>
-                        article.category === "Ide & Pemikiran"
-                ).length;
-
-
-
-            document.getElementById(
-                "count-all"
-            ).textContent =
-                allCount;
-
-
-            document.getElementById(
-                "count-refleksi"
-            ).textContent =
-                refleksiCount;
-
-
-            document.getElementById(
-                "count-perjalanan"
-            ).textContent =
-                perjalananCount;
-
-
-            document.getElementById(
-                "count-pelajaran"
-            ).textContent =
-                pelajaranCount;
-
-
-            document.getElementById(
-                "count-ide"
-            ).textContent =
-                ideCount;
-
-
-
-            /* =================================================
-               DISPLAY ARTICLES
-               ================================================= */
-
-            displayArticles(articles);
-
-
-
-            /* =================================================
-               CATEGORY FILTER
-               ================================================= */
-
-            setupCategoryFilters(articles);
-
         }
+    );
+
+}
 
 
 
-        /* =====================================================
-           DISPLAY ARTICLE CARDS
-           ===================================================== */
+/* =========================================================
+   DISPLAY ARTICLES
+========================================================= */
 
-        function displayArticles(articles) {
-
-            const container =
-                document.getElementById(
-                    "catatan-articles"
-                );
+function displayArticles(
+    articles
+) {
 
 
-            /* NO ARTICLES */
+    if (!articles.length) {
 
-            if (!articles.length) {
+        articlesContainer.innerHTML = `
 
-                container.innerHTML = `
+            <div class="catatan-empty">
 
-                    <p style="padding: 20px;">
-                        Belum ada catatan.
-                    </p>
+                <div class="empty-symbol">
+                    —
+                </div>
 
-                `;
+                <h3>
+                    Belum menemukan catatan.
+                </h3>
 
-                return;
-            }
+                <p>
+                    Coba kategori lain atau
+                    gunakan kata pencarian yang berbeda.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
 
 
 
-            /* =================================================
-               CREATE EACH ARTICLE
-               ================================================= */
+    articlesContainer.innerHTML =
 
-            container.innerHTML =
+        articles
 
-                articles.map(article => {
+            .map(
+                (article, index) => {
 
-
-                    /* -----------------------------------------
-                       DATE
-                       ----------------------------------------- */
 
                     const formattedDate =
-                        formatDate(article.date);
+                        formatDate(
+                            article.date
+                        );
 
 
+                    const articleURL =
+                        "artikel-" +
+                        article.slug +
+                        ".html";
 
-                    /* -----------------------------------------
-                       IMAGE
-
-                       IMPORTANT:
-
-                       This automatically takes the image
-                       stored in the Supabase "image" column.
-
-                       Every article can therefore have
-                       its own image.
-                       ----------------------------------------- */
 
                     const imageHTML =
-    article.image_url
 
-                        ? `
+                        article.image_url
 
-                            <div class="article-image">
+                            ?
+
+                            `
+
+                            <div
+                                class="catatan-article-image"
+                            >
 
                                 <img
-                                    src="${article.image_url}"
-                                    alt="${escapeHTML(article.title)}"
+                                    src="${escapeHTML(
+                                        article.image_url
+                                    )}"
+                                    alt="${escapeHTML(
+                                        article.title
+                                    )}"
+                                    loading="lazy"
                                 >
 
                             </div>
 
-                        `
+                            `
 
-                        : `
+                            :
 
-                            <div class="article-image"></div>
+                            `
 
-                        `;
+                            <div
+                                class="catatan-article-image image-empty"
+                                aria-hidden="true"
+                            >
+
+                                <span>
+                                    Tatsyafira
+                                </span>
+
+                            </div>
+
+                            `;
 
 
-
-                    /* -----------------------------------------
-                       ARTICLE LINK
-                       ----------------------------------------- */
-
-const articleURL =
-    "artikel-" + article.slug + ".html";
-
-
-
-                    /* =================================================
-                       ARTICLE CARD
-
-                       IMPORTANT STRUCTURE:
-
-                       LEFT:
-                       date
-                       title
-                       preview
-                       category + read time
-
-                       RIGHT:
-                       image
-                       ================================================= */
 
                     return `
 
                         <a
-    href="${articleURL}"
-    class="catatan-article-link"
+                            href="${articleURL}"
+                            class="catatan-article-link"
+                            style="--article-delay: ${
+                                index * 70
+                            }ms;"
                         >
 
-
-                            <article class="catatan-article">
-
-
-                                <!-- =========================
-                                     LEFT CONTENT
-                                     ========================= -->
-
-                                <div class="article-content">
+                            <article
+                                class="catatan-article"
+                            >
 
 
-                                    <!-- DATE -->
+                                <div
+                                    class="catatan-article-content"
+                                >
 
-                                    <div class="article-date">
 
-                                        ${formattedDate}
+                                    <div
+                                        class="catatan-article-meta"
+                                    >
+
+                                        <span
+                                            class="article-category"
+                                        >
+                                            ${escapeHTML(
+                                                article.category ||
+                                                "Catatan"
+                                            )}
+                                        </span>
+
+                                        <span
+                                            class="meta-dot"
+                                        >
+                                            ·
+                                        </span>
+
+                                        <span>
+                                            ${escapeHTML(
+                                                formattedDate
+                                            )}
+                                        </span>
+
+                                        ${
+                                            article.read_time
+                                                ?
+
+                                                `
+
+                                                <span
+                                                    class="meta-dot"
+                                                >
+                                                    ·
+                                                </span>
+
+                                                <span>
+                                                    ${escapeHTML(
+                                                        article.read_time
+                                                    )}
+                                                </span>
+
+                                                `
+
+                                                : ""
+
+                                        }
 
                                     </div>
 
 
 
-                                    <!-- TITLE -->
-
-                                    <h2>
+                                    <h3>
 
                                         ${escapeHTML(
                                             article.title
                                         )}
 
-                                    </h2>
+                                    </h3>
 
 
 
-                                    <!-- PREVIEW -->
-
-                                    <p class="article-preview">
+                                    <p>
 
                                         ${escapeHTML(
-                                            article.excerpt || ""
+                                            article.excerpt ||
+                                            ""
                                         )}
 
                                     </p>
 
 
 
-                                    <!-- =====================
-                                         META
+                                    <span
+                                        class="article-read"
+                                    >
 
-                                         NOW UNDER PREVIEW
-                                         ===================== -->
-
-                                    <div class="article-meta">
-
+                                        Baca catatan
 
                                         <span>
-
-                                            ${escapeHTML(
-                                                article.category || ""
-                                            )}
-
+                                            →
                                         </span>
 
-
-                                        <span>
-
-                                            ${escapeHTML(
-                                                article.read_time || ""
-                                            )}
-
-                                        </span>
-
-
-                                    </div>
+                                    </span>
 
 
                                 </div>
 
 
 
-                                <!-- =========================
-                                     RIGHT IMAGE
-                                     ========================= -->
-
                                 ${imageHTML}
 
 
                             </article>
 
-
                         </a>
 
                     `;
 
-                }).join("");
+                }
+            )
+
+            .join("");
+
+
+
+    requestAnimationFrame(
+        () => {
+
+            document
+                .querySelectorAll(
+                    ".catatan-article-link"
+                )
+                .forEach(
+                    article => {
+
+                        article.classList.add(
+                            "is-visible"
+                        );
+
+                    }
+                );
 
         }
+    );
+
+}
 
 
 
-        /* =====================================================
-           CATEGORY FILTERS
-           ===================================================== */
+/* =========================================================
+   APPLY FILTERS
+========================================================= */
 
-        function setupCategoryFilters(articles) {
+function applyFilters() {
+
+    const filteredArticles =
+        getFilteredArticles();
 
 
-            const categories =
-                document.querySelectorAll(
-                    ".category"
+    displayArticles(
+        filteredArticles
+    );
+
+}
+
+
+
+/* =========================================================
+   CATEGORY FILTERS
+========================================================= */
+
+categoryButtons.forEach(
+    button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+
+                categoryButtons.forEach(
+                    item => {
+
+                        item.classList.remove(
+                            "active"
+                        );
+
+                    }
                 );
 
 
-            categories.forEach(
-                categoryLink => {
+                button.classList.add(
+                    "active"
+                );
 
 
-                    categoryLink.addEventListener(
-                        "click",
-                        function(event) {
+                activeCategory =
+                    button.dataset.category;
 
 
-                            event.preventDefault();
-
-
-
-                            /* ---------------------------------
-                               REMOVE ACTIVE
-                               --------------------------------- */
-
-                            categories.forEach(
-                                link => {
-
-                                    link.classList.remove(
-                                        "active"
-                                    );
-
-                                }
-                            );
-
-
-
-                            /* ---------------------------------
-                               ADD ACTIVE
-                               --------------------------------- */
-
-                            this.classList.add(
-                                "active"
-                            );
-
-
-
-                            /* ---------------------------------
-                               GET CATEGORY
-                               --------------------------------- */
-
-                            const selectedCategory =
-                                this.dataset.category;
-
-
-
-                            /* ---------------------------------
-                               SHOW ALL
-                               --------------------------------- */
-
-                            if (
-                                selectedCategory ===
-                                "Semua Catatan"
-                            ) {
-
-                                displayArticles(
-                                    articles
-                                );
-
-                            }
-
-
-                            /* ---------------------------------
-                               FILTER
-                               --------------------------------- */
-
-                            else {
-
-                                const filteredArticles =
-
-                                    articles.filter(
-                                        article =>
-                                            article.category ===
-                                            selectedCategory
-                                    );
-
-
-                                displayArticles(
-                                    filteredArticles
-                                );
-
-                            }
-
-                        }
-                    );
-
-                }
-            );
-
-        }
-
-
-
-        /* =====================================================
-           DATE FORMATTER
-           ===================================================== */
-
-        function formatDate(dateString) {
-
-
-            if (!dateString) {
-
-                return "";
+                applyFilters();
 
             }
+        );
+
+    }
+);
 
 
 
-            const date =
-                new Date(dateString);
+/* =========================================================
+   SEARCH
+========================================================= */
+
+searchInput.addEventListener(
+    "input",
+    event => {
+
+        searchTerm =
+            event.target.value
+                .trim()
+                .toLowerCase();
+
+
+        applyFilters();
+
+    }
+);
 
 
 
-            return date.toLocaleDateString(
-                "id-ID",
+/* =========================================================
+   LOAD ARTICLES
+========================================================= */
+
+async function loadArticles() {
+
+    try {
+
+
+        const {
+            data: articles,
+            error
+        } = await supabaseClient
+
+            .from("articles")
+
+            .select("*")
+
+            .order(
+                "date",
                 {
-                    day: "numeric",
-                    month: "long",
-                    year: "numeric"
+                    ascending: false
                 }
             );
 
-        }
 
 
+        if (error) {
 
-        /* =====================================================
-           SECURITY HELPER
-           ===================================================== */
-
-        function escapeHTML(text) {
-
-
-            if (!text) {
-
-                return "";
-
-            }
-
-
-
-            return String(text)
-
-                .replace(
-                    /&/g,
-                    "&amp;"
-                )
-
-                .replace(
-                    /</g,
-                    "&lt;"
-                )
-
-                .replace(
-                    />/g,
-                    "&gt;"
-                )
-
-                .replace(
-                    /"/g,
-                    "&quot;"
-                )
-
-                .replace(
-                    /'/g,
-                    "&#039;"
-                );
+            throw error;
 
         }
 
 
 
-        /* =====================================================
-           START
-           ===================================================== */
-
-        loadArticles();
+        allArticles =
+            articles || [];
 
 
-    </script>
+
+        updateCategoryCounts(
+            allArticles
+        );
+
+
+        applyFilters();
+
+
+
+    } catch (error) {
+
+
+        console.error(
+            "Error loading articles:",
+            error
+        );
+
+
+        articlesContainer.innerHTML = `
+
+            <div class="catatan-empty">
+
+                <div class="empty-symbol">
+                    —
+                </div>
+
+                <h3>
+                    Catatan belum dapat dimuat.
+                </h3>
+
+                <p>
+                    Silakan coba lagi beberapa saat.
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   START
+========================================================= */
+
+loadArticles();
+
+
+</script>
 
 
 </body>

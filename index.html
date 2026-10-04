@@ -5,12 +5,40 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Tatsyafira — Menulis, Belajar, Bertumbuh</title>
+    <title>
+        Tatsyafira — Menulis, Belajar, Bertumbuh
+    </title>
 
-    <link rel="stylesheet" href="style.css">
+    <meta
+        name="description"
+        content="Tatsyafira — menulis, belajar, mengajar, dan bertumbuh."
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
 </head>
 
@@ -18,13 +46,18 @@
 <body>
 
 
-    <!-- =====================================================
-         NAVIGATION
-         ===================================================== -->
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-    <nav>
+<header class="site-header site-header-overlay">
 
-        <a href="#" class="logo">
+    <div class="header-inner">
+
+        <a
+            href="index.html"
+            class="site-logo"
+        >
 
             <img
                 src="images/tatsyafira-logo.png"
@@ -34,770 +67,1368 @@
         </a>
 
 
-        <div class="nav-links">
+        <nav
+            class="site-nav"
+            aria-label="Main navigation"
+        >
 
-            <a href="#catatan" class="active">
+            <a href="#catatan">
                 Catatan
             </a>
-
-
-            <!-- BELAJAR NOW GOES TO belajar.html -->
 
             <a href="belajar.html">
                 Belajar
             </a>
 
-
-            <a href="#kelas">
-                Kelas
-            </a>
-
-
             <a href="#resources">
                 Resources
             </a>
-
 
             <a href="#toko">
                 Toko
             </a>
 
-        </div>
+        </nav>
 
-    </nav>
+    </div>
 
-
-
-    <!-- =====================================================
-         MAIN
-         ===================================================== -->
-
-    <main>
-
-
-        <!-- =================================================
-             HERO
-             ================================================= -->
-
-        <section class="hero">
-
-
-            <div class="hero-photo">
-
-                <img
-                    src="images/profile.png"
-                    alt="Syafira"
-                >
-
-            </div>
-
-
-            <h1>
-                Hai, aku Syafira.
-            </h1>
-
-
-            <p class="hero-description">
-
-                Aku menulis tentang hal-hal yang kurasakan,
-                kupelajari, dan kualami, sambil terus membangun
-                hidup di sekitar mimpi-mimpi yang pernah terasa mustahil.
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a
-                    href="#catatan"
-                    class="button primary"
-                >
-                    Jelajahi
-                </a>
-
-
-                <!-- MULAI BELAJAR NOW GOES TO belajar.html -->
-
-                <a
-                    href="belajar.html"
-                    class="button secondary"
-                >
-                    Mulai Belajar
-                </a>
-
-            </div>
-
-
-        </section>
+</header>
 
 
 
-        <!-- =================================================
-             CATATAN
-             AUTOMATICALLY LOADED FROM SUPABASE
-             ================================================= -->
-
-        <section
-            class="catatan-preview"
-            id="catatan"
-        >
+<main>
 
 
-            <div class="catatan-header">
+<!-- =========================================================
+     HERO — TATSYAFIRA'S JOURNEY
+========================================================= -->
+
+<section
+    class="journey-hero"
+    id="journey"
+>
+
+    <div
+        class="journey-blue-glow"
+        aria-hidden="true"
+    ></div>
 
 
-                <div>
-
-                    <img
-                        src="images/catatan.png"
-                        alt="Catatan"
-                        class="catatan-heading-image"
-                    >
+    <div
+        class="journey-orbit orbit-one"
+        aria-hidden="true"
+    ></div>
 
 
-                    <h2>
-                        Isi hati dan kepala Tatsyafira :)
-                    </h2>
-
-                </div>
-
-
-                <a
-                    href="catatan.html"
-                    class="catatan-see-all"
-                >
-                    Baca Selengkapnya →
-                </a>
+    <div
+        class="journey-orbit orbit-two"
+        aria-hidden="true"
+    ></div>
 
 
-            </div>
+    <svg
+        class="journey-network"
+        viewBox="0 0 1200 700"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+    >
+
+        <path
+            class="network-line"
+            d="M70 430 C210 330, 280 260, 405 300 C520 335, 560 165, 710 210 C850 250, 900 410, 1100 325"
+        />
+
+        <path
+            class="network-line network-line-two"
+            d="M150 180 C310 245, 405 115, 565 175 C720 235, 835 135, 1050 215"
+        />
+
+        <path
+            class="network-line network-line-three"
+            d="M235 555 C380 495, 450 580, 600 505 C745 430, 835 545, 1060 465"
+        />
+
+    </svg>
 
 
-
-            <!--
-            =================================================
-            IMPORTANT
-
-            Articles are inserted here automatically
-            from Supabase.
-            =================================================
-            -->
+    <span class="network-dot dot-one"></span>
+    <span class="network-dot dot-two"></span>
+    <span class="network-dot dot-three"></span>
+    <span class="network-dot dot-four"></span>
+    <span class="network-dot dot-five"></span>
 
 
-            <div
-                class="catatan-list"
-                id="homepage-catatan-list"
+    <div class="journey-stamp stamp-one">
+
+        <span>
+            ✦
+        </span>
+
+        <small>
+            TRAVEL
+        </small>
+
+        <small>
+            STORIES
+        </small>
+
+    </div>
+
+
+    <div class="journey-stamp stamp-two">
+
+        <span>
+            ◎
+        </span>
+
+        <small>
+            ACROSS
+        </small>
+
+        <small>
+            BORDERS
+        </small>
+
+    </div>
+
+
+    <div class="journey-stamp stamp-three">
+
+        <span>
+            ✧
+        </span>
+
+        <small>
+            KEEP
+        </small>
+
+        <small>
+            GOING
+        </small>
+
+    </div>
+
+
+    <div
+        class="airmail-lines airmail-one"
+        aria-hidden="true"
+    >
+
+        <i></i>
+        <i></i>
+        <i></i>
+
+    </div>
+
+
+    <div
+        class="airmail-lines airmail-two"
+        aria-hidden="true"
+    >
+
+        <i></i>
+        <i></i>
+        <i></i>
+
+    </div>
+
+
+    <!-- POLAROIDS -->
+
+    <div class="polaroid polaroid-norway">
+
+        <div class="tape"></div>
+
+        <div class="polaroid-photo">
+
+            <img
+                src="images/norway.png"
+                alt="Tatsyafira in Norway"
             >
 
-                <p>
-                    Memuat catatan...
-                </p>
+        </div>
 
-            </div>
+    </div>
 
 
-        </section>
+    <div class="polaroid polaroid-germany">
+
+        <div class="tape"></div>
+
+        <div class="polaroid-photo">
+
+            <img
+                src="images/germany.png"
+                alt="Tatsyafira in Germany"
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="polaroid polaroid-turkey">
+
+        <div class="tape"></div>
+
+        <div class="polaroid-photo">
+
+            <img
+                src="images/turkey.png"
+                alt="Tatsyafira in Türkiye"
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="polaroid polaroid-japan">
+
+        <div class="tape"></div>
+
+        <div class="polaroid-photo">
+
+            <img
+                src="images/japan.png"
+                alt="Tatsyafira in Japan"
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="polaroid polaroid-austria">
+
+        <div class="tape"></div>
+
+        <div class="polaroid-photo">
+
+            <img
+                src="images/austria.png"
+                alt="Tatsyafira in Austria"
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="polaroid polaroid-indonesia">
+
+        <div class="tape"></div>
+
+        <div class="polaroid-photo">
+
+            <img
+                src="images/indonesia.png"
+                alt="Tatsyafira in Indonesia"
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="polaroid polaroid-switzerland">
+
+        <div class="tape"></div>
+
+        <div class="polaroid-photo">
+
+            <img
+                src="images/switzerland.png"
+                alt="Tatsyafira in Switzerland"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- HERO CENTER -->
+
+    <div class="journey-center">
+
+        <h1>
+
+            tatsyafira's
+
+            <span>
+                journey
+            </span>
+
+        </h1>
+
+
+        <p class="hero-note">
+            halaman dan perjalanan Tatsyafira
+        </p>
+
+    </div>
+
+</section>
 
 
 
-        <!-- =================================================
-             ENGLISH TEST
-             ================================================= -->
+<!-- =========================================================
+     CATATAN — JOURNAL
+========================================================= -->
 
-        <section
-            id="belajar"
-            class="test-section"
+<section
+    class="catatan-section journal-section"
+    id="catatan"
+>
+
+    <div
+        class="bedsheet-glow"
+        aria-hidden="true"
+    ></div>
+
+
+    <div
+        class="bedsheet-fold fold-one"
+        aria-hidden="true"
+    ></div>
+
+
+    <div
+        class="bedsheet-fold fold-two"
+        aria-hidden="true"
+    ></div>
+
+
+    <div class="journal-scene journal-scene-static">
+
+        <div
+            class="journal-book"
+            id="journal-book"
         >
 
+            <div class="journal-single-page reveal">
 
-            <div class="test-content">
-
-
-                <p class="eyebrow">
-                    ENGLISH CHECK
-                </p>
+                <div class="journal-page-inner">
 
 
-                <h2>
-                    Seberapa siap
-                    bahasa Inggrismu?
-                </h2>
+                    <!-- JOURNAL INTRO -->
+
+                    <div class="journal-intro">
+
+                        <span class="journal-page-label">
+                            01 — CATATAN
+                        </span>
 
 
-                <p>
-
-                    Ikuti tes gratis untuk mengetahui kemampuan
-                    bahasa Inggrismu dan temukan apa yang sebaiknya
-                    kamu pelajari selanjutnya.
-
-                </p>
+                        <h3>
+                            catatan
+                        </h3>
 
 
-                <a
-                    href="english-test.html"
-                    class="button primary"
-                >
-                    Mulai Tes Gratis →
-                </a>
+                        <p class="journal-handnote">
+                            isi hati dan pikiran Tatsyafira.
+                        </p>
+
+                    </div>
 
 
-            </div>
+                    <!-- SUPABASE ARTICLES -->
+
+                   <div
+    class="homepage-catatan-list"
+    id="homepage-catatan-list"
+>
+
+    <div class="article-loading">
+        Memuat catatan...
+    </div>
+
+</div>
 
 
+<div class="catatan-more">
 
-            <div class="test-preview">
+    <a
+        href="catatan.html"
+        class="catatan-more-link"
+    >
 
+    </a>
 
-                <div class="test-circle">
-                    ✦
-                </div>
-
-
-                <p>
-                    GRAMMAR · VOCABULARY · READING
-                </p>
+</div>
 
 
-                <h3>
-                    Find your level.
-                </h3>
+<div class="newspaper-bottom-rule"></div>
+
+    <a
+        href="catatan.html"
+        class="journal-more-link"
+    >
+
+        <span>
+            Baca artikel lainnya
+        </span>
+
+        <span class="journal-more-arrow">
+            →
+        </span>
+
+    </a>
+
+</div>
 
 
-                <div class="level-row">
-
-                    <span>A1</span>
-                    <span>A2</span>
-                    <span>B1</span>
-                    <span>B2</span>
-                    <span>C1</span>
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =================================================
-             CLASSES
-             ================================================= -->
-
-        <section
-            id="kelas"
-            class="content-section"
-        >
-
-
-            <div class="section-heading">
-
-
-                <div>
-
-                    <p class="eyebrow">
-                        KELAS
-                    </p>
-
-
-                    <h2>
-                        Belajar bahasa Inggris
-                        bareng aku.
-                    </h2>
-
-                </div>
-
-
-                <a
-                    href="#"
-                    class="text-link"
-                >
-                    Lihat semua →
-                </a>
-
-
-            </div>
-
-
-
-            <div class="class-grid">
-
-
-                <!-- =========================================
-                     CLASS 01 — FULL
-                     ========================================= -->
-
-                <article class="class-card">
-
-
-                    <span class="class-number">
+                    <span class="journal-page-number">
                         01
                     </span>
 
 
-                    <p class="class-type">
-                        SPEAKING
-                    </p>
-
-
-                    <h3>
-                        Improv Speaking
-                    </h3>
-
-
-                    <p>
-                        Latihan berbicara secara spontan,
-                        percaya diri, dan natural.
-                    </p>
-
-
-                   <a
-                        href="https://forms.gle/TwuNJ7vYH6s2W4xo6"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Daftar →
-                    </a>
-
-                </article>
-
-
-
-                <!-- =========================================
-                     CLASS 02 — GRAMMAR
-                     ========================================= -->
-
-                <article class="class-card featured-class">
-
-
-                    <span class="class-number">
-                        02
-                    </span>
-
-
-                    <p class="class-type">
-                        GRAMMAR
-                    </p>
-
-
-                    <h3>
-                        Grammar Intensive
-                    </h3>
-
-
-                    <p>
-                        Memahami grammar dari dasar sampai
-                        mampu menggunakannya dengan benar.
-                    </p>
-
-
-                    <a
-                        href="https://forms.gle/MuZXGn4KzXkt9c4t9"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Daftar →
-                    </a>
-
-
-                </article>
-
-
-
-                <!-- =========================================
-                     CLASS 03 — VOCABULARY
-                     ========================================= -->
-
-                <article class="class-card">
-
-
-                    <span class="class-number">
-                        03
-                    </span>
-
-
-                    <p class="class-type">
-                        VOCABULARY
-                    </p>
-
-
-                    <h3>
-                        Vocabulary Intensive
-                    </h3>
-
-
-                    <p>
-                        Membangun vocabulary untuk belajar,
-                        bekerja, dan kebutuhan akademik.
-                    </p>
-
-
-                    <a
-                        href="https://forms.gle/whUENgZt2XbQ1ZtX9"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Daftar →
-                    </a>
-
-
-                </article>
-
-
-            </div>
-
-
-
-            <!-- TESTIMONIAL -->
-
-            <div class="testimonial">
-
-
-                <span class="quote-mark">
-                    “
-                </span>
-
-
-                <blockquote>
-
-                    Aku akhirnya ngerti grammar yang selama ini
-                    bikin aku bingung.
-
-                </blockquote>
-
-
-                <p>
-                    — Student, Grammar Intensive
-                </p>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =================================================
-             RESOURCES
-             ================================================= -->
-
-        <section
-            id="resources"
-            class="content-section"
-        >
-
-
-            <div class="section-heading">
-
-
-                <div>
-
-                    <p class="eyebrow">
-                        RESOURCES
-                    </p>
-
-
-                    <h2>
-                        Sesuatu untuk
-                        kamu pelajari.
-                    </h2>
-
                 </div>
 
-
-                <a
-                    href="#"
-                    class="text-link"
-                >
-                    Lihat semua →
-                </a>
-
-
             </div>
 
+        </div>
 
+    </div>
 
-            <div class="resource-grid">
+</section>
 
 
-                <article class="resource-card">
 
+<!-- =========================================================
+     ABOUT TATSYAFIRA
+========================================================= -->
 
-                    <span class="resource-label free">
-                        GRATIS
-                    </span>
+<section
+    class="about-section reveal"
+    id="about"
+>
 
+    <div class="section-rule"></div>
 
-                    <h3>
-                        TOEFL Grammar Checklist
-                    </h3>
 
+    <div class="about-layout">
 
-                    <p>
-                        Checklist grammar yang perlu kamu
-                        kuasai sebelum menghadapi TOEFL.
-                    </p>
 
+        <div class="about-content">
 
-                    <a href="#">
-                        Download →
-                    </a>
-
-
-                </article>
-
-
-
-                <article class="resource-card">
-
-
-                    <span class="resource-label free">
-                        GRATIS
-                    </span>
-
-
-                    <h3>
-                        Erasmus Preparation Notes
-                    </h3>
-
-
-                    <p>
-                        Catatan dan resources untuk mempersiapkan
-                        perjalanan Erasmus-mu.
-                    </p>
-
-
-                    <a href="#">
-                        Download →
-                    </a>
-
-
-                </article>
-
-
-
-                <article class="resource-card paid-resource">
-
-
-                    <span class="resource-label paid">
-                        PREMIUM
-                    </span>
-
-
-                    <h3>
-                        Scholarship Planner
-                    </h3>
-
-
-                    <p>
-                        Planner untuk membantu mengorganisasi
-                        scholarship application-mu.
-                    </p>
-
-
-                    <strong>
-                        Rp30.000
-                    </strong>
-
-
-                    <a href="#">
-                        Lihat produk →
-                    </a>
-
-
-                </article>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =================================================
-             SHOP
-             ================================================= -->
-
-        <section
-            id="toko"
-            class="shop-section"
-        >
-
-
-            <div class="shop-heading">
-
-
-                <p class="eyebrow">
-                    TOKO
-                </p>
-
-
-                <h2>
-                    Hal-hal yang
-                    kubuat dengan cinta.
-                </h2>
-
-
-                <p>
-                    Buku, merchandise, dan produk-produk
-                    yang lahir dari cerita yang ingin kubagikan.
-                </p>
-
-
-            </div>
-
-
-
-            <div class="shop-grid">
-
-
-                <article class="product-card book-product">
-
-
-                    <div class="product-visual">
-
-                        <img
-                            src="images/lima-tanya-book.png"
-                            alt="Lima Tanya yang Tertinggal Saat Ibu Pergi"
-                        >
-
-                    </div>
-
-
-                    <div class="product-info">
-
-                        <p>
-                            BUKU
-                        </p>
-
-
-                        <h3>
-                            Lima Tanya yang
-                            Tertinggal Saat Ibu Pergi
-                        </h3>
-
-
-                        <a
-                            href="https://s.shopee.co.id/5VUrncLCfT"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="button secondary"
-                        >
-                            Beli di Shopee →
-                        </a>
-
-                    </div>
-
-
-                </article>
-
-
-
-                <article class="product-card merchandise-product">
-
-
-                    <div class="product-visual">
-
-                        <img
-                            src="images/lima-tanya-merchandise.png"
-                            alt="Lima Tanya Collection Merchandise"
-                        >
-
-                    </div>
-
-
-                    <div class="product-info">
-
-                        <p>
-                            MERCHANDISE
-                        </p>
-
-
-                        <h3>
-                            Lima Tanya Collection
-                        </h3>
-
-
-                        <a
-                            href="#"
-                            class="button"
-                        >
-                            Lihat Merchandise →
-                        </a>
-
-                    </div>
-
-
-                </article>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =================================================
-             SOCIAL MEDIA
-             ================================================= -->
-
-        <section class="social-section">
-
-
-            <p class="eyebrow">
-                FIND ME ELSEWHERE
+            <p class="section-kicker">
+                02 — TENTANG TATSYAFIRA
             </p>
 
 
             <h2>
-                Temui aku di tempat lain.
+
+                <span class="about-highlight">
+                    Tentang Tatsyafira
+                </span>
+
             </h2>
 
 
-            <div class="social-links">
+            <p>
 
-                <a href="#">
-                    Instagram
-                </a>
+                Lahir dan besar di Yogyakarta, saat ini aku sedang menjalani studiku di
+
+                <strong>
+                    Business-Finance
+                </strong>.
+
+                Seorang
+
+                <strong>
+                    Pemikir, Penulis buku best-seller
+                    <em>
+                        Lima Tanya yang Tertinggal Saat Ibu Pergi
+                    </em>,
+                    Changemaker,
+                </strong>
+
+                dan
+
+                <strong>
+                    a Lifelong Learner.
+                </strong>
+
+            </p>
 
 
-                <a href="#">
-                    TikTok
-                </a>
+            <p>
+
+                Aku memulai perjalananku dari sebuah kampung kecil di Yogyakarta,
+                dan perjalanan pertamaku melihat dunia dimulai saat aku mengikuti
+
+                <strong>
+                    KL-YES di Colorado, Amerika Serikat
+                </strong>.
+
+                Perjalanan itu terus berlanjut ketika aku mulai percaya bahwa
+
+                <strong>
+                    mimpi pantas untuk diraih
+                </strong>,
+
+                dan terpilih untuk mengikuti
+
+                <strong>
+                    Erasmus+ di Jerman
+                </strong>,
+
+                hingga menjadi bagian dari
+
+                <strong>
+                    ISFiT 2025 di Trondheim, Norwegia
+                </strong>,
+
+                <strong>
+                    ASEFYLS 2026
+                </strong>,
+
+                dan masuk
+
+                <strong>
+                    Top 10 We Are Together Prize di Moscow
+                </strong>.
+
+                Di sepanjang perjalanan itu, aku juga membangun
+
+                <strong>
+                    Impactional
+                </strong>
+
+                dan terus belajar dari setiap kesempatan yang datang.
+
+            </p>
 
 
-                <a href="#">
-                    YouTube
-                </a>
+            <p>
+
+                <strong>
+                    I’m an aspiring financial analyst
+                </strong>,
+
+                dan berharap dapat membawa lebih banyak dampak ke dunia lewat
+
+                <strong>
+                    strategic approaches in finance and social impact.
+                </strong>
+
+            </p>
+
+        </div>
 
 
-                <a href="#">
-                    LinkedIn
-                </a>
+        <div class="about-photo-wrap">
+
+            <div class="about-photo-line"></div>
+
+
+            <img
+                src="images/syafira.jpg"
+                alt="Syafira"
+            >
+
+
+            <span class="photo-caption">
+                Yogyakarta → everywhere
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ABOUT STATISTICS -->
+
+    <div
+        class="about-stats"
+        aria-label="Tatsyafira in numbers"
+    >
+
+
+        <div class="about-stat">
+
+            <strong
+                class="stat-number"
+                data-target="358"
+                data-suffix="K+"
+            >
+                0
+            </strong>
+
+
+            <span>
+
+                <span
+                    class="stat-emoji"
+                    aria-hidden="true"
+                >
+                    📸
+                </span>
+
+                Instagram Followers
+
+            </span>
+
+        </div>
+
+
+        <div class="about-stat">
+
+            <strong
+                class="stat-number"
+                data-target="390"
+                data-suffix="K+"
+            >
+                0
+            </strong>
+
+
+            <span>
+
+                <span
+                    class="stat-emoji"
+                    aria-hidden="true"
+                >
+                    🎵
+                </span>
+
+                TikTok Followers
+
+            </span>
+
+        </div>
+
+
+        <div class="about-stat">
+
+            <strong
+                class="stat-number"
+                data-target="2000"
+                data-suffix="+"
+            >
+                0
+            </strong>
+
+
+            <span>
+
+                <span
+                    class="stat-emoji"
+                    aria-hidden="true"
+                >
+                    📚
+                </span>
+
+                Buku Terjual
+
+            </span>
+
+        </div>
+
+
+        <div class="about-stat about-stat-programs">
+
+            <strong
+                class="stat-number"
+                data-target="7"
+                data-suffix=" Negara"
+            >
+                0
+            </strong>
+
+
+            <span>
+
+                <span
+                    class="stat-emoji"
+                    aria-hidden="true"
+                >
+                    🌎
+                </span>
+
+                Exchange &amp; International Programs
+
+            </span>
+
+
+            <small>
+                🇺🇸 🇯🇵 🇩🇪
+            </small>
+
+        </div>
+
+
+        <div class="about-stat">
+
+            <strong
+                class="stat-number"
+                data-target="27"
+                data-suffix=" Negara"
+            >
+                0
+            </strong>
+
+
+            <span>
+
+                <span
+                    class="stat-emoji"
+                    aria-hidden="true"
+                >
+                    🌍
+                </span>
+
+                Countries Explored
+
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="about-bottom-line">
+
+        <span>
+            THINK · WRITE · LEARN · BUILD
+        </span>
+
+        <span>
+            02
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BELAJAR
+========================================================= -->
+
+<section
+    class="english-section reveal"
+    id="belajar"
+>
+
+    <div class="section-rule"></div>
+
+
+    <div class="english-heading">
+
+        <div>
+
+            <p class="section-kicker">
+                03 — BELAJAR BERSAMA
+            </p>
+
+
+            <h2>
+
+                Daftar kelas
+
+                <em>
+                    bahasa Inggris.
+                </em>
+
+            </h2>
+
+        </div>
+
+
+        <div class="english-heading-copy">
+
+            <p>
+                Belajar bahasa Inggris bukan cuma soal menghafal.
+                Kita latihan sampai kamu benar-benar berani memakainya.
+            </p>
+
+
+            <a
+                href="belajar.html"
+                class="text-link"
+            >
+
+                Lihat semua materi
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="english-cards">
+
+
+        <!-- GRAMMAR -->
+
+        <a
+            href="grammar-practice.html"
+            class="english-card card-grammar card-animated"
+            style="--card-delay: 0ms;"
+        >
+
+            <div class="english-card-top">
+
+                <span class="english-icon">
+                    📚
+                </span>
+
+                <span class="english-arrow">
+                    ↗
+                </span>
 
             </div>
 
 
-        </section>
+            <p class="card-label">
+                01 · GRAMMAR INTENSIVE
+            </p>
 
 
-    </main>
+            <h3>
+
+                Make grammar
+
+                <br>
+
+                <em>
+                    make sense.
+                </em>
+
+            </h3>
+
+
+            <p>
+                Dari tenses sampai sentence structure —
+                belajar grammar dengan pola yang lebih mudah dipahami.
+            </p>
+
+
+            <div class="card-footer">
+
+                <span>
+                    Daftar Grammar Intensive
+                </span>
+
+                <span>
+                    →
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- VOCABULARY -->
+
+        <a
+            href="vocabulary-practice.html"
+            class="english-card card-vocab card-animated"
+            style="--card-delay: 100ms;"
+        >
+
+            <div class="english-card-top">
+
+                <span class="english-icon">
+                    🧠
+                </span>
+
+                <span class="english-arrow">
+                    ↗
+                </span>
+
+            </div>
+
+
+            <p class="card-label">
+                02 · VOCAB INTENSIVE
+            </p>
+
+
+            <h3>
+
+                Words you'll
+
+                <br>
+
+                <em>
+                    actually use.
+                </em>
+
+            </h3>
+
+
+            <p>
+                Bangun vocabulary yang lebih akademik,
+                natural, dan siap dipakai dalam speaking maupun writing.
+            </p>
+
+
+            <div class="card-footer">
+
+                <span>
+                    Daftar Vocab Intensive
+                </span>
+
+                <span>
+                    →
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- SPEAKING -->
+
+        <a
+            href="improv-speaking.html"
+            class="english-card card-speaking card-animated"
+            style="--card-delay: 200ms;"
+        >
+
+            <div class="english-card-top">
+
+                <span class="english-icon">
+                    🎙️
+                </span>
+
+                <span class="english-arrow">
+                    ↗
+                </span>
+
+            </div>
+
+
+            <p class="card-label">
+                03 · IMPROV SPEAKING
+            </p>
+
+
+            <h3>
+
+                Think less.
+
+                <br>
+
+                <em>
+                    Speak more.
+                </em>
+
+            </h3>
+
+
+            <p>
+                Latihan spontan untuk membantu kamu berhenti menerjemahkan
+                setiap kata di kepala dan mulai benar-benar berbicara.
+            </p>
+
+
+            <div class="card-footer">
+
+                <span>
+                    Daftar Improv Speaking
+                </span>
+
+                <span>
+                    →
+                </span>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+
+    <div
+        class="english-marquee"
+        aria-hidden="true"
+    >
+
+        <span>
+            grammar ✦ vocabulary ✦ speaking ✦ TOEFL ✦ confidence ✦ study abroad ✦
+        </span>
+
+        <span>
+            grammar ✦ vocabulary ✦ speaking ✦ TOEFL ✦ confidence ✦ study abroad ✦
+        </span>
+
+    </div>
+
+</section>
 
 
 
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
+<!-- =========================================================
+     RESOURCES
+========================================================= -->
 
-    <footer>
+<section
+    class="resources-section reveal"
+    id="resources"
+>
+
+    <div class="section-rule"></div>
 
 
-        <div class="footer-logo">
+    <div class="section-heading resources-heading">
 
+        <div>
+
+            <p class="section-kicker">
+                04 — RESOURCES
+            </p>
+
+
+            <h2>
+
+                Things worth
+
+                <em>
+                    keeping.
+                </em>
+
+            </h2>
+
+        </div>
+
+
+        <p class="resources-intro">
+
+            Hal-hal kecil yang aku buat untuk membantu hidup,
+            belajar, dan merencanakan langkah berikutnya
+            jadi sedikit lebih mudah.
+
+        </p>
+
+    </div>
+
+
+    <div class="resource-cards">
+
+
+        <a
+            href="#"
+            class="resource-card resource-featured"
+        >
+
+            <span class="resource-icon">
+                ₿
+            </span>
+
+
+            <p class="card-label">
+                PERSONAL FINANCE
+            </p>
+
+
+            <h3>
+                Financial Tracker
+            </h3>
+
+
+            <p>
+                Tracker sederhana untuk melihat pemasukan,
+                pengeluaran, tabungan, dan progress
+                financial goals-mu.
+            </p>
+
+
+            <span class="resource-link">
+                Open tracker →
+            </span>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="resource-card"
+        >
+
+            <span class="resource-icon">
+                ✈
+            </span>
+
+
+            <p class="card-label">
+                STUDY ABROAD
+            </p>
+
+
+            <h3>
+                Erasmus Preparation Notes
+            </h3>
+
+
+            <p>
+                Catatan dan checklist yang bisa kamu gunakan
+                untuk mempersiapkan perjalanan Erasmus.
+            </p>
+
+
+            <span class="resource-link">
+                Coming soon →
+            </span>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="resource-card"
+        >
+
+            <span class="resource-icon">
+                ✦
+            </span>
+
+
+            <p class="card-label">
+                SCHOLARSHIP
+            </p>
+
+
+            <h3>
+                Scholarship Planner
+            </h3>
+
+
+            <p>
+                Ruang untuk mengorganisasi deadline,
+                dokumen, essays, dan application journey-mu.
+            </p>
+
+
+            <span class="resource-link">
+                Coming soon →
+            </span>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TOKO
+========================================================= -->
+
+<section
+    class="shop-section reveal"
+    id="toko"
+>
+
+    <div class="section-rule"></div>
+
+
+    <div class="shop-heading">
+
+        <div>
+
+            <p class="section-kicker">
+                05 — TOKO
+            </p>
+
+
+            <h2>
+
+                Things I've made
+
+                <em>
+                    for you.
+                </em>
+
+            </h2>
+
+        </div>
+
+
+        <p>
+            Buku, merchandise, dan sedikit hal dari meja kerjaku
+            yang ingin kubagikan ke kamu.
+        </p>
+
+    </div>
+
+
+    <div class="shop-grid">
+
+
+        <article class="product-card">
+
+            <div class="product-visual book-visual">
+
+                <img
+                    src="images/lima-tanya-book.png"
+                    alt="Lima Tanya yang Tertinggal Saat Ibu Pergi"
+                >
+
+
+                <span class="product-sticker">
+                    BOOK
+                </span>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <p>
+                    BUKU
+                </p>
+
+
+                <h3>
+
+                    Lima Tanya yang
+
+                    <br>
+
+                    Tertinggal Saat Ibu Pergi
+
+                </h3>
+
+
+                <a
+                    href="https://s.shopee.co.id/5VUrncLCfT"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="product-button"
+                >
+
+                    Beli di Shopee
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="product-card">
+
+            <div class="product-visual merch-visual">
+
+                <img
+                    src="images/lima-tanya-merchandise.png"
+                    alt="Lima Tanya Collection Merchandise"
+                >
+
+
+                <span class="product-sticker">
+                    MERCH
+                </span>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <p>
+                    MERCHANDISE
+                </p>
+
+
+                <h3>
+
+                    Lima Tanya
+
+                    <br>
+
+                    Collection
+
+                </h3>
+
+
+                <a
+                    href="#"
+                    class="product-button"
+                >
+
+                    Lihat merchandise
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CLOSING
+========================================================= -->
+
+<section class="closing-section reveal">
+
+    <div class="closing-line"></div>
+
+
+    <p>
+        A LIFE IN PROGRESS
+    </p>
+
+
+    <h2>
+
+        Still
+
+        <em>
+            becoming.
+        </em>
+
+    </h2>
+
+
+    <a href="#journey">
+        Back to the beginning ↑
+    </a>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+
+        <div class="footer-brand">
 
             <img
                 src="images/tatsyafira-logo.png"
@@ -809,386 +1440,700 @@
                 Menulis. Mengajar. Bertumbuh.
             </p>
 
-
         </div>
 
 
-
         <div class="footer-links">
-
 
             <a href="#catatan">
                 Catatan
             </a>
 
-
-            <!-- FOOTER BELAJAR NOW GOES TO belajar.html -->
-
             <a href="belajar.html">
                 Belajar
             </a>
-
-
-            <a href="#kelas">
-                Kelas
-            </a>
-
 
             <a href="#resources">
                 Resources
             </a>
 
-
             <a href="#toko">
                 Toko
             </a>
 
-
         </div>
 
+    </div>
 
 
-        <p class="copyright">
-            © 2026 Tatsyafira. All rights reserved.
-        </p>
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Tatsyafira
+        </span>
 
 
-    </footer>
+        <span>
+            Made with curiosity.
+        </span>
 
+    </div>
 
-
-    <!-- =====================================================
-         SUPABASE
-         ONLY ONE SCRIPT
-         ===================================================== -->
-
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-
-    <script>
-
-
-        /* =====================================================
-           SUPABASE CONNECTION
-           ===================================================== */
-
-        const SUPABASE_URL =
-            "https://gtaljywggqalmfqizjhj.supabase.co";
-
-
-        const SUPABASE_ANON_KEY =
-            "sb_publishable_Lvgk-7rPMaxhO7TAOdGp6Q_MWACHYtR";
-
-
-        const supabaseClient =
-            supabase.createClient(
-                SUPABASE_URL,
-                SUPABASE_ANON_KEY
-            );
+</footer>
 
 
 
-        /* =====================================================
-           LOAD ARTICLES
-           ===================================================== */
+<!-- =========================================================
+     SUPABASE
+========================================================= -->
 
-        async function loadHomepageArticles() {
-
-
-            const container =
-                document.getElementById(
-                    "homepage-catatan-list"
-                );
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 
-            try {
+<script>
 
 
-                const {
-                    data: articles,
-                    error
-                } = await supabaseClient
+const SUPABASE_URL =
+    "https://gtaljywggqalmfqizjhj.supabase.co";
 
-                    .from("articles")
 
-                    .select("*")
+const SUPABASE_ANON_KEY =
+    "sb_publishable_Lvgk-7rPMaxhO7TAOdGp6Q_MWACHYtR";
 
-                    .order(
-                        "date",
-                        {
-                            ascending: false
-                        }
-                    )
 
-                    .limit(3);
+const supabaseClient =
+    supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+    );
 
 
 
-                /* ERROR */
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
 
-                if (error) {
+function escapeHTML(value) {
 
-                    throw error;
+    return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+}
+
+
+
+/* =========================================================
+   LOAD HOMEPAGE ARTICLES
+========================================================= */
+
+async function loadHomepageArticles() {
+
+    const container =
+        document.getElementById(
+            "homepage-catatan-list"
+        );
+
+
+    try {
+
+        const {
+            data: articles,
+            error
+        } = await supabaseClient
+
+            .from("articles")
+
+            .select("*")
+
+            .order(
+                "date",
+                {
+                    ascending: false
+                }
+            )
+
+            .limit(3);
+
+
+        if (error) {
+            throw error;
+        }
+
+
+        if (!articles || !articles.length) {
+
+            container.innerHTML = `
+
+                <div class="article-empty">
+
+                    Belum ada catatan.
+
+                </div>
+
+            `;
+
+            return;
+
+        }
+
+
+        container.innerHTML = articles.map(
+            (article, index) => {
+
+                const articleURL =
+                    article.article_url ||
+                    article.url ||
+                    (
+                        article.slug
+                            ? "artikel-" +
+                              article.slug +
+                              ".html"
+                            : "#"
+                    );
+
+
+                const imageURL =
+                    article.image_url ||
+                    article.image ||
+                    "images/catatan.png";
+
+
+                const category =
+                    article.category ||
+                    "Catatan";
+
+
+                const excerpt =
+                    article.excerpt ||
+                    "";
+
+
+                const dateValue =
+                    article.date ||
+                    article.created_at;
+
+
+                let formattedDate = "";
+
+
+                if (dateValue) {
+
+                    formattedDate =
+                        new Date(
+                            dateValue
+                        ).toLocaleDateString(
+                            "id-ID",
+                            {
+                                day: "numeric",
+                                month: "long",
+                                year: "numeric"
+                            }
+                        );
 
                 }
 
 
+                return `
 
-                /* NO ARTICLES */
+                    <a
+                        href="${escapeHTML(articleURL)}"
+                        class="journal-entry journal-entry-${index + 1} reveal-item"
+                        style="--entry-delay: ${index * 120}ms;"
+                    >
 
-                if (
-                    !articles ||
-                    articles.length === 0
-                ) {
+                        <article>
 
-                    container.innerHTML = `
+                            <div class="journal-entry-photo">
 
-                        <p>
-                            Belum ada catatan.
-                        </p>
-
-                    `;
-
-
-                    return;
-
-                }
-
-
-
-                /* =================================================
-                   CREATE ARTICLE CARDS
-                   ================================================= */
-
-                container.innerHTML =
-
-                    articles.map(
-                        article => {
-
-
-                            /* DATE */
-
-                            const formattedDate =
-
-                                new Date(
-                                    article.date
-                                ).toLocaleDateString(
-                                    "id-ID",
-                                    {
-                                        day: "numeric",
-                                        month: "long",
-                                        year: "numeric"
-                                    }
-                                );
-
-
-
-                            /* IMAGE */
-
-                            const imageURL =
-                                article.image_url ||
-                                article.image ||
-                                "images/catatan.png";
-
-
-
-                            /* =================================================
-                               ARTICLE LINK
-
-                               Jatuh Suka:
-                               artikel-jatuh-suka.html
-
-                               Future article:
-                               artikel-[slug].html
-                               ================================================= */
-
-                            const articleURL =
-                                "artikel-" + article.slug + ".html";
-
-
-
-                            /* =================================================
-                               CARD
-                               ================================================= */
-
-                            return `
-
-                                <a
-                                    href="${articleURL}"
-                                    class="catatan-item-link"
+                                <img
+                                    src="${escapeHTML(imageURL)}"
+                                    alt="${escapeHTML(article.title)}"
+                                    loading="lazy"
                                 >
 
+                                <span class="journal-photo-tape"></span>
 
-                                    <article
-                                        class="catatan-item"
-                                    >
-
-
-                                        <div
-                                            class="catatan-content"
-                                        >
+                            </div>
 
 
-                                            <div
-                                                class="catatan-meta"
-                                            >
+                            <div class="journal-entry-copy">
 
-                                                ${formattedDate}
+                                <div class="journal-entry-meta">
 
-                                            </div>
+                                    <span>
+                                        ${escapeHTML(formattedDate)}
+                                    </span>
 
+                                    <span>
+                                        ${escapeHTML(category)}
+                                    </span>
 
-
-                                            <h3>
-
-                                                ${escapeHTML(
-                                                    article.title || ""
-                                                )}
-
-                                            </h3>
+                                </div>
 
 
+                                <h4>
+                                    ${escapeHTML(article.title)}
+                                </h4>
 
-                                            <p
-                                                class="catatan-excerpt"
-                                            >
 
-                                                ${escapeHTML(
-                                                    article.excerpt || ""
-                                                )}
+                                ${
+                                    excerpt
+                                        ? `
 
+                                            <p>
+                                                ${escapeHTML(excerpt)}
                                             </p>
 
+                                          `
+                                        : ""
+                                }
 
 
-                                            <div
-                                                class="catatan-info"
-                                            >
+                                <span class="journal-entry-read">
 
+                                    Read this note →
 
-                                                <span>
+                                </span>
 
-                                                    ${escapeHTML(
-                                                        article.category || ""
-                                                    )}
+                            </div>
 
-                                                </span>
+                        </article>
 
-
-                                                <span>
-                                                    ·
-                                                </span>
-
-
-                                                <span>
-
-                                                    ${escapeHTML(
-                                                        String(
-                                                            article.read_time || ""
-                                                        )
-                                                    )}
-
-                                                    ${
-                                                        article.read_time
-                                                            ? " min read"
-                                                            : ""
-                                                    }
-
-                                                </span>
-
-
-                                            </div>
-
-
-                                        </div>
-
-
-
-                                        <div
-                                            class="catatan-image"
-                                        >
-
-
-                                            <img
-                                                src="${imageURL}"
-                                                alt="${escapeHTML(
-                                                    article.title || ""
-                                                )}"
-                                            >
-
-
-                                        </div>
-
-
-                                    </article>
-
-
-                                </a>
-
-                            `;
-
-                        }
-
-                    ).join("");
-
-
-            }
-
-
-            catch (error) {
-
-
-                console.error(
-                    "Error loading homepage articles:",
-                    error
-                );
-
-
-                container.innerHTML = `
-
-                    <p>
-                        Gagal memuat catatan.
-                    </p>
+                    </a>
 
                 `;
 
             }
 
+        ).join("");
+
+
+        container
+            .querySelectorAll(".reveal-item")
+            .forEach(
+                item => {
+
+                    journalRevealObserver.observe(
+                        item
+                    );
+
+                }
+            );
+
+
+    } catch (error) {
+
+        console.error(
+            "Supabase error:",
+            error
+        );
+
+
+        container.innerHTML = `
+
+            <div class="article-empty">
+
+                Belum dapat memuat catatan.
+
+                <a href="catatan.html">
+                    Lihat halaman Catatan →
+                </a>
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+    document.querySelectorAll(
+        ".reveal"
+    );
+
+
+const revealObserver =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(
+                entry => {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target.classList.add(
+                            "is-visible"
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+revealElements.forEach(
+    element => {
+
+        revealObserver.observe(
+            element
+        );
+
+    }
+);
+
+
+
+/* =========================================================
+   JOURNAL ARTICLE REVEAL
+========================================================= */
+
+const journalRevealObserver =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(
+                entry => {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target.classList.add(
+                            "is-visible"
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+
+/* =========================================================
+   JOURNAL — STATIC OPEN BOOK
+   The journal is intentionally always open.
+========================================================= */
+
+const journalSection =
+    document.querySelector(
+        ".journal-section"
+    );
+
+
+const journalBook =
+    document.getElementById(
+        "journal-book"
+    );
+
+
+if (journalBook) {
+
+    journalBook.style.setProperty(
+        "--journal-open",
+        "1"
+    );
+
+}
+
+
+if (journalSection) {
+
+    journalSection.classList.add(
+        "is-open"
+    );
+
+}
+
+
+
+/* =========================================================
+   ABOUT — COUNT-UP STATISTICS
+========================================================= */
+
+const statNumbers =
+    document.querySelectorAll(
+        ".stat-number"
+    );
+
+
+function animateStatNumber(element) {
+
+    if (
+        element.dataset.animated === "true"
+    ) {
+
+        return;
+
+    }
+
+
+    element.dataset.animated =
+        "true";
+
+
+    const target =
+        Number(
+            element.dataset.target
+        ) || 0;
+
+
+    const suffix =
+        element.dataset.suffix ||
+        "";
+
+
+    const duration =
+        1500;
+
+
+    const startTime =
+        performance.now();
+
+
+    function updateNumber(
+        currentTime
+    ) {
+
+        const elapsed =
+            currentTime -
+            startTime;
+
+
+        const progress =
+            Math.min(
+                elapsed / duration,
+                1
+            );
+
+
+        const easedProgress =
+            1 -
+            Math.pow(
+                1 - progress,
+                3
+            );
+
+
+        const currentValue =
+            Math.floor(
+                target *
+                easedProgress
+            );
+
+
+        element.textContent =
+            currentValue.toLocaleString(
+                "en-US"
+            ) + suffix;
+
+
+        if (
+            progress < 1
+        ) {
+
+            requestAnimationFrame(
+                updateNumber
+            );
+
+        } else {
+
+            element.textContent =
+                target.toLocaleString(
+                    "en-US"
+                ) + suffix;
+
         }
 
+    }
 
 
-        /* =====================================================
-           ESCAPE HTML
-           ===================================================== */
+    requestAnimationFrame(
+        updateNumber
+    );
 
-        function escapeHTML(value) {
-
-
-            const div =
-                document.createElement(
-                    "div"
-                );
+}
 
 
-            div.textContent =
-                value || "";
+const statsObserver =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(
+                entry => {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        animateStatNumber(
+                            entry.target
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold: 0.35
+        }
+    );
 
 
-            return div.innerHTML;
+statNumbers.forEach(
+    stat => {
+
+        statsObserver.observe(
+            stat
+        );
+
+    }
+);
+
+
+
+/* =========================================================
+   POLAROID PARALLAX
+========================================================= */
+
+const hero =
+    document.querySelector(
+        ".journey-hero"
+    );
+
+
+const polaroids =
+    document.querySelectorAll(
+        ".polaroid"
+    );
+
+
+let ticking =
+    false;
+
+
+function updateJourney() {
+
+    if (!hero) {
+
+        return;
+
+    }
+
+
+    const rect =
+        hero.getBoundingClientRect();
+
+
+    const progress =
+        Math.max(
+            0,
+            Math.min(
+                1,
+                -rect.top /
+                (hero.offsetHeight * 0.65)
+            )
+        );
+
+
+    polaroids.forEach(
+        (card, index) => {
+
+            const speed =
+                7 +
+                (index % 3) * 4;
+
+
+            const direction =
+                index % 2 === 0
+                    ? 1
+                    : -1;
+
+
+            card.style.setProperty(
+                "--scroll-y",
+                `${
+                    progress *
+                    speed *
+                    direction
+                }px`
+            );
+
+
+            card.style.setProperty(
+                "--scroll-x",
+                `${
+                    progress *
+                    4 *
+                    direction
+                }px`
+            );
+
+        }
+    );
+
+
+    ticking =
+        false;
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        if (!ticking) {
+
+            window.requestAnimationFrame(
+                updateJourney
+            );
+
+            ticking =
+                true;
 
         }
 
+    },
+    {
+        passive: true
+    }
+);
 
 
-        /* =====================================================
-           START
-           ===================================================== */
-
-        loadHomepageArticles();
+updateJourney();
 
 
-    </script>
+loadHomepageArticles();
+
+
+</script>
 
 
 </body>
