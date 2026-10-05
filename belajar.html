@@ -3369,6 +3369,390 @@
             }
 
         }
+        /* =========================================================
+   VOCABULARY TEST
+   ADDED SECTION ONLY
+========================================================= */
+
+.vocabulary-test-section {
+
+    position: relative;
+
+    padding: 0 7vw 120px;
+
+    background: var(--learn-ivory);
+
+}
+
+
+.vocabulary-test-inner {
+
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+}
+
+
+.vocabulary-test-card {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(280px, .8fr);
+
+    align-items: end;
+
+    gap: 60px;
+
+    padding: 55px;
+
+    border:
+        1px solid
+        var(--learn-line);
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            var(--learn-blue-pale)
+        );
+
+    box-shadow:
+        0 20px 60px
+        rgba(30,45,60,.06);
+
+}
+
+
+.vocabulary-test-label {
+
+    margin:
+        0 0 15px;
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        3px;
+
+    font-weight:
+        600;
+
+    color:
+        var(--learn-muted);
+
+}
+
+
+.vocabulary-test-card h2 {
+
+    max-width:
+        700px;
+
+    margin:
+        0 0 22px;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            40px,
+            5vw,
+            68px
+        );
+
+    font-weight:
+        500;
+
+    line-height:
+        .98;
+
+    letter-spacing:
+        -2.5px;
+
+}
+
+
+.vocabulary-test-card h2 em {
+
+    font-weight:
+        400;
+
+}
+
+
+.vocabulary-test-description {
+
+    max-width:
+        650px;
+
+    margin:
+        0;
+
+    color:
+        var(--learn-muted);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.75;
+
+}
+
+
+.vocabulary-test-meta {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        10px;
+
+    margin-top:
+        28px;
+
+}
+
+
+.vocabulary-test-meta span {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    padding:
+        9px 13px;
+
+    border:
+        1px solid
+        var(--learn-line);
+
+    border-radius:
+        999px;
+
+    background:
+        white;
+
+    font-size:
+        11px;
+
+    font-weight:
+        600;
+
+    color:
+        var(--learn-muted);
+
+}
+
+
+.vocabulary-test-action {
+
+    display:
+        flex;
+
+    justify-content:
+        flex-end;
+
+}
+
+
+.vocabulary-test-button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        12px;
+
+    padding:
+        15px 22px;
+
+    border:
+        1px solid
+        var(--learn-ink);
+
+    border-radius:
+        999px;
+
+    background:
+        var(--learn-ink);
+
+    color:
+        white;
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+
+    text-decoration:
+        none;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        gap .3s ease;
+
+}
+
+
+.vocabulary-test-button span {
+
+    font-size:
+        18px;
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+.vocabulary-test-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    gap:
+        17px;
+
+    background:
+        var(--learn-blue-dark);
+
+    border-color:
+        var(--learn-blue-dark);
+
+}
+
+
+.vocabulary-test-button:hover span {
+
+    transform:
+        translateX(3px);
+
+}
+
+
+/* =========================================================
+   VOCABULARY TEST — RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .vocabulary-test-section {
+
+        padding-left:
+            5vw;
+
+        padding-right:
+            5vw;
+
+    }
+
+
+    .vocabulary-test-card {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            30px;
+
+        padding:
+            45px;
+
+    }
+
+
+    .vocabulary-test-action {
+
+        justify-content:
+            flex-start;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .vocabulary-test-section {
+
+        padding-left:
+            20px;
+
+        padding-right:
+            20px;
+
+        padding-bottom:
+            90px;
+
+    }
+
+
+    .vocabulary-test-card {
+
+        padding:
+            32px 25px;
+
+        border-radius:
+            22px;
+
+    }
+
+
+    .vocabulary-test-card h2 {
+
+        font-size:
+            45px;
+
+    }
+
+
+    .vocabulary-test-meta {
+
+        gap:
+            8px;
+
+    }
+
+
+    .vocabulary-test-meta span {
+
+        font-size:
+            10px;
+
+    }
+
+
+    .vocabulary-test-button {
+
+        width:
+            100%;
+
+    }
+
+}
+        
 
     </style>
 
@@ -4457,7 +4841,76 @@ Ada latihan, test, dan diagnosis bahasa inggris gratis juga untuk teman-teman se
 
         </section>
 
+<!-- =====================================================
+     VOCABULARY TEST
 
+     ADDED SECTION ONLY
+===================================================== -->
+
+<section class="vocabulary-test-section">
+
+    <div class="vocabulary-test-inner">
+
+        <div class="vocabulary-test-card learn-reveal">
+
+            <div>
+
+                <p class="vocabulary-test-label">
+                    VOCABULARY TEST
+                </p>
+
+                <h2>
+                    Seberapa jauh kamu benar-benar mengenal
+                    <em>academic vocabulary?</em>
+                </h2>
+
+                <p class="vocabulary-test-description">
+                    Uji kemampuanmu memahami dan menggunakan
+                    vocabulary akademik dalam konteks pendidikan,
+                    politik, ekonomi, lingkungan, teknologi, dan
+                    berbagai isu sosial.
+                </p>
+
+                <div class="vocabulary-test-meta">
+
+                    <span>
+                        50 Questions
+                    </span>
+
+                    <span>
+                        40 Multiple Choice
+                    </span>
+
+                    <span>
+                        10 Short Answer
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="vocabulary-test-action">
+
+                <a
+                    href="vocabulary-test.html"
+                    class="vocabulary-test-button"
+                >
+
+                    Mulai Vocabulary Test
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
         <!-- =====================================================
              LEARNING LOOP
