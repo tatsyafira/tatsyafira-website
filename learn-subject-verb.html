@@ -1,0 +1,5779 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subject–Verb Agreement — Tatsyafira</title>
+<meta name="description" content="A structured Subject–Verb Agreement learning system by Tatsyafira. Learn, check, master, and move forward.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+:root {
+    --sva-ivory: #fffdfa;
+    --sva-white: #ffffff;
+    --sva-ink: #171717;
+    --sva-muted: #77736d;
+    --sva-line: #e5e1db;
+    --sva-blue: #73a9ea;
+    --sva-blue-dark: #4d8fe0;
+    --sva-blue-pale: #eef6ff;
+    --sva-blue-soft: #dcecff;
+    --sva-yellow: #f7e8ad;
+    --sva-green: #e2eee5;
+    --sva-pink: #f4dce6;
+}
+
+.learn-sva-page {
+    min-height: 100vh;
+    background: var(--sva-ivory);
+    color: var(--sva-ink);
+    overflow-x: hidden;
+}
+
+.learn-sva-page *,
+.learn-sva-page *::before,
+.learn-sva-page *::after {
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    background: rgba(255, 253, 250, .92);
+    border-bottom: 1px solid rgba(229, 225, 219, .85);
+    backdrop-filter: blur(14px);
+}
+
+.header-inner {
+    width: min(1180px, calc(100% - 64px));
+    min-height: 72px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.site-logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+.site-logo img {
+    width: 155px;
+    height: auto;
+    display: block;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.site-nav a {
+    color: #6c6964;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: color .25s ease, transform .25s ease;
+}
+
+.site-nav a:hover {
+    color: var(--sva-ink);
+    transform: translateY(-1px);
+}
+
+/* ACCESS HERO */
+
+.access-preview {
+    position: relative;
+    min-height: 720px;
+    display: flex;
+    align-items: center;
+    padding: 110px 7vw 100px;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 52% 38%, rgba(220,236,255,.98), transparent 33%),
+        radial-gradient(ellipse at 12% 80%, rgba(244,220,230,.55), transparent 27%),
+        radial-gradient(ellipse at 90% 20%, rgba(247,232,173,.50), transparent 24%),
+        var(--sva-ivory);
+}
+
+.access-preview::before {
+    content: "";
+    position: absolute;
+    width: 620px;
+    height: 620px;
+    left: 70%;
+    top: 50%;
+    border: 1px solid rgba(115,169,234,.20);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: svaOrbit 15s linear infinite;
+}
+
+.access-preview::after {
+    content: "";
+    position: absolute;
+    width: 850px;
+    height: 850px;
+    left: 70%;
+    top: 50%;
+    border: 1px dashed rgba(115,169,234,.14);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotate(20deg);
+    animation: svaOrbitReverse 22s linear infinite;
+}
+
+.access-inner {
+    position: relative;
+    z-index: 2;
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(360px, .92fr);
+    align-items: center;
+    gap: 70px;
+}
+
+.access-copy {
+    animation: svaRise .8s cubic-bezier(.22,1,.36,1) both;
+}
+
+.access-kicker,
+.practice-label,
+.course-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 22px;
+    color: var(--sva-muted);
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.access-kicker::before,
+.practice-label::before,
+.course-kicker::before {
+    content: "";
+    width: 34px;
+    height: 1px;
+    background: var(--sva-blue-dark);
+}
+
+.access-copy h1 {
+    max-width: 760px;
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(55px, 7vw, 102px);
+    line-height: .94;
+    letter-spacing: -5px;
+    font-weight: 500;
+}
+
+.access-copy h1 em,
+.course-hero h1 em,
+.practice-header h2 em {
+    font-weight: 400;
+}
+
+.access-description {
+    max-width: 640px;
+    margin: 30px 0 0;
+    color: #66625d;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.access-path {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.access-path span {
+    padding: 8px 11px;
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 999px;
+    background: rgba(255,255,255,.72);
+    color: #6d6964;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.access-card {
+    position: relative;
+    min-height: 455px;
+    padding: 35px;
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 32px;
+    background: rgba(255,255,255,.86);
+    box-shadow: 0 28px 80px rgba(40,70,100,.12);
+    backdrop-filter: blur(12px);
+    animation: svaFloat 5.5s ease-in-out infinite;
+}
+
+.access-card::before {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    right: -75px;
+    bottom: -80px;
+    border-radius: 50%;
+    background: var(--sva-blue-pale);
+}
+
+.access-card-top {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.access-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--sva-blue-pale);
+    font-size: 23px;
+}
+
+.access-card small {
+    color: var(--sva-muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.access-card h2 {
+    position: relative;
+    z-index: 2;
+    margin: 55px 0 10px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 39px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.access-card h2 em {
+    font-weight: 400;
+}
+
+.access-card p {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    color: var(--sva-muted);
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.access-features {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 26px;
+}
+
+.access-feature {
+    padding: 13px 14px;
+    border-radius: 15px;
+    background: rgba(238,246,255,.80);
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.access-lock {
+    position: relative;
+    z-index: 2;
+    margin-top: 24px;
+    padding: 13px 15px;
+    border-left: 3px solid var(--sva-blue);
+    border-radius: 0 14px 14px 0;
+    background: rgba(247,232,173,.55);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.access-form {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    gap: 9px;
+    margin-top: 17px;
+}
+
+.access-label {
+    color: var(--sva-muted);
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.access-input-row {
+    display: flex;
+    gap: 9px;
+}
+
+.access-input {
+    flex: 1;
+    min-height: 48px;
+    padding: 0 15px;
+    border: 1px solid var(--sva-line);
+    border-radius: 13px;
+    background: rgba(255,255,255,.92);
+    color: var(--sva-ink);
+    outline: none;
+    font: inherit;
+}
+
+.access-input:focus {
+    border-color: var(--sva-blue);
+    box-shadow: 0 0 0 4px rgba(115,169,234,.12);
+}
+
+.access-submit,
+.mastery-submit,
+.practice-check-button {
+    min-height: 48px;
+    padding: 0 18px;
+    border: 1px solid var(--sva-ink);
+    border-radius: 13px;
+    background: var(--sva-ink);
+    color: white;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .25s ease, background .25s ease, border-color .25s ease, gap .25s ease;
+}
+
+.access-submit:hover,
+.mastery-submit:hover,
+.practice-check-button:hover {
+    transform: translateY(-2px);
+    background: var(--sva-blue-dark);
+    border-color: var(--sva-blue-dark);
+}
+
+.access-message {
+    min-height: 18px;
+    margin: 0;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.access-message.error {
+    color: #a14c4c;
+}
+
+.access-message.success {
+    color: #4f785b;
+}
+
+/* PREVIEW */
+
+.preview-strip {
+    padding: 0 7vw 95px;
+    background: var(--sva-ivory);
+}
+
+.preview-strip-inner {
+    width: min(1180px,100%);
+    margin: 0 auto;
+    padding: 35px;
+    border: 1px solid var(--sva-line);
+    border-radius: 28px;
+    background: linear-gradient(135deg,#ffffff,rgba(238,246,255,.92));
+    box-shadow: 0 24px 65px rgba(35,55,75,.08);
+}
+
+.preview-strip-label {
+    margin: 0 0 10px;
+    color: var(--sva-muted);
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.preview-strip h2 {
+    margin: 0;
+    max-width: 800px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(34px,5vw,58px);
+    line-height: 1;
+    font-weight: 500;
+}
+
+.preview-strip h2 em {
+    font-weight: 400;
+}
+
+.preview-strip-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.preview-mini {
+    min-height: 130px;
+    padding: 20px;
+    border: 1px solid rgba(0,0,0,.07);
+    border-radius: 20px;
+    background: rgba(255,255,255,.76);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.preview-mini:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(40,70,100,.08);
+}
+
+.preview-mini span {
+    color: var(--sva-blue-dark);
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.preview-mini strong {
+    display: block;
+    margin-top: 14px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.preview-mini small {
+    display: block;
+    margin-top: 7px;
+    color: var(--sva-muted);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* COURSE */
+
+.course-shell {
+    display: none;
+    background: var(--sva-ivory);
+}
+
+.course-shell.unlocked {
+    display: block;
+    animation: courseEnter .8s cubic-bezier(.22,1,.36,1);
+}
+
+.course-hero {
+    position: relative;
+    padding: 100px 7vw 80px;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 80% 20%,rgba(220,236,255,.88),transparent 30%),
+        radial-gradient(ellipse at 10% 75%,rgba(247,232,173,.35),transparent 24%),
+        var(--sva-ivory);
+}
+
+.course-hero::before {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    right: -180px;
+    top: -170px;
+    border: 1px solid rgba(115,169,234,.15);
+    border-radius: 50%;
+    animation: svaOrbit 16s linear infinite;
+}
+
+.course-hero-inner {
+    position: relative;
+    z-index: 2;
+    width: min(1180px,100%);
+    margin: 0 auto;
+}
+
+.course-hero h1 {
+    max-width: 930px;
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(52px,7vw,96px);
+    line-height: .94;
+    letter-spacing: -4px;
+    font-weight: 500;
+}
+
+.course-hero-copy {
+    max-width: 680px;
+    margin: 25px 0 0;
+    color: var(--sva-muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.course-status-bar {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 18px;
+    max-width: 900px;
+    padding: 15px 18px;
+    border: 1px solid var(--sva-line);
+    border-radius: 999px;
+    background: rgba(255,255,255,.82);
+    box-shadow: 0 15px 40px rgba(40,70,100,.06);
+}
+
+.course-status-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: var(--sva-muted);
+}
+
+.course-progress-track,
+.practice-progress-track {
+    height: 7px;
+    border-radius: 999px;
+    background: #edf0f2;
+    overflow: hidden;
+}
+
+.course-progress-fill,
+.practice-progress-fill {
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg,var(--sva-blue),var(--sva-blue-dark));
+    transition: width .65s cubic-bezier(.22,1,.36,1);
+}
+
+.course-progress-text {
+    min-width: 75px;
+    text-align: right;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* NAVIGATION */
+
+.course-navigation {
+    padding: 0 7vw 80px;
+}
+
+.course-navigation-inner {
+    width: min(1180px,100%);
+    margin: 0 auto;
+    padding: 28px;
+    border: 1px solid var(--sva-line);
+    border-radius: 28px;
+    background: white;
+    box-shadow: 0 24px 65px rgba(35,55,75,.08);
+}
+
+.course-navigation-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.course-navigation-header h2 {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(32px,4vw,52px);
+    line-height: 1;
+    font-weight: 500;
+}
+
+.course-navigation-header p {
+    max-width: 440px;
+    margin: 0;
+    color: var(--sva-muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.roadmap {
+    display: grid;
+    grid-template-columns: repeat(14,minmax(62px,1fr));
+    gap: 7px;
+    margin-top: 25px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.roadmap-item {
+    min-width: 62px;
+    padding: 12px 8px;
+    border: 1px solid var(--sva-line);
+    border-radius: 17px;
+    background: var(--sva-ivory);
+    color: #aaa59d;
+    text-align: center;
+    cursor: pointer;
+    transition: transform .3s ease,border-color .3s ease,background .3s ease,color .3s ease;
+}
+
+.roadmap-item.active {
+    border-color: rgba(115,169,234,.45);
+    background: var(--sva-blue-pale);
+    color: var(--sva-blue-dark);
+    transform: translateY(-3px);
+}
+
+.roadmap-item.complete {
+    border-color: rgba(102,145,116,.25);
+    background: var(--sva-green);
+    color: #4f785b;
+}
+
+.roadmap-item.locked {
+    cursor: not-allowed;
+    opacity: .45;
+}
+
+.roadmap-item-number {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.roadmap-item-name {
+    display: block;
+    margin-top: 5px;
+    font-size: 9px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+/* LESSONS */
+
+.lessons-section {
+    padding: 0 7vw 110px;
+}
+
+.lessons-inner {
+    width: min(1180px,100%);
+    margin: 0 auto;
+}
+
+.lesson-module {
+    position: relative;
+    margin-bottom: 32px;
+    padding: 38px;
+    border: 1px solid var(--sva-line);
+    border-radius: 32px;
+    background: white;
+    box-shadow: 0 18px 55px rgba(30,45,60,.045);
+    scroll-margin-top: 105px;
+    overflow: hidden;
+    transition: transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s ease,border-color .35s ease,opacity .35s ease;
+}
+
+.lesson-module:hover {
+    box-shadow: 0 25px 70px rgba(30,45,60,.08);
+}
+
+.lesson-module.locked {
+    opacity: .58;
+}
+
+.lesson-module.locked .lesson-content {
+    position: relative;
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.lesson-module.locked .lesson-content::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 170px;
+    background: linear-gradient(to bottom,rgba(255,255,255,0),rgba(255,255,255,.98));
+    pointer-events: none;
+}
+
+.lesson-module.locked .mastery-panel {
+    display: none;
+}
+
+.lesson-module.current {
+    border-color: rgba(115,169,234,.42);
+    box-shadow: 0 28px 80px rgba(70,120,180,.10);
+}
+
+.lesson-module.complete {
+    border-color: rgba(112,157,124,.30);
+}
+
+.lesson-module.complete .lesson-module-status {
+    background: var(--sva-green);
+    color: #52745a;
+}
+
+.lesson-module-top {
+    display: grid;
+    grid-template-columns: 66px minmax(0,1fr) auto;
+    align-items: start;
+    gap: 22px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--sva-line);
+}
+
+.lesson-module-number {
+    width: 66px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 21px;
+    background: linear-gradient(145deg,var(--sva-blue-pale),#ffffff);
+    border: 1px solid rgba(115,169,234,.20);
+    color: var(--sva-blue-dark);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.lesson-module-kicker {
+    margin: 2px 0 7px;
+    color: var(--sva-muted);
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.lesson-module-top h2 {
+    margin: 0;
+    font-family: "Playfair Display",Georgia,serif;
+    font-size: clamp(32px,4vw,50px);
+    line-height: .98;
+    letter-spacing: -1.5px;
+    font-weight: 500;
+}
+
+.lesson-module-description {
+    max-width: 620px;
+    margin: 12px 0 0;
+    color: var(--sva-muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.lesson-module-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 11px;
+    border-radius: 999px;
+    background: var(--sva-blue-pale);
+    color: var(--sva-blue-dark);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: statusPulse 2s ease-in-out infinite;
+}
+
+.lesson-content {
+    padding-top: 36px;
+}
+
+.lesson-paragraph {
+    max-width: 850px;
+    margin: 0 0 22px;
+    font-family: Georgia,"Times New Roman",serif;
+    color: #242321;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.lesson-heading {
+    max-width: 850px;
+    margin: 50px 0 20px;
+    font-family: "Playfair Display",Georgia,serif;
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.lesson-heading.level-3 {
+    font-size: 31px;
+}
+
+.lesson-heading.level-4 {
+    font-size: 24px;
+}
+
+.lesson-heading.level-5 {
+    font-size: 18px;
+    color: var(--sva-muted);
+}
+
+.lesson-list {
+    max-width: 800px;
+    margin: 0 0 26px;
+    padding-left: 24px;
+}
+
+.lesson-list li {
+    margin: 8px 0;
+    color: #2a2927;
+    font-family: Georgia,"Times New Roman",serif;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.lesson-quote {
+    max-width: 850px;
+    display: flex;
+    gap: 17px;
+    margin: 28px 0;
+    padding: 25px 28px;
+    border-left: 4px solid #f0cd4e;
+    border-radius: 0 20px 20px 0;
+    background: linear-gradient(135deg,rgba(255,249,214,.96),rgba(247,232,173,.66));
+    box-shadow: 0 13px 30px rgba(130,105,35,.06);
+}
+
+.lesson-quote-mark {
+    flex: 0 0 auto;
+    color: #c8a82f;
+    font-family: "Playfair Display",Georgia,serif;
+    font-size: 42px;
+    line-height: .8;
+}
+
+.lesson-quote-text {
+    min-width: 0;
+}
+
+.lesson-quote p {
+    margin: 0 0 8px;
+    font-family: Georgia,"Times New Roman",serif;
+    font-size: 17px;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+.lesson-quote p:last-child {
+    margin-bottom: 0;
+}
+
+.lesson-paragraph code {
+    padding: 2px 7px;
+    border-radius: 7px;
+    background: var(--sva-blue-pale);
+    color: var(--sva-blue-dark);
+    font-family: "DM Sans",sans-serif;
+    font-size: .82em;
+}
+
+.lesson-table-wrap {
+    max-width: 850px;
+    margin: 28px 0;
+    overflow-x: auto;
+    border: 1px solid var(--sva-line);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(30,45,60,.04);
+}
+
+.lesson-table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    background: white;
+}
+
+.lesson-table th,
+.lesson-table td {
+    padding: 15px 17px;
+    border-bottom: 1px solid var(--sva-line);
+    text-align: left;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.lesson-table th {
+    background: var(--sva-blue-pale);
+    color: #4d5965;
+    font-weight: 700;
+}
+
+.lesson-table td {
+    font-family: Georgia,"Times New Roman",serif;
+    font-size: 15px;
+}
+
+.lesson-table tr:last-child td {
+    border-bottom: none;
+}
+
+.lesson-divider {
+    height: 1px;
+    max-width: 850px;
+    margin: 38px 0;
+    background: var(--sva-line);
+}
+
+/* MASTERY */
+
+.mastery-panel {
+    margin-top: 45px;
+    padding: 28px;
+    border: 1px solid rgba(115,169,234,.20);
+    border-radius: 25px;
+    background: linear-gradient(135deg,rgba(238,246,255,.82),rgba(255,255,255,.98));
+}
+
+.mastery-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.mastery-kicker {
+    margin: 0 0 7px;
+    color: var(--sva-blue-dark);
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+}
+
+.mastery-panel-header h3 {
+    margin: 0;
+    font-family: "Playfair Display",Georgia,serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.mastery-panel-header p {
+    max-width: 600px;
+    margin: 8px 0 0;
+    color: var(--sva-muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.mastery-score {
+    min-width: 80px;
+    padding: 12px;
+    border-radius: 17px;
+    background: white;
+    border: 1px solid var(--sva-line);
+    text-align: center;
+}
+
+.mastery-score strong {
+    display: block;
+    font-family: "Playfair Display",Georgia,serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.mastery-score span {
+    display: block;
+    margin-top: 2px;
+    color: var(--sva-muted);
+    font-size: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.checkpoint-question {
+    margin-top: 18px;
+    padding: 20px;
+    border: 1px solid var(--sva-line);
+    border-radius: 18px;
+    background: white;
+}
+
+.checkpoint-question.correct {
+    border-color: rgba(79,120,91,.35);
+    background: rgba(226,238,229,.55);
+}
+
+.checkpoint-question.incorrect {
+    border-color: rgba(161,76,76,.25);
+    background: rgba(244,220,230,.30);
+}
+
+.checkpoint-question p {
+    margin: 0 0 14px;
+    font-family: Georgia,"Times New Roman",serif;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.checkpoint-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+}
+
+.checkpoint-option {
+    padding: 12px 14px;
+    border: 1px solid var(--sva-line);
+    border-radius: 12px;
+    background: #fff;
+    color: var(--sva-ink);
+    font: inherit;
+    font-size: 12px;
+    text-align: left;
+    cursor: pointer;
+    transition: transform .25s ease,border-color .25s ease,background .25s ease;
+}
+
+.checkpoint-option:hover {
+    transform: translateY(-2px);
+    border-color: var(--sva-blue);
+    background: var(--sva-blue-pale);
+}
+
+.checkpoint-option.selected {
+    border-color: var(--sva-blue-dark);
+    background: var(--sva-blue-pale);
+    box-shadow: 0 0 0 3px rgba(115,169,234,.10);
+}
+
+.mastery-submit {
+    margin-top: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 46px;
+    border-radius: 999px;
+}
+
+.mastery-feedback {
+    min-height: 22px;
+    margin-top: 13px;
+    color: var(--sva-muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.mastery-feedback.success {
+    color: #52745a;
+    font-weight: 700;
+}
+
+.mastery-feedback.retry {
+    color: #9a5d4d;
+    font-weight: 700;
+}
+
+/* QUICK REFERENCE */
+
+.quick-reference-module {
+    background: linear-gradient(145deg,#fff,#eef6ff);
+}
+
+/* PRACTICE */
+
+.practice-section {
+    padding: 120px 7vw 130px;
+    background:
+        radial-gradient(ellipse at 80% 10%,rgba(220,236,255,.85),transparent 28%),
+        radial-gradient(ellipse at 12% 70%,rgba(247,232,173,.38),transparent 23%),
+        var(--sva-ivory);
+}
+
+.practice-inner {
+    width: min(1180px,100%);
+    margin: 0 auto;
+}
+
+.practice-header {
+    max-width: 900px;
+}
+
+.practice-header h2 {
+    margin: 0;
+    font-family: "Playfair Display",Georgia,serif;
+    font-size: clamp(50px,7vw,92px);
+    line-height: .94;
+    letter-spacing: -4px;
+    font-weight: 500;
+}
+
+.practice-header p {
+    max-width: 680px;
+    margin: 25px 0 0;
+    color: var(--sva-muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.practice-level-grid {
+    display: grid;
+    grid-template-columns: 1.15fr repeat(5,1fr);
+    gap: 9px;
+    margin-top: 40px;
+}
+
+.practice-level-card {
+    min-height: 120px;
+    padding: 17px;
+    border: 1px solid var(--sva-line);
+    border-radius: 20px;
+    background: white;
+    color: var(--sva-ink);
+    text-align: left;
+    cursor: pointer;
+    transition: transform .3s ease,box-shadow .3s ease,border-color .3s ease,background .3s ease;
+}
+
+.practice-level-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 45px rgba(30,45,60,.08);
+}
+
+.practice-level-card.active {
+    border-color: rgba(115,169,234,.50);
+    background: var(--sva-blue-pale);
+}
+
+.practice-level-card span {
+    display: block;
+    color: var(--sva-muted);
+    font-size: 8px;
+    letter-spacing: 1.7px;
+    font-weight: 700;
+}
+
+.practice-level-card strong {
+    display: block;
+    margin-top: 16px;
+    font-family: "Playfair Display",Georgia,serif;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.practice-level-card small {
+    display: block;
+    margin-top: 2px;
+    color: var(--sva-muted);
+    font-size: 9px;
+}
+
+.practice-progress {
+    position: sticky;
+    top: 90px;
+    z-index: 100;
+    margin-top: 35px;
+    padding: 14px 17px;
+    border: 1px solid var(--sva-line);
+    border-radius: 999px;
+    background: rgba(255,255,255,.90);
+    box-shadow: 0 12px 35px rgba(0,0,0,.06);
+    backdrop-filter: blur(10px);
+}
+
+.practice-progress-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 13px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.practice-grid {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.practice-question {
+    padding: 25px;
+    border: 1px solid var(--sva-line);
+    border-radius: 23px;
+    background: white;
+    box-shadow: 0 10px 32px rgba(30,45,60,.035);
+    transition: transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease,border-color .3s ease;
+}
+
+.practice-question:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 48px rgba(30,45,60,.08);
+}
+
+.practice-question.correct {
+    border-color: rgba(79,120,91,.35);
+    background: linear-gradient(145deg,#fff,rgba(226,238,229,.65));
+}
+
+.practice-question.incorrect {
+    border-color: rgba(161,76,76,.25);
+    background: linear-gradient(145deg,#fff,rgba(244,220,230,.28));
+}
+
+.practice-question-number {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.practice-question-number span:first-child {
+    color: var(--sva-muted);
+    font-size: 9px;
+    letter-spacing: 1.8px;
+    font-weight: 700;
+}
+
+.practice-level-tag {
+    padding: 6px 8px;
+    border-radius: 999px;
+    background: var(--sva-blue-pale);
+    color: var(--sva-blue-dark);
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.practice-question-text {
+    min-height: 75px;
+    margin: 0;
+    font-family: Georgia,"Times New Roman",serif;
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+.practice-options {
+    display: grid;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.practice-option {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--sva-line);
+    border-radius: 12px;
+    background: white;
+    color: var(--sva-ink);
+    font: inherit;
+    font-size: 12px;
+    text-align: left;
+    cursor: pointer;
+    transition: transform .25s ease,border-color .25s ease,background .25s ease;
+}
+
+.practice-option:hover {
+    transform: translateX(3px);
+    border-color: var(--sva-blue);
+    background: var(--sva-blue-pale);
+}
+
+.practice-option.selected {
+    border-color: var(--sva-blue-dark);
+    background: var(--sva-blue-pale);
+}
+
+.practice-feedback {
+    min-height: 38px;
+    margin: 12px 0 0;
+    color: var(--sva-muted);
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+.practice-check-button {
+    margin-top: 28px;
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    border-radius: 999px;
+}
+
+.practice-results {
+    display: none;
+    margin-top: 30px;
+    padding: 35px;
+    border: 1px solid var(--sva-line);
+    border-radius: 28px;
+    background: linear-gradient(135deg,#fff,var(--sva-blue-pale));
+    box-shadow: 0 24px 65px rgba(35,55,75,.08);
+}
+
+.practice-results.show {
+    display: block;
+    animation: resultUp .5s ease both;
+}
+
+.practice-results-grid {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.practice-result-score {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(115,169,234,.30);
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 15px 40px rgba(40,70,100,.08);
+}
+
+.practice-result-score strong {
+    font-family: "Playfair Display",Georgia,serif;
+    font-size: 46px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.practice-result-score span {
+    margin-top: 6px;
+    color: var(--sva-muted);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.practice-results h3 {
+    margin: 0;
+    font-family: "Playfair Display",Georgia,serif;
+    font-size: 38px;
+    font-weight: 500;
+}
+
+.practice-results p {
+    max-width: 620px;
+    margin: 12px 0 0;
+    color: var(--sva-muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.practice-restart {
+    margin-top: 20px;
+    min-height: 44px;
+    padding: 0 17px;
+    border: 1px solid var(--sva-ink);
+    border-radius: 999px;
+    background: var(--sva-ink);
+    color: white;
+    font: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.answer-key {
+    margin-top: 22px;
+    border: 1px solid var(--sva-line);
+    border-radius: 24px;
+    background: white;
+    overflow: hidden;
+}
+
+.answer-key summary {
+    padding: 20px 24px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    list-style: none;
+}
+
+.answer-key summary::-webkit-details-marker {
+    display: none;
+}
+
+.answer-key summary::after {
+    content: "＋";
+    float: right;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.answer-key[open] summary::after {
+    content: "−";
+}
+
+.answer-key-content {
+    padding: 0 24px 25px;
+    border-top: 1px solid var(--sva-line);
+}
+
+.answer-key-grid {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.answer-key-item {
+    padding: 10px;
+    border-radius: 12px;
+    background: var(--sva-blue-pale);
+    font-size: 10px;
+    line-height: 1.45;
+}
+
+.answer-key-item strong {
+    display: block;
+    font-family: "Playfair Display",Georgia,serif;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+/* FOOTER */
+
+.course-footer {
+    padding: 70px 7vw 90px;
+    border-top: 1px solid var(--sva-line);
+    background: var(--sva-ivory);
+    text-align: center;
+}
+
+.course-footer p {
+    margin: 0;
+    color: var(--sva-muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.course-footer strong {
+    color: var(--sva-ink);
+}
+
+/* ANIMATIONS */
+
+.learn-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .75s ease,transform .75s cubic-bezier(.22,1,.36,1);
+}
+
+.learn-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes svaOrbit {
+    from { transform: translate(-50%,-50%) rotate(0deg); }
+    to { transform: translate(-50%,-50%) rotate(360deg); }
+}
+
+@keyframes svaOrbitReverse {
+    from { transform: translate(-50%,-50%) rotate(20deg); }
+    to { transform: translate(-50%,-50%) rotate(-340deg); }
+}
+
+@keyframes svaFloat {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes svaRise {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes courseEnter {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes resultUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes statusPulse {
+    0%,100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.45); opacity: .55; }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 980px) {
+    .access-inner {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .access-card {
+        max-width: 700px;
+    }
+
+    .preview-strip-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .practice-level-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .practice-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .answer-key-grid {
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media (max-width: 720px) {
+    .header-inner {
+        width: min(100% - 32px,1180px);
+    }
+
+    .site-nav {
+        gap: 13px;
+    }
+
+    .site-nav a {
+        font-size: 11px;
+    }
+
+    .site-logo img {
+        width: 125px;
+    }
+
+    .access-preview {
+        min-height: auto;
+        padding: 85px 5vw 70px;
+    }
+
+    .access-copy h1 {
+        font-size: clamp(48px,15vw,76px);
+        letter-spacing: -3px;
+    }
+
+    .access-input-row {
+        flex-direction: column;
+    }
+
+    .access-submit {
+        width: 100%;
+    }
+
+    .access-features {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-strip {
+        padding: 0 5vw 70px;
+    }
+
+    .preview-strip-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .course-hero,
+    .lessons-section,
+    .course-navigation,
+    .practice-section {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .course-hero {
+        padding-top: 75px;
+        padding-bottom: 65px;
+    }
+
+    .course-hero h1 {
+        font-size: clamp(46px,13vw,72px);
+        letter-spacing: -3px;
+    }
+
+    .course-status-bar {
+        grid-template-columns: 1fr;
+        border-radius: 20px;
+        gap: 9px;
+    }
+
+    .course-progress-text {
+        text-align: left;
+    }
+
+    .course-navigation-header {
+        display: block;
+    }
+
+    .course-navigation-header p {
+        margin-top: 15px;
+    }
+
+    .roadmap {
+        grid-template-columns: repeat(7,minmax(62px,1fr));
+    }
+
+    .lesson-module {
+        padding: 24px;
+        border-radius: 25px;
+    }
+
+    .lesson-module-top {
+        grid-template-columns: 55px minmax(0,1fr);
+    }
+
+    .lesson-module-number {
+        width: 55px;
+        height: 55px;
+        border-radius: 17px;
+    }
+
+    .lesson-module-status {
+        grid-column: 2;
+        justify-self: start;
+    }
+
+    .lesson-paragraph {
+        font-size: 16px;
+        line-height: 1.85;
+    }
+
+    .lesson-heading.level-3 {
+        font-size: 27px;
+    }
+
+    .mastery-panel-header {
+        display: block;
+    }
+
+    .mastery-score {
+        margin-top: 18px;
+        width: 90px;
+    }
+
+    .checkpoint-options {
+        grid-template-columns: 1fr;
+    }
+
+    .practice-section {
+        padding-top: 85px;
+        padding-bottom: 90px;
+    }
+
+    .practice-header h2 {
+        font-size: clamp(46px,13vw,72px);
+        letter-spacing: -3px;
+    }
+
+    .practice-level-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .practice-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .practice-results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .answer-key-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .site-nav {
+        gap: 9px;
+    }
+
+    .site-nav a:nth-child(3) {
+        display: none;
+    }
+
+    .access-preview {
+        padding-top: 65px;
+    }
+
+    .access-card {
+        padding: 25px;
+        border-radius: 25px;
+    }
+
+    .preview-strip-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson-module {
+        padding: 20px;
+    }
+
+    .lesson-module-top {
+        gap: 15px;
+    }
+
+    .lesson-module-top h2 {
+        font-size: 30px;
+    }
+
+    .lesson-quote {
+        padding: 20px;
+    }
+
+    .lesson-table th,
+    .lesson-table td {
+        padding: 12px;
+    }
+
+    .mastery-panel {
+        padding: 21px;
+    }
+
+    .practice-level-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .practice-question {
+        padding: 21px;
+    }
+
+    .practice-question-text {
+        font-size: 16px;
+    }
+
+    .answer-key-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+</style>
+</head>
+
+<body class="learn-sva-page">
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="index.html" class="site-logo">
+            <img src="images/tatsyafira-logo.png" alt="Tatsyafira">
+        </a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="catatan.html">Catatan</a>
+            <a href="belajar.html">Belajar</a>
+            <a href="index.html#resources">Resources</a>
+            <a href="belajar.html">← Belajar</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section class="access-preview">
+    <div class="access-inner">
+
+        <div class="access-copy">
+            <p class="access-kicker">GRAMMAR INTENSIVE · MEMBERS LIBRARY</p>
+
+            <h1>
+                Subject–Verb
+                <br>
+                <em>Agreement.</em>
+            </h1>
+
+            <p class="access-description">
+                Bukan sekadar menghafalkan “singular = verb + s”.
+                Pelajari cara menemukan real subject, menghindari
+                the nearest noun trap, memahami special patterns,
+                dan menggunakan satu sistem yang bisa kamu bawa
+                ke soal grammar dan TOEFL.
+            </p>
+
+            <div class="access-path">
+                <span>LEARN</span>
+                <span>CHECK</span>
+                <span>MASTER</span>
+                <span>MOVE FORWARD</span>
+            </div>
+        </div>
+
+        <div class="access-card">
+
+            <div class="access-card-top">
+                <span class="access-icon">Aa</span>
+                <small>GRAMMAR INTENSIVE LIBRARY</small>
+            </div>
+
+            <h2>
+                Learn it
+                <em>properly.</em>
+            </h2>
+
+            <p>
+                13 guided lessons + mastery checkpoints
+                + a 35-question final practice.
+            </p>
+
+            <div class="access-features">
+                <div class="access-feature">01–03 · Foundation</div>
+                <div class="access-feature">04–05 · Core verbs</div>
+                <div class="access-feature">06–09 · Agreement patterns</div>
+                <div class="access-feature">10–13 · Exam mastery</div>
+            </div>
+
+            <div class="access-lock">
+                🔒 Members-only resource.
+                Enter your Grammar Intensive access code
+                to begin.
+            </div>
+
+            <form class="access-form" id="accessForm">
+                <label class="access-label" for="accessPassword">
+                    Access code
+                </label>
+
+                <div class="access-input-row">
+                    <input
+                        type="password"
+                        id="accessPassword"
+                        class="access-input"
+                        placeholder="Enter your access code"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit" class="access-submit">
+                        Unlock →
+                    </button>
+                </div>
+
+                <p
+                    class="access-message"
+                    id="accessMessage"
+                    aria-live="polite"
+                ></p>
+            </form>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="preview-strip">
+    <div class="preview-strip-inner learn-reveal">
+        <p class="preview-strip-label">INSIDE THIS RESOURCE</p>
+
+        <h2>
+            From the basic rule
+            <em>to the TOEFL trap.</em>
+        </h2>
+
+        <div class="preview-strip-grid">
+            <div class="preview-mini">
+                <span>01</span>
+                <strong>Find the subject</strong>
+                <small>Who or what is actually doing the action?</small>
+            </div>
+
+            <div class="preview-mini">
+                <span>02</span>
+                <strong>Find the head noun</strong>
+                <small>Stop matching the verb with the nearest noun.</small>
+            </div>
+
+            <div class="preview-mini">
+                <span>03</span>
+                <strong>Spot the traps</strong>
+                <small>The number of, each, everyone, quantifiers and more.</small>
+            </div>
+
+            <div class="preview-mini">
+                <span>04</span>
+                <strong>Use the system</strong>
+                <small>FIND → REMOVE → IDENTIFY → CHECK → MATCH</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="course-shell" id="courseShell">
+
+<section class="course-hero">
+    <div class="course-hero-inner">
+
+        <p class="course-kicker">
+            01 → 14 · SUBJECT–VERB AGREEMENT
+        </p>
+
+        <h1>
+            Learn.
+            <em>Check.</em>
+            Master.
+        </h1>
+
+        <p class="course-hero-copy">
+            Jangan lompat ke soal terakhir. Setiap bagian
+            dibuka secara bertahap. Pelajari konsepnya,
+            kerjakan mastery check, lalu lanjut ke tahap berikutnya.
+        </p>
+
+        <div class="course-status-bar">
+            <span class="course-status-label">YOUR PROGRESS</span>
+
+            <div class="course-progress-track">
+                <div
+                    class="course-progress-fill"
+                    id="courseProgressFill"
+                ></div>
+            </div>
+
+            <span
+                class="course-progress-text"
+                id="courseProgressText"
+            >
+                0 / 13 mastered
+            </span>
+        </div>
+
+    </div>
+</section>
+
+<section class="course-navigation">
+    <div class="course-navigation-inner learn-reveal">
+
+        <div class="course-navigation-header">
+
+            <div>
+                <p class="course-kicker">YOUR LEARNING PATH</p>
+                <h2>One step at a time.</h2>
+            </div>
+
+            <p>
+                Complete a section's mastery check to unlock
+                the next section. You can revisit anything
+                you have already mastered.
+            </p>
+
+        </div>
+
+        <div class="roadmap" id="roadmap">
+            
+<button type="button" class="roadmap-item" data-roadmap="1" aria-label="Go to section 1">
+    <span class="roadmap-item-number">01</span>
+    <span class="roadmap-item-name">Foundation</span>
+</button>
+
+<button type="button" class="roadmap-item" data-roadmap="2" aria-label="Go to section 2">
+    <span class="roadmap-item-number">02</span>
+    <span class="roadmap-item-name">Find</span>
+</button>
+
+<button type="button" class="roadmap-item" data-roadmap="3" aria-label="Go to section 3">
+    <span class="roadmap-item-number">03</span>
+    <span class="roadmap-item-name">Match</span>
+</button>
+
+<button type="button" class="roadmap-item" data-roadmap="4" aria-label="Go to section 4">
+    <span class="roadmap-item-number">04</span>
+    <span class="roadmap-item-name">Core verbs</span>
+</button>
+
+<button type="button" class="roadmap-item" data-roadmap="5" aria-label="Go to section 5">
+    <span class="roadmap-item-number">05</span>
+    <span class="roadmap-item-name">Structures</span>
+</button>
+
+<button type="button" class="roadmap-item" data-roadmap="6" aria-label="Go to section 6">
+    <span class="roadmap-item-number">06</span>
+    <span class="roadmap-item-name">Patterns</span>
+</button>
+
+<button type="button" class="roadmap-item" data-roadmap="7" aria-label="Go to section 7">
+    <span class="roadmap-item-number">07</span>
+    <span class="roadmap-item-name">The OF trap</span>
+</button>
+
+<button type="button" class="roadmap-item" data-roadmap="8" aria-label="Go to section 8">
+    <span class="roadmap-item-number">08</span>
+    <span class="roadmap-item-name">OR / NOR</span>
+</button>
+
+<button type="button" class="roadmap-item" data-roadmap="9" aria-label="Go to section 9">
+    <span class="roadmap-item-number">09</span>
+    <span class="roadmap-item-name">Quantifiers</span>
+</button>
+
+<button type="button" class="roadmap-item" data-roadmap="10" aria-label="Go to section 10">
+    <span class="roadmap-item-number">10</span>
+    <span class="roadmap-item-name">Uncountable</span>
+</button>
+
+<button type="button" class="roadmap-item" data-roadmap="11" aria-label="Go to section 11">
+    <span class="roadmap-item-number">11</span>
+    <span class="roadmap-item-name">Special cases</span>
+</button>
+
+<button type="button" class="roadmap-item" data-roadmap="12" aria-label="Go to section 12">
+    <span class="roadmap-item-number">12</span>
+    <span class="roadmap-item-name">Exam method</span>
+</button>
+
+<button type="button" class="roadmap-item" data-roadmap="13" aria-label="Go to section 13">
+    <span class="roadmap-item-number">13</span>
+    <span class="roadmap-item-name">Mistakes</span>
+</button>
+
+<button type="button" class="roadmap-item" data-roadmap="14" aria-label="Go to final practice">
+    <span class="roadmap-item-number">14</span>
+    <span class="roadmap-item-name">Practice</span>
+</button>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="lessons-section">
+    <div class="lessons-inner">
+        
+<article class="lesson-module" id="lesson-1" data-section="1">
+    <div class="lesson-module-top">
+        <div class="lesson-module-number">01</div>
+        <div>
+            <p class="lesson-module-kicker">Foundation</p>
+            <h2>WHAT IS SUBJECT–VERB AGREEMENT?</h2>
+            <p class="lesson-module-description">Understand the basic idea.</p>
+        </div>
+        <div class="lesson-module-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Locked</span>
+        </div>
+    </div>
+
+    <div class="lesson-content">
+        <h4 class="lesson-heading level-4">Subject dan Verb harus "match"</h4>
+<p class="lesson-paragraph">Dalam sebuah kalimat, <strong>subject</strong> adalah orang, benda, atau hal yang melakukan suatu tindakan atau yang sedang dibicarakan.</p>
+<p class="lesson-paragraph"><strong>Verb</strong> adalah kata yang menunjukkan tindakan, keadaan, atau kondisi dari subject.</p>
+<p class="lesson-paragraph">Contoh:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>The student studies</strong> every night.</p>
+</div></div>
+<p class="lesson-paragraph">Tanyakan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>Who studies every night?</strong></p>
+</div></div>
+<p class="lesson-paragraph">Jawabannya:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>The student</strong></p>
+</div></div>
+<p class="lesson-paragraph">Jadi:</p>
+<ul class="lesson-list">
+<li><strong>The student</strong> = subject</li>
+<li><strong>studies</strong> = verb</li>
+</ul>
+<p class="lesson-paragraph">Karena <em>student</em> adalah singular, verb-nya juga harus mengikuti bentuk singular:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The student <strong>studies</strong>.</p>
+</div></div>
+<p class="lesson-paragraph">Sekarang ubah subject-nya menjadi plural:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>The students study</strong> every night.</p>
+</div></div>
+<p class="lesson-paragraph">Sekarang:</p>
+<ul class="lesson-list">
+<li><strong>The students</strong> = plural subject</li>
+<li><strong>study</strong> = plural verb</li>
+</ul>
+<p class="lesson-paragraph">Perhatikan bahwa bentuk verb justru berubah dari:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>studies → study</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">Basic Pattern</h4>
+<p class="lesson-paragraph">Untuk sebagian besar verbs dalam <strong>simple present</strong>:</p>
+<h5 class="lesson-heading level-5">Singular</h5>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>He <strong>works</strong>.</p>
+<p>She <strong>studies</strong>.</p>
+<p>The company <strong>grows</strong>.</p>
+</div></div>
+<h5 class="lesson-heading level-5">Plural</h5>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>They <strong>work</strong>.</p>
+<p>The students <strong>study</strong>.</p>
+<p>The companies <strong>grow</strong>.</p>
+</div></div>
+<p class="lesson-paragraph">Cara paling mudah untuk mengingatnya:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>He / She / It → Verb + S</strong></p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>I / You / We / They → Base Verb</strong></p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">Tapi jangan langsung menghafalkan "singular = verb + S"</h4>
+<p class="lesson-paragraph">Ini hanya berlaku untuk pola tertentu, terutama <strong>simple present</strong>.</p>
+<p class="lesson-paragraph">Misalnya:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>She <strong>works</strong>.</p>
+</div></div>
+<p class="lesson-paragraph">Tetapi:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>She <strong>is working</strong>.</p>
+</div></div>
+<p class="lesson-paragraph">Di sini verb utamanya adalah <em>working</em>, sedangkan agreement ditunjukkan oleh auxiliary <em>is</em>.</p>
+<p class="lesson-paragraph">Atau:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>She <strong>can work</strong>.</p>
+</div></div>
+<p class="lesson-paragraph">Bukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>❌ She can works.</p>
+</div></div>
+<p class="lesson-paragraph">Jadi, kita tidak bisa memahami subject–verb agreement hanya dengan satu aturan "singular tambah S".</p>
+<p class="lesson-paragraph">Kita perlu melihat <strong>jenis verb dan struktur kalimatnya</strong>.</p>
+<div class="lesson-divider"></div>
+    </div>
+
+    <div class="mastery-panel" data-checkpoint="1">
+        <div class="mastery-panel-header">
+            <div>
+                <p class="mastery-kicker">MASTER THIS SECTION</p>
+                <h3>Quick mastery check</h3>
+                <p>Get both questions right to unlock the next section.</p>
+            </div>
+            <div class="mastery-score">
+                <strong>0 / 2</strong>
+                <span>correct</span>
+            </div>
+        </div>
+        <div class="checkpoint-questions"></div>
+        <button type="button" class="mastery-submit" data-section="1">
+            Check my answers <span>→</span>
+        </button>
+        <div class="mastery-feedback" aria-live="polite"></div>
+    </div>
+</article>
+
+
+<article class="lesson-module" id="lesson-2" data-section="2">
+    <div class="lesson-module-top">
+        <div class="lesson-module-number">02</div>
+        <div>
+            <p class="lesson-module-kicker">Find</p>
+            <h2>STEP 1 — FIND THE SUBJECT</h2>
+            <p class="lesson-module-description">Learn to locate the real subject.</p>
+        </div>
+        <div class="lesson-module-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Locked</span>
+        </div>
+    </div>
+
+    <div class="lesson-content">
+        <p class="lesson-paragraph">Ini adalah langkah paling penting.</p>
+<p class="lesson-paragraph">Sebelum memilih verb, <strong>jangan langsung melihat kata yang paling dekat dengan verb</strong>.</p>
+<p class="lesson-paragraph">Cari dulu:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>Who or what is doing the action?</strong></p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">A. Ask: "Who or what?"</h4>
+<p class="lesson-paragraph">Contoh:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The student <strong>studies</strong> every night.</p>
+</div></div>
+<p class="lesson-paragraph">Tanyakan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>Who studies every night?</strong></p>
+</div></div>
+<p class="lesson-paragraph">Jawab:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>The student</strong></p>
+</div></div>
+<p class="lesson-paragraph">Jadi:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>student = subject</strong></p>
+</div></div>
+<div class="lesson-divider"></div>
+<p class="lesson-paragraph">Contoh lain:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The company <strong>produces</strong> electric vehicles.</p>
+</div></div>
+<p class="lesson-paragraph">Tanyakan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>What produces electric vehicles?</strong></p>
+</div></div>
+<p class="lesson-paragraph">Jawab:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>The company</strong></p>
+</div></div>
+<p class="lesson-paragraph">Jadi:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>company = subject</strong></p>
+</div></div>
+<div class="lesson-divider"></div>
+<p class="lesson-paragraph">Contoh:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The students <strong>are preparing</strong> for the exam.</p>
+</div></div>
+<p class="lesson-paragraph">Tanyakan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>Who is preparing for the exam?</strong></p>
+</div></div>
+<p class="lesson-paragraph">Jawab:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>The students</strong></p>
+</div></div>
+<p class="lesson-paragraph">Jadi:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>students = subject</strong></p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">SUBJECT ≠ THE NEAREST NOUN</h3>
+<p class="lesson-paragraph">Ini adalah salah satu kesalahan paling umum dalam subject–verb agreement.</p>
+<p class="lesson-paragraph">Perhatikan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The student <strong>in the classroom studies</strong> every day.</p>
+</div></div>
+<p class="lesson-paragraph">Ada beberapa nouns di dalam kalimat, tetapi bukan berarti semuanya bisa menjadi subject.</p>
+<p class="lesson-paragraph">Di sini:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The student = subject</p>
+<p>classroom = noun di dalam prepositional phrase</p>
+</div></div>
+<p class="lesson-paragraph">Tanyakan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>Who studies every day?</strong></p>
+</div></div>
+<p class="lesson-paragraph">Bukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>classroom</p>
+</div></div>
+<p class="lesson-paragraph">Tetapi:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>the student</strong></p>
+</div></div>
+<p class="lesson-paragraph">Maka:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The student <strong>studies</strong> every day.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">The "Remove the Middle" Technique</h4>
+<p class="lesson-paragraph">Ketika sebuah kalimat terlihat panjang dan membingungkan, <strong>hapus sementara informasi tambahan di antara subject dan verb</strong>.</p>
+<p class="lesson-paragraph">Contoh:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The student <strong>in the business administration department</strong> studies every evening.</p>
+</div></div>
+<p class="lesson-paragraph">Hapus bagian:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><em>in the business administration department</em></p>
+</div></div>
+<p class="lesson-paragraph">Maka:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The student <strong>studies</strong> every evening.</p>
+</div></div>
+<p class="lesson-paragraph">Sekarang subject dan verb terlihat jelas.</p>
+<div class="lesson-divider"></div>
+<h5 class="lesson-heading level-5">Example</h5>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The quality <strong>of the products</strong> is excellent.</p>
+</div></div>
+<p class="lesson-paragraph">Hapus:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><em>of the products</em></p>
+</div></div>
+<p class="lesson-paragraph">Maka:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The quality <strong>is</strong> excellent.</p>
+</div></div>
+<p class="lesson-paragraph">Jadi:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>quality → is</strong></p>
+</div></div>
+<p class="lesson-paragraph">Bukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>products → are</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h5 class="lesson-heading level-5">Another example</h5>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The effects <strong>of social media on young people</strong> are significant.</p>
+</div></div>
+<p class="lesson-paragraph">Hapus informasi tambahannya:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The effects <strong>are</strong> significant.</p>
+</div></div>
+<p class="lesson-paragraph">Jadi:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>effects → are</strong></p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">Important Rule</h4>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>### Jangan memilih verb berdasarkan noun yang paling dekat dengan verb.</p>
+<p>Temukan <strong>real subject</strong> terlebih dahulu.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">HEAD NOUN</h3>
+<p class="lesson-paragraph">Dalam sebuah subject yang panjang, kita perlu menemukan <strong>head noun</strong>.</p>
+<p class="lesson-paragraph"><strong>Head noun</strong> adalah noun utama yang menjadi inti dari sebuah noun phrase.</p>
+<p class="lesson-paragraph">Contoh:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The <strong>quality</strong> of the products</p>
+</div></div>
+<p class="lesson-paragraph">Keseluruhan phrase:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The quality of the products</p>
+</div></div>
+<p class="lesson-paragraph">Tetapi head noun-nya adalah:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>quality</strong></p>
+</div></div>
+<p class="lesson-paragraph">Maka:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The quality of the products <strong>is</strong> excellent.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<p class="lesson-paragraph">Contoh lain:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The <strong>effects</strong> of social media</p>
+</div></div>
+<p class="lesson-paragraph">Head noun:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>effects</strong></p>
+</div></div>
+<p class="lesson-paragraph">Maka:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The effects of social media <strong>are</strong> significant.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<p class="lesson-paragraph">Contoh:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The <strong>number</strong> of international students</p>
+</div></div>
+<p class="lesson-paragraph">Head noun:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>number</strong></p>
+</div></div>
+<p class="lesson-paragraph">Maka:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The number of international students <strong>is</strong> increasing.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">Cara menemukan Head Noun</h4>
+<p class="lesson-paragraph">Tanyakan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>"Apa noun utama dalam subject ini?"</strong></p>
+</div></div>
+<p class="lesson-paragraph">Contoh:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The rapid development of artificial intelligence</p>
+</div></div>
+<p class="lesson-paragraph">Noun yang menjadi pusat phrase tersebut adalah:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>development</strong></p>
+</div></div>
+<p class="lesson-paragraph">Bukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>intelligence</p>
+</div></div>
+<p class="lesson-paragraph">Jadi:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The rapid development of artificial intelligence <strong>has</strong> created new opportunities.</p>
+</div></div>
+<div class="lesson-divider"></div>
+    </div>
+
+    <div class="mastery-panel" data-checkpoint="2">
+        <div class="mastery-panel-header">
+            <div>
+                <p class="mastery-kicker">MASTER THIS SECTION</p>
+                <h3>Quick mastery check</h3>
+                <p>Get both questions right to unlock the next section.</p>
+            </div>
+            <div class="mastery-score">
+                <strong>0 / 2</strong>
+                <span>correct</span>
+            </div>
+        </div>
+        <div class="checkpoint-questions"></div>
+        <button type="button" class="mastery-submit" data-section="2">
+            Check my answers <span>→</span>
+        </button>
+        <div class="mastery-feedback" aria-live="polite"></div>
+    </div>
+</article>
+
+
+<article class="lesson-module" id="lesson-3" data-section="3">
+    <div class="lesson-module-top">
+        <div class="lesson-module-number">03</div>
+        <div>
+            <p class="lesson-module-kicker">Match</p>
+            <h2>STEP 2 — MAKE THE VERB MATCH</h2>
+            <p class="lesson-module-description">Make the verb agree.</p>
+        </div>
+        <div class="lesson-module-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Locked</span>
+        </div>
+    </div>
+
+    <div class="lesson-content">
+        <p class="lesson-paragraph">Setelah menemukan subject, langkah berikutnya sederhana:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>Is the subject singular or plural?</strong></p>
+</div></div>
+<p class="lesson-paragraph">Kemudian pilih verb yang sesuai.</p>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">SINGULAR SUBJECT</h4>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The student <strong>works</strong> hard.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The company <strong>grows</strong> rapidly.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The manager <strong>wants</strong> more employees.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The university <strong>offers</strong> several programs.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The researcher <strong>studies</strong> consumer behavior.</p>
+</div></div>
+<p class="lesson-paragraph">Semua subject di atas singular.</p>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">PLURAL SUBJECT</h4>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The students <strong>work</strong> hard.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The companies <strong>grow</strong> rapidly.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The managers <strong>want</strong> more employees.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The universities <strong>offer</strong> several programs.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The researchers <strong>study</strong> consumer behavior.</p>
+</div></div>
+<p class="lesson-paragraph">Semua subject di atas plural.</p>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">Perhatikan perbedaannya</h4>
+<div class="lesson-table-wrap"><table class="lesson-table"><thead><tr>
+<th>Singular Subject</th>
+<th>Plural Subject</th>
+</tr></thead><tbody>
+<tr>
+<td>The student <strong>works</strong>.</td>
+<td>The students <strong>work</strong>.</td>
+</tr>
+<tr>
+<td>The company <strong>grows</strong>.</td>
+<td>The companies <strong>grow</strong>.</td>
+</tr>
+<tr>
+<td>The manager <strong>wants</strong>.</td>
+<td>The managers <strong>want</strong>.</td>
+</tr>
+<tr>
+<td>The researcher <strong>studies</strong>.</td>
+<td>The researchers <strong>study</strong>.</td>
+</tr>
+</tbody></table></div>
+<div class="lesson-divider"></div>
+    </div>
+
+    <div class="mastery-panel" data-checkpoint="3">
+        <div class="mastery-panel-header">
+            <div>
+                <p class="mastery-kicker">MASTER THIS SECTION</p>
+                <h3>Quick mastery check</h3>
+                <p>Get both questions right to unlock the next section.</p>
+            </div>
+            <div class="mastery-score">
+                <strong>0 / 2</strong>
+                <span>correct</span>
+            </div>
+        </div>
+        <div class="checkpoint-questions"></div>
+        <button type="button" class="mastery-submit" data-section="3">
+            Check my answers <span>→</span>
+        </button>
+        <div class="mastery-feedback" aria-live="polite"></div>
+    </div>
+</article>
+
+
+<article class="lesson-module" id="lesson-4" data-section="4">
+    <div class="lesson-module-top">
+        <div class="lesson-module-number">04</div>
+        <div>
+            <p class="lesson-module-kicker">Core verbs</p>
+            <h2>BE / HAVE / DO</h2>
+            <p class="lesson-module-description">Master BE, HAVE and DO.</p>
+        </div>
+        <div class="lesson-module-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Locked</span>
+        </div>
+    </div>
+
+    <div class="lesson-content">
+        <p class="lesson-paragraph">Ada tiga verbs yang sangat penting untuk dihafalkan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>BE</strong></p>
+<p><strong>HAVE</strong></p>
+<p><strong>DO</strong></p>
+</div></div>
+<p class="lesson-paragraph">Ketiganya memiliki bentuk yang berbeda tergantung subject.</p>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">A. BE</h4>
+<div class="lesson-table-wrap"><table class="lesson-table"><thead><tr>
+<th>Subject</th>
+<th>BE</th>
+</tr></thead><tbody>
+<tr>
+<td>I</td>
+<td>am</td>
+</tr>
+<tr>
+<td>You</td>
+<td>are</td>
+</tr>
+<tr>
+<td>We</td>
+<td>are</td>
+</tr>
+<tr>
+<td>They</td>
+<td>are</td>
+</tr>
+<tr>
+<td>He</td>
+<td>is</td>
+</tr>
+<tr>
+<td>She</td>
+<td>is</td>
+</tr>
+<tr>
+<td>It</td>
+<td>is</td>
+</tr>
+</tbody></table></div>
+<p class="lesson-paragraph">Examples:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>I <strong>am</strong> ready.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>She <strong>is</strong> ready.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>They <strong>are</strong> ready.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The student <strong>is</strong> tired.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The students <strong>are</strong> tired.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">B. HAVE</h4>
+<div class="lesson-table-wrap"><table class="lesson-table"><thead><tr>
+<th>Subject</th>
+<th>HAVE</th>
+</tr></thead><tbody>
+<tr>
+<td>I</td>
+<td>have</td>
+</tr>
+<tr>
+<td>You</td>
+<td>have</td>
+</tr>
+<tr>
+<td>We</td>
+<td>have</td>
+</tr>
+<tr>
+<td>They</td>
+<td>have</td>
+</tr>
+<tr>
+<td>He</td>
+<td>has</td>
+</tr>
+<tr>
+<td>She</td>
+<td>has</td>
+</tr>
+<tr>
+<td>It</td>
+<td>has</td>
+</tr>
+</tbody></table></div>
+<p class="lesson-paragraph">Examples:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>They <strong>have</strong> several questions.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>She <strong>has</strong> a question.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The company <strong>has</strong> three offices.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The companies <strong>have</strong> several offices.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">C. DO</h4>
+<div class="lesson-table-wrap"><table class="lesson-table"><thead><tr>
+<th>Subject</th>
+<th>DO</th>
+</tr></thead><tbody>
+<tr>
+<td>I</td>
+<td>do</td>
+</tr>
+<tr>
+<td>You</td>
+<td>do</td>
+</tr>
+<tr>
+<td>We</td>
+<td>do</td>
+</tr>
+<tr>
+<td>They</td>
+<td>do</td>
+</tr>
+<tr>
+<td>He</td>
+<td>does</td>
+</tr>
+<tr>
+<td>She</td>
+<td>does</td>
+</tr>
+<tr>
+<td>It</td>
+<td>does</td>
+</tr>
+</tbody></table></div>
+<p class="lesson-paragraph">Examples:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>They <strong>do</strong> their homework.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>She <strong>does</strong> her homework.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The students <strong>do</strong> the exercise.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The student <strong>does</strong> the exercise.</p>
+</div></div>
+<div class="lesson-divider"></div>
+    </div>
+
+    <div class="mastery-panel" data-checkpoint="4">
+        <div class="mastery-panel-header">
+            <div>
+                <p class="mastery-kicker">MASTER THIS SECTION</p>
+                <h3>Quick mastery check</h3>
+                <p>Get both questions right to unlock the next section.</p>
+            </div>
+            <div class="mastery-score">
+                <strong>0 / 2</strong>
+                <span>correct</span>
+            </div>
+        </div>
+        <div class="checkpoint-questions"></div>
+        <button type="button" class="mastery-submit" data-section="4">
+            Check my answers <span>→</span>
+        </button>
+        <div class="mastery-feedback" aria-live="polite"></div>
+    </div>
+</article>
+
+
+<article class="lesson-module" id="lesson-5" data-section="5">
+    <div class="lesson-module-top">
+        <div class="lesson-module-number">05</div>
+        <div>
+            <p class="lesson-module-kicker">Structures</p>
+            <h2>AUXILIARIES &amp; MODALS</h2>
+            <p class="lesson-module-description">Handle auxiliaries and modals.</p>
+        </div>
+        <div class="lesson-module-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Locked</span>
+        </div>
+    </div>
+
+    <div class="lesson-content">
+        <p class="lesson-paragraph">Sekarang kita masuk ke bagian yang sering membuat learner bingung:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>Kalau ada auxiliary atau modal, verb utama biasanya tidak berubah.</strong></p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">DO / DOES</h4>
+<p class="lesson-paragraph">Bandingkan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>She <strong>works</strong> here.</p>
+</div></div>
+<p class="lesson-paragraph">Tetapi ketika membuat question:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Does she <strong>work</strong> here?</p>
+</div></div>
+<p class="lesson-paragraph">Bukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>❌ Does she works here?</p>
+</div></div>
+<p class="lesson-paragraph">Kenapa?</p>
+<p class="lesson-paragraph">Karena <strong>does</strong> sudah membawa agreement.</p>
+<p class="lesson-paragraph">Maka main verb kembali ke bentuk dasar:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>does + work</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">Negative</h4>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>She <strong>doesn't work</strong> here.</p>
+</div></div>
+<p class="lesson-paragraph">Bukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>❌ She doesn't works here.</p>
+</div></div>
+<p class="lesson-paragraph">Bandingkan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>They <strong>don't work</strong> here.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>She <strong>doesn't work</strong> here.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">MODAL VERBS</h3>
+<p class="lesson-paragraph">Modal verbs meliputi:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>can</p>
+<p>could</p>
+<p>may</p>
+<p>might</p>
+<p>must</p>
+<p>should</p>
+<p>will</p>
+<p>would</p>
+<p>shall</p>
+</div></div>
+<p class="lesson-paragraph">Setelah modal, gunakan <strong>base form</strong>.</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>She <strong>can speak</strong> English.</p>
+</div></div>
+<p class="lesson-paragraph">Bukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>❌ She can speaks English.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Students <strong>should study</strong> more.</p>
+</div></div>
+<p class="lesson-paragraph">Bukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>❌ Students should studies more.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The company <strong>will expand</strong> next year.</p>
+</div></div>
+<p class="lesson-paragraph">Bukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>❌ The company will expands next year.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">Formula</h4>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>Modal + Base Verb</strong></p>
+</div></div>
+<p class="lesson-paragraph">Examples:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>can <strong>go</strong></p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>should <strong>study</strong></p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>must <strong>finish</strong></p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>will <strong>increase</strong></p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>might <strong>change</strong></p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">PRESENT CONTINUOUS</h3>
+<p class="lesson-paragraph">Dalam present continuous, agreement terjadi pada <strong>BE</strong>, bukan pada -ing verb.</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The student <strong>is studying</strong>.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The students <strong>are studying</strong>.</p>
+</div></div>
+<p class="lesson-paragraph">Perhatikan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>is studying</p>
+<p>are studying</p>
+</div></div>
+<p class="lesson-paragraph">Yang berubah adalah:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>is / are</strong></p>
+</div></div>
+<p class="lesson-paragraph">Bukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>studying</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">PRESENT PERFECT</h3>
+<p class="lesson-paragraph">Dalam present perfect, agreement terjadi pada:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>has / have</strong></p>
+</div></div>
+<p class="lesson-paragraph">Contoh:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The student <strong>has completed</strong> the assignment.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The students <strong>have completed</strong> the assignment.</p>
+</div></div>
+<p class="lesson-paragraph">Yang berubah:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>has / have</p>
+</div></div>
+<p class="lesson-paragraph">Sedangkan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>completed</p>
+</div></div>
+<p class="lesson-paragraph">tetap sama.</p>
+<div class="lesson-divider"></div>
+    </div>
+
+    <div class="mastery-panel" data-checkpoint="5">
+        <div class="mastery-panel-header">
+            <div>
+                <p class="mastery-kicker">MASTER THIS SECTION</p>
+                <h3>Quick mastery check</h3>
+                <p>Get both questions right to unlock the next section.</p>
+            </div>
+            <div class="mastery-score">
+                <strong>0 / 2</strong>
+                <span>correct</span>
+            </div>
+        </div>
+        <div class="checkpoint-questions"></div>
+        <button type="button" class="mastery-submit" data-section="5">
+            Check my answers <span>→</span>
+        </button>
+        <div class="mastery-feedback" aria-live="polite"></div>
+    </div>
+</article>
+
+
+<article class="lesson-module" id="lesson-6" data-section="6">
+    <div class="lesson-module-top">
+        <div class="lesson-module-number">06</div>
+        <div>
+            <p class="lesson-module-kicker">Patterns</p>
+            <h2>COMMON AGREEMENT PATTERNS</h2>
+            <p class="lesson-module-description">Recognize common agreement patterns.</p>
+        </div>
+        <div class="lesson-module-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Locked</span>
+        </div>
+    </div>
+
+    <div class="lesson-content">
+        <p class="lesson-paragraph">Sekarang kita masuk ke pola-pola yang paling sering muncul dalam soal grammar.</p>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">A. AND → USUALLY PLURAL</h3>
+<p class="lesson-paragraph">Jika dua subject yang berbeda dihubungkan dengan <strong>and</strong>, biasanya verb-nya plural.</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Tom and Sarah <strong>are</strong> students.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The manager and the employee <strong>are</strong> discussing the problem.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Supply chain and logistics <strong>are</strong> important fields.</p>
+</div></div>
+<p class="lesson-paragraph">Logikanya:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>A + B = two subjects</p>
+</div></div>
+<p class="lesson-paragraph">Maka:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>plural verb</strong></p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">Tetapi ada pengecualian</h4>
+<p class="lesson-paragraph">Kadang dua nouns merujuk pada <strong>satu orang</strong> atau satu combined concept.</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The CEO and founder <strong>is</strong> speaking.</p>
+</div></div>
+<p class="lesson-paragraph">Jika CEO dan founder adalah <strong>orang yang sama</strong>, subject-nya satu orang.</p>
+<p class="lesson-paragraph">Bandingkan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The CEO and the founder <strong>are</strong> speaking.</p>
+</div></div>
+<p class="lesson-paragraph">Ini biasanya berarti ada dua orang berbeda.</p>
+<p class="lesson-paragraph">Jadi, tanyakan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>Are these two separate people/things, or one person/combined idea?</strong></p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">B. EACH → SINGULAR</h3>
+<p class="lesson-paragraph"><strong>Each</strong> memperlakukan anggota kelompok satu per satu.</p>
+<p class="lesson-paragraph">Maka:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>Each + singular verb</strong></p>
+</div></div>
+<p class="lesson-paragraph">Examples:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Each student <strong>has</strong> a textbook.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Each employee <strong>receives</strong> training.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Each participant <strong>is</strong> required to register.</p>
+</div></div>
+<p class="lesson-paragraph">Bukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>❌ Each student have a textbook.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">C. EVERY → SINGULAR</h3>
+<p class="lesson-paragraph"><strong>Every</strong> juga diikuti singular noun dan singular verb.</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Every student <strong>needs</strong> an ID card.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Every employee <strong>has</strong> a responsibility.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Every participant <strong>is</strong> required to register.</p>
+</div></div>
+<p class="lesson-paragraph">Bukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>❌ Every student need an ID card.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">D. EVERYONE / EVERYBODY → SINGULAR</h3>
+<p class="lesson-paragraph">Ini sangat penting.</p>
+<p class="lesson-paragraph">Walaupun <em>everyone</em> berarti banyak orang, secara grammar ia dianggap singular.</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Everyone <strong>is</strong> ready.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Everybody <strong>has</strong> a ticket.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Someone <strong>knows</strong> the answer.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Nobody <strong>wants</strong> to leave.</p>
+</div></div>
+<p class="lesson-paragraph">Bukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>❌ Everyone are ready.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">Words like these are singular:</h4>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>everyone</p>
+<p>everybody</p>
+<p>someone</p>
+<p>somebody</p>
+<p>anyone</p>
+<p>anybody</p>
+<p>no one</p>
+<p>nobody</p>
+</div></div>
+<p class="lesson-paragraph">Cara mengingatnya:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>-one / -body → singular</strong></p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">E. ONE OF + PLURAL NOUN → SINGULAR</h3>
+<p class="lesson-paragraph">Perhatikan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>One of the students <strong>is</strong> absent.</p>
+</div></div>
+<p class="lesson-paragraph">Bukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>❌ One of the students are absent.</p>
+</div></div>
+<p class="lesson-paragraph">Kenapa?</p>
+<p class="lesson-paragraph">Subject-nya adalah:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>one</strong></p>
+</div></div>
+<p class="lesson-paragraph">Bukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>students</p>
+</div></div>
+<p class="lesson-paragraph">Kalau kita hapus bagian tambahan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>One <del>of the students</del> is absent.</p>
+</div></div>
+<p class="lesson-paragraph">Maka jelas:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>one → singular → is</p>
+</div></div>
+<div class="lesson-divider"></div>
+<p class="lesson-paragraph">Examples:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>One of the reasons <strong>is</strong> the high cost.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>One of my friends <strong>has</strong> moved abroad.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>One of the best universities <strong>is</strong> located in Istanbul.</p>
+</div></div>
+<div class="lesson-divider"></div>
+    </div>
+
+    <div class="mastery-panel" data-checkpoint="6">
+        <div class="mastery-panel-header">
+            <div>
+                <p class="mastery-kicker">MASTER THIS SECTION</p>
+                <h3>Quick mastery check</h3>
+                <p>Get both questions right to unlock the next section.</p>
+            </div>
+            <div class="mastery-score">
+                <strong>0 / 2</strong>
+                <span>correct</span>
+            </div>
+        </div>
+        <div class="checkpoint-questions"></div>
+        <button type="button" class="mastery-submit" data-section="6">
+            Check my answers <span>→</span>
+        </button>
+        <div class="mastery-feedback" aria-live="polite"></div>
+    </div>
+</article>
+
+
+<article class="lesson-module" id="lesson-7" data-section="7">
+    <div class="lesson-module-top">
+        <div class="lesson-module-number">07</div>
+        <div>
+            <p class="lesson-module-kicker">The OF trap</p>
+            <h2>THE &quot;OF&quot; TRAP</h2>
+            <p class="lesson-module-description">Stop choosing the nearest noun.</p>
+        </div>
+        <div class="lesson-module-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Locked</span>
+        </div>
+    </div>
+
+    <div class="lesson-content">
+        <p class="lesson-paragraph">Ini adalah salah satu bagian <strong>paling penting untuk TOEFL</strong>.</p>
+<p class="lesson-paragraph">Banyak learner melihat:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>noun + of + noun</p>
+</div></div>
+<p class="lesson-paragraph">lalu memilih verb berdasarkan noun setelah <strong>of</strong>.</p>
+<p class="lesson-paragraph">Padahal, itu sering salah.</p>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">THE MAIN RULE</h3>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>### The noun after "of" is not automatically the subject.</p>
+</div></div>
+<p class="lesson-paragraph">Perhatikan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The quality of the products <strong>is</strong> excellent.</p>
+</div></div>
+<p class="lesson-paragraph">Subject:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>quality</p>
+</div></div>
+<p class="lesson-paragraph">Bukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>products</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">A. THE NUMBER OF</h3>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>The number of + plural noun → singular verb</strong></p>
+</div></div>
+<p class="lesson-paragraph">Example:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The number of students <strong>is</strong> increasing.</p>
+</div></div>
+<p class="lesson-paragraph">Kenapa?</p>
+<p class="lesson-paragraph">Karena head noun-nya adalah:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>number</p>
+</div></div>
+<p class="lesson-paragraph"><em>Students</em> hanya menjelaskan apa yang sedang dihitung.</p>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">B. A NUMBER OF</h3>
+<p class="lesson-paragraph">Berbeda dengan sebelumnya:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>A number of + plural noun → plural verb</strong></p>
+</div></div>
+<p class="lesson-paragraph">Example:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>A number of students <strong>are</strong> absent.</p>
+</div></div>
+<p class="lesson-paragraph">Di sini:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>a number of = many / several</p>
+</div></div>
+<p class="lesson-paragraph">Maka:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>students → plural → are</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">Compare</h4>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The number of students <strong>is</strong> increasing.</p>
+</div></div>
+<p class="lesson-paragraph">= total number</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>A number of students <strong>are</strong> absent.</p>
+</div></div>
+<p class="lesson-paragraph">= many students</p>
+<h5 class="lesson-heading level-5">Hafalkan pasangan ini:</h5>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>The number of → IS</strong></p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>A number of → ARE</strong></p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">C. EACH OF</h3>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Each of the students <strong>has</strong> a laptop.</p>
+</div></div>
+<p class="lesson-paragraph">Walaupun <em>students</em> plural, subject-nya adalah:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>each</p>
+</div></div>
+<p class="lesson-paragraph">Maka:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>has</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">D. ONE OF</h3>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>One of the students <strong>is</strong> absent.</p>
+</div></div>
+<p class="lesson-paragraph">Subject:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>one</p>
+</div></div>
+<p class="lesson-paragraph">Maka:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>is</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">E. QUALITY OF</h3>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The quality of the products <strong>is</strong> excellent.</p>
+</div></div>
+<p class="lesson-paragraph">Head noun:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>quality</p>
+</div></div>
+<p class="lesson-paragraph">Maka:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>is</p>
+</div></div>
+<p class="lesson-paragraph">Bandingkan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The products of the company <strong>are</strong> excellent.</p>
+</div></div>
+<p class="lesson-paragraph">Sekarang head noun-nya:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>products</p>
+</div></div>
+<p class="lesson-paragraph">Maka:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>are</p>
+</div></div>
+<div class="lesson-divider"></div>
+    </div>
+
+    <div class="mastery-panel" data-checkpoint="7">
+        <div class="mastery-panel-header">
+            <div>
+                <p class="mastery-kicker">MASTER THIS SECTION</p>
+                <h3>Quick mastery check</h3>
+                <p>Get both questions right to unlock the next section.</p>
+            </div>
+            <div class="mastery-score">
+                <strong>0 / 2</strong>
+                <span>correct</span>
+            </div>
+        </div>
+        <div class="checkpoint-questions"></div>
+        <button type="button" class="mastery-submit" data-section="7">
+            Check my answers <span>→</span>
+        </button>
+        <div class="mastery-feedback" aria-live="polite"></div>
+    </div>
+</article>
+
+
+<article class="lesson-module" id="lesson-8" data-section="8">
+    <div class="lesson-module-top">
+        <div class="lesson-module-number">08</div>
+        <div>
+            <p class="lesson-module-kicker">OR / NOR</p>
+            <h2>OR / NOR</h2>
+            <p class="lesson-module-description">Follow the closest subject.</p>
+        </div>
+        <div class="lesson-module-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Locked</span>
+        </div>
+    </div>
+
+    <div class="lesson-content">
+        <p class="lesson-paragraph">Ketika subject dihubungkan dengan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>or</p>
+<p>nor</p>
+<p>either...or</p>
+<p>neither...nor</p>
+</div></div>
+<p class="lesson-paragraph">verb biasanya mengikuti <strong>subject yang paling dekat dengan verb</strong>.</p>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">EITHER...OR</h4>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Either the teacher or the students <strong>are</strong> responsible.</p>
+</div></div>
+<p class="lesson-paragraph">Subject yang paling dekat dengan verb:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>students</p>
+</div></div>
+<p class="lesson-paragraph">Plural → <strong>are</strong></p>
+<div class="lesson-divider"></div>
+<p class="lesson-paragraph">Sebaliknya:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Either the students or the teacher <strong>is</strong> responsible.</p>
+</div></div>
+<p class="lesson-paragraph">Subject yang paling dekat:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>teacher</p>
+</div></div>
+<p class="lesson-paragraph">Singular → <strong>is</strong></p>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">NEITHER...NOR</h3>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Neither the manager nor the employees <strong>are</strong> available.</p>
+</div></div>
+<p class="lesson-paragraph">Closest subject:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>employees → plural</p>
+</div></div>
+<p class="lesson-paragraph">Maka:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>are</p>
+</div></div>
+<p class="lesson-paragraph">Tetapi:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Neither the employees nor the manager <strong>is</strong> available.</p>
+</div></div>
+<p class="lesson-paragraph">Closest subject:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>manager → singular</p>
+</div></div>
+<p class="lesson-paragraph">Maka:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>is</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">Shortcut</h4>
+<p class="lesson-paragraph">Jika menemukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>A or B</p>
+</div></div>
+<p class="lesson-paragraph">atau:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>A nor B</p>
+</div></div>
+<p class="lesson-paragraph">lihat:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>B</strong></p>
+</div></div>
+<p class="lesson-paragraph">Karena B adalah subject yang paling dekat dengan verb.</p>
+<div class="lesson-divider"></div>
+    </div>
+
+    <div class="mastery-panel" data-checkpoint="8">
+        <div class="mastery-panel-header">
+            <div>
+                <p class="mastery-kicker">MASTER THIS SECTION</p>
+                <h3>Quick mastery check</h3>
+                <p>Get both questions right to unlock the next section.</p>
+            </div>
+            <div class="mastery-score">
+                <strong>0 / 2</strong>
+                <span>correct</span>
+            </div>
+        </div>
+        <div class="checkpoint-questions"></div>
+        <button type="button" class="mastery-submit" data-section="8">
+            Check my answers <span>→</span>
+        </button>
+        <div class="mastery-feedback" aria-live="polite"></div>
+    </div>
+</article>
+
+
+<article class="lesson-module" id="lesson-9" data-section="9">
+    <div class="lesson-module-top">
+        <div class="lesson-module-number">09</div>
+        <div>
+            <p class="lesson-module-kicker">Quantifiers</p>
+            <h2>QUANTIFIERS</h2>
+            <p class="lesson-module-description">Look at the noun after OF.</p>
+        </div>
+        <div class="lesson-module-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Locked</span>
+        </div>
+    </div>
+
+    <div class="lesson-content">
+        <p class="lesson-paragraph">Quantifiers adalah kata atau phrases yang menunjukkan jumlah.</p>
+<p class="lesson-paragraph">Contohnya:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>some</p>
+<p>all</p>
+<p>most</p>
+<p>half</p>
+<p>none</p>
+<p>percentages</p>
+<p>fractions</p>
+</div></div>
+<p class="lesson-paragraph">Dalam banyak struktur ini, gunakan prinsip:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>Look at the noun after "of."</strong></p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">A. SOME OF</h3>
+<h5 class="lesson-heading level-5">Uncountable noun → singular</h5>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Some of the money <strong>is</strong> missing.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Some of the information <strong>is</strong> incorrect.</p>
+</div></div>
+<h5 class="lesson-heading level-5">Plural noun → plural</h5>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Some of the students <strong>are</strong> absent.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Some of the books <strong>are</strong> missing.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">B. ALL OF</h3>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>All of the information <strong>is</strong> useful.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>All of the money <strong>has</strong> been spent.</p>
+</div></div>
+<p class="lesson-paragraph">Tetapi:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>All of the students <strong>are</strong> present.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>All of the books <strong>have</strong> been sold.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">C. HALF OF</h3>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Half of the cake <strong>is</strong> gone.</p>
+</div></div>
+<p class="lesson-paragraph">Tetapi:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Half of the students <strong>are</strong> absent.</p>
+</div></div>
+<p class="lesson-paragraph">Again:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>cake → singular/uncountable → is</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>students → plural → are</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">D. PERCENTAGES</h3>
+<p class="lesson-paragraph">Gunakan prinsip yang sama.</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>50% of the population <strong>is</strong> unemployed.</p>
+</div></div>
+<p class="lesson-paragraph">Tetapi:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>50% of the students <strong>are</strong> international.</p>
+</div></div>
+<p class="lesson-paragraph">Jadi:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>percentage + of + noun → lihat noun setelah "of."</strong></p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">E. FRACTIONS</h3>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Half of the cake <strong>is</strong> gone.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Half of the students <strong>are</strong> absent.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Two-thirds of the population <strong>is</strong> affected.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Two-thirds of the participants <strong>are</strong> international students.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">F. MOST OF</h3>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Most of the information <strong>is</strong> available.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Most of the students <strong>are</strong> ready.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Most of the money <strong>has</strong> been spent.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Most of the books <strong>have</strong> been sold.</p>
+</div></div>
+<div class="lesson-divider"></div>
+    </div>
+
+    <div class="mastery-panel" data-checkpoint="9">
+        <div class="mastery-panel-header">
+            <div>
+                <p class="mastery-kicker">MASTER THIS SECTION</p>
+                <h3>Quick mastery check</h3>
+                <p>Get both questions right to unlock the next section.</p>
+            </div>
+            <div class="mastery-score">
+                <strong>0 / 2</strong>
+                <span>correct</span>
+            </div>
+        </div>
+        <div class="checkpoint-questions"></div>
+        <button type="button" class="mastery-submit" data-section="9">
+            Check my answers <span>→</span>
+        </button>
+        <div class="mastery-feedback" aria-live="polite"></div>
+    </div>
+</article>
+
+
+<article class="lesson-module" id="lesson-10" data-section="10">
+    <div class="lesson-module-top">
+        <div class="lesson-module-number">10</div>
+        <div>
+            <p class="lesson-module-kicker">Uncountable</p>
+            <h2>UNCOUNTABLE NOUNS</h2>
+            <p class="lesson-module-description">Recognize singular uncountable nouns.</p>
+        </div>
+        <div class="lesson-module-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Locked</span>
+        </div>
+    </div>
+
+    <div class="lesson-content">
+        <p class="lesson-paragraph">Ada beberapa nouns dalam English yang secara grammar dianggap <strong>uncountable</strong>.</p>
+<p class="lesson-paragraph">Nouns seperti ini biasanya menggunakan singular verb.</p>
+<p class="lesson-paragraph">Contohnya:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>information</p>
+<p>advice</p>
+<p>research</p>
+<p>knowledge</p>
+<p>equipment</p>
+<p>furniture</p>
+<p>luggage</p>
+<p>money</p>
+<p>news</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">Examples</h4>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The information <strong>is</strong> useful.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The advice <strong>was</strong> helpful.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The research <strong>shows</strong> that exercise improves concentration.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The equipment <strong>is</strong> expensive.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The furniture <strong>is</strong> new.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The news <strong>is</strong> surprising.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">Jangan membuat bentuk plural secara langsung</h4>
+<p class="lesson-paragraph">Jangan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>❌ informations</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>❌ advices</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>❌ equipments</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>❌ furnitures</p>
+</div></div>
+<p class="lesson-paragraph">Gunakan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>information</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>advice</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>equipment</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>furniture</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">RESEARCH vs. STUDIES</h3>
+<p class="lesson-paragraph">Ini sangat penting untuk academic English.</p>
+<p class="lesson-paragraph"><strong>Research</strong> biasanya uncountable:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Recent research <strong>shows</strong> that...</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Further research <strong>is</strong> needed.</p>
+</div></div>
+<p class="lesson-paragraph">Tetapi:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>studies</p>
+</div></div>
+<p class="lesson-paragraph">adalah plural.</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Recent studies <strong>show</strong> that...</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Several studies <strong>have</strong> examined this issue.</p>
+</div></div>
+<p class="lesson-paragraph">Jadi:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Research <strong>shows</strong>...</p>
+</div></div>
+<p class="lesson-paragraph">tetapi:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Studies <strong>show</strong>...</p>
+</div></div>
+<div class="lesson-divider"></div>
+    </div>
+
+    <div class="mastery-panel" data-checkpoint="10">
+        <div class="mastery-panel-header">
+            <div>
+                <p class="mastery-kicker">MASTER THIS SECTION</p>
+                <h3>Quick mastery check</h3>
+                <p>Get both questions right to unlock the next section.</p>
+            </div>
+            <div class="mastery-score">
+                <strong>0 / 2</strong>
+                <span>correct</span>
+            </div>
+        </div>
+        <div class="checkpoint-questions"></div>
+        <button type="button" class="mastery-submit" data-section="10">
+            Check my answers <span>→</span>
+        </button>
+        <div class="mastery-feedback" aria-live="polite"></div>
+    </div>
+</article>
+
+
+<article class="lesson-module" id="lesson-11" data-section="11">
+    <div class="lesson-module-top">
+        <div class="lesson-module-number">11</div>
+        <div>
+            <p class="lesson-module-kicker">Special cases</p>
+            <h2>SPECIAL CASES</h2>
+            <p class="lesson-module-description">Handle exceptions and tricky structures.</p>
+        </div>
+        <div class="lesson-module-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Locked</span>
+        </div>
+    </div>
+
+    <div class="lesson-content">
+        <h4 class="lesson-heading level-4">A. THERE IS / THERE ARE</h4>
+<p class="lesson-paragraph">Dalam struktur <strong>there is / there are</strong>, jangan menganggap <em>there</em> sebagai subject.</p>
+<p class="lesson-paragraph">Real subject berada setelah verb.</p>
+<h5 class="lesson-heading level-5">Singular</h5>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>There <strong>is</strong> a problem.</p>
+</div></div>
+<p class="lesson-paragraph">Real subject:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>a problem</p>
+</div></div>
+<h5 class="lesson-heading level-5">Plural</h5>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>There <strong>are</strong> several problems.</p>
+</div></div>
+<p class="lesson-paragraph">Real subject:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>several problems</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h5 class="lesson-heading level-5">Compare</h5>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>There <strong>is</strong> a student in the classroom.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>There <strong>are</strong> ten students in the classroom.</p>
+</div></div>
+<p class="lesson-paragraph">Jadi ketika melihat:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>There is / There are</p>
+</div></div>
+<p class="lesson-paragraph">langsung tanyakan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>What comes after the verb?</strong></p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">B. HERE IS / HERE ARE</h3>
+<p class="lesson-paragraph">Prinsipnya sama.</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Here <strong>is</strong> the report.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Here <strong>are</strong> the reports.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Here <strong>is</strong> the information you requested.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Here <strong>are</strong> the documents you requested.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">C. RELATIVE CLAUSES: WHO / WHICH / THAT</h3>
+<p class="lesson-paragraph">Relative clauses dapat membuat subject–verb agreement menjadi lebih sulit.</p>
+<p class="lesson-paragraph">Contoh:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The student who <strong>works</strong> here is my friend.</p>
+</div></div>
+<p class="lesson-paragraph">Apa yang dirujuk oleh <strong>who</strong>?</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>student</p>
+</div></div>
+<p class="lesson-paragraph">Karena student singular:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>works</p>
+</div></div>
+<div class="lesson-divider"></div>
+<p class="lesson-paragraph">Bandingkan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The students who <strong>work</strong> here are my friends.</p>
+</div></div>
+<p class="lesson-paragraph">Sekarang <strong>who</strong> merujuk kepada:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>students</p>
+</div></div>
+<p class="lesson-paragraph">Karena students plural:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>work</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">The key question</h4>
+<p class="lesson-paragraph">Jika menemukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>who / which / that</p>
+</div></div>
+<p class="lesson-paragraph">tanyakan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>What noun does it refer to?</strong></p>
+</div></div>
+<p class="lesson-paragraph">Setelah tahu noun-nya, tentukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>singular atau plural?</p>
+</div></div>
+<p class="lesson-paragraph">Kemudian pilih verb yang sesuai.</p>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">D. COLLECTIVE NOUNS</h3>
+<p class="lesson-paragraph">Collective nouns adalah nouns yang merujuk kepada sebuah kelompok.</p>
+<p class="lesson-paragraph">Contohnya:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>team</p>
+<p>family</p>
+<p>committee</p>
+<p>company</p>
+<p>organization</p>
+<p>government</p>
+<p>audience</p>
+<p>class</p>
+<p>staff</p>
+</div></div>
+<p class="lesson-paragraph">Dalam American English, collective nouns biasanya menggunakan singular verb ketika kelompok tersebut dianggap sebagai satu unit.</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The team <strong>is</strong> winning.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The committee <strong>has</strong> reached a decision.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The company <strong>is</strong> growing.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The government <strong>has</strong> announced a new policy.</p>
+</div></div>
+<p class="lesson-paragraph">British English kadang menggunakan plural verb ketika yang ditekankan adalah individual members.</p>
+<p class="lesson-paragraph">Namun untuk academic English dan standardized tests, singular agreement merupakan pilihan yang aman ketika kelompok tersebut bertindak sebagai satu unit.</p>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">E. MEASUREMENTS</h3>
+<p class="lesson-paragraph">Expressions yang menunjukkan waktu, uang, jarak, atau measurement dapat menggunakan singular verb ketika dianggap sebagai <strong>satu total amount</strong>.</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Ten dollars <strong>is</strong> enough.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Five years <strong>is</strong> a long time.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Two hours <strong>is</strong> enough to finish the exam.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Ten kilometers <strong>is</strong> too far to walk.</p>
+</div></div>
+<p class="lesson-paragraph">Dalam contoh tersebut, kita melihat jumlah tersebut sebagai satu total amount.</p>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">F. WORDS ENDING IN -S</h3>
+<p class="lesson-paragraph">Jangan menganggap:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>word ending in -s = plural</strong></p>
+</div></div>
+<p class="lesson-paragraph">Tidak selalu.</p>
+<p class="lesson-paragraph">Contohnya:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Economics <strong>is</strong> important.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Mathematics <strong>is</strong> difficult.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Statistics <strong>is</strong> an important field.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The news <strong>is</strong> surprising.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Politics <strong>is</strong> complicated.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">STATISTICS</h4>
+<p class="lesson-paragraph">Kata <strong>statistics</strong> bisa memiliki fungsi yang berbeda.</p>
+<p class="lesson-paragraph">Sebagai bidang ilmu:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Statistics <strong>is</strong> an important subject.</p>
+</div></div>
+<p class="lesson-paragraph">Sebagai numerical data:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The statistics <strong>are</strong> concerning.</p>
+</div></div>
+<p class="lesson-paragraph">Jadi selalu lihat <strong>meaning dan function</strong> dalam kalimat.</p>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">G. GERUNDS AS SUBJECTS</h3>
+<p class="lesson-paragraph">Bentuk <strong>-ing</strong> dapat berfungsi sebagai noun.</p>
+<p class="lesson-paragraph">Contoh:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Studying <strong>is</strong> important.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Exercising <strong>is</strong> beneficial.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Learning English <strong>takes</strong> time.</p>
+</div></div>
+<p class="lesson-paragraph">Di sini, kegiatan tersebut dianggap sebagai satu idea.</p>
+<p class="lesson-paragraph">Maka:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>Studying <strong>is</strong></p>
+</div></div>
+<p class="lesson-paragraph">Bukan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>❌ Studying are</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">H. INFINITIVES AS SUBJECTS</h3>
+<p class="lesson-paragraph">Infinitive juga dapat berfungsi sebagai subject.</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>To learn a language <strong>takes</strong> time.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>To travel abroad <strong>is</strong> expensive.</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>To exercise regularly <strong>requires</strong> discipline.</p>
+</div></div>
+<p class="lesson-paragraph">Keseluruhan activity dianggap sebagai satu idea.</p>
+<div class="lesson-divider"></div>
+    </div>
+
+    <div class="mastery-panel" data-checkpoint="11">
+        <div class="mastery-panel-header">
+            <div>
+                <p class="mastery-kicker">MASTER THIS SECTION</p>
+                <h3>Quick mastery check</h3>
+                <p>Get both questions right to unlock the next section.</p>
+            </div>
+            <div class="mastery-score">
+                <strong>0 / 2</strong>
+                <span>correct</span>
+            </div>
+        </div>
+        <div class="checkpoint-questions"></div>
+        <button type="button" class="mastery-submit" data-section="11">
+            Check my answers <span>→</span>
+        </button>
+        <div class="mastery-feedback" aria-live="polite"></div>
+    </div>
+</article>
+
+
+<article class="lesson-module" id="lesson-12" data-section="12">
+    <div class="lesson-module-top">
+        <div class="lesson-module-number">12</div>
+        <div>
+            <p class="lesson-module-kicker">Exam method</p>
+            <h2>THE 5-STEP EXAM METHOD</h2>
+            <p class="lesson-module-description">Use the five-step system.</p>
+        </div>
+        <div class="lesson-module-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Locked</span>
+        </div>
+    </div>
+
+    <div class="lesson-content">
+        <p class="lesson-paragraph">Sekarang kita ubah semua rules di atas menjadi satu sistem yang bisa kamu gunakan saat mengerjakan soal.</p>
+<h4 class="lesson-heading level-4">STEP 1 — FIND</h4>
+<p class="lesson-paragraph">Cari verb yang sedang diuji.</p>
+<p class="lesson-paragraph">Contoh:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The quality of the products <strong>has / have</strong> improved.</p>
+</div></div>
+<p class="lesson-paragraph">Verb:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>has / have</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">STEP 2 — ASK</h4>
+<p class="lesson-paragraph">Tanyakan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>Who or what has improved?</strong></p>
+</div></div>
+<p class="lesson-paragraph">Jawaban:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The quality</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">STEP 3 — REMOVE</h4>
+<p class="lesson-paragraph">Hapus sementara informasi yang mengganggu.</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The <strong>quality</strong> <del>of the products</del> has improved.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">STEP 4 — IDENTIFY</h4>
+<p class="lesson-paragraph">Tentukan apakah subject-nya singular atau plural.</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>quality = singular</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">STEP 5 — MATCH</h4>
+<p class="lesson-paragraph">Karena subject singular:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>has</strong></p>
+</div></div>
+<p class="lesson-paragraph">Maka:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The quality of the products <strong>has</strong> improved.</p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">THE FAST VERSION</h3>
+<p class="lesson-paragraph">Kalau sedang mengerjakan TOEFL dan waktunya terbatas, gunakan:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>## FIND → REMOVE → IDENTIFY → CHECK → MATCH</p>
+</div></div>
+<h5 class="lesson-heading level-5">FIND</h5>
+<p class="lesson-paragraph">Cari verb.</p>
+<p class="lesson-paragraph">↓</p>
+<h5 class="lesson-heading level-5">REMOVE</h5>
+<p class="lesson-paragraph">Abaikan distracting phrases.</p>
+<p class="lesson-paragraph">↓</p>
+<h5 class="lesson-heading level-5">IDENTIFY</h5>
+<p class="lesson-paragraph">Cari real subject/head noun.</p>
+<p class="lesson-paragraph">↓</p>
+<h5 class="lesson-heading level-5">CHECK</h5>
+<p class="lesson-paragraph">Singular atau plural?</p>
+<p class="lesson-paragraph">↓</p>
+<h5 class="lesson-heading level-5">MATCH</h5>
+<p class="lesson-paragraph">Pilih verb yang sesuai.</p>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">TOEFL-STYLE EXAMPLE</h3>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The effects of social media on young people's mental health ___ becoming increasingly significant.</p>
+</div></div>
+<p class="lesson-paragraph">A. is B. are</p>
+<h5 class="lesson-heading level-5">Step 1 — FIND</h5>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>is / are becoming</p>
+</div></div>
+<h5 class="lesson-heading level-5">Step 2 — ASK</h5>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>What is becoming significant?</p>
+</div></div>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The effects</p>
+</div></div>
+<h5 class="lesson-heading level-5">Step 3 — REMOVE</h5>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The <strong>effects</strong> <del>of social media</del> <del>on young people's mental health</del> are becoming significant.</p>
+</div></div>
+<h5 class="lesson-heading level-5">Step 4 — CHECK</h5>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>effects = plural</p>
+</div></div>
+<h5 class="lesson-heading level-5">Step 5 — MATCH</h5>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>plural → <strong>are</strong></p>
+</div></div>
+<h5 class="lesson-heading level-5">Answer:</h5>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The effects of social media on young people's mental health <strong>are</strong> becoming increasingly significant.</p>
+</div></div>
+<div class="lesson-divider"></div>
+    </div>
+
+    <div class="mastery-panel" data-checkpoint="12">
+        <div class="mastery-panel-header">
+            <div>
+                <p class="mastery-kicker">MASTER THIS SECTION</p>
+                <h3>Quick mastery check</h3>
+                <p>Get both questions right to unlock the next section.</p>
+            </div>
+            <div class="mastery-score">
+                <strong>0 / 2</strong>
+                <span>correct</span>
+            </div>
+        </div>
+        <div class="checkpoint-questions"></div>
+        <button type="button" class="mastery-submit" data-section="12">
+            Check my answers <span>→</span>
+        </button>
+        <div class="mastery-feedback" aria-live="polite"></div>
+    </div>
+</article>
+
+
+<article class="lesson-module" id="lesson-13" data-section="13">
+    <div class="lesson-module-top">
+        <div class="lesson-module-number">13</div>
+        <div>
+            <p class="lesson-module-kicker">Mistakes</p>
+            <h2>COMMON MISTAKES</h2>
+            <p class="lesson-module-description">Recognize the traps.</p>
+        </div>
+        <div class="lesson-module-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Locked</span>
+        </div>
+    </div>
+
+    <div class="lesson-content">
+        <h4 class="lesson-heading level-4">1. Looking at the nearest noun</h4>
+<p class="lesson-paragraph">❌ The quality of the products <strong>are</strong> excellent.</p>
+<p class="lesson-paragraph">✅ The quality of the products <strong>is</strong> excellent.</p>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">2. The number of</h4>
+<p class="lesson-paragraph">❌ The number of students <strong>are</strong> increasing.</p>
+<p class="lesson-paragraph">✅ The number of students <strong>is</strong> increasing.</p>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">3. A number of</h4>
+<p class="lesson-paragraph">❌ A number of students <strong>is</strong> absent.</p>
+<p class="lesson-paragraph">✅ A number of students <strong>are</strong> absent.</p>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">4. Each</h4>
+<p class="lesson-paragraph">❌ Each student <strong>have</strong> a textbook.</p>
+<p class="lesson-paragraph">✅ Each student <strong>has</strong> a textbook.</p>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">5. Every</h4>
+<p class="lesson-paragraph">❌ Every student <strong>need</strong> an ID card.</p>
+<p class="lesson-paragraph">✅ Every student <strong>needs</strong> an ID card.</p>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">6. Everyone</h4>
+<p class="lesson-paragraph">❌ Everyone <strong>are</strong> ready.</p>
+<p class="lesson-paragraph">✅ Everyone <strong>is</strong> ready.</p>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">7. One of</h4>
+<p class="lesson-paragraph">❌ One of the students <strong>are</strong> absent.</p>
+<p class="lesson-paragraph">✅ One of the students <strong>is</strong> absent.</p>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">8. Does + verb</h4>
+<p class="lesson-paragraph">❌ Does she <strong>works</strong> here?</p>
+<p class="lesson-paragraph">✅ Does she <strong>work</strong> here?</p>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">9. Modal + verb</h4>
+<p class="lesson-paragraph">❌ Students can <strong>speaks</strong> English.</p>
+<p class="lesson-paragraph">✅ Students can <strong>speak</strong> English.</p>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">10. Uncountable noun</h4>
+<p class="lesson-paragraph">❌ The information <strong>are</strong> useful.</p>
+<p class="lesson-paragraph">✅ The information <strong>is</strong> useful.</p>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">11. There is / There are</h4>
+<p class="lesson-paragraph">❌ There is several problems.</p>
+<p class="lesson-paragraph">✅ There are several problems.</p>
+<div class="lesson-divider"></div>
+<h4 class="lesson-heading level-4">12. Relative clause</h4>
+<p class="lesson-paragraph">❌ The students who <strong>works</strong> here are experienced.</p>
+<p class="lesson-paragraph">✅ The students who <strong>work</strong> here are experienced.</p>
+<div class="lesson-divider"></div>
+    </div>
+
+    <div class="mastery-panel" data-checkpoint="13">
+        <div class="mastery-panel-header">
+            <div>
+                <p class="mastery-kicker">MASTER THIS SECTION</p>
+                <h3>Quick mastery check</h3>
+                <p>Get both questions right to unlock the next section.</p>
+            </div>
+            <div class="mastery-score">
+                <strong>0 / 2</strong>
+                <span>correct</span>
+            </div>
+        </div>
+        <div class="checkpoint-questions"></div>
+        <button type="button" class="mastery-submit" data-section="13">
+            Check my answers <span>→</span>
+        </button>
+        <div class="mastery-feedback" aria-live="polite"></div>
+    </div>
+</article>
+
+
+        <article class="lesson-module quick-reference-module">
+            <div class="lesson-module-top">
+
+                <div class="lesson-module-number">★</div>
+
+                <div>
+                    <p class="lesson-module-kicker">QUICK REFERENCE</p>
+                    <h2>Before you test yourself.</h2>
+                    <p class="lesson-module-description">
+                        Keep this checklist beside you when you start
+                        the final practice.
+                    </p>
+                </div>
+
+                <div class="lesson-module-status">
+                    <span class="status-dot"></span>
+                    <span>Reference</span>
+                </div>
+
+            </div>
+
+            <div class="lesson-content">
+                <h3 class="lesson-heading level-3">FINAL CHECKLIST</h3>
+<p class="lesson-paragraph">Sebelum memilih verb, selalu tanyakan:</p>
+<h5 class="lesson-heading level-5">1. What is the verb?</h5>
+<p class="lesson-paragraph">Apa verb yang sedang diuji?</p>
+<h5 class="lesson-heading level-5">2. Who or what is the subject?</h5>
+<p class="lesson-paragraph">Siapa atau apa yang melakukan action?</p>
+<h5 class="lesson-heading level-5">3. Is there extra information between the subject and verb?</h5>
+<p class="lesson-paragraph">Cari:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>of</p>
+<p>in</p>
+<p>with</p>
+<p>from</p>
+<p>along with</p>
+<p>as well as</p>
+</div></div>
+<h5 class="lesson-heading level-5">4. What is the head noun?</h5>
+<p class="lesson-paragraph">Apa noun utama dari subject phrase tersebut?</p>
+<h5 class="lesson-heading level-5">5. Is it singular or plural?</h5>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>singular → singular verb</p>
+<p>plural → plural verb</p>
+</div></div>
+<h5 class="lesson-heading level-5">6. Is there a special pattern?</h5>
+<p class="lesson-paragraph">Periksa:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>each</p>
+<p>every</p>
+<p>everyone</p>
+<p>one of</p>
+<p>a number of</p>
+<p>the number of</p>
+<p>either...or</p>
+<p>neither...nor</p>
+<p>some of</p>
+<p>all of</p>
+<p>half of</p>
+<p>percentages</p>
+<p>fractions</p>
+</div></div>
+<h5 class="lesson-heading level-5">7. Is there an auxiliary or modal?</h5>
+<p class="lesson-paragraph">Jika ada:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>does / doesn't</p>
+<p>can</p>
+<p>should</p>
+<p>must</p>
+<p>will</p>
+<p>may</p>
+</div></div>
+<p class="lesson-paragraph">ingat bahwa <strong>main verb biasanya tetap dalam base form</strong>.</p>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">THE GOLDEN RULE</h3>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>## DON'T MATCH THE VERB WITH THE NEAREST NOUN.</p>
+<p>## MATCH THE VERB WITH THE REAL SUBJECT.</p>
+</div></div>
+<p class="lesson-paragraph">Compare:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The <strong>quality</strong> of the <strong>products</strong> <strong>is</strong> excellent.</p>
+</div></div>
+<p class="lesson-paragraph">Nearest noun:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>products</p>
+</div></div>
+<p class="lesson-paragraph">Real subject:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>quality</p>
+</div></div>
+<p class="lesson-paragraph">Therefore:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>is</strong></p>
+</div></div>
+<p class="lesson-paragraph">And:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>The <strong>results</strong> of the <strong>experiment</strong> <strong>are</strong> significant.</p>
+</div></div>
+<p class="lesson-paragraph">Nearest noun:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>experiment</p>
+</div></div>
+<p class="lesson-paragraph">Real subject:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>results</p>
+</div></div>
+<p class="lesson-paragraph">Therefore:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p><strong>are</strong></p>
+</div></div>
+<div class="lesson-divider"></div>
+<h3 class="lesson-heading level-3">YOUR SUBJECT–VERB AGREEMENT SYSTEM</h3>
+<p class="lesson-paragraph">Kalau kalimat terlihat rumit, jangan panik.</p>
+<p class="lesson-paragraph">Gunakan sistem ini:</p>
+<div class="lesson-quote"><div class="lesson-quote-mark">“</div><div class="lesson-quote-text">
+<p>## FIND</p>
+<p>Cari verb.</p>
+<p>↓</p>
+<p>## REMOVE</p>
+<p>Singkirkan sementara informasi tambahan.</p>
+<p>↓</p>
+<p>## IDENTIFY</p>
+<p>Temukan real subject dan head noun.</p>
+<p>↓</p>
+<p>## CHECK</p>
+<p>Singular atau plural?</p>
+<p>↓</p>
+<p>## MATCH</p>
+<p>Pilih verb yang sesuai.</p>
+</div></div>
+<h5 class="lesson-heading level-5">FIND → REMOVE → IDENTIFY → CHECK → MATCH</h5>
+<p class="lesson-paragraph">Kamu tidak perlu menghafalkan setiap kalimat.</p>
+<p class="lesson-paragraph">Yang perlu kamu kuasai adalah <strong>cara berpikirnya</strong>.</p>
+<p class="lesson-paragraph">Once you can identify the <strong>real subject</strong>, subject–verb agreement becomes much easier.</p>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section class="practice-section" id="final-practice">
+    <div class="practice-inner">
+
+        <div class="practice-header learn-reveal">
+
+            <p class="practice-label">14 — PRACTICE</p>
+
+            <h2>
+                Now prove
+                <em>you can use it.</em>
+            </h2>
+
+            <p>
+                Jangan hanya merasa paham. Kerjakan 35 soal
+                dari Beginner sampai Challenge dan lihat
+                apakah kamu benar-benar bisa menemukan real
+                subject dan memilih verb yang tepat.
+            </p>
+
+        </div>
+
+        <div class="practice-level-grid">
+
+            <button type="button" class="practice-level-card active" data-level="all">
+                <span>ALL</span>
+                <strong>35</strong>
+                <small>questions</small>
+            </button>
+
+            <button type="button" class="practice-level-card" data-level="Beginner">
+                <span>LEVEL 1</span>
+                <strong>06</strong>
+                <small>Beginner</small>
+            </button>
+
+            <button type="button" class="practice-level-card" data-level="Find the Real Subject">
+                <span>LEVEL 2</span>
+                <strong>06</strong>
+                <small>Find the subject</small>
+            </button>
+
+            <button type="button" class="practice-level-card" data-level="Intermediate">
+                <span>LEVEL 3</span>
+                <strong>08</strong>
+                <small>Intermediate</small>
+            </button>
+
+            <button type="button" class="practice-level-card" data-level="TOEFL">
+                <span>LEVEL 4</span>
+                <strong>08</strong>
+                <small>TOEFL</small>
+            </button>
+
+            <button type="button" class="practice-level-card" data-level="Challenge">
+                <span>LEVEL 5</span>
+                <strong>07</strong>
+                <small>Challenge</small>
+            </button>
+
+        </div>
+
+        <div class="practice-progress">
+            <div class="practice-progress-row">
+                <span>PRACTICE</span>
+
+                <div class="practice-progress-track">
+                    <div
+                        class="practice-progress-fill"
+                        id="practiceProgressFill"
+                    ></div>
+                </div>
+
+                <span id="practiceProgressText">
+                    0 / 35
+                </span>
+            </div>
+        </div>
+
+        <div
+            class="practice-grid"
+            id="practiceGrid"
+        ></div>
+
+        <button
+            type="button"
+            class="practice-check-button"
+            id="practiceCheckButton"
+        >
+            Check all 35 answers
+            <span>→</span>
+        </button>
+
+        <div
+            class="practice-results"
+            id="practiceResults"
+        >
+            <div class="practice-results-grid">
+
+                <div class="practice-result-score">
+                    <strong id="practiceScore">0</strong>
+                    <span>/ 35</span>
+                </div>
+
+                <div>
+                    <h3 id="practiceResultTitle">Your result</h3>
+
+                    <p id="practiceResultText">
+                        Complete the practice to see your result.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="practice-restart"
+                        id="practiceRestart"
+                    >
+                        Restart practice ↻
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <details class="answer-key">
+            <summary>Open answer key</summary>
+
+            <div class="answer-key-content">
+
+                <p class="lesson-paragraph" style="margin-top:20px;">
+                    Gunakan answer key setelah kamu benar-benar
+                    mencoba soal.
+                </p>
+
+                <div class="answer-key-grid" id="answerKeyGrid">
+                    <div class="answer-key-item"><strong>1</strong><span>studies</span></div>
+<div class="answer-key-item"><strong>2</strong><span>study</span></div>
+<div class="answer-key-item"><strong>3</strong><span>lives</span></div>
+<div class="answer-key-item"><strong>4</strong><span>live</span></div>
+<div class="answer-key-item"><strong>5</strong><span>has</span></div>
+<div class="answer-key-item"><strong>6</strong><span>have</span></div>
+<div class="answer-key-item"><strong>7</strong><span>is</span></div>
+<div class="answer-key-item"><strong>8</strong><span>are</span></div>
+<div class="answer-key-item"><strong>9</strong><span>is</span></div>
+<div class="answer-key-item"><strong>10</strong><span>is</span></div>
+<div class="answer-key-item"><strong>11</strong><span>is</span></div>
+<div class="answer-key-item"><strong>12</strong><span>is</span></div>
+<div class="answer-key-item"><strong>13</strong><span>are</span></div>
+<div class="answer-key-item"><strong>14</strong><span>are</span></div>
+<div class="answer-key-item"><strong>15</strong><span>is</span></div>
+<div class="answer-key-item"><strong>16</strong><span>is</span></div>
+<div class="answer-key-item"><strong>17</strong><span>are</span></div>
+<div class="answer-key-item"><strong>18</strong><span>is</span></div>
+<div class="answer-key-item"><strong>19</strong><span>are</span></div>
+<div class="answer-key-item"><strong>20</strong><span>shows</span></div>
+<div class="answer-key-item"><strong>21</strong><span>are</span></div>
+<div class="answer-key-item"><strong>22</strong><span>has</span></div>
+<div class="answer-key-item"><strong>23</strong><span>has</span></div>
+<div class="answer-key-item"><strong>24</strong><span>are</span></div>
+<div class="answer-key-item"><strong>25</strong><span>is</span></div>
+<div class="answer-key-item"><strong>26</strong><span>has</span></div>
+<div class="answer-key-item"><strong>27</strong><span>are</span></div>
+<div class="answer-key-item"><strong>28</strong><span>are</span></div>
+<div class="answer-key-item"><strong>29</strong><span>has</span></div>
+<div class="answer-key-item"><strong>30</strong><span>has</span></div>
+<div class="answer-key-item"><strong>31</strong><span>are</span></div>
+<div class="answer-key-item"><strong>32</strong><span>is</span></div>
+<div class="answer-key-item"><strong>33</strong><span>was</span></div>
+<div class="answer-key-item"><strong>34</strong><span>are</span></div>
+<div class="answer-key-item"><strong>35</strong><span>is</span></div>
+                </div>
+
+            </div>
+        </details>
+
+    </div>
+</section>
+
+<footer class="course-footer">
+    <p><strong>Tatsyafira · Grammar Intensive Library</strong></p>
+    <p>
+        Free resources help you understand.
+        Grammar Intensive helps you use it.
+    </p>
+</footer>
+
+</div>
+
+</main>
+
+<script>
+
+const ACCESS_PASSWORD =
+    "kedisever";
+
+const checkpointData =
+    [{"section": 1, "questions": [{"question": "The student ___ every night.", "options": ["study", "studies"], "answer": 1, "explanation": "Student is singular → studies."}, {"question": "The students ___ every night.", "options": ["study", "studies"], "answer": 0, "explanation": "Students is plural → study."}]}, {"section": 2, "questions": [{"question": "The quality of the products ___ excellent.", "options": ["is", "are"], "answer": 0, "explanation": "The head noun is quality, not products."}, {"question": "The effects of social media ___ significant.", "options": ["is", "are"], "answer": 1, "explanation": "The head noun is effects, which is plural."}]}, {"section": 3, "questions": [{"question": "The company ___ rapidly.", "options": ["grow", "grows"], "answer": 1, "explanation": "Company is singular → grows."}, {"question": "The researchers ___ consumer behavior.", "options": ["studies", "study"], "answer": 1, "explanation": "Researchers is plural → study."}]}, {"section": 4, "questions": [{"question": "She ___ ready.", "options": ["are", "is"], "answer": 1, "explanation": "She takes is."}, {"question": "The companies ___ several offices.", "options": ["has", "have"], "answer": 1, "explanation": "Companies is plural → have."}]}, {"section": 5, "questions": [{"question": "Does she ___ here?", "options": ["works", "work"], "answer": 1, "explanation": "Does already carries the agreement; the main verb stays in base form."}, {"question": "She can ___ English.", "options": ["speaks", "speak"], "answer": 1, "explanation": "Modal + base verb."}]}, {"section": 6, "questions": [{"question": "Tom and Sarah ___ students.", "options": ["is", "are"], "answer": 1, "explanation": "Two separate subjects joined by and usually take a plural verb."}, {"question": "Each student ___ a textbook.", "options": ["have", "has"], "answer": 1, "explanation": "Each is grammatically singular."}]}, {"section": 7, "questions": [{"question": "The number of students ___ increasing.", "options": ["is", "are"], "answer": 0, "explanation": "The head noun is number → singular."}, {"question": "A number of students ___ absent.", "options": ["is", "are"], "answer": 1, "explanation": "A number of means many/several → plural."}]}, {"section": 8, "questions": [{"question": "Either the teacher or the students ___ responsible.", "options": ["is", "are"], "answer": 1, "explanation": "The closest subject is students → are."}, {"question": "Neither the students nor the teacher ___ responsible.", "options": ["is", "are"], "answer": 0, "explanation": "The closest subject is teacher → is."}]}, {"section": 9, "questions": [{"question": "Some of the information ___ incorrect.", "options": ["is", "are"], "answer": 0, "explanation": "Information is uncountable/singular."}, {"question": "Some of the students ___ absent.", "options": ["is", "are"], "answer": 1, "explanation": "Students is plural."}]}, {"section": 10, "questions": [{"question": "The information ___ useful.", "options": ["is", "are"], "answer": 0, "explanation": "Information is uncountable and takes a singular verb."}, {"question": "Recent studies ___ that exercise improves concentration.", "options": ["shows", "show"], "answer": 1, "explanation": "Studies is plural → show."}]}, {"section": 11, "questions": [{"question": "There ___ several problems.", "options": ["is", "are"], "answer": 1, "explanation": "The real subject is several problems."}, {"question": "The students who ___ here are experienced.", "options": ["works", "work"], "answer": 1, "explanation": "Who refers to students, which is plural."}]}, {"section": 12, "questions": [{"question": "The quality of the products ___ improved.", "options": ["has", "have"], "answer": 0, "explanation": "Find → ask → remove → identify quality as singular → match has."}, {"question": "The effects of social media ___ becoming significant.", "options": ["is", "are"], "answer": 1, "explanation": "After removing the extra phrase, effects is plural → are."}]}, {"section": 13, "questions": [{"question": "The number of students ___ increasing.", "options": ["are", "is"], "answer": 1, "explanation": "The number of is a singular pattern."}, {"question": "Does she ___ here?", "options": ["works", "work"], "answer": 1, "explanation": "After does, use the base verb."}]}];
+
+const practiceData =
+    [{"number": 1, "level": "Beginner", "question": "The student ___ English every day.", "options": ["study", "studies"], "answer": 1, "explanation": "The subject is singular: student → studies."}, {"number": 2, "level": "Beginner", "question": "The students ___ English every day.", "options": ["study", "studies"], "answer": 0, "explanation": "The subject is plural: students → study."}, {"number": 3, "level": "Beginner", "question": "My brother ___ in Istanbul.", "options": ["live", "lives"], "answer": 1, "explanation": "My brother is singular → lives."}, {"number": 4, "level": "Beginner", "question": "My friends ___ in Istanbul.", "options": ["live", "lives"], "answer": 0, "explanation": "My friends is plural → live."}, {"number": 5, "level": "Beginner", "question": "The company ___ several international offices.", "options": ["have", "has"], "answer": 1, "explanation": "The company is singular → has."}, {"number": 6, "level": "Beginner", "question": "The companies ___ several international offices.", "options": ["have", "has"], "answer": 0, "explanation": "The companies is plural → have."}, {"number": 7, "level": "Find the Real Subject", "question": "The quality of the products ___ excellent.", "options": ["is", "are"], "answer": 0, "explanation": "The head noun is quality, not products."}, {"number": 8, "level": "Find the Real Subject", "question": "The results of the experiment ___ surprising.", "options": ["is", "are"], "answer": 1, "explanation": "The head noun is results, which is plural."}, {"number": 9, "level": "Find the Real Subject", "question": "The number of international students ___ increasing.", "options": ["is", "are"], "answer": 0, "explanation": "The head noun is number, so the verb is singular."}, {"number": 10, "level": "Find the Real Subject", "question": "One of the students ___ absent today.", "options": ["is", "are"], "answer": 0, "explanation": "The subject is one, not students."}, {"number": 11, "level": "Find the Real Subject", "question": "Each of the employees ___ responsible for the project.", "options": ["is", "are"], "answer": 0, "explanation": "Each is grammatically singular."}, {"number": 12, "level": "Find the Real Subject", "question": "Everyone in the classroom ___ ready.", "options": ["is", "are"], "answer": 0, "explanation": "Everyone is grammatically singular."}, {"number": 13, "level": "Intermediate", "question": "A number of students ___ interested in the program.", "options": ["is", "are"], "answer": 1, "explanation": "A number of means many/several and takes a plural verb."}, {"number": 14, "level": "Intermediate", "question": "Neither the teacher nor the students ___ responsible for the mistake.", "options": ["is", "are"], "answer": 1, "explanation": "The closest subject is students → are."}, {"number": 15, "level": "Intermediate", "question": "Neither the students nor the teacher ___ responsible for the mistake.", "options": ["is", "are"], "answer": 0, "explanation": "The closest subject is teacher → is."}, {"number": 16, "level": "Intermediate", "question": "Some of the information ___ incorrect.", "options": ["is", "are"], "answer": 0, "explanation": "Information is uncountable/singular."}, {"number": 17, "level": "Intermediate", "question": "Some of the students ___ absent.", "options": ["is", "are"], "answer": 1, "explanation": "Students is plural."}, {"number": 18, "level": "Intermediate", "question": "Half of the population ___ affected by the policy.", "options": ["is", "are"], "answer": 0, "explanation": "Population is treated as singular here."}, {"number": 19, "level": "Intermediate", "question": "Half of the participants ___ international students.", "options": ["is", "are"], "answer": 1, "explanation": "Participants is plural."}, {"number": 20, "level": "Intermediate", "question": "The research ___ that exercise improves concentration.", "options": ["show", "shows"], "answer": 1, "explanation": "Research is uncountable and takes a singular verb: shows."}, {"number": 21, "level": "TOEFL", "question": "The effects of social media on young people ___ becoming increasingly significant.", "options": ["is", "are"], "answer": 1, "explanation": "The head noun is effects, which is plural."}, {"number": 22, "level": "TOEFL", "question": "The development of new technologies ___ changed the way people communicate.", "options": ["has", "have"], "answer": 0, "explanation": "The head noun is development, which is singular."}, {"number": 23, "level": "TOEFL", "question": "The number of students who study abroad ___ increased significantly over the past decade.", "options": ["has", "have"], "answer": 0, "explanation": "The head noun is number → has."}, {"number": 24, "level": "TOEFL", "question": "The students who participate in the program ___ required to submit a final report.", "options": ["is", "are"], "answer": 1, "explanation": "Students is plural, so are required."}, {"number": 25, "level": "TOEFL", "question": "One of the main reasons for the decline in sales ___ the increase in prices.", "options": ["is", "are"], "answer": 0, "explanation": "The subject is one → is."}, {"number": 26, "level": "TOEFL", "question": "The quality of the products manufactured by these companies ___ improved considerably.", "options": ["has", "have"], "answer": 0, "explanation": "The head noun is quality → has."}, {"number": 27, "level": "TOEFL", "question": "There ___ several factors that contribute to the problem.", "options": ["is", "are"], "answer": 1, "explanation": "The real subject is several factors → are."}, {"number": 28, "level": "TOEFL", "question": "There ___ a number of factors that should be considered.", "options": ["is", "are"], "answer": 1, "explanation": "The source material treats a number of factors as plural → are."}, {"number": 29, "level": "Challenge", "question": "The increasing number of international students in major universities ___ created new challenges for educational institutions.", "options": ["has", "have"], "answer": 0, "explanation": "The subject is number, which is singular."}, {"number": 30, "level": "Challenge", "question": "The impact of social media platforms on the behavior of young people ___ been widely discussed by researchers.", "options": ["has", "have"], "answer": 0, "explanation": "The head noun is impact → has."}, {"number": 31, "level": "Challenge", "question": "Neither the university administrators nor the students ___ willing to accept the proposed changes.", "options": ["is", "are"], "answer": 1, "explanation": "The closest subject is students → are."}, {"number": 32, "level": "Challenge", "question": "Neither the students nor the university administration ___ willing to change the policy.", "options": ["is", "are"], "answer": 0, "explanation": "The closest subject is administration → is."}, {"number": 33, "level": "Challenge", "question": "Each of the research participants who ___ selected for the study has received an information sheet.", "options": ["was", "were"], "answer": 0, "explanation": "Who refers to each research participant. Because each is singular, use was."}, {"number": 34, "level": "Challenge", "question": "The percentage of students who ___ interested in studying abroad has increased significantly.", "options": ["is", "are"], "answer": 1, "explanation": "Who refers to students, so the verb inside the relative clause is plural: are."}, {"number": 35, "level": "Challenge", "question": "The percentage of the population that ___ affected by the economic crisis remains high.", "options": ["is", "are"], "answer": 0, "explanation": "That refers to population, which is singular here → is."}];
+
+const accessForm =
+    document.getElementById(
+        "accessForm"
+    );
+
+const accessPassword =
+    document.getElementById(
+        "accessPassword"
+    );
+
+const accessMessage =
+    document.getElementById(
+        "accessMessage"
+    );
+
+const courseShell =
+    document.getElementById(
+        "courseShell"
+    );
+
+const roadmap =
+    document.getElementById(
+        "roadmap"
+    );
+
+const courseProgressFill =
+    document.getElementById(
+        "courseProgressFill"
+    );
+
+const courseProgressText =
+    document.getElementById(
+        "courseProgressText"
+    );
+
+const MASTERY_KEY =
+    "tatsyafira_sva_mastery_v3";
+
+let masteredSections =
+    Number(
+        localStorage.getItem(
+            MASTERY_KEY
+        ) || 0
+    );
+
+if (
+    Number.isNaN(
+        masteredSections
+    )
+) {
+    masteredSections = 0;
+}
+
+masteredSections =
+    Math.max(
+        0,
+        Math.min(
+            13,
+            masteredSections
+        )
+    );
+
+let practiceAnswers = {};
+let practiceChecked = false;
+let currentPracticeLevel = "all";
+
+
+function showCourse() {
+
+    courseShell.classList.add(
+        "unlocked"
+    );
+
+    updateCourseState();
+
+    window.setTimeout(
+        function () {
+
+            const current =
+                document.querySelector(
+                    '[data-section="' +
+                    (
+                        masteredSections + 1
+                    ) +
+                    '"]'
+                );
+
+            if (
+                current
+            ) {
+                current.scrollIntoView(
+                    {
+                        behavior: "smooth",
+                        block: "start"
+                    }
+                );
+            }
+
+        },
+        350
+    );
+}
+
+
+accessForm.addEventListener(
+    "submit",
+    function (event) {
+
+        event.preventDefault();
+
+        const entered =
+            accessPassword.value.trim();
+
+        if (
+            entered ===
+            ACCESS_PASSWORD
+        ) {
+
+            accessMessage.textContent =
+                "Access granted. Welcome to the library.";
+
+            accessMessage.className =
+                "access-message success";
+
+            accessPassword.value =
+                "";
+
+            showCourse();
+
+        } else {
+
+            accessMessage.textContent =
+                "That access code is not correct. Please try again.";
+
+            accessMessage.className =
+                "access-message error";
+
+            accessPassword.focus();
+
+        }
+
+    }
+);
+
+
+function getCheckpoint(
+    sectionNumber
+) {
+
+    return checkpointData.find(
+        function (item) {
+            return (
+                item.section ===
+                sectionNumber
+            );
+        }
+    );
+
+}
+
+
+function renderCheckpoint(
+    sectionNumber
+) {
+
+    const module =
+        document.querySelector(
+            '[data-section="' +
+            sectionNumber +
+            '"]'
+        );
+
+    if (
+        !module
+    ) {
+        return;
+    }
+
+    const container =
+        module.querySelector(
+            ".checkpoint-questions"
+        );
+
+    const checkpoint =
+        getCheckpoint(
+            sectionNumber
+        );
+
+    container.innerHTML =
+        "";
+
+    checkpoint.questions.forEach(
+        function (
+            question,
+            questionIndex
+        ) {
+
+            const wrapper =
+                document.createElement(
+                    "div"
+                );
+
+            wrapper.className =
+                "checkpoint-question";
+
+            wrapper.dataset.question =
+                questionIndex;
+
+            const questionText =
+                document.createElement(
+                    "p"
+                );
+
+            questionText.textContent =
+                question.question;
+
+            wrapper.appendChild(
+                questionText
+            );
+
+            const options =
+                document.createElement(
+                    "div"
+                );
+
+            options.className =
+                "checkpoint-options";
+
+            question.options.forEach(
+                function (
+                    option,
+                    optionIndex
+                ) {
+
+                    const button =
+                        document.createElement(
+                            "button"
+                        );
+
+                    button.type =
+                        "button";
+
+                    button.className =
+                        "checkpoint-option";
+
+                    button.textContent =
+                        option;
+
+                    button.addEventListener(
+                        "click",
+                        function () {
+
+                            if (
+                                sectionNumber <=
+                                masteredSections
+                            ) {
+                                return;
+                            }
+
+                            options
+                                .querySelectorAll(
+                                    ".checkpoint-option"
+                                )
+                                .forEach(
+                                    function (
+                                        other
+                                    ) {
+                                        other.classList.remove(
+                                            "selected"
+                                        );
+                                    }
+                                );
+
+                            button.classList.add(
+                                "selected"
+                            );
+
+                            wrapper.dataset.answer =
+                                optionIndex;
+
+                        }
+                    );
+
+                    options.appendChild(
+                        button
+                    );
+
+                }
+            );
+
+            wrapper.appendChild(
+                options
+            );
+
+            container.appendChild(
+                wrapper
+            );
+
+        }
+    );
+
+}
+
+
+function renderAllCheckpoints() {
+
+    for (
+        let section = 1;
+        section <= 13;
+        section++
+    ) {
+        renderCheckpoint(
+            section
+        );
+    }
+
+}
+
+
+function updateCourseState() {
+
+    document
+        .querySelectorAll(
+            ".lesson-module[data-section]"
+        )
+        .forEach(
+            function (
+                module
+            ) {
+
+                const number =
+                    Number(
+                        module.dataset.section
+                    );
+
+                const complete =
+                    number <=
+                    masteredSections;
+
+                const unlocked =
+                    number <=
+                    masteredSections + 1;
+
+                module.classList.toggle(
+                    "complete",
+                    complete
+                );
+
+                module.classList.toggle(
+                    "locked",
+                    !unlocked
+                );
+
+                module.classList.toggle(
+                    "current",
+                    number ===
+                    masteredSections + 1
+                );
+
+                const status =
+                    module.querySelector(
+                        ".status-text"
+                    );
+
+                if (
+                    status
+                ) {
+
+                    if (
+                        complete
+                    ) {
+                        status.textContent =
+                            "Mastered";
+                    } else if (
+                        unlocked
+                    ) {
+                        status.textContent =
+                            "Current";
+                    } else {
+                        status.textContent =
+                            "Locked";
+                    }
+
+                }
+
+            }
+        );
+
+
+    document
+        .querySelectorAll(
+            ".roadmap-item"
+        )
+        .forEach(
+            function (
+                item
+            ) {
+
+                const number =
+                    Number(
+                        item.dataset.roadmap
+                    );
+
+                item.classList.remove(
+                    "active",
+                    "complete",
+                    "locked"
+                );
+
+                if (
+                    number <=
+                    masteredSections
+                ) {
+
+                    item.classList.add(
+                        "complete"
+                    );
+
+                } else if (
+                    number ===
+                    masteredSections + 1
+                ) {
+
+                    item.classList.add(
+                        "active"
+                    );
+
+                } else {
+
+                    item.classList.add(
+                        "locked"
+                    );
+
+                }
+
+            }
+        );
+
+
+    const percent =
+        (
+            masteredSections /
+            13
+        ) *
+        100;
+
+    courseProgressFill.style.width =
+        percent +
+        "%";
+
+    courseProgressText.textContent =
+        masteredSections +
+        " / 13 mastered";
+
+}
+
+
+document
+    .querySelectorAll(
+        ".mastery-submit"
+    )
+    .forEach(
+        function (
+            button
+        ) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    const sectionNumber =
+                        Number(
+                            button.dataset.section
+                        );
+
+                    if (
+                        sectionNumber !==
+                        masteredSections + 1
+                    ) {
+                        return;
+                    }
+
+                    const module =
+                        document.querySelector(
+                            '[data-section="' +
+                            sectionNumber +
+                            '"]'
+                        );
+
+                    const questions =
+                        module.querySelectorAll(
+                            ".checkpoint-question"
+                        );
+
+                    let score =
+                        0;
+
+                    let answered =
+                        0;
+
+                    questions.forEach(
+                        function (
+                            questionElement,
+                            index
+                        ) {
+
+                            const selected =
+                                Number(
+                                    questionElement.dataset.answer
+                                );
+
+                            if (
+                                !Number.isNaN(
+                                    selected
+                                )
+                            ) {
+                                answered++;
+                            }
+
+                            const correct =
+                                getCheckpoint(
+                                    sectionNumber
+                                ).questions[index]
+                                    .answer;
+
+                            questionElement.classList.remove(
+                                "correct",
+                                "incorrect"
+                            );
+
+                            if (
+                                selected ===
+                                correct
+                            ) {
+
+                                score++;
+
+                                questionElement.classList.add(
+                                    "correct"
+                                );
+
+                            } else {
+
+                                questionElement.classList.add(
+                                    "incorrect"
+                                );
+
+                            }
+
+                        }
+                    );
+
+                    module.querySelector(
+                        ".mastery-score strong"
+                    ).textContent =
+                        score +
+                        " / 2";
+
+                    const feedback =
+                        module.querySelector(
+                            ".mastery-feedback"
+                        );
+
+                    if (
+                        answered < 2
+                    ) {
+
+                        feedback.textContent =
+                            "Answer both questions before checking.";
+
+                        feedback.className =
+                            "mastery-feedback retry";
+
+                        return;
+
+                    }
+
+                    if (
+                        score === 2
+                    ) {
+
+                        masteredSections =
+                            sectionNumber;
+
+                        localStorage.setItem(
+                            MASTERY_KEY,
+                            masteredSections
+                        );
+
+                        feedback.textContent =
+                            "Mastered. The next section is now unlocked.";
+
+                        feedback.className =
+                            "mastery-feedback success";
+
+                        updateCourseState();
+
+                        const next =
+                            document.querySelector(
+                                '[data-section="' +
+                                (
+                                    sectionNumber + 1
+                                ) +
+                                '"]'
+                            );
+
+                        window.setTimeout(
+                            function () {
+
+                                if (
+                                    next
+                                ) {
+
+                                    next.scrollIntoView(
+                                        {
+                                            behavior: "smooth",
+                                            block: "start"
+                                        }
+                                    );
+
+                                } else {
+
+                                    document
+                                        .getElementById(
+                                            "final-practice"
+                                        )
+                                        .scrollIntoView(
+                                            {
+                                                behavior: "smooth",
+                                                block: "start"
+                                            }
+                                        );
+
+                                }
+
+                            },
+                            450
+                        );
+
+                    } else {
+
+                        feedback.textContent =
+                            "Not quite yet. Review this section and try again.";
+
+                        feedback.className =
+                            "mastery-feedback retry";
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+
+roadmap.addEventListener(
+    "click",
+    function (event) {
+
+        const item =
+            event.target.closest(
+                ".roadmap-item"
+            );
+
+        if (
+            !item
+        ) {
+            return;
+        }
+
+        const number =
+            Number(
+                item.dataset.roadmap
+            );
+
+        if (
+            number >
+            masteredSections + 1
+        ) {
+            return;
+        }
+
+        if (
+            number ===
+            14
+        ) {
+
+            if (
+                masteredSections >=
+                13
+            ) {
+
+                document
+                    .getElementById(
+                        "final-practice"
+                    )
+                    .scrollIntoView(
+                        {
+                            behavior: "smooth",
+                            block: "start"
+                        }
+                    );
+
+            }
+
+            return;
+        }
+
+        const target =
+            document.querySelector(
+                '[data-section="' +
+                number +
+                '"]'
+            );
+
+        if (
+            target
+        ) {
+
+            target.scrollIntoView(
+                {
+                    behavior: "smooth",
+                    block: "start"
+                }
+            );
+
+        }
+
+    }
+);
+
+
+/* FINAL PRACTICE */
+
+function renderPractice() {
+
+    const grid =
+        document.getElementById(
+            "practiceGrid"
+        );
+
+    grid.innerHTML =
+        "";
+
+    practiceData.forEach(
+        function (
+            item
+        ) {
+
+            if (
+                currentPracticeLevel !==
+                "all"
+                &&
+                item.level !==
+                currentPracticeLevel
+            ) {
+                return;
+            }
+
+            const card =
+                document.createElement(
+                    "article"
+                );
+
+            card.className =
+                "practice-question";
+
+            card.dataset.number =
+                item.number;
+
+            const top =
+                document.createElement(
+                    "div"
+                );
+
+            top.className =
+                "practice-question-number";
+
+            top.innerHTML =
+                "<span>QUESTION " +
+                String(
+                    item.number
+                ).padStart(
+                    2,
+                    "0"
+                ) +
+                "</span>" +
+                "<span class=\"practice-level-tag\">" +
+                escapeHtml(
+                    item.level
+                ) +
+                "</span>";
+
+            const question =
+                document.createElement(
+                    "p"
+                );
+
+            question.className =
+                "practice-question-text";
+
+            question.textContent =
+                item.question;
+
+            const options =
+                document.createElement(
+                    "div"
+                );
+
+            options.className =
+                "practice-options";
+
+            item.options.forEach(
+                function (
+                    option,
+                    optionIndex
+                ) {
+
+                    const button =
+                        document.createElement(
+                            "button"
+                        );
+
+                    button.type =
+                        "button";
+
+                    button.className =
+                        "practice-option";
+
+                    button.textContent =
+                        option;
+
+                    button.addEventListener(
+                        "click",
+                        function () {
+
+                            if (
+                                practiceChecked
+                            ) {
+                                return;
+                            }
+
+                            options
+                                .querySelectorAll(
+                                    ".practice-option"
+                                )
+                                .forEach(
+                                    function (
+                                        other
+                                    ) {
+                                        other.classList.remove(
+                                            "selected"
+                                        );
+                                    }
+                                );
+
+                            button.classList.add(
+                                "selected"
+                            );
+
+                            practiceAnswers[
+                                item.number
+                            ] =
+                                optionIndex;
+
+                            updatePracticeProgress();
+
+                        }
+                    );
+
+                    options.appendChild(
+                        button
+                    );
+
+                }
+            );
+
+            const feedback =
+                document.createElement(
+                    "p"
+                );
+
+            feedback.className =
+                "practice-feedback";
+
+            card.appendChild(
+                top
+            );
+
+            card.appendChild(
+                question
+            );
+
+            card.appendChild(
+                options
+            );
+
+            card.appendChild(
+                feedback
+            );
+
+            grid.appendChild(
+                card
+            );
+
+        }
+    );
+
+    updatePracticeProgress();
+
+}
+
+
+function updatePracticeProgress() {
+
+    const answered =
+        Object.keys(
+            practiceAnswers
+        ).length;
+
+    const percent =
+        (
+            answered /
+            practiceData.length
+        ) *
+        100;
+
+    document
+        .getElementById(
+            "practiceProgressFill"
+        )
+        .style.width =
+        percent +
+        "%";
+
+    document
+        .getElementById(
+            "practiceProgressText"
+        ).textContent =
+        answered +
+        " / 35";
+
+}
+
+
+function showPracticeResults() {
+
+    let score =
+        0;
+
+    practiceData.forEach(
+        function (
+            item
+        ) {
+
+            if (
+                practiceAnswers[
+                    item.number
+                ] ===
+                item.answer
+            ) {
+                score++;
+            }
+
+        }
+    );
+
+    practiceData.forEach(
+        function (
+            item
+        ) {
+
+            const card =
+                document.querySelector(
+                    '[data-number="' +
+                    item.number +
+                    '"]'
+                );
+
+            if (
+                !card
+            ) {
+                return;
+            }
+
+            const selected =
+                practiceAnswers[
+                    item.number
+                ];
+
+            card.classList.remove(
+                "correct",
+                "incorrect"
+            );
+
+            if (
+                selected ===
+                item.answer
+            ) {
+
+                card.classList.add(
+                    "correct"
+                );
+
+                card.querySelector(
+                    ".practice-feedback"
+                ).textContent =
+                    "✓ Correct. " +
+                    item.explanation;
+
+            } else {
+
+                card.classList.add(
+                    "incorrect"
+                );
+
+                card.querySelector(
+                    ".practice-feedback"
+                ).textContent =
+                    "✗ " +
+                    item.explanation;
+
+            }
+
+        }
+    );
+
+    document
+        .getElementById(
+            "practiceScore"
+        ).textContent =
+        score;
+
+    const title =
+        document.getElementById(
+            "practiceResultTitle"
+        );
+
+    const text =
+        document.getElementById(
+            "practiceResultText"
+        );
+
+    if (
+        score >= 32
+    ) {
+
+        title.textContent =
+            "You mastered it.";
+
+        text.textContent =
+            "Excellent. Your subject–verb agreement foundation is strong.";
+
+    } else if (
+        score >= 28
+    ) {
+
+        title.textContent =
+            "Very strong.";
+
+        text.textContent =
+            "You understand most of the system. Review the questions you missed.";
+
+    } else if (
+        score >= 24
+    ) {
+
+        title.textContent =
+            "Good foundation.";
+
+        text.textContent =
+            "You have the core idea. Revisit the sections connected to the questions you missed.";
+
+    } else {
+
+        title.textContent =
+            "Keep practicing.";
+
+        text.textContent =
+            "The goal is not to rush. Review the lessons and try again.";
+
+    }
+
+    document
+        .getElementById(
+            "practiceResults"
+        )
+        .classList.add(
+            "show"
+        );
+
+}
+
+
+document
+    .getElementById(
+        "practiceCheckButton"
+    )
+    .addEventListener(
+        "click",
+        function () {
+
+            const answered =
+                Object.keys(
+                    practiceAnswers
+                ).length;
+
+            if (
+                answered <
+                practiceData.length
+            ) {
+
+                alert(
+                    "Please answer all 35 questions before checking your result."
+                );
+
+                return;
+            }
+
+            practiceChecked =
+                true;
+
+            showPracticeResults();
+
+            document
+                .getElementById(
+                    "practiceResults"
+                )
+                .scrollIntoView(
+                    {
+                        behavior: "smooth",
+                        block: "center"
+                    }
+                );
+
+        }
+    );
+
+
+document
+    .querySelectorAll(
+        ".practice-level-card"
+    )
+    .forEach(
+        function (
+            button
+        ) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    if (
+                        practiceChecked
+                    ) {
+                        return;
+                    }
+
+                    document
+                        .querySelectorAll(
+                            ".practice-level-card"
+                        )
+                        .forEach(
+                            function (
+                                other
+                            ) {
+                                other.classList.remove(
+                                    "active"
+                                );
+                            }
+                        );
+
+                    button.classList.add(
+                        "active"
+                    );
+
+                    currentPracticeLevel =
+                        button.dataset.level;
+
+                    renderPractice();
+
+                }
+            );
+
+        }
+    );
+
+
+document
+    .getElementById(
+        "practiceRestart"
+    )
+    .addEventListener(
+        "click",
+        function () {
+
+            practiceAnswers =
+                {};
+
+            practiceChecked =
+                false;
+
+            currentPracticeLevel =
+                "all";
+
+            document
+                .querySelectorAll(
+                    ".practice-level-card"
+                )
+                .forEach(
+                    function (
+                        button
+                    ) {
+                        button.classList.remove(
+                            "active"
+                        );
+                    }
+                );
+
+            document
+                .querySelector(
+                    '[data-level="all"]'
+                )
+                .classList.add(
+                    "active"
+                );
+
+            document
+                .getElementById(
+                    "practiceResults"
+                )
+                .classList.remove(
+                    "show"
+                );
+
+            renderPractice();
+
+        }
+    );
+
+
+function escapeHtml(
+    value
+) {
+
+    return String(
+        value
+    )
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+        .replace(
+            /</g,
+            "&lt;"
+        )
+        .replace(
+            />/g,
+            "&gt;"
+        )
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+/* SCROLL REVEAL */
+
+const revealObserver =
+    new IntersectionObserver(
+        function (
+            entries
+        ) {
+
+            entries.forEach(
+                function (
+                    entry
+                ) {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target.classList.add(
+                            "visible"
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold: .12
+        }
+    );
+
+document
+    .querySelectorAll(
+        ".learn-reveal"
+    )
+    .forEach(
+        function (
+            element
+        ) {
+            revealObserver.observe(
+                element
+            );
+        }
+    );
+
+
+renderAllCheckpoints();
+renderPractice();
+
+</script>
+
+</body>
+</html>
