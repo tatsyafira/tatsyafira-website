@@ -1,0 +1,4498 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+
+
+<head>
+
+
+
+  <meta charset="UTF-8">
+
+
+
+  <meta
+
+    name="viewport"
+
+    content="width=device-width, initial-scale=1.0"
+
+  >
+
+
+
+  <title>
+
+    Dunia Membuat Perempuan Membenci Satu Sama Lain — Tatsyafira
+
+  </title>
+
+
+
+
+
+  <!-- =====================================================
+
+       FONTS
+
+  ====================================================== -->
+
+
+
+  <link
+
+    rel="preconnect"
+
+    href="https://fonts.googleapis.com"
+
+  >
+
+
+
+  <link
+
+    rel="preconnect"
+
+    href="https://fonts.gstatic.com"
+
+    crossorigin
+
+  >
+
+
+
+  <link
+
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+
+    rel="stylesheet"
+
+  >
+
+
+
+
+
+  <style>
+
+
+
+    /* =====================================================
+
+       RESET
+
+    ====================================================== */
+
+
+
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+
+
+    body {
+
+      background: #ffffff;
+
+      color: #222222;
+
+      font-family: "DM Sans", sans-serif;
+
+      line-height: 1.7;
+
+    }
+
+
+
+    img {
+
+      max-width: 100%;
+
+      display: block;
+
+    }
+
+
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       HEADER
+
+       SAME AS PREVIOUS ARTICLE
+
+    ====================================================== */
+
+
+
+    .site-header {
+
+      width: 100%;
+
+      height: 72px;
+
+      background: #ffffff;
+
+      border-bottom: 1px solid #eeeeee;
+
+      position: relative;
+
+      z-index: 100;
+
+    }
+
+
+
+    .nav {
+
+      width: min(1200px, calc(100% - 64px));
+
+      height: 72px;
+
+      margin: 0 auto;
+
+
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+    }
+
+
+
+    .logo {
+
+      display: flex;
+
+      align-items: center;
+
+
+
+      width: 135px;
+
+      height: 42px;
+
+
+
+      flex-shrink: 0;
+
+      overflow: hidden;
+
+    }
+
+
+
+    .logo img {
+
+      display: block;
+
+
+
+      width: 135px !important;
+
+      height: auto !important;
+
+
+
+      max-width: 135px !important;
+
+      max-height: 42px !important;
+
+
+
+      object-fit: contain;
+
+      object-position: left center;
+
+    }
+
+
+
+    .nav-links {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 38px;
+
+    }
+
+
+
+    .nav-links a {
+
+      font-size: 15px;
+
+      font-weight: 500;
+
+      color: #333333;
+
+
+
+      transition: opacity 0.2s ease;
+
+    }
+
+
+
+    .nav-links a:hover {
+
+      opacity: 0.55;
+
+    }
+
+
+
+    .nav-links a.active {
+
+      font-weight: 600;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       ARTICLE
+
+    ====================================================== */
+
+
+
+    .article {
+
+      width: min(900px, calc(100% - 48px));
+
+      margin: 0 auto;
+
+
+
+      padding-top: 105px;
+
+      padding-bottom: 40px;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       CATEGORY
+
+    ====================================================== */
+
+
+
+    .article-category {
+
+      font-size: 13px;
+
+      letter-spacing: 2.5px;
+
+      text-transform: uppercase;
+
+
+
+      color: #999999;
+
+      margin-bottom: 22px;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       TITLE
+
+    ====================================================== */
+
+
+
+    .article-title {
+
+      font-family:
+
+        "Playfair Display",
+
+        Georgia,
+
+        serif;
+
+
+
+      font-size: clamp(42px, 6vw, 68px);
+
+
+
+      font-weight: 500;
+
+      line-height: 1.08;
+
+      letter-spacing: -1.5px;
+
+
+
+      color: #1f1f1f;
+
+
+
+      max-width: 850px;
+
+      margin-bottom: 48px;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       COVER IMAGE
+
+    ====================================================== */
+
+
+
+    .cover-figure {
+
+      margin-bottom: 22px;
+
+    }
+
+
+
+    .cover-image {
+
+      width: 100%;
+
+
+
+      border-radius: 14px;
+
+      overflow: hidden;
+
+
+
+      background: #f5f3f1;
+
+    }
+
+
+
+    .cover-image img {
+
+      width: 100%;
+
+      height: auto;
+
+
+
+      object-fit: contain;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       SPOTIFY
+
+    ====================================================== */
+
+
+
+    .spotify-section {
+
+      width: 100%;
+
+      margin-bottom: 70px;
+
+    }
+
+
+
+    .spotify-player {
+
+      width: 100%;
+
+      overflow: hidden;
+
+      border-radius: 12px;
+
+    }
+
+
+
+    .spotify-player iframe {
+
+      width: 100%;
+
+      height: 352px;
+
+
+
+      border: 0;
+
+      display: block;
+
+    }
+
+
+
+    .spotify-caption {
+
+      text-align: center;
+
+
+
+      margin-top: 14px;
+
+
+
+      font-size: 13px;
+
+      color: #999999;
+
+
+
+      font-family: "DM Sans", sans-serif;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       ARTICLE CONTENT
+
+    ====================================================== */
+
+
+
+    .article-content {
+
+      width: min(760px, 100%);
+
+      margin: 0 auto;
+
+
+
+      font-family:
+
+        Georgia,
+
+        "Times New Roman",
+
+        serif;
+
+
+
+      font-size: 20px;
+
+      line-height: 1.8;
+
+
+
+      color: #292929;
+
+    }
+
+
+
+    .article-content p {
+
+      margin-bottom: 32px;
+
+    }
+
+
+
+    .article-content p:last-child {
+
+      margin-bottom: 0;
+
+    }
+
+
+
+    .article-content strong {
+
+      font-weight: 700;
+
+    }
+
+
+
+    .article-content em {
+
+      font-style: italic;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       OPENING
+
+    ====================================================== */
+
+
+
+    .article-opening {
+
+      font-style: italic;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       ARTICLE HEADINGS
+
+    ====================================================== */
+
+
+
+    .article-content h3 {
+
+      font-family:
+
+        "Playfair Display",
+
+        Georgia,
+
+        serif;
+
+
+
+      font-size: 30px;
+
+      line-height: 1.25;
+
+
+
+      font-weight: 500;
+
+
+
+      color: #222222;
+
+
+
+      margin-top: 65px;
+
+      margin-bottom: 32px;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       ARTICLE IMAGES
+
+    ====================================================== */
+
+
+
+    .article-figure {
+
+      width: 100%;
+
+      margin: 55px 0 14px;
+
+    }
+
+
+
+    .article-image {
+
+      width: 100%;
+
+
+
+      aspect-ratio: 4 / 3;
+
+
+
+      background: #f5f3f1;
+
+
+
+      border-radius: 10px;
+
+      overflow: hidden;
+
+
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+    }
+
+
+
+    .article-image img {
+
+      width: 100%;
+
+      height: 100%;
+
+
+
+      object-fit: contain;
+
+    }
+
+
+
+    .image-caption {
+
+      margin-top: 12px;
+
+
+
+      font-family: "DM Sans", sans-serif;
+
+
+
+      font-size: 13px;
+
+      line-height: 1.6;
+
+
+
+      text-align: center;
+
+
+
+      color: #999999;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       QUOTE STYLE
+
+    ====================================================== */
+
+
+
+    .article-quote {
+
+      margin: 42px 0;
+
+      padding: 10px 0;
+
+    }
+
+
+
+    .article-quote p {
+
+      font-weight: 700;
+
+      margin-bottom: 0;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       COMMENTS SECTION
+
+       SAME AS PREVIOUS ARTICLE
+
+    ====================================================== */
+
+
+
+    .comments-section {
+
+      width: min(1000px, calc(100% - 48px));
+
+
+
+      margin: 90px auto 120px;
+
+
+
+      padding-top: 70px;
+
+
+
+      border-top: 1px solid #eeeeee;
+
+    }
+
+
+
+    .comments-header {
+
+      display: flex;
+
+      align-items: baseline;
+
+      justify-content: space-between;
+
+
+
+      gap: 20px;
+
+
+
+      margin-bottom: 38px;
+
+    }
+
+
+
+    .comments-title {
+
+      font-family:
+
+        "Playfair Display",
+
+        Georgia,
+
+        serif;
+
+
+
+      font-size: 34px;
+
+
+
+      font-weight: 500;
+
+
+
+      color: #222222;
+
+    }
+
+
+
+    .comments-count {
+
+      font-size: 13px;
+
+      color: #999999;
+
+
+
+      white-space: nowrap;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       COMMENT FORM
+
+    ====================================================== */
+
+
+
+    .comment-form {
+
+      background: #ffffff;
+
+
+
+      border: 1px solid #dedede;
+
+
+
+      border-radius: 8px;
+
+
+
+      padding: 34px;
+
+
+
+      margin-bottom: 55px;
+
+    }
+
+
+
+    .form-row {
+
+      display: flex;
+
+
+
+      align-items: flex-end;
+
+
+
+      gap: 18px;
+
+
+
+      margin-bottom: 22px;
+
+    }
+
+
+
+    .form-group {
+
+      flex: 1;
+
+    }
+
+
+
+    .form-label {
+
+      display: block;
+
+
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+
+
+      color: #555555;
+
+
+
+      margin-bottom: 9px;
+
+    }
+
+
+
+    input,
+
+    textarea {
+
+      width: 100%;
+
+
+
+      border: 1px solid #dddddd;
+
+
+
+      border-radius: 6px;
+
+
+
+      background: #ffffff;
+
+
+
+      padding: 13px 14px;
+
+
+
+      font-family:
+
+        "DM Sans",
+
+        sans-serif;
+
+
+
+      font-size: 14px;
+
+
+
+      color: #222222;
+
+
+
+      outline: none;
+
+
+
+      transition:
+
+        border-color 0.2s ease,
+
+        box-shadow 0.2s ease;
+
+    }
+
+
+
+    input {
+
+      height: 48px;
+
+    }
+
+
+
+    textarea {
+
+      min-height: 145px;
+
+      resize: vertical;
+
+    }
+
+
+
+    input:focus,
+
+    textarea:focus {
+
+      border-color: #999999;
+
+
+
+      box-shadow:
+
+        0 0 0 2px
+
+        rgba(0, 0, 0, 0.03);
+
+    }
+
+
+
+    input::placeholder,
+
+    textarea::placeholder {
+
+      color: #aaaaaa;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       ANONYMOUS
+
+    ====================================================== */
+
+
+
+    .anonymous-option {
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      gap: 9px;
+
+
+
+      height: 48px;
+
+
+
+      white-space: nowrap;
+
+
+
+      font-size: 13px;
+
+
+
+      color: #666666;
+
+    }
+
+
+
+    .anonymous-option input {
+
+      width: 17px;
+
+      height: 17px;
+
+
+
+      padding: 0;
+
+
+
+      accent-color: #222222;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       MESSAGE
+
+    ====================================================== */
+
+
+
+    .message-group {
+
+      margin-bottom: 22px;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       BUTTON
+
+    ====================================================== */
+
+
+
+    .submit-button {
+
+      border: none;
+
+
+
+      border-radius: 6px;
+
+
+
+      background: #222222;
+
+
+
+      color: #ffffff;
+
+
+
+      padding: 12px 22px;
+
+
+
+      font-family:
+
+        "DM Sans",
+
+        sans-serif;
+
+
+
+      font-size: 13px;
+
+
+
+      font-weight: 600;
+
+
+
+      cursor: pointer;
+
+
+
+      transition:
+
+        background-color 0.2s ease,
+
+        transform 0.2s ease;
+
+    }
+
+
+
+    .submit-button:hover {
+
+      background: #444444;
+
+    }
+
+
+
+    .submit-button:active {
+
+      transform: translateY(1px);
+
+    }
+
+
+
+    .submit-button:disabled {
+
+      opacity: 0.5;
+
+      cursor: not-allowed;
+
+    }
+
+
+
+    .form-status {
+
+      margin-top: 14px;
+
+
+
+      font-size: 13px;
+
+
+
+      color: #888888;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       COMMENT CARDS
+
+    ====================================================== */
+
+
+
+    .comments-list {
+
+      display: grid;
+
+
+
+      grid-template-columns:
+
+        repeat(
+
+          2,
+
+          minmax(0, 1fr)
+
+        );
+
+
+
+      gap: 18px;
+
+    }
+
+
+
+    .comment-box {
+
+      background: #ffffff;
+
+
+
+      border: 1px solid #dedede;
+
+
+
+      border-radius: 10px;
+
+
+
+      min-height: 190px;
+
+
+
+      padding: 25px 26px;
+
+
+
+      display: flex;
+
+
+
+      flex-direction: column;
+
+
+
+      justify-content: space-between;
+
+
+
+      transition:
+
+        border-color 0.2s ease,
+
+        box-shadow 0.2s ease;
+
+    }
+
+
+
+    .comment-box:hover {
+
+      border-color: #cccccc;
+
+
+
+      box-shadow:
+
+        0 3px 12px
+
+        rgba(0, 0, 0, 0.04);
+
+    }
+
+
+
+    .comment-message {
+
+      font-family:
+
+        "Playfair Display",
+
+        Georgia,
+
+        serif;
+
+
+
+      font-size: 17px;
+
+
+
+      line-height: 1.7;
+
+
+
+      color: #333333;
+
+
+
+      margin-bottom: 28px;
+
+
+
+      white-space: pre-wrap;
+
+
+
+      overflow-wrap: anywhere;
+
+    }
+
+
+
+    .comment-footer {
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      justify-content: space-between;
+
+
+
+      gap: 15px;
+
+
+
+      padding-top: 15px;
+
+
+
+      border-top: 1px solid #eeeeee;
+
+    }
+
+
+
+    .comment-author {
+
+      font-family:
+
+        "DM Sans",
+
+        sans-serif;
+
+
+
+      font-size: 12px;
+
+
+
+      font-weight: 600;
+
+
+
+      color: #555555;
+
+    }
+
+
+
+    .comment-date {
+
+      font-family:
+
+        "DM Sans",
+
+        sans-serif;
+
+
+
+      font-size: 11px;
+
+
+
+      color: #aaaaaa;
+
+    }
+
+
+
+    .comments-empty,
+
+    .comments-loading {
+
+      font-size: 14px;
+
+
+
+      color: #999999;
+
+
+
+      padding: 12px 0;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       FOOTER
+
+    ====================================================== */
+
+
+
+    .site-footer {
+
+      border-top: 1px solid #eeeeee;
+
+
+
+      padding: 35px 24px;
+
+
+
+      text-align: center;
+
+
+
+      font-size: 13px;
+
+
+
+      color: #999999;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       MOBILE
+
+    ====================================================== */
+
+
+
+    @media (max-width: 700px) {
+
+
+
+      .site-header {
+
+        height: 64px;
+
+      }
+
+
+
+      .nav {
+
+        width: calc(100% - 32px);
+
+
+
+        height: 64px;
+
+      }
+
+
+
+      .logo {
+
+        width: 110px;
+
+        height: 36px;
+
+      }
+
+
+
+      .logo img {
+
+        width: 110px !important;
+
+
+
+        max-width: 110px !important;
+
+        max-height: 36px !important;
+
+      }
+
+
+
+      .nav-links {
+
+        gap: 16px;
+
+      }
+
+
+
+      .nav-links a {
+
+        font-size: 12px;
+
+      }
+
+
+
+      .nav-links a:nth-child(4),
+
+      .nav-links a:nth-child(5) {
+
+        display: none;
+
+      }
+
+
+
+
+
+      /* ARTICLE */
+
+
+
+      .article {
+
+        width: calc(100% - 36px);
+
+
+
+        padding-top: 65px;
+
+        padding-bottom: 40px;
+
+      }
+
+
+
+      .article-title {
+
+        font-size: 42px;
+
+
+
+        letter-spacing: -1px;
+
+
+
+        margin-bottom: 40px;
+
+      }
+
+
+
+      .article-content {
+
+        font-size: 17px;
+
+
+
+        line-height: 1.9;
+
+      }
+
+
+
+      .article-content p {
+
+        margin-bottom: 30px;
+
+      }
+
+
+
+      .article-content h3 {
+
+        font-size: 27px;
+
+
+
+        margin-top: 55px;
+
+        margin-bottom: 28px;
+
+      }
+
+
+
+
+
+      /* SPOTIFY */
+
+
+
+      .spotify-section {
+
+        margin-bottom: 55px;
+
+      }
+
+
+
+      .spotify-player iframe {
+
+        height: 352px;
+
+      }
+
+
+
+
+
+      /* COMMENTS */
+
+
+
+      .comments-section {
+
+        width: calc(100% - 36px);
+
+
+
+        margin-top: 60px;
+
+        margin-bottom: 70px;
+
+
+
+        padding-top: 50px;
+
+      }
+
+
+
+      .comments-header {
+
+        margin-bottom: 28px;
+
+      }
+
+
+
+      .comments-title {
+
+        font-size: 28px;
+
+      }
+
+
+
+      .comment-form {
+
+        padding: 24px;
+
+
+
+        margin-bottom: 40px;
+
+      }
+
+
+
+      .form-row {
+
+        display: block;
+
+      }
+
+
+
+      .form-group {
+
+        margin-bottom: 20px;
+
+      }
+
+
+
+      .anonymous-option {
+
+        height: auto;
+
+      }
+
+
+
+      .comments-list {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+
+      .comment-box {
+
+        min-height: 170px;
+
+
+
+        padding: 22px;
+
+      }
+
+
+
+      .comment-message {
+
+        font-size: 16px;
+
+      }
+
+
+
+    }
+
+
+
+
+
+    @media (max-width: 390px) {
+
+
+
+      .article {
+
+        width: calc(100% - 36px);
+
+      }
+
+
+
+      .article-title {
+
+        font-size: 39px;
+
+      }
+
+
+
+      .article-content {
+
+        font-size: 17px;
+
+      }
+
+
+
+    }
+
+
+
+  </style>
+
+
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+
+
+  <!-- =====================================================
+
+       HEADER
+
+  ====================================================== -->
+
+
+
+  <header class="site-header">
+
+
+
+    <nav class="nav">
+
+
+
+      <a
+
+        href="index.html"
+
+        class="logo"
+
+      >
+
+
+
+        <img
+
+          src="images/tatsyafira-logo.png"
+
+          alt="tatsyafira"
+
+        >
+
+
+
+      </a>
+
+
+
+
+
+      <div class="nav-links">
+
+
+
+        <a
+
+          href="catatan.html"
+
+          class="active"
+
+        >
+
+          Catatan
+
+        </a>
+
+
+
+        <a href="belajar.html">
+
+          Belajar
+
+        </a>
+
+
+
+        <a href="#">
+
+          Kelas
+
+        </a>
+
+
+
+        <a href="#">
+
+          Resources
+
+        </a>
+
+
+
+        <a href="#">
+
+          Toko
+
+        </a>
+
+
+
+      </div>
+
+
+
+    </nav>
+
+
+
+  </header>
+
+
+
+
+
+  <!-- =====================================================
+
+       ARTICLE
+
+  ====================================================== -->
+
+
+
+  <main>
+
+
+
+    <article class="article">
+
+
+
+
+
+      <div class="article-category">
+
+        Refleksi
+
+      </div>
+
+
+
+
+
+      <h1 class="article-title">
+
+        Dunia Membuat Perempuan Membenci Satu Sama Lain
+
+      </h1>
+
+
+
+
+
+      <!-- =================================================
+
+           COVER IMAGE
+
+      ================================================== -->
+
+
+
+      <figure class="cover-figure">
+
+
+
+        <div class="cover-image">
+
+
+
+          <img
+
+            src="images/perempuan-membenci.png"
+
+            alt="# Dunia Membuat Perempuan Membenci Satu Sama Lain"
+
+          >
+
+
+
+        </div>
+
+
+
+      </figure>
+
+
+
+
+
+      <!-- =================================================
+
+           SPOTIFY
+
+      ================================================== -->
+
+
+
+      <section class="spotify-section">
+
+
+
+        <div class="spotify-player">
+
+
+
+          <iframe
+
+            data-testid="embed-iframe"
+
+            style="border-radius:12px"
+
+            src="https://open.spotify.com/embed/track/0zAtj0BEvpulETGrk95NPQ?utm_source=generator&si=acaf754f58ff48d7"
+
+            width="100%"
+
+            height="352"
+
+            frameBorder="0"
+
+            allowfullscreen=""
+
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+
+            loading="lazy"
+
+          ></iframe>
+
+
+
+        </div>
+
+
+
+
+
+        <div class="spotify-caption">
+
+          Dengarkan sambil membaca.
+
+        </div>
+
+
+
+      </section>
+
+
+
+
+
+      <!-- =================================================
+
+           ARTICLE CONTENT
+
+      ================================================== -->
+
+
+
+      <div class="article-content">
+
+
+        <p class="article-opening">
+
+          Berapa kali kamu mendengar rumor tentang teman perempuanmu yang cukup menyakitkan untuk didengar? Atau mungkin rumor tentang dirimu sendiri yang disebarkan oleh perempuan-perempuan lainnya? Berapa kali orang yang kamu kenal, atau public figure yang kamu kagumi, dijatuhkan untuk hal-hal yang sebenarnya tidak masuk akal? Atau pernahkah ada pesan masuk dari akun tak dikenal yang mengancammu untuk sesuatu yang bahkan tidak pernah kamu lakukan?
+
+        </p>
+
+
+        <p>
+
+          Aku sering bertanya-tanya, kenapa perempuan bisa begitu kejam kepada perempuan lain?
+
+        </p>
+
+
+        <p>
+
+          Tentu saja laki-laki juga bisa melakukan hal yang sama. Mereka bisa iri, bergosip, berkompetisi, menjatuhkan orang lain, bahkan melakukan bullying. Aku tidak ingin membuat seolah-olah laki-laki tidak pernah mengalami kecemburuan atau permusuhan. Tetapi semakin aku memperhatikan bagaimana perempuan memperlakukan perempuan lain, semakin aku merasa ada sesuatu yang lebih rumit di dalamnya.
+
+        </p>
+
+
+        <p>
+
+          Persaingan antarperempuan sering kali tidak berhenti pada siapa yang lebih pintar, siapa yang mendapatkan pekerjaan lebih baik, atau siapa yang menang dalam sebuah kompetisi. Perempuan bisa saling membandingkan hampir dalam segala hal yang membuat seseorang merasa berharga: wajah, tubuh, pakaian, pasangan, pernikahan, anak, pendidikan, karier, uang, bahkan bagaimana seseorang menjalankan perannya sebagai seorang perempuan.
+
+        </p>
+
+
+        <p>
+
+          Dan ternyata, perilaku seperti ini bukan sesuatu yang tidak pernah dibahas dalam penelitian. Dalam psikologi, ada istilah <em>relational aggression</em>, yaitu bentuk agresi yang menggunakan hubungan sosial sebagai alat untuk menyakiti orang lain, misalnya menyebarkan rumor, merusak reputasi, mengucilkan seseorang, atau sengaja membuat seseorang tersingkir dari sebuah kelompok. Penelitian mengenai agresi perempuan menunjukkan bahwa bentuk-bentuk agresi seperti ini memang penting untuk diperhatikan, meskipun temuan mengenai perbedaan laki-laki dan perempuan tidak selalu konsisten dan sangat bergantung pada konteksnya.
+
+        </p>
+
+
+        <p>
+
+          Mungkin itu sebabnya bentuk permusuhan tertentu di antara perempuan terasa berbeda. Tidak selalu ada teriakan. Tidak selalu ada perkelahian. Kadang hanya satu cerita yang dibisikkan kepada orang lain. Satu screenshot yang disebarkan. Satu komentar tentang tubuh seseorang. Satu kelompok yang tiba-tiba berhenti mengajakmu. Satu kalimat yang sengaja dibuat agar reputasimu terlihat buruk di depan orang lain.
+
+        </p>
+
+
+        <p>
+
+          Dan karena semuanya bisa dilakukan tanpa terlihat seperti sebuah “serangan”, terkadang kita bahkan tidak menyadari bahwa kita sedang menyakiti seseorang.
+
+        </p>
+
+
+        <h3>
+
+          Aku juga pernah mengalaminya
+
+        </h3>
+
+
+        <p>
+
+          Aku pernah mendapat komentar di salah satu postingan media sosialku yang mengatakan, <strong>“Sudah keluar negeri saja, gayamu kampungan kayak ibu-ibu.”</strong>
+
+        </p>
+
+
+        <p>
+
+          Aku sempat berpikir, memangnya kenapa kalau gayaku seperti ibu-ibu?
+
+        </p>
+
+
+        <p>
+
+          Aku memang tipe orang yang memakai apa pun yang menurutku nyaman untuk dikenakan. Selama bersih, nyaman, dan sopan, menurutku itu sudah lebih dari cukup untukku. Aku tidak terlalu mengikuti tren hijab terbaru. Aku juga tidak selalu tahu style apa yang sedang ramai digunakan orang. Kadang aku memakai pakaian yang sama berkali-kali karena memang aku suka dan merasa nyaman di dalamnya.
+
+        </p>
+
+
+        <p>
+
+          Dan menurutku, tidak ada yang salah dengan itu.
+
+        </p>
+
+
+        <p>
+
+          Tidak ada juga yang salah kalau kamu justru senang mengikuti tren. Kalau kamu suka mencoba berbagai gaya hijab, mengikuti fashion terbaru, bereksperimen dengan warna, atau memang senang memperhatikan penampilan, silakan. Itu bagian dari cara kamu mengekspresikan dirimu.
+
+        </p>
+
+
+        <p>
+
+          Masalahnya muncul ketika pilihan personal seseorang mulai dianggap sebagai ukuran nilai dirinya.
+
+        </p>
+
+
+        <p>
+
+          Kenapa perempuan harus selalu terlihat menarik?
+
+        </p>
+
+
+        <p>
+
+          Kenapa perempuan yang tidak mengikuti tren dianggap kampungan?
+
+        </p>
+
+
+        <p>
+
+          Kenapa pakaian seorang perempuan terasa seperti sesuatu yang boleh dikomentari semua orang?
+
+        </p>
+
+
+        <p>
+
+          Aku jarang sekali melihat laki-laki, termasuk public figure laki-laki, memakai pakaian yang sangat biasa lalu mendapatkan komentar dengan intensitas yang sama hanya karena dianggap “kampungan”, “tidak fashionable”, atau “tidak tahu cara berpakaian”. Bukan berarti laki-laki tidak pernah mendapatkan komentar seperti itu. Tentu ada. Tetapi dari apa yang aku lihat dan alami, komentar tentang penampilan perempuan terasa jauh lebih sering dan jauh lebih detail.
+
+        </p>
+
+
+        <p>
+
+          Dan penelitian tentang media sosial juga menemukan pola yang menarik: dalam salah satu penelitian yang dirangkum APA, perempuan muda dilaporkan melakukan aktivitas terkait penampilan dan <em>appearance comparison</em> di media sosial lebih banyak daripada laki-laki muda.
+
+        </p>
+
+
+        <p>
+
+          Panjang bajunya diperhatikan. Bentuk tubuhnya diperhatikan. Hijabnya diperhatikan. Makeup-nya diperhatikan. Berat badannya diperhatikan. Rambutnya diperhatikan. Bahkan cara seorang perempuan membawa dirinya bisa menjadi bahan penilaian.
+
+        </p>
+
+
+        <p>
+
+          Dan yang membuatku semakin heran adalah: sering kali perempuan lainlah yang melakukan semua itu kepada perempuan.
+
+        </p>
+
+
+        <p>
+
+          Seolah-olah kita semua ditugaskan menjadi polisi bagi penampilan satu sama lain.
+
+        </p>
+
+
+        <p>
+
+          Kita melihat perempuan lain dan langsung menilai: terlalu gemuk, terlalu kurus, terlalu terbuka, terlalu tertutup, terlalu tua untuk memakai itu, terlalu muda untuk memakai itu, terlalu maskulin, terlalu feminin, terlalu sederhana, terlalu berlebihan.
+
+        </p>
+
+
+        <p>
+
+          Padahal mungkin perempuan itu hanya ingin keluar rumah dengan pakaian yang membuatnya nyaman.
+
+        </p>
+
+
+        <p>
+
+          Mungkin ia tidak sedang mengikuti kompetisi fashion apa pun.
+
+        </p>
+
+
+        <p>
+
+          Mungkin ia bahkan tidak memikirkan apakah orang lain menganggap pakaiannya bagus.
+
+        </p>
+
+
+        <p>
+
+          Dan menurutku, di sinilah kita perlu bertanya: <strong>kenapa penampilan perempuan seolah-olah menjadi konsumsi publik?</strong>
+
+        </p>
+
+
+        <p>
+
+          Aku tidak ingin mengatakan bahwa perempuan tidak boleh memperhatikan penampilan. Justru aku pikir kita berhak menikmati fashion, makeup, hijab, skincare, atau apa pun yang membuat kita senang. Aku sendiri juga bisa menikmati berdandan dan memilih pakaian yang bagus ketika memang sedang ingin.
+
+        </p>
+
+
+        <p>
+
+          Tetapi ada perbedaan besar antara memilih tampil menarik karena kita menikmatinya dan merasa harus tampil menarik karena takut dihukum secara sosial kalau tidak melakukannya.
+
+        </p>
+
+
+        <p>
+
+          Yang pertama adalah ekspresi diri.
+
+        </p>
+
+
+        <p>
+
+          Yang kedua adalah tekanan.
+
+        </p>
+
+
+        <p>
+
+          Dan mungkin kita sudah terlalu lama menganggap tekanan itu sebagai sesuatu yang normal.
+
+        </p>
+
+
+        <h3>
+
+          Kenapa perempuan terasa lebih sering dibandingkan?
+
+        </h3>
+
+
+        <p>
+
+          Aku rasa jawabannya tidak sesederhana “perempuan memang lebih iri.”
+
+        </p>
+
+
+        <p>
+
+          Aku justru berpikir bahwa perempuan sering ditempatkan dalam sistem penilaian yang membuat perbandingan menjadi sangat sulit dihindari.
+
+        </p>
+
+
+        <p>
+
+          Sejak kecil, banyak perempuan tumbuh dengan berbagai standar yang harus dipenuhi sekaligus.
+
+        </p>
+
+
+        <p>
+
+          Cantik.
+
+        </p>
+
+
+        <p>
+
+          Pintar.
+
+        </p>
+
+
+        <p>
+
+          Sopan.
+
+        </p>
+
+
+        <p>
+
+          Feminim.
+
+        </p>
+
+
+        <p>
+
+          Berpendidikan.
+
+        </p>
+
+
+        <p>
+
+          Pandai mengurus rumah.
+
+        </p>
+
+
+        <p>
+
+          Sukses.
+
+        </p>
+
+
+        <p>
+
+          Tetapi jangan terlalu ambisius.
+
+        </p>
+
+
+        <p>
+
+          Mandiri.
+
+        </p>
+
+
+        <p>
+
+          Tetapi jangan sampai membuat laki-laki merasa tidak dibutuhkan.
+
+        </p>
+
+
+        <p>
+
+          Menikah.
+
+        </p>
+
+
+        <p>
+
+          Tetapi jangan salah memilih.
+
+        </p>
+
+
+        <p>
+
+          Menjadi ibu yang baik.
+
+        </p>
+
+
+        <p>
+
+          Tetapi tetap menjaga tubuh.
+
+        </p>
+
+
+        <p>
+
+          Dan anehnya, semua standar itu bisa berubah tergantung siapa yang sedang menilainya.
+
+        </p>
+
+
+        <p>
+
+          Seorang perempuan bisa melihat perempuan lain dan berpikir, <em>dia lebih cantik dariku.</em>
+
+        </p>
+
+
+        <p>
+
+          Melihat perempuan lain yang sukses dan berpikir, <em>dia lebih pintar dariku.</em>
+
+        </p>
+
+
+        <p>
+
+          Melihat perempuan lain menikah dan berpikir, <em>aku tertinggal.</em>
+
+        </p>
+
+
+        <p>
+
+          Melihat perempuan lain menjadi ibu dan berpikir, <em>mungkin hidupku tidak lengkap.</em>
+
+        </p>
+
+
+        <p>
+
+          Melihat perempuan lain lebih religius dan berpikir, <em>mungkin aku perempuan yang buruk.</em>
+
+        </p>
+
+
+        <p>
+
+          Persaingannya tidak lagi hanya terjadi di satu arena.
+
+        </p>
+
+
+        <p>
+
+          Ia masuk ke dalam cara kita memandang diri sendiri.
+
+        </p>
+
+
+        <p>
+
+          Dan mungkin inilah yang membuatnya begitu melelahkan.
+
+        </p>
+
+
+        <p>
+
+          Karena ketika keberhasilan perempuan lain terus-menerus digunakan sebagai alat untuk mengukur keberhasilan kita sendiri, kita akhirnya tidak lagi melihat perempuan lain sebagai seseorang yang sedang menjalani hidupnya.
+
+        </p>
+
+
+        <p>
+
+          Kita melihatnya sebagai cermin.
+
+        </p>
+
+
+        <p>
+
+          Kalau dia terlihat lebih cantik di cermin itu, kita merasa jelek.
+
+        </p>
+
+
+        <p>
+
+          Kalau dia terlihat lebih sukses, kita merasa gagal.
+
+        </p>
+
+
+        <p>
+
+          Kalau dia terlihat lebih dicintai, kita merasa tidak cukup dicintai.
+
+        </p>
+
+
+        <p>
+
+          Padahal mungkin masalahnya bukan dia.
+
+        </p>
+
+
+        <p>
+
+          Mungkin masalahnya adalah sejak awal kita diajarkan untuk mengukur diri dengan menggunakan kehidupan perempuan lain.
+
+        </p>
+
+
+        <h3>
+
+          Kita diajarkan bahwa perempuan lain adalah kompetitor
+
+        </h3>
+
+
+        <p>
+
+          Aku rasa salah satu hal paling berbahaya yang dilakukan dunia kepada perempuan adalah membuat kita merasa bahwa kesempatan itu terbatas.
+
+        </p>
+
+
+        <p>
+
+          Seolah-olah hanya ada satu perempuan yang boleh menjadi paling cantik.
+
+        </p>
+
+
+        <p>
+
+          Satu yang paling pintar.
+
+        </p>
+
+
+        <p>
+
+          Satu yang paling sukses.
+
+        </p>
+
+
+        <p>
+
+          Satu yang mendapatkan laki-laki terbaik.
+
+        </p>
+
+
+        <p>
+
+          Satu yang mendapatkan promosi.
+
+        </p>
+
+
+        <p>
+
+          Satu yang menjadi “istri ideal”.
+
+        </p>
+
+
+        <p>
+
+          Satu yang menjadi ibu terbaik.
+
+        </p>
+
+
+        <p>
+
+          Satu yang paling populer.
+
+        </p>
+
+
+        <p>
+
+          Maka ketika perempuan lain mendapatkan sesuatu, kita merasa bahwa sesuatu itu berkurang dari kesempatan kita.
+
+        </p>
+
+
+        <p>
+
+          Ia mendapat pekerjaan itu, berarti aku tidak.
+
+        </p>
+
+
+        <p>
+
+          Ia mendapat beasiswa itu, berarti aku kalah.
+
+        </p>
+
+
+        <p>
+
+          Ia mendapat pasangan yang baik, berarti kesempatan yang tersedia untukku semakin sedikit.
+
+        </p>
+
+
+        <p>
+
+          Ia cantik, berarti aku kurang cantik.
+
+        </p>
+
+
+        <p>
+
+          Padahal hidup tidak bekerja seperti itu.
+
+        </p>
+
+
+        <p>
+
+          Kamu tidak kehilangan kecantikan hanya karena perempuan lain cantik. Kamu tidak kehilangan kesempatan hanya karena perempuan lain berhasil. Kamu tidak menjadi kurang berharga hanya karena perempuan lain sedang berada di titik yang lebih tinggi darimu.
+
+        </p>
+
+
+        <p>
+
+          Tetapi kalau sejak kecil kita terus-menerus dibandingkan, mungkin memang sulit untuk mempercayai hal itu.
+
+        </p>
+
+
+        <p>
+
+          “Lihat anaknya si A, pintar sekali.”
+
+        </p>
+
+
+        <p>
+
+          “Temanmu sudah kuliah di luar negeri.”
+
+        </p>
+
+
+        <p>
+
+          “Dia sudah menikah.”
+
+        </p>
+
+
+        <p>
+
+          “Dia sudah punya anak.”
+
+        </p>
+
+
+        <p>
+
+          “Dia lebih kurus.”
+
+        </p>
+
+
+        <p>
+
+          “Dia lebih cantik.”
+
+        </p>
+
+
+        <p>
+
+          “Dia lebih sukses.”
+
+        </p>
+
+
+        <p>
+
+          Kalimat-kalimat itu mungkin terdengar biasa. Bahkan mungkin orang yang mengucapkannya tidak bermaksud jahat.
+
+        </p>
+
+
+        <p>
+
+          Tetapi ketika seseorang tumbuh dengan hidup yang selalu dijelaskan melalui perbandingan, ia belajar bahwa untuk mengetahui apakah dirinya cukup, ia harus melihat perempuan lain terlebih dahulu.
+
+        </p>
+
+
+        <p>
+
+          Dan ketika dewasa, kita membawa kebiasaan itu ke mana-mana.
+
+        </p>
+
+
+        <h3>
+
+          Bahkan cinta pun bisa berubah menjadi kompetisi
+
+        </h3>
+
+
+        <p>
+
+          Aku rasa ini salah satu bagian paling menyedihkan.
+
+        </p>
+
+
+        <p>
+
+          Perempuan sering diajarkan untuk melihat pernikahan sebagai salah satu ukuran keberhasilan hidup. Kita mungkin tidak mengatakannya secara terang-terangan, tetapi kita tahu bagaimana masyarakat memperlakukan perempuan yang menikah di usia tertentu dibandingkan perempuan yang belum menikah.
+
+        </p>
+
+
+        <p>
+
+          “Sudah ada calon?”
+
+        </p>
+
+
+        <p>
+
+          “Kapan menyusul?”
+
+        </p>
+
+
+        <p>
+
+          “Teman-temanmu sudah menikah semua.”
+
+        </p>
+
+
+        <p>
+
+          “Jangan terlalu pilih-pilih.”
+
+        </p>
+
+
+        <p>
+
+          Dan akhirnya, pernikahan perempuan lain bisa menjadi sesuatu yang sangat rumit untuk dilihat.
+
+        </p>
+
+
+        <p>
+
+          Kita bisa benar-benar bahagia untuk teman kita yang baru bertunangan, sambil diam-diam pulang dan bertanya kepada diri sendiri, <em>“Kapan aku?”</em>
+
+        </p>
+
+
+        <p>
+
+          Kita bisa mencintai sahabat kita dan tetap merasa sedikit tertinggal ketika ia menikah lebih dulu.
+
+        </p>
+
+
+        <p>
+
+          Kita bisa genuinely senang melihat orang lain menemukan pasangan yang baik, tetapi di saat yang sama bertanya mengapa hidup kita belum sampai ke sana.
+
+        </p>
+
+
+        <p>
+
+          Dan perasaan itu tidak membuat kita menjadi perempuan jahat.
+
+        </p>
+
+
+        <p>
+
+          Kita manusia.
+
+        </p>
+
+
+        <p>
+
+          Yang perlu kita pertanyakan adalah <strong>kenapa kebahagiaan orang lain harus terasa seperti pengingat bahwa hidup kita kurang?</strong>
+
+        </p>
+
+
+        <p>
+
+          Kenapa ketika seorang perempuan dipilih oleh laki-laki yang baik, kita merasa seolah-olah ia memenangkan sesuatu yang seharusnya bisa menjadi milik kita?
+
+        </p>
+
+
+        <p>
+
+          Mungkin karena kita diajarkan bahwa jumlah “laki-laki baik” terbatas.
+
+        </p>
+
+
+        <p>
+
+          Maka perempuan lain yang mendapatkan satu berarti kesempatan kita berkurang satu.
+
+        </p>
+
+
+        <p>
+
+          Padahal mungkin bukan begitu.
+
+        </p>
+
+
+        <p>
+
+          Mungkin cinta bukan kursi yang jumlahnya terbatas.
+
+        </p>
+
+
+        <p>
+
+          Mungkin keberuntungan perempuan lain dalam menemukan pasangan tidak mengurangi kemungkinan kita menemukan kehidupan yang baik dengan cara kita sendiri.
+
+        </p>
+
+
+        <h3>
+
+          Kita juga saling mengawasi
+
+        </h3>
+
+
+        <p>
+
+          Yang lebih menarik lagi, perempuan tidak hanya dibandingkan oleh laki-laki.
+
+        </p>
+
+
+        <p>
+
+          Sering kali, perempuan saling mengawasi satu sama lain.
+
+        </p>
+
+
+        <p>
+
+          Perempuan lain memakai pakaian terlalu terbuka, kita komentari.
+
+        </p>
+
+
+        <p>
+
+          Perempuan lain memakai hijab dengan cara tertentu, kita komentari.
+
+        </p>
+
+
+        <p>
+
+          Perempuan lain terlalu fokus pada karier, kita bilang dia terlalu ambisius.
+
+        </p>
+
+
+        <p>
+
+          Perempuan lain memilih menjadi ibu rumah tangga, kita bilang dia tidak punya ambisi.
+
+        </p>
+
+
+        <p>
+
+          Perempuan lain memilih tidak punya anak, kita bilang dia egois.
+
+        </p>
+
+
+        <p>
+
+          Perempuan lain bekerja sampai malam, kita bilang dia tidak memprioritaskan keluarga.
+
+        </p>
+
+
+        <p>
+
+          Perempuan lain berhenti bekerja setelah menikah, kita bilang dia terlalu bergantung pada suami.
+
+        </p>
+
+
+        <p>
+
+          Seolah-olah ada satu buku panduan menjadi perempuan yang benar, dan kita semua ditugaskan untuk memastikan perempuan lain mengikutinya.
+
+        </p>
+
+
+        <p>
+
+          Padahal buku itu tidak pernah benar-benar ada.
+
+        </p>
+
+
+        <p>
+
+          Dan yang lebih menyedihkan, perempuan yang hari ini menjadi korban dari standar tersebut terkadang menjadi orang yang meneruskannya kepada perempuan lain.
+
+        </p>
+
+
+        <p>
+
+          Mungkin ibumu dulu dibandingkan dengan anak tetangga.
+
+        </p>
+
+
+        <p>
+
+          Mungkin nenekmu dulu diberitahu bagaimana seorang perempuan seharusnya bersikap.
+
+        </p>
+
+
+        <p>
+
+          Mungkin ia tumbuh dengan keyakinan bahwa perempuan yang baik harus menikah, mengurus rumah, memiliki anak, berpakaian tertentu, berbicara dengan cara tertentu, dan tidak terlalu banyak menuntut.
+
+        </p>
+
+
+        <p>
+
+          Kemudian ia mengajarkan aturan yang sama kepadamu.
+
+        </p>
+
+
+        <p>
+
+          Bukan selalu karena ia ingin menyakitimu.
+
+        </p>
+
+
+        <p>
+
+          Mungkin karena itulah satu-satunya cara menjadi perempuan yang pernah ia kenal.
+
+        </p>
+
+
+        <p>
+
+          Seseorang bisa terluka oleh sebuah aturan, lalu tanpa sadar meneruskan aturan yang sama kepada orang lain.
+
+        </p>
+
+
+        <p>
+
+          Dan di situlah kita perlu memutus sesuatu.
+
+        </p>
+
+
+        <p>
+
+          Bukan dengan membenci perempuan yang masih memegang aturan tersebut, tetapi dengan menyadari bahwa kita memiliki pilihan untuk tidak meneruskannya.
+
+        </p>
+
+
+        <h3>
+
+          Ini bukan berarti perempuan selalu menjadi korban
+
+        </h3>
+
+
+        <p>
+
+          Aku juga tidak ingin membuat perempuan seolah-olah selalu menjadi korban dan tidak pernah bertanggung jawab atas bagaimana kita memperlakukan satu sama lain.
+
+        </p>
+
+
+        <p>
+
+          Tidak.
+
+        </p>
+
+
+        <p>
+
+          Perempuan bisa kejam.
+
+        </p>
+
+
+        <p>
+
+          Perempuan bisa menyebarkan rumor.
+
+        </p>
+
+
+        <p>
+
+          Perempuan bisa melakukan bullying.
+
+        </p>
+
+
+        <p>
+
+          Perempuan bisa sengaja merendahkan perempuan lain.
+
+        </p>
+
+
+        <p>
+
+          Perempuan bisa iri.
+
+        </p>
+
+
+        <p>
+
+          Perempuan bisa menyabotase perempuan lain.
+
+        </p>
+
+
+        <p>
+
+          Perempuan bisa menjadi bagian dari masalah.
+
+        </p>
+
+
+        <p>
+
+          Bahkan penelitian mengenai agresi relasional pada perempuan menunjukkan bahwa pengalaman menjadi korban dan kemudian melakukan agresi relasional dapat saling berkaitan; artinya, seseorang yang pernah mengalami eksklusi atau perlakuan sosial yang menyakitkan tidak otomatis terbebas dari kemungkinan meneruskan pola tersebut.
+
+        </p>
+
+
+        <p>
+
+          Memahami dari mana perilaku itu berasal tidak berarti membenarkannya.
+
+        </p>
+
+
+        <p>
+
+          Tetapi mungkin kita perlu berhenti dan bertanya: <strong>kenapa kita terus melakukan ini kepada satu sama lain?</strong>
+
+        </p>
+
+
+        <p>
+
+          Kenapa kita begitu mudah percaya ketika mendengar rumor buruk tentang perempuan lain?
+
+        </p>
+
+
+        <p>
+
+          Kenapa cerita tentang perempuan yang jatuh sering kali terasa lebih menarik daripada cerita tentang perempuan yang berhasil?
+
+        </p>
+
+
+        <p>
+
+          Kenapa ketika seorang perempuan sukses, kita buru-buru mencari alasan untuk mengecilkan pencapaiannya?
+
+        </p>
+
+
+        <p>
+
+          “Dia beruntung.”
+
+        </p>
+
+
+        <p>
+
+          “Dia cantik, jadi gampang.”
+
+        </p>
+
+
+        <p>
+
+          “Dia punya koneksi.”
+
+        </p>
+
+
+        <p>
+
+          “Dia dibantu orang.”
+
+        </p>
+
+
+        <p>
+
+          “Dia dapat karena suaminya.”
+
+        </p>
+
+
+        <p>
+
+          Seolah-olah kita lebih nyaman melihat perempuan lain berhasil kalau kita menemukan alasan untuk mengatakan bahwa keberhasilan itu sebenarnya tidak sepenuhnya miliknya.
+
+        </p>
+
+
+        <p>
+
+          Dan mungkin kita perlu belajar melakukan sesuatu yang sederhana tetapi sulit: <strong>membiarkan perempuan lain berhasil tanpa merasa kita harus menjelaskan mengapa ia tidak sepantasnya berhasil.</strong>
+
+        </p>
+
+
+        <h3>
+
+          Aku juga tidak selalu kebal dari ini
+
+        </h3>
+
+
+        <p>
+
+          Aku tidak ingin menulis artikel ini seolah-olah aku berdiri di luar semua persoalan ini.
+
+        </p>
+
+
+        <p>
+
+          Aku juga pernah membandingkan diriku dengan perempuan lain.
+
+        </p>
+
+
+        <p>
+
+          Pernah melihat pencapaian seseorang dan bertanya, <em>kenapa aku belum sampai di sana?</em>
+
+        </p>
+
+
+        <p>
+
+          Pernah melihat perempuan lain dan merasa ada sesuatu dalam diriku yang kurang.
+
+        </p>
+
+
+        <p>
+
+          Aku rasa hampir tidak ada perempuan yang sepenuhnya kebal dari perasaan seperti itu.
+
+        </p>
+
+
+        <p>
+
+          Kita tumbuh dalam dunia yang memang mengajarkan kita untuk membandingkan.
+
+        </p>
+
+
+        <p>
+
+          Tetapi mungkin menjadi dewasa bukan berarti kita tidak pernah merasa iri lagi. Mungkin menjadi dewasa adalah ketika kita mulai menyadari bahwa perasaan itu tidak harus menjadi tindakan.
+
+        </p>
+
+
+        <p>
+
+          Aku boleh merasa insecure ketika melihat perempuan lain tanpa harus merendahkannya.
+
+        </p>
+
+
+        <p>
+
+          Aku boleh merasa tertinggal tanpa berharap ia gagal.
+
+        </p>
+
+
+        <p>
+
+          Aku boleh menginginkan apa yang ia miliki tanpa menganggap bahwa ia tidak pantas memilikinya.
+
+        </p>
+
+
+        <p>
+
+          <strong>Aku bisa mengakui bahwa aku ingin berada di tempatnya tanpa berharap ia turun dari tempat itu.</strong>
+
+        </p>
+
+
+        <p>
+
+          Menurutku, di situlah agency kita berada.
+
+        </p>
+
+
+        <p>
+
+          Kita mungkin tidak memilih standar yang diberikan kepada kita ketika kecil. Kita tidak memilih bagaimana masyarakat membandingkan perempuan. Kita tidak memilih algoritma media sosial yang membuat kita terus melihat kehidupan orang lain. Kita tidak memilih komentar pertama yang membuat kita mulai membenci tubuh sendiri.
+
+        </p>
+
+
+        <p>
+
+          Tetapi ketika kita sudah menyadarinya, kita punya pilihan tentang apa yang akan kita lakukan selanjutnya.
+
+        </p>
+
+
+        <h3>
+
+          Kamu dan aku tidak sedang berkompetisi
+
+        </h3>
+
+
+        <p>
+
+          Aku ingin percaya bahwa kamu dan aku tidak pernah benar-benar menjadi musuh.
+
+        </p>
+
+
+        <p>
+
+          Mungkin kita hanya ditempatkan di ruangan yang sama dan diberitahu bahwa hanya satu dari kita yang boleh menang.
+
+        </p>
+
+
+        <p>
+
+          Kita diberikan standar kecantikan yang sama, lalu disuruh berlomba menjadi yang paling cantik.
+
+        </p>
+
+
+        <p>
+
+          Kita diberikan standar kesuksesan yang sama, lalu disuruh berlomba menjadi yang paling sukses.
+
+        </p>
+
+
+        <p>
+
+          Kita diberikan standar pernikahan yang sama, lalu disuruh berlomba menjadi yang paling cepat menikah.
+
+        </p>
+
+
+        <p>
+
+          Kita diberikan standar feminitas yang sama, lalu disuruh mengawasi apakah perempuan lain cukup feminin.
+
+        </p>
+
+
+        <p>
+
+          Padahal kita tidak pernah membuat aturan itu.
+
+        </p>
+
+
+        <p>
+
+          Dan yang paling penting, <strong>kita masih punya pilihan untuk tidak ikut bermain.</strong>
+
+        </p>
+
+
+        <p>
+
+          Aku bisa melihat perempuan lain yang cantik tanpa merasa harus membenci wajahku sendiri. Aku bisa melihat perempuan lain yang sukses tanpa menjadikan kesuksesannya sebagai bukti bahwa aku gagal. Aku bisa melihat perempuan lain menikah lebih dulu tanpa menganggap hidupku terlambat. Aku bisa melihat perempuan lain memilih menjadi ibu tanpa merasa bahwa pilihanku untuk mengejar karier menjadi salah.
+
+        </p>
+
+
+        <p>
+
+          Dan sebaliknya, aku berharap perempuan lain juga bisa melihatku memilih jalan yang berbeda tanpa merasa bahwa pilihan hidupnya sedang aku kritik.
+
+        </p>
+
+
+        <p>
+
+          Karena mungkin hidup bukan perlombaan menuju satu garis finish yang sama.
+
+        </p>
+
+
+        <p>
+
+          Kamu boleh pergi ke arah yang berbeda dariku. Kamu boleh menginginkan kehidupan yang berbeda dariku. Kamu boleh memilih menikah muda. Aku boleh memilih kuliah lebih jauh. Kamu boleh ingin menjadi ibu. Aku boleh ingin membangun perusahaan. Kamu boleh ingin tinggal di rumah. Aku boleh ingin keliling dunia.
+
+        </p>
+
+
+        <p>
+
+          Kita tidak harus membuat pilihan yang sama untuk saling menghormati.
+
+        </p>
+
+
+        <p>
+
+          Mungkin kita juga tidak harus selalu menyukai satu sama lain.
+
+        </p>
+
+
+        <p>
+
+          Kita tidak harus berteman dengan semua perempuan. Kita tidak harus setuju dengan semua keputusan mereka. Kita bahkan boleh tidak menyukai seseorang.
+
+        </p>
+
+
+        <p>
+
+          Tetapi kita bisa memilih untuk tidak menjadikan perbedaan itu sebagai alasan untuk merendahkan kemanusiaannya.
+
+        </p>
+
+
+        <h3>
+
+          Mungkin kita perlu berhenti melihat perempuan lain sebagai cermin
+
+        </h3>
+
+
+        <p>
+
+          Aku ingin sampai pada titik di mana perempuan lain bisa cantik tanpa membuatku merasa kurang cantik.
+
+        </p>
+
+
+        <p>
+
+          Ia bisa pintar tanpa membuatku merasa bodoh.
+
+        </p>
+
+
+        <p>
+
+          Ia bisa menikah lebih dulu tanpa membuatku merasa terlambat.
+
+        </p>
+
+
+        <p>
+
+          Ia bisa menghasilkan lebih banyak uang tanpa membuatku merasa gagal.
+
+        </p>
+
+
+        <p>
+
+          Ia bisa menjadi ibu yang baik tanpa membuat pilihanku menjadi perempuan yang buruk.
+
+        </p>
+
+
+        <p>
+
+          Ia bisa memilih karier tanpa membuat pilihanku untuk membangun keluarga menjadi lebih rendah.
+
+        </p>
+
+
+        <p>
+
+          Dan sebaliknya, aku juga ingin bisa menjalani hidupku tanpa merasa harus membuktikan sesuatu kepada perempuan lain.
+
+        </p>
+
+
+        <p>
+
+          Mungkin itu bentuk kebebasan yang sebenarnya.
+
+        </p>
+
+
+        <p>
+
+          Bukan ketika kita semua akhirnya menjadi sama, tetapi ketika kita tidak lagi merasa harus menjadi sama untuk merasa cukup.
+
+        </p>
+
+
+        <p>
+
+          Karena kamu bukan kompetisiku.
+
+        </p>
+
+
+        <p>
+
+          Aku juga bukan kompetisimu.
+
+        </p>
+
+
+        <p>
+
+          Kamu tidak perlu kalah agar aku bisa menang.
+
+        </p>
+
+
+        <p>
+
+          Aku tidak perlu mengecilkanmu agar diriku terlihat lebih besar.
+
+        </p>
+
+
+        <p>
+
+          Dan mungkin perempuan lain yang selama ini kamu lihat sebagai ancaman sebenarnya hanya seorang perempuan yang, sama sepertimu, sedang mencoba mencari tahu bagaimana caranya menjalani hidup dengan sebaik mungkin.
+
+        </p>
+
+
+        <p>
+
+          Jadi lain kali ketika kamu mendengar rumor tentang perempuan lain, mungkin kita bisa berhenti sebentar sebelum ikut menyebarkannya.
+
+        </p>
+
+
+        <p>
+
+          Ketika melihat perempuan lain berhasil, mungkin kita bisa membiarkan keberhasilannya tetap menjadi miliknya tanpa menjadikannya ukuran kegagalan kita.
+
+        </p>
+
+
+        <p>
+
+          Ketika melihat perempuan lain memilih kehidupan yang berbeda, mungkin kita bisa mengatakan, <em>“Itu hidupnya. Aku punya hidupku sendiri.”</em>
+
+        </p>
+
+
+        <p>
+
+          Karena dunia mungkin sudah cukup lama mengajarkan perempuan untuk saling membenci.
+
+        </p>
+
+
+        <p>
+
+          Ia mengajarkan kita untuk membandingkan tubuh, wajah, pasangan, pendidikan, karier, uang, dan kehidupan kita. Ia membuat kita percaya bahwa perempuan lain adalah kompetitor, bahwa kalau dia lebih cantik maka kita kalah, kalau dia lebih sukses maka kita kalah, kalau dia lebih dulu menikah maka kita kalah, dan kalau dia lebih bahagia maka kita kalah.
+
+        </p>
+
+
+        <p>
+
+          <strong>Tetapi kita tidak harus percaya.</strong>
+
+        </p>
+
+
+        <p>
+
+          Kita masih punya agency untuk memilih arah kita sendiri. Kita bisa berhenti meneruskan aturan yang dulu diberikan kepada kita. Kita bisa berhenti menjadikan perempuan lain sebagai ukuran harga diri. Kita bisa memilih untuk tidak ikut dalam permainan yang mengharuskan perempuan lain kalah agar kita merasa cukup.
+
+        </p>
+
+
+        <p>
+
+          Karena pada akhirnya, <strong>kamu dan aku tidak pernah menjadi musuh.</strong>
+
+        </p>
+
+
+        <p>
+
+          Kita hanya dua perempuan yang sedang menjalani kehidupan masing-masing.
+
+        </p>
+
+
+        <p>
+
+          Dan mungkin salah satu bentuk perlawanan paling sederhana terhadap dunia yang membuat perempuan membenci satu sama lain adalah dengan memilih, setiap hari, <strong>untuk tidak meneruskannya.</strong>
+
+        </p>
+
+
+      </div>
+
+
+
+    </article>
+
+
+
+  </main>
+
+
+
+
+
+  <!-- =====================================================
+
+       COMMENTS
+
+  ====================================================== -->
+
+
+
+  <section class="comments-section">
+
+
+
+    <div class="comments-header">
+
+
+
+      <h2 class="comments-title">
+
+        Pesan dari pembaca
+
+      </h2>
+
+
+
+      <span
+
+        class="comments-count"
+
+        id="messageCount"
+
+      >
+
+        0 pesan
+
+      </span>
+
+
+
+    </div>
+
+
+
+
+
+    <!-- FORM -->
+
+
+
+    <form
+
+      class="comment-form"
+
+      id="commentForm"
+
+    >
+
+
+
+      <div class="form-row">
+
+
+
+        <div class="form-group">
+
+
+
+          <label
+
+            class="form-label"
+
+            for="senderName"
+
+          >
+
+            From
+
+          </label>
+
+
+
+          <input
+
+            type="text"
+
+            id="senderName"
+
+            maxlength="80"
+
+            placeholder="Namamu (opsional)"
+
+          >
+
+
+
+        </div>
+
+
+
+
+
+        <label class="anonymous-option">
+
+
+
+          <input
+
+            type="checkbox"
+
+            id="anonymousCheck"
+
+          >
+
+
+
+          <span>
+
+            Kirim sebagai anonim
+
+          </span>
+
+
+
+        </label>
+
+
+
+      </div>
+
+
+
+
+
+      <div class="message-group">
+
+
+
+        <label
+
+          class="form-label"
+
+          for="messageText"
+
+        >
+
+          Pesan
+
+        </label>
+
+
+
+        <textarea
+
+          id="messageText"
+
+          maxlength="2000"
+
+          placeholder="Tulis sesuatu yang ingin kamu sampaikan..."
+
+          required
+
+        ></textarea>
+
+
+
+      </div>
+
+
+
+
+
+      <button
+
+        type="submit"
+
+        class="submit-button"
+
+        id="sendMessage"
+
+      >
+
+        Kirim pesan
+
+      </button>
+
+
+
+
+
+      <div
+
+        class="form-status"
+
+        id="formStatus"
+
+      ></div>
+
+
+
+    </form>
+
+
+
+
+
+    <!-- COMMENTS -->
+
+
+
+    <div
+
+      class="comments-list"
+
+      id="messagesContainer"
+
+    >
+
+
+
+      <div class="comments-loading">
+
+        Memuat komentar...
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+  <!-- =====================================================
+
+       FOOTER
+
+  ====================================================== -->
+
+
+
+  <footer class="site-footer">
+
+    © tatsyafira
+
+  </footer>
+
+
+
+
+
+  <!-- =====================================================
+
+       SUPABASE
+
+  ====================================================== -->
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+
+
+
+  <script>
+
+
+
+    /* =======================================================
+
+       SUPABASE CONNECTION
+
+    ======================================================= */
+
+
+
+    const SUPABASE_URL =
+
+      "https://gtaljywggqalmfqizjhj.supabase.co";
+
+
+
+    const SUPABASE_KEY =
+
+      "sb_publishable_Lvgk-7rPMaxhO7TAOdGp6Q_MWACHYtR";
+
+
+
+    const supabaseClient =
+
+      window.supabase.createClient(
+
+        SUPABASE_URL,
+
+        SUPABASE_KEY
+
+      );
+
+
+
+
+
+    /* =======================================================
+
+       ARTICLE IDENTIFIER
+
+    ======================================================= */
+
+
+
+    const ARTICLE_SLUG =
+
+      "perempuan-membenci";
+
+
+
+
+
+    /* =======================================================
+
+       ELEMENTS
+
+    ======================================================= */
+
+
+
+    const commentForm =
+
+      document.getElementById("commentForm");
+
+
+
+    const senderName =
+
+      document.getElementById("senderName");
+
+
+
+    const messageText =
+
+      document.getElementById("messageText");
+
+
+
+    const anonymousCheck =
+
+      document.getElementById("anonymousCheck");
+
+
+
+    const sendMessage =
+
+      document.getElementById("sendMessage");
+
+
+
+    const formStatus =
+
+      document.getElementById("formStatus");
+
+
+
+    const messagesContainer =
+
+      document.getElementById("messagesContainer");
+
+
+
+    const messageCount =
+
+      document.getElementById("messageCount");
+
+
+
+
+
+    /* =======================================================
+
+       ESCAPE HTML
+
+    ======================================================= */
+
+
+
+    function escapeHTML(text) {
+
+
+
+      const div =
+
+        document.createElement("div");
+
+
+
+      div.textContent =
+
+        text ?? "";
+
+
+
+      return div.innerHTML;
+
+    }
+
+
+
+
+
+    /* =======================================================
+
+       FORMAT DATE
+
+    ======================================================= */
+
+
+
+    function formatDate(dateString) {
+
+
+
+      if (!dateString) {
+
+        return "";
+
+      }
+
+
+
+      const date =
+
+        new Date(dateString);
+
+
+
+      return date.toLocaleDateString(
+
+        "id-ID",
+
+        {
+
+          day: "numeric",
+
+          month: "short",
+
+          year: "numeric"
+
+        }
+
+      );
+
+    }
+
+
+
+
+
+    /* =======================================================
+
+       LOAD COMMENTS
+
+    ======================================================= */
+
+
+
+    async function loadComments() {
+
+
+
+      messagesContainer.innerHTML = `
+
+        <div class="comments-loading">
+
+          Memuat komentar...
+
+        </div>
+
+      `;
+
+
+
+      const {
+
+        data,
+
+        error
+
+      } = await supabaseClient
+
+        .from("comments")
+
+        .select("*")
+
+        .eq("article", ARTICLE_SLUG)
+
+        .order(
+
+          "created_at",
+
+          {
+
+            ascending: false
+
+          }
+
+        );
+
+
+
+
+
+      if (error) {
+
+
+
+        console.error(
+
+          "Error loading comments:",
+
+          error
+
+        );
+
+
+
+        messagesContainer.innerHTML = `
+
+          <div class="comments-empty">
+
+            Komentar belum dapat dimuat.
+
+          </div>
+
+        `;
+
+
+
+        messageCount.textContent =
+
+          "0 pesan";
+
+
+
+        return;
+
+      }
+
+
+
+
+
+      const comments =
+
+        data || [];
+
+
+
+
+
+      messageCount.textContent =
+
+        `${comments.length} ${
+
+          comments.length === 1
+
+            ? "pesan"
+
+            : "pesan"
+
+        }`;
+
+
+
+
+
+      if (!comments.length) {
+
+
+
+        messagesContainer.innerHTML = `
+
+          <div class="comments-empty">
+
+            Belum ada pesan. Jadilah yang pertama menulis :)
+
+          </div>
+
+        `;
+
+
+
+        return;
+
+      }
+
+
+
+
+
+      messagesContainer.innerHTML =
+
+        comments
+
+          .map(comment => {
+
+
+
+            const isAnonymous =
+
+              comment.is_anonymous;
+
+
+
+            const author =
+
+              isAnonymous
+
+                ? "Anonim"
+
+                : (
+
+                    comment.name ||
+
+                    "Pembaca"
+
+                  );
+
+
+
+            const message =
+
+              escapeHTML(
+
+                comment.message || ""
+
+              );
+
+
+
+            const date =
+
+              formatDate(
+
+                comment.created_at
+
+              );
+
+
+
+
+
+            return `
+
+
+
+              <article class="comment-box">
+
+
+
+                <div class="comment-message">
+
+                  ${message}
+
+                </div>
+
+
+
+                <div class="comment-footer">
+
+
+
+                  <span class="comment-author">
+
+                    ${escapeHTML(author)}
+
+                  </span>
+
+
+
+                  <span class="comment-date">
+
+                    ${date}
+
+                  </span>
+
+
+
+                </div>
+
+
+
+              </article>
+
+
+
+            `;
+
+
+
+          })
+
+          .join("");
+
+
+
+    }
+
+
+
+
+
+    /* =======================================================
+
+       SUBMIT COMMENT
+
+    ======================================================= */
+
+
+
+    commentForm.addEventListener(
+
+      "submit",
+
+      async function(event) {
+
+
+
+        event.preventDefault();
+
+
+
+
+
+        const message =
+
+          messageText.value.trim();
+
+
+
+        const name =
+
+          senderName.value.trim();
+
+
+
+        const isAnonymous =
+
+          anonymousCheck.checked;
+
+
+
+
+
+        if (!message) {
+
+
+
+          formStatus.textContent =
+
+            "Tulis pesan terlebih dahulu.";
+
+
+
+          return;
+
+        }
+
+
+
+
+
+        sendMessage.disabled = true;
+
+
+
+        formStatus.textContent =
+
+          "Mengirim pesan...";
+
+
+
+
+
+        const {
+
+          error
+
+        } = await supabaseClient
+
+          .from("comments")
+
+          .insert([
+
+            {
+
+              article: ARTICLE_SLUG,
+
+              name:
+
+                isAnonymous
+
+                  ? null
+
+                  : (
+
+                      name ||
+
+                      "Pembaca"
+
+                    ),
+
+              message: message,
+
+              is_anonymous:
+
+                isAnonymous
+
+            }
+
+          ]);
+
+
+
+
+
+        if (error) {
+
+
+
+          console.error(
+
+            "Error submitting comment:",
+
+            error
+
+          );
+
+
+
+          formStatus.textContent =
+
+            "Pesan belum berhasil dikirim. Coba lagi.";
+
+
+
+          sendMessage.disabled = false;
+
+
+
+          return;
+
+        }
+
+
+
+
+
+        messageText.value = "";
+
+        senderName.value = "";
+
+        anonymousCheck.checked = false;
+
+
+
+        formStatus.textContent =
+
+          "Pesan berhasil dikirim. Terima kasih :)";
+
+
+
+
+
+        sendMessage.disabled = false;
+
+
+
+
+
+        await loadComments();
+
+
+
+      }
+
+    );
+
+
+
+
+
+    /* =======================================================
+
+       INITIAL LOAD
+
+    ======================================================= */
+
+
+
+    loadComments();
+
+
+
+  </script>
+
+
+
+</body>
+
+
+
+</html>
