@@ -94,6 +94,7 @@
                 #e2eee5;
 
         }
+        
 
 
         /* =========================================================
@@ -551,6 +552,393 @@
                 var(--learn-blue);
 
         }
+        /* =========================================================
+   GERMAN LEARNING PROMO
+   Positioned below the header inside the hero
+========================================================= */
+
+.german-learning-promo {
+
+    position:
+        absolute;
+
+    top:
+        105px;
+
+    right:
+        7vw;
+
+    z-index:
+        20;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        11px;
+
+    min-width:
+        255px;
+
+    padding:
+        10px 17px 10px 11px;
+
+    border:
+        1px solid
+        rgba(23,23,23,.08);
+
+    border-radius:
+        999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.98) 0%,
+            rgba(255,255,255,.98) 55%,
+            rgba(246,239,239,.96) 100%
+        );
+
+    box-shadow:
+        0 10px 30px
+        rgba(30,45,60,.10);
+
+    text-decoration:
+        none;
+
+    color:
+        var(--learn-ink);
+
+    overflow:
+        hidden;
+
+    transition:
+        transform .35s
+        cubic-bezier(.22,1,.36,1),
+        box-shadow .35s ease;
+
+}
+
+
+/*
+   Very subtle German flag accent.
+   Black → red → gold appears as a small
+   decorative line rather than filling the button.
+*/
+
+.german-learning-promo::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        0;
+
+    width:
+        100%;
+
+    height:
+        3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #171717 0%,
+            #171717 33.33%,
+            #c72c3b 33.33%,
+            #c72c3b 66.66%,
+            #d8b44a 66.66%,
+            #d8b44a 100%
+        );
+
+}
+
+
+.german-learning-promo::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        90px;
+
+    height:
+        90px;
+
+    right:
+        -45px;
+
+    bottom:
+        -45px;
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(216,180,74,.18),
+            transparent 70%
+        );
+
+    pointer-events:
+        none;
+
+}
+
+
+/* FLAG */
+
+.german-learning-promo-flag {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        34px;
+
+    height:
+        34px;
+
+    flex:
+        0 0 34px;
+
+    border-radius:
+        50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff,
+            #f7f7f7
+        );
+
+    box-shadow:
+        0 4px 12px
+        rgba(30,45,60,.08);
+
+    font-size:
+        17px;
+
+}
+
+
+/* TEXT */
+
+.german-learning-promo-text {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        3px;
+
+}
+
+
+.german-learning-promo-title {
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.2;
+
+    color:
+        #171717;
+
+}
+
+
+.german-learning-promo-collab {
+
+    font-size:
+        9px;
+
+    font-weight:
+        500;
+
+    line-height:
+        1.2;
+
+    color:
+        #817b76;
+
+    letter-spacing:
+        .2px;
+
+}
+
+
+/* ARROW */
+
+.german-learning-promo-arrow {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    margin-left:
+        auto;
+
+    font-size:
+        17px;
+
+    color:
+        #77736d;
+
+    transition:
+        transform .3s ease,
+        color .3s ease;
+
+}
+
+
+/* HOVER */
+
+.german-learning-promo:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 17px 38px
+        rgba(30,45,60,.14);
+
+}
+
+
+.german-learning-promo:hover
+.german-learning-promo-arrow {
+
+    transform:
+        translateX(4px);
+
+    color:
+        #9d2535;
+
+}
+
+
+/* =========================================================
+   GERMAN PROMO — MOBILE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .german-learning-promo {
+
+        right:
+            5vw;
+
+        top:
+            90px;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .german-learning-promo {
+
+        top:
+            85px;
+
+        right:
+            20px;
+
+        min-width:
+            auto;
+
+        max-width:
+            calc(100% - 40px);
+
+        padding:
+            9px 13px 9px 9px;
+
+    }
+
+
+    .german-learning-promo-flag {
+
+        width:
+            30px;
+
+        height:
+            30px;
+
+        flex-basis:
+            30px;
+
+        font-size:
+            15px;
+
+    }
+
+
+    .german-learning-promo-title {
+
+        font-size:
+            11px;
+
+    }
+
+
+    .german-learning-promo-collab {
+
+        font-size:
+            8px;
+
+    }
+
+
+    .german-learning-promo-arrow {
+
+        font-size:
+            15px;
+
+    }
+
+}
 
 
         /* =========================================================
@@ -5123,6 +5511,48 @@
         ===================================================== -->
 
         <section class="learning-hero">
+
+            <a
+    href="belajar-jerman.html"
+    class="german-learning-promo learn-reveal"
+>
+
+    <span
+        class="german-learning-promo-flag"
+        aria-hidden="true"
+    >
+        🇩🇪
+    </span>
+
+
+    <span
+        class="german-learning-promo-text"
+    >
+
+        <span
+            class="german-learning-promo-title"
+        >
+            Mulai belajar Bahasa Jerman
+        </span>
+
+
+        <span
+            class="german-learning-promo-collab"
+        >
+            in collab with Kak Hilman
+        </span>
+
+    </span>
+
+
+    <span
+        class="german-learning-promo-arrow"
+        aria-hidden="true"
+    >
+        →
+    </span>
+
+</a>
 
             <div class="learning-hero-inner">
 
