@@ -5930,6 +5930,7 @@ body.a1-locked {
 
 <p>sein berarti “adalah/merupakan” dan merupakan verba yang sangat penting tetapi tidak mengikuti pola reguler.</p>
 <p>Bentuk yang perlu dikuasai: ich bin, du bist, er/sie/es ist, wir sind, ihr seid, sie/Sie sind.</p>
+<p>Untuk Pronomen Sie, teradapat 3 macam  "sie"= Sie yang berarti "anda" menggunakan haben, dan penulisannya menggunakan huruf “S” kapital.  sie yang berarti "mereka" menggunakan haben. sie yang berarti "dia perempuan" menggunakan hat.</p>
 <p>Gunakan sein untuk identitas, status, dan deskripsi dengan kata sifat: Ich bin Studentin. Ich bin müde. Wir sind in Istanbul.</p>
 
 
@@ -11260,23 +11261,7 @@ body.a1-locked {
                         </div>
 
 
-                        <div class="a1-example-card">
-                            <div class="a1-example-top">
-                                <span class="a1-example-german">
-                                    nicht
-                                </span>
-                                <button
-                                    type="button"
-                                    class="a1-speak-button"
-                                    data-speech="nicht"
-                                >
-                                    🔊 Dengarkan
-                                </button>
-                            </div>
-                            <small>
-                                Das Auto ist nicht teuer.
-                            </small>
-                        </div>
+                        
 
 
                         </div>
@@ -15109,7 +15094,7 @@ body.a1-locked {
                                 </div>
 
                                 <h4>
-                                    Tulis: “Dia membantu saya.”
+                                    Tulis: “Dia (laki-laki) membantu saya.”
                                 </h4>
 
                                 <textarea
@@ -16647,7 +16632,10 @@ body.a1-locked {
 
                         <div class="a1-material-copy">
 
-<p>Untuk banyak verba reguler, pola dasarnya ge- + batang + -t: lernen → gelernt, machen → gemacht, spielen → gespielt.</p>
+<p>Untuk banyak verba reguler, pola dasarnya ge- + (kata dasar) + -t:</p> 
+    </p>- lernen → gelernt</p>
+    </p>- machen → gemacht</p>
+    </p>- spielen → gespielt.</p>
 <p>Verba tidak beraturan sering memiliki bentuk yang harus dihafalkan: gehen → gegangen, essen → gegessen, sehen → gesehen.</p>
 <p>Beberapa verba yang berakhir -ieren tidak menggunakan ge-, misalnya studieren → studiert.</p>
 
@@ -16855,7 +16843,7 @@ body.a1-locked {
                                     </span>
 
                                     <span>
-                                        Ich habe nach Berlin gegangen.
+                                        Ich habe nach Berlin gefahren.
                                     </span>
                                 </button>
 
@@ -16870,7 +16858,7 @@ body.a1-locked {
                                     </span>
 
                                     <span>
-                                        Ich bin nach Berlin gegangen.
+                                        Ich bin nach Berlin gefahren.
                                     </span>
                                 </button>
 
@@ -16885,7 +16873,7 @@ body.a1-locked {
                                     </span>
 
                                     <span>
-                                        Ich habe nach Berlin gegeht.
+                                        Ich habe nach Berlin gefahrt.
                                     </span>
                                 </button>
 
@@ -16900,7 +16888,7 @@ body.a1-locked {
                                     </span>
 
                                     <span>
-                                        Ich bin nach Berlin gehen.
+                                        Ich bin nach Berlin gefahre.
                                     </span>
                                 </button>
 
@@ -16929,11 +16917,11 @@ body.a1-locked {
                                     </strong>
 
                                     <span>
-                                        B. Ich bin nach Berlin gegangen.
+                                        B. Ich bin nach Berlin gefahren.
                                     </span>
 
                                     <small>
-                                        gehen memakai sein: Ich bin nach Berlin gegangen.
+                                       fahren memakai sein: Ich bin nach Berlin gefahren.
                                     </small>
                                 </div>
 
@@ -21995,8 +21983,7 @@ body.a1-locked {
 
 
 <script>
-
-    /* =========================================================
+/* =========================================================
    A1 PAGE ACCESS
 ========================================================= */
 
@@ -22005,8 +21992,15 @@ const A1_ACCESS_PASSWORD =
         "aGFtYnVyZ2VyMjAyNg=="
     );
 
+
 const A1_ACCESS_STORAGE_KEY =
     "tatsyafira_german_a1_access_v1";
+
+
+const A1_ACCESS_DURATION =
+    15 *
+    60 *
+    1000;
 
 
 const a1AccessLock =
@@ -22014,15 +22008,18 @@ const a1AccessLock =
         "a1AccessLock"
     );
 
+
 const a1AccessForm =
     document.getElementById(
         "a1AccessForm"
     );
 
+
 const a1AccessPassword =
     document.getElementById(
         "a1AccessPassword"
     );
+
 
 const a1AccessError =
     document.getElementById(
@@ -22030,31 +22027,105 @@ const a1AccessError =
     );
 
 
-function isA1Unlocked() {
+function getA1AccessExpiry() {
 
-    return (
+    const storedExpiry =
         localStorage.getItem(
             A1_ACCESS_STORAGE_KEY
-        ) === "true"
-    );
+        );
+
+
+    if (!storedExpiry) {
+
+        return null;
+
+    }
+
+
+    const expiry =
+        Number(
+            storedExpiry
+        );
+
+
+    if (
+        !Number.isFinite(
+            expiry
+        )
+    ) {
+
+        localStorage.removeItem(
+            A1_ACCESS_STORAGE_KEY
+        );
+
+        return null;
+
+    }
+
+
+    return expiry;
+
+}
+
+
+function isA1Unlocked() {
+
+    const expiry =
+        getA1AccessExpiry();
+
+
+    if (!expiry) {
+
+        return false;
+
+    }
+
+
+    if (
+        Date.now() >=
+        expiry
+    ) {
+
+        localStorage.removeItem(
+            A1_ACCESS_STORAGE_KEY
+        );
+
+        return false;
+
+    }
+
+
+    return true;
 
 }
 
 
 function unlockA1() {
 
+    const expiryTime =
+        Date.now() +
+        A1_ACCESS_DURATION;
+
+
     localStorage.setItem(
         A1_ACCESS_STORAGE_KEY,
-        "true"
+        String(
+            expiryTime
+        )
     );
+
 
     a1AccessLock.classList.add(
         "hidden"
     );
 
+
     document.body.classList.remove(
         "a1-locked"
     );
+
+
+    startA1AccessTimer();
 
 }
 
@@ -22065,13 +22136,81 @@ function lockA1() {
         A1_ACCESS_STORAGE_KEY
     );
 
+
     a1AccessLock.classList.remove(
         "hidden"
     );
 
+
     document.body.classList.add(
         "a1-locked"
     );
+
+
+    if (
+        a1AccessPassword
+    ) {
+
+        a1AccessPassword.value =
+            "";
+
+    }
+
+
+    if (
+        a1AccessError
+    ) {
+
+        a1AccessError.textContent =
+            "";
+
+    }
+
+}
+
+
+let a1AccessTimer =
+    null;
+
+
+function startA1AccessTimer() {
+
+    if (
+        a1AccessTimer
+    ) {
+
+        clearInterval(
+            a1AccessTimer
+        );
+
+    }
+
+
+    a1AccessTimer =
+        setInterval(
+
+            function () {
+
+                if (
+                    !isA1Unlocked()
+                ) {
+
+                    clearInterval(
+                        a1AccessTimer
+                    );
+
+                    a1AccessTimer =
+                        null;
+
+                    lockA1();
+
+                }
+
+            },
+
+            1000
+
+        );
 
 }
 
@@ -22080,13 +22219,21 @@ if (
     isA1Unlocked()
 ) {
 
-    unlockA1();
+    a1AccessLock.classList.add(
+        "hidden"
+    );
+
+
+    document.body.classList.remove(
+        "a1-locked"
+    );
+
+
+    startA1AccessTimer();
 
 } else {
 
-    document.body.classList.add(
-        "a1-locked"
-    );
+    lockA1();
 
 }
 
@@ -22097,6 +22244,7 @@ a1AccessForm.addEventListener(
 
         event.preventDefault();
 
+
         const enteredPassword =
             a1AccessPassword.value.trim();
 
@@ -22106,18 +22254,33 @@ a1AccessForm.addEventListener(
             A1_ACCESS_PASSWORD
         ) {
 
-            a1AccessError.textContent =
-                "";
+            if (
+                a1AccessError
+            ) {
+
+                a1AccessError.textContent =
+                    "";
+
+            }
+
 
             unlockA1();
 
-        } else {
-
-            a1AccessError.textContent =
-                "Passcode belum benar. Coba lagi.";
 
             a1AccessPassword.value =
                 "";
+
+        } else {
+
+            if (
+                a1AccessError
+            ) {
+
+                a1AccessError.textContent =
+                    "Passcode salah. Coba lagi.";
+
+            }
+
 
             a1AccessPassword.focus();
 
@@ -22125,6 +22288,7 @@ a1AccessForm.addEventListener(
 
     }
 );
+
 
 const MODULE_COUNT =
     29;
@@ -22937,7 +23101,7 @@ function completeModule(
 ========================================================= */
 
 const finalQuestions =
-    [{"category": "Begrüßung", "question": "Pilih kalimat yang tepat untuk situasi formal.", "type": "mcq", "options": ["Wie heißt du?", "Wie heißen Sie?", "Wie heißt Sie?", "Wie heißen du?"], "answer": 1, "explanation": "Bentuk formal menggunakan Sie dan verba heißen: Wie heißen Sie?"}, {"category": "Herkunft", "question": "Pilih kalimat yang benar untuk “Saya berasal dari Indonesia.”", "type": "mcq", "options": ["Ich komme aus Indonesien.", "Ich kommen aus Indonesien.", "Ich komme in Indonesien.", "Ich kommt aus Indonesien."], "answer": 0, "explanation": "Ich + komme dan pola asal adalah aus + negara."}, {"category": "Präsens", "question": "Pilih kalimat yang benar.", "type": "mcq", "options": ["Wir lernt Deutsch.", "Wir lernen Deutsch.", "Wir lernst Deutsch.", "Wir lernenst Deutsch."], "answer": 1, "explanation": "wir memakai akhiran -en: wir lernen."}, {"category": "sein/haben", "question": "Pilih kalimat yang benar.", "type": "mcq", "options": ["Du bin Student.", "Du bist Student.", "Du sind Student.", "Du haben Student."], "answer": 1, "explanation": "sein untuk du adalah bist."}, {"category": "Frage", "question": "Pilih pertanyaan yang benar untuk “Kamu tinggal di mana?”", "type": "mcq", "options": ["Wo du wohnst?", "Wo wohnst du?", "Wohnst du wo?", "Wo du wohnst."], "answer": 1, "explanation": "W-Frage + verba + subjek: Wo wohnst du?"}, {"category": "Artikel", "question": "Pilih artikel yang benar.", "type": "mcq", "options": ["der Buch", "die Buch", "das Buch", "einе Buch"], "answer": 2, "explanation": "Buch adalah netral: das Buch."}, {"category": "Plural", "question": "Pilih plural yang benar dari der Stuhl.", "type": "mcq", "options": ["die Stuhls", "die Stühle", "die Stuhlen", "die Stuhl"], "answer": 1, "explanation": "Bentuk plural yang benar adalah die Stühle."}, {"category": "Akkusativ", "question": "Pilih kalimat yang benar.", "type": "mcq", "options": ["Ich kaufe ein Stift.", "Ich kaufe einen Stift.", "Ich kaufe eine Stift.", "Ich kaufe dene Stift."], "answer": 1, "explanation": "Stift maskulin; ein → einen dalam Akkusativ."}, {"category": "Negasi", "question": "Pilih kalimat yang benar untuk “Saya tidak lelah.”", "type": "mcq", "options": ["Ich bin kein müde.", "Ich bin keine müde.", "Ich bin nicht müde.", "Ich nicht bin müde."], "answer": 2, "explanation": "müde adalah kata sifat, sehingga gunakan nicht."}, {"category": "Dativ", "question": "Pilih kalimat yang benar.", "type": "mcq", "options": ["Ich fahre mit den Bus.", "Ich fahre mit dem Bus.", "Ich fahre mit der Bus.", "Ich fahre mit das Bus."], "answer": 1, "explanation": "mit + Dativ; der Bus → dem Bus."}, {"category": "Modalverb", "question": "Pilih kalimat yang benar.", "type": "mcq", "options": ["Ich kann Deutsch sprechen.", "Ich kann Deutsch spreche.", "Ich Deutsch kann sprechen.", "Ich kann sprechen Deutsch."], "answer": 0, "explanation": "Modalverb terkonjugasi di posisi kedua; infinitif di akhir."}, {"category": "Trennbares Verb", "question": "Pilih kalimat yang benar.", "type": "mcq", "options": ["Ich aufstehe um sieben Uhr.", "Ich stehe um sieben Uhr auf.", "Ich stehe auf um sieben Uhr.", "Ich auf stehe um sieben Uhr."], "answer": 1, "explanation": "aufstehen menjadi stehe … auf dalam kalimat utama."}, {"category": "Perfekt", "question": "Pilih kalimat yang benar.", "type": "mcq", "options": ["Ich habe nach Berlin gegangen.", "Ich bin nach Berlin gegangen.", "Ich bin nach Berlin gehen.", "Ich habe nach Berlin gegangen."], "answer": 1, "explanation": "gehen memakai sein dalam Perfekt: bin gegangen."}, {"category": "Nebensatz", "question": "Pilih kalimat yang benar.", "type": "mcq", "options": ["Ich lerne Deutsch, weil ich wohne in Deutschland.", "Ich lerne Deutsch, weil wohne ich in Deutschland.", "Ich lerne Deutsch, weil ich in Deutschland wohne.", "Ich lerne Deutsch, weil in Deutschland ich wohne."], "answer": 2, "explanation": "Dalam anak kalimat dengan weil, verba terkonjugasi berada di akhir."}, {"category": "Gesamt", "question": "Pilih kalimat yang paling benar.", "type": "mcq", "options": ["Morgen ich werde Deutsch lernen.", "Morgen werde ich Deutsch lernen.", "Morgen werde Deutsch ich lernen.", "Morgen Deutsch lernen werde ich."], "answer": 1, "explanation": "Futur I: werde di posisi kedua dan infinitif lernen di akhir."}, {"category": "Vorstellung", "question": "Tulis dalam Bahasa Jerman: “Nama saya Anna dan saya seorang mahasiswa.”", "type": "typed", "answers": ["Ich heiße Anna und ich bin Student.", "Ich heiße Anna und bin Student."], "explanation": "Gunakan heiße untuk nama dan bin untuk identitas."}, {"category": "Herkunft", "question": "Tulis: “Saya tinggal di Istanbul.”", "type": "typed", "answers": ["Ich wohne in Istanbul."], "explanation": "Pola tempat tinggal: Ich wohne in + kota."}, {"category": "Sprachen", "question": "Tulis: “Saya berbicara Bahasa Indonesia dan Bahasa Jerman.”", "type": "typed", "answers": ["Ich spreche Indonesisch und Deutsch."], "explanation": "sprechen untuk ich adalah spreche."}, {"category": "Familie", "question": "Tulis: “Ini saudara perempuan saya.”", "type": "typed", "answers": ["Das ist meine Schwester."], "explanation": "Schwester feminin, sehingga meine Schwester."}, {"category": "Possessive", "question": "Lengkapi: „Das ist ___ Bruder.“ (saya)", "type": "typed", "answers": ["mein"], "explanation": "Bruder maskulin dalam pola nominatif: mein Bruder."}, {"category": "Akkusativ", "question": "Lengkapi: „Ich kaufe ___ Apfel.“ (der)", "type": "typed", "answers": ["den"], "explanation": "der Apfel menjadi den Apfel dalam Akkusativ."}, {"category": "Negation", "question": "Tulis: “Saya tidak punya mobil.”", "type": "typed", "answers": ["Ich habe kein Auto."], "explanation": "Auto netral; gunakan kein Auto."}, {"category": "Zeit", "question": "Tulis: “Saya belajar Bahasa Jerman pada malam hari.”", "type": "typed", "answers": ["Am Abend lerne ich Deutsch."], "explanation": "Am Abend dapat berada di depan; lerne tetap posisi kedua."}, {"category": "Trennbares Verb", "question": "Tulis: “Saya bangun pukul tujuh.”", "type": "typed", "answers": ["Ich stehe um sieben Uhr auf."], "explanation": "aufstehen menjadi stehe … auf."}, {"category": "Modalverb", "question": "Tulis: “Saya bisa berbicara Bahasa Jerman.”", "type": "typed", "answers": ["Ich kann Deutsch sprechen."], "explanation": "kann terkonjugasi; sprechen tetap infinitif di akhir."}, {"category": "Dativ", "question": "Lengkapi: „Ich helfe ___ Mann.“ (der)", "type": "typed", "answers": ["dem"], "explanation": "helfen memakai Dativ; der Mann → dem Mann."}, {"category": "Reflexiv", "question": "Tulis: “Saya merasa baik.”", "type": "typed", "answers": ["Ich fühle mich gut."], "explanation": "Untuk ich, pronomen reflexive adalah mich."}, {"category": "Perfekt", "question": "Tulis: “Kemarin saya belajar Bahasa Jerman.”", "type": "typed", "answers": ["Gestern habe ich Deutsch gelernt.", "Ich habe gestern Deutsch gelernt."], "explanation": "Perfekt: haben + gelernt."}, {"category": "Futur", "question": "Tulis: “Besok saya akan bepergian.”", "type": "typed", "answers": ["Morgen werde ich reisen.", "Ich werde morgen reisen."], "explanation": "werden terkonjugasi di posisi kedua; reisen di akhir."}, {"category": "Nebensatz", "question": "Gabungkan: „Ich lerne Deutsch. Ich wohne in Deutschland.“ dengan weil.", "type": "typed", "answers": ["Ich lerne Deutsch, weil ich in Deutschland wohne."], "explanation": "weil mengirim verba wohne ke akhir anak kalimat."}];
+    [{"category": "Begrüßung", "question": "Pilih kalimat yang tepat untuk situasi formal.", "type": "mcq", "options": ["Wie heißt du?", "Wie heißen Sie?", "Wie heißt Sie?", "Wie heißen du?"], "answer": 1, "explanation": "Bentuk formal menggunakan Sie dan verba heißen: Wie heißen Sie?"}, {"category": "Herkunft", "question": "Pilih kalimat yang benar untuk “Saya berasal dari Indonesia.”", "type": "mcq", "options": ["Ich komme aus Indonesien.", "Ich kommen aus Indonesien.", "Ich komme in Indonesien.", "Ich kommt aus Indonesien."], "answer": 0, "explanation": "Ich + komme dan pola asal adalah aus + negara."}, {"category": "Präsens", "question": "Pilih kalimat yang benar.", "type": "mcq", "options": ["Wir lernt Deutsch.", "Wir lernen Deutsch.", "Wir lernst Deutsch.", "Wir lernenst Deutsch."], "answer": 1, "explanation": "wir memakai akhiran -en: wir lernen."}, {"category": "sein/haben", "question": "Pilih kalimat yang benar.", "type": "mcq", "options": ["Du bin Student.", "Du bist Student.", "Du sind Student.", "Du haben Student."], "answer": 1, "explanation": "sein untuk du adalah bist."}, {"category": "Frage", "question": "Pilih pertanyaan yang benar untuk “Kamu tinggal di mana?”", "type": "mcq", "options": ["Wo du wohnst?", "Wo wohnst du?", "Wohnst du wo?", "Wo du wohnst."], "answer": 1, "explanation": "W-Frage + verba + subjek: Wo wohnst du?"}, {"category": "Artikel", "question": "Pilih artikel yang benar.", "type": "mcq", "options": ["der Buch", "die Buch", "das Buch", "einе Buch"], "answer": 2, "explanation": "Buch adalah netral: das Buch."}, {"category": "Plural", "question": "Pilih plural yang benar dari der Stuhl.", "type": "mcq", "options": ["die Stuhls", "die Stühle", "die Stuhlen", "die Stuhl"], "answer": 1, "explanation": "Bentuk plural yang benar adalah die Stühle."}, {"category": "Akkusativ", "question": "Pilih kalimat yang benar.", "type": "mcq", "options": ["Ich kaufe ein Stift.", "Ich kaufe einen Stift.", "Ich kaufe eine Stift.", "Ich kaufe dene Stift."], "answer": 1, "explanation": "Stift maskulin; ein → einen dalam Akkusativ."}, {"category": "Negasi", "question": "Pilih kalimat yang benar untuk “Saya tidak lelah.”", "type": "mcq", "options": ["Ich bin kein müde.", "Ich bin keine müde.", "Ich bin nicht müde.", "Ich nicht bin müde."], "answer": 2, "explanation": "müde adalah kata sifat, sehingga gunakan nicht."}, {"category": "Dativ", "question": "Pilih kalimat yang benar.", "type": "mcq", "options": ["Ich fahre mit den Bus.", "Ich fahre mit dem Bus.", "Ich fahre mit der Bus.", "Ich fahre mit das Bus."], "answer": 1, "explanation": "mit + Dativ; der Bus → dem Bus."}, {"category": "Modalverb", "question": "Pilih kalimat yang benar.", "type": "mcq", "options": ["Ich kann Deutsch sprechen.", "Ich kann Deutsch spreche.", "Ich Deutsch kann sprechen.", "Ich kann sprechen Deutsch."], "answer": 0, "explanation": "Modalverb terkonjugasi di posisi kedua; infinitif di akhir."}, {"category": "Trennbares Verb", "question": "Pilih kalimat yang benar.", "type": "mcq", "options": ["Ich aufstehe um sieben Uhr.", "Ich stehe um sieben Uhr auf.", "Ich stehe auf um sieben Uhr.", "Ich auf stehe um sieben Uhr."], "answer": 1, "explanation": "aufstehen menjadi stehe … auf dalam kalimat utama."}, {"category": "Perfekt", "question": "Pilih kalimat yang benar.", "type": "mcq", "options": ["Ich habe nach Berlin gefahren.", "Ich bin nach Berlin gefahren.", "Ich bin nach Berlin gefahre.", "Ich habe nach Berlin gefahre."], "answer": 1, "explanation": "gehen memakai sein dalam Perfekt: bin gegangen."}, {"category": "Nebensatz", "question": "Pilih kalimat yang benar.", "type": "mcq", "options": ["Ich lerne Deutsch, weil ich wohne in Deutschland.", "Ich lerne Deutsch, weil wohne ich in Deutschland.", "Ich lerne Deutsch, weil ich in Deutschland wohne.", "Ich lerne Deutsch, weil in Deutschland ich wohne."], "answer": 2, "explanation": "Dalam anak kalimat dengan weil, verba terkonjugasi berada di akhir."}, {"category": "Gesamt", "question": "Pilih kalimat yang paling benar.", "type": "mcq", "options": ["Morgen ich werde Deutsch lernen.", "Morgen werde ich Deutsch lernen.", "Morgen werde Deutsch ich lernen.", "Morgen Deutsch lernen werde ich."], "answer": 1, "explanation": "Futur I: werde di posisi kedua dan infinitif lernen di akhir."}, {"category": "Vorstellung", "question": "Tulis dalam Bahasa Jerman: “Nama saya Anna dan saya seorang mahasiswa.”", "type": "typed", "answers": ["Ich heiße Anna und ich bin Student.", "Ich heiße Anna und bin Student."], "explanation": "Gunakan heiße untuk nama dan bin untuk identitas."}, {"category": "Herkunft", "question": "Tulis: “Saya tinggal di Istanbul.”", "type": "typed", "answers": ["Ich wohne in Istanbul."], "explanation": "Pola tempat tinggal: Ich wohne in + kota."}, {"category": "Sprachen", "question": "Tulis: “Saya berbicara Bahasa Indonesia dan Bahasa Jerman.”", "type": "typed", "answers": ["Ich spreche Indonesisch und Deutsch."], "explanation": "sprechen untuk ich adalah spreche."}, {"category": "Familie", "question": "Tulis: “Ini saudara perempuan saya.”", "type": "typed", "answers": ["Das ist meine Schwester."], "explanation": "Schwester feminin, sehingga meine Schwester."}, {"category": "Possessive", "question": "Lengkapi: „Das ist ___ Bruder.“ (saya)", "type": "typed", "answers": ["mein"], "explanation": "Bruder maskulin dalam pola nominatif: mein Bruder."}, {"category": "Akkusativ", "question": "Lengkapi: „Ich kaufe ___ Apfel.“ (der)", "type": "typed", "answers": ["den"], "explanation": "der Apfel menjadi den Apfel dalam Akkusativ."}, {"category": "Negation", "question": "Tulis: “Saya tidak punya mobil.”", "type": "typed", "answers": ["Ich habe kein Auto."], "explanation": "Auto netral; gunakan kein Auto."}, {"category": "Zeit", "question": "Tulis: “Saya belajar Bahasa Jerman pada malam hari.”", "type": "typed", "answers": ["Am Abend lerne ich Deutsch."], "explanation": "Am Abend dapat berada di depan; lerne tetap posisi kedua."}, {"category": "Trennbares Verb", "question": "Tulis: “Saya bangun pukul tujuh.”", "type": "typed", "answers": ["Ich stehe um sieben Uhr auf."], "explanation": "aufstehen menjadi stehe … auf."}, {"category": "Modalverb", "question": "Tulis: “Saya bisa berbicara Bahasa Jerman.”", "type": "typed", "answers": ["Ich kann Deutsch sprechen."], "explanation": "kann terkonjugasi; sprechen tetap infinitif di akhir."}, {"category": "Dativ", "question": "Lengkapi: „Ich helfe ___ Mann.“ (der)", "type": "typed", "answers": ["dem"], "explanation": "helfen memakai Dativ; der Mann → dem Mann."}, {"category": "Reflexiv", "question": "Tulis: “Saya merasa baik.”", "type": "typed", "answers": ["Ich fühle mich gut."], "explanation": "Untuk ich, pronomen reflexive adalah mich."}, {"category": "Perfekt", "question": "Tulis: “Kemarin saya belajar Bahasa Jerman.”", "type": "typed", "answers": ["Gestern habe ich Deutsch gelernt.", "Ich habe gestern Deutsch gelernt."], "explanation": "Perfekt: haben + gelernt."}, {"category": "Futur", "question": "Tulis: “Besok saya akan bepergian.”", "type": "typed", "answers": ["Morgen werde ich reisen.", "Ich werde morgen reisen."], "explanation": "werden terkonjugasi di posisi kedua; reisen di akhir."}, {"category": "Nebensatz", "question": "Gabungkan: „Ich lerne Deutsch. Ich wohne in Deutschland.“ dengan weil.", "type": "typed", "answers": ["Ich lerne Deutsch, weil ich in Deutschland wohne."], "explanation": "weil mengirim verba wohne ke akhir anak kalimat."}];
 
 let finalIndex =
     0;
