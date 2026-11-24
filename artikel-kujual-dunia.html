@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Untukmu, Kujual Dunia — Tatsyafira</title>
+
+
+  <!-- =====================================================
+       FONTS
+  ====================================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <style>
+
+    /* =====================================================
+       RESET
+    ====================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #222222;
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =====================================================
+       HEADER
+       SAME AS PREVIOUS ARTICLE
+    ====================================================== */
+
+    .site-header {
+      width: 100%;
+      height: 72px;
+      background: #ffffff;
+      border-bottom: 1px solid #eeeeee;
+      position: relative;
+      z-index: 100;
+    }
+
+    .nav {
+      width: min(1200px, calc(100% - 64px));
+      height: 72px;
+      margin: 0 auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      width: 135px;
+      height: 42px;
+
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .logo img {
+      display: block;
+
+      width: 135px !important;
+      height: auto !important;
+
+      max-width: 135px !important;
+      max-height: 42px !important;
+
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+    }
+
+    .nav-links a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #333333;
+
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.55;
+    }
+
+    .nav-links a.active {
+      font-weight: 600;
+    }
+
+
+    /* =====================================================
+       ARTICLE
+    ====================================================== */
+
+    .article {
+      width: min(900px, calc(100% - 48px));
+      margin: 0 auto;
+
+      padding-top: 105px;
+      padding-bottom: 40px;
+    }
+
+
+    /* =====================================================
+       CATEGORY
+    ====================================================== */
+
+    .article-category {
+      font-size: 13px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+
+      color: #999999;
+      margin-bottom: 22px;
+    }
+
+
+    /* =====================================================
+       TITLE
+    ====================================================== */
+
+    .article-title {
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: clamp(42px, 6vw, 68px);
+
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+
+      color: #1f1f1f;
+
+      max-width: 850px;
+      margin-bottom: 48px;
+    }
+
+
+    /* =====================================================
+       COVER IMAGE
+    ====================================================== */
+
+    .cover-figure {
+      margin-bottom: 22px;
+    }
+
+    .cover-image {
+      width: 100%;
+
+      border-radius: 14px;
+      overflow: hidden;
+
+      background: #f5f3f1;
+    }
+
+    .cover-image img {
+      width: 100%;
+      height: auto;
+
+      object-fit: contain;
+    }
+
+
+    /* =====================================================
+       SPOTIFY
+    ====================================================== */
+
+    .spotify-section {
+      width: 100%;
+      margin-bottom: 70px;
+    }
+
+    .spotify-player {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .spotify-player iframe {
+      width: 100%;
+      height: 152px;
+
+      border: 0;
+      display: block;
+    }
+
+    .spotify-caption {
+      text-align: center;
+
+      margin-top: 14px;
+
+      font-size: 13px;
+      color: #999999;
+
+      font-family: "DM Sans", sans-serif;
+    }
+
+
+    /* =====================================================
+       ARTICLE CONTENT
+    ====================================================== */
+
+    .article-content {
+      width: min(760px, 100%);
+      margin: 0 auto;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 20px;
+      line-height: 1.8;
+
+      color: #292929;
+    }
+
+    .article-content p {
+      margin-bottom: 32px;
+    }
+
+    .article-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .article-content strong {
+      font-weight: 700;
+    }
+
+    .article-content em {
+      font-style: italic;
+    }
+
+
+    /* =====================================================
+       OPENING
+    ====================================================== */
+
+    .article-opening {
+      font-style: italic;
+    }
+
+
+    /* =====================================================
+       ARTICLE HEADINGS
+    ====================================================== */
+
+    .article-content h3 {
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 30px;
+      line-height: 1.25;
+
+      font-weight: 500;
+
+      color: #222222;
+
+      margin-top: 65px;
+      margin-bottom: 32px;
+    }
+
+
+    /* =====================================================
+       ARTICLE IMAGES
+    ====================================================== */
+
+    .article-figure {
+      width: 100%;
+      margin: 55px 0 14px;
+    }
+
+    .article-image {
+      width: 100%;
+
+      background: transparent;
+
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .article-image img {
+      width: 100%;
+      height: auto;
+
+      display: block;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .image-caption {
+      margin-top: 12px;
+
+      font-family: "DM Sans", sans-serif;
+
+      font-size: 13px;
+      line-height: 1.6;
+
+      text-align: center;
+
+      color: #999999;
+    }
+
+
+    /* =====================================================
+       QUOTE STYLE
+    ====================================================== */
+
+    .article-quote {
+      margin: 42px 0;
+      padding: 10px 0;
+    }
+
+    .article-quote p {
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+
+
+    /* =====================================================
+       COMMENTS SECTION
+       SAME AS PREVIOUS ARTICLE
+    ====================================================== */
+
+    .comments-section {
+      width: min(1000px, calc(100% - 48px));
+
+      margin: 90px auto 120px;
+
+      padding-top: 70px;
+
+      border-top: 1px solid #eeeeee;
+    }
+
+    .comments-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+
+      gap: 20px;
+
+      margin-bottom: 38px;
+    }
+
+    .comments-title {
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 34px;
+
+      font-weight: 500;
+
+      color: #222222;
+    }
+
+    .comments-count {
+      font-size: 13px;
+      color: #999999;
+
+      white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       COMMENT FORM
+    ====================================================== */
+
+    .comment-form {
+      background: #ffffff;
+
+      border: 1px solid #dedede;
+
+      border-radius: 8px;
+
+      padding: 34px;
+
+      margin-bottom: 55px;
+    }
+
+    .form-row {
+      display: flex;
+
+      align-items: flex-end;
+
+      gap: 18px;
+
+      margin-bottom: 22px;
+    }
+
+    .form-group {
+      flex: 1;
+    }
+
+    .form-label {
+      display: block;
+
+      font-size: 13px;
+      font-weight: 600;
+
+      color: #555555;
+
+      margin-bottom: 9px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+
+      border: 1px solid #dddddd;
+
+      border-radius: 6px;
+
+      background: #ffffff;
+
+      padding: 13px 14px;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 14px;
+
+      color: #222222;
+
+      outline: none;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    input {
+      height: 48px;
+    }
+
+    textarea {
+      min-height: 145px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #999999;
+
+      box-shadow:
+        0 0 0 2px
+        rgba(0, 0, 0, 0.03);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #aaaaaa;
+    }
+
+
+    /* =====================================================
+       ANONYMOUS
+    ====================================================== */
+
+    .anonymous-option {
+      display: flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      height: 48px;
+
+      white-space: nowrap;
+
+      font-size: 13px;
+
+      color: #666666;
+    }
+
+    .anonymous-option input {
+      width: 17px;
+      height: 17px;
+
+      padding: 0;
+
+      accent-color: #222222;
+    }
+
+
+    /* =====================================================
+       MESSAGE
+    ====================================================== */
+
+    .message-group {
+      margin-bottom: 22px;
+    }
+
+
+    /* =====================================================
+       BUTTON
+    ====================================================== */
+
+    .submit-button {
+      border: none;
+
+      border-radius: 6px;
+
+      background: #222222;
+
+      color: #ffffff;
+
+      padding: 12px 22px;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+      cursor: pointer;
+
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .submit-button:hover {
+      background: #444444;
+    }
+
+    .submit-button:active {
+      transform: translateY(1px);
+    }
+
+    .submit-button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .form-status {
+      margin-top: 14px;
+
+      font-size: 13px;
+
+      color: #888888;
+    }
+
+
+    /* =====================================================
+       COMMENT CARDS
+    ====================================================== */
+
+    .comments-list {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
+
+      gap: 18px;
+    }
+
+    .comment-box {
+      background: #ffffff;
+
+      border: 1px solid #dedede;
+
+      border-radius: 10px;
+
+      min-height: 190px;
+
+      padding: 25px 26px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .comment-box:hover {
+      border-color: #cccccc;
+
+      box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.04);
+    }
+
+    .comment-message {
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 17px;
+
+      line-height: 1.7;
+
+      color: #333333;
+
+      margin-bottom: 28px;
+
+      white-space: pre-wrap;
+
+      overflow-wrap: anywhere;
+    }
+
+    .comment-footer {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+      padding-top: 15px;
+
+      border-top: 1px solid #eeeeee;
+    }
+
+    .comment-author {
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 12px;
+
+      font-weight: 600;
+
+      color: #555555;
+    }
+
+    .comment-date {
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 11px;
+
+      color: #aaaaaa;
+    }
+
+    .comments-empty,
+    .comments-loading {
+      font-size: 14px;
+
+      color: #999999;
+
+      padding: 12px 0;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ====================================================== */
+
+    .site-footer {
+      border-top: 1px solid #eeeeee;
+
+      padding: 35px 24px;
+
+      text-align: center;
+
+      font-size: 13px;
+
+      color: #999999;
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ====================================================== */
+
+
+
+    /* =====================================================
+       ARTICLE PHOTO GALLERY
+    ====================================================== */
+
+    .mid-article-figure {
+      width: 100%;
+      margin: 52px 0 56px;
+    }
+
+    .mid-article-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+
+    .article-gallery {
+      width: min(900px, calc(100% - 48px));
+      margin: 30px auto 90px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .article-gallery figure {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      background: transparent;
+    }
+
+    .article-gallery img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 700px) {
+
+      .site-header {
+        height: 64px;
+      }
+
+      .nav {
+        width: calc(100% - 32px);
+
+        height: 64px;
+      }
+
+      .logo {
+        width: 110px;
+        height: 36px;
+      }
+
+      .logo img {
+        width: 110px !important;
+
+        max-width: 110px !important;
+        max-height: 36px !important;
+      }
+
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .nav-links a:nth-child(4),
+      .nav-links a:nth-child(5) {
+        display: none;
+      }
+
+
+      /* ARTICLE */
+
+      .article {
+        width: calc(100% - 36px);
+
+        padding-top: 65px;
+        padding-bottom: 40px;
+      }
+
+      .article-title {
+        font-size: 42px;
+
+        letter-spacing: -1px;
+
+        margin-bottom: 40px;
+      }
+
+      .article-content {
+        font-size: 17px;
+
+        line-height: 1.9;
+      }
+
+      .article-content p {
+        margin-bottom: 30px;
+      }
+
+      .article-content h3 {
+        font-size: 27px;
+
+        margin-top: 55px;
+        margin-bottom: 28px;
+      }
+
+
+      /* SPOTIFY */
+
+      .spotify-section {
+        margin-bottom: 55px;
+      }
+
+      .spotify-player iframe {
+        height: 152px;
+      }
+
+
+      /* COMMENTS */
+
+      .comments-section {
+        width: calc(100% - 36px);
+
+        margin-top: 60px;
+        margin-bottom: 70px;
+
+        padding-top: 50px;
+      }
+
+      .comments-header {
+        margin-bottom: 28px;
+      }
+
+      .comments-title {
+        font-size: 28px;
+      }
+
+      .comment-form {
+        padding: 24px;
+
+        margin-bottom: 40px;
+      }
+
+      .form-row {
+        display: block;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .anonymous-option {
+        height: auto;
+      }
+
+      .comments-list {
+        grid-template-columns: 1fr;
+      }
+
+      .comment-box {
+        min-height: 170px;
+
+        padding: 22px;
+      }
+
+      .comment-message {
+        font-size: 16px;
+      }
+
+    }
+
+
+
+
+    @media (max-width: 520px) {
+      .article-gallery {
+        width: calc(100% - 36px);
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+    }
+
+    @media (max-width: 390px) {
+
+      .article {
+        width: calc(100% - 36px);
+      }
+
+      .article-title {
+        font-size: 39px;
+      }
+
+      .article-content {
+        font-size: 17px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header class="site-header">
+
+    <nav class="nav">
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+
+        <img
+          src="images/tatsyafira-logo.png"
+          alt="Untukmu, Kujual Dunia"
+        >
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a
+          href="catatan.html"
+          class="active"
+        >
+          Catatan
+        </a>
+
+        <a href="belajar.html">
+          Belajar
+        </a>
+
+        <a href="#">
+          Kelas
+        </a>
+
+        <a href="#">
+          Resources
+        </a>
+
+        <a href="#">
+          Toko
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       ARTICLE
+  ====================================================== -->
+
+  <main>
+
+    <article class="article">
+
+
+      <div class="article-category">
+        Refleksi
+      </div>
+
+
+      <h1 class="article-title">
+        Untukmu, Kujual Dunia
+      </h1>
+
+
+      <!-- =================================================
+           COVER IMAGE
+      ================================================== -->
+
+      <figure class="cover-figure">
+
+        <div class="cover-image">
+
+          <img
+            src="images/kujual-dunia-cover.JPG"
+            alt="Untukmu, Kujual Dunia"
+          >
+
+        </div>
+
+      </figure>
+
+
+      <!-- =================================================
+           SPOTIFY PLAYER
+      ================================================== -->
+
+      <section class="spotify-section">
+
+        <div class="spotify-player">
+
+          <iframe
+            data-testid="embed-iframe"
+            style="border-radius: 12px; width: 100%; height: 152px; border: 0;"
+            src="https://open.spotify.com/embed/track/1zFaLYA10ImwEejge3F5nm?utm_source=generator&amp;si=8e9c5a91ce7647b3"
+            allowfullscreen
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           ARTICLE CONTENT
+      ================================================== -->
+
+      <div class="article-content">
+
+        <p class="article-opening">
+          <em>“Ibu kalau pergi kepikiran, nanti siapa yang akan jaga Fira, Bita, Lala, dan Reza? Ibu masih mau berjuang karena Ibu kepikiran anak-anak kalau Ibu pergi. Ibu khawatir Fira dan adik-adik kalau Ibu nggak ada.”</em>
+        </p>
+
+        <p>
+          Dulu, dunia hanyalah aku, Ayah, dan adik-adikku: Bita, Lala, dan Reza.
+        </p>
+
+        <p>
+          Kita tumbuh dengan hanya memiliki satu sama lain. Dulu, kita hanya empat anak kecil yang kebingungan mencari arah jalan pulang. Aku berusia sekitar 13 tahun ketika Ibu pergi. Bita waktu itu 10 tahun, Lala 8 tahun, dan Reza baru 6 tahun. Usia yang sebenarnya masih terlalu kecil untuk memahami kehilangan, apalagi harus belajar menjalani kehidupan setelahnya. Rasanya seperti aku berjalan menuju kegelapan dengan memegang lentera yang cahayanya samar, sementara adik-adikku menggenggam tangan dan bajuku, mengikuti ke mana pun arah yang aku tuju.
+        </p>
+
+        <p>
+          Sejak saat itu, keadaan keluarga kita tidak selalu mudah. Kita tumbuh dengan Ayah dan satu sama lain. Ada banyak hal yang mungkin tidak bisa kita dapatkan seperti anak-anak lain seusia kita. Ada bagian dari masa kecil yang harus kita lewati dengan keadaan berbeda, banyak hal yang harus dipahami lebih cepat, dan mungkin ada pertanyaan-pertanyaan yang sampai hari ini masih kita simpan sendiri.
+        </p>
+
+        <p>
+          Aku membantu Bita dan Lala menyuapi Reza sebelum berangkat sekolah. Bita dan Lala menjemur pakaian, aku menyetrika baju, sementara Reza menyiapkan buku-bukunya sendiri. Aku dan Bita menentukan siapa yang menyapu dan mengepel rumah, Lala membersihkan dan merapikan barang-barang, sementara Reza menyiram tanaman.
+        </p>
+
+        <p>
+          Aku sering berpikir bahwa keadaan seperti itu bisa saja membawa seseorang ke arah yang berbeda. Adik-adikku tidak tumbuh dengan mudah. Kalian melewati masa kecil dan beranjak dewasa tanpa merasakan kasih sayang seorang ibu. Kalian punya seribu satu alasan untuk marah kepada dunia, untuk memberontak, untuk kehilangan arah, atau bahkan untuk tidak terlalu peduli dengan masa depan. Dan aku rasa tidak ada yang bisa sepenuhnya menyalahkan kalian jika suatu hari memilih jalan yang salah. Tumbuh dengan keadaan seperti itu memang bukan perkara sederhana, terlebih ketika kita masih terlalu muda untuk memahami apa yang sebenarnya sedang terjadi.
+        </p>
+
+        <p>
+          Tapi hari ini, sepuluh tahun setelah semua itu terjadi, ketika melihat kalian satu per satu tumbuh, ada sesuatu yang membuatku sangat bersyukur.
+        </p>
+
+        <p>
+          Bita dan Lala diterima di UGM, masing-masing di Fakultas Geografi dan Biologi. Reza juga semakin rajin belajar. “Kak Fira, aku butuh laptop untuk coding! Reza pengen banget masuk Teknik Komputer habis lulus SMA!”
+        </p>
+
+        <p>
+          Kalian mungkin tidak menyadari betapa bahagianya aku melihat kalian tetap menjaga salat, belajar dengan baik, dan tidak mudah terbawa oleh hal-hal yang bisa menjauhkan kalian dari masa depan yang sedang kalian bangun.
+        </p>
+
+        <p>
+          Terima kasih karena masih membawa nilai-nilai yang dulu diajarkan Ibu dan Ayah, bahkan ketika Ibu sudah tidak lagi berada di tengah-tengah kita. Mungkin ada banyak hal yang tidak sempat Ibu lihat secara langsung. Aku berharap Ibu tahu bahwa anak-anaknya sedang berusaha tumbuh dengan baik. Bahwa kekhawatiran yang selalu Ibu bawa sebelum pergi, tentang siapa yang akan menjaga Fira dan adik-adiknya, perlahan terjawab melalui Bita, Lala, dan Reza yang kini mulai menentukan langkah mereka sendiri dan bertanggung jawab atas kehidupan masing-masing.
+        </p>
+
+        <p>
+          Kalian bahkan sudah hidup lebih lama tanpa Ibu daripada bersama Ibu. Ada begitu banyak tahun yang harus kalian lewati tanpa kehadirannya, tetapi aku bersyukur nilai-nilai yang pernah beliau ajarkan tetap tumbuh dalam diri kalian. Dan setiap rasa syukur yang kupanjatkan kepada Allah setiap hari, salah satunya adalah karena penjagaan-Nya terhadap kalian, bahkan ketika aku sedang berada jauh dari rumah.
+        </p>
+
+        <p>
+          Aku tidak tahu apakah selama ini aku cukup sering mengatakan bahwa aku bangga kepada kalian. Mungkin kita tidak selalu punya kesempatan untuk membicarakan hal-hal seperti ini. Kita punya kesibukan masing-masing, tinggal di tempat yang berbeda, dan menjalani kehidupan yang semakin hari semakin jauh dari masa kecil kita. Tetapi sungguh, melihat kalian tetap berusaha menjadi anak-anak yang baik adalah salah satu hal yang paling aku syukuri.
+        </p>
+
+        <p>
+          Seiring bertambahnya usia, aku mulai memahami bahwa menjadi kakak, terutama ketika kita adalah anak perempuan pertama dalam keluarga, kadang membuat kita melihat masa depan dengan cara yang sedikit berbeda. Kita tidak hanya memikirkan apa yang ingin kita capai untuk diri sendiri. Ada tiga orang lain yang tanpa sadar selalu ikut masuk dalam pertimbangan kita.
+        </p>
+
+        <p>
+          Ketika aku belajar, mengambil kesempatan, atau mencoba membangun sesuatu, tentu ada banyak hal yang ingin aku capai untuk kehidupanku sendiri. Aku juga punya mimpi, punya kebutuhan, dan punya banyak hal yang ingin aku usahakan. Tetapi di antara semua itu, sering kali ada satu harapan yang selalu muncul: aku ingin kalian tumbuh lebih baik dariku.
+        </p>
+
+        <p>
+          Mungkin orang lain melihat uang yang kita hasilkan sebagai sesuatu yang bisa ditabung, digunakan untuk membeli sesuatu, atau dipakai untuk menikmati hasil kerja keras sendiri. Aku juga ingin melakukan itu. Tetapi ada saat-saat ketika sebagian dari hasil kerja kerasku terasa jauh lebih berarti jika bisa digunakan untuk sesuatu yang berkaitan dengan masa depan kalian.
+        </p>
+
+        <p>
+          Aku tidak pernah berpikir terlalu lama ketika menyangkut pendidikan kalian. Kalau ada biaya sekolah, kebutuhan belajar, kesempatan, atau sesuatu yang memang bisa membantu kalian berkembang, aku ingin sebisa mungkin ikut mengusahakannya. Aku tahu betapa berharganya kesempatan pendidikan. Aku tahu bagaimana rasanya ingin mengejar sesuatu, tetapi harus memikirkan banyak hal sebelum bisa benar-benar melangkah.
+        </p>
+
+        <p>
+          Dan mungkin karena aku pernah merasakan itu, aku ingin kalian punya ruang yang lebih luas untuk menentukan pilihan.<br><br>
+Bita, Lala, dan Reza, Kak Fira akan selalu berusaha melindungi kalian, sebisa yang Kakak mampu. Aku tahu betapa kerasnya kehidupan di luar sana. Aku tahu ada banyak hal yang harus dihadapi ketika kita mulai dewasa, ada kenyataan yang tidak selalu berjalan sesuai harapan, dan ada masa-masa ketika dunia terasa begitu jahat kepada kita. Aku sudah merasakan sendiri bagaimana rasanya harus menghadapi semua itu. Kalau boleh berharap, aku ingin kalian tidak perlu melewati kesulitan yang sama seperti yang pernah Kakak lalui. Aku ingin kalian punya kehidupan yang lebih baik, jalan yang lebih lapang, dan seseorang yang bisa kalian andalkan ketika dunia sedang tidak berpihak kepada kalian. Selama aku masih mampu, aku akan selalu mengusahakan itu untuk kalian.
+        </p>
+
+        <p>
+          Aku tidak ingin kalian merasa harus membatalkan mimpi hanya karena biayanya terlalu besar. Aku tidak ingin kalian buru-buru menganggap sesuatu mustahil hanya karena belum tahu bagaimana cara mencapainya. Kalau ada kesempatan yang bisa membuat kalian belajar lebih jauh, pergi ke tempat yang lebih baik, atau mengenal dunia yang lebih luas, aku ingin kalian punya kesempatan untuk mengambilnya.
+        </p>
+
+        <p>
+          Aku berharap kalian tumbuh jauh lebih baik dariku. Aku juga tahu bahwa Ibu, di mana pun beliau berada sekarang, pasti menginginkan hal yang sama. Aku ingin kalian memiliki kehidupan yang jauh lebih baik daripada kehidupan yang dulu Ibu jalani.
+        </p>
+
+        <p>
+          Sebagian dari tabunganku mungkin akan berubah menjadi biaya pendidikan kalian. Sebagian dari waktu dan tenaga yang aku punya mungkin akan digunakan untuk membantu kalian mempersiapkan sesuatu. Ada hal-hal yang mungkin harus kutunda untuk diriku sendiri. Tetapi aku tidak merasa sedang kehilangan sesuatu ketika melakukannya. Justru ada kebahagiaan tersendiri ketika mengetahui bahwa hasil dari sesuatu yang aku usahakan bisa menjadi jalan bagi kalian untuk mendapatkan kehidupan yang lebih baik.
+        </p>
+
+        <p>
+          Aku sangat berharap kalian tumbuh jauh lebih baik dariku.
+        </p>
+
+        <p>
+          Aku juga tidak berharap kalian akan mengembalikan semua itu suatu hari nanti. Aku tidak pernah menghitung berapa banyak yang sudah kuberikan atau berapa banyak yang harus kalian kembalikan. Aku hanya ingin kalian bisa menerima setiap kesempatan yang datang dan menggunakannya sebaik mungkin.
+        </p>
+
+        <p>
+          Aku hanya ingin kalian tahu bahwa kalian pantas mendapatkan kesempatan itu. Aku juga ingin Ibu tahu bahwa beliau meninggalkan sesuatu yang jauh lebih besar daripada yang mungkin pernah beliau bayangkan. Ibu dan Ayah mewariskan ilmu, kemampuan untuk bekerja keras, dan keberanian untuk memperjuangkan mimpi kami. Hal-hal yang sampai hari ini masih kami bawa dalam menjalani kehidupan.
+        </p>
+
+        <p>
+          Mungkin bagi sebagian orang, itu hanya uang. Tetapi bagi seorang kakak, ada begitu banyak harapan yang ikut dititipkan di dalamnya.
+        </p>
+
+        <p>
+          Ketika aku menginjakkan kaki di Oxford, waktu itu aku menulis bahwa suatu hari Bita, Lala, dan Reza akan menyusul Kak Fira ke Oxford. Aku benar-benar berharap suatu hari nanti kalian punya kesempatan untuk datang ke tempat-tempat seperti itu.
+        </p>
+
+        <p>
+          Aku tidak meminta kalian harus masuk Oxford. Aku juga tidak berharap kalian mengikuti perjalanan yang sama denganku. Aku hanya ingin kalian tahu bahwa dunia ini jauh lebih luas daripada tempat kita memulai kehidupan. Ada banyak universitas yang bisa kalian datangi, banyak negara yang bisa kalian kunjungi, banyak orang yang bisa kalian temui, dan banyak hal yang mungkin belum pernah terlintas dalam pikiran kita ketika masih kecil dulu.
+        </p>
+
+        <p>
+          Kalau suatu hari kalian bisa pergi lebih jauh daripada yang pernah aku capai, aku harap kalian tumbuh jauh lebih baik dariku. Kalau kalian mendapatkan kesempatan yang bahkan tidak pernah aku dapatkan, ambillah. Kalau kalian bisa membangun kehidupan yang jauh lebih baik daripada kehidupan yang sekarang sedang aku usahakan, aku akan menjadi salah satu orang yang paling bahagia melihatnya.
+        </p>
+
+        <p>
+          Aku tidak ingin kalian hanya menyusul perjalananku. Aku ingin kalian punya perjalanan sendiri, dengan kemungkinan-kemungkinan yang jauh lebih besar.
+        </p>
+
+        <p>
+          Dan mungkin ini juga yang dirasakan oleh banyak kakak di luar sana. Ada begitu banyak kakak yang tidak selalu bisa mengatakan kepada adik-adiknya bahwa mereka rela bekerja lebih keras agar adik-adiknya bisa belajar lebih tinggi. Ada yang diam-diam menyisihkan uang untuk biaya sekolah, membelikan sesuatu yang dibutuhkan, membantu membayar pendidikan, atau mengambil kesempatan bekerja lebih jauh dari rumah. Ada yang mungkin tidak pernah menjelaskan alasan di balik semua keputusan itu.
+        </p>
+
+        <p>
+          Aku rasa, banyak kakak melakukan hal-hal tersebut karena mereka pernah tahu bagaimana rasanya hidup dengan pilihan yang terbatas. Mereka ingin adik-adiknya punya lebih banyak kesempatan dan bisa menjalani kehidupan yang lebih baik.
+        </p>
+
+        <p>
+          Aku rasa, salah satu bentuk cinta seorang kakak adalah ketika kita mulai menginginkan sesuatu bukan hanya untuk diri sendiri. Kita mulai memikirkan bagaimana caranya agar orang-orang yang kita sayangi juga bisa mendapatkan kesempatan untuk merasakan hal-hal baik dalam hidup. Bahkan terkadang, kita lebih mudah mengeluarkan uang untuk pendidikan adik sendiri daripada membeli sesuatu untuk diri sendiri. Melihat kalian berkembang dan mendapatkan kesempatan yang lebih baik memberikan kebahagiaan yang sulit dijelaskan.
+        </p>
+
+        <p>
+          Aku sangat berharap kalian tumbuh jauh lebih baik dariku.
+        </p>
+
+        <p>
+          Untuk Bita, Lala, dan Reza, aku tidak tahu kehidupan seperti apa yang menunggu kalian nanti. Aku juga tidak tahu apakah semua hal yang sedang aku usahakan hari ini akan membawa kalian ke tempat-tempat yang kita impikan. Tetapi aku berharap kalian tidak pernah berhenti berusaha untuk masa depan kalian sendiri.
+        </p>
+
+        <p>
+          Terkadang aku membayangkan, bagaimana kalau Ibu bisa melihat kalian sekarang? Anak-anak yang dulu begitu Ibu khawatirkan sebelum pergi, yang masih sangat kecil ketika Ibu tinggalkan, kini sudah mulai menginjakkan kaki di perguruan tinggi. Bita dan Lala diterima di kampus yang dulu Ibu sebut sebagai salah satu universitas terbaik di dunia, tempat Ibu pernah menuntut ilmu. Reza, anak bungsu yang mungkin paling Ibu khawatirkan, sekarang sedang punya mimpi untuk menjadi seorang engineer.
+        </p>
+
+        <p>
+          Aku ingin sekali Ibu tahu bahwa anak-anak yang dulu begitu beliau khawatirkan kini sedang tumbuh dan menentukan masa depan mereka sendiri. Aku harap beliau bisa melihat bahwa kami masih saling menjaga.
+        </p>
+
+
+
+        <figure class="article-figure mid-article-figure">
+          <img src="images/kujual-dunia-mid.JPG" alt="Momen bersama keluarga" loading="lazy">
+        </figure>
+
+        <p>
+          Teruslah belajar. Jaga diri kalian. Jangan tinggalkan hal-hal baik yang sudah diajarkan Ayah dan Ibu. Jangan takut punya mimpi yang besar, dan jangan merasa bahwa kalian harus membatasi diri hanya karena kita pernah memulai dari keadaan yang tidak mudah.
+        </p>
+
+        <p>
+          Aku juga masih punya banyak hal yang ingin dicapai. Masih ada banyak tempat yang ingin didatangi, banyak mimpi yang ingin diwujudkan, dan banyak hal yang masih harus diperjuangkan. Kita sama-sama masih berjuang dan masih dalam perjalanan. Sama seperti dulu ketika kita masih sekolah, aku menyiapkan sarapan, Bita dan Lala menyapu, sementara Reza menyiapkan bukunya. Aku berharap kita terus diberi kekuatan untuk melewati kehidupan dan segala tantangan yang masih menunggu di depan.
+        </p>
+
+        <p>
+          Aku tidak sedang berdiri di garis akhir dan meminta kalian menyusul. Aku hanya ingin kita semua punya kesempatan untuk pergi lebih jauh daripada yang pernah kita bayangkan.
+        </p>
+
+        <p>
+          Mungkin ketika dulu kita masih kecil, kita tidak pernah benar-benar membayangkan akan sampai sejauh ini. Dan kalau suatu hari nanti kalian melihat kembali foto-foto lama kita, aku berharap kalian bisa melihat betapa banyak hal yang sudah berhasil kita lewati.
+        </p>
+
+        <p>
+          <strong>Kalau dunia pernah terasa terlalu sempit untuk kita ketika kecil, semoga suatu hari nanti kalian bisa hidup dengan dunia yang begitu luas, sampai kalian tidak lagi harus bertanya apakah mimpi-mimpi kalian mungkin untuk diwujudkan.</strong>
+        </p>
+
+        <p>
+          Untuk kalian, aku akan selalu mengusahakan apa yang aku bisa. Aku tidak berharap kalian akan membalasnya. Aku hanya berharap kalian punya kesempatan untuk hidup lebih jauh, lebih baik, dan lebih bahagia daripada yang pernah kita bayangkan.<br><br>
+Suatu hari nanti, mungkin kita akan menua. Kita akan memiliki keluarga dan kehidupan masing-masing. Kita mungkin akan semakin jarang bertemu, semakin sibuk dengan urusan kita sendiri, sampai suatu hari kita hampir lupa bahwa dulu kita pernah bermain di ruang yang sama, tidur berdekatan di samping Ayah dan Ibu, berbagi makanan, berebut sesuatu yang sederhana, dan tumbuh di rumah yang sama.
+        </p>
+
+        <p>
+          Mungkin nanti akan ada banyak hal yang berubah. Rumah yang dulu selalu ramai bisa jadi tidak lagi dipenuhi suara kita. Tidak ada lagi yang harus membagi tugas menyapu, mengepel, atau menyiapkan sarapan sebelum sekolah. Kita tidak lagi harus saling menunggu untuk berangkat, atau memastikan satu sama lain sudah makan. Kita akan punya cerita, tanggung jawab, dan orang-orang baru dalam kehidupan masing-masing.
+        </p>
+
+        <p>
+          Tapi, sejauh apa pun nanti kita pergi, aku harap kita tidak pernah benar-benar merasa asing satu sama lain. Aku harap kita selalu punya alasan untuk pulang, untuk berkumpul, untuk kembali menjadi empat anak kecil yang dulu berusaha menjalani hari-hari bersama. Sebab sebelum kita memiliki dunia masing-masing, kita pernah menjadi dunia bagi satu sama lain.
+        </p>
+
+        <p>
+          Dan kalau suatu hari nanti kita sudah terlalu sibuk dengan kehidupan masing-masing, aku harap kalian ingat bahwa Kak Fira akan selalu menjadi kakak kalian. Bahwa di antara semua hal yang mungkin berubah seiring waktu, ada satu hal yang ingin tetap sama: aku akan selalu mengusahakan yang terbaik untuk kalian.
+        </p>
+
+        <p>
+          Untukmu, kujual dunia.
+        </p>
+
+      </div>
+
+      <!-- =================================================
+           PHOTO GALLERY — SIX PHOTOS AT THE END
+      ================================================== -->
+      <section class="article-gallery" aria-label="Galeri foto">
+        <figure><img src="images/kujual-dunia-01.JPG" alt="Kenangan keluarga 1" loading="lazy"></figure>
+        <figure><img src="images/kujual-dunia-02.JPG" alt="Kenangan keluarga 2" loading="lazy"></figure>
+        <figure><img src="images/kujual-dunia-03.JPG" alt="Kenangan keluarga 3" loading="lazy"></figure>
+        <figure><img src="images/kujual-dunia-04.JPG" alt="Kenangan keluarga 4" loading="lazy"></figure>
+        <figure><img src="images/kujual-dunia-05.JPG" alt="Kenangan keluarga 5" loading="lazy"></figure>
+        <figure><img src="images/kujual-dunia-06.JPG" alt="Kenangan keluarga 6" loading="lazy"></figure>
+      </section>
+<!-- =====================================================
+       COMMENTS
+  ====================================================== -->
+
+  <section class="comments-section">
+
+    <div class="comments-header">
+
+      <h2 class="comments-title">
+        Pesan dari pembaca
+      </h2>
+
+      <span
+        class="comments-count"
+        id="messageCount"
+      >
+        0 pesan
+      </span>
+
+    </div>
+
+
+    <!-- FORM -->
+
+    <form
+      class="comment-form"
+      id="commentForm"
+    >
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label
+            class="form-label"
+            for="senderName"
+          >
+            From
+          </label>
+
+          <input
+            type="text"
+            id="senderName"
+            maxlength="80"
+            placeholder="Namamu (opsional)"
+          >
+
+        </div>
+
+
+        <label class="anonymous-option">
+
+          <input
+            type="checkbox"
+            id="anonymousCheck"
+          >
+
+          <span>
+            Kirim sebagai anonim
+          </span>
+
+        </label>
+
+      </div>
+
+
+      <div class="message-group">
+
+        <label
+          class="form-label"
+          for="messageText"
+        >
+          Pesan
+        </label>
+
+        <textarea
+          id="messageText"
+          maxlength="2000"
+          placeholder="Tulis sesuatu yang ingin kamu sampaikan..."
+          required
+        ></textarea>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="submit-button"
+        id="sendMessage"
+      >
+        Kirim pesan
+      </button>
+
+
+      <div
+        class="form-status"
+        id="formStatus"
+      ></div>
+
+    </form>
+
+
+    <!-- COMMENTS -->
+
+    <div
+      class="comments-list"
+      id="messagesContainer"
+    >
+
+      <div class="comments-loading">
+        Memuat komentar...
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="site-footer">
+    © tatsyafira
+  </footer>
+
+
+  <!-- =====================================================
+       SUPABASE
+  ====================================================== -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+  <script>
+
+    /* =======================================================
+       SUPABASE CONNECTION
+    ======================================================= */
+
+    const SUPABASE_URL =
+      "https://gtaljywggqalmfqizjhj.supabase.co";
+
+    const SUPABASE_KEY =
+      "sb_publishable_Lvgk-7rPMaxhO7TAOdGp6Q_MWACHYtR";
+
+    const supabaseClient =
+      window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_KEY
+      );
+
+
+    /* =======================================================
+       ARTICLE IDENTIFIER
+    ======================================================= */
+
+    const ARTICLE_SLUG =
+      "kujual-dunia";
+
+
+    /* =======================================================
+       ELEMENTS
+    ======================================================= */
+
+    const commentForm =
+      document.getElementById("commentForm");
+
+    const senderName =
+      document.getElementById("senderName");
+
+    const messageText =
+      document.getElementById("messageText");
+
+    const anonymousCheck =
+      document.getElementById("anonymousCheck");
+
+    const sendMessage =
+      document.getElementById("sendMessage");
+
+    const formStatus =
+      document.getElementById("formStatus");
+
+    const messagesContainer =
+      document.getElementById("messagesContainer");
+
+    const messageCount =
+      document.getElementById("messageCount");
+
+
+    /* =======================================================
+       ESCAPE HTML
+    ======================================================= */
+
+    function escapeHTML(text) {
+
+      const div =
+        document.createElement("div");
+
+      div.textContent =
+        text ?? "";
+
+      return div.innerHTML;
+    }
+
+
+    /* =======================================================
+       FORMAT DATE
+    ======================================================= */
+
+    function formatDate(dateString) {
+
+      if (!dateString) {
+        return "";
+      }
+
+      const date =
+        new Date(dateString);
+
+      return date.toLocaleDateString(
+        "id-ID",
+        {
+          day: "numeric",
+          month: "short",
+          year: "numeric"
+        }
+      );
+    }
+
+
+    /* =======================================================
+       LOAD COMMENTS
+    ======================================================= */
+
+    async function loadComments() {
+
+      messagesContainer.innerHTML = `
+        <div class="comments-loading">
+          Memuat komentar...
+        </div>
+      `;
+
+      const {
+        data,
+        error
+      } = await supabaseClient
+        .from("comments")
+        .select("*")
+        .eq("article", ARTICLE_SLUG)
+        .order(
+          "created_at",
+          {
+            ascending: false
+          }
+        );
+
+
+      if (error) {
+
+        console.error(
+          "Error loading comments:",
+          error
+        );
+
+        messagesContainer.innerHTML = `
+          <div class="comments-empty">
+            Komentar belum dapat dimuat.
+          </div>
+        `;
+
+        messageCount.textContent =
+          "0 pesan";
+
+        return;
+      }
+
+
+      const comments =
+        data || [];
+
+
+      messageCount.textContent =
+        `${comments.length} ${
+          comments.length === 1
+            ? "pesan"
+            : "pesan"
+        }`;
+
+
+      if (!comments.length) {
+
+        messagesContainer.innerHTML = `
+          <div class="comments-empty">
+            Belum ada pesan. Jadilah yang pertama menulis :)
+          </div>
+        `;
+
+        return;
+      }
+
+
+      messagesContainer.innerHTML =
+        comments
+          .map(comment => {
+
+            const isAnonymous =
+              comment.is_anonymous;
+
+            const author =
+              isAnonymous
+                ? "Anonim"
+                : (
+                    comment.name ||
+                    "Pembaca"
+                  );
+
+            const message =
+              escapeHTML(
+                comment.message || ""
+              );
+
+            const date =
+              formatDate(
+                comment.created_at
+              );
+
+
+            return `
+
+              <article class="comment-box">
+
+                <div class="comment-message">
+                  ${message}
+                </div>
+
+                <div class="comment-footer">
+
+                  <span class="comment-author">
+                    ${escapeHTML(author)}
+                  </span>
+
+                  <span class="comment-date">
+                    ${date}
+                  </span>
+
+                </div>
+
+              </article>
+
+            `;
+
+          })
+          .join("");
+
+    }
+
+
+    /* =======================================================
+       SUBMIT COMMENT
+    ======================================================= */
+
+    commentForm.addEventListener(
+      "submit",
+      async function(event) {
+
+        event.preventDefault();
+
+
+        const message =
+          messageText.value.trim();
+
+        const name =
+          senderName.value.trim();
+
+        const isAnonymous =
+          anonymousCheck.checked;
+
+
+        if (!message) {
+
+          formStatus.textContent =
+            "Tulis pesan terlebih dahulu.";
+
+          return;
+        }
+
+
+        sendMessage.disabled = true;
+
+        formStatus.textContent =
+          "Mengirim pesan...";
+
+
+        const {
+          error
+        } = await supabaseClient
+          .from("comments")
+          .insert([
+            {
+              article: ARTICLE_SLUG,
+              name:
+                isAnonymous
+                  ? null
+                  : (
+                      name ||
+                      "Pembaca"
+                    ),
+              message: message,
+              is_anonymous:
+                isAnonymous
+            }
+          ]);
+
+
+        if (error) {
+
+          console.error(
+            "Error submitting comment:",
+            error
+          );
+
+          formStatus.textContent =
+            "Pesan belum berhasil dikirim. Coba lagi.";
+
+          sendMessage.disabled = false;
+
+          return;
+        }
+
+
+        messageText.value = "";
+        senderName.value = "";
+        anonymousCheck.checked = false;
+
+        formStatus.textContent =
+          "Pesan berhasil dikirim. Terima kasih :)";
+
+
+        sendMessage.disabled = false;
+
+
+        await loadComments();
+
+      }
+    );
+
+
+    /* =======================================================
+       INITIAL LOAD
+    ======================================================= */
+
+    loadComments();
+
+  </script>
+
+</body>
+
+</html>
